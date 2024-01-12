@@ -12,16 +12,12 @@ import { itemRouter } from './routes/itemRoutes.js';
 import { skillController } from './controllers/skillController.js';
 
 
-
 const app = express();
 
 app.use(cors());
 app.use(express.json({limit: '3MB'}));
 
 const PORT = process.env.PORT || 5500;
-app.listen(PORT, () => {
-    console.log(`Server is listening on http://localhost:${PORT}`);
-});
 
 app.get('/', (req, res) => {
     res.send('<h1>This is the Cekestt Abyss Backend!</h1>');
@@ -35,4 +31,9 @@ app.use("/celestAbyss/items", itemRouter)
 
 app.use((req, res, next) => {
     res.status(404).json;
+});
+
+
+app.listen(PORT, () => {
+    console.log(`Server is listening on http://localhost:${PORT}`);
 });
