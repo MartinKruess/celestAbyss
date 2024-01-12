@@ -24,10 +24,10 @@ app.get('/', (req, res) => {
 });
 
 // Celest Abyss Game API´s
-app.post('/celestAbyss/user', signinController)
+app.post('/user', signinController)
 
-app.use('/celestAbyss/skills', /*authenticateToken,*/ skillController)
-app.use("/celestAbyss/items", itemRouter)
+app.use('/skills', /*authenticateToken,*/ skillController)
+app.use("/items", itemRouter)
 
 app.use((req, res, next) => {
     res.status(404).json;
