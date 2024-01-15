@@ -5,14 +5,36 @@ const itemSchema = mongoose.Schema({
     description: { type: String },
     thumbnail: { type: String },
     kind: { type: String, default: 'verkaufbar' },
-  
     rang: { type: Number, default: 0 },
     weight: { type: Number, default: 1 },
     stacksize: { type: Number, default: 1 },
     sell: { type: Number, default: 0 },
     price: { type: Number, default: 0 },
     rare: { type: Number, default: 3 },
-  
+    slots: { type: Number, default: 0 },
+    type: { type: String},
+    level: { type: Number, default: 1 },
+    pang: { type: Number, default: 0 },
+    mang: { type: Number, default: 0 },
+    pdeff: { type: Number, default: 0 },
+    crit: { type: Number, default: 0 },
+    block: { type: Number, default: 0 },
+    speed: { type: Number, default: 0 },
+    health: { type: Number, default: 0 },
+    mana: { type: Number, default: 0 },
+    agility: { type: Number, default: 0 },
+    ambush: { type: Number, default: 0 },
+    dexerity: { type: Number, default: 0 },
+    faith: { type: Number, default: 0 },
+    int: { type: Number, default: 0 },
+    strength: { type: Number, default: 0 },
+    victim: { type: Number, default: 0 },
+    vita: { type: Number, default: 0 },
+    wisdom: { type: Number, default: 0 },
+    luck: { type: Number, default: 0 },
+    cd: { type: Number, default: 0 },
+    duration: { type: Number, default: 0 },
+
     weapon: {
       w_type: { type: String },
       w_slots: { type: Number, default: 0 },
@@ -35,33 +57,7 @@ const itemSchema = mongoose.Schema({
       a_wis: { type: Number, default: 0 },
       w_upgrades: { type: [String], maxlength: 5 },
     },
-  
-    armor: {
-      e_type: { type: String},
-      e_health: { type: Number, default: 0 },
-      e_mana: { type: Number, default: 0 },
-      e_pdeff: { type: Number, default: 0 },
-      e_health_reg: { type: Number, default: 0 },
-      e_mana_reg: { type: Number, default: 0 },
-      e_mdeff: { type: Number, default: 0 },
-      e_vita: { type: Number, default: 0 },
-      e_wis: { type: Number, default: 0 },
-      e_agility: { type: Number, default: 0 },
-      e_block: { type: Number, default: 0 },
-      e_level: { type: Number, default: 0 },
-      e_plus: { type: Number, default: 0 },
-      e_upgrades: { type: [String], maxlength: 5 },
-    },
-  
-    accessories: {
-      type: { type: String },
-      a_pang: { type: Number, default: 0 },
-      a_mang: { type: Number, default: 0 },
-      a_pdeff: { type: Number, default: 0 },
-      a_crit: { type: Number, default: 0 },
-      a_block: { type: Number, default: 0 },
-      a_speed: { type: Number, default: 0 },
-    },
+    
   });
 
 export const ItemModel = mongoose.model('items', itemSchema);

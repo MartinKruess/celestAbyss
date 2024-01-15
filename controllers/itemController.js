@@ -1,10 +1,10 @@
 import { ItemModel } from "../models/itemSchema.js"
-import { weapons } from "../scripts/data.js"
+import { itemBackup } from "../scripts/itemBackup.js"
 
 export const addItem = async (req, res, next) => {
     try {
         // const itemsToSave = req.body
-        const itemsToSave = weapons
+        const itemsToSave = itemBackup
         await Promise.all(itemsToSave.map(async (item) => {
             await ItemModel(item).save()
         }))
