@@ -24,6 +24,7 @@ export const registerController = async (req, res) => {
 		const hashedRegisterPassword = await bcrypt.hash(req.body.password, saltRounds)
 
 		const dataOfUser = {
+            username: req.body.username,
 			mail: req.body.email,
 			password: hashedRegisterPassword,
             language: "",
@@ -39,3 +40,57 @@ export const registerController = async (req, res) => {
 		console.log("ERROR:", error, "Error by registration!")
 	}
 };
+
+
+// Player, Char, Inventory, Skills
+
+// const playerAccount = {
+//     _id: ObjectId("1234"),
+//     username: "player123",
+//     email: "player123@example.com",
+//     password: "password123",
+//     language: "English",
+//     characters: ["s1d2f3g4"],
+//   };
+
+// const characters = {
+//     _id: "s1d2f3g4",
+//     player: ObjectId("1234"),
+//     charName: "Warrior",
+//     class: "Warrior",
+//     level: 1,
+//     experience: 0,
+//     skills: ["Slash", "Block"],
+//     skillpoints: 0,
+//     inventory: ["inv134"],
+// }
+
+// const inventorys = {
+//     _id: "inv134",
+//     character: ObjectId("1234"),
+//     items: ["i134", "i135", "i136"],
+// }
+
+// const items = [
+// {
+//     _id: "i134",
+//     name: "Sword",
+//     type: "Weapon",
+//     damage: 10,
+//     weight: 5,
+// },
+// {
+//     _id: "i135",
+//     name: "Shield",
+//     type: "Armor",
+//     damage: 0,
+//     weight: 10,
+// },
+// {
+//     _id: "i136",
+//     name: "Potion",
+//     type: "Consumable",
+//     damage: 0,
+//     weight: 1,
+// }
+// ]

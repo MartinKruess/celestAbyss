@@ -9,6 +9,7 @@ import { signinController } from './controllers/userController.js';
 
 // Celest Abyss - Data
 import { itemRouter } from './routes/itemRoutes.js';
+import { characterRouter } from './routes/characterRoutes.js';
 import { skillController } from './controllers/skillController.js';
 
 
@@ -24,7 +25,8 @@ app.get('/', (req, res) => {
 });
 
 // Celest Abyss Game API´s
-app.post('/user', signinController)
+app.post('/celestAbyss/user', signinController)
+app.use('/celestAbyss/characters', /*authenticateToken,*/ characterRouter)
 
 app.use('/skills', /*authenticateToken,*/ skillController)
 app.use("/items", itemRouter)
