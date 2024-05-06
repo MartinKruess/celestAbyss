@@ -2,7 +2,12 @@ import mongoose, { Schema } from 'mongoose';
 import { CharDataModel } from './characterSchema.js';
 
 const playerSchema = mongoose.Schema({
-    mail: {
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    email: {
         type: String,
         required: true,
         unique: true,

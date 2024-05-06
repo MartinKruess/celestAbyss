@@ -1,11 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import './db/mongo-connect.js';
-// import { loginController } from './controller/loginController.js';
 // import { authenticateToken } from './security/jwt_auth.js';
 
-// Celest Abyss - User
-import { signinController } from './controllers/userController.js';
+// Celest Abyss - User/Account
+import { userRouter } from './routes/userRoutes.js';
 
 // Celest Abyss - Data
 import { itemRouter } from './routes/itemRoutes.js';
@@ -15,7 +14,12 @@ import { skillController } from './controllers/skillController.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+    {
+        // origin: '*',
+        credentials: true,
+    }
+));
 app.use(express.json({limit: '3MB'}));
 
 const PORT = process.env.PORT || 5500;
@@ -25,8 +29,8 @@ app.get('/', (req, res) => {
 });
 
 // Celest Abyss Game API´s
-app.post('/celestAbyss/user', signinController)
-app.use('/celestAbyss/characters', /*authenticateToken,*/ characterRouter)
+app.use('/user', userRouter)
+app.use('/characters', /*authenticateToken,*/ characterRouter)
 
 app.use('/skills', /*authenticateToken,*/ skillController)
 app.use("/items", itemRouter)

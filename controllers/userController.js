@@ -20,21 +20,23 @@ export const signinController = async (req, res) => {
 }
 
 export const registerController = async (req, res) => {
+    console.log("Register started...")
 	try {
 		const hashedRegisterPassword = await bcrypt.hash(req.body.password, saltRounds)
 
 		const dataOfUser = {
             username: req.body.username,
-			mail: req.body.email,
+			email: req.body.email,
 			password: hashedRegisterPassword,
             language: "",
             characters: [],
-            status: "",
+            isOnline: false,
+            isBanned: false,
 		}
 
 		//SAVE: userData to userDB
         new UserDataModel(dataOfUser).save()
-		res.send('Successfull registrated!')
+		res.send({msg: 'Successfull registrated!'})
 
 	} catch (error) {
 		console.log("ERROR:", error, "Error by registration!")

@@ -3,7 +3,7 @@ import {getCharData, newCharData, updateCharData, deleteCharacter} from "../cont
 
 export const characterRouter = express.Router()
 
-itemRouter
+characterRouter
     .get("/", getCharData)
     .post("/", newCharData)
     .patch("/", updateCharData)

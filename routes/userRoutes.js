@@ -1,11 +1,10 @@
 import express from "express"
-import { registerController, signinController } from "../controllers/userController"
+import { registerController, signinController } from "../controllers/userController.js"
 
 export const userRouter = express.Router()
 
-itemRouter
-    // .get("/", getUserData)
-    .post("/", signinController)
+userRouter
+    .post("/login", signinController)
     .post("/register", registerController)
     // .patch("/", updateUser)
     // .delete("/", deleteUser)
