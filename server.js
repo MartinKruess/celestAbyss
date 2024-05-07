@@ -30,7 +30,7 @@ const userValidator = (req, res, next) => {
 }
 
 // Celest Abyss Game API´s
-app.use('/user', userValidator, userRouter)
+app.use('/user', /*userValidator,*/ userRouter)
 app.use('/characters', /*authenticateToken,*/ characterRouter)
 
 app.use('/skills', /*authenticateToken,*/ skillController)
