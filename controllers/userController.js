@@ -20,7 +20,7 @@ export const signinController = async (req, res) => {
 }
 
 export const registerController = async (req, res) => {
-    console.log("Register started...")
+    const saltRounds = 12
 	try {
 		const hashedRegisterPassword = await bcrypt.hash(req.body.password, saltRounds)
 
@@ -39,7 +39,7 @@ export const registerController = async (req, res) => {
 		res.send({msg: 'Successfull registrated!'})
 
 	} catch (error) {
-		console.log("ERROR:", error, "Error by registration!")
+		res.status(401).send("ERROR: " + error.message)
 	}
 };
 

@@ -1,0 +1,28 @@
+### Register
+POST http://localhost:5500/user/register HTTP/1.1
+content-type: application/json
+
+{
+  "username":"Testuser",
+  "email": "testuser@mail.com",
+  "password": "LoginPW123!",
+  "language": "de",
+  "characters": [],
+  "isOnline": false,
+  "isBanned": false
+}
+
+
+### Login
+
+POST http://localhost:5500/user/login HTTP/1.1
+content-type: application/json
+
+{
+  "email": "testuser@mail.com",
+  "password": "LoginPW123!"
+}
+
+### Update User
+
+PUT http://localhost:5500/user/update HTTP/1.1
