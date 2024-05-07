@@ -14,18 +14,13 @@ import { skillController } from './controllers/skillController.js';
 
 const app = express();
 
-app.use(cors(
-    {
-        // origin: '*',
-        credentials: true,
-    }
-));
+app.use(cors());
 app.use(express.json({limit: '3MB'}));
 
 const PORT = process.env.PORT || 5500;
 
 app.get('/', (req, res) => {
-    res.send('<h1>This is the Cekestt Abyss Backend!</h1>');
+    res.send('<h1>This is the Celest Abyss Backend!</h1>');
 });
 
 // Celest Abyss Game API´s
