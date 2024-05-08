@@ -18,6 +18,7 @@ export const newCharData = async (req, res) => {
         console.log(charData)
         const newChar = new CharDataModel(charData);
         await newChar.save();
+        console.log(newChar)
         res.status(200).send("New Character Created!");
     }
     catch(error){

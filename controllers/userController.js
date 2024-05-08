@@ -11,6 +11,7 @@ export const signinController = async (req, res) => {
             delete userDataObj.password
             console.log(userDataObj)
             // generate token
+            console.log(userDataObj.isBanned)
             !userDataObj.isBanned ? res.send(userDataObj) : res.send({msg: "banned"})
         }
         else{
