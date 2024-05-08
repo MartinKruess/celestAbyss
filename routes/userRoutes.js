@@ -8,4 +8,3 @@ userRouter
     .post("/register", registerController)
     // .patch("/", updateUser)
     // .delete("/", deleteUser)
-

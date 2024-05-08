@@ -1,11 +1,10 @@
 import express from "express"
-import {getCharData, newCharData, updateCharData, deleteCharacter} from "../controllers/characterController.js"
+import {getCharData, newCharData, deleteCharacter} from "../controllers/characterController.js"
 
 export const characterRouter = express.Router()
 
 characterRouter
-    .get("/", getCharData)
+    .get("/:id", getCharData)
     .post("/", newCharData)
-    .patch("/", updateCharData)
     .delete("/", deleteCharacter)
 

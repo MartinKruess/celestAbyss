@@ -26,3 +26,21 @@ content-type: application/json
 ### Update User
 
 PUT http://localhost:5500/user/update HTTP/1.1
+
+
+### Get Characters
+
+GET http://localhost:5500/characters/6639f2fb4a84795639abf772 HTTP/1.1
+
+### Add Character
+
+POST http://localhost:5500/characters/ HTTP/1.1
+content-type: application/json
+
+{
+  "accountID": "6639f2fb4a84795639abf772",
+  "charName": "Testchar3",
+  "class": "Ranger"
+}
+
+### Delete Character

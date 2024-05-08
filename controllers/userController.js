@@ -3,13 +3,16 @@ import { UserDataModel } from '../models/userSchema.js'
 
 export const signinController = async (req, res) => {
     try{
-        console.log("gameRequest:", req.body)
         const signinData = req.body
-        const userData = UserDataModel.findOne({mail: req.body.mail})|| "test"
+        const userData = await UserDataModel.findOne({email: req.body.email})
+
         if(bcrypt.compareSync(signinData.password, userData.password)){
-            
+            const userDataObj = userData.toObject()
+            delete userDataObj.password
+            console.log(userDataObj)
             // generate token
-            res.send(userData)
+            console.log(userDataObj.isBanned)
+            !userDataObj.isBanned ? res.send(userDataObj) : res.send({msg: "banned"})
         }
         else{
             res.send("Email or password is wrong!")
@@ -35,7 +38,7 @@ export const registerController = async (req, res) => {
 		}
 
 		//SAVE: userData to userDB
-        new UserDataModel(dataOfUser).save()
+        await new UserDataModel(dataOfUser).save()
 		res.send({msg: 'Successfull registrated!'})
 
 	} catch (error) {
