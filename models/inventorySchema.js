@@ -1,6 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { CharDataModel } from './characterSchema';
-import { ItemModel } from './itemSchema';
+import { ItemModel } from './itemSchema.js';
 
 export const inventorySchema = mongoose.Schema({
     inv_size: {

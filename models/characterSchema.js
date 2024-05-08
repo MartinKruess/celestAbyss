@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
-// import { SkillDataModel } from './skillSchema.js';
-// import { InventoryModel } from './inventorySchema.js';
+import { SkillDataModel } from './skillSchema.js';
+import { InventoryModel } from './inventorySchema.js';
+
 const string = {
     type: String,
 }
@@ -11,14 +12,19 @@ const number = {
 }
 
 const characterSchema = mongoose.Schema({
+    accountID: {
+        type: String,
+        required: true,
+    },
     charName: {
         type: String,
         required: true,
         unique: true,
     },
-    tribe: string,
-    class: string,
-    destrciption: string,
+    class:  {
+        type: String,
+        required: true,
+    },
     optic: {
         hairstyle: string,
         head: string,
@@ -28,45 +34,18 @@ const characterSchema = mongoose.Schema({
         legs: string,
         feeds: string,
     },
-    attributes: {
-        health: number,
-        mana: number,
-
-        vita: number,
-        strength: number,
-        dexterity: number,
-        agility: number,
-        ambush: number,
-        victim: number,
-        intelligence: number,
-        faith: number,
-        wisdom: number,
-        luck: number,
-
-        pang: number,
-        pdeff: number,
-        mang: number,
-        mdeff: number,
-        crit: number,
-        critStr: number,
-        block: number,
-        dodge: number,
-        atkSpeed: number,
-    },
-    // weapontypes: {type: Array},
-    // skills: [{
-    //     type: Schema.Types.ObjectId, ref: SkillDataModel,
-    // }],
-    // inventory: [{
-    //     type: Schema.Types.ObjectId, ref: InventoryModel,
-    // }],
-    experience: {
-        type: Number,
-        default: 0,
-    },
+    level: number,
+    experience: number,
+    skillUpdates: [{
+        type: Schema.Types.ObjectId, ref: SkillDataModel,
+    }],
+    inventory: [{
+        type: Schema.Types.ObjectId, ref: InventoryModel,
+    }],
     titels: {
-        type: Array
-    },
+                type: Array
+            },
+    tribe: string,
     moral: {
         type: Number,
         default: 0
