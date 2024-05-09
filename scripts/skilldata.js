@@ -62,7 +62,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Abr�umer",
+      S_Name: "Abräumer",
       S_Thumbnail: 0,
       CharClass: "Butcher",
       S_Status: "",
@@ -93,7 +93,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Absch�pfen",
+      S_Name: "Abschöpfen",
       S_Thumbnail: 0,
       CharClass: "Herbalist",
       S_Status: "",
@@ -217,7 +217,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Astalk�rper",
+      S_Name: "Astalkörper",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "AOE",
@@ -248,7 +248,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "�therregen",
+      S_Name: "Ätherregen",
       S_Thumbnail: 0,
       CharClass: "Healer",
       S_Status: "Light, Heal",
@@ -345,7 +345,7 @@ export const skills = [
       S_Thumbnail: 0,
       CharClass: "Butcher",
       S_Status: "",
-      S_Description: "Wenn du K�mpfst sammelst du Abladungen die du bei der Aktivierung freisetzt. Nutze die Aufladungen f�r 15-20 Sekunden um erhablichen Schaden anzurichten.",
+      S_Description: "Wenn du Kämpfst sammelst du Abladungen die du bei der Aktivierung freisetzt. Nutze die Aufladungen für 15-20 Sekunden um erhablichen Schaden anzurichten.",
       
       S_Max_Lv: 5,
       S_DMG_Type: "Spell",
@@ -527,7 +527,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Bogenschie�training",
+      S_Name: "Bogenschießtraining",
       S_Thumbnail: 0,
       CharClass: "Archer",
       S_Status: "",
@@ -1209,7 +1209,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Erl�sendes Feld der Schw�che",
+      S_Name: "Erlösendes Feld der Schwäche",
       S_Thumbnail: 0,
       CharClass: "Templer",
       S_Status: "AOE",
@@ -1364,7 +1364,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Erweiterung des K�rpers",
+      S_Name: "Erweiterung des Körpers",
       S_Thumbnail: 0,
       CharClass: 0,
       S_Status: "",
@@ -1767,7 +1767,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "G�ttliche Heilung",
+      S_Name: "Göttliche Heilung",
       S_Thumbnail: 0,
       CharClass: "Healer",
       S_Status: "Heal",
@@ -1798,7 +1798,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "G�ttlicher Schutz",
+      S_Name: "Göttlicher Schutz",
       S_Thumbnail: 0,
       CharClass: "Templer",
       S_Status: "",
@@ -2108,7 +2108,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "K�rperbeherrschung",
+      S_Name: "Körperbeherrschung",
       S_Thumbnail: 0,
       CharClass: "Adventure",
       S_Status: "",
@@ -2139,7 +2139,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Kristallisierte Wassersp�hre",
+      S_Name: "Kristallisierte Wasserspähre",
       S_Thumbnail: 0,
       CharClass: 0,
       S_Status: "",
@@ -2201,7 +2201,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Kunai Todessto�",
+      S_Name: "Kunai Todesstoß",
       S_Thumbnail: 0,
       CharClass: "Villian",
       S_Status: "",
@@ -2387,7 +2387,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Macht des K�rpers",
+      S_Name: "Macht des Körpers",
       S_Thumbnail: 0,
       CharClass: 0,
       S_Status: "",
@@ -2418,7 +2418,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "M�chtiger Doppelschlag",
+      S_Name: "Mächtiger Doppelschlag",
       S_Thumbnail: 0,
       CharClass: "Adventure",
       S_Status: "",
@@ -2449,7 +2449,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "M�chtiger Hieb",
+      S_Name: "Mächtiger Hieb",
       S_Thumbnail: 0,
       CharClass: 0,
       S_Status: "",
@@ -2480,7 +2480,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "M�chtiger Schlag",
+      S_Name: "Mächtiger Schlag",
       S_Thumbnail: 0,
       CharClass: "Butcher",
       S_Status: "",
@@ -2759,7 +2759,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Pr�zisionsschuss",
+      S_Name: "Präzisionsschuss",
       S_Thumbnail: 0,
       CharClass: "Archer",
       S_Status: "",
@@ -2852,7 +2852,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Sch�delspalter",
+      S_Name: "Schädelspalter",
       S_Thumbnail: 0,
       CharClass: "Butcher",
       S_Status: "",
@@ -3007,7 +3007,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Schildsto�",
+      S_Name: "Schildstoß",
       S_Thumbnail: 0,
       CharClass: "Templer",
       S_Status: "",
@@ -3193,7 +3193,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Schw�che des Fleisches",
+      S_Name: "Schwäche des Fleisches",
       S_Thumbnail: 0,
       CharClass: "Bloodmage",
       S_Status: "Dark",
@@ -3410,7 +3410,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "St�hlerne R�stung",
+      S_Name: "Stählerne Rüstung",
       S_Thumbnail: 0,
       CharClass: "Healer",
       S_Status: "",
@@ -3627,7 +3627,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "T�dlicher Tanz",
+      S_Name: "Tödlicher Tanz",
       S_Thumbnail: 0,
       CharClass: "Villian",
       S_Status: "AOE",
@@ -3658,7 +3658,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "�berlebenswille",
+      S_Name: "Überlebenswille",
       S_Thumbnail: 0,
       CharClass: "Adventure",
       S_Status: "",
@@ -3689,7 +3689,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "�berschallklinge",
+      S_Name: "Überschallklinge",
       S_Thumbnail: 0,
       CharClass: "Adventure",
       S_Status: "",
@@ -3720,7 +3720,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Unersch�pfliche Hoffnung",
+      S_Name: "Unerschöpfliche Hoffnung",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "",
@@ -3875,7 +3875,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Verst�rkter Pfeil",
+      S_Name: "Verstärkter Pfeil",
       S_Thumbnail: 0,
       CharClass: "Archer",
       S_Status: "",
@@ -4185,7 +4185,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Zweih�ndiges Axttraining",
+      S_Name: "Zweihändiges Axttraining",
       S_Thumbnail: 0,
       CharClass: "Butcher",
       S_Status: "",
@@ -4216,7 +4216,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Zweih�ndiges Streitkolbentraining",
+      S_Name: "Zweihändiges Streitkolbentraining",
       S_Thumbnail: 0,
       CharClass: 0,
       S_Status: "",
@@ -4340,7 +4340,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Beshw�ren",
+      S_Name: "Beshwören",
       S_Thumbnail: 0,
       CharClass: "All",
       S_Status: "",
@@ -4371,7 +4371,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Zur�ckrufen",
+      S_Name: "Zurückrufen",
       S_Thumbnail: 0,
       CharClass: "All",
       S_Status: "",
@@ -4557,7 +4557,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Immunit�t",
+      S_Name: "Immunität",
       S_Thumbnail: 0,
       CharClass: "Mage",
       S_Status: "",
@@ -4588,7 +4588,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "R�stungstraining",
+      S_Name: "Rüstungstraining",
       S_Thumbnail: 0,
       CharClass: 0,
       S_Status: "",
@@ -4805,7 +4805,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "F�r die Ehre",
+      S_Name: "Für die Ehre",
       S_Thumbnail: 0,
       CharClass: "Adventure",
       S_Status: "",
@@ -4960,7 +4960,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Waldl�ufer",
+      S_Name: "Waldläufer",
       S_Thumbnail: 0,
       CharClass: "Archer",
       S_Status: "",
@@ -5053,7 +5053,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Kritische Schl�ge",
+      S_Name: "Kritische Schläge",
       S_Thumbnail: 0,
       CharClass: "Gladiator",
       S_Status: "",
@@ -5208,7 +5208,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Nat�rlicher Schutz",
+      S_Name: "Natürlicher Schutz",
       S_Thumbnail: 0,
       CharClass: "Herbalist",
       S_Status: "",
@@ -5239,7 +5239,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Aura Unterdr�ckung",
+      S_Name: "Aura Unterdrückung",
       S_Thumbnail: 0,
       CharClass: "Herbalist",
       S_Status: "",
@@ -5332,7 +5332,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Widerliches Gebr�u",
+      S_Name: "Widerliches Gebräu",
       S_Thumbnail: 0,
       CharClass: "Herbalist",
       S_Status: "",
@@ -5549,7 +5549,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Besch�tzte Freunde",
+      S_Name: "Beschütze Freunde",
       S_Thumbnail: 0,
       CharClass: "Templer",
       S_Status: "",
@@ -6014,7 +6014,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Hinterh�ltige Falle",
+      S_Name: "Hinterhältige Falle",
       S_Thumbnail: 0,
       CharClass: "Soulseeker",
       S_Status: "",
@@ -6045,7 +6045,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "T�dlicher treffer",
+      S_Name: "Tödlicher Treffer",
       S_Thumbnail: 0,
       CharClass: "Soulseeker",
       S_Status: "",
@@ -6200,7 +6200,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Herz des Verr�ters",
+      S_Name: "Herz des Verräters",
       S_Thumbnail: 0,
       CharClass: "Villian",
       S_Status: "",
@@ -6262,7 +6262,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Attent�ter",
+      S_Name: "Attentäter",
       S_Thumbnail: 0,
       CharClass: "Villian",
       S_Status: "",
@@ -6293,7 +6293,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Flinke F��e",
+      S_Name: "Flinke Füße",
       S_Thumbnail: 0,
       CharClass: "Villian",
       S_Status: "",
@@ -6541,7 +6541,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Strahlende R�stung",
+      S_Name: "Strahlende Rüstung",
       S_Thumbnail: 0,
       CharClass: "Healer",
       S_Status: "",
@@ -6603,7 +6603,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Segen der Mentalit�t",
+      S_Name: "Segen der Mentalität",
       S_Thumbnail: 0,
       CharClass: "Healer",
       S_Status: "",
@@ -6727,7 +6727,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "G�te des Gerechten",
+      S_Name: "Güte des Gerechten",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "",
@@ -6820,7 +6820,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Lichtst�rke",
+      S_Name: "Lichtstärke",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "",
@@ -6851,7 +6851,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "K�mpfer des Lichtes",
+      S_Name: "Kämpfer des Lichtes",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "",
@@ -7533,7 +7533,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "G�ttliche Nova",
+      S_Name: "Göttliche Nova",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "",
@@ -7564,7 +7564,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Licht kristallenes Gef�ngnis",
+      S_Name: "Licht kristallenes Gefängnis",
       S_Thumbnail: 0,
       CharClass: "Lightmage",
       S_Status: "",
@@ -7595,7 +7595,7 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Gro�e Regeneration",
+      S_Name: "Große Regeneration",
       S_Thumbnail: 0,
       CharClass: "Healer",
       S_Status: "",
