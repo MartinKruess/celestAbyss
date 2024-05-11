@@ -870,7 +870,7 @@ export const skills = [
     {
       S_Name: "Eislanze",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Herbalist, Druide, Healer",
       S_Status: "",
       S_Description: "",
       
@@ -1149,7 +1149,7 @@ export const skills = [
     {
       S_Name: "Erdbeben",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Shamane, Butcher, Druide",
       S_Status: "AOE",
       S_Description: "You hit the ground with such force that the ground wobbles, enemies hit are slowed down.",
       
@@ -1242,7 +1242,7 @@ export const skills = [
     {
       S_Name: "Erste Hilfe",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Adventure, Healer",
       S_Status: "",
       S_Description: "You are able to take care of yourself and close minor wounds",
       
@@ -1302,9 +1302,9 @@ export const skills = [
       S_ATK_Speed: 0
     },
     {
-      S_Name: "Erweiterung der Kraft",
+      S_Name: "Erweiterung der Sinne",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Soulseeker, Villian, Butcher, Bloodmage",
       S_Status: "",
       S_Description: "Expansion of power will power up you. +3 Strenght per Level",
       
@@ -1335,7 +1335,7 @@ export const skills = [
     {
       S_Name: "Erweiterung des Geistes",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Healer, Lightmage, Druide, Shamane",
       S_Status: "",
       S_Description: "Expansion of spirit will power up you. +3 Intelligence per Level",
       
@@ -1366,7 +1366,7 @@ export const skills = [
     {
       S_Name: "Erweiterung des Körpers",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Templer, Gladiator, Hunter, Archer, Herbalist",
       S_Status: "",
       S_Description: "Expansion of defense will power up you. +150 health +3 Vita and +1 Wisdom",
       
@@ -1738,7 +1738,7 @@ export const skills = [
     {
       S_Name: "Gezielter Blitz",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Shamane, Herbalist",
       S_Status: "Electro",
       S_Description: "",
       
@@ -1986,7 +1986,7 @@ export const skills = [
     {
       S_Name: "Kleine Heilung",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Templer, Healer",
       S_Status: "",
       S_Description: "",
       
@@ -2141,7 +2141,7 @@ export const skills = [
     {
       S_Name: "Kristallisierte Wasserspähre",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Shamane",
       S_Status: "",
       S_Description: "",
       
@@ -2234,7 +2234,7 @@ export const skills = [
     {
       S_Name: "Lebensbedrohlich",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "",
       S_Status: "",
       S_Description: "",
       
@@ -2358,7 +2358,7 @@ export const skills = [
     {
       S_Name: "Macht des Geistes",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Lightmage, Bloodmage, Healer",
       S_Status: "",
       S_Description: "",
       
@@ -2389,7 +2389,7 @@ export const skills = [
     {
       S_Name: "Macht des Körpers",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Templer, Galadiator, Butcher",
       S_Status: "",
       S_Description: "",
       
@@ -2451,7 +2451,7 @@ export const skills = [
     {
       S_Name: "Mächtiger Hieb",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Gladiator, Templer",
       S_Status: "",
       S_Description: "",
       
@@ -2544,7 +2544,7 @@ export const skills = [
     {
       S_Name: "Mentale Erweiterung",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Druide, Herbalist, Healer, Bloodmage, Lightmage, Shamane",
       S_Status: "",
       S_Description: "",
       
@@ -2575,7 +2575,7 @@ export const skills = [
     {
       S_Name: "Movability",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Soulseeker, Villian",
       S_Status: "",
       S_Description: "",
       
@@ -2792,7 +2792,7 @@ export const skills = [
     {
       S_Name: "Rotier Schlag",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "",
       S_Status: "",
       S_Description: "",
       
@@ -3071,7 +3071,7 @@ export const skills = [
     {
       S_Name: "Schmetterschlag",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Butcher, Gladiator",
       S_Status: "",
       S_Description: "",
       
@@ -3564,37 +3564,37 @@ export const skills = [
       S_MDefense: 0,
       S_ATK_Speed: 0
     },
-    {
-      S_Name: "Survive",
-      S_Thumbnail: 0,
-      CharClass: "Umbra",
-      S_Status: "",
-      S_Description: "",
+    // {
+    //   S_Name: "Survive",
+    //   S_Thumbnail: 0,
+    //   CharClass: "Umbra",
+    //   S_Status: "",
+    //   S_Description: "",
       
-      S_Max_Lv: 10,
-      S_DMG_Type: "Passiv",
-      S_DMG: 0,
-      S_PAttack: 0,
-      S_MAttack: 0,
-      S_CD: 0,
-      S_Duration: 0,
-      S_Mana: 0,
-      S_Health: 0,
-      S_Agi: 0,
-      S_Amb: 1,
-      S_Block: 0,
-      S_Dex: 0,
-      S_Faith: 0,
-      S_Int: 0,
-      S_Luck: 0,
-      S_Str: 1,
-      S_Vic: 1,
-      S_Vita: 0,
-      S_Wis: 0,
-      S_PDefense: 0,
-      S_MDefense: 0,
-      S_ATK_Speed: 0
-    },
+    //   S_Max_Lv: 10,
+    //   S_DMG_Type: "Passiv",
+    //   S_DMG: 0,
+    //   S_PAttack: 0,
+    //   S_MAttack: 0,
+    //   S_CD: 0,
+    //   S_Duration: 0,
+    //   S_Mana: 0,
+    //   S_Health: 0,
+    //   S_Agi: 0,
+    //   S_Amb: 1,
+    //   S_Block: 0,
+    //   S_Dex: 0,
+    //   S_Faith: 0,
+    //   S_Int: 0,
+    //   S_Luck: 0,
+    //   S_Str: 1,
+    //   S_Vic: 1,
+    //   S_Vita: 0,
+    //   S_Wis: 0,
+    //   S_PDefense: 0,
+    //   S_MDefense: 0,
+    //   S_ATK_Speed: 0
+    // },
     {
       S_Name: "Tobender Sturm",
       S_Thumbnail: 0,
@@ -4218,7 +4218,7 @@ export const skills = [
     {
       S_Name: "Zweihändiges Streitkolbentraining",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Shamane",
       S_Status: "",
       S_Description: "\nIt's not just training, it's an art. +2 Strenght and +1 Intelligence",
       
@@ -4466,7 +4466,7 @@ export const skills = [
     {
       S_Name: "Standhaft",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Adventure, Butcher, Templer, Gladiator",
       S_Status: "",
       S_Description: "",
       
@@ -4497,7 +4497,7 @@ export const skills = [
     {
       S_Name: "Eiserner Wille",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "",
       S_Status: "",
       S_Description: "",
       
@@ -4590,7 +4590,7 @@ export const skills = [
     {
       S_Name: "Rüstungstraining",
       S_Thumbnail: 0,
-      CharClass: 0,
+      CharClass: "Abenteuer, Butcher, Gladiator, Templer, Herbalist, Archer, Druide, Soulseeker, Bloodmage, Lightmage, Healer, Shamane",
       S_Status: "",
       S_Description: "",
       
@@ -5024,7 +5024,7 @@ export const skills = [
     {
       S_Name: "Provozieren",
       S_Thumbnail: 0,
-      CharClass: "Gladiator",
+      CharClass: "Gladiator, Templer",
       S_Status: "",
       S_Description: "",
       
@@ -5366,37 +5366,6 @@ export const skills = [
       S_Name: "Innere Unruhe",
       S_Thumbnail: 0,
       CharClass: "Herbalist",
-      S_Status: "",
-      S_Description: "",
-      
-      S_Max_Lv: 10,
-      S_DMG_Type: "Buff-Self",
-      S_DMG: 0,
-      S_PAttack: 0,
-      S_MAttack: 0,
-      S_CD: 60,
-      S_Duration: 600,
-      S_Mana: 0,
-      S_Health: 0,
-      S_Agi: 0,
-      S_Amb: 0,
-      S_Block: 0,
-      S_Dex: 0,
-      S_Faith: 0,
-      S_Int: 0,
-      S_Luck: 0,
-      S_Str: 0,
-      S_Vic: 0,
-      S_Vita: 0,
-      S_Wis: 0,
-      S_PDefense: 0,
-      S_MDefense: 0,
-      S_ATK_Speed: 0
-    },
-    {
-      S_Name: "Provozieren",
-      S_Thumbnail: 0,
-      CharClass: "Templer",
       S_Status: "",
       S_Description: "",
       
@@ -7070,7 +7039,7 @@ export const skills = [
     {
       S_Name: "Waffentraining",
       S_Thumbnail: "All",
-      CharClass: 0,
+      CharClass: "Abenteuer, Butcher, Gladiator, Templer, Herbalist, Archer, Druide, Soulseeker, Bloodmage, Lightmage, Healer, Shamane",
       S_Status: "",
       S_Description: "",
       

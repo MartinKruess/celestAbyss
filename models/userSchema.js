@@ -18,16 +18,18 @@ const playerSchema = mongoose.Schema({
     },
     language: {
         type: String,
-        default: ""
+        default: "en"
     },
     characters: [{
         type: Schema.Types.ObjectId, ref: CharDataModel,
     }],
     isOnline: {
         type: Boolean,
+        default: false,
     },
     isBanned: {
         type: Boolean,
+        default: false,
     },
 });
 

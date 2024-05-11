@@ -25,23 +25,30 @@ const characterSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    optic: {
-        hairstyle: string,
-        head: string,
-        body: string,
-        arms: string,
-        hands: string,
-        legs: string,
-        feeds: string,
+    server: {
+        type: String,
+        required: true,
     },
     level: number,
     experience: number,
-    skillUpdates: [{
-        type: Schema.Types.ObjectId, ref: SkillDataModel,
-    }],
-    inventory: [{
-        type: Schema.Types.ObjectId, ref: InventoryModel,
-    }],
+    skillUpdates: [
+        {
+            skillId: {
+                type: Schema.Types.ObjectId, ref: SkillDataModel,
+            },
+            level: number,
+            upgrade: number,
+        }
+    ],
+    inventory: [
+        {
+            itemID: {
+                type: Schema.Types.ObjectId, ref: InventoryModel,
+            },
+            level: number,
+            upgrade: number,
+        }
+    ],
     titels: {
                 type: Array
             },
@@ -53,3 +60,43 @@ const characterSchema = mongoose.Schema({
 });
 
 export const CharDataModel = mongoose.model('characters', characterSchema);
+
+
+// optic: {
+    //     hairstyle: {
+        //         type: Schema.Types.ObjectId, ref: OpticModel,
+        //     },
+        //     haircolor: {
+            //         type: Schema.Types.ObjectId, ref: OpticModel,
+            //     },
+            //     head: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     eyes: {
+        //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     nose: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     mouth: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     ears: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     body: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     arms: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     hands: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     legs: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    //     feeds: {
+    //         type: Schema.Types.ObjectId, ref: OpticModel,
+    //     },
+    // },
