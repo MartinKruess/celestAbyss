@@ -5,5 +5,6 @@ export const itemRouter = express.Router()
 
 itemRouter
     .get("/", getItems)
+    .get("/add", addItem)
     .post("/", addItem)
 
