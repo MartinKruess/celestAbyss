@@ -1,4 +1,4 @@
-import { CharDataModel } from "../models/characterSchema"
+import { CharDataModel } from "../models/characterSchema.js"
 
 export const updateInventoryByLoot = async (req, res, next) => {
     try{

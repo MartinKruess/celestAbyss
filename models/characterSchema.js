@@ -23,10 +23,12 @@ const characterSchema = mongoose.Schema({
     },
     class:  {
         type: String,
+        default: "Bloodmage",
         required: true,
     },
     server: {
         type: String,
+        default: "Asgard",
         required: true,
     },
     level: number,

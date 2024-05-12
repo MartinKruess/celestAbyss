@@ -16,6 +16,7 @@ export const newCharData = async (req, res) => {
     try{
         const charData = req.body;
         console.log(charData)
+        // If account.characters.length < account.maxChars -> create new character
         const newChar = new CharDataModel(charData);
         await newChar.save();
         console.log(newChar)

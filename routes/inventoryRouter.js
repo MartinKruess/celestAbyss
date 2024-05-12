@@ -1,4 +1,5 @@
 import express from "express"
+import { updateInventoryByLoot } from "../controllers/inventoryController.js"
 
 export const inventoryRouter = express.Router()
 

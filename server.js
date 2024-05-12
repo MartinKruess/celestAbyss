@@ -11,6 +11,7 @@ import { itemRouter } from './routes/itemRoutes.js';
 import { characterRouter } from './routes/characterRoutes.js';
 import { skillController } from './controllers/skillController.js';
 import { inventoryRouter } from './routes/inventoryRouter.js';
+import { upgradeController } from './controllers/upgradeController.js';
 
 const app = express();
 
@@ -32,7 +33,7 @@ app.use('/characters', /*authenticateToken,*/ characterRouter)
 app.use('/skills', /*authenticateToken,*/ skillController)
 app.use('/inventory', /*authenticateToken,*/ inventoryRouter)
 app.use("/items", /*authenticateToken,*/  itemRouter)
-app.use("/upgrade", /*authenticateToken,*/  upgradeControler)
+app.use("/upgrade", /*authenticateToken,*/  upgradeController)
 
 app.use((req, res, next) => {
     res.status(404).json;

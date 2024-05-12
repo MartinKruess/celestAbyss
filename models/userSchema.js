@@ -20,6 +20,10 @@ const playerSchema = mongoose.Schema({
         type: String,
         default: "en"
     },
+    maxChars: {
+        type: Number,
+        default: 6,
+    },
     characters: [{
         type: Schema.Types.ObjectId, ref: CharDataModel,
     }],
