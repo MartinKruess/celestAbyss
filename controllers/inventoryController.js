@@ -27,20 +27,38 @@ export const updateInventoryByLoot = async (req, res, next) => {
         next(err)
     }
 
-    const stackItem = async (characterFromDB, itemFromDB, newAmount) => {
-        distributeNuts(3, "Wallnüsse");
-        // if(itemFromDB.stacksize - characterFromDB.inventory.amount >= newAmount){
-        //     const updatedAmount = characterFromDB.inventory.amount + newAmount
-        //     await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: updatedAmount } } )
-        // }
-        
-        
-    }
-
     // New Item to Inventory
     const addItem = async (characterID, itemFromDB, amount) => {
         await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: amount } } )
     }
+
+    
+    const stackItem = async (characterFromDB, itemFromDB, dropAmount) => {
+      
+      // Load all current stacks of the item
+      const stacks = characterFromDB.inventory.filter(item => item.name === itemFromDB.name)
+
+      stacks.forEach(stack => {
+        const spaceLeft = stack.stacksize - stack.amount
+
+        if(spaceLeft > 0){
+          if(dropAmount <= spaceLeft){
+            stack.amount += dropAmount
+            dropAmount = 0
+          }else{
+            stack.amount = itemFromDB.stacksize
+            dropAmount -= spaceLeft
+          }
+        }
+      });
+
+      if(dropAmount > 0){
+        const char = await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: dropAmount } } )
+        console.log("Update, new Stack:", char.inventory)
+      }
+
+      console.log("Updated Inventory: ", characterFromDB.inventory)
+  }
 }
 
 
