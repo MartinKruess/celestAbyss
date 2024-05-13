@@ -7,7 +7,7 @@ export const getCharData = async (req, res) => {
     try{
         const accountID = req.params.id;
         console.log(accountID)
-        const charData = await CharDataModel.find({accountID: accountID})
+        const charData = await CharDataModel.find({_id: accountID})
         .populate("skills", "firstName lastName")
         .populate("inventory", "firstName lastName")
         charData ? res.status(200).json(charData) : res.status(404).send("No Characters Found!");
