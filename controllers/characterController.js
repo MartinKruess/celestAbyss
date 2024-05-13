@@ -19,23 +19,20 @@ export const getCharData = async (req, res) => {
 
 export const newCharData = async (req, res) => {
     try{
-        console.log("Anfrage angekommen!")
         const charData = req.body;
         // await UserDataModel.findById(charData.accountID);
-        const account = await UserDataModel.findByIdandUpdate(charData.accountID, {characters: account.characters.push(charData._id)});
-        console.log("may Acc", account)
+        const account = await UserDataModel.findByIdandUpdate(charData.accountID, {characters: charData.characters.push(charData._id)});
+        
         if(account.characters.length < account.maxChars){
             const char = await CharDataModel.create(charData);
             // const newChar = new CharDataModel(charData);
             const inventory = await InventoryModel.create({characterID: char._id});
-            console.log("Inventar vorbereitet", inventory)
             
             const skills = await SkillDataModel.find({charClass: newChar.class});
             const newSkilLData = skills.map(skill => ({
                 skillID: skill._id,
                 maxSkillLv: skill.maxSkillLv
             }));
-            console.log("charSkills", newSkilLData)
             char.inventory = inventory;
             char.skills = newSkilLData; 
             await char.save(); 
