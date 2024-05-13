@@ -2,6 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 import { ItemModel } from './itemSchema.js';
 
 export const inventorySchema = mongoose.Schema({
+    characterID: {type: Schema.Types.ObjectId, ref: 'characters'},
     inv_size: {
         type: Number,
         default: 160,

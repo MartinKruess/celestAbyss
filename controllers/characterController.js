@@ -23,7 +23,7 @@ export const newCharData = async (req, res) => {
         
         if(account.characters.length < account.maxChars){
             const newChar = new CharDataModel(charData);
-            const inventory = InventoryModel.create({charID: newChar._id});
+            const inventory = InventoryModel.create({_id: newChar._id});
             console.log(newChar)
             newChar.inventory = inventory._id;
 
