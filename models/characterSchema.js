@@ -41,15 +41,11 @@ const characterSchema = mongoose.Schema({
             upgrade: number,
         }
     ],
-    inventory: [
-        {
+    inventory: {
             itemID: {
                 type: Schema.Types.ObjectId, ref: InventoryModel,
             },
-            level: number,
-            upgrade: number,
-        }
-    ],
+        },
     titels: {
                 type: Array
             },
