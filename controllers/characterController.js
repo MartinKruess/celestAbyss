@@ -18,29 +18,29 @@ export const getCharData = async (req, res) => {
 export const newCharData = async (req, res) => {
     try{
         const charData = req.body;
-        console.log(charData)
         const account = await UserDataModel.findById(charData.accountID);
-        
+        console.log("may Acc", account)
         if(account.characters.length < account.maxChars){
+            const char = await CharDataModel.create(charData);
             const newChar = new CharDataModel(charData);
-            const inventory = InventoryModel.create({_id: newChar._id});
-            console.log(newChar)
-            newChar.inventory = inventory._id;
-
-            const skills = await SkillDataModel.find({class: newChar.class});
+            const inventory = await InventoryModel.create({characterID: char._id});
+            
+            const skills = await SkillDataModel.find({charClass: newChar.class});
             const newSkilLData = skills.map(skill => ({
                 skillID: skill._id,
                 maxSkillLv: skill.maxSkillLv
             }));
-            await CharDataModel.skills.insertMany(newSkilLData);
-            await newChar.save();
+            
+            char.inventory = inventory._id;
+            char.skills = newSkilLData; 
+            await char.save(); 
             res.status(200).send("New Character Created!");
         }else{
             res.send({status: "full", msg: "Character Limit Reached!"});
         }
     }
     catch(error){
-        res.status(401).send("ERROR: " + error.message);
+        res.status(401).send("ERROR in Char: " + error.message);
     }
 }
 

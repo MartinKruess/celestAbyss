@@ -23,7 +23,6 @@ const characterSchema = mongoose.Schema({
     },
     class:  {
         type: String,
-        default: "Bloodmage",
         required: true,
     },
     server: {

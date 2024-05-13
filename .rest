@@ -19,7 +19,7 @@ POST http://localhost:5500/user/login HTTP/1.1
 content-type: application/json
 
 {
-  "email": "testuser@mail.com",
+  "email": "testuser3@mail.com",
   "password": "LoginPW123!"
 }
 
@@ -38,9 +38,15 @@ POST http://localhost:5500/characters/ HTTP/1.1
 content-type: application/json
 
 {
-  "accountID": "6639f2fb4a84795639abf772",
-  "charName": "Testchar3",
-  "class": "Ranger"
+  "accountID": "6641c6447668b974f75e67fb",
+  "charName": "Testchar2",
+  "class": "Bloodmage"
 }
 
 ### Delete Character
+
+
+### Create Inventory
+
+
+### Add Item to Inventory
