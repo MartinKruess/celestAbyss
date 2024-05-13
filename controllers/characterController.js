@@ -1,5 +1,6 @@
 import { CharDataModel } from "../models/characterSchema.js";
 import { InventoryModel } from "../models/inventorySchema.js";
+import { UserDataModel } from "../models/userSchema.js";
 
 export const getCharData = async (req, res) => {
     try{
@@ -17,7 +18,7 @@ export const newCharData = async (req, res) => {
     try{
         const charData = req.body;
         console.log(charData)
-        const account = await AccountModel.findById(charData.accountID);
+        const account = await UserDataModel.findById(charData.accountID);
         
         if(account.characters.length < account.maxChars){
             const newChar = new CharDataModel(charData);
