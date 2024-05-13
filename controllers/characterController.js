@@ -19,12 +19,13 @@ export const getCharData = async (req, res) => {
 
 export const newCharData = async (req, res) => {
     try{
+        console.log("Anfrage angekommen!")
         const charData = req.body;
         const account = await UserDataModel.findById(charData.accountID);
         console.log("may Acc", account)
         if(account.characters.length < account.maxChars){
             const char = await CharDataModel.create(charData);
-            const newChar = new CharDataModel(charData);
+            // const newChar = new CharDataModel(charData);
             const inventory = await InventoryModel.create({characterID: char._id});
             console.log("Inventar vorbereitet", inventory)
             
@@ -35,7 +36,7 @@ export const newCharData = async (req, res) => {
             }));
             console.log("charSkills", newSkilLData)
             
-            char.inventory = inventory._id;
+            char.inventory = inventory;
             char.skills = newSkilLData; 
             await char.save(); 
             res.status(200).send("New Character Created!");
