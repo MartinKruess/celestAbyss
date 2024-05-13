@@ -21,7 +21,8 @@ export const newCharData = async (req, res) => {
     try{
         const charData = req.body;
         const account = await UserDataModel.findById(charData.accountID);
-        await UserDataModel.findByIdandUpdate(charData.accountID, {characters: account.characters.push(charData._id)});
+        account.characters.push(charData._id);
+        await account.save();
         
         if(account.characters.length < account.maxChars){
             const char = await CharDataModel.create(charData);
