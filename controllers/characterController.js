@@ -1,5 +1,6 @@
 import { CharDataModel } from "../models/characterSchema.js";
 import { InventoryModel } from "../models/inventorySchema.js";
+import { SkillDataModel } from "../models/skillSchema.js";
 import { UserDataModel } from "../models/userSchema.js";
 
 export const getCharData = async (req, res) => {
@@ -26,8 +27,8 @@ export const newCharData = async (req, res) => {
             console.log(newChar)
             newChar.inventory = inventory._id;
 
-            // const skills = await SkillModel.find({class: newChar.class});
-            // await SkillDataModel.insertMany(skills._id);
+            const skills = await SkillDataModel.find({class: newChar.class});
+            await SkillDataModel.insertMany(skills._id);
             await newChar.save();
             res.status(200).send("New Character Created!");
         }else{
