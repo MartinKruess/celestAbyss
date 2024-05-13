@@ -26,13 +26,13 @@ export const newCharData = async (req, res) => {
             const char = await CharDataModel.create(charData);
             const newChar = new CharDataModel(charData);
             const inventory = await InventoryModel.create({characterID: char._id});
+            console.log("Inventar vorbereitet", inventory)
             
             const skills = await SkillDataModel.find({charClass: newChar.class});
             const newSkilLData = skills.map(skill => ({
                 skillID: skill._id,
                 maxSkillLv: skill.maxSkillLv
             }));
-            console.log("Inventar vorbereitet", inventory)
             console.log("charSkills", newSkilLData)
             
             char.inventory = inventory._id;
