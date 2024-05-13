@@ -28,7 +28,7 @@ export const newCharData = async (req, res) => {
             // const newChar = new CharDataModel(charData);
             const inventory = await InventoryModel.create({characterID: char._id});
             
-            const skills = await SkillDataModel.find({charClass: newChar.class});
+            const skills = await SkillDataModel.find({charClass: char.class});
             const newSkilLData = skills.map(skill => ({
                 skillID: skill._id,
                 maxSkillLv: skill.maxSkillLv
