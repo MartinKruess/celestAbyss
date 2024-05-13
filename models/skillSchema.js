@@ -57,7 +57,11 @@ const skillSchema = mongoose.Schema({
     charClass: {
         type: Array,
     },
-    maxSkillLv: numberReq,
+    maxSkillLv: {
+        type: Number,
+        required: true,
+        default: 1,
+    },
 });
 
 export const SkillDataModel = mongoose.model('skills', skillSchema);
