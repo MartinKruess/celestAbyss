@@ -21,7 +21,8 @@ export const newCharData = async (req, res) => {
     try{
         console.log("Anfrage angekommen!")
         const charData = req.body;
-        const account = await UserDataModel.findById(charData.accountID);
+        // await UserDataModel.findById(charData.accountID);
+        const account = await UserDataModel.findByIdandUpdate(charData.accountID, {characters: account.characters.push(charData._id)});
         console.log("may Acc", account)
         if(account.characters.length < account.maxChars){
             const char = await CharDataModel.create(charData);
@@ -35,7 +36,6 @@ export const newCharData = async (req, res) => {
                 maxSkillLv: skill.maxSkillLv
             }));
             console.log("charSkills", newSkilLData)
-            
             char.inventory = inventory;
             char.skills = newSkilLData; 
             await char.save(); 
