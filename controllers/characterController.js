@@ -1,4 +1,5 @@
 import { CharDataModel } from "../models/characterSchema.js";
+import { InventoryModel } from "../models/inventorySchema.js";
 
 export const getCharData = async (req, res) => {
     try{
@@ -16,11 +17,21 @@ export const newCharData = async (req, res) => {
     try{
         const charData = req.body;
         console.log(charData)
-        // If account.characters.length < account.maxChars -> create new character
-        const newChar = new CharDataModel(charData);
-        await newChar.save();
-        console.log(newChar)
-        res.status(200).send("New Character Created!");
+        const account = await AccountModel.findById(charData.accountID);
+        
+        if(account.characters.length < account.maxChars){
+            const newChar = new CharDataModel(charData);
+            const inventory = InventoryModel.create({charID: newChar._id});
+            console.log(newChar)
+            newChar.inventory = inventory._id;
+
+            // const skills = await SkillModel.find({class: newChar.class});
+            // await SkillDataModel.insertMany(skills._id);
+            await newChar.save();
+            res.status(200).send("New Character Created!");
+        }else{
+            res.send({status: "full", msg: "Character Limit Reached!"});
+        }
     }
     catch(error){
         res.status(401).send("ERROR: " + error.message);
