@@ -33,7 +33,7 @@ const characterSchema = mongoose.Schema({
     },
     level: number,
     experience: number,
-    skillUpdates: [
+    skills: [
         {
             skillId: {
                 type: Schema.Types.ObjectId, ref: SkillDataModel,

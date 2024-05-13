@@ -32,7 +32,7 @@ export const newCharData = async (req, res) => {
                 skillID: skill._id,
                 maxSkillLv: skill.maxSkillLv
             }));
-            await SkillDataModel.insertMany(newSkilLData);
+            await CharDataModel.skills.insertMany(newSkilLData);
             await newChar.save();
             res.status(200).send("New Character Created!");
         }else{
