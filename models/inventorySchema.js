@@ -3,12 +3,12 @@ import { ItemModel } from './itemSchema.js';
 
 export const inventorySchema = mongoose.Schema({
     characterID: {type: Schema.Types.ObjectId, ref: 'characters'},
-    inv_size: {
+    size: {
         type: Number,
         default: 160,
         unique: true,
     },
-    inv_items: [{
+    items: [{
         type: Schema.Types.ObjectId, ref: ItemModel,
         level: { type: Number, default: 1 },
         upgrade: { type: Number, default: 0 },
