@@ -16,7 +16,9 @@ export const updateInventoryByLoot = async (req, res, next) => {
         // Find Item by Name
         const itemFromDB = await ItemModel.findOne({name: itemName})
 
-        itemFromCharacter && itemFromCharacter.stacksize > 1 ? await stackItem(characterFromDB, itemFromDB, amount) : await addItem(characterID, itemFromDB, amount)
+        itemFromCharacter && itemFromCharacter.stacksize > 1
+          ? await stackItem(characterFromDB, itemFromDB, amount)
+          : await addItem(characterID, itemFromDB, amount)
 
 
         
