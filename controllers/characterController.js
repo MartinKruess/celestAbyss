@@ -53,7 +53,7 @@ export const newCharData = async (req, res) => {
             await char.save();
 
             // Update the account with the new character ID
-            account.characters.push(char._id);
+            await account.characters.push(char._id);
             await account.save();
 
             res.status(200).send("New Character Created!");
