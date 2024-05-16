@@ -33,6 +33,11 @@ export const newCharData = async (req, res) => {
             const inventory = await InventoryModel.create({ characterID: char._id });
             console.log("Inventory Created", inventory);
 
+            // Add start items to inventory if needed
+            const startItems = [{itemID: '663ff47dfa3f1526a217f5e3'}];
+            inventory.items.push(...startItems);
+            await inventory.save();
+
             // Retrieve skills based on character class
             const skills = await SkillDataModel.find({ charClass: char.class });
             const newSkillData = skills.map(skill => ({
