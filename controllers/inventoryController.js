@@ -9,10 +9,10 @@ export const updateInventoryByLoot = async (req, res, next) => {
 
         // Find character by ID
         const characterFromDB = await CharDataModel.findOne({ _id: characterID })
-        console.log("Character: ", characterFromDB)
-
+        
         const itemFromCharacter = characterFromDB.inventory.find(item => item.name === itemName)
-
+        console.log("Item: ", itemFromDB)
+        
         // Find Item by Name
         const itemFromDB = await ItemModel.findOne({name: itemName})
 
