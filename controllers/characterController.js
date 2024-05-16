@@ -46,7 +46,7 @@ export const newCharData = async (req, res) => {
             }));
 
             // Assign inventory and skills to the character
-            char.inventory = inventory._id; // Store the inventory ID
+            char.inventory = inventory; // Store the inventory ID
             char.skills = newSkillData;
 
             // Save the character with the new data
