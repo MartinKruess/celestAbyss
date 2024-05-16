@@ -1,16 +1,17 @@
 import { CharDataModel } from "../models/characterSchema.js"
+import { ItemModel } from "../models/itemSchema.js"
 
 export const updateInventoryByLoot = async (req, res, next) => {
     try{
         // characterID. name, amount, 
-        const itemName = req.body.itemName
+        const itemID = req.body.itemID
         const amount = req.body.amount
         const characterID = req.body.characterID
 
         // Find character by ID
         const characterFromDB = await CharDataModel.findOne({ _id: characterID })
         
-        const itemFromCharacter = characterFromDB.inventory.find(item => item.name === itemName)
+        const itemFromCharacter = characterFromDB.inventory.items.find(item => item.itemID === itemID)
         console.log("Item: ", itemFromDB)
         
         // Find Item by Name

@@ -9,7 +9,10 @@ export const inventorySchema = mongoose.Schema({
         unique: true,
     },
     items: [{
-        type: Schema.Types.ObjectId, ref: ItemModel,
+        itemID: {
+            type: Schema.Types.ObjectId,
+            ref: ItemModel
+        },
         level: { type: Number, default: 1 },
         upgrade: { type: Number, default: 0 },
         amount: { type: Number, default: 1 },
