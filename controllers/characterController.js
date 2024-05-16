@@ -25,25 +25,32 @@ export const newCharData = async (req, res) => {
         await account.save();
         
         if(account.characters.length < account.maxChars){
-            // Create Character
+           // Create the character
             const char = await CharDataModel.create(charData);
-            console.log("charCreated")
-            
-            // Create Inventory
-            await InventoryModel.create({characterID: char._id});
-            const inventory = await InventoryModel.findOne({characterID: char._id});
-            console.log("Inventory Created", inventory)
-            
-            const skills = await SkillDataModel.find({charClass: char.class});
-            const newSkilLData = skills.map(skill => ({
+            console.log("charCreated", char);
+
+            // Create inventory for the character
+            const inventory = await InventoryModel.create({ characterID: char._id });
+            console.log("Inventory Created", inventory);
+
+            // Retrieve skills based on character class
+            const skills = await SkillDataModel.find({ charClass: char.class });
+            const newSkillData = skills.map(skill => ({
                 skillID: skill._id,
                 maxSkillLv: skill.maxSkillLv
             }));
-            char.inventory.inventoryID = inventory._id;
-            char.inventory.push(startItems)
-            char.inventory = inventory;
-            char.skills = newSkilLData; 
-            await char.save(); 
+
+            // Assign inventory and skills to the character
+            char.inventory = inventory._id; // Store the inventory ID
+            char.skills = newSkillData;
+
+            // Save the character with the new data
+            await char.save();
+
+            // Update the account with the new character ID
+            account.characters.push(char._id);
+            await account.save();
+
             res.status(200).send("New Character Created!");
         }else{
             res.send({status: "full", msg: "Character Limit Reached!"});
@@ -53,6 +60,27 @@ export const newCharData = async (req, res) => {
         res.status(401).send("ERROR in Char: " + error.message);
     }
 }
+
+
+//  // Create Character
+//  const char = await CharDataModel.create(charData);
+//  console.log("charCreated", char)
+ 
+//  // Create Inventory
+//  const inventory = await InventoryModel.create({characterID: char._id});
+//  console.log("Inventory Created", inventory)
+ 
+//  const skills = await SkillDataModel.find({charClass: char.class});
+//  const newSkilLData = skills.map(skill => ({
+//      skillID: skill._id,
+//      maxSkillLv: skill.maxSkillLv
+//  }));
+//  char.inventory = inventory._id;
+//  char.inventory.push(startItems)
+
+//  char.skills = newSkilLData; 
+//  await char.save(); 
+//  res.status(200).send("New Character Created!");
 
 export const deleteCharacter = async (req, res) => {
     try{
