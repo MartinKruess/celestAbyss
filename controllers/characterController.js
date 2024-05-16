@@ -27,10 +27,12 @@ export const newCharData = async (req, res) => {
         if(account.characters.length < account.maxChars){
             // Create Character
             const char = await CharDataModel.create(charData);
+            console.log("charCreated")
             
             // Create Inventory
-            const inventory = await InventoryModel.create({characterID: char._id});
-            console.log("INV", inventory)
+            await InventoryModel.create({characterID: char._id});
+            const inventory = await InventoryModel.findOne({characterID: char._id});
+            console.log("Inventory Created", inventory)
             
             const skills = await SkillDataModel.find({charClass: char.class});
             const newSkilLData = skills.map(skill => ({
