@@ -1,9 +1,11 @@
 // Importiere das Validator-Paket
-import { body, validationResult } from 'express-validator';
+
+import { body, validationResult } from "express-validator";
+
 
 // User Validateoptions
 export const userValidationOptions = [
-    body('userName')
+    body('username')
         .notEmpty().withMessage('Benutzername darf nicht leer sein.')
         .isLength({ min: 3 }).withMessage('Benutzername muss mindestens 3 Zeichen lang sein.'),
     body('email')

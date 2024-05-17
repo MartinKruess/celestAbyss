@@ -1,5 +1,5 @@
 ### Register
-POST https://naughty-cyan-sombrero.cyclic.app/user/register HTTP/1.1
+POST http://localhost:5600/user/register HTTP/1.1
 content-type: application/json
 
 {
@@ -15,11 +15,11 @@ content-type: application/json
 
 ### Login
 
-POST https://naughty-cyan-sombrero.cyclic.app/user/login HTTP/1.1
+POST http://localhost:5600/user/login HTTP/1.1
 content-type: application/json
 
 {
-  "email": "testuser3@mail.com",
+  "email": "testuser@mail.com",
   "password": "LoginPW123!"
 }
 
@@ -33,8 +33,8 @@ PUT https://naughty-cyan-sombrero.cyclic.app/user/update HTTP/1.1
 GET https://naughty-cyan-sombrero.cyclic.app/characters/6639f2fb4a84795639abf772 HTTP/1.1
 
 ### Add Character
-
-POST https://naughty-cyan-sombrero.cyclic.app/characters/ HTTP/1.1
+ 
+POST http://localhost:5600/characters/ HTTP/1.1
 content-type: application/json
 
 {
@@ -50,11 +50,11 @@ content-type: application/json
 
 
 ### Add Item to Inventory
-PATCH https://naughty-cyan-sombrero.cyclic.app/inventory/ HTTP/1.1
+PATCH http://localhost:5600/inventory/ HTTP/1.1
 content-type: application/json
 
 {
   "itemName": "Lifesaver Potion",
   "amount": 5,
-  "characterID": "66425344cfdfc3c84a64bc68"
+  "characterID": "664719d9df105824e698cbdd"
 }

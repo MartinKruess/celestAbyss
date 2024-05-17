@@ -5,8 +5,7 @@ export const inventorySchema = mongoose.Schema({
     characterID: {type: Schema.Types.ObjectId, ref: 'characters'},
     size: {
         type: Number,
-        default: 160,
-        unique: true,
+        default: 160
     },
     items: [{
         itemID: {
@@ -14,7 +13,9 @@ export const inventorySchema = mongoose.Schema({
             ref: ItemModel
         },
         level: { type: Number, default: 1 },
+        maxLevel: { type: Number, default: 1 },
         upgrade: { type: Number, default: 0 },
+        maxUpgrade: { type: Number, default: 0 },
         amount: { type: Number, default: 1 },
     }],
     isFull: {

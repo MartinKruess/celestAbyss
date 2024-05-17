@@ -8,8 +8,8 @@ export const getCharData = async (req, res) => {
         const accountID = req.params.id;
         console.log(accountID)
         const charData = await CharDataModel.find({_id: accountID})
-        .populate("skills", "firstName lastName")
-        .populate("inventory", "firstName lastName")
+        .populate("skills", "skillName level maxSkillLv")
+        .populate("inventory")
         charData ? res.status(200).json(charData) : res.status(404).send("No Characters Found!");
     }
     catch(error){
@@ -20,37 +20,41 @@ export const getCharData = async (req, res) => {
 export const newCharData = async (req, res) => {
     try{
         const charData = req.body;
-        const account = await UserDataModel.findById(charData.accountID);
-        account.characters.push(charData._id);
-        await account.save();
         
+        // find account
+        const account = await UserDataModel.findById(charData.accountID);
+        
+        // check account reached max characters
         if(account.characters.length < account.maxChars){
-           // Create the character
+            // Create the character
             const char = await CharDataModel.create(charData);
-            console.log("charCreated", char);
-
+            
             // Create inventory for the character
             const inventory = await InventoryModel.create({ characterID: char._id });
-            console.log("Inventory Created", inventory);
 
-            // Add start items to inventory if needed
-            const startItems = [{itemID: '663ff47dfa3f1526a217f5e3'}];
-            inventory.items.push(...startItems);
-            await inventory.save();
-
-            // Retrieve skills based on character class
+            
+                // Add start items to inventory if needed
+                //! Ein großes HÄÄÄÄÄÄ??????
+                const startItems = [{itemId: '663ff47dfa3f1526a217f5e3'}];
+                inventory.items.push(startItems);
+                console.log("Inventory PUSH?", inventory.items)
+                await inventory.save();
+            
+            // findAll skills based on character class
             const skills = await SkillDataModel.find({ charClass: char.class });
             const newSkillData = skills.map(skill => ({
                 skillID: skill._id,
-                maxSkillLv: skill.maxSkillLv
+                level: 1,
+                maxSkillLv: skill.maxSkillLv,
+                isMastered: false
             }));
 
             // Assign inventory and skills to the character
-            char.inventory = inventory; // Store the inventory ID
+            char.inventory = inventory._id;
             char.skills = newSkillData;
 
             // Save the character with the new data
-            await char.save();
+            // await char.save();
 
             // Update the account with the new character ID
             await account.characters.push(char._id);
@@ -62,7 +66,7 @@ export const newCharData = async (req, res) => {
         }
     }
     catch(error){
-        res.status(401).send("ERROR in Char: " + error.message);
+        res.status(401).send("ERROR in Char: " + error);
     }
 }
 

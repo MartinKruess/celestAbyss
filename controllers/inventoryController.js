@@ -1,102 +1,57 @@
 import { CharDataModel } from "../models/characterSchema.js"
 import { ItemModel } from "../models/itemSchema.js"
 
+// New Item to Inventory
+const addItem = async (characterID, itemFromDB, amount) => {
+  await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: amount } } )
+}
+
+// Stack Item to Inventory
+const stackItem = async (characterFromDB, itemFromDB, dropAmount) => {
+  
+  // Load all current stacks of the item
+  const itemStacks = characterFromDB.inventory.filter(item => item.name === itemFromDB.name)
+
+  itemStacks.forEach(stack => {
+    const spaceLeft = stack.stacksize - stack.amount
+ 
+    if(spaceLeft > 0){
+      dropAmount <= spaceLeft ? stack.amount += dropAmount : dropAmount = 0
+    } else {
+      stack.amount = itemFromDB.stacksize
+      dropAmount -= spaceLeft
+    }
+  })
+
+  if(dropAmount > 0){
+    const char = await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: dropAmount } } )
+    console.log("Update, new Stack:", char.inventory)
+  }
+};
+
 export const updateInventoryByLoot = async (req, res, next) => {
     try{
         // characterID. name, amount, 
-        const itemID = req.body.itemID
+        const itemName = req.body.itemName
         const amount = req.body.amount
         const characterID = req.body.characterID
 
         // Find character by ID
         const characterFromDB = await CharDataModel.findOne({ _id: characterID })
+        console.log("CharInventoryFromDB", characterFromDB.inventory)
         
-        const itemFromCharacter = characterFromDB.inventory.items.find(item => item.itemID === itemID)
-        console.log("Item: ", itemFromDB)
+        const itemFromCharacter = characterFromDB.inventory.find(item => item.itemName === itemName)
+        itemFromCharacter && console.log("ItemFromCharacter: ", itemFromCharacter.name)
         
         // Find Item by Name
         const itemFromDB = await ItemModel.findOne({name: itemName})
+        console.log("ItemFromDB: ", itemFromDB)
 
-        itemFromCharacter && itemFromCharacter.stacksize > 1
-          ? await stackItem(characterFromDB, itemFromDB, amount)
+        itemFromCharacter && itemFromDB.stacksize > 1
+          ? await stackItem(characterFromDB, itemFromCharacter, amount)
           : await addItem(characterID, itemFromDB, amount)
 
-
-        
     }catch(err){
         next(err)
     }
-
-    // New Item to Inventory
-    const addItem = async (characterID, itemFromDB, amount) => {
-        await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: amount } } )
-    }
-
-    
-    const stackItem = async (characterFromDB, itemFromDB, dropAmount) => {
-      
-      // Load all current stacks of the item
-      const stacks = characterFromDB.inventory.filter(item => item.name === itemFromDB.name)
-
-      stacks.forEach(stack => {
-        const spaceLeft = stack.stacksize - stack.amount
-
-        if(spaceLeft > 0){
-          if(dropAmount <= spaceLeft){
-            stack.amount += dropAmount
-            dropAmount = 0
-          }else{
-            stack.amount = itemFromDB.stacksize
-            dropAmount -= spaceLeft
-          }
-        }
-      });
-
-      if(dropAmount > 0){
-        const char = await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: dropAmount } } )
-        console.log("Update, new Stack:", char.inventory)
-      }
-
-      console.log("Updated Inventory: ", characterFromDB.inventory)
-  }
 }
-
-
-
-const distributeNuts = async (quantity, nutType) => {
-    try {
-      // Annahme: Du hast eine MongoDB-Verbindung und eine Inventory-Sammlung
-      const nutItems = [{name: "Wallnüsse", quantity: 8, stacksize: 10}, {name: "Wallnüsse", quantity: 9, stacksize: 10}, {name: "Wallnüsse", quantity: 10, stacksize: 10}]
-  
-      let remainingQuantity = quantity;
-  
-      // Verteile die Nüsse auf vorhandene Stapel, beginnend mit den kleinsten Mengen
-      for (const nutItem of nutItems) {
-        const availableSpace = nutItem.stacksize - nutItem.quantity;
-  
-        if (remainingQuantity <= availableSpace) {
-          // Es gibt genug Platz auf dem aktuellen Stapel, fülle ihn auf und beende die Schleife
-          await Inventory.findByIdAndUpdate(nutItem._id, { $inc: { quantity: remainingQuantity } });
-          remainingQuantity = 0;
-          break;
-        } else {
-          // Fülle den aktuellen Stapel auf und aktualisiere die verbleibende Menge
-          await Inventory.findByIdAndUpdate(nutItem._id, { $set: { quantity: 10 } });
-          remainingQuantity -= availableSpace;
-        }
-      }
-  
-      // Wenn noch eine Menge übrig ist, erstelle einen neuen Stapel
-      if (remainingQuantity > 0) {
-        const newNutItem = await Inventory.create({
-          itemName: nutType,
-          quantity: remainingQuantity > 10 ? 10 : remainingQuantity // Begrenze die Menge auf 10, falls die verbleibende Menge größer als 10 ist
-        });
-        console.log(`Ein neuer Stapel ${nutType} wurde erstellt:`, newNutItem);
-      }
-  
-      console.log(`Die Nüsse wurden erfolgreich verteilt.`);
-    } catch (error) {
-      console.error("Fehler beim Verteilen der Nüsse:", error);
-    }
-  }
