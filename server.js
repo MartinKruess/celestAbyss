@@ -17,23 +17,22 @@ import { skillController } from './controllers/skillController.js';
 import { inventoryRouter } from './routes/inventoryRouter.js';
 import { upgradeController } from './controllers/upgradeController.js';
 
+console.clear();
+
 const app = express();
 
-app.use(
-  cors({
-    credentials: true,
-  })
-);
-app.use(express.json({ limit: '3MB' }));
+app.use(cors());
+app.use(express.json({ limit: '50mb' }));
 
-const PORT = process.env.PORT || 5500;
+// const PORT = process.env.PORT || 5500;
+const PORT = 5600;
 
 app.get('/', (req, res) => {
   res.send('<h1>This is the Celest Abyss Backend!</h1>');
 });
 
 // Celest Abyss Game API´s
-app.use('/user', userValidationOptions, userValidation, userRouter);
+app.use('/user', /*userValidationOptions, userValidation,*/ userRouter);
 app.use('/characters', /*authenticateToken,*/ characterRouter);
 
 app.use('/skills', /*authenticateToken,*/ skillController);
@@ -41,9 +40,9 @@ app.use('/inventory', /*authenticateToken,*/ inventoryRouter);
 app.use('/items', /*authenticateToken,*/ itemRouter);
 app.use('/upgrade', /*authenticateToken,*/ upgradeController);
 
-app.use((req, res, next) => {
-  res.status(404).json;
-});
+// app.use((req, res, next) => {
+//   res.status(404).json;
+// });
 
 app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);

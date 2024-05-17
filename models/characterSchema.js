@@ -1,6 +1,7 @@
 import mongoose, { Schema } from 'mongoose';
 import { SkillDataModel } from './skillSchema.js';
 import { InventoryModel } from './inventorySchema.js';
+import { ItemModel } from './itemSchema.js';
 
 const string = {
     type: String,
@@ -30,22 +31,19 @@ const characterSchema = mongoose.Schema({
         default: "Asgard",
         required: true,
     },
-    level: number,
+    level: {
+        type: Number,
+        default: 1,
+    },
     experience: number,
-    skills: [
-        {
-            skillId: {
-                type: Schema.Types.ObjectId, ref: SkillDataModel,
-            },
-            level: number,
-            upgrade: number,
-        }
-    ],
-    inventory: {
-            itemID: {
-                type: Schema.Types.ObjectId, ref: InventoryModel,
-            },
-        },
+    skills: [{
+        type: Schema.Types.ObjectId,
+        ref: 'SkillDataModel'
+    }],
+    inventory: [{
+        type: Schema.Types.ObjectId,
+        ref: 'ItemModel'
+    }],
     titels: {
                 type: Array
             },

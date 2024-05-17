@@ -18,6 +18,8 @@ const itemSchema = mongoose.Schema({
       slots: { type: Number, default: 0 },
       level: { type: Number, default: 1 },
       maxLevel: { type: Number, default: 1 },
+      upgrade: { type: Number, default: 1 },
+      maxUpgrade: { type: Number, default: 1 },
       pang: { type: Number, default: 0 },
       mang: { type: Number, default: 0 },
       pdeff: { type: Number, default: 0 },

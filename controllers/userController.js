@@ -5,6 +5,7 @@ export const signinController = async (req, res) => {
     try{
         const signinData = req.body
         const userData = await UserDataModel.findOne({email: req.body.email})
+        console.log(signinData)
 
         if(bcrypt.compareSync(signinData.password, userData.password)){
             const userDataObj = userData.toObject()
