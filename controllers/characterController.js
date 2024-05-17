@@ -1,3 +1,5 @@
+import { addStartItemsToInventory } from "../helperFucntions/addStartItems.js";
+import { startItems } from "../interactives/startItems.js";
 import { CharDataModel } from "../models/characterSchema.js";
 import { InventoryModel } from "../models/inventorySchema.js";
 import { SkillDataModel } from "../models/skillSchema.js";
@@ -30,31 +32,27 @@ export const newCharData = async (req, res) => {
             const char = await CharDataModel.create(charData);
             
             // Create inventory for the character
-            const inventory = await InventoryModel.create({ characterID: char._id });
+            const inventory = await InventoryModel.create(
+                { characterID: char._id }
+            );
 
-            
-                // Add start items to inventory if needed
-                //! Ein großes HÄÄÄÄÄÄ??????
-                const startItems = [{itemId: '663ff47dfa3f1526a217f5e3'}];
-                inventory.items.push(startItems);
-                console.log("Inventory PUSH?", inventory.items)
-                await inventory.save();
-            
-            // findAll skills based on character class
-            const skills = await SkillDataModel.find({ charClass: char.class });
-            const newSkillData = skills.map(skill => ({
-                skillID: skill._id,
-                level: 1,
-                maxSkillLv: skill.maxSkillLv,
-                isMastered: false
-            }));
-
-            // Assign inventory and skills to the character
+            // Add inventory to the character
             char.inventory = inventory._id;
-            char.skills = newSkillData;
+            console.log("Inventory Items", inventory.items)
+
+            
+            // Add start items to inventory
+            await addStartItemsToInventory(inventory._id, startItems);
+            
+            // find all skills based on character class
+            const skills = await SkillDataModel.find({ charClass: char.class });
+            char.skills = skills.map(skill => skill._id);
+
+            // Add skills to the character
+            // char.skills = newSkillData;
 
             // Save the character with the new data
-            // await char.save();
+            await char.save();
 
             // Update the account with the new character ID
             await account.characters.push(char._id);
@@ -70,30 +68,12 @@ export const newCharData = async (req, res) => {
     }
 }
 
-
-//  // Create Character
-//  const char = await CharDataModel.create(charData);
-//  console.log("charCreated", char)
- 
-//  // Create Inventory
-//  const inventory = await InventoryModel.create({characterID: char._id});
-//  console.log("Inventory Created", inventory)
- 
-//  const skills = await SkillDataModel.find({charClass: char.class});
-//  const newSkilLData = skills.map(skill => ({
-//      skillID: skill._id,
-//      maxSkillLv: skill.maxSkillLv
-//  }));
-//  char.inventory = inventory._id;
-//  char.inventory.push(startItems)
-
-//  char.skills = newSkilLData; 
-//  await char.save(); 
-//  res.status(200).send("New Character Created!");
-
 export const deleteCharacter = async (req, res) => {
+    const characterID = req.params.id;
     try{
-       
+       await UserDataModel.findAndDelete({_id: characterID});
+       await UserDataModel.findAndDelete({characterID: characterID});
+       res.send({status: "success", msg: "Character Deleted!"})
     }
     catch(error){
         res.status(401).send("ERROR: " + error.message);

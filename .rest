@@ -38,12 +38,14 @@ POST http://localhost:5600/characters/ HTTP/1.1
 content-type: application/json
 
 {
-  "accountID": "66423b453f223c3d7920accd",
+  "accountID": "664765050c679adb667ce908",
   "charName": "SockenRocker",
   "class": "Lightmage"
 }
 
 ### Delete Character
+
+DELETE http://localhost:5600/characters/66478f1a95ab0a678b3a3c59 HTTP/1.1
 
 
 ### Create Inventory
@@ -52,7 +54,7 @@ content-type: application/json
 ### Add Item to Inventory
 PATCH http://localhost:5600/inventory/ HTTP/1.1
 content-type: application/json
-
+ 
 {
   "itemName": "Lifesaver Potion",
   "amount": 5,

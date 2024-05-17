@@ -17,6 +17,8 @@ import { skillController } from './controllers/skillController.js';
 import { inventoryRouter } from './routes/inventoryRouter.js';
 import { upgradeController } from './controllers/upgradeController.js';
 
+console.clear();
+
 const app = express();
 
 app.use(cors());
