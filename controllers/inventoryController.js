@@ -35,7 +35,6 @@ const stackItem = async (invFromDB, itemFromDB, dropAmount) => {
 
   // Create new stacks
   if(itemAmount > 0){
-
     do {
       if(itemAmount > itemFromDB.stacksize){
         invFromDB.items.push({ itemID: itemFromDB._id, amount: itemFromDB.stacksize })
@@ -44,10 +43,10 @@ const stackItem = async (invFromDB, itemFromDB, dropAmount) => {
         invFromDB.items.push({ itemID: itemFromDB._id, amount: itemAmount })
         itemAmount = 0
       }
-    } while (itemAmount > 0);
+    } while (itemAmount > 0 && invFromDB.items.length < invFromDB.size);
 
     // save to DB
-    console.log("Update, new Stack:", invFromDB.items)
+    console.log("Update, new Stack:", invFromDB.items.length)
   }
 
 };
@@ -65,16 +64,14 @@ export const updateInventoryByLoot = async (req, res, next) => {
         // Find Item by Name in itemDB
         const itemFromDB = await ItemModel.findOne({name: itemName})
 
-        // Equal?
-        console.log("Equal?", itemFromDB._id[0] === inventoryFromDB.items[0].itemID[0])
-
         // Item already in Inventory?
         const itemInInventory = inventoryFromDB.items.find(item => item.itemID[0] === itemFromDB._id[0])
-        
-        itemInInventory && itemFromDB.stacksize > 1
+
+        inventoryFromDB.items.length + 158 < inventoryFromDB.size ? (
+          itemInInventory && itemFromDB.stacksize > 1
           ? await stackItem(inventoryFromDB, itemFromDB, amount)
           : await addItem(inventoryFromDB, itemFromDB, amount)
-
+        ) : console.log("Inventory is full")
     } catch (err){
         next(err)
     }
