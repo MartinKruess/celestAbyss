@@ -4,7 +4,6 @@ import { ItemModel } from "../models/itemSchema.js"
 
 // New Item to Inventory
 const addItem = async (characterID, itemFromDB, amount) => {
-  console.log("Item nicht vorhanden oder nicht Stackbale!")
   await CharDataModel.findandUpdate( { _id: characterID }, {  $push: { inventory: itemFromDB, amount: amount } } )
 }
 
@@ -48,7 +47,6 @@ const stackItem = async (invFromDB, itemFromDB, dropAmount) => {
     // save to DB
     console.log("Update, new Stack:", invFromDB.items.length)
   }
-
 };
 
 export const updateInventoryByLoot = async (req, res, next) => {
@@ -73,6 +71,7 @@ export const updateInventoryByLoot = async (req, res, next) => {
           : await addItem(inventoryFromDB, itemFromDB, amount)
         ) : console.log("Inventory is full")
     } catch (err){
+
         next(err)
     }
 }

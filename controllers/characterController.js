@@ -77,6 +77,7 @@ export const deleteCharacter = async (req, res) => {
        await InventoryModel.deleteOne({characterID: characterID});
        await CharDataModel.findByIdAndDelete(characterID);
        await UserDataModel.updateOne({characters: characterID}, {$pull: {characters: characterID}});
+
        res.send({status: "success", msg: "Character Deleted!"})
     }
     catch(error){

@@ -22,14 +22,11 @@ content-type: application/json
 }
 
 ### Update User
-
 PUT https://naughty-cyan-sombrero.cyclic.app/user/update HTTP/1.1
 
-//! Lösung finden!
 ### Get Character
  
 GET http://localhost:5600/characters/6647c82c825a0e006d4c62ac HTTP/1.1
-
 
 ### Add Character, Inventory, Skilltree ✓
 POST http://localhost:5600/characters/ HTTP/1.1
@@ -42,13 +39,12 @@ content-type: application/json
 }
 
 ### Delete Character ✓
-
 DELETE http://localhost:5600/characters/6647c82c825a0e006d4c62ac HTTP/1.1
 
 ### Add Item to Inventory
 PATCH http://localhost:5600/inventory/ HTTP/1.1
 content-type: application/json
-
+ 
 {
   "itemName": "Lifesaver Potion",
   "amount": 15999,
