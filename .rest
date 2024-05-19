@@ -1,4 +1,4 @@
-### Register
+### Register ✓
 POST http://localhost:5600/user/register HTTP/1.1
 content-type: application/json
 
@@ -12,9 +12,7 @@ content-type: application/json
   "isBanned": false
 }
 
-
-### Login
-
+### Login ✓
 POST http://localhost:5600/user/login HTTP/1.1
 content-type: application/json
 
@@ -24,32 +22,24 @@ content-type: application/json
 }
 
 ### Update User
-
 PUT https://naughty-cyan-sombrero.cyclic.app/user/update HTTP/1.1
 
-
-### Get Characters
-
-GET https://naughty-cyan-sombrero.cyclic.app/characters/6639f2fb4a84795639abf772 HTTP/1.1
-
-### Add Character
+### Get Character
  
+GET http://localhost:5600/characters/6647c82c825a0e006d4c62ac HTTP/1.1
+
+### Add Character, Inventory, Skilltree ✓
 POST http://localhost:5600/characters/ HTTP/1.1
 content-type: application/json
 
 {
   "accountID": "664765050c679adb667ce908",
-  "charName": "SockenRocker",
-  "class": "Lightmage"
+  "charName": "SockenRocker2",
+  "class": "Bloodmage"
 }
 
-### Delete Character
-
-DELETE http://localhost:5600/characters/66478f1a95ab0a678b3a3c59 HTTP/1.1
-
-
-### Create Inventory
-
+### Delete Character ✓
+DELETE http://localhost:5600/characters/6647c82c825a0e006d4c62ac HTTP/1.1
 
 ### Add Item to Inventory
 PATCH http://localhost:5600/inventory/ HTTP/1.1
@@ -57,6 +47,6 @@ content-type: application/json
  
 {
   "itemName": "Lifesaver Potion",
-  "amount": 5,
-  "characterID": "664719d9df105824e698cbdd"
+  "amount": 15999,
+  "characterID": "6648816f42267e4d4ae70ac7"
 }

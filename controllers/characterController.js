@@ -1,21 +1,24 @@
 import { addStartItemsToInventory } from "../helperFucntions/addStartItems.js";
 import { startItems } from "../interactives/startItems.js";
 import { CharDataModel } from "../models/characterSchema.js";
+
 import { InventoryModel } from "../models/inventorySchema.js";
 import { SkillDataModel } from "../models/skillSchema.js";
 import { UserDataModel } from "../models/userSchema.js";
 
 export const getCharData = async (req, res) => {
     try{
-        const accountID = req.params.id;
-        console.log(accountID)
-        const charData = await CharDataModel.find({_id: accountID})
-        .populate("skills", "skillName level maxSkillLv")
-        .populate("inventory")
-        charData ? res.status(200).json(charData) : res.status(404).send("No Characters Found!");
+        const characterID = req.params.id;
+        const charData = await CharDataModel.findById(characterID)
+        //! Lösung finden!
+        .populate("skills")
+        .populate("inventory.items.itemID")
+
+        console.log("CharData", charData)
+        charData ? res.status(200).send(charData) : res.status(404).send("No Characters Found!");
     }
     catch(error){
-        res.status(401).send("ERROR: " + error.message);
+        res.status(500).send("ERROR: " + error.message);
     }
 }
 
@@ -71,8 +74,10 @@ export const newCharData = async (req, res) => {
 export const deleteCharacter = async (req, res) => {
     const characterID = req.params.id;
     try{
-       await UserDataModel.findAndDelete({_id: characterID});
-       await UserDataModel.findAndDelete({characterID: characterID});
+       await InventoryModel.deleteOne({characterID: characterID});
+       await CharDataModel.findByIdAndDelete(characterID);
+       await UserDataModel.updateOne({characters: characterID}, {$pull: {characters: characterID}});
+
        res.send({status: "success", msg: "Character Deleted!"})
     }
     catch(error){
