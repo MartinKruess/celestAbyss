@@ -6,5 +6,5 @@ export const characterRouter = express.Router()
 characterRouter
     .get("/:id", getCharData)
     .post("/", newCharData)
-    .delete("/", deleteCharacter)
+    .delete("/:id", deleteCharacter)
 

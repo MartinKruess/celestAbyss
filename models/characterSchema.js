@@ -36,28 +36,14 @@ const characterSchema = mongoose.Schema({
         default: 1,
     },
     experience: number,
-    skills: [
-        {
-            skillId: {
-                type: Schema.Types.ObjectId, ref: SkillDataModel,
-            },
-            level: {
-                type: Number,
-                default: 1,
-            },
-            upgrade: {
-                type: Number,
-                default: 0,
-            }
-        }
-    ],
-    inventory: [
-        {
-            itemId: {
-                type: Schema.Types.ObjectId, ref: ItemModel,
-            }
-        }
-    ],
+    skills: [{
+        type: Schema.Types.ObjectId,
+        ref: 'SkillDataModel'
+    }],
+    inventory: [{
+        type: Schema.Types.ObjectId,
+        ref: 'ItemModel'
+    }],
     titels: {
                 type: Array
             },
