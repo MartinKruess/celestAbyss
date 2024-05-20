@@ -1,4 +1,5 @@
-import { InventoryModel } from "../models/inventorySchema"
+import { InventoryModel } from "../models/inventorySchema.js"
+import { ItemModel } from "../models/itemSchema.js"
 
 export const buyController = async (req, res, next) => {
     try {
@@ -6,14 +7,15 @@ export const buyController = async (req, res, next) => {
         const itemName = req.body.itemName
         const itemAmount = req.body.amount
 
+        
         // Find inventory by characterID
-        const inventoryFromDB = await InventoryModel.find({characterID: characterID})
-
+        const inventoryFromDB = await InventoryModel.findOne({characterID: characterID})
+        
         // Find Item by ID in itemDB
-        const itemFromDB = await ItemModel.find({name: itemName})
+        const itemFromDB = await ItemModel.findOne({name: itemName})
 
         // Check currency
-        if(inventoryFromDB.currency >= (itemFromDB.price * itemAmount) && inventoryFromDB.items.length < inventoryFromDB.size) {
+        if(inventoryFromDB.currency >= (itemFromDB.price * itemAmount) && 1 < inventoryFromDB.size) {
             // Update currency
             inventoryFromDB.currency -= (itemFromDB.price * itemAmount)
 

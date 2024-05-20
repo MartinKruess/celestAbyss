@@ -3,12 +3,30 @@
 ## Was Funktioniert
 
 - register (create new Account)
+- Login to Account
+- create Character with Inventory and Skills
+    - Link inventory to Character sometimes ot working
+- add Item to inventory
+    - isInventoryFull controll
+    - stack Items as possible
+- buy items
+    - currency controll
+    - add Item to inventory*
 
 
 ## Was fehlt
 
-**characterID: 6641236db0eba99bcf303c9d**
-- create inventory by creating character
-- load Skills into Character (by Class)
-- show skill basic settings (check if skill is in)
-- show inventory basic settings (check if item is in)
+- populate Skill- and ItemData to Character
+
+- Link inventory to Character (sometimes...)
+- sell and delete item
+- add EQ Items to DB
+- combine Items
+- consume items
+- upgrade Items
+
+- SkillData update (completed)
+- upgrade Skills
+
+- Spawn controll
+- EXP update

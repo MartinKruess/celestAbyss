@@ -33,19 +33,17 @@ app.get('/', (req, res) => {
   res.send('<h1>This is the Celest Abyss Backend!</h1>');
 });
 
-// Celest Abyss Game API´s
+// Account and Character Routes
 app.use('/user', /*userValidationOptions, userValidation,*/ userRouter);
 app.use('/characters', /*authToken,*/ characterRouter);
 
+// Data Routes
 app.use('/skills', /*authToken,*/ skillController);
 app.use('/inventory', /*authToken,*/ inventoryRouter);
 app.use('/items', /*authToken,*/ itemRouter);
 app.use('/upgrade', /*authToken,*/ upgradeController);
-app.use('/trade', /*authToken,*/ buyController, updateInventoryByLoot);
+app.use('/trader', /*authToken,*/ buyController, updateInventoryByLoot);
 
-// app.use((req, res, next) => {
-//   res.status(404).json;
-// });
 
 app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);

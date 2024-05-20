@@ -7,6 +7,10 @@ export const inventorySchema = mongoose.Schema({
         type: Number,
         default: 160
     },
+    currency: {
+        type: Number,
+        default: 0
+    },
     items: [{
         itemID: {
             type: Schema.Types.ObjectId,

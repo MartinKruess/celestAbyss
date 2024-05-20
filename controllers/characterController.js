@@ -11,8 +11,8 @@ export const getCharData = async (req, res) => {
         const characterID = req.params.id;
         const charData = await CharDataModel.findById(characterID)
         //! Lösung finden!
-        .populate("skills")
-        .populate("inventory.items.itemID")
+        // .populate("skills")
+        // .populate("inventory.items.itemID")
 
         console.log("CharData", charData)
         charData ? res.status(200).send(charData) : res.status(404).send("No Characters Found!");
