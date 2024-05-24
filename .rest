@@ -25,7 +25,6 @@ content-type: application/json
 PUT https://naughty-cyan-sombrero.cyclic.app/user/update HTTP/1.1
 
 ### Get Character
- 
 GET http://localhost:5600/characters/6647c82c825a0e006d4c62ac HTTP/1.1
 
 ### Add Character, Inventory, Skilltree ✓
@@ -34,14 +33,14 @@ content-type: application/json
 
 {
   "accountID": "664765050c679adb667ce908",
-  "charName": "SockenRocker",
-  "class": "Bloodmage"
+  "charName": "Raikun",
+  "class": "Gladiator"
 }
 
 ### Delete Character ✓
-DELETE http://localhost:5600/characters/664b1bcb4d815342c4961dc4 HTTP/1.1
+DELETE http://localhost:5600/characters/665105cfd740a0ec94c43fa3 HTTP/1.1
 
-### Add Item to Inventory
+### Add Item to Inventory ✓
 PATCH http://localhost:5600/inventory/ HTTP/1.1
 content-type: application/json
  
@@ -52,12 +51,40 @@ content-type: application/json
 }
 
 
-### Buy Item
+### Buy Item ✓
 POST http://localhost:5600/trader/ HTTP/1.1
 content-type: application/json
  
 {
   "itemName": "Lifesaver Potion",
   "amount": 99,
+  "characterID": "664b1bcb4d815342c4961dc4"
+}
+
+### Sell Item
+
+### Equip Item
+
+### Unequip Item
+
+### Use Item
+
+### Add Skillpoint
+
+### Remove Skillpoint
+
+### Tame Pet
+
+POST http://localhost:5600/pets/tame/ HTTP/1.1
+{
+  "characterID": "664b1bcb4d815342c4961dc4",
+  "creatureID": "5f9b1bcb4d815342c4961dc4",
+  "tamingLevel": 10,
+}
+
+GET http://localhost:5600/pets/5f9b1bcb4d815342c4961dc4 HTTP/1.1
+{
+  "petName": "Fluffy",
+  "petType": "Wolf",
   "characterID": "664b1bcb4d815342c4961dc4"
 }

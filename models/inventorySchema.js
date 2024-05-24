@@ -2,7 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 import { ItemModel } from './itemSchema.js';
 
 export const inventorySchema = mongoose.Schema({
-    characterID: {type: Schema.Types.ObjectId, ref: 'characters'},
+    characterID: { type: Schema.Types.ObjectId, ref: 'characters' },
     size: {
         type: Number,
         default: 160
@@ -14,7 +14,12 @@ export const inventorySchema = mongoose.Schema({
     items: [{
         itemID: {
             type: Schema.Types.ObjectId,
-            ref: ItemModel
+            refPath: 'items.itemModel'
+        },
+        itemModel: {
+            type: String,
+            enum: ['ItemModel', 'FullCard'],
+            required: true
         },
         level: { type: Number, default: 1 },
         maxLevel: { type: Number, default: 1 },
