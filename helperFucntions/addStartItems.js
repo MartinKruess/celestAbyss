@@ -10,8 +10,9 @@ export const addStartItemsToInventory = async (inventoryId, startItems) => {
         startItems.forEach(async (item) => {
             inventory.items.push(item);
         });
+        console.log("Inventory added Items", inventory.items)
         await inventory.save();
     } catch (error) {
-        throw new Error("Error adding start items to inventory: " + error.message);
+        console.log("Error adding Startitems to Inv:", error.message, error);
     }
 };

@@ -1,3 +1,12 @@
 export const startItems = [
-    { itemID: '663ff47dfa3f1526a217f5e3' }
+    {
+        itemID: '6650c16db17d1a262c604ae5',
+        itemModel: 'ItemModel',
+        amount: 5
+    },
+    {
+        itemID: '6650c16db17d1a262c604a52',
+        itemModel: 'ItemModel',
+        amount: 1
+    }
 ];
