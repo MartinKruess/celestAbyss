@@ -73,6 +73,27 @@ content-type: application/json
 
 ### Remove Skillpoint
 
+### add new Creature
+POST http://localhost:5600/creatures/add HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Yeti",
+  "description": "A mythical snow giant living in icy heights.",
+  "type": "magical",
+  "sell": 1500,
+  "rare": 2,
+  "health": 200,
+  "mana": 75,
+  "strength": 7,
+  "vita": 15,
+  "intelligence": 18,
+  "wisdom": 12,
+  "luck": 7,
+  "dexterity": 5,
+  "agility": 6
+}
+
 ### Tame Pet
 
 POST http://localhost:5600/pets/tame/ HTTP/1.1

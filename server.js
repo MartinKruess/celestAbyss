@@ -18,6 +18,7 @@ import { inventoryRouter } from './routes/inventoryRouter.js';
 import { upgradeController } from './controllers/upgradeController.js';
 import { buyController, sellController } from './controllers/traderController.js';
 import { updateInventoryByLoot } from './controllers/inventoryController.js';
+import { creatureRouter } from './routes/creatureRoute.js';
 
 console.clear();
 
@@ -43,6 +44,7 @@ app.use('/inventory', /*authToken,*/ inventoryRouter);
 app.use('/items', /*authToken,*/ itemRouter);
 app.use('/upgrade', /*authToken,*/ upgradeController);
 app.use('/trader', /*authToken,*/ buyController, updateInventoryByLoot);
+app.use('/creatures', /*authToken,*/ creatureRouter);
 
 
 app.listen(PORT, () => {
