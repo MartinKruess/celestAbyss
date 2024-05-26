@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import './db/mongo-connect.js';
-// import { authenticateToken } from './security/jwt_auth.js';
+// import { authToken } from './security/jwt_auth.js';
 
 // Celest Abyss - User/Account
 import { userRouter } from './routes/userRoutes.js';
@@ -16,6 +16,9 @@ import { characterRouter } from './routes/characterRoutes.js';
 import { skillController } from './controllers/skillController.js';
 import { inventoryRouter } from './routes/inventoryRouter.js';
 import { upgradeController } from './controllers/upgradeController.js';
+import { buyController, sellController } from './controllers/traderController.js';
+import { updateInventoryByLoot } from './controllers/inventoryController.js';
+import { creatureRouter } from './routes/creatureRoute.js';
 
 console.clear();
 
@@ -31,18 +34,18 @@ app.get('/', (req, res) => {
   res.send('<h1>This is the Celest Abyss Backend!</h1>');
 });
 
-// Celest Abyss Game API´s
+// Account and Character Routes
 app.use('/user', /*userValidationOptions, userValidation,*/ userRouter);
-app.use('/characters', /*authenticateToken,*/ characterRouter);
+app.use('/characters', /*authToken,*/ characterRouter);
 
-app.use('/skills', /*authenticateToken,*/ skillController);
-app.use('/inventory', /*authenticateToken,*/ inventoryRouter);
-app.use('/items', /*authenticateToken,*/ itemRouter);
-app.use('/upgrade', /*authenticateToken,*/ upgradeController);
+// Data Routes
+app.use('/skills', /*authToken,*/ skillController);
+app.use('/inventory', /*authToken,*/ inventoryRouter);
+app.use('/items', /*authToken,*/ itemRouter);
+app.use('/upgrade', /*authToken,*/ upgradeController);
+app.use('/trader', /*authToken,*/ buyController, updateInventoryByLoot);
+app.use('/creatures', /*authToken,*/ creatureRouter);
 
-// app.use((req, res, next) => {
-//   res.status(404).json;
-// });
 
 app.listen(PORT, () => {
   console.log(`Server is listening on http://localhost:${PORT}`);
