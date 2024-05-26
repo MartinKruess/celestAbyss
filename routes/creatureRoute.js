@@ -1,11 +1,11 @@
 import express from "express"
-import { registerController, signinController } from "../controllers/userController.js"
 import { addCreatureController } from "../controllers/creatureController.js"
+import { tameController } from "../controllers/tameController.js"
 
 export const creatureRouter = express.Router()
 
 creatureRouter
     .post("/add", addCreatureController)
-    .post("/register", registerController)
+    .post("/tame", tameController)
 // .patch("/", updateUser)
 // .delete("/", deleteUser)

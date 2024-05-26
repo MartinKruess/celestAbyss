@@ -25,7 +25,7 @@ content-type: application/json
 PUT https://naughty-cyan-sombrero.cyclic.app/user/update HTTP/1.1
 
 ### Get Character
-GET http://localhost:5600/characters/6647c82c825a0e006d4c62ac HTTP/1.1
+GET http://localhost:5600/characters/665105cfd740a0ec94c43fa3 HTTP/1.1
 
 ### Add Character, Inventory, Skilltree ✓
 POST http://localhost:5600/characters/ HTTP/1.1
@@ -73,13 +73,13 @@ content-type: application/json
 
 ### Remove Skillpoint
 
-### add new Creature
+### add new Creature ✓
 POST http://localhost:5600/creatures/add HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Yeti",
-  "description": "A mythical snow giant living in icy heights.",
+  "name": "Salamander Ignis",
+  "description": "Test",
   "type": "magical",
   "sell": 1500,
   "rare": 2,
@@ -96,12 +96,16 @@ content-type: application/json
 
 ### Tame Pet
 
-POST http://localhost:5600/pets/tame/ HTTP/1.1
+POST http://localhost:5600/creatures/tame/ HTTP/1.1
+content-type: application/json
+
 {
-  "characterID": "664b1bcb4d815342c4961dc4",
-  "creatureID": "5f9b1bcb4d815342c4961dc4",
-  "tamingLevel": 10,
+  "characterID": "665105cfd740a0ec94c43fa3",
+  "cardName": "Wolf",
+  "tamingLevel": 10
 }
+
+### Get Pet
 
 GET http://localhost:5600/pets/5f9b1bcb4d815342c4961dc4 HTTP/1.1
 {

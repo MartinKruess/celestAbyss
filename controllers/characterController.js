@@ -3,21 +3,28 @@ import { startItems } from "../interactives/startItems.js";
 import { CharDataModel } from "../models/characterSchema.js";
 
 import { InventoryModel } from "../models/inventorySchema.js";
+import { ItemModel } from "../models/itemSchema.js";
 import { SkillDataModel } from "../models/skillSchema.js";
 import { UserDataModel } from "../models/userSchema.js";
 
 export const getCharData = async (req, res) => {
+    //! Populate Inventory (itemModul & creatureModule (Fullcard)) and Skills
     try {
         const characterID = req.params.id;
-        const charData = await CharDataModel.findById(characterID)
-        //! Lösung finden!
-        // .populate("skills")
-        // .populate("inventory.items.itemID")
+        const charData = await CharDataModel.findById({ _id: characterID }).populate({
+            path: 'inventory',
+            populate: {
+                path: 'items.itemID',
+                itemModel: ['ItemModel', 'FullCard']
+            }
+        })
+            .populate('skills.skillID');
 
         console.log("CharData", charData)
         charData ? res.status(200).send(charData) : res.status(404).send("No Characters Found!");
     }
     catch (error) {
+        console.log("Error", error)
         res.status(500).send("ERROR: " + error.message);
     }
 }

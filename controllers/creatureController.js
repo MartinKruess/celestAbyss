@@ -8,8 +8,9 @@ export const addCreatureController = async (req, res) => {
     if (creature) {
         res.send("Creature already exists")
         return
+    } else {
+        const newCreature = req.body
+        await CreatureModel.create(newCreature)
+        res.send("Creature added")
     }
-    const newCreature = req.body
-    await CreatureModel.create(newCreature)
-    res.send("Creature added")
 }

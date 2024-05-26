@@ -1,19 +1,35 @@
-import { CharDataModel } from "../models/characterSchema";
-import { CreatureModel } from "../models/creatureSchema";
-import { InventoryModel } from "../models/inventorySchema";
+import { CreatureModel } from "../models/creatureSchema.js";
+import { InventoryModel } from "../models/inventorySchema.js";
 
 export const tameController = async (req, res) => {
     const characterID = req.body.characterID;
-    const creatureID = req.body.creatureID;
+    const cardName = req.body.cardName;
     const tamingSkill = req.body.tamingSkill;
-    const creatureLevel = req.body.level;
 
     try {
-        // Find Creature
-        const creature = await CreatureModel.findById(creatureID);
+        // Find Card in Inventory
+        const inventory = await InventoryModel.findOne({ characterID: characterID })
+        console.log(inventory.items)
+
+        const card = inventory.items.find(item => {
+            return item.name === cardName && category === "Emptycard"
+        });
+
+        //! Populte items before finish taming
+
+        if (!card) {
+            res.status(404).send("Card not found!");
+            return
+        } else {
+            console.log("Card found!", card)
+            res.send("Card found!");
+            return
+        }
+
+        const creature = await CreatureModel.findOne({ name: cardName });
 
         // Calculate Taming Chance
-        const chance = creature.tamingChance + tamingSkill * 0.3 - creatureLevel * 0.01;
+        const chance = creature.tamingChance + tamingSkill * 0.3;
 
         // Check if tamingChance negative -> fail
         if (chance <= 0) {
@@ -35,8 +51,8 @@ export const tameController = async (req, res) => {
                 // Update creature
                 creature.firstTamedBy = characterID;
                 await creature.save();
-                
-            }else{
+
+            } else {
                 res.status("success").send("Taming Successfull!");
             }
 
