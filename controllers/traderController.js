@@ -7,15 +7,15 @@ export const buyController = async (req, res, next) => {
         const itemName = req.body.itemName
         const itemAmount = req.body.amount
 
-        
         // Find inventory by characterID
-        const inventoryFromDB = await InventoryModel.findOne({characterID: characterID})
-        
+        const inventoryFromDB = await InventoryModel.findOne({ characterID: characterID })
+        console.log(inventoryFromDB)
+
         // Find Item by ID in itemDB
-        const itemFromDB = await ItemModel.findOne({name: itemName})
+        const itemFromDB = await ItemModel.findOne({ name: itemName })
 
         // Check currency
-        if(inventoryFromDB.currency >= (itemFromDB.price * itemAmount) && 1 < inventoryFromDB.size) {
+        if (inventoryFromDB.currency >= (itemFromDB.price * itemAmount) && 1 < inventoryFromDB.size) {
             // Update currency
             inventoryFromDB.currency -= (itemFromDB.price * itemAmount)
 
@@ -33,4 +33,4 @@ export const buyController = async (req, res, next) => {
     }
 }
 
-export const sellController = async (req, res, next) => {}
+export const sellController = async (req, res, next) => { }

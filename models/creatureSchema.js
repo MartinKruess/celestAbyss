@@ -1,5 +1,4 @@
 import mongoose, { Schema } from 'mongoose';
-import { ItemModel } from './itemSchema.js';
 
 const creatureSchema = mongoose.Schema({
     name: {

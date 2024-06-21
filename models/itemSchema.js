@@ -1,4 +1,4 @@
-import mongoose, { set } from 'mongoose';
+import mongoose from 'mongoose';
 
 // Funktion zum Entfernen leerer Werte
 function removeEmpty(value) {
