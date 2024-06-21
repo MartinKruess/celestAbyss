@@ -2,49 +2,58 @@ import bcrypt from 'bcrypt'
 import { UserDataModel } from '../models/userSchema.js'
 
 export const signinController = async (req, res) => {
-    try{
+    try {
         const signinData = req.body
-        const userData = await UserDataModel.findOne({email: req.body.email})
-        console.log(signinData)
+        const userData = await UserDataModel.findOne({ username: req.body.username }).populate('characters')
+        console.log("tryToSignIn", signinData)
 
-        if(bcrypt.compareSync(signinData.password, userData.password)){
+        if (bcrypt.compareSync(signinData.password, userData.password)) {
+            console.log("comparedPassword")
             const userDataObj = userData.toObject()
             delete userDataObj.password
-            console.log(userDataObj)
-            // generate token
-            console.log(userDataObj.isBanned)
-            !userDataObj.isBanned ? res.send(userDataObj) : res.send({msg: "banned"})
+            console.log("userDataObj From DB", userDataObj)
+            // console.log("isBanned?", userDataObj.isBanned)
+            if (userDataObj.isBanned) {
+                res.send({ isBanned: true, title: "Banned by Admin", msg: "Youre Account was banned please connect the Support to resolve the conflics." })
+            } else {
+                // generate token
+                // userDataObj.token = "token1234"
+                userDataObj.isLogedIn = true
+                res.send({ token: "token1234", userData: userDataObj })
+                console.log("userDataObj sent!")
+            }
         }
-        else{
+        else {
             res.send("Email or password is wrong!")
         }
-    } catch(error){
+    } catch (error) {
+        console.log(error)
         res.status(401).send("ERROR: " + error.message);
     }
 }
 
 export const registerController = async (req, res) => {
     const saltRounds = 12
-	try {
-		const hashedRegisterPassword = await bcrypt.hash(req.body.password, saltRounds)
+    try {
+        const hashedRegisterPassword = await bcrypt.hash(req.body.password, saltRounds)
 
-		const dataOfUser = {
+        const dataOfUser = {
             username: req.body.username,
-			email: req.body.email,
-			password: hashedRegisterPassword,
+            email: req.body.email,
+            password: hashedRegisterPassword,
             language: "",
             characters: [],
             isOnline: false,
             isBanned: false,
-		}
+        }
 
-		//SAVE: userData to userDB
+        //SAVE: userData to userDB
         await new UserDataModel(dataOfUser).save()
-		res.send({msg: 'Successfull registrated!'})
+        res.send({ msg: 'Successfull registrated!' })
 
-	} catch (error) {
-		res.status(401).send("ERROR: " + error.message)
-	}
+    } catch (error) {
+        res.status(401).send("ERROR: " + error.message)
+    }
 };
 
 
