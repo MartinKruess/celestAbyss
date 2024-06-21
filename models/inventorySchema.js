@@ -1,5 +1,4 @@
 import mongoose, { Schema } from 'mongoose';
-import { ItemModel } from './itemSchema.js';
 
 export const inventorySchema = mongoose.Schema({
     characterID: { type: Schema.Types.ObjectId, ref: 'characters' },
@@ -14,11 +13,11 @@ export const inventorySchema = mongoose.Schema({
     items: [{
         itemID: {
             type: Schema.Types.ObjectId,
-            refPath: 'items.itemModel'
+            refPath: 'model'
         },
-        itemModel: {
+        model: {
             type: String,
-            enum: ['ItemModel', 'FullCard'],
+            enum: ['items', 'creatures'],
             required: true
         },
         level: { type: Number, default: 1 },

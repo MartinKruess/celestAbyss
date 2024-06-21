@@ -1,24 +1,28 @@
 import mongoose from 'mongoose';
 
-const stringReq = {
-    type: String,
-    required: true,
-}
+const skillSchema = mongoose.Schema({
+    skillName: {
+        type: String,
+        unique: true
+    },
+    charClass: {
+        type: Array,
+    },
+    currentSkillLv: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    maxSkillLv: {
+        type: Number,
+        required: true,
+        default: 1,
+    },
+});
 
-const string = {
-    type: String,
-}
+export const SkillDataModel = mongoose.model('skills', skillSchema);
 
-const numberReq = {
-    type: Number,
-    required: true,
-}
-
-const number = {
-    type: Number,
-}
-
-// const skillSchema = mongoose.Schema({    
+// const skillSchema = mongoose.Schema({
 //     S_Name: stringReq,
 //     S_Thumbnail: string,
 //     CharClass: stringReq,
@@ -48,20 +52,3 @@ const number = {
 //     S_MDefense: number,
 //     S_ATK_Speed: number,
 // });
-
-const skillSchema = mongoose.Schema({
-    skillName: {
-        type: String,
-        unique: true
-    },
-    charClass: {
-        type: Array,
-    },
-    maxSkillLv: {
-        type: Number,
-        required: true,
-        default: 1,
-    },
-});
-
-export const SkillDataModel = mongoose.model('skills', skillSchema);

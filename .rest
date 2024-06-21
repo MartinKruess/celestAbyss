@@ -3,13 +3,13 @@ POST http://localhost:5600/user/register HTTP/1.1
 content-type: application/json
 
 {
-  "username":"Testuser3",
-  "email": "testuser3@mail.com",
+  "username":"BannedUser",
+  "email": "bannedUser@mail.com",
   "password": "LoginPW123!",
   "language": "de",
   "characters": [],
   "isOnline": false,
-  "isBanned": false
+  "isBanned": true
 }
 
 ### Login ✓
@@ -17,7 +17,7 @@ POST http://localhost:5600/user/login HTTP/1.1
 content-type: application/json
 
 {
-  "email": "testuser@mail.com",
+  "email": "testuser3@mail.com",
   "password": "LoginPW123!"
 }
 
@@ -25,7 +25,7 @@ content-type: application/json
 PUT https://naughty-cyan-sombrero.cyclic.app/user/update HTTP/1.1
 
 ### Get Character
-GET http://localhost:5600/characters/665105cfd740a0ec94c43fa3 HTTP/1.1
+GET http://localhost:5600/characters/666c6baf7f36c10fe518a46d HTTP/1.1
 
 ### Add Character, Inventory, Skilltree ✓
 POST http://localhost:5600/characters/ HTTP/1.1
@@ -38,16 +38,16 @@ content-type: application/json
 }
 
 ### Delete Character ✓
-DELETE http://localhost:5600/characters/665105cfd740a0ec94c43fa3 HTTP/1.1
+DELETE http://localhost:5600/characters/666c6baf7f36c10fe518a46d HTTP/1.1
 
 ### Add Item to Inventory ✓
 PATCH http://localhost:5600/inventory/ HTTP/1.1
 content-type: application/json
  
 {
-  "itemName": "Lifesaver Potion",
-  "amount": 15999,
-  "characterID": "6648816f42267e4d4ae70ac7"
+  "itemName": "Wolf",
+  "amount": 1,
+  "characterID": "666c6baf7f36c10fe518a46d"
 }
 
 
@@ -57,8 +57,8 @@ content-type: application/json
  
 {
   "itemName": "Lifesaver Potion",
-  "amount": 99,
-  "characterID": "664b1bcb4d815342c4961dc4"
+  "amount": 1,
+  "characterID": "666c6baf7f36c10fe518a46d"
 }
 
 ### Sell Item

@@ -2,23 +2,25 @@ import { addStartItemsToInventory } from "../helperFucntions/addStartItems.js";
 import { startItems } from "../interactives/startItems.js";
 import { CharDataModel } from "../models/characterSchema.js";
 
-import { InventoryModel } from "../models/inventorySchema.js";
 import { ItemModel } from "../models/itemSchema.js";
+import { CreatureModel } from '../models/creatureSchema.js';
+import { InventoryModel } from "../models/inventorySchema.js";
+
 import { SkillDataModel } from "../models/skillSchema.js";
 import { UserDataModel } from "../models/userSchema.js";
 
+//! Populate Inventory (itemModul & creatureModule (Fullcard)) and Skills
 export const getCharData = async (req, res) => {
-    //! Populate Inventory (itemModul & creatureModule (Fullcard)) and Skills
     try {
         const characterID = req.params.id;
         const charData = await CharDataModel.findById({ _id: characterID }).populate({
             path: 'inventory',
             populate: {
                 path: 'items.itemID',
-                itemModel: ['ItemModel', 'FullCard']
+                // model: (doc) => doc.model,
             }
-        })
-            .populate('skills.skillID');
+        }).populate('skills')
+
 
         console.log("CharData", charData)
         charData ? res.status(200).send(charData) : res.status(404).send("No Characters Found!");
@@ -48,7 +50,6 @@ export const newCharData = async (req, res) => {
 
             // Add inventory to the character
             char.inventory = inventory._id;
-            console.log("Inv in Char", char.inventory)
 
             // find all skills based on character class
             const skills = await SkillDataModel.find({ charClass: char.class });

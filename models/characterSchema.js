@@ -22,7 +22,7 @@ const characterSchema = mongoose.Schema({
         required: true,
         unique: true,
     },
-    class:  {
+    class: {
         type: String,
         required: true,
     },
@@ -38,15 +38,15 @@ const characterSchema = mongoose.Schema({
     experience: number,
     skills: [{
         type: Schema.Types.ObjectId,
-        ref: 'SkillDataModel'
+        ref: 'skills'
     }],
     inventory: [{
         type: Schema.Types.ObjectId,
-        ref: 'ItemModel'
+        ref: 'inventorys'
     }],
     titels: {
-                type: Array
-            },
+        type: Array
+    },
     tribe: string,
     moral: {
         type: Number,
@@ -58,40 +58,40 @@ export const CharDataModel = mongoose.model('characters', characterSchema);
 
 
 // optic: {
-    //     hairstyle: {
-        //         type: Schema.Types.ObjectId, ref: OpticModel,
-        //     },
-        //     haircolor: {
-            //         type: Schema.Types.ObjectId, ref: OpticModel,
-            //     },
-            //     head: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     eyes: {
-        //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     nose: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     mouth: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     ears: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     body: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     arms: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     hands: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     legs: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    //     feeds: {
-    //         type: Schema.Types.ObjectId, ref: OpticModel,
-    //     },
-    // },
+//     hairstyle: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     haircolor: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     head: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     eyes: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     nose: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     mouth: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     ears: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     body: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     arms: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     hands: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     legs: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+//     feeds: {
+//         type: Schema.Types.ObjectId, ref: OpticModel,
+//     },
+// },
