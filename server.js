@@ -1,6 +1,9 @@
 import express from 'express';
 import cors from 'cors';
 import './db/mongo-connect.js';
+import { WebSocketServer } from 'ws';
+// Binary Data Transfer by UDP
+import Dgram from 'dgram';
 // import { authToken } from './security/jwt_auth.js';
 
 // Celest Abyss - User/Account
@@ -45,6 +48,37 @@ app.use('/items', /*authToken,*/ itemRouter);
 app.use('/upgrade', /*authToken,*/ upgradeController);
 app.use('/trader', /*authToken,*/ buyController, updateInventoryByLoot);
 app.use('/creatures', /*authToken,*/ creatureRouter);
+
+// Websockets
+
+const wss = new WebSocketServer({ port: 8080 });
+
+const playerData = {};
+
+wss.on('connection', (ws) => {
+  ws.on('message', (data) => {
+    const parsedData = JSON.parse(data);
+    if (parsedData.type === 'playerData') {
+      const { playerID, position, velocity, rotation, currentHealth } = parsedData.data;
+      console.log({ playerID });
+
+      playerData[playerID] = { position, velocity, rotation, currentHealth };
+      broadcastInfo();
+    }
+  });
+});
+
+const broadcastInfo = () => {
+  const dataToBeUpdated = {
+    type: 'allPlayerData',
+    data: Object.entries(playerData).map(([playerID, playerData]) => ({ playerID: playerID, ...playerData })),
+  };
+  const dataToSendString = JSON.stringify(dataToBeUpdated);
+  console.log("Data", dataToSendString)
+  wss.clients.forEach((client) => {
+    client.send(dataToSendString);
+  });
+}
 
 
 app.listen(PORT, () => {

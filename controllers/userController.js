@@ -4,14 +4,13 @@ import { UserDataModel } from '../models/userSchema.js'
 export const signinController = async (req, res) => {
     try {
         const signinData = req.body
-        const userData = await UserDataModel.findOne({ username: req.body.username }).populate('characters')
         console.log("tryToSignIn", signinData)
+        const userData = await UserDataModel.findOne({ username: req.body.username }).populate('characters')
 
         if (bcrypt.compareSync(signinData.password, userData.password)) {
-            console.log("comparedPassword")
             const userDataObj = userData.toObject()
             delete userDataObj.password
-            console.log("userDataObj From DB", userDataObj)
+            // console.log("userDataObj From DB", userDataObj)
             // console.log("isBanned?", userDataObj.isBanned)
             if (userDataObj.isBanned) {
                 res.send({ isBanned: true, title: "Banned by Admin", msg: "Youre Account was banned please connect the Support to resolve the conflics." })

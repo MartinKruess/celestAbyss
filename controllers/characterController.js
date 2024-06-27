@@ -60,7 +60,7 @@ export const newCharData = async (req, res) => {
             console.log("Inventory added Items", inventory.items)
 
             // Save the character with the new data
-            // await char.save();
+            await char.save();
 
             // Update the account with the new character ID
             await account.characters.push(char._id);
