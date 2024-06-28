@@ -1,6 +1,10 @@
 import mongoose from 'mongoose';
 
 const skillSchema = mongoose.Schema({
+    nr: {
+        type: Number,
+        required: true,
+    },
     skillName: {
         type: String,
         unique: true
@@ -22,8 +26,12 @@ const skillSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    nr: {
-        type: Number,
+    description: {
+        type: String,
+        required: true,
+    },
+    dmgType: {
+        type: String,
         required: true,
     }
 });

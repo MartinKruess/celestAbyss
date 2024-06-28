@@ -3,12 +3,11 @@ export const skills = [
     S_Name: "Enlightment",
     S_Thumbnail: 0,
     CharClass: "Aurora",
-    S_Status: "",
-    S_Description: "Enlightment will increase your Intelligence and Wisdom +1 Intelligence +1 Wisdom per Level",
+    S_Description:
+      "Enlightment will increase your Intelligence and Wisdom +1 Intelligence +1 Wisdom per Level",
     category: "Aurora",
     S_Max_Lv: 20,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -28,18 +27,17 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Survive",
     S_Thumbnail: 0,
     CharClass: "Umbra",
-    S_Status: "",
-    S_Description: "Survive will increase your Strenght and Agility. +1 Strenght +1 Agility per Level",
+    S_Description:
+      "Survive will increase your Strenght and Agility. +1 Strenght +1 Agility per Level",
     category: "Umbra",
     S_Max_Lv: 20,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -59,18 +57,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Abräumer",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
     S_Description: "Clearer will hit 2 or 3 enemys next to you.",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Physical",
-    S_DMG: 0,
     S_PAttack: 75,
     S_MAttack: 0,
     S_CD: "46",
@@ -90,18 +85,16 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Abschöpfen",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
-    S_Description: "You are able to siphon off some of the magical energy that surrounds you. +2 Intelligence +1 Wisdom per Level",
-
+    S_Description:
+      "You are able to siphon off some of the magical energy that surrounds you. +2 Intelligence +1 Wisdom per Level",
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -121,18 +114,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Adaptation",
     S_Thumbnail: 0,
     CharClass: "Human",
-    S_Status: "",
-    S_Description: "Adaptation will increase your Vita and Wisdom. +1 Vita +1 Wisdom per Level",
+
+    S_Description:
+      "Adaptation will increase your Vita and Wisdom. +1 Vita +1 Wisdom per Level",
     category: "Human",
     S_Max_Lv: 20,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -152,18 +146,19 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Adrenalin",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves, Druide, Alchemist",
-    S_Status: "",
-    S_Description: "Use your adrenaline to benefit from it in heavy battles. +1% Strenght and Intelligence",
+
+    S_Description:
+      "Use your adrenaline to benefit from it in heavy battles. +1% Strenght and Intelligence",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -183,18 +178,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Armbursttraining",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
-    S_Description: "You improve your arm Crossbow skills in training. +2 Dexterity and +1 Agility per level",
+
+    S_Description:
+      "You improve your arm Crossbow skills in training. +2 Dexterity and +1 Agility per level",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -214,18 +210,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Astalkörper",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
     S_Status: "AOE",
-    S_Description: "You create an astral body that flies towards your opponents and hits up to 7 enemies.",
+    S_Description:
+      "You create an astral body that flies towards your opponents and hits up to 7 enemies.",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 506,
     S_CD: 120,
@@ -245,14 +242,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ätherregen",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
     S_Status: "Light, Heal",
-    S_Description: "You summon a shower of ether that harms enemies and heals allies.",
+    S_Description:
+      "You summon a shower of ether that harms enemies and heals allies.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
@@ -276,18 +274,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Auf der Jagd",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
-    S_Description: "You are a successful Hunter, who has the ability to kill with just one arrow.\n+ 8 dexterity and +3 agility",
+
+    S_Description:
+      "You are a successful Hunter, who has the ability to kill with just one arrow.\n+ 8 dexterity and +3 agility",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -307,14 +306,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Aufgeladener Schlag",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
-    S_Description: "You gather your strength and strike with full force.\n(Ignores weaknesses)",
+
+    S_Description:
+      "You gather your strength and strike with full force.\n(Ignores weaknesses)",
 
     S_Max_Lv: 15,
     S_DMG_Type: "Physical",
@@ -338,14 +338,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Aufladung",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
-    S_Description: "Wenn du Kämpfst sammelst du Abladungen die du bei der Aktivierung freisetzt. Nutze die Aufladungen für 15-20 Sekunden um erhablichen Schaden anzurichten.",
+
+    S_Description:
+      "Wenn du Kämpfst sammelst du Abladungen die du bei der Aktivierung freisetzt. Nutze die Aufladungen für 15-20 Sekunden um erhablichen Schaden anzurichten.",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Spell",
@@ -369,14 +370,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ausbruch der Wut",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
-    S_Description: "Unleash your anger and draw strength from it. +15 strength per level",
+
+    S_Description:
+      "Unleash your anger and draw strength from it. +15 strength per level",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Physical",
@@ -400,18 +402,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ausweichrolle",
     S_Thumbnail: 0,
     CharClass: "Hunter, Archer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 2,
     S_DMG_Type: "Movement",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 3,
@@ -431,13 +433,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Beben",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist, Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
@@ -462,14 +464,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Bindung des Wassers",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
     S_Status: "Water",
-    S_Description: "You create a water chain that holds a target in place.\nDuration: 1.6-2.5 seconds",
+    S_Description:
+      "You create a water chain that holds a target in place.\nDuration: 1.6-2.5 seconds",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Spell",
@@ -493,18 +496,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Blutklinge",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
-    S_Description: "After your attack, you activate Bloodblade and heal yourself for 2% of the damage done.",
+
+    S_Description:
+      "After your attack, you activate Bloodblade and heal yourself for 2% of the damage done.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physical",
-    S_DMG: 0,
+
     S_PAttack: 100,
     S_MAttack: 0,
     S_CD: 60,
@@ -524,18 +528,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Bogenschießtraining",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
-    S_Description: "You improve your arm Bow skills in training. +3 Dexterity per level",
+
+    S_Description:
+      "You improve your arm Bow skills in training. +3 Dexterity per level",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -555,18 +560,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Brecher der Deckung",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
-    S_Description: "Smash your opponent's armor with your shield and inflict more damage to this opponent for the duration of 35-45 seconds.",
+
+    S_Description:
+      "Smash your opponent's armor with your shield and inflict more damage to this opponent for the duration of 35-45 seconds.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 97,
     S_CD: 35,
@@ -586,13 +592,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: -0.01,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Brecher des Lichts",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -617,18 +623,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Dashen",
     S_Thumbnail: 0,
     CharClass: "Hunter, Archer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Movement",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 4,
@@ -648,18 +654,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Dolch- und Schwerttraining",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
-    S_Description: "You have unique dagger and sword fighting skills.\n+2 Ambush and +1 Agility",
+
+    S_Description:
+      "You have unique dagger and sword fighting skills.\n+2 Ambush and +1 Agility",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -679,18 +686,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Donnernde Lanze",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
-    S_Description: "You create an aura around your sword or mace which causes considerable damage to the enemy.",
+
+    S_Description:
+      "You create an aura around your sword or mace which causes considerable damage to the enemy.",
 
     S_Max_Lv: 15,
     S_DMG_Type: "Physical",
-    S_DMG: 0,
+
     S_PAttack: 160,
     S_MAttack: 0,
     S_CD: 11,
@@ -710,13 +718,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Doppelschuss",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -741,18 +749,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Doppelsprung",
     S_Thumbnail: 0,
     CharClass: "Hunter, Archer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Movement",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 2,
@@ -772,18 +780,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Dual Axetraining",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
-    S_Description: "You won't lose a fight with dual axes.\n+3 strength per Level",
+
+    S_Description:
+      "You won't lose a fight with dual axes.\n+3 strength per Level",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -803,13 +812,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Dunkler Schlag",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "You attack from the shadows and use the ambush.",
 
     S_Max_Lv: 15,
@@ -834,18 +843,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Eiserner Schild",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -865,18 +874,19 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Eislanze",
     S_Thumbnail: 0,
-    CharClass: "Herbalist, Witcher, Druide, Alchemist, Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+    CharClass:
+      "Herbalist, Witcher, Druide, Alchemist, Healer, Bishop, Luminet, Lightmage",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 187,
     S_CD: 34,
@@ -896,18 +906,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Eisranken",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 123,
     S_CD: 22,
@@ -927,7 +937,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Elektrisches Feld",
@@ -938,7 +948,7 @@ export const skills = [
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: "137",
     S_CD: "27",
@@ -958,18 +968,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Elementarenergie",
     S_Thumbnail: 0,
-    CharClass: "Luminet",
-    S_Status: "",
+    CharClass: "Herbalist, Witcher",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -989,18 +999,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energie Umwandler",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1020,18 +1030,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energieausbruch",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 44,
@@ -1051,7 +1061,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energieentladung",
@@ -1082,19 +1092,25 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energieschlag",
     S_Thumbnail: 0,
-    CharClass: ["Luminet", "Lightmage", "Priest", "Shamane", "Druide", "High Elves", "Alchemist"]
-    ,
-    S_Status: "",
+    CharClass: [
+      "Luminet",
+      "Lightmage",
+      "Priest",
+      "Shamane",
+      "Druide",
+      "High Elves",
+      "Alchemist",
+    ],
     S_Description: "You throw a ball of pure light at your target.",
     category: "Aurora",
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 25,
     S_CD: 2,
@@ -1114,18 +1130,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Entzugspfeil",
     S_Thumbnail: 0,
     CharClass: "Hunter, Archer",
-    S_Status: "",
-    S_Description: "You are using a forbidden technique to heal yourself from the suffering of the enemy.",
+
+    S_Description:
+      "You are using a forbidden technique to heal yourself from the suffering of the enemy.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physical",
-    S_DMG: 0,
+
     S_PAttack: 101,
     S_MAttack: 0,
     S_CD: 57,
@@ -1145,14 +1162,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erdbeben",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves, Butcher, Destroyer, Druide, Alchemist",
     S_Status: "AOE",
-    S_Description: "You hit the ground with such force that the ground wobbles, enemies hit are slowed down.",
+    S_Description:
+      "You hit the ground with such force that the ground wobbles, enemies hit are slowed down.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physical",
@@ -1176,14 +1194,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erdbrecher",
     S_Thumbnail: 0,
     CharClass: "Butcher",
     S_Status: "AOE",
-    S_Description: "The ground breaks up, knocking back nearby enemies and distant enemies.",
+    S_Description:
+      "The ground breaks up, knocking back nearby enemies and distant enemies.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physical",
@@ -1207,18 +1226,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erlösendes Feld der Schwäche",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
     S_Status: "AOE",
-    S_Description: "This field increases your aggro on the enemies. You and your allies do more damage for a short time.",
+    S_Description:
+      "This field increases your aggro on the enemies. You and your allies do more damage for a short time.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 15,
     S_CD: 36,
@@ -1238,17 +1258,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: -0.02,
     S_MDefense: -0.01,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erste Hilfe",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist, Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
-    S_Description: "You are able to take care of yourself and close minor wounds",
+
+    S_Description:
+      "You are able to take care of yourself and close minor wounds",
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 25,
     S_CD: 25,
@@ -1268,18 +1289,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erwachen",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
-    S_Description: "When you fall below 30% life, awakening activates. The damage you take is reduced by 1% per level",
+
+    S_Description:
+      "When you fall below 30% life, awakening activates. The damage you take is reduced by 1% per level",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1299,18 +1321,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erweiterung der Sinne",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker, Villian, Butcher, Destroyer, Bloodmage",
-    S_Status: "",
-    S_Description: "Expansion of power will power up you. +3 Strenght per Level",
+
+    S_Description:
+      "Expansion of power will power up you. +3 Strenght per Level",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1330,18 +1353,20 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erweiterung des Geistes",
     S_Thumbnail: 0,
-    CharClass: "Healer, Bishop, Luminet, Lightmage, Ritualist, Bloodmage, Druide, Alchemist, Shamane, High Elves",
-    S_Status: "",
-    S_Description: "Expansion of spirit will power up you. +3 Intelligence per Level",
+    CharClass:
+      "Healer, Bishop, Luminet, Lightmage, Ritualist, Bloodmage, Druide, Alchemist, Shamane, High Elves",
+
+    S_Description:
+      "Expansion of spirit will power up you. +3 Intelligence per Level",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1361,18 +1386,20 @@ export const skills = [
     S_Wis: 3,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erweiterung des Körpers",
     S_Thumbnail: 0,
-    CharClass: "Knife, Templar, Gladiator, Berserker, Hunter, Archer, Herbalist, Witcher",
-    S_Status: "",
-    S_Description: "Expansion of defense will power up you. +150 health +3 Vita and +1 Wisdom",
+    CharClass:
+      "Knife, Templar, Gladiator, Berserker, Hunter, Archer, Herbalist, Witcher",
+
+    S_Description:
+      "Expansion of defense will power up you. +150 health +3 Vita and +1 Wisdom",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1392,14 +1419,15 @@ export const skills = [
     S_Wis: 2,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ewiges Eis",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
     S_Status: "Ice",
-    S_Description: "An enemy can be frozen if the enemy was previously hit by a water spell. ",
+    S_Description:
+      "An enemy can be frozen if the enemy was previously hit by a water spell. ",
 
     S_Max_Lv: 15,
     S_DMG_Type: "Spell",
@@ -1423,13 +1451,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Explosionspfeil",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -1454,7 +1482,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Feuer der Verdammten",
@@ -1485,7 +1513,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Feuerball",
@@ -1516,18 +1544,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Feuerlanze",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 197,
     S_CD: 35,
@@ -1547,13 +1575,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Feuerpfeil",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
@@ -1578,18 +1606,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Fool of Luck",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
-    S_Description: "As a fool of luck, you draw your strength from your critical chance.",
+
+    S_Description:
+      "As a fool of luck, you draw your strength from your critical chance.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1609,18 +1638,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Gebundener Schuss",
     S_Thumbnail: 0,
     CharClass: "Hunter, Archer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 37,
     S_MAttack: 0,
     S_CD: 17,
@@ -1640,7 +1669,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Gefrierbrand",
@@ -1671,18 +1700,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Brecher des Geistes",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 81,
     S_MAttack: 0,
     S_CD: 23,
@@ -1702,7 +1731,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geladener Nebel",
@@ -1733,7 +1762,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Gezielter Blitz",
@@ -1744,7 +1773,7 @@ export const skills = [
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 293,
     S_CD: 42,
@@ -1764,7 +1793,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Göttliche Heilung",
@@ -1775,7 +1804,7 @@ export const skills = [
 
     S_Max_Lv: 5,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -1795,18 +1824,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Göttlicher Schutz",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 2,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 77,
@@ -1826,18 +1855,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 55,
     S_MDefense: 55,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Hoffnungsschimmer",
     S_Thumbnail: 0,
     CharClass: "Aurora",
-    S_Status: "",
+
     S_Description: "",
     category: "Aurora",
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -1857,18 +1886,18 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Holzspalter",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 55,
     S_MAttack: 0,
     S_CD: 42,
@@ -1888,7 +1917,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: -0.025,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Internal Zyklon",
@@ -1919,18 +1948,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kanalisation der Wut",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 3,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0.05,
     S_CD: 180,
@@ -1950,13 +1979,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kettenschuss",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
@@ -1981,18 +2010,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kleine Heilung",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar, Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 17,
@@ -2012,18 +2041,42 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kleine Regeneration",
     S_Thumbnail: 0,
-    CharClass: ["Destroyer", "Butcher", "Gladiator", "Berserker", "Knife", "Templar", "Herbalist", "Witcher", "Archer", "Hunter", "Druide", "Alchemist", "Summoner", "Soulseeker", "Ritualist", "Bloodmage", "Luminet", "Lightmage", "Healer", "Bishop", "Destroyer", "Shamane", "High Elves"],
-    S_Status: "",
+    CharClass: [
+      "Destroyer",
+      "Butcher",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Ritualist",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Bishop",
+      "Destroyer",
+      "Shamane",
+      "High Elves",
+    ],
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 32,
@@ -2043,7 +2096,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Klingentornado",
@@ -2074,13 +2127,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kopfschuss",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -2105,18 +2158,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Körperbeherrschung",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
-    S_Description: "In combat it is important to know your limits.\n+5 Strength and +5 Vitality",
+
+    S_Description:
+      "In combat it is important to know your limits.\n+5 Strength and +5 Vitality",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2136,18 +2190,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kristallisierte Wasserspähre",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 137,
     S_CD: 29,
@@ -2167,14 +2221,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kugelblitz",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
     S_Status: "Electro",
-    S_Description: "Electric skills do 15% more things if the target was previously hit by a water spell.",
+    S_Description:
+      "Electric skills do 15% more things if the target was previously hit by a water spell.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
@@ -2198,13 +2253,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kunai Todesstoß",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
@@ -2229,18 +2284,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lebensbedrohlich",
     S_Thumbnail: 0,
     CharClass: "",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2260,7 +2315,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lebensessenz",
@@ -2271,7 +2326,7 @@ export const skills = [
 
     S_Max_Lv: 5,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: "55",
@@ -2291,7 +2346,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lebenssauger",
@@ -2322,18 +2377,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lucky Strike",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
-    S_Description: "Lucky Strike is slightly increases your crit chance. +1 per Level",
+
+    S_Description:
+      "Lucky Strike is slightly increases your crit chance. +1 per Level",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2353,18 +2409,25 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Macht des Geistes",
     S_Thumbnail: 0,
-    CharClass: ["Luminet", "Lightmage", "Ritualist", "Bloodmage", "Healer", "Bishop"],
-    S_Status: "",
+    CharClass: [
+      "Luminet",
+      "Lightmage",
+      "Ritualist",
+      "Bloodmage",
+      "Healer",
+      "Bishop",
+    ],
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2384,18 +2447,18 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Macht des Körpers",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar, Galadiator, Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2415,13 +2478,13 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Mächtiger Doppelschlag",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
@@ -2446,18 +2509,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Mächtiger Hieb",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker, Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 73,
     S_MAttack: 0,
     S_CD: 24,
@@ -2477,13 +2540,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Mächtiger Schlag",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
@@ -2508,7 +2571,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Massen Heilung",
@@ -2539,18 +2602,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Mentale Erweiterung",
     S_Thumbnail: 0,
-    CharClass: "Druide, Alchemist, Herbalist, Witcher, Healer, Bishop, Luminet, Lightmage, Bloodmage, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Druide, Alchemist, Herbalist, Witcher, Healer, Bishop, Luminet, Lightmage, Bloodmage, Ritualist, Shamane, High Elves",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2570,18 +2634,18 @@ export const skills = [
     S_Wis: 2,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Movability",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker, Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Movement",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2601,18 +2665,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Naturgewalt",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 3,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2632,18 +2696,18 @@ export const skills = [
     S_Wis: 1,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schutz Aura",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 90,
@@ -2663,18 +2727,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Opfergabe",
     S_Thumbnail: 0,
     CharClass: "Bloodmage, Ritualist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -2694,7 +2758,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Paralyse",
@@ -2725,7 +2789,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Pforte der Verbannung",
@@ -2756,13 +2820,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Präzisionsschuss",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
@@ -2787,18 +2851,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Rotier Schlag",
     S_Thumbnail: 0,
     CharClass: "",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 36,
     S_MAttack: 0,
     S_CD: 31,
@@ -2818,7 +2882,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Salve",
@@ -2849,13 +2913,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schädelspalter",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -2880,13 +2944,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schattendolch",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
@@ -2911,13 +2975,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schattenfalle",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -2942,13 +3006,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schattenschlag",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -2973,18 +3037,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schildangriffstraining",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
-    S_Description: "You don't just hide behind the shield, you struggle with it. + 2 Vitality +1 Stenght",
+
+    S_Description:
+      "You don't just hide behind the shield, you struggle with it. + 2 Vitality +1 Stenght",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3004,18 +3069,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schildstoß",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 137,
     S_MAttack: 0,
     S_CD: 32,
@@ -3035,18 +3100,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schildsturm",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 222,
     S_MAttack: 0,
     S_CD: 39,
@@ -3066,18 +3131,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schmetterschlag",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer, Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 111,
     S_MAttack: 0,
     S_CD: 43,
@@ -3097,7 +3162,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schockschuss",
@@ -3128,13 +3193,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schockwelle der Regeneration",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -3159,7 +3224,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schrei der Unterwelt",
@@ -3190,7 +3255,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schwäche des Fleisches",
@@ -3221,7 +3286,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: -0.03,
     S_MDefense: -0.05,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schwerter des Lichtes",
@@ -3229,7 +3294,7 @@ export const skills = [
     CharClass: "Healer, Bishop, Bishop, Luminet, Lightmage",
     S_Status: "Light, AOE",
     S_Description: "",
-    "Skill_Lv": 8,
+    Skill_Lv: 8,
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
     S_DMG: 6,
@@ -3252,18 +3317,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Schwerttraining",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
-    S_Description: "You can only survive your adventures through daily training. +3 Strenght",
+
+    S_Description:
+      "You can only survive your adventures through daily training. +3 Strenght",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3283,7 +3349,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Seelenfessel",
@@ -3314,7 +3380,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Seelenqual",
@@ -3345,7 +3411,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Seelentrennung",
@@ -3376,13 +3442,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Sprungschlag",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker, Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -3407,18 +3473,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Stählerne Rüstung",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: "19",
@@ -3438,7 +3504,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 6,
     S_MDefense: 6,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Strahlendes Aurafeld",
@@ -3446,7 +3512,7 @@ export const skills = [
     CharClass: "Healer, Bishop, Luminet, Lightmage",
     S_Status: "Light, AOE",
     S_Description: "",
-    "Skill_Lv": 5,
+    Skill_Lv: 5,
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
     S_DMG: 8,
@@ -3469,18 +3535,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Sturm der Wut",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 281,
     S_MAttack: 0,
     S_CD: 72,
@@ -3500,7 +3566,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Sturm des Feuers",
@@ -3531,13 +3597,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Sturmklinge",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
@@ -3562,14 +3628,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Tobender Sturm",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
     S_Status: "Electro, AOE",
-    S_Description: "Electric skills do 15% more things if the target was previously hit by a water spell.",
+    S_Description:
+      "Electric skills do 15% more things if the target was previously hit by a water spell.",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
@@ -3593,7 +3660,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Tödlicher Tanz",
@@ -3624,18 +3691,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Überlebenswille",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar, Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3655,13 +3722,13 @@ export const skills = [
     S_Wis: 5,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Überschallklinge",
     S_Thumbnail: 0,
     CharClass: "Villian, Shadowworrior",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
@@ -3686,18 +3753,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Unerschöpfliche Hoffnung",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "Faith to Mang verbessern",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3717,18 +3784,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Urteil des Himmels",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "AOE",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 316,
     S_MAttack: 0,
     S_CD: 42,
@@ -3748,13 +3815,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Vakuumimpuls",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "AOE",
 
     S_Max_Lv: 5,
@@ -3779,18 +3846,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Verbessertes Nachladen",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3810,18 +3877,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Verdorbene Seele",
     S_Thumbnail: 0,
     CharClass: "Bloodmage, Ritualist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3841,13 +3908,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Verstärkter Pfeil",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
@@ -3872,18 +3939,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Voll Durchziehen",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -3903,18 +3970,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Wiederaufladung",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
-    S_Description: "It is possible to reduce the cooldown of your skills by 5-15 seconds",
+
+    S_Description:
+      "It is possible to reduce the cooldown of your skills by 5-15 seconds",
 
     S_Max_Lv: 3,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: "90",
@@ -3934,7 +4002,7 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Wiederherstellung",
@@ -3942,10 +4010,10 @@ export const skills = [
     CharClass: "Healer, Bishop, Luminet, Lightmage",
     S_Status: "Heal",
     S_Description: "",
-    "Skill_Lv": 1,
+    Skill_Lv: 1,
     S_Max_Lv: 15,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 29,
@@ -3965,18 +4033,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Windfesseln",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 223,
     S_CD: 37,
@@ -3996,13 +4064,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Wirbelnde Klinge",
     S_Thumbnail: 0,
     CharClass: "Villian, Shadowworrior",
-    S_Status: "",
+
     S_Description: "AOE",
 
     S_Max_Lv: 10,
@@ -4027,13 +4095,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Wutexplosion",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "AOE",
 
     S_Max_Lv: 10,
@@ -4058,18 +4126,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Wutklinge",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Physics",
-    S_DMG: 0,
+
     S_PAttack: 192,
     S_MAttack: 0,
     S_CD: 0,
@@ -4089,18 +4157,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zahl der Opfer",
     S_Thumbnail: 0,
     CharClass: "Bloodmage, Ritualist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4120,13 +4188,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zielschuss",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
@@ -4151,18 +4219,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zweihändiges Axttraining",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
-    S_Description: "Your love for destruction shows in the handling of your weapon. +3 Strenght",
+
+    S_Description:
+      "Your love for destruction shows in the handling of your weapon. +3 Strenght",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4182,18 +4251,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zweihändiges Streitkolbentraining",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
-    S_Description: "\nIt's not just training, it's an art. +2 Strenght and +1 Intelligence",
+
+    S_Description:
+      "\nIt's not just training, it's an art. +2 Strenght and +1 Intelligence",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4213,18 +4283,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Tamen",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "You are able to Tame Creatures. But it can fail very easy.",
     category: "creature",
     S_Max_Lv: 3,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 35,
@@ -4244,18 +4315,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 10,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Bindung",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "The relationship between your Creature and you",
     category: "creature",
     S_Max_Lv: 3,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4275,18 +4347,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kontrolle",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "",
     category: "creature",
     S_Max_Lv: 3,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4306,18 +4379,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Beschwören",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualiost, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualiost, Shamane, High Elves",
+
     S_Description: "",
     category: "creature",
     S_Max_Lv: 1,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 15,
@@ -4337,18 +4411,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zurückrufen",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "",
     category: "creature",
     S_Max_Lv: 1,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 5,
@@ -4368,18 +4443,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zucht",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "",
     category: "creature",
     S_Max_Lv: 3,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4399,18 +4475,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ausdauertraining",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "",
     category: "passive",
     S_Max_Lv: 20,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4430,18 +4507,18 @@ export const skills = [
     S_Wis: 2,
     S_PDefense: 8,
     S_MDefense: 8,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Standhaft",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer, Knife, Templar, Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4461,18 +4538,18 @@ export const skills = [
     S_Wis: 2,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Eiserner Wille",
     S_Thumbnail: 0,
     CharClass: "",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4492,18 +4569,18 @@ export const skills = [
     S_Wis: 2,
     S_PDefense: 0,
     S_MDefense: 4,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ausweichtraining",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4523,18 +4600,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Immunität",
     S_Thumbnail: 0,
-    CharClass: "Luminet",
-    S_Status: "",
+    CharClass: "Healer, Boshop",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4554,18 +4631,19 @@ export const skills = [
     S_Wis: 3,
     S_PDefense: 0,
     S_MDefense: 6,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Rüstungstraining",
     S_Thumbnail: 0,
-    CharClass: "Abenteuer, Butcher, Destroyer,  Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer,  Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4585,18 +4663,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 6,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Durchhalten",
     S_Thumbnail: 0,
     CharClass: "Tank",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -4616,18 +4694,18 @@ export const skills = [
     S_Wis: 2,
     S_PDefense: 12,
     S_MDefense: 6,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "List des Schurken",
     S_Thumbnail: 0,
     CharClass: "Villian, Shadowworrior",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -4647,18 +4725,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Erweiterung der Leidenschaft",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -4678,18 +4756,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Scharfer Instinkte",
     S_Thumbnail: 0,
     CharClass: "Villian, Shadowworrior, Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -4709,18 +4787,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Macht der Wildnis",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 3,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 120,
     S_MAttack: 0,
     S_CD: 60,
@@ -4740,18 +4818,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 15
+    S_ATK_Speed: 15,
   },
   {
     S_Name: "Macht des Begleiters",
     S_Thumbnail: 0,
     CharClass: "Hunter, Archer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0.01,
     S_MAttack: 0.01,
     S_CD: 60,
@@ -4771,18 +4849,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Für die Ehre",
     S_Thumbnail: 0,
     CharClass: "Villian, Shadowworrior",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -4802,18 +4880,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Giftpfeil",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 12,
     S_MAttack: 0,
     S_CD: 60,
@@ -4833,18 +4911,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Treffsicherheit",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -4864,18 +4942,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Auge des Falken",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 6,
     S_MAttack: 0,
     S_CD: 60,
@@ -4895,18 +4973,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Sechster Sinn",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -4926,18 +5004,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Waldläufer",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 3,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 57,
     S_MAttack: 0,
     S_CD: 60,
@@ -4957,18 +5035,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Pfeil der Vorfahren",
     S_Thumbnail: 0,
     CharClass: "Archer, Hunter",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 16,
     S_MAttack: 0,
     S_CD: 60,
@@ -4988,18 +5066,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Provozieren",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker, Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5019,18 +5097,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kritische Schläge",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5050,18 +5128,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energie des Mutes",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5081,18 +5159,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energie der Wut",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5112,18 +5190,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Innere Kraft",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5143,18 +5221,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Volles Potential",
     S_Thumbnail: 0,
     CharClass: "Gladiator, Berserker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 3,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 120,
     S_MAttack: 0,
     S_CD: 60,
@@ -5174,18 +5252,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 60,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Natürlicher Schutz",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5205,18 +5283,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Aura Unterdrückung",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5236,18 +5314,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Alles im Fluss",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5267,18 +5345,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Entgiftung",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5298,18 +5376,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Widerliches Gebräu",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5329,18 +5407,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Innere Unruhe",
     S_Thumbnail: 0,
     CharClass: "Herbalist, Witcher",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5360,18 +5438,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Energie des Lebens",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5391,18 +5469,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Aktive Deckung",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5422,18 +5500,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Bodyguard",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5453,18 +5531,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Perfekter Konter",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5484,18 +5562,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Beschütze Freunde",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5515,18 +5593,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kampfinstinkt",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5546,18 +5624,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geist des Kriegers",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5577,18 +5655,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Blutrausch",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5608,18 +5686,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Bis in den Tot",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5639,18 +5717,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ewiger Sieger",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5670,18 +5748,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ungebrochen",
     S_Thumbnail: 0,
     CharClass: "Butcher, Destroyer",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Selfbuff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5701,18 +5779,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geist des Feuers",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5732,18 +5810,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Dunkle Macht",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5763,18 +5841,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Verbrannte Haut",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5794,18 +5872,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Seelenplage",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5825,18 +5903,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Arkane Aufladung",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5856,18 +5934,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Macht der Seelen",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5887,18 +5965,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Vorsprung",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5918,18 +5996,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Gute Reflex",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5949,18 +6027,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Hinterhältige Falle",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -5980,18 +6058,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Tödlicher Treffer",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6011,18 +6089,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Zielpunktschaden",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6042,18 +6120,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Hartes training",
     S_Thumbnail: 0,
     CharClass: "Summoner, Soulseeker",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6073,18 +6151,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Flinker Stich",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6104,18 +6182,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Dunkler Schleier",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6135,18 +6213,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Herz des Verräters",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6166,18 +6244,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Keine Gnade",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6197,18 +6275,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Attentäter",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6228,18 +6306,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Flinke Füße",
     S_Thumbnail: 0,
     CharClass: "Villian",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6265,12 +6343,12 @@ export const skills = [
     S_Name: "Macht des Felsens",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6296,12 +6374,12 @@ export const skills = [
     S_Name: "Macht des Wassers",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6321,18 +6399,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Vergessener Zauber",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6352,18 +6430,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Druide, Alchemist_buff01",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6383,18 +6461,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Herr der Elemente",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6414,18 +6492,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geist des Kommenden",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6445,18 +6523,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lichtwaffe",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6476,18 +6554,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Strahlende Rüstung",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6507,18 +6585,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Segen des Angriffes",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6538,18 +6616,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Segen der Mentalität",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6569,18 +6647,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Segen der Verteidigung",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6600,18 +6678,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Mana Umwandlung",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6631,18 +6709,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geeinter Glaube",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6662,18 +6740,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Güte des Gerechten",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6693,18 +6771,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lightmage_Buff01",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6724,18 +6802,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lightmage_Buff02",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6755,18 +6833,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lichtstärke",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6786,18 +6864,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kämpfer des Lichtes",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6817,18 +6895,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geschwindigkeit der Dox",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6848,18 +6926,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Macht des Feuers",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6879,18 +6957,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Totem der Regeneration",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6910,18 +6988,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Shamane, High Elves_Buff01",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6941,18 +7019,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kontrolle der Elemente",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -6972,18 +7050,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Geist des Vergangenen",
     S_Thumbnail: 0,
     CharClass: "Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Buff",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 60,
@@ -7003,18 +7081,19 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Waffentraining",
     S_Thumbnail: "",
-    CharClass: "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
-    S_Status: "",
+    CharClass:
+      "Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Bishop, Ritualist, Shamane, High Elves",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 5,
     S_MAttack: 5,
     S_CD: 0,
@@ -7034,13 +7113,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 2
+    S_ATK_Speed: 2,
   },
   {
     S_Name: "Verbrennen",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 15,
@@ -7065,18 +7144,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Kanalisation",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7096,18 +7175,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Katalysator",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7127,18 +7206,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lunare Inkanation",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 90,
@@ -7158,18 +7237,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Himmlische Aufopferung",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 5,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7189,18 +7268,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Das ewige Wissen",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7220,18 +7299,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Verloren in der Dunkelheit",
     S_Thumbnail: 0,
     CharClass: ["Bloodmage", "Ritualist"],
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Passive",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7251,18 +7330,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Lichtblitz",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 20,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7282,18 +7361,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Aurora Wellen",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7313,18 +7392,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Himmelsbrecher",
     S_Thumbnail: 0,
     CharClass: "Knife, Templar, Shamane, High Elves",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7344,18 +7423,18 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Strafendes Licht",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
+
     S_Description: "",
 
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
+
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7375,18 +7454,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Ausbrennen",
     S_Thumbnail: 0,
     CharClass: "Ritualist, Bloodmage",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7406,18 +7482,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Heiliges Kreuz",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7437,18 +7510,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Heilige Vernichtung",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7468,18 +7538,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Göttliche Nova",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7499,15 +7566,13 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Licht kristallenes Gefängnis",
     S_Thumbnail: 0,
     CharClass: "Luminet, Lightmage",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 3,
     S_DMG_Type: "Spell",
     S_DMG: 4,
@@ -7530,18 +7595,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Große Regeneration",
     S_Thumbnail: 0,
     CharClass: "Healer, Bishop, Knife, Templar",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Defense",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7561,18 +7623,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Manaexplosion",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 383,
     S_CD: 75,
@@ -7592,18 +7651,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Bannmagie",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 120,
@@ -7623,18 +7679,15 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
   {
     S_Name: "Windschlitzer",
     S_Thumbnail: 0,
     CharClass: "Druide, Alchemist",
-    S_Status: "",
     S_Description: "",
-
     S_Max_Lv: 10,
     S_DMG_Type: "Spell",
-    S_DMG: 0,
     S_PAttack: 0,
     S_MAttack: 0,
     S_CD: 0,
@@ -7654,6 +7707,6 @@ export const skills = [
     S_Wis: 0,
     S_PDefense: 0,
     S_MDefense: 0,
-    S_ATK_Speed: 0
+    S_ATK_Speed: 0,
   },
-]
+];

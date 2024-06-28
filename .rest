@@ -32,14 +32,14 @@ POST http://localhost:5600/characters/ HTTP/1.1
 content-type: application/json
 
 {
-  "accountID": "6677fc56b84550ea83dcb727",
-  "charName": "Tempi",
-  "class": "Templar",
-  "race": "Human"
+  "accountID": "664765050c679adb667ce908",
+  "charName": "Tante Drudi",
+  "class": "Druide",
+  "race": "Aurora"
 }
 
 ### Delete Character ✓
-DELETE http://localhost:5600/characters/667ea0e5faf39175267a05a3 HTTP/1.1
+DELETE http://localhost:5600/characters/667ebdb689fefe9f16b8693b HTTP/1.1
 
 ### Add Item to Inventory ✓
 PATCH http://localhost:5600/inventory/ HTTP/1.1
