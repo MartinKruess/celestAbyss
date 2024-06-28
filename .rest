@@ -33,12 +33,13 @@ content-type: application/json
 
 {
   "accountID": "6677fc56b84550ea83dcb727",
-  "charName": "Sockenrocker",
-  "class": "Herbalist"
+  "charName": "Tempi",
+  "class": "Templar",
+  "race": "Human"
 }
 
 ### Delete Character ✓
-DELETE http://localhost:5600/characters/667de0f97095b19c287fbc45 HTTP/1.1
+DELETE http://localhost:5600/characters/667ea0e5faf39175267a05a3 HTTP/1.1
 
 ### Add Item to Inventory ✓
 PATCH http://localhost:5600/inventory/ HTTP/1.1

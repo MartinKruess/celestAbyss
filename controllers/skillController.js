@@ -2,27 +2,45 @@ import { skills } from "../scripts/skilldata.js";
 import { SkillDataModel } from "../models/skillSchema.js";
 
 export const skillController = async (req, res) => {
-    // try {
+    try {
         for (let i = 0; i < skills.length; i++) {
-            const skillCheck = await SkillDataModel.findOne({skillname: skills[i].S_Name})
-            
-            if(!skillCheck){
-                const arr = skills[i].CharClass.split(", ")
-                console.log(arr)
+            const skillCheck = await SkillDataModel.findOne({ skillname: skills[i].S_Name })
+
+            // Query: {$and: [{"charClass": "Knife", "category": "passive"}]}
+
+            if (!skillCheck) {
+                const arr = Array.isArray(skills[i].CharClass) ? [...skills[i].CharClass] : skills[i].CharClass.split(", ")
+                let category = ""
+                if (skills[i].category === "creature") {
+                    category = "creature"
+                } else if (skills[i].category === "Aurora") {
+                    category = "Aurora"
+                } else if (skills[i].category === "Human") {
+                    category = "Human"
+                } else if (skills[i].category === "Umbra") {
+                    category = "Umbra"
+                } else if (skills[i].S_DMG_Type === "Passive" && !skills[i].category) {
+                    category = "passive"
+                } else {
+                    category = "active"
+                }
+
                 const newSkill = {
+                    nr: i + 1,
                     skillName: skills[i].S_Name,
                     charClass: arr,
-                    maxSkillLv: skills[i].S_Max_Lv
+                    maxSkillLv: skills[i].S_Max_Lv,
+                    category: category,
                 }
                 console.log("skillname:", newSkill.skillName)
                 await SkillDataModel(newSkill).save();
             }
         }
-        res.send("alles, OK")
-        // res.send("gesendet")
-    // } catch (error) {
-    //     res.send("ERROR:", error)
-    // }
+        res.send("skills added!")
+
+    } catch (error) {
+        res.send("ERROR:", error)
+    }
 }
 
 // export const updateSkill = async (req, res) => {

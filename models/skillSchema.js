@@ -18,6 +18,14 @@ const skillSchema = mongoose.Schema({
         required: true,
         default: 1,
     },
+    category: {
+        type: String,
+        required: true,
+    },
+    nr: {
+        type: Number,
+        required: true,
+    }
 });
 
 export const SkillDataModel = mongoose.model('skills', skillSchema);

@@ -1,15 +1,11 @@
 import { addStartItemsToInventory } from "../helperFucntions/addStartItems.js";
 import { startItems } from "../interactives/startItems.js";
 import { CharDataModel } from "../models/characterSchema.js";
-
-import { ItemModel } from "../models/itemSchema.js";
-import { CreatureModel } from '../models/creatureSchema.js';
 import { InventoryModel } from "../models/inventorySchema.js";
 
 import { SkillDataModel } from "../models/skillSchema.js";
 import { UserDataModel } from "../models/userSchema.js";
 
-//! Populate Inventory (itemModul & creatureModule (Fullcard)) and Skills
 export const getCharData = async (req, res) => {
     try {
         const characterID = req.params.id;

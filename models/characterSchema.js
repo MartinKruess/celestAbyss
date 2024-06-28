@@ -1,7 +1,4 @@
 import mongoose, { Schema } from 'mongoose';
-import { SkillDataModel } from './skillSchema.js';
-import { InventoryModel } from './inventorySchema.js';
-import { ItemModel } from './itemSchema.js';
 
 const string = {
     type: String,
@@ -23,6 +20,10 @@ const characterSchema = mongoose.Schema({
         unique: true,
     },
     class: {
+        type: String,
+        required: true,
+    },
+    race: {
         type: String,
         required: true,
     },
