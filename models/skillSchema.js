@@ -1,16 +1,34 @@
 import mongoose from 'mongoose';
 
+// Funktion zum Entfernen leerer Werte
+function removeEmpty(value) {
+    if (value === '' || value === null || value === undefined || value === 0) {
+        return undefined;
+    }
+    return value;
+}
+
+const num = {
+    type: Number,
+    set: removeEmpty
+}
+
 const skillSchema = mongoose.Schema({
     nr: {
         type: Number,
         required: true,
     },
-    skillName: {
+    skillName_eng: {
+        type: String,
+        unique: true
+    },
+    skillName_de: {
         type: String,
         unique: true
     },
     charClass: {
         type: Array,
+        required: true,
     },
     currentSkillLv: {
         type: Number,
@@ -26,14 +44,39 @@ const skillSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    description: {
+    description_eng: {
+        type: String,
+        required: true,
+    },
+    description_de: {
         type: String,
         required: true,
     },
     dmgType: {
         type: String,
         required: true,
-    }
+    },
+    patk: num,
+    matk: num,
+    cd: num,
+    dur: num,
+    mana: num,
+    health: num,
+    agi: num,
+    amb: num,
+    block: num,
+    dex: num,
+    faith: num,
+    int: num,
+    luck: num,
+    str: num,
+    vic: num,
+    vita: num,
+    wis: num,
+    pdef: num,
+    mdef: num,
+    atkSpeed: num,
+    movementSpeed: num,
 });
 
 export const SkillDataModel = mongoose.model('skills', skillSchema);
