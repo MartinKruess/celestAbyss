@@ -17,8 +17,7 @@ export const getCharData = async (req, res) => {
             }
         }).populate('skills')
 
-
-        console.log("CharData", charData)
+        console.log("CharData", charData.charName)
         charData ? res.status(200).send(charData) : res.status(404).send("No Characters Found!");
     }
     catch (error) {
@@ -28,8 +27,25 @@ export const getCharData = async (req, res) => {
 }
 
 export const newCharData = async (req, res) => {
+    console.time("newCharData")
     try {
         const charData = req.body;
+        const charClass = req.body.class
+        const aurora = ["Druide", "Healer", "Luminet", "Shamane"]
+        const umbra = ["Butcher", "Ritualist", "Summoner", "Villain"]
+        const human = ["Gladiator", "Herbalist", "Knife", "Hunter"]
+
+        if (umbra.includes(charClass)) {
+            charData.race = "Umbra"
+        } else if (aurora.includes(charClass)) {
+            charData.race = "Aurora"
+
+        } else if (human.includes(charClass)) {
+            charData.race = "Human"
+        } else {
+            res.send({ status: "error", msg: "Class not found!" })
+        }
+        console.log(charData)
 
         // find account
         const account = await UserDataModel.findById(charData.accountID);
@@ -70,6 +86,7 @@ export const newCharData = async (req, res) => {
     catch (error) {
         res.status(401).send("ERROR in Char: " + error);
     }
+    console.timeEnd("newCharData")
 }
 
 export const deleteCharacter = async (req, res) => {

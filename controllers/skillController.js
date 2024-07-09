@@ -7,7 +7,7 @@ export const skillController = async (req, res) => {
         for (let i = 0; i < skills.length; i++) {
             const skillCheck = await SkillDataModel.findOne({ skillName_de: skills[i].S_Name_de })
 
-            // Query: {$and: [{"charClass": "Knife", "category": "passive"}]}
+            // Query: {$and: [{"charClass": "Knife", "charClass": "Templar", "category": "passive"}]}
 
 
             if (!skillCheck) {
@@ -25,7 +25,7 @@ export const skillController = async (req, res) => {
                 } else if (skills[i].category === "Umbra") {
                     category = "Umbra"
 
-                } else if (skills[i].S_DMG_Type === "Passive" && !skills[i].category) {
+                } else if (skills[i].S_DMG_Type === "passive" && !skills[i].category) {
                     category = "passive"
 
                 } else {

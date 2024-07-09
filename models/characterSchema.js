@@ -37,6 +37,10 @@ const characterSchema = mongoose.Schema({
         default: 1,
     },
     experience: number,
+    skillpoints: {
+        type: Number,
+        default: 0,
+    },
     skills: [{
         type: Schema.Types.ObjectId,
         ref: 'skills'
@@ -52,7 +56,11 @@ const characterSchema = mongoose.Schema({
     moral: {
         type: Number,
         default: 0
-    }
+    },
+    position: {
+        type: String,
+        default: "0,0,0",
+    },
 });
 
 export const CharDataModel = mongoose.model('characters', characterSchema);
