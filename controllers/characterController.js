@@ -17,7 +17,7 @@ export const getCharData = async (req, res) => {
             }
         }).populate('skills')
 
-        console.log("CharData", charData.charName)
+        console.log("maxSkillLv", charData.skills[1].maxSkillLv, charData.skills[1].skillName_eng)
         charData ? res.status(200).send(charData) : res.status(404).send("No Characters Found!");
     }
     catch (error) {
@@ -32,7 +32,7 @@ export const newCharData = async (req, res) => {
         const charData = req.body;
         const charClass = req.body.class
         const aurora = ["Druide", "Healer", "Luminet", "Shamane"]
-        const umbra = ["Butcher", "Ritualist", "Summoner", "Villain"]
+        const umbra = ["Butcher", "Ritualist", "Summoner", "Villian"]
         const human = ["Gladiator", "Herbalist", "Knife", "Hunter"]
 
         if (umbra.includes(charClass)) {
@@ -74,11 +74,20 @@ export const newCharData = async (req, res) => {
             // Save the character with the new data
             await char.save();
 
+
             // Update the account with the new character ID
             await account.characters.push(char._id);
             await account.save();
+            const updatedAccount = await UserDataModel.findById(charData.accountID).populate('characters');
+            delete updatedAccount.password;
+            // const updatedAccount = await User.findByIdAndUpdate(
+            //     charData.accountID,
+            //     { $push: { characters: char._id } },
+            //     { new: true }
+            // ).populate('characters');
 
-            res.status(200).send("New Character Created!");
+
+            res.status(200).send({ userData: updatedAccount });
         } else {
             res.send({ status: "full", msg: "Character Limit Reached!" });
         }
@@ -94,9 +103,14 @@ export const deleteCharacter = async (req, res) => {
     try {
         await InventoryModel.deleteOne({ characterID: characterID });
         await CharDataModel.findByIdAndDelete(characterID);
-        await UserDataModel.updateOne({ characters: characterID }, { $pull: { characters: characterID } });
+        const updatedAccount = await UserDataModel.findOneAndUpdate(
+            { characters: characterID },
+            { $pull: { characters: characterID } },
+            { new: true }
+        ).populate('characters');
+        console.log("updated char:", updatedAccount)
 
-        res.send({ status: "success", msg: "Character Deleted!" })
+        res.status(200).send({ userData: updatedAccount });
     }
     catch (error) {
         res.status(401).send("ERROR: " + error.message);

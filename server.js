@@ -60,7 +60,7 @@ wss.on('connection', (ws) => {
     const parsedData = JSON.parse(data);
     if (parsedData.type === 'playerData') {
       const { playerID, position, velocity, rotation, currentHealth } = parsedData.data;
-      console.log({ playerID });
+      // console.log({ playerID });
 
       playerData[playerID] = { position, velocity, rotation, currentHealth };
       broadcastInfo();
@@ -74,7 +74,7 @@ const broadcastInfo = () => {
     data: Object.entries(playerData).map(([playerID, playerData]) => ({ playerID: playerID, ...playerData })),
   };
   const dataToSendString = JSON.stringify(dataToBeUpdated);
-  console.log("Data", dataToSendString)
+  // console.log("Data", dataToSendString)
   wss.clients.forEach((client) => {
     client.send(dataToSendString);
   });

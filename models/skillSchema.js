@@ -40,6 +40,16 @@ const skillSchema = mongoose.Schema({
         required: true,
         default: 1,
     },
+    currentUpgradeLv: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+    maxUpgradeLv: {
+        type: Number,
+        required: true,
+        default: 10,
+    },
     category: {
         type: String,
         required: true,
@@ -55,6 +65,28 @@ const skillSchema = mongoose.Schema({
     dmgType: {
         type: String,
         required: true,
+    },
+    castConditions: {
+        type: Map,
+        of: new mongoose.Schema({
+            manaCost: {
+                type: Number,
+                required: true,
+                default: 0
+            },
+            healthCost: {
+                type: Number,
+                default: 0
+            },
+            effect: {
+                type: String,
+            }
+        }),
+    },
+    skillpoints: {
+        type: Number,
+        required: true,
+        default: 1,
     },
     patk: num,
     matk: num,

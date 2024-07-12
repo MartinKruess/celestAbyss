@@ -33,18 +33,18 @@ content-type: application/json
 
 {
   "accountID": "664765050c679adb667ce908",
-  "charName": "Bodo",
-  "class": "Butcher",
+  "charName": "Hops",
+  "class": "Herbalist",
   "race": "Umbra"
 }
 
 ### Delete Character ✓
-DELETE http://localhost:5600/characters/667ebdb689fefe9f16b8693b HTTP/1.1
-
+DELETE http://localhost:5600/characters/669046126e56432fc6a034f4 HTTP/1.1
+ 
 ### Add Item to Inventory ✓
 PATCH http://localhost:5600/inventory/ HTTP/1.1
 content-type: application/json
- 
+
 {
   "itemName": "Wolf",
   "amount": 1,
