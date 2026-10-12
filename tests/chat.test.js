@@ -57,17 +57,23 @@ test('subscribe buffers concurrent live delivery without gaps or duplicate snaps
   }
 });
 
-test('history returns last 50 and bounded older/reconnect pages', async () => {
+test('history never exposes messages outside latest 50, including old cursors', async () => {
   const h = await harness();
   try {
     for (let i = 1; i <= 75; i++) h.store.messages.push({ id: String(i), sequence: i, text: String(i), channel: 'global' });
     const client = await h.connect(); await login(client, 'one');
     const page = await subscribe(client);
     assert.equal(page.messages.length, 50); assert.equal(page.messages[0].sequence, 26); assert.equal(page.highWater, 75);
-    const older = await client.command({ type: 'history', channel: 'global', before: page.nextBefore });
-    assert.equal(older.messages.length, 25); assert.equal(older.messages[0].sequence, 1); assert.equal(older.hasMore, false);
+    const older = await client.command({ type: 'history', channel: 'global', before: 26 });
+    assert.equal(older.messages.length, 0); assert.equal(older.hasMore, false);
     const reconnect = await client.command({ type: 'history', channel: 'global', after: 10, through: 60, limit: 20 });
-    assert.equal(reconnect.messages[0].sequence, 11); assert.equal(reconnect.nextAfter, 30); assert.equal(reconnect.highWater, 60);
+    assert.equal(reconnect.messages[0].sequence, 26); assert.equal(reconnect.nextAfter, 45); assert.equal(reconnect.highWater, 60);
+    assert.equal(reconnect.historyTruncated, true);
+    const historical = await client.command({ type: 'history', channel: 'global', through: 25 });
+    assert.deepEqual(historical.messages, []);
+    h.store.messages.push({ id: '76', sequence: 76, text: '76', channel: 'global' });
+    const advanced = await client.command({ type: 'history', channel: 'global', before: 27 });
+    assert.deepEqual(advanced.messages, []);
   } finally { await h.stop(); }
 });
 

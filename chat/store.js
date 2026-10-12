@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { ChatMessageModel, ChatCounterModel } from '../models/chatSchema.js';
+import { visibleHistory } from './history.js';
 
 export function publicMessage(document) {
   return { id: String(document._id), channel: document.channel, sequence: document.sequence,
@@ -17,6 +18,10 @@ export const chatStore = {
       return await session.withTransaction(async () => {
         const existing = await ChatMessageModel.findOne({ senderID: identity.accountID, clientMessageID }).session(session);
         if (existing) {
+          const boundary = await ChatMessageModel.find({ channel: 'global' }).sort({ sequence: -1 }).skip(49).limit(1).select('sequence').session(session);
+          if (boundary.length && existing.sequence < boundary[0].sequence) {
+            throw Object.assign(new Error('MESSAGE_OUTSIDE_HISTORY'), { publicCode: 'MESSAGE_OUTSIDE_HISTORY' });
+          }
           if (existing.text !== text) { const error = new Error('MESSAGE_ID_CONFLICT'); error.publicCode = error.message; throw error; }
           return { message: publicMessage(existing), created: false };
         }
@@ -28,16 +33,11 @@ export const chatStore = {
       });
     } finally { await session.endSession(); }
   },
-  history: async ({ before, after, through, limit = 50 } = {}) => {
+  history: async (options = {}) => {
     const counter = await ChatCounterModel.findById('global').lean();
-    const highWater = Math.min(through ?? counter?.sequence ?? 0, counter?.sequence ?? 0);
-    const sequence = { $lte: highWater, ...(before !== undefined ? { $lt: before } : {}), ...(after !== undefined ? { $gt: after } : {}) };
-    const rows = await ChatMessageModel.find({ channel: 'global', sequence }).sort({ sequence: after !== undefined ? 1 : -1 }).limit(limit + 1).lean();
-    const hasMore = rows.length > limit;
-    const page = rows.slice(0, limit);
-    if (after === undefined) page.reverse();
-    const messages = page.map(publicMessage);
-    return { channel: 'global', messages, highWater, hasMore,
-      ...(hasMore && messages.length ? after !== undefined ? { nextAfter: messages.at(-1).sequence } : { nextBefore: messages[0].sequence } : {}) };
+    const highWater = counter?.sequence ?? 0;
+    const latest = await ChatMessageModel.find({ channel: 'global', sequence: { $lte: highWater } })
+      .sort({ sequence: -1 }).limit(50).lean();
+    return visibleHistory(latest.reverse().map(publicMessage), options, highWater);
   },
 };

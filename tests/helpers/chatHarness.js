@@ -4,6 +4,7 @@ import { EventEmitter } from 'node:events';
 import { WebSocket } from 'ws';
 import { attachChat } from '../../chat/server.js';
 import { chatError } from '../../chat/protocol.js';
+import { visibleHistory } from '../../chat/history.js';
 
 export function memoryStore(initial = []) {
   const messages = [...initial];
@@ -13,6 +14,7 @@ export function memoryStore(initial = []) {
       if (this.fail) throw new Error('database secret');
       const existing = messages.find(message => message.sender.accountID === identity.accountID && message.clientMessageID === clientMessageID);
       if (existing) {
+        if (!messages.slice(-50).includes(existing)) throw chatError('MESSAGE_OUTSIDE_HISTORY');
         if (existing.text !== text) throw chatError('MESSAGE_ID_CONFLICT');
         return { message: existing, created: false };
       }
@@ -20,16 +22,7 @@ export function memoryStore(initial = []) {
         sender: { accountID: identity.accountID, username: identity.username }, clientMessageID, text, sentAt: new Date().toISOString() };
       messages.push(message); return { message, created: true };
     },
-    history: async ({ before, after, through, limit = 50 } = {}) => {
-      const highWater = Math.min(through ?? messages.length, messages.length);
-      let rows = messages.filter(message => message.sequence <= highWater && (before === undefined || message.sequence < before) && (after === undefined || message.sequence > after));
-      if (after === undefined) rows = rows.toReversed();
-      const hasMore = rows.length > limit;
-      rows = rows.slice(0, limit);
-      if (after === undefined) rows.reverse();
-      return { channel: 'global', messages: rows, highWater, hasMore,
-        ...(hasMore ? after !== undefined ? { nextAfter: rows.at(-1).sequence } : { nextBefore: rows[0].sequence } : {}) };
-    },
+    history: async (options = {}) => visibleHistory(messages.slice(-50), options, messages.at(-1)?.sequence ?? 0),
   };
 }
 

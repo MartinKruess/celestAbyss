@@ -24,7 +24,7 @@ Access-Ablauf und lokaler Logout beziehungsweise Logout-all schließen die Verbi
 {"type":"subscribe","requestID":"sub1","channel":"global"}
 ```
 
-Antwort: `subscribed` mit channel, messages, highWater, hasMore und gegebenenfalls nextBefore. messages enthält maximal die letzten 50 Nachrichten in aufsteigender Reihenfolge. highWater ist der oberste gespeicherte Sequenzstand des Snapshots. Nachrichten, die während des Ladens entstehen, werden gepuffert und nach der Antwort als Live-Ereignisse zugestellt, soweit sie nicht schon im Snapshot enthalten sind.
+Antwort: `subscribed` mit channel, messages, highWater, oldestAvailableSequence, historyTruncated und hasMore. messages enthält maximal die letzten 50 Nachrichten in aufsteigender Reihenfolge. highWater ist der oberste gespeicherte Sequenzstand des Snapshots. Nachrichten, die während des Ladens entstehen, werden gepuffert und nach der Antwort als Live-Ereignisse zugestellt, soweit sie nicht schon im Snapshot enthalten sind.
 
 ```json
 {"type":"unsubscribe","requestID":"unsub1","channel":"global"}
@@ -62,21 +62,19 @@ Nachrichten sind Text. Browserclients müssen sie als Text darstellen und dürfe
 
 ## Verlauf und Wiederverbindung
 
-Ältere Nachrichten laden:
+Spieler erhalten ausschließlich die jeweils neuesten 50 Nachrichten des Globalchats. Ältere Nachrichten sind über die Spieler-Schnittstelle nicht abrufbar. Neue Live-Nachrichten schieben ältere aus dem sichtbaren Fenster; der Client muss seinen Anzeigepuffer ebenfalls auf 50 kürzen.
+
+Ein `history`-Befehl lädt den aktuellen Verlauf auch ohne Live-Abonnement:
 
 ```json
-{"type":"history","requestID":"history1","channel":"global","before":123,"limit":50}
+{"type":"history","requestID":"history1","channel":"global"}
 ```
 
-Die Antwort `history` enthält messages aufsteigend, highWater, hasMore und gegebenenfalls nextBefore. before ist exklusiv; nextBefore ist der Cursor für die nächste ältere Seite. limit beträgt 1 bis 50. Verlauf ist auch ohne aktives Live-Abonnement abrufbar, aber immer nur mit gültiger Anmeldung.
+Antwort: messages in aufsteigender Reihenfolge, highWater, oldestAvailableSequence, historyTruncated und hasMore. Mit limit 1 bis 50 und before/after lässt sich dieses aktuelle Fenster weiter einschränken. Cursor können das Fenster niemals in die Vergangenheit verschieben. Ein altes through liefert daher keine alten Archive; before unterhalb der ältesten sichtbaren Sequenz liefert eine leere Liste.
 
-Für Wiederverbindung merkt sich der Client seine zuletzt verarbeitete Sequenz. Nach Anmeldung abonniert er zuerst den Kanal und merkt sich dessen highWater. Anschließend lädt er die fehlenden Nachrichten mit after und diesem festen through:
+Bei Wiederverbindung zuerst anmelden und subscribe senden. Der Client ersetzt seinen sichtbaren Verlauf durch den neuen Snapshot und übernimmt anschließende Live-Nachrichten. Mit after kann er alternativ noch sichtbare Nachrichten nach seinem letzten Stand anfragen. historyTruncated zeigt an, dass ein alter Cursor außerhalb des aktuellen Fensters liegt. Versäumte ältere Nachrichten werden nicht nachgeliefert.
 
-```json
-{"type":"history","requestID":"catchup1","channel":"global","after":100,"through":150,"limit":50}
-```
-
-after ist exklusiv, through inklusiv. Bei hasMore setzt der Client after auf nextAfter und behält through bei. before und after dürfen nicht gemeinsam verwendet werden. Live-Nachrichten können während des Nachladens eintreffen; der Client puffert beziehungsweise sortiert sie und dedupliziert anhand von id. Für einen durchgehend vollständigen Verlauf darf er seinen Catch-up-Cursor erst nach Abschluss des Nachladens bis through vorziehen.
+hasMore/nextBefore/nextAfter beziehen sich ausschließlich auf kleinere Seiten innerhalb der aktuellen 50 Nachrichten, niemals auf das Archiv. Eine wiederholte Sendeanfrage für eine bereits aus dem Fenster gefallene Nachricht liefert MESSAGE_OUTSIDE_HISTORY ohne den alten Nachrichtentext.
 
 ## Grenzen und Fehler
 
@@ -95,7 +93,7 @@ Operationen antworten bei Fehlern mit `type: error` und einem stabilen error-Cod
 
 Chatnachrichten werden in chatmessages gespeichert; chatcounters enthält den globalen Sequenzzähler. Sequenzvergabe und Nachrichtenspeicherung erfolgen in derselben MongoDB-Transaktion. Indizes sichern Reihenfolge und eindeutige Nachrichten-IDs pro Absender. Erfolgreiches Speichern bedeutet nicht, dass jeder Empfänger die Nachricht bereits angezeigt hat; Clients können persistierte Nachrichten nachladen.
 
-Die letzten 50 Nachrichten sind nur das Anzeigefenster. Die gesamte Historie bleibt vorläufig gespeichert; vor öffentlichem Betrieb sind Aufbewahrungsdauer und Moderationsrechte festzulegen. Es gibt noch keine automatische Löschung oder Moderationsoberfläche.
+Die letzten 50 Nachrichten sind die gesamte für Spieler abrufbare Historie. Die gesamte Historie bleibt vorläufig gespeichert; vor öffentlichem Betrieb sind Aufbewahrungsdauer und Moderationsrechte festzulegen. Es gibt noch keine automatische Löschung oder Moderationsoberfläche.
 
 Live-Verteilung, lokale Logout-Ereignisse und Limits gelten aktuell für eine Backend-Instanz. Mehrere Instanzen benötigen gemeinsame Nachrichtenverteilung, Widerrufssignale und Limit-Speicher. Eine Kapazität für 50.000 Verbindungen ist noch nicht gemessen.
 

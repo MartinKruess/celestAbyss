@@ -237,3 +237,11 @@ JSON-Validierung, Nachrichten- und Befehlslimits, begrenzte Warteschlangen und P
 36 Tests ohne echte Datenbank bestehen. Atlas-Chatprüfung mit echten HTTP-Logins und zwei WebSocket-Clients erfolgreich: persistierte Zustellung, Wiederholung ohne Duplikat, Verlauf, Refresh/erneute Anmeldung, sofortiger Logout-Abbruch und Wiederverbindung. Testdaten anschließend gezielt entfernt. Protokoll in docs/chat-protocol.md dokumentiert.
 
 Nächste Chatfunktionen: Privatnachrichten mit Offline-/Blockierregeln; Gruppen/Allianzen nach Mitgliedschaftsmodell; Lokalchat nach Dedicated-Server-Ortsinformationen. Aufbewahrungsdauer und Moderationszugriff noch festlegen; Nachrichten werden bisher ohne automatische Löschung aufbewahrt. Itemüberarbeitung bleibt separat für später.
+
+### Spielerhistorie auf aktuelle 50 begrenzt
+
+Korrektur der Anforderung: Spieler dürfen insgesamt nur die jeweils neuesten 50 Globalchat-Nachrichten sehen, keine unbegrenzten älteren Seiten. Backend-Verlauf ist entsprechend begrenzt, auch bei alten before/after/through-Cursorn. Wiederholte Sendeanfragen können alte gespeicherte Nachrichten nicht aus dem Archiv abrufen. Der spätere Client muss seinen sichtbaren Live-Puffer ebenfalls auf 50 kürzen. Reconnect ersetzt den sichtbaren Verlauf durch den aktuellen Snapshot; ältere verpasste Nachrichten werden nicht nachgeliefert.
+
+36 JS-Tests bestehen; Atlas-Test bestätigt die Grenze mit 55 zusätzlichen, anschließend entfernten Testnachrichten. Ältere Nachrichten bleiben vorläufig gespeichert und sind nicht über Spieler-Verlaufsanfragen zugänglich. Keine automatische Datenlöschung umgesetzt.
+
+Vorschlag für späteres Meldesystem, noch nicht implementiert: Client meldet eine serverseitige Nachrichten-ID und einen Grund. Backend sichert unveränderte Nachricht und begrenzten Gesprächskontext, etwa zehn Nachrichten davor und danach, soweit zum Meldezeitpunkt vorhanden. Bei privaten Gesprächen nur einen begrenzten Abschnitt sichern, nicht automatisch den gesamten unbegrenzten Verlauf. Moderatorzugriff und Bearbeitung protokollieren, Meldungen begrenzen, normale Aufbewahrung und gesonderte Fallfristen festlegen. Keine vom Client eingeschickten Chattexte als authentische Belege übernehmen. Diese Regeln sind noch zu bestätigen.

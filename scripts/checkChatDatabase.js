@@ -8,7 +8,7 @@ import { readRuntimeConfig } from '../config/runtime.js';
 import { startBackend } from '../runtime.js';
 import { UserDataModel } from '../models/userSchema.js';
 import { SessionModel } from '../models/sessionSchema.js';
-import { ChatMessageModel } from '../models/chatSchema.js';
+import { ChatMessageModel, ChatCounterModel } from '../models/chatSchema.js';
 import { hashPassword } from '../security/passwords.js';
 import { chatStore } from '../chat/store.js';
 
@@ -95,6 +95,27 @@ try {
   await reconnected.command({ type: 'auth', token: credentials[1].token });
   const snapshot = await reconnected.command({ type: 'subscribe', channel: 'global' });
   assert.ok(snapshot.messages.some(message => message.id === sent.message.id));
+  stage = 'strict last-50 window';
+  await mongoose.connection.transaction(async session => {
+    const counter = await ChatCounterModel.findOneAndUpdate({ _id: 'global' }, { $inc: { sequence: 55 } }, { session, new: true });
+    await ChatMessageModel.create(Array.from({ length: 55 }, (_, index) => ({
+      channel: 'global', sequence: counter.sequence - 54 + index,
+      senderID: accounts[0]._id, senderName: accounts[0].username,
+      clientMessageID: `window_${suffix}_${index}`, text: 'Window boundary check', sentAt: new Date(),
+    })), { session, ordered: true });
+  });
+  const latest = await reconnected.command({ type: 'history', channel: 'global' });
+  assert.equal(latest.messages.length, 50);
+  assert.equal(latest.hasMore, false);
+  assert.ok(latest.messages.every(message => message.sequence > sent.message.sequence));
+  const inaccessible = await reconnected.command({ type: 'history', channel: 'global', before: latest.oldestAvailableSequence });
+  assert.deepEqual(inaccessible.messages, []);
+  const oldSnapshot = await reconnected.command({ type: 'history', channel: 'global', through: sent.message.sequence });
+  assert.deepEqual(oldSnapshot.messages, []);
+  assert.ok(await ChatMessageModel.exists({ _id: sent.message.id }));
+  await assert.rejects(chatStore.append({ identity: { accountID: String(accounts[0]._id), username: accounts[0].username },
+    clientMessageID: payload.clientMessageID, text: payload.text }), error => error.publicCode === 'MESSAGE_OUTSIDE_HISTORY');
+  console.log('PASS: only latest 50 visible; old cursors and old send retries cannot retrieve archived messages.');
   console.log('PASS: real login, WebSocket auth, persisted global message, delivery, deduplication, history, unsubscribe, refresh/re-auth, logout closure and reconnect.');
 } catch {
   console.error(`Chat database check failed at stage: ${stage}. Credentials and chat contents are not logged.`);

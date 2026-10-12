@@ -62,6 +62,6 @@ Der aktuelle Vertrag ist für den nativen Client ausgelegt. Die spätere Webseit
 
 ## Globalchat
 
-Globalchat mit gespeicherten Nachrichten, Abonnements, letzten 50 Nachrichten, älteren Seiten und Wiederverbindung ist implementiert. Privat-, Gruppen-, Allianz- und lokale Kanäle folgen separat. Siehe [Chatprotokoll](docs/chat-protocol.md).
+Globalchat mit gespeicherten Nachrichten, Abonnements, einem strikt auf die neuesten 50 Nachrichten begrenzten Spieler-Verlauf und Wiederverbindung ist implementiert. Privat-, Gruppen-, Allianz- und lokale Kanäle folgen separat. Siehe [Chatprotokoll](docs/chat-protocol.md).
 
 `npm run test:db-chat` prüft Login, WebSockets, Speicherung, Wiederholungen, Verlauf, Logout und Wiederverbindung gegen die Entwicklungsdatenbank und entfernt die dafür erzeugten Testdaten.
