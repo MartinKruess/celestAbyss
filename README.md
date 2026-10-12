@@ -46,7 +46,7 @@ Standardwerte: `HOST=127.0.0.1`, `PORT=5600`, `WS_PORT=8080`. Für externen Zugr
 
 `GET /health/live` bestätigt den laufenden Prozess. `GET /health/ready` liefert 200 bei aktiver Datenbankverbindung, sonst 503. Bei fehlender Bereitschaft werden Spiel- und Auth-Anfragen mit 503 abgewiesen. SIGINT und SIGTERM stoppen neue Verbindungen und schließen HTTP, WebSockets und Datenbank; nach fünf Sekunden werden verbleibende Netzwerkverbindungen beendet.
 
-Der alte, nicht authentifizierte PlayerData-WebSocket-Prototyp ist deaktiviert. WebSocket-Verbindungen werden bis zur Implementierung der Chat-Authentifizierung mit Code 1008 geschlossen.
+Der Positions-Prototyp ist entfernt. WebSockets unter /chat verwenden jetzt authentifizierte Sitzungen und den Globalchat; der Vertrag steht in docs/chat-protocol.md.
 
 ## Sitzungen und Auth API
 
@@ -58,4 +58,10 @@ Login unter `POST /user/login` liefert `token`, `tokenType`, `expiresIn` (900 Se
 
 Sitzungen laufen nach sieben Tagen absolut ab; Refresh verlängert diese Grenze nicht. Die `sessions`-Collection speichert nur einen SHA-256-Hash des Refresh-Tokens. Ein TTL-Index räumt abgelaufene Sitzungen auf; Zugriffsprüfungen prüfen den Ablauf unabhängig vom verzögerten TTL-Aufräumen. Auth-Antworten tragen `Cache-Control: no-store`. Refresh ist auf 30 Anfragen pro IP und Minute begrenzt.
 
-Der aktuelle Vertrag ist für den nativen Client ausgelegt. Die spätere Webseite benötigt einen eigenen sicheren Umgang mit Refresh-Tokens, etwa HttpOnly-Cookies samt passender CSRF-Prüfung; dies ist noch nicht implementiert. WebSocket-Anmeldung bleibt separat offen. Logout speichert noch keinen Spielprogress: den abschließenden Charakter-Save muss die spätere Dedicated-Server-Anbindung koordinieren.
+Der aktuelle Vertrag ist für den nativen Client ausgelegt. Die spätere Webseite benötigt einen eigenen sicheren Umgang mit Refresh-Tokens, etwa HttpOnly-Cookies samt passender CSRF-Prüfung; dies ist noch nicht implementiert. WebSocket-Anmeldung und Globalchat sind umgesetzt; siehe docs/chat-protocol.md. Logout speichert noch keinen Spielprogress: den abschließenden Charakter-Save muss die spätere Dedicated-Server-Anbindung koordinieren.
+
+## Globalchat
+
+Globalchat mit gespeicherten Nachrichten, Abonnements, letzten 50 Nachrichten, älteren Seiten und Wiederverbindung ist implementiert. Privat-, Gruppen-, Allianz- und lokale Kanäle folgen separat. Siehe [Chatprotokoll](docs/chat-protocol.md).
+
+`npm run test:db-chat` prüft Login, WebSockets, Speicherung, Wiederholungen, Verlauf, Logout und Wiederverbindung gegen die Entwicklungsdatenbank und entfernt die dafür erzeugten Testdaten.

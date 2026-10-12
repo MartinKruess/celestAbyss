@@ -225,3 +225,15 @@ Reihenfolge angepasst: WebSocket-Chat wird vor Itemüberarbeitung, Dedicated-Ser
 6. Chatlasttests und Vorbereitung instanzübergreifender Verteilung nach Bedarf.
 
 Items, Wirtschaft und Welt-Saves bleiben danach auf dem Plan. Unreal muss für den ersten Chatabschnitt noch nicht installiert sein.
+
+### Globalchat umgesetzt
+
+Positions-/PlayerData-Prototyp vollständig ersetzt durch Chat unter /chat. Authentifizierung mit Access-JWT und aktiver Sitzung, erneute Anmeldung nach Refresh, Ablauf und lokale Logout-Signale. Kein Positions-, Gesundheits- oder Bewegungsbroadcast.
+
+Globalchat abonnieren/pausieren, speichern, bestätigen, live verteilen und nachladen. Letzte 50 Nachrichten, ältere Seiten und Catch-up mit stabiler Sequenz. Sequenzvergabe und Speicherung transaktional; Idempotenz anhand accountID/clientMessageID; keine bestätigten Duplikate. Snapshot/Live-Übergang puffert konkurrierende Nachrichten und filtert bereits enthaltene Sequenzen.
+
+JSON-Validierung, Nachrichten- und Befehlslimits, begrenzte Warteschlangen und Puffer, Upgrade-Limits, Origin-Prüfung für Browser, Heartbeat, Ablauf- und Sitzungsprüfungen. Lokale Logout/Logout-all/Refresh-Replay-Ereignisse schließen betroffene Sockets. Periodische Prüfung deckt externe Änderungen ab. Limits und Live-Verteilung sind derzeit pro Backend-Instanz; gemeinsamer Broker folgt bei Mehrinstanzbetrieb.
+
+36 Tests ohne echte Datenbank bestehen. Atlas-Chatprüfung mit echten HTTP-Logins und zwei WebSocket-Clients erfolgreich: persistierte Zustellung, Wiederholung ohne Duplikat, Verlauf, Refresh/erneute Anmeldung, sofortiger Logout-Abbruch und Wiederverbindung. Testdaten anschließend gezielt entfernt. Protokoll in docs/chat-protocol.md dokumentiert.
+
+Nächste Chatfunktionen: Privatnachrichten mit Offline-/Blockierregeln; Gruppen/Allianzen nach Mitgliedschaftsmodell; Lokalchat nach Dedicated-Server-Ortsinformationen. Aufbewahrungsdauer und Moderationszugriff noch festlegen; Nachrichten werden bisher ohne automatische Löschung aufbewahrt. Itemüberarbeitung bleibt separat für später.

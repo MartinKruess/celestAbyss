@@ -30,7 +30,8 @@
     "seed:check": "node scripts/seed.js --check",
     "seed": "node scripts/seed.js --apply",
     "test:db-auth": "node scripts/checkAuthDatabase.js",
-    "test:db-characters": "node scripts/checkCharacterDatabase.js"
+    "test:db-characters": "node scripts/checkCharacterDatabase.js",
+    "test:db-chat": "node scripts/checkChatDatabase.js"
   },
   "dependencies": {
     "argon2": "^0.45.1",

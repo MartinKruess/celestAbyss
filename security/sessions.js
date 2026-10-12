@@ -4,11 +4,12 @@ import { SessionModel } from '../models/sessionSchema.js';
 import { UserDataModel } from '../models/userSchema.js';
 import { createTokenService } from './tokens.js';
 import { envConfig } from '../scripts/config.js';
+import { sessionEvents } from './sessionEvents.js';
 
 export const refreshHash = token => createHash('sha256').update(token).digest('hex');
 const validID = value => typeof value === 'string' && /^[a-f0-9]{24}$/i.test(value);
 const invalid = () => { const error = new Error('INVALID_SESSION'); error.status = 401; return error; };
-export function createSessionService({ sessions, users, tokens, newID = () => new mongoose.Types.ObjectId(), now = () => new Date() }) {
+export function createSessionService({ sessions, users, tokens, newID = () => new mongoose.Types.ObjectId(), now = () => new Date(), events = sessionEvents }) {
   const response = (accountID, sid, expiresAt, refreshToken) => ({
     token: tokens().issue(accountID, sid), tokenType: 'Bearer', expiresIn: 900,
     refreshToken, refreshExpiresAt: expiresAt.toISOString(),
@@ -29,6 +30,7 @@ export function createSessionService({ sessions, users, tokens, newID = () => ne
       const account = await users.findById(claims.sub).select('_id isBanned');
       if (!account || account.isBanned) {
         await sessions.updateOne({ _id: claims.sid, accountID: claims.sub }, { $set: { revokedAt: now() } });
+        events.emit('revoked', { sessionID: claims.sid });
         throw invalid();
       }
       const expiresAt = new Date(claims.exp * 1000);
@@ -41,13 +43,20 @@ export function createSessionService({ sessions, users, tokens, newID = () => ne
       if (!rotated) {
         // A signed token from this session was reused or the session expired.
         await sessions.updateOne({ _id: claims.sid, accountID: claims.sub, revokedAt: null }, { $set: { revokedAt: now() } });
+        events.emit('revoked', { sessionID: claims.sid });
         throw invalid();
       }
       return result;
     },
     active: (sid, accountID) => sessions.exists({ _id: sid, accountID, revokedAt: null, expiresAt: { $gt: now() } }),
-    logout: (sid, accountID) => sessions.updateOne({ _id: sid, accountID, revokedAt: null }, { $set: { revokedAt: now() } }),
-    logoutAll: accountID => sessions.updateMany({ accountID, revokedAt: null }, { $set: { revokedAt: now() } }),
+    logout: async (sid, accountID) => {
+      await sessions.updateOne({ _id: sid, accountID, revokedAt: null }, { $set: { revokedAt: now() } });
+      events.emit('revoked', { sessionID: String(sid) });
+    },
+    logoutAll: async accountID => {
+      await sessions.updateMany({ accountID, revokedAt: null }, { $set: { revokedAt: now() } });
+      events.emit('revoked', { accountID: String(accountID) });
+    },
   };
 }
 export const sessionService = createSessionService({ sessions: SessionModel, users: UserDataModel,

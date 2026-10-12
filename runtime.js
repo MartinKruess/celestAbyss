@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 import { createServer } from 'node:http';
-import { WebSocketServer } from 'ws';
+import { attachChat } from './chat/server.js';
+import { initializeChatStore } from './chat/store.js';
 import { createApp } from './app.js';
 import { SessionModel } from './models/sessionSchema.js';
 
@@ -17,9 +18,9 @@ const close = server => new Promise(resolve => {
   server.closeIdleConnections?.();
 });
 
-export async function startBackend(config, { database = mongoose, logger = console } = {}) {
+export async function startBackend(config, { database = mongoose, logger = console, chatOptions = {} } = {}) {
   let stopping = false, stopPromise;
-  let http, wsHttp, wss;
+  let http, wsHttp, wss, chat;
   const isReady = () => !stopping && database.connection.readyState === 1;
   const stop = () => {
     if (stopPromise) return stopPromise;
@@ -32,7 +33,7 @@ export async function startBackend(config, { database = mongoose, logger = conso
       try {
         const wsClosed = wss ? new Promise(resolve => wss.close(resolve)) : Promise.resolve();
         wss?.clients.forEach(client => client.close(1001, 'Server shutting down'));
-        await Promise.all([close(http), close(wsHttp), wsClosed]);
+        await Promise.all([close(http), close(wsHttp), wsClosed, chat?.stop()]);
         await database.disconnect();
       } finally { clearTimeout(deadline); }
     })();
@@ -41,16 +42,11 @@ export async function startBackend(config, { database = mongoose, logger = conso
   try {
     await database.connect(config.uri, { dbName: config.dbName, serverSelectionTimeoutMS: 10000, autoIndex: false });
     if (database === mongoose) await SessionModel.createIndexes();
+    if (database === mongoose) await initializeChatStore();
     http = createServer(createApp({ isReady, corsConfig: config.cors }));
     wsHttp = createServer((req, res) => { res.writeHead(404); res.end(); });
-    wss = new WebSocketServer({ server: wsHttp, maxPayload: 16384 });
-    // ws forwards HTTP listener errors before startup has completed.
-    wss.on('error', () => {});
-    // Legacy unauthenticated player-state broadcasts are disabled until chat authentication exists.
-    wss.on('connection', client => {
-      client.on('error', () => {});
-      client.close(1008, 'WebSocket authentication not implemented');
-    });
+    chat = attachChat(wsHttp, { ...chatOptions, isReady, origins: config.cors.origin });
+    wss = chat.wss;
     await listen(http, config.port, config.host);
     await listen(wsHttp, config.wsPort, config.host);
     const failed = () => { logger.error('Listener error; stopping backend.'); stop().catch(() => logger.error('Shutdown failed.')); };
