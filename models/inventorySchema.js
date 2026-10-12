@@ -13,7 +13,7 @@ export const inventorySchema = mongoose.Schema({
     items: [{
         itemID: {
             type: Schema.Types.ObjectId,
-            refPath: 'model'
+            refPath: 'items.model'
         },
         model: {
             type: String,

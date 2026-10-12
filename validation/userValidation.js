@@ -1,33 +1,10 @@
-// Importiere das Validator-Paket
-
-import { body, validationResult } from "express-validator";
-
-
-// User Validateoptions
-export const userValidationOptions = [
-    body('username')
-        .notEmpty().withMessage('Benutzername darf nicht leer sein.')
-        .isLength({ min: 3 }).withMessage('Benutzername muss mindestens 3 Zeichen lang sein.'),
-    body('email')
-        .notEmpty().withMessage('E-Mail darf nicht leer sein.')
-        .isEmail().withMessage('Ungültige E-Mail-Adresse.'),
-    body('password')
-        .notEmpty().withMessage('Passwort darf nicht leer sein.')
-        .isLength({ min: 8 }).withMessage('Passwort muss mindestens 8 Zeichen lang sein.'),
-    body('class')
-        .notEmpty().withMessage('Klasse darf nicht leer sein.'),
-    // Server validieren
-    // body('server')
-    //     .notEmpty().withMessage('Server darf nicht leer sein.')
-    //     .isString().withMessage('Server muss ein String sein.')
-    //     .custom((value) => true).withMessage('Ungültiger Server.')
-];
-
-// Validation check
-export const userValidation = (req, res, next) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
-    }
-    next();
-};
+import { body, validationResult } from 'express-validator';
+const username = () => body('username').isString().bail().trim().isLength({ min: 3, max: 32 }).matches(/^[a-zA-Z0-9_-]+$/);
+export const userValidationOptions = [username(),
+  body('email').isString().bail().trim().isLength({ max: 254 }).isEmail(),
+  body('password').isString().bail().isLength({ min: 12, max: 128 })];
+export const loginValidation = [username(), body('password').isString().bail().isLength({ min: 1, max: 128 })];
+export function userValidation(req, res, next) {
+  if (!validationResult(req).isEmpty()) return res.status(400).json({ error: 'INVALID_INPUT' });
+  next();
+}
