@@ -245,3 +245,43 @@ Korrektur der Anforderung: Spieler dürfen insgesamt nur die jeweils neuesten 50
 36 JS-Tests bestehen; Atlas-Test bestätigt die Grenze mit 55 zusätzlichen, anschließend entfernten Testnachrichten. Ältere Nachrichten bleiben vorläufig gespeichert und sind nicht über Spieler-Verlaufsanfragen zugänglich. Keine automatische Datenlöschung umgesetzt.
 
 Vorschlag für späteres Meldesystem, noch nicht implementiert: Client meldet eine serverseitige Nachrichten-ID und einen Grund. Backend sichert unveränderte Nachricht und begrenzten Gesprächskontext, etwa zehn Nachrichten davor und danach, soweit zum Meldezeitpunkt vorhanden. Bei privaten Gesprächen nur einen begrenzten Abschnitt sichern, nicht automatisch den gesamten unbegrenzten Verlauf. Moderatorzugriff und Bearbeitung protokollieren, Meldungen begrenzen, normale Aufbewahrung und gesonderte Fallfristen festlegen. Keine vom Client eingeschickten Chattexte als authentische Belege übernehmen. Diese Regeln sind noch zu bestätigen.
+
+### Festgelegte Moderations und Kanalregeln
+
+Normale Chatnachrichten sollen 24 Stunden aufbewahrt werden. Technisch nach dem Alter jeder Nachricht löschen, nicht nur einmal täglich sämtliche Verläufe leeren. Spieler können weiterhin nur die aktuellen 50 Nachrichten abrufen. Report-Snapshots werden separat gespeichert und bleiben von der normalen Löschung ausgenommen; eigene Fallfrist, Moderatorrechte und Bearbeitungsstatus noch festlegen.
+
+Globalchat: Bei Spielermeldung einen Snapshot mit bis zu 50 Nachrichten einschließlich der gemeldeten Nachricht und deren Vorgeschichte sichern. Der gemeldete Beitrag dient als zeitlicher Anker, damit spätere neue Nachrichten den relevanten Kontext nicht verdrängen. Privatnachrichten: gemeldete Nachricht und davor 10 bis 20 Nachrichten beider Beteiligten in diesem Gespräch. Gilden-, Gruppen- und weitere Chats: gemeldete Nachricht mit davor 10 bis 20 Nachrichten aus dem berechtigten Kanal. Genaue kleinere Fenstergrößen noch vereinheitlichen. Meldender Spieler muss die betroffene Nachricht empfangen beziehungsweise berechtigt gesehen haben; keine freie Abfrage beliebiger archivierter Nachrichten. Snapshot durch das Backend aus Originalnachrichten erstellen, nicht aus vom Client eingeschicktem Text.
+
+Zwei Meldungsquellen: Spieler und System. Konfigurierbare Wort-/Phrasenregeln maskieren Treffer für Spieler mit Sternchen; ausgewählte schwere Treffer erstellen zusätzlich automatisch einen Moderationsfall. Kontextprüfung durch Moderation vor Sanktionen, keine automatischen Bans allein aufgrund eines Treffers. Für Belege Originaltext ausschließlich im geschützten Moderationsspeicher sichern; öffentliche Texte maskiert ausliefern. Regeln, Normalisierung und Verhalten bei Varianten/Treffern in Zitaten noch definieren. Ein automatischer Treffer kann vorläufigen Kontext sichern; ein vollständiger Global-Snapshot darf erst nach dem Speichern der ausgelösten Nachricht entstehen.
+
+Kanäle auf demselben Mitgliedschaftskonzept aufbauen: Gruppe (zunächst etwa 6 bis 8 Spieler), übergeordneter Gruppenverband (beispielsweise 40 Spieler; endgültiger Name offen), Gilde/Allianz und ausdrückliche Eventverbände. Gruppenkanäle stehen nur berechtigten aktuellen Mitgliedern offen; Wechsel und Austritt müssen Live-Abonnement und Verlaufrechte prüfen.
+
+Globalchat gilt pro Spielserver beziehungsweise Welt; gewöhnlicher Chat ist nicht serverübergreifend. Eventverbände können ausdrücklich Teilnehmer verschiedener Server zusammenbringen, etwa 40 Spieler von Server 1 gegen Server 2. Aktuell gibt es erst einen einzigen Backend-Globalraum ohne bestätigte Weltzuordnung; vor mehreren Welten vertrauenswürdige Server-/Weltzuordnung einführen, keine freie Clientwahl als Berechtigungsnachweis.
+
+Lokalchat im Radius von ungefähr 100 Metern bleibt bis zur Unreal/Dedicated-Server-Anbindung zurückgestellt. Empfänger anhand vertrauenswürdiger Positionen und Welt-/Instanzzugehörigkeit bestimmen. Positionsbroadcast über Chat-WebSockets bleibt entfernt.
+
+Nächste Umsetzung: Global-Meldesystem, Maskierung/automatische Meldungen und 24-Stunden-Aufbewahrung zusammen. Privat- und Gruppenkanäle anschließend mit passenden Mitgliedschafts- und Kontextregeln. Diese Regeln sind bisher geplant, noch nicht implementiert.
+
+### Sprachabhängige Filter und Fallfristen Entwurf
+
+Nutzeridee: gemeinsame schwere Filterregeln und zusätzliche Sprachlisten, um harmlose deutsche Wörter und Antworten nicht durch fremdsprachige Teiltreffer zu maskieren. Empfehlung zur weiteren Abstimmung: Spielsprache nur als Hinweis, Standort nicht als Sprachbeweis; kein Umschalten der Spielsprache als Ausweg aus verbindlichen Regeln. Ganze Wörter und genaue Phrasen statt pauschaler Silben-/Substring-Sperren. Mehrdeutige Treffer vorsichtig behandeln; Tests mit normalen Spielsätzen, gemischten Sprachen und Umgehungsvarianten. Keine externen Moderationsdienste verbunden, kein neuer Filter implementiert.
+
+Fristen noch nicht eindeutig festgelegt: Nutzer nennt einen Monat für unbearbeitete Meldungen, frühere Löschung bei als irrelevant bewerteten Fällen und zunächst etwa drei Monate für weiterverfolgte Fälle. Rechtsfälle brauchen eine separat begründete Sicherung; keine pauschale gesetzliche Pflicht von sechs Monaten festgestellt. Website für Admins/Support später als Fallbearbeitung vorgesehen. Als umsetzbare Zustände offen, verworfen, bestätigt und gesichert vorsehen; endgültige Fristen vor automatischer Löschung bestätigen.
+
+### Moderationssammlungen konsolidiert
+
+Deutsche und englische Begriffe in docs/moderation-rules-draft.md zusammengeführt. Ausdrückliche Freigaben von vorgeschlagenen Freigaben getrennt; direkte Sperren, Zensurvorschläge, Kontextkandidaten, Bedrohungen und Einstufungskonflikte zur Abstimmung aufgeführt. Neue englische Liste aus dem bereitgestellten Text berücksichtigt. Kein Datenbankimport und kein neuer Filter aktiviert. Zunächst eine Spielwelt; Mehrserver-Zuordnung wird später umgesetzt.
+
+### Deutsche Moderationsentwürfe für Import vorbereitet
+
+152 deutsche Einträge in scripts/moderationData.js, Schema moderationRules mit Stufe, Aktion, Grund, Varianten, Wort-/Phrasenvergleich, Kontextbedarf, automatischer Meldung, Status, Aktivflag und Version. Freigaben mit dokumentierten offenen Entscheidungen werden ebenfalls zur Nachvollziehbarkeit gespeichert. Zwitter, Trans, Lesbe, lesbisch und Pedo ergänzt. Alle Einträge active=false; kein Chatfilter aktiviert. Englische Sammlung noch nicht importiert.
+
+npm run moderation:check prüft ohne Datenbank; npm run moderation:seed fügt fehlende Entwürfe hinzu, ohne bestehende Regeln zu überschreiben. 37 Tests bestehen. Import aktuell nicht erfolgreich: Atlas-Verbindung scheitert mit MongooseServerSelectionError. Nach Wiederherstellung der Verbindung erneut importieren und verifizieren.
+
+### Moderationsentwürfe erfolgreich gespeichert
+
+Die Atlas-Verbindung ist wieder verfügbar. 152 deutsche Moderationsentwürfe erfolgreich in celestabyss_dev.moderationRules eingefügt und anschließend verifiziert. Aktive Einträge: 0. Die Regeln beeinflussen den Chat noch nicht. Englische Sammlung und endgültige Einstufungen folgen separat.
+
+### Bestätigte englische Entscheidungen gespeichert
+
+Fuck you und Fuck off frei; Bitch kontextabhängig; Bastard auf Deutsch und Englisch zensieren; Cunt zensieren. Sechs betroffene Sprach-/Begriffseinträge erfolgreich in moderationRules verifiziert, weiterhin alle inaktiv. Unklar diktierter Begriff „dickpo…“ noch nicht übernommen; Klärung angefragt. Vollständige englische Sammlung noch nicht importiert. Deutsche Seedquelle berücksichtigt die bestätigte Bastard-Zensur.
