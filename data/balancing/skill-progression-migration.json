@@ -1,0 +1,130 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-skill-progression-1792352573368",
+  "skills": 258,
+  "rules": 831,
+  "checkedExistingValues": 8050,
+  "derivedManaRules": 33,
+  "pendingExtensions": [
+    {
+      "nr": 36,
+      "name": "Energieschlag",
+      "extraLevels": 1,
+      "reason": "No defined progression for cooldownScaling at level 11"
+    },
+    {
+      "nr": 36,
+      "name": "Energieschlag",
+      "extraLevels": 5,
+      "reason": "No defined progression for cooldownScaling at level 15"
+    },
+    {
+      "nr": 54,
+      "name": "Gefrierbrand",
+      "extraLevels": 1,
+      "reason": "No defined progression for effects.1.valueScaling at level 11"
+    },
+    {
+      "nr": 54,
+      "name": "Gefrierbrand",
+      "extraLevels": 5,
+      "reason": "No defined progression for effects.1.valueScaling at level 15"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "extraLevels": 1,
+      "reason": "No defined progression for durationScaling at level 6"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "extraLevels": 5,
+      "reason": "No defined progression for durationScaling at level 10"
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "extraLevels": 1,
+      "reason": "No defined progression for burstUsage.belowTargetHealthFractionByLevel at level 5"
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "extraLevels": 5,
+      "reason": "No defined progression for burstUsage.belowTargetHealthFractionByLevel at level 9"
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "extraLevels": 1,
+      "reason": "No defined progression for attackExecution.projectileWavesByLevel at level 6"
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "extraLevels": 5,
+      "reason": "No defined progression for attackExecution.projectileWavesByLevel at level 10"
+    },
+    {
+      "nr": 99,
+      "name": "Schrei der Unterwelt",
+      "extraLevels": 1,
+      "reason": "No defined progression for attackExecution.additionalDamageFromSacrificedHealth at level 4"
+    },
+    {
+      "nr": 99,
+      "name": "Schrei der Unterwelt",
+      "extraLevels": 5,
+      "reason": "No defined progression for attackExecution.additionalDamageFromSacrificedHealth at level 8"
+    },
+    {
+      "nr": 141,
+      "name": "Eiserner Wille",
+      "extraLevels": 1,
+      "reason": "No defined progression for statScaling.vita at level 11"
+    },
+    {
+      "nr": 141,
+      "name": "Eiserner Wille",
+      "extraLevels": 5,
+      "reason": "No defined progression for statScaling.vita at level 15"
+    },
+    {
+      "nr": 246,
+      "name": "Wilde Bindung",
+      "extraLevels": 1,
+      "reason": "No defined progression for companionBondSettings.physicalAttackFractionByLevel at level 4"
+    },
+    {
+      "nr": 246,
+      "name": "Wilde Bindung",
+      "extraLevels": 5,
+      "reason": "No defined progression for companionBondSettings.physicalAttackFractionByLevel at level 8"
+    },
+    {
+      "nr": 250,
+      "name": "Lebenstransfer",
+      "extraLevels": 1,
+      "reason": "No defined progression for lifeTransferSettings.intervalSecondsByLevel at level 21"
+    },
+    {
+      "nr": 250,
+      "name": "Lebenstransfer",
+      "extraLevels": 5,
+      "reason": "No defined progression for lifeTransferSettings.intervalSecondsByLevel at level 25"
+    },
+    {
+      "nr": 251,
+      "name": "Blutender Schnitt",
+      "extraLevels": 1,
+      "reason": "No defined progression for companionVulnerabilitySettings.damageBonusFractionByLevel at level 7"
+    },
+    {
+      "nr": 251,
+      "name": "Blutender Schnitt",
+      "extraLevels": 5,
+      "reason": "No defined progression for companionVulnerabilitySettings.damageBonusFractionByLevel at level 11"
+    }
+  ]
+}
