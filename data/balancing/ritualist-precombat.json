@@ -1,0 +1,217 @@
+{
+  "classKey": "ritualist",
+  "level": 60,
+  "status": "reviewedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 2,
+      "name": "Überleben",
+      "stats": {
+        "str": 20,
+        "agi": 10,
+        "dex": 10,
+        "manaRegen": 10,
+        "healthRegen": 10
+      }
+    },
+    {
+      "nr": 44,
+      "name": "Erweiterung des Geistes",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "dex": 20
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 181,
+      "name": "Arkane Aufladung",
+      "stats": {
+        "manaRegen": 20
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Magiewaffe, leerer Seelenspeicher",
+      "equipped": {
+        "maxHealth": 3789,
+        "maxMana": 3877,
+        "physicalAttack": 4,
+        "magicalAttack": 708.02,
+        "physicalDefense": 590,
+        "magicalDefense": 725,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 448,
+        "manaRegen": 376,
+        "criticalDamageBonus": 0.8
+      },
+      "passiveBonuses": {
+        "str": 20,
+        "agi": 10,
+        "dex": 30,
+        "manaRegen": 30,
+        "healthRegen": 10,
+        "int": 20,
+        "wis": 40,
+        "vita": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        2,
+        44,
+        139,
+        144,
+        181,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4389,
+        "maxMana": 5077,
+        "physicalAttack": 104,
+        "magicalAttack": 847.62,
+        "physicalDefense": 770,
+        "magicalDefense": 945,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 48,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 538,
+        "manaRegen": 526,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "weapon": "Magiewaffe, 100 Seelen",
+      "equipped": {
+        "maxHealth": 3789,
+        "maxMana": 3877,
+        "physicalAttack": 4,
+        "magicalAttack": 708.02,
+        "physicalDefense": 590,
+        "magicalDefense": 725,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 448,
+        "manaRegen": 376,
+        "criticalDamageBonus": 0.8
+      },
+      "passiveBonuses": {
+        "str": 20,
+        "agi": 10,
+        "dex": 30,
+        "manaRegen": 30,
+        "healthRegen": 10,
+        "int": 20,
+        "wis": 40,
+        "vita": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 200,
+        "atkSpeed": 0.2,
+        "vic": 20
+      },
+      "includedSkills": [
+        2,
+        44,
+        139,
+        144,
+        181,
+        201,
+        120,
+        241
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4389,
+        "maxMana": 5077,
+        "physicalAttack": 104,
+        "magicalAttack": 947.62,
+        "physicalDefense": 770,
+        "magicalDefense": 945,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 48,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 538,
+        "manaRegen": 526,
+        "criticalDamageBonus": 0.8
+      }
+    }
+  ],
+  "directPassiveAttackSpeedBonus": 0.2,
+  "combatPassive": {
+    "name": "Ausbrennen",
+    "extraMagicalAttack": 80,
+    "healthDrain": 72,
+    "intervalSeconds": 1.5,
+    "excludedFromPrecombatTable": true
+  },
+  "regeneration": {
+    "directHPPerTick": 22,
+    "directMPPerTick": 55,
+    "knownHPPerTick": 538,
+    "knownMPPerTick": 526,
+    "additionalStartAttributeContributions": "Starting Vita/Wisdom unknown; tick interval pending"
+  },
+  "excluded": [
+    "Active buffs",
+    "Morrak and regular pet",
+    "Jewelry/stones",
+    "Victim retained as special stat with no direct attack conversion",
+    "Combat drain passive excluded from precombat rows"
+  ],
+  "equipmentProposalApplied": false
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b65",
+    "skillName_eng": "Survive",
+    "__v": 1,
+    "agi": 1,
+    "category": "Umbra",
+    "charClass": [
+      "Butcher",
+      "Destroyer",
+      "Summoner",
+      "Soulseeker",
+      "Ritualist",
+      "Bloodmage",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Überleben erhöht deine Stärke und Agilität. +1 Stärke +1 Agilität pro Level",
+    "description_eng": "Survive will increase your Strenght and Agility. +1 Strenght +1 Agility per Level",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 2,
+    "skillName_de": "Überleben",
+    "skillpoints": 1,
+    "str": 1,
+    "allowedRaces": [
+      "Umbra"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b6e",
+    "skillName_eng": "Charged Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 25,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen aufgeladenen physischen Schlag aus. Der Grundangriffswert steigt von 85 um 55 je weiterer Stufe auf 855 auf Level 15. Die Mana-Kosten steigen von 65 um 38 je weiterer Stufe auf 597. Die gesamte Animation dauert vorläufig 0,8 Sekunden. Zusätzliche Cast Time und genauer Trefferzeitpunkt sind noch festzulegen. Der Cooldown bleibt zunächst bei 25 Sekunden.",
+    "description_eng": "Performs a charged physical strike. Base attack increases from 85 by 55 per additional level to 855 at level 15. Mana cost increases from 65 by 38 per additional level to 597. Total animation duration is provisionally 0.8 seconds. Additional cast time and exact hit timing are still to be defined. Cooldown remains provisionally 25 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 11,
+    "patk": 85,
+    "skillName_de": "Aufgeladener Schlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.8,
+    "animationTimingStatus": "provisional",
+    "mana": 65,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 65,
+          "perLevel": 38
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 85,
+        "perLevel": 55
+      }
+    }
+  }
+]

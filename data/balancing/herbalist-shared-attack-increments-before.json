@@ -1,0 +1,242 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b80",
+    "skillName_eng": "Ice Lance",
+    "__v": 0,
+    "category": "active",
+    "cd": 48,
+    "charClass": [
+      "Herbalist",
+      "Witcher",
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung für 5 Sekunden um 5 Prozent verringert. Der magische Grundangriff steigt von 187 um 46 je weiterer Stufe auf 601. Die Mana-Kosten steigen von 84 um 42 je weiterer Stufe auf 462. Die Castzeit beträgt 0,6 Sekunden. Der Cooldown sinkt von 48 auf 39 Sekunden. Die fünf Sekunden betreffen den Rüstungseffekt, keinen Schaden über Zeit.",
+    "description_eng": "Summons an ice lance that pierces the target once and reduces its armor by 5 percent for 5 seconds. Base magical attack increases from 187 by 46 per additional level to 601. Mana cost increases from 84 by 42 per additional level to 462. Cast time is 0.6 seconds. Cooldown decreases from 48 to 39 seconds. The five seconds refer to the armor effect, not damage over time.",
+    "dmgType": "spell",
+    "dur": 5,
+    "matk": 187,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 29,
+    "skillName_de": "Eislanze",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 48,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 84,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 84,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 187,
+        "perLevel": 46
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b82",
+    "skillName_eng": "Electric Field",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein kreisförmiges elektrisches Feld auf dem Boden. Vorläufig werden die genannten 4 Meter als Durchmesser gerechnet, also 2 Meter Radius; Flächengröße noch bestätigen. Beim Auslösen verursacht es einmalig 137 magischen Skill-Grundschaden, plus 43 je weiterer Stufe, bis zu 524 auf Stufe 10. Solange Gegner im Feld stehen, erleiden sie alle 2 Sekunden zusätzlich 10 magischen Schaden, plus 3 je weiterer Stufe, bis zu 37 auf Stufe 10, ohne zusätzlichen Charakter-M-Angriff auf diese Ticks. Gegner im Feld sind um 5 Prozent verlangsamt; beim Verlassen endet dieser Flächeneffekt. Feldlaufzeit vorläufig 4 Sekunden auf Stufe 1 bis 4, 6 Sekunden auf Stufe 5 bis 9 und 8 Sekunden auf Stufe 10. Erster Tick nach 2 Sekunden, somit 2, 3 oder 4 Ticks bei vollständigem Aufenthalt. Mana-Kosten 41, plus 19 je weiterer Stufe, bis zu 212. Cooldown 47 Sekunden, minus 1 je weiterer Stufe, bis zu 38 Sekunden. Castzeit 0,3 Sekunden. Die genauen Stufenübergänge der Laufzeit sind als vorläufige Staffelung festgehalten.",
+    "description_eng": "Creates a circular electrical field on the ground. The stated 4 metres are provisionally treated as diameter, giving a 2 metre radius; area size needs confirmation. Initial magical skill base damage is 137, increasing by 43 per additional level to 524 at level 10. Enemies inside take 10 additional magical damage every 2 seconds, increasing by 3 per additional level to 37 at level 10, without adding caster magical attack to these ticks. Enemies inside are slowed by 5 percent; this area effect ends when they leave. Provisional field duration is 4 seconds at levels 1 through 4, 6 seconds at levels 5 through 9 and 8 seconds at level 10. First tick is after 2 seconds, giving 2, 3 or 4 ticks with full exposure. Mana cost starts at 41 and increases by 19 per additional level to 212. Cooldown starts at 47 seconds and decreases by 1 per additional level to 38 seconds. Cast time is 0.3 seconds. Duration milestone levels remain provisional.",
+    "dmgType": "spell",
+    "dur": 4,
+    "matk": 137,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 31,
+    "skillName_de": "Elektrisches Feld",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 2,
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        8
+      ]
+    },
+    "effects": [
+      {
+        "key": "electric-field-periodic",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 10,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 3
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            8
+          ]
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "addsCasterMagicalAttack": false,
+        "onlyWhileTargetInsideArea": true,
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "electric-field-slow",
+        "type": "statModifier",
+        "target": "enemiesInArea",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            8
+          ]
+        },
+        "onlyWhileTargetInsideArea": true
+      }
+    ],
+    "mana": 41,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 41,
+          "perLevel": 19
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 43
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c40",
+    "skillName_eng": "Wind Slasher",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schneidet deine Feinde mit Klingen aus Wind. Der magische Grundschaden des Skills beträgt 211 auf Skilllevel 1 und steigt um 67 je weiterer Stufe auf 814 auf Stufe 10. Dieser Wert erhöht nicht dauerhaft deinen magischen Angriff. Die Mana-Kosten steigen von 73 um 37 je weiterer Stufe auf 406. Der Cooldown sinkt von 54 um 1 Sekunde je weiterer Stufe auf 45 Sekunden. Castzeit 0,4 Sekunden.",
+    "description_eng": "Cuts your enemies with blades of wind. The skill base magical damage starts at 211 at level 1 and increases by 67 per additional level to 814 at level 10. This value does not permanently increase your magical attack. Mana cost increases from 73 by 37 per additional level to 406. Cooldown decreases from 54 by 1 second per additional level to 45 seconds. Cast time is 0.4 seconds.",
+    "dmgType": "spell",
+    "matk": 211,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 221,
+    "skillName_de": "Windschlitzer",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "cd": 54,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 54,
+      "perLevel": -1
+    },
+    "mana": 73,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 73,
+          "perLevel": 37
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 211,
+        "perLevel": 67
+      }
+    }
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "_id": "6acc1c7e4826525c70d04c50",
+  "skillName_eng": "Morrak's Master",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Ritualist",
+    "Bloodmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Einstufige passive Verbesserung der questgebundenen Morrak-Beschwörung. Der Ritualist bezwingt Morrak in einer Quest und erhält dadurch zunächst die zusätzliche Möglichkeit, ihn als Nahkampf-Dämon zu beschwören; die erzählerische Meister-Wahl ist keine echte Auswahl. Sobald Morraks Meister auf Stufe 1 gelernt wird, ersetzt Morrak seine Nahkampf-Krallenangriffe durch magische Fernkampf-Auto-Attacks. Keine eigenen Casts oder Spells des Dämons; Attack-Speed-Wert bleibt 1, genaue Reichweite noch offen. Die separate Grundbeschwörung und Questfreischaltung müssen später in Quest- und Aktionsdaten angebunden werden; diese Passive selbst beschwört ihn nicht und hat keine aktive Castzeit. Bestehende Beschwörungsregeln bleiben: Castzeit 0,4 Sekunden, maximal 300 Sekunden Laufzeit bis Ablauf oder Tod. Nur solange Morrak beschworen ist, erhält der Anwender +5 Victim, +5 Wisdom und -500 Max-HP. Diese Effekte gelten nicht allein durch das Lernen der Passiven. Morrak erhält vorläufig beim Beschwören vor dem HP-Abzug ein Drittel des Max-Lebens und M-Angriffs des Anwenders. Er ist angreifbar und nimmt Flächenschaden; kein Mana oder Cast-Spells. Jeder Auto-Attack hat 1,5 Prozent Chance auf 50 Prozent Bewegungstempo-Senkung für 1,5 Sekunden. Verteidigungsskalierung, Beschwörungs-Cooldown, weitere Beschwörungskosten und Aggroregeln bleiben offen.",
+  "description_eng": "One-level passive upgrade to the quest-granted Morrak summon. The Ritualist defeats Morrak in a quest and initially gains a separate ability to summon him as a melee demon; the narrative master choice is not an actual option. Learning Morrak’s Master at level 1 replaces his melee claw attacks with magical ranged basic attacks. The demon still has no casts or spells; attack-speed rating remains 1, exact range pending. The separate base summon and quest unlock require later quest/action integration; this passive itself does not summon him and has no active cast time. Existing summon rules remain: cast 0.4 seconds, lifetime at most 300 seconds or until death. Only while summoned the caster gains +5 Victim, +5 Wisdom and -500 max HP, not merely for learning this passive. Provisionally snapshots one third of caster max HP and magical attack before the health penalty. Targetable and affected by area damage, no Mana or casts. Each basic attack has 1.5 percent chance to slow movement by 50 percent for 1.5 seconds. Defense scaling, summon cooldown, further summon costs and aggro rules remain pending.",
+  "dmgType": "passive",
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 237,
+  "skillName_de": "Morrak´s Meister",
+  "skillpoints": 1,
+  "effects": [
+    {
+      "key": "morrak-caster-vic",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "vic",
+      "value": 5,
+      "unit": "flat",
+      "durationSeconds": 300,
+      "endWith": "morrak-summon"
+    },
+    {
+      "key": "morrak-caster-wis",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "wis",
+      "value": 5,
+      "unit": "flat",
+      "durationSeconds": 300,
+      "endWith": "morrak-summon"
+    },
+    {
+      "key": "morrak-caster-maxHealth",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "maxHealth",
+      "value": -500,
+      "unit": "flat",
+      "durationSeconds": 300,
+      "endWith": "morrak-summon"
+    }
+  ],
+  "effectsVersion": 1,
+  "summonedCreatureSettings": {
+    "name": "Morrak",
+    "healthFractionOfCaster": 0.3333333333333333,
+    "magicalAttackFractionOfCaster": 0.3333333333333333,
+    "statSampling": "onSummonBeforeHealthPenalty",
+    "defenseScalingStatus": "pending",
+    "attackStyle": "rangedBasicAttack",
+    "damageType": "magical",
+    "attackSpeed": 1,
+    "usesMana": false,
+    "hasCastSpells": false,
+    "targetable": true,
+    "affectedByAreaAttacks": true,
+    "lifetimeSeconds": 300,
+    "endsOnCreatureDeath": true,
+    "casterBuffsEndWithCreature": true,
+    "slowProcChancePerBasicAttack": 0.015,
+    "slowDurationSeconds": 1.5,
+    "movementSlowFraction": 0.5,
+    "threatAndAggroStatus": "pending",
+    "currentHealthAdjustmentStatus": "pending",
+    "baseSummonGrantedByQuest": true,
+    "questRequiresDefeatingCreature": true,
+    "skillIsRangedUpgrade": true,
+    "baseAttackStyle": "meleeClaws",
+    "summonCastTimeSeconds": 0.4,
+    "rangedAttackRangeStatus": "pending"
+  },
+  "resourceCosts": []
+}

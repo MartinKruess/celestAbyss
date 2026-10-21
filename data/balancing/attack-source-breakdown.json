@@ -1,0 +1,190 @@
+{
+  "scope": "Damage attribution only; no balance changes",
+  "autoAttribution": "Basic attacks plus automatic extra projectiles from basic attacks. Activated charge skills such as Explosive Arrow remain active skill damage and are explicitly dependent on basic attacks.",
+  "classes": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "total": 1079444.6999999923,
+      "directAutoDamage": 804916.199999992,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 804916.199999992,
+      "activeSkillDamage": 274528.5000000002,
+      "autoShare": 0.7456761796134603,
+      "activeSkillShare": 0.2543238203865396
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "total": 1659156.981999999,
+      "directAutoDamage": 1291902.2719999983,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 1291902.2719999983,
+      "activeSkillDamage": 367254.71000000054,
+      "autoShare": 0.7786498119320208,
+      "activeSkillShare": 0.2213501880679792
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "total": 871702.9377499953,
+      "directAutoDamage": 0,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 0,
+      "activeSkillDamage": 871702.9377499953,
+      "autoShare": 0,
+      "activeSkillShare": 1
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "total": 1126836.7849999997,
+      "directAutoDamage": 754219.785,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 754219.785,
+      "activeSkillDamage": 372616.99999999953,
+      "autoShare": 0.6693247815831644,
+      "activeSkillShare": 0.33067521841683545
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "total": 889533.1639999922,
+      "directAutoDamage": 0,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 0,
+      "activeSkillDamage": 889533.1639999922,
+      "autoShare": 0,
+      "activeSkillShare": 1
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "total": 1180862.8669999964,
+      "directAutoDamage": 461140.6799999986,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 461140.6799999986,
+      "activeSkillDamage": 719722.1869999977,
+      "autoShare": 0.39051162746063384,
+      "activeSkillShare": 0.609488372539366
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "total": 1329697.5999999999,
+      "directAutoDamage": 661346,
+      "automaticAutoExtras": 233760,
+      "autoRelatedDamage": 895106,
+      "activeSkillDamage": 434591.59999999986,
+      "autoShare": 0.6731650865580265,
+      "activeSkillShare": 0.3268349134419735
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "total": 845363.540000007,
+      "directAutoDamage": 555172.380000006,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 555172.380000006,
+      "activeSkillDamage": 290191.1600000011,
+      "autoShare": 0.6567261937982343,
+      "activeSkillShare": 0.3432738062017658
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "total": 1884530.2085000365,
+      "directAutoDamage": 0,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 0,
+      "activeSkillDamage": 1884530.2085000365,
+      "autoShare": 0,
+      "activeSkillShare": 1
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "total": 1328592.729899997,
+      "directAutoDamage": 432122.8000000019,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 432122.8000000019,
+      "activeSkillDamage": 896469.9298999949,
+      "autoShare": 0.32524850563688373,
+      "activeSkillShare": 0.6747514943631162
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "total": 1279009.746600002,
+      "directAutoDamage": 560235.340000002,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 560235.340000002,
+      "activeSkillDamage": 718774.4066000001,
+      "autoShare": 0.4380227292945017,
+      "activeSkillShare": 0.5619772707054983
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "total": 1321531.440000003,
+      "directAutoDamage": 689266.200000003,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 689266.200000003,
+      "activeSkillDamage": 632265.24,
+      "autoShare": 0.5215662519538706,
+      "activeSkillShare": 0.47843374804612937
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "total": 1247685.480000011,
+      "directAutoDamage": 739497.6000000099,
+      "automaticAutoExtras": 0,
+      "autoRelatedDamage": 739497.6000000099,
+      "activeSkillDamage": 508187.8800000011,
+      "autoShare": 0.5926955245163256,
+      "activeSkillShare": 0.4073044754836745
+    }
+  ],
+  "durationDiagnostic": {
+    "scope": "Only listed buffs regain real durations/cooldowns and refresh costs; all other buffs remain permanent. Initial preparation remains free. This is not a fully normal-uptime combat simulation.",
+    "rows": [
+      {
+        "key": "butcher",
+        "actualDurationBuffs": [
+          12
+        ],
+        "characterDamage": 1219578.649999989,
+        "directAutoDamage": 1219578.649999989,
+        "automaticExtras": 0,
+        "autoActions": 855,
+        "finalMana": 5641
+      },
+      {
+        "key": "butcher",
+        "actualDurationBuffs": [
+          12,
+          173,
+          174,
+          175
+        ],
+        "characterDamage": 947084.8660000041,
+        "directAutoDamage": 947084.8660000041,
+        "automaticExtras": 0,
+        "autoActions": 692,
+        "finalMana": 5641
+      },
+      {
+        "key": "hunter",
+        "actualDurationBuffs": [
+          157
+        ],
+        "characterDamage": 817810,
+        "directAutoDamage": 780850,
+        "automaticExtras": 36960,
+        "autoActions": 575,
+        "finalMana": 5931
+      }
+    ]
+  }
+}

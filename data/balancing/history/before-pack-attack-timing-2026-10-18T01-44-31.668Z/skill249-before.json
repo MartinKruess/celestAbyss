@@ -1,0 +1,36 @@
+{
+  "_id": "6ad41b704e67141870eba8bb",
+  "charClass": [
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "skillpoints": 1,
+  "category": "active",
+  "nr": 249,
+  "skillName_de": "Rudelangriff",
+  "skillName_eng": "Pack Attack",
+  "dmgType": "physical",
+  "maxSkillLv": 20,
+  "patk": 273,
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 273,
+      "perLevel": 154
+    }
+  },
+  "description_de": "Der Abenteurer springt zurück, gibt bis zu zwei verfügbaren Begleitern Zeit zur Positionierung und stürmt zum gemeinsamen Angriff vor. Grundschaden 273, +154 je weiterer Stufe bis 3199 auf Stufe 20. Dazu einmal der aktuelle P-Angriff des Abenteurers und einmal die Angriffskraft jedes beteiligten Begleiters. Eine gemeinsame Schadensanzeige. Funktioniert auch allein oder mit nur einem Begleiter; nicht teilnehmende Begleiter tragen nichts bei. Vorbereitungsdauer, Castzeit, Cooldown, Mana, Reichweite und die Verrechnung magischer Pet-Angriffe noch offen.",
+  "description_eng": "Retreat, allow up to two companions to position, then charge for a coordinated attack. Base damage 273 +154 per additional level to 3199. Add current owner physical attack once and each participating companion attack once. Combined damage display; usable solo or with one companion. Timing, cooldown, mana, range and magical companion damage mapping pending.",
+  "packAttackSettings": {
+    "maxCompanions": 2,
+    "usableWithoutCompanions": true,
+    "usesCurrentOwnerPhysicalAttack": true,
+    "companionAttackFactor": 1,
+    "combinedDamageDisplay": true,
+    "preparation": "backstep, companion positioning, forward charge",
+    "preparationTimingStatus": "pending",
+    "magicalCompanionDamageMappingStatus": "pending"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "classKey": "druid",
+  "level": 60,
+  "rank": 6,
+  "status": "confirmedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 1,
+      "name": "Erleuchtung",
+      "stats": {
+        "int": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 44,
+      "name": "Erweiterung des Geistes",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "faith": 10,
+        "vic": 10
+      }
+    },
+    {
+      "nr": 132,
+      "name": "Zweihändiges Streitkolbentraining",
+      "stats": {
+        "str": 11,
+        "int": 5.5
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    },
+    {
+      "nr": 203,
+      "name": "Kanalisation",
+      "stats": {
+        "mana": 865
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Streitkolben",
+      "equipped": {
+        "maxHealth": 3678,
+        "maxMana": 3871,
+        "physicalAttack": 398.2,
+        "magicalAttack": 272.2,
+        "physicalDefense": 679,
+        "magicalDefense": 611,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "int": 45.5,
+        "wis": 60,
+        "faith": 10,
+        "vic": 10,
+        "str": 11,
+        "vita": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2,
+        "mana": 865
+      },
+      "includedSkills": [
+        1,
+        44,
+        132,
+        139,
+        144,
+        201,
+        203
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4278,
+        "maxMana": 6536,
+        "physicalAttack": 518,
+        "magicalAttack": 454.1,
+        "physicalDefense": 859,
+        "magicalDefense": 871,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "excluded": [
+    "Adrenalin: combat proc",
+    "Active buffs",
+    "Pets",
+    "Jewelry/stones",
+    "Vergessener Zauber: optional sacrifice and selected skill unresolved"
+  ],
+  "optionalPassiveExcluded": 222,
+  "equipmentProposalApplied": false
+}

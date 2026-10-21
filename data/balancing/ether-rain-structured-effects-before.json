@@ -1,0 +1,67 @@
+{
+  "_id": "6acc1c7e4826525c70d04b6c",
+  "skillName_eng": "Ether Rain",
+  "__v": 0,
+  "category": "active",
+  "cd": 150,
+  "charClass": [
+    "Druide",
+    "Alchemist",
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört ein Ätherfeld, das alle 2 Sekunden Gegnern magischen Schaden zufügt und jedes eigene Gruppenmitglied im Feld heilt. Der magische Grundangriff je Auslösung steigt von 300 um 73 je weiterer Stufe auf 957. Die Heilung je Auslösung beträgt 75 HP plus 10 Prozent des Schadens an einem getroffenen Ziel und je 1 Prozent des Schadens an bis zu vier weiteren getroffenen Zielen. Weitere Gegner erhalten weiterhin Schaden, tragen aber nicht zur Heilung bei. Jedes Gruppenmitglied im Feld erhält die volle Heilung. Die Dauer beträgt zunächst 6 Sekunden, ab Stufe 5 7 Sekunden und auf Stufe 10 8 Sekunden. Auslösungen erfolgen nach 2, 4, 6 und gegebenenfalls 8 Sekunden. Mana-Kosten steigen von 210 um 85 je weiterer Stufe auf 975. Castzeit 0,6 Sekunden. Cooldown zunächst 150 Sekunden, je weiterer Stufe 3 Sekunden weniger, bis zu 123 Sekunden auf Level 10. Startdurchmesser, Auswahl des ersten Ziels und genaue Schadensbasis werden noch geklärt.",
+  "description_eng": "Summons an ether field that deals magical damage to enemies and heals each member of your own group within the field every 2 seconds. Base magical attack per pulse increases from 300 by 73 per additional level to 957. Healing per pulse is 75 HP plus 10 percent of damage to one hit target and 1 percent of damage to each of up to four additional hit targets. Further enemies still take damage but do not contribute to healing. Each group member within the field receives the full healing. Duration starts at 6 seconds, becomes 7 seconds at level 5 and 8 seconds at level 10. Pulses occur at 2, 4, 6 and, where applicable, 8 seconds. Mana cost increases from 210 by 85 per additional level to 975. Cast time is 0.6 seconds. Cooldown starts at 150 seconds and decreases by 3 seconds per additional level to 123 seconds at level 10. Starting diameter, primary target selection and exact damage basis remain pending.",
+  "dmgType": "spell",
+  "dur": 6,
+  "health": 75,
+  "matk": 300,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 9,
+  "skillName_de": "Ätherregen",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.6,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      6,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7,
+      7,
+      7,
+      8
+    ]
+  },
+  "mana": 210,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 210,
+        "perLevel": 85
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 300,
+      "perLevel": 73
+    }
+  },
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 150,
+    "perLevel": -3
+  }
+}

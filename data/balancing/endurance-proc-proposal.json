@@ -1,0 +1,32 @@
+{
+  "nr": 145,
+  "name": "Durchhalten",
+  "status": "cooldownPendingNotSavedToDatabase",
+  "maxSkillLevel": 10,
+  "healthThreshold": {
+    "belowFraction": 0.6
+  },
+  "chanceByLevel": [
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.06,
+    0.06,
+    0.06,
+    0.06,
+    0.06,
+    0.1
+  ],
+  "durationSeconds": 10,
+  "bonusesPerLearnedLevel": {
+    "vita": 1,
+    "pdef": 3,
+    "mdef": 3
+  },
+  "triggerEvent": "ownAttack",
+  "cooldownSeconds": null,
+  "note": "Replacing permanent bonuses with temporary proc bonus. Interpret per level as totals level * bonus, starting at 1 Vita and 3 each defense. Need event and cooldown before final database update.",
+  "triggerEventStatus": "provisional",
+  "possibleLaterTrigger": "receivedAttack"
+}

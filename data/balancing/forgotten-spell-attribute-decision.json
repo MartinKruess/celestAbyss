@@ -1,0 +1,45 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-forgotten-spell-attributes-1792320565827",
+  "penalties": {
+    "str": -20,
+    "vita": -20,
+    "int": -20,
+    "wis": -20,
+    "agi": -20,
+    "dex": -20
+  },
+  "removed": [
+    "amb",
+    "faith",
+    "vic",
+    "luck"
+  ],
+  "skill": {
+    "_id": "6acc1c7e4826525c70d04c41",
+    "skillName_eng": "Forgotten Spell",
+    "__v": 0,
+    "agi": -20,
+    "category": "passive",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verzichtet permanent auf jeweils 20 Stärke, Vitalität, Intelligenz, Willenskraft, Agilität und Geschick, um einen Skill deiner Wahl um eine Stufe zu erhöhen. Glück, Ambush, Faith und Victim werden nicht verringert. Vergessener Zauber hat eine Skillstufe und keine Levelskalierung. Permanenter passiver Skill ohne Mana-Kosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer. Auswahl und zulässige Höchststufe des verbesserten Skills werden noch festgelegt.",
+    "description_eng": "Permanently sacrifices 20 Strength, Vitality, Intelligence, Wisdom, Agility and Dexterity each to increase one chosen skill by one level. Luck, Ambush, Faith and Victim are not reduced. Forgotten Spell has one skill level and no level scaling. Permanent passive skill with no Mana cost, cast time, cooldown or limited duration. Selection and the permitted maximum level of the upgraded skill remain to be defined.",
+    "dex": -20,
+    "dmgType": "passive",
+    "int": -20,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 222,
+    "skillName_de": "Vergessener Zauber",
+    "skillpoints": 1,
+    "str": -20,
+    "vita": -20,
+    "wis": -20,
+    "resourceCosts": []
+  }
+}

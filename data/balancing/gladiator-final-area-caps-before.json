@@ -1,0 +1,244 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bd0",
+    "skillName_eng": "Storm of Wrath",
+    "__v": 0,
+    "category": "active",
+    "cd": 72,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Kann nur eingesetzt werden, solange der Stärke-Buff von Ausbruch der Wut aktiv ist. Verursacht einmalig physischen Schaden an Gegnern um dich herum, ohne Mehrfachtreffer. Der Grundschaden steigt von 281 um 63 je weiterer Stufe auf 848 auf Stufe 10. Bei Anwendung erhältst du einmalig 5 Prozent deiner maximalen Wut zurück, unabhängig von der Anzahl getroffener Gegner. Der Cooldown sinkt von 72 um 1 Sekunde je weiterer Stufe auf 63 Sekunden. Castzeit 0,3 Sekunden. Die Animation dauert vorläufig 1 Sekunde; keine anhaltende Schadenswirkung. Radius und mögliche Aktivierungskosten sind noch offen.",
+    "description_eng": "Requires the Strength buff from Outburst of Anger to be active. Deals physical damage once to enemies around you, without multiple hits. Base damage increases from 281 by 63 per additional level to 848 at level 10. On use, restores 5 percent of maximum Rage once, independent of the number of enemies hit. Cooldown decreases from 72 by 1 second per additional level to 63 seconds. Cast time is 0.3 seconds. Provisional animation duration is 1 second, with no ongoing damage. Radius and possible activation costs remain pending.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 109,
+    "patk": 281,
+    "skillName_de": "Sturm der Wut",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "activeBuff": {
+        "skillNumber": 13,
+        "effectKey": "rage-outburst-strength"
+      }
+    },
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0.3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 72,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "key": "wrath-storm-rage-gain",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "rage",
+        "value": 0.05,
+        "unit": "fraction",
+        "durationSeconds": 0
+      }
+    ],
+    "hasLingeringDamage": false,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 281,
+        "perLevel": 63
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be8",
+    "skillName_eng": "Tame",
+    "__v": 0,
+    "category": "creature",
+    "cd": 60,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen.",
+    "description_eng": "Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined.",
+    "dmgType": "spell",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 133,
+    "skillName_de": "Tamen",
+    "skillpoints": 1,
+    "castTimeScaling": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": -0.5
+    },
+    "castTimeSeconds": 3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 60,
+      "perLevel": -10
+    },
+    "mana": 100,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 100,
+          "perLevel": 25
+        }
+      }
+    ],
+    "taming": {
+      "requiresMatchingItem": true,
+      "itemConsumptionStatus": "pending",
+      "creatureCounterStatus": "pending",
+      "baseSuccessChance": 0.5,
+      "successChanceScaling": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.15
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bea",
+    "skillName_eng": "Control",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Je besser du deine Kreaturen kontrollierst, desto effizienter werden sie.",
+    "description_eng": "The better you control your creatures, the more efficient they become.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 135,
+    "skillName_de": "Kontrolle",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c49",
+    "skillName_eng": "Whirlwind",
+    "__v": 0,
+    "category": "active",
+    "cd": 105,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Dreht sich für 3 Sekunden und trifft Gegner im Umkreis von 3 Metern um dich. Der physische Grundschadenswert steigt von 153 um 51 je weiterer Stufe auf 612 auf Stufe 10. Mana-Kosten steigen von 83 um 34 je weiterer Stufe auf 389. Der Cooldown sinkt von 105 um 1 Sekunde je weiterer Stufe auf 96 Sekunden. Castzeit 0,4 Sekunden. Trefferanzahl und Verteilung des Schadens über die drei Sekunden werden noch festgelegt.",
+    "description_eng": "Spins for 3 seconds, hitting enemies within a 3 meter radius around you. Base physical damage value increases from 153 by 51 per additional level to 612 at level 10. Mana cost increases from 83 by 34 per additional level to 389. Cooldown decreases from 105 by 1 second per additional level to 96 seconds. Cast time is 0.4 seconds. Hit count and damage distribution over the three seconds remain pending.",
+    "dmgType": "physical",
+    "dur": 3,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 230,
+    "patk": 153,
+    "skillName_de": "Wirbelsturm",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 3,
+      "target": "enemiesInArea",
+      "evaluation": "perHit",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 105,
+      "perLevel": -1
+    },
+    "mana": 83,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 83,
+          "perLevel": 34
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 153,
+        "perLevel": 51
+      }
+    }
+  }
+]

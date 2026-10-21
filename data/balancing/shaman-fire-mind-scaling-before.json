@@ -1,0 +1,76 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c44",
+    "skillName_eng": "Power of Mind",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die magische Verteidigung deiner Gruppe um 18 für 30 Minuten. Mana-Kosten beginnen bei 63 und steigen um 25 je weiterer Stufe auf 288. Castzeit 0,4 Sekunden.",
+    "description_eng": "Increases your group’s magical defense by 18 for 30 minutes. Mana cost starts at 63 and increases by 25 per additional level to 288. Cast time is 0.4 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 18,
+    "nr": 225,
+    "skillName_de": "Macht des Geistes",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 25
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c43",
+    "skillName_eng": "Power of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Steigere die physische Angriffe deiner Gruppe. Mana-Kosten beginnen bei 63 und steigen um 24 je weiterer Stufe auf 279. Castzeit 0,4 Sekunden.",
+    "description_eng": "Increase the physical attacks of your group. Mana cost starts at 63 and increases by 24 per additional level to 279. Cast time is 0.4 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 224,
+    "patk": 18,
+    "skillName_de": "Macht des Feuers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 24
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "_id": "6acc1c7e4826525c70d04bcc",
+  "skillName_eng": "Soul Separation",
+  "__v": 0,
+  "category": "active",
+  "cd": 180,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Sobald Seelenqual angewendet wurde entreist du deinem Gegner einen teil seiner Seele. Dadurch erleidet er großen Schaden und du erhälst einen Teil seiner Lebenspunkte.",
+  "description_eng": "After Soul Torment has been applied, tear away part of the enemy's soul, dealing heavy damage and restoring some of your own health.",
+  "dmgType": "spell",
+  "matk": 481,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 105,
+  "skillName_de": "Seelentrennung",
+  "skillpoints": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 180,
+    "perLevel": -5
+  },
+  "effects": [
+    {
+      "valueScaling": {
+        "type": "linear",
+        "base": 150,
+        "perLevel": 150
+      },
+      "type": "heal",
+      "target": "self",
+      "value": 150,
+      "unit": "flat",
+      "damageTypes": [],
+      "durationSeconds": 0,
+      "key": "self-heal"
+    }
+  ],
+  "effectsVersion": 1
+}

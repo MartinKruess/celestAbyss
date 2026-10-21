@@ -1,0 +1,53 @@
+{
+  "_id": "6acc1c7e4826525c70d04bb3",
+  "skillName_eng": "Movability",
+  "__v": 0,
+  "agi": 2.5,
+  "category": "active",
+  "cd": 120,
+  "charClass": [
+    "Summoner",
+    "Soulseeker",
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht vorübergehend deine Agilität und dein Lauftempo. Auf Skilllevel 1 erhältst du +2,5 Agilität und +10 % Lauftempo für 20 Sekunden bei 120 Sekunden Cooldown. Pro weiterem Skilllevel steigen die Agilität um 0,5, das Lauftempo um einen Prozentpunkt und die Dauer um 0,5 Sekunden. Der Cooldown sinkt um 2 Sekunden. Auf Skilllevel 10 erhältst du +7 Agilität und +19 % Lauftempo für 24,5 Sekunden bei 102 Sekunden Cooldown.",
+  "description_eng": "Temporarily increases your Agility and movement speed. At skill level 1, gain +2.5 Agility and +10% movement speed for 20 seconds with a 120-second cooldown. Each additional skill level adds 0.5 Agility, one percentage point of movement speed and 0.5 seconds of duration, while reducing the cooldown by 2 seconds. At skill level 10, gain +7 Agility and +19% movement speed for 24.5 seconds with a 102-second cooldown.",
+  "dmgType": "selfbuff",
+  "dur": 20,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 80,
+  "skillName_de": "Beweglichkeit",
+  "skillpoints": 1,
+  "activation": "manual",
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 120,
+    "perLevel": -2
+  },
+  "durationScaling": {
+    "type": "linear",
+    "base": 20,
+    "perLevel": 0.5
+  },
+  "movementSpeed": 0.1,
+  "statBonusUnits": {
+    "agi": "flat",
+    "movementSpeed": "fraction"
+  },
+  "statScaling": {
+    "agi": {
+      "type": "linear",
+      "base": 2.5,
+      "perLevel": 0.5
+    },
+    "movementSpeed": {
+      "type": "linear",
+      "base": 0.1,
+      "perLevel": 0.01
+    }
+  }
+}

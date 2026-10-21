@@ -1,0 +1,1704 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b67",
+    "skillName_eng": "Skimming",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schöpft magische Energie aus deiner Umgebung ab und erhöht dauerhaft Intelligenz und Wisdom. Je gelerntem Skilllevel erhältst du 2 Intelligenz und 1 Wisdom, bis zu 20 Intelligenz und 10 Wisdom auf Stufe 10. Keine Stärke- oder Vitalitätsboni. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Siphons magical energy from your surroundings, permanently increasing Intelligence and Wisdom. Each learned skill level grants 2 Intelligence and 1 Wisdom, reaching 20 Intelligence and 10 Wisdom at level 10. Does not grant Strength or Vitality. Permanent passive skill without activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 4,
+    "skillName_de": "Abschöpfen",
+    "skillpoints": 1,
+    "int": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "wis": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b6d",
+    "skillName_eng": "On the Hunt",
+    "__v": 0,
+    "agi": 3,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Jäger-Skill. Auf Stufe 1 erhältst du 8 Geschicklichkeit und 3 Agilität. Je weiterer Stufe kommen 2 Geschicklichkeit und 1 Agilität hinzu, bis zu 16 Geschicklichkeit und 7 Agilität auf Stufe 5. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanent passive Hunter skill. Level 1 grants 8 Dexterity and 3 Agility. Each additional level adds 2 Dexterity and 1 Agility, reaching 16 Dexterity and 7 Agility at level 5. No activation costs or cooldown.",
+    "dex": 8,
+    "dmgType": "passive",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 10,
+    "skillName_de": "Auf der Jagd",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "dex": {
+        "type": "linear",
+        "base": 8,
+        "perLevel": 2
+      },
+      "agi": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 8,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b7f",
+    "skillName_eng": "Iron Shield",
+    "__v": 0,
+    "block": 1,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill mit 10 Stufen. Je gelerntem Skilllevel +1 Vitalität, +1 magische Verteidigung und +1 Blockpunkt. Auf Stufe 10 insgesamt +10 Vitalität, +10 magische Verteidigung und +10 Blockpunkte. Gewährt keine Willenskraft mehr. Block ist ein Punktewert, keine Prozentangabe. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer.",
+    "description_eng": "Permanent passive with 10 levels. Each learned level grants 1 Vitality, 1 magical defense and 1 Block rating, reaching 10 of each at level 10. No longer grants Wisdom. Block is a rating, not a percentage. No activation cost, cast time, cooldown or limited duration.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 28,
+    "skillName_de": "Eiserner Schild",
+    "skillpoints": 1,
+    "vita": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "block": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "block"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive",
+    "mdef": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9f",
+    "skillName_eng": "Ray of Hope",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Startboni +2 Intelligenz und +1 Willenskraft. Intelligenz und Willenskraft steigen gemäß Stufentabelle bis auf +6 Intelligenz und +5 Willenskraft auf Stufe 10. Stufen 1, 3, 5, 7 und 9 erhöhen die direkte MP-Regeneration jeweils um 8: insgesamt +40 MP je Tick. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive. Starts with +2 Intelligence and +1 Wisdom. Level tables reach +6 Intelligence and +5 Wisdom at level 10. Levels 1, 3, 5, 7 and 9 each add +8 direct MP regeneration, totaling +40 per tick. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 60,
+    "skillName_de": "Hoffnungsschimmer",
+    "skillpoints": 1,
+    "wis": 1,
+    "manaRegen": 8,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          6
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          5
+        ]
+      },
+      "manaRegen": {
+        "type": "table",
+        "values": [
+          8,
+          8,
+          16,
+          16,
+          24,
+          24,
+          32,
+          32,
+          40,
+          40
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "ceil",
+            "rule": {
+              "kind": "linear",
+              "base": 2,
+              "perLevel": 0.4444444444444444
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "ceil",
+            "rule": {
+              "kind": "linear",
+              "base": 1,
+              "perLevel": 0.4444444444444444
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 8,
+            "steps": [
+              0,
+              8
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba6",
+    "skillName_eng": "Body Control",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Körperbeherrschung und Beweglichkeit. Erhöht auf Skilllevel 1 deine Dexterity um 5 und deine Agility um 3. Je weiterer Stufe kommen 2 Dexterity und 1 Agility hinzu, bis zu 23 Dexterity und 12 Agility auf Stufe 10. Permanenter passiver Skill ohne Aktivierungskosten. Gemeinsame Definition für Abenteurer, Schurke und Schattenkrieger. Die allgemeinen Mana-Kosten werden dauerhaft reduziert: Stufen 1–4 um 1 Prozent, Stufen 5–9 um 2 Prozent, Stufe 10 um 3 Prozent. Die Attributboni bleiben unverändert.",
+    "description_eng": "Permanently increases Dexterity by 5 and Agility by 3 at level 1, adding 2 Dexterity and 1 Agility per additional level, reaching 23 Dexterity and 12 Agility at level 10. Shared passive for Adventurer, Rogue and Shadowwarrior. Reduces all Mana costs by 1 percent at levels 1–4, 2 percent at levels 5–9 and 3 percent at level 10. No activation costs. Attribute bonuses unchanged.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 67,
+    "skillName_de": "Körperbeherrschung",
+    "skillpoints": 1,
+    "agi": 3,
+    "resourceCosts": [],
+    "statBonusUnits": {
+      "agi": "flat",
+      "dex": "flat"
+    },
+    "statScaling": {
+      "agi": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 2
+      }
+    },
+    "dex": 5,
+    "effects": [
+      {
+        "key": "body-control-mana-efficiency",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "resource": "mana",
+        "appliesTo": "allSkills",
+        "value": 0.01,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0.01,
+            0.01,
+            0.01,
+            0.01,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.02,
+            0.03
+          ]
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0.01,
+            "changes": [
+              {
+                "level": 5,
+                "value": 0.02
+              },
+              {
+                "level": 10,
+                "value": 0.03
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb4",
+    "skillName_eng": "Force of Nature",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanente Passive mit einer einzigen Skillstufe. Gewährt +7 Intelligenz, +2,5 Willenskraft und +2,5 Vitalität. Das entspricht jeweils der Hälfte der bisherigen Maximalboni von Skillstufe 3. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive with one learnable level. Grants +7 Intelligence, +2.5 Wisdom and +2.5 Vitality, exactly half the former level-three maximum bonuses. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 7,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 81,
+    "skillName_de": "Naturgewalt",
+    "skillpoints": 1,
+    "vita": 2.5,
+    "wis": 2.5,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 7,
+        "perLevel": 0
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2.5,
+        "perLevel": 0
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2.5,
+        "perLevel": 0
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 7,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2.5,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2.5,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd7",
+    "skillName_eng": "Inexhaustible Hope",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. +2 M-Angriff pro Stufe, insgesamt +20 auf Stufe 10. Ab Stufe 5 insgesamt +1 Glück und +1 Intelligenz. Stufe 10 gewährt insgesamt +3 Glück und +2 Intelligenz. Direkter M-Angriffsbonus unabhängig von Intelligenz. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive. +2 magical attack per level, +20 at level 10. From level 5: +1 Luck and +1 Intelligence total. At level 10: +3 Luck and +2 Intelligence total. Direct magical attack bonus is independent of Intelligence. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "matk": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 116,
+    "skillName_de": "Unerschöpfliche Hoffnung",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "luck": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      "int": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "luck"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0,
+            "changes": [
+              {
+                "level": 5,
+                "value": 1
+              },
+              {
+                "level": 10,
+                "value": 3
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0,
+            "changes": [
+              {
+                "level": 5,
+                "value": 1
+              },
+              {
+                "level": 10,
+                "value": 2
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bef",
+    "skillName_eng": "Steadfast",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Butcher",
+      "Destroyer",
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft deine Vitalität um 2 und deine Willenskraft um 1 je gelerntem Skilllevel, bis zu 20 Vitalität und 10 Willenskraft auf Level 10. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently increases Vitality by 2 and Wisdom by 1 per learned skill level, up to 20 Vitality and 10 Wisdom at level 10. No activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 140,
+    "skillName_de": "Standhaft",
+    "skillpoints": 1,
+    "vita": 2,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf0",
+    "skillName_eng": "Iron Will",
+    "__v": 0,
+    "block": 2,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill mit 10 Stufen. Je Skillstufe +2 Vitalität, +1 Willenskraft und +2 Blockpunkte, bis zu +20 Vitalität, +10 Willenskraft und +20 Blockpunkten auf Stufe 10. Zusätzlich je gelernter Stufe 1 Prozent der aktuellen gesamten Vitalität als Stärke, maximal 10 Prozent. Ausrüstung, permanente Passive und aktive Vitalitätsboni zählen mit; Änderungen aktualisieren den Stärkebonus. Vitalität wird weder verbraucht noch abgezogen. Intern keine Rundung. Block ist ein Punktewert, keine Prozentchance. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+    "description_eng": "Permanent passive with 10 levels. Each level grants 2 Vitality, 1 Wisdom and 2 Block rating, reaching 20 Vitality, 10 Wisdom and 20 Block rating at level 10. Additionally grants Strength equal to 1% of current total Vitality per skill level, up to 10%. Includes equipment, permanent passives and active Vitality buffs; changes update the Strength bonus. Vitality is not consumed or reduced. Calculations retain full precision. No activation cost, cast time, cooldown or limited duration.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 141,
+    "skillName_de": "Eiserner Wille",
+    "skillpoints": 1,
+    "vita": 2,
+    "statBonusUnits": {
+      "vita": "flat",
+      "block": "flat",
+      "wis": "flat"
+    },
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "block": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "wis": 1,
+    "attributeConversionBonus": {
+      "sourceStat": "vita",
+      "targetStat": "str",
+      "amountPerPoint": 0.01,
+      "usesCurrentAttributeValue": true,
+      "amountPerPointScaling": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "block"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "attributeConversionBonus",
+            "amountPerPointScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf2",
+    "skillName_eng": "Immunity",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Je gelerntem Skilllevel 1 Prozent Chance, einen neu angewendeten Fluch abzuwehren, insgesamt 10 Prozent auf Stufe 10. Keine vollständige Fluchimmunität oder Entfernung bestehender Flüche. Bestehende Startboni +3 Wisdom und +6 direkte M-Defense; je weiterer Stufe +1 Wisdom und +4 direkte M-Defense, auf Stufe 10 insgesamt +12 Wisdom und +42 direkte M-Defense. Keine Aktivierungskosten, Castzeit oder Cooldown. Konkrete Flucharten und ihre Anwendung werden später definiert.",
+    "description_eng": "Permanent passive skill. Grants 1 percent curse resistance per learned skill level, totaling 10 percent at level 10, checked when a new curse is applied. Does not grant complete immunity or remove existing curses. Existing starting bonuses +3 Wisdom and +6 direct magical defense; each additional level adds +1 Wisdom and +4 direct magical defense, totaling +12 Wisdom and +42 direct magical defense at level 10. No activation costs, cast time or cooldown. Specific curse types and application rules will be defined later.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 6,
+    "nr": 143,
+    "skillName_de": "Immunität",
+    "skillpoints": 1,
+    "wis": 3,
+    "effects": [
+      {
+        "key": "immunity-curse-resistance",
+        "type": "statusResistance",
+        "target": "self",
+        "resistedStatus": "curse",
+        "resistanceCheck": "onStatusApplication",
+        "value": 0.01,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.01,
+          "perLevel": 0.01
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "wis": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 4
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf4",
+    "skillName_eng": "Endurance",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Vitalität um 3 und deine Abwehr um 6.",
+    "description_eng": "Increase your Vitality by 3 and your defense by 6.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 6,
+    "nr": 145,
+    "pdef": 6,
+    "skillName_de": "Durchhalten",
+    "skillpoints": 1,
+    "vita": 3,
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c14",
+    "skillName_eng": "Unbroken",
+    "__v": 0,
+    "category": "passive",
+    "cd": 600,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nach tödlichem Schaden beginnt automatisch eine letzte Kampfphase mit 80 % deines maximalen Lebens. Auf Skilllevel 1 hält sie 20 Sekunden, gewährt +10 Punkte Angriffsgeschwindigkeit und +30 % Laufgeschwindigkeit und hat 600 Sekunden Cooldown. Auf Skilllevel 10 sind es 30 Sekunden, +20 Punkte Angriffsgeschwindigkeit, +45 % Laufgeschwindigkeit und 300 Sekunden Cooldown. Du kannst währenddessen geheilt werden, stirbst aber spätestens am Ende der Phase. Erneuter Tod beendet die Phase sofort.",
+    "description_eng": "After lethal damage, automatically begin a final combat phase with 80% of your maximum health. At skill level 1, it lasts 20 seconds, grants +10 attack speed rating points and +30% movement speed and has a 600-second cooldown. At skill level 10, it lasts 30 seconds, grants +20 attack speed rating points and +45% movement speed and has a 300-second cooldown. Healing is possible during the phase, but you die when it ends. Dying again ends the phase immediately.",
+    "dmgType": "passive",
+    "dur": 20,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 177,
+    "skillName_de": "Ungebrochen",
+    "skillpoints": 1,
+    "activation": "automatic",
+    "effects": [
+      {
+        "restoredHealthFraction": 0.8,
+        "healingAllowed": true,
+        "endsOnDeath": true,
+        "disablesEffects": [],
+        "trigger": "lethalDamage",
+        "diesAtEnd": true,
+        "valueScaling": {
+          "values": []
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112,
+          "values": []
+        },
+        "type": "deathReprieve",
+        "target": "self",
+        "allowedRaces": [],
+        "damageTypes": [],
+        "durationSeconds": 20,
+        "key": "last-stand"
+      },
+      {
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.1,
+          "perLevel": 0.011111111111111112,
+          "values": []
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112,
+          "values": []
+        },
+        "type": "statModifier",
+        "target": "self",
+        "allowedRaces": [],
+        "stat": "atkSpeed",
+        "value": 0.1,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "damageTypes": [],
+        "durationSeconds": 20,
+        "endWith": "last-stand",
+        "key": "last-stand-attack-speed"
+      },
+      {
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.3,
+          "perLevel": 0.016666666666666666,
+          "values": []
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112,
+          "values": []
+        },
+        "type": "statModifier",
+        "target": "self",
+        "allowedRaces": [],
+        "stat": "movementSpeed",
+        "value": 0.3,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "damageTypes": [],
+        "durationSeconds": 20,
+        "endWith": "last-stand",
+        "key": "last-stand-movement-speed"
+      }
+    ],
+    "effectsVersion": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 600,
+      "perLevel": -33.333333333333336
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 20,
+      "perLevel": 1.1111111111111112
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 20,
+            "perLevel": 1.1111111111111112
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.011111111111111112
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 20,
+            "perLevel": 1.1111111111111112
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.3,
+            "perLevel": 0.016666666666666666
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 20,
+            "perLevel": 1.1111111111111112
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 600,
+              "perLevel": -33.333333333333336
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 20,
+            "perLevel": 1.1111111111111112
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c18",
+    "skillName_eng": "Arcane Charge",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Erhöht die direkte MP-Regeneration auf Stufe 1 um 11 und je weiterer Stufe um 1, auf Stufe 10 insgesamt um 20 pro Mana-Regenerationstick. Keine Victim-Voraussetzung, kein direkter M-Angriffsbonus. Keine aktive Nutzung, keine Castzeit, kein Cooldown und keine begrenzte Laufzeit. Das Tickintervall wird zentral im Regenerationssystem festgelegt.",
+    "description_eng": "Permanent passive. Grants +11 direct Mana regeneration at level 1 and +1 per additional level, totaling +20 per Mana regeneration tick at level 10. No Victim requirement or direct magical attack bonus. No manual activation, cast time, cooldown or limited duration. Tick interval is configured centrally by the regeneration system.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 181,
+    "skillName_de": "Arkane Aufladung",
+    "skillpoints": 1,
+    "manaRegen": 11,
+    "resourceCosts": [],
+    "statScaling": {
+      "manaRegen": {
+        "type": "linear",
+        "base": 11,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 11,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1e",
+    "skillName_eng": "Hard Training",
+    "__v": 0,
+    "atkSpeed": 0.05,
+    "category": "passive",
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanentes passives Training mit 10 Stufen. Gewährt auf jeder gelernten Stufe insgesamt 5 Punkte Angriffsgeschwindigkeit. Zusätzlich erhältst du 1 Geschick je gelerntem Skilllevel, bis zu 10 auf Stufe 10. Keine Aktivierungskosten, Zauberzeit oder Abklingzeit.",
+    "description_eng": "Permanent passive training with 10 levels. Grants a total of 5 attack speed rating points at every learned level. Also grants 1 Dexterity per learned skill level, reaching 10 at level 10. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 187,
+    "skillName_de": "Hartes Training",
+    "skillpoints": 1,
+    "dex": 1,
+    "resourceCosts": [],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "dex": "flat"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.05,
+        "perLevel": 0
+      },
+      "dex": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.05,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2e",
+    "skillName_eng": "Channeling",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft dein maximales Mana um 100 auf Skilllevel 1. Je weiterer Stufe steigt der Bonus um 85, bis zu 865 auf Stufe 10. Permanenter passiver Skill ohne Trigger, Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer. Der Bonus erhöht den maximalen Manapool und stellt kein Mana unmittelbar wieder her.",
+    "description_eng": "Permanently increases maximum Mana by 100 at skill level 1. Each additional level adds 85, reaching 865 at level 10. Permanent passive skill with no trigger, activation costs, cast time, cooldown or limited duration. The bonus increases the maximum Mana pool and does not directly restore Mana.",
+    "dmgType": "passive",
+    "mana": 100,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 203,
+    "skillName_de": "Kanalisierung",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "mana": {
+        "type": "linear",
+        "base": 100,
+        "perLevel": 85
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "mana"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 100,
+            "perLevel": 85
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c33",
+    "skillName_eng": "The Eternal Knowledge",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Startwerte +5 Intelligenz, +2 Willenskraft. Steigt gemäß ganzzahliger Stufentabelle auf insgesamt +12 Intelligenz, +6 Willenskraft auf Stufe 10. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive. Starts with +5 Intelligence, +2 Wisdom. Integer level tables reach +12 Intelligence, +6 Wisdom at level 10. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 5,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 208,
+    "skillName_de": "Das ewige Wissen",
+    "skillpoints": 1,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          5,
+          5,
+          6,
+          7,
+          8,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "round",
+            "rule": {
+              "kind": "linear",
+              "base": 4.5,
+              "perLevel": 0.7777777777777778
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "round",
+            "rule": {
+              "kind": "linear",
+              "base": 1.5,
+              "perLevel": 0.4444444444444444
+            }
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad23ba7a21c2357f9e61cdd",
+    "attributeConversionBonus": {
+      "sourceStat": "dex",
+      "targetStat": "maxMana",
+      "amountPerPoint": 1,
+      "usesCurrentAttributeValue": true,
+      "amountPerPointScaling": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "soulGenerationSettings": {
+      "maximumUniqueEnemiesScaling": {
+        "values": []
+      }
+    },
+    "soulStorageSettings": {
+      "capacityScaling": {
+        "values": []
+      }
+    },
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "attackExecution": {
+      "additionalDamageFromSacrificedHealth": {
+        "values": []
+      },
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "attackArea": {
+      "radiusScaling": {
+        "values": []
+      },
+      "maxTargetsScaling": {
+        "values": []
+      }
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "values": []
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "resourceCosts": [],
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 243,
+    "skillName_eng": "Technical Perfection",
+    "skillName_de": "Technische Perfektion",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 4,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "passive",
+    "description_eng": "Permanent passive with four levels. Each current Dexterity point grants 1/2/3/4 additional maximum Mana according to skill level. Uses current total Dexterity including equipment, permanent passives and active attribute bonuses; later changes affect the bonus. At 55 known Dexterity this grants 55/110/165/220 maximum Mana, plus any starting Dexterity still undefined. No instant Mana restoration, extra regeneration or further cost reduction. No activation cost, cast time, cooldown or limited duration. Current-Mana handling on maximum changes follows a central rule still pending.",
+    "description_de": "Permanenter passiver Skill mit vier Stufen. Jeder aktuelle Geschickpunkt gewährt je nach Skillstufe zusätzlich 1/2/3/4 Max-Mana. Verwendet den aktuellen Gesamtwert einschließlich Geschick aus Ausrüstung, permanenten Passiven und aktiven Attributboni; spätere Änderungen wirken auf den Bonus. Bei 55 bekannten Geschickpunkten ergibt das 55/110/165/220 zusätzliches Max-Mana, zuzüglich eines noch nicht festgelegten Geschick-Startwerts. Keine direkte Mana-Wiederherstellung, zusätzliche Regeneration oder weitere Manakostenreduktion. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer. Aktuelles Mana bei Änderungen des Maximums wird nach der noch zentral festzulegenden Regel behandelt.",
+    "dmgType": "passive",
+    "skillpoints": 1,
+    "__v": 0,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "attributeConversionBonus",
+            "amountPerPointScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad52e4bbd7150ab09620cf3",
+    "nr": 259,
+    "skillName_de": "Weisheit des Erdweisen",
+    "skillName_eng": "Wisdom of the Earth Sage",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "str": 3,
+    "int": 3,
+    "wis": 3,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "int": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "wis": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      }
+    },
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "archdruid-mana-regeneration",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "manaRegen",
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        }
+      }
+    ],
+    "description_de": "Die Lehren des Erdweisen stärken dauerhaft deine Verbindung zwischen Körper, Geist und Natur. Gewährt je gelernter Stufe 3 Stärke, 3 Intelligenz und 3 Willenskraft, bis zu jeweils 15 auf Stufe 5. Erhöht zusätzlich die gesamte Mana-Regeneration um 0,6 Prozent je Stufe, maximal 3 Prozent. Der Prozentbonus wird nach allen flachen Regenerationsboni und der Umrechnung von Willenskraft angewendet. Keine Geschick-, Vitalitäts- oder Angriffstempoboni. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "The teachings of the earth sage permanently strengthen the bond between body, mind and nature. Grants 3 Strength, 3 Intelligence and 3 Wisdom per learned level, reaching 15 each at level 5. Also increases total Mana regeneration by 0.6 percent per level, up to 3 percent. This multiplier applies after flat regeneration bonuses and Wisdom conversion. No Dexterity, Vitality or attack-speed bonus. Permanent passive with no activation cost, cast time or cooldown.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

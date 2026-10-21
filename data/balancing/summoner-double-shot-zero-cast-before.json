@@ -1,0 +1,243 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b7b",
+    "skillName_eng": "Double Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 29,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schießt zwei Pfeile schnell hintereinander auf dein Ziel.",
+    "description_eng": "Shoots two arrows at your target in quick succession.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 24,
+    "patk": 243,
+    "skillName_de": "Doppelschuss",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b92",
+    "skillName_eng": "Explosive Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 36,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Deine nächsten 3 Pfeile verursachen 2 Sekunden nach dem treffen des Zieles zusätzlichen Explosionsschaden.",
+    "description_eng": "Your next 3 arrows deal additional explosion damage 2 seconds after hitting the target.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 47,
+    "patk": 334,
+    "skillName_de": "Explosionspfeil",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b96",
+    "skillName_eng": "Fire Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 23,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schießt einen brennenden Pfeil auf dein Ziel.",
+    "description_eng": "Shoots a burning arrow at your target.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 51,
+    "patk": 67,
+    "skillName_de": "Feuerpfeil",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba2",
+    "skillName_eng": "Chain Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 24,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Binde dich an deine Feinde, eine erneute Aktivierung zieht den Gegner zu dir oder dich zu Ihm. In Kombination mit anderen Fähigkeiten einsetzbar.",
+    "description_eng": "Bind yourself to your enemies, a reactivation pulls the enemy to you or you to him. Usable in combination with other abilities.",
+    "dmgType": "physical",
+    "dur": 8,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 63,
+    "patk": 52,
+    "skillName_de": "Kettenschuss",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba5",
+    "skillName_eng": "Headshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Atme tief durch und verpasse deinem Gegner den Kopfschuss, den er verdient. Dieser Angriff trifft immer kritisch.",
+    "description_eng": "Take a deep breath and give your opponent the headshot he deserves. This attack always hits critically.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 66,
+    "patk": 474,
+    "skillName_de": "Kopfschuss",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1b",
+    "skillName_eng": "Sneaky Trap",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein Trickschuss markiert bei einem Treffer den Gegner. Auf Skilllevel 1 beträgt die Trefferchance 50 %. Während der nächsten 20 Sekunden wird der Schaden gesammelt, den du selbst diesem Gegner zufügst. Anschließend werden 80 % dieses Schadens erneut auf ihn angewendet. Auf Skilllevel 10 beträgt die Trefferchance 60 %, das Sammelfenster 30 Sekunden und der erneut angewendete Anteil 90 %. Der Cooldown startet bei 120 Sekunden und sinkt pro weiterem Skilllevel um 2 Sekunden auf 102 Sekunden. Der erneut angewendete Schaden wird nicht nochmals gesammelt.",
+    "description_eng": "A trick shot marks the enemy on a successful hit. At skill level 1, the hit chance is 50%. Damage you personally deal to that enemy is collected for the next 20 seconds, then 80% of it is applied again. At skill level 10, the hit chance is 60%, the collection window is 30 seconds and the repeated share is 90%. The cooldown starts at 120 seconds and decreases by 2 seconds per additional skill level to 102 seconds. Repeated damage is not collected again.",
+    "dmgType": "physical",
+    "dur": 20,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 184,
+    "skillName_de": "Hinterhältige Falle",
+    "skillpoints": 1,
+    "activation": "manual",
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -2
+    },
+    "effects": [
+      {
+        "damageBasis": "actualHealthDamage",
+        "applyMitigationAgain": false,
+        "cancelOnCasterDeath": true,
+        "cancelOnTargetDeath": true,
+        "disablesEffects": [],
+        "hitChance": 0.5,
+        "hitChanceAtMaxLevel": 0.6,
+        "valueAtMaxLevel": 0.9,
+        "durationAtMaxLevelSeconds": 30,
+        "progressionStatus": "pending",
+        "damageSource": "caster",
+        "excludeReplayDamage": true,
+        "valueScaling": {
+          "values": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "type": "damageReplay",
+        "target": "enemy",
+        "allowedRaces": [],
+        "value": 0.8,
+        "unit": "fraction",
+        "damageTypes": [],
+        "durationSeconds": 20,
+        "key": "collected-damage-replay"
+      }
+    ],
+    "effectsVersion": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1c",
+    "skillName_eng": "Soulshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du schießt einen Seelenpfeil auf den Gegner. ",
+    "description_eng": "You shoot a soul arrow at the opponent.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 185,
+    "patk": 127,
+    "skillName_de": "Seelenschuss",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1d",
+    "skillName_eng": "Soul Collector",
+    "__v": 0,
+    "category": "active",
+    "cd": 240,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entreiße deinen Gegnern ihre Seelen und füge ihnen Schaden zu. Der Gegner muss mit einem Seelenpfeil markiert sein.",
+    "description_eng": "Steal the souls of your opponents and deal damage to them. The opponent must be marked with a soul arrow.",
+    "dmgType": "phyical",
+    "dur": 10,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 186,
+    "patk": 478,
+    "skillName_de": "Seelensammler",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c48",
+    "skillName_eng": "Spectral Chains",
+    "__v": 0,
+    "category": "active",
+    "cd": 240,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Triff ein Ziel und entfessle die Macht der gesammelten Seelen, die das Ziel in Ketten legen.",
+    "description_eng": "Hit a target and unleash the power of the collected souls that chain the target.",
+    "dmgType": "spell",
+    "dur": 4,
+    "matk": 203,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 229,
+    "patk": 73,
+    "skillName_de": "Spektralketten",
+    "skillpoints": 1
+  }
+]

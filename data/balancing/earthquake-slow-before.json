@@ -1,0 +1,54 @@
+{
+  "_id": "6acc1c7e4826525c70d04b89",
+  "skillName_eng": "Earthquake",
+  "__v": 0,
+  "category": "active",
+  "cd": 55,
+  "charClass": [
+    "Shamane",
+    "High Elves",
+    "Butcher",
+    "Destroyer",
+    "Druide",
+    "Alchemist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Du schlägst mit solcher Wucht auf den Boden, dass der Boden wackelt, getroffene Gegner werden verlangsamt. Der physische Grundangriffswert steigt von 167 um 53 je weiterer Stufe auf 644, der magische von 35 um 25 auf 260 auf Level 10. Die Mana-Kosten steigen von 87 um 42 je weiterer Stufe auf 465. Die Cast Time beträgt 0,1 Sekunden.",
+  "description_eng": "You hit the ground with such force that the ground wobbles, enemies hit are slowed down. Physical base attack increases from 167 by 53 per additional level to 644, and magical base attack from 35 by 25 to 260 at level 10. Mana cost increases from 87 by 42 per additional level to 465. Cast time is 0.1 seconds.",
+  "dmgType": "physical",
+  "dur": 5,
+  "matk": 35,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 38,
+  "patk": 167,
+  "skillName_de": "Erdbeben",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.1,
+  "mana": 87,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 87,
+        "perLevel": 42
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 167,
+      "perLevel": 53
+    },
+    "matk": {
+      "type": "linear",
+      "base": 35,
+      "perLevel": 25
+    }
+  }
+}

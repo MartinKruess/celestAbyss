@@ -1,0 +1,46 @@
+{
+  "_id": "6acc1c7e4826525c70d04bf6",
+  "skillName_eng": "Passion Awakening",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Summoner",
+    "Soulseeker",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht deine Geschicklichkeit und Agilität sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+  "description_eng": "Increases your Dexterity and Agility and those of your allies by 2 each per skill level for 300 seconds.",
+  "dex": 2,
+  "dmgType": "buff",
+  "dur": 300,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 147,
+  "skillName_de": "Erweckung der Leidenschaft",
+  "skillpoints": 1,
+  "agi": 2,
+  "activation": "manual",
+  "statBonusTargets": {
+    "dex": "selfAndAllies",
+    "agi": "selfAndAllies"
+  },
+  "statBonusUnits": {
+    "dex": "flat",
+    "agi": "flat"
+  },
+  "statScaling": {
+    "dex": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "agi": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    }
+  }
+}

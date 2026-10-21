@@ -1,0 +1,122 @@
+{
+  "classKey": "knight",
+  "level": 60,
+  "rank": 6,
+  "groups": {
+    "attacks": [
+      19,
+      23,
+      55,
+      77,
+      94,
+      95
+    ],
+    "selfBuffs": [
+      82,
+      170,
+      171
+    ],
+    "toggle": [
+      158
+    ],
+    "groupAndProtection": [
+      40,
+      59,
+      75,
+      107
+    ],
+    "healing": [
+      64
+    ],
+    "creatureActive": [
+      133,
+      136,
+      137
+    ],
+    "passives": [
+      1,
+      28,
+      42,
+      45,
+      93,
+      102,
+      114,
+      134,
+      135,
+      138,
+      139,
+      140,
+      141,
+      144,
+      201
+    ]
+  },
+  "counts": {
+    "attacks": 6,
+    "selfBuffs": 3,
+    "toggle": 1,
+    "groupAndProtection": 4,
+    "healing": 1,
+    "creatureActive": 3,
+    "passives": 15
+  },
+  "attacks": [
+    {
+      "nr": 19,
+      "name": "Brecher der Deckung",
+      "level": 10,
+      "mana": 288
+    },
+    {
+      "nr": 23,
+      "name": "Donnernde Lanze",
+      "level": 15,
+      "mana": 414
+    },
+    {
+      "nr": 55,
+      "name": "Brecher des Geistes",
+      "level": 10,
+      "mana": 244
+    },
+    {
+      "nr": 77,
+      "name": "Mächtiger Hieb",
+      "level": 10,
+      "mana": 240
+    },
+    {
+      "nr": 94,
+      "name": "Schildstoß",
+      "level": 20,
+      "mana": 657
+    },
+    {
+      "nr": 95,
+      "name": "Schildsturm",
+      "level": 15,
+      "mana": 591
+    }
+  ],
+  "oneRotation": 2434,
+  "twoRotations": 4868,
+  "manaPool": 6118,
+  "manaRemainingWithoutRegeneration": 1250,
+  "regeneration": {
+    "manaPerTickWithProvisionalWisdomFactor": 219.5,
+    "provokeDrainPerTick": 45,
+    "netWithProvokePerTick": 174.5,
+    "intervalSeconds": null
+  },
+  "excluded": [
+    "active buffs and protective fields",
+    "heals",
+    "creature actions",
+    "regeneration",
+    "cooldown waits"
+  ],
+  "missingCosts": [
+    40,
+    64
+  ]
+}

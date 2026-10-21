@@ -1,0 +1,100 @@
+{
+  "_id": "6acc1c7e4826525c70d04c3d",
+  "skillName_eng": "Light Crystal Prison",
+  "__v": 0,
+  "category": "active",
+  "cd": 130,
+  "charClass": [
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erschafft ein kristallenes Gefängnis aus Licht, das den Gegner auf der Stelle festhält. Er kann sich nicht bewegen oder dem Spieler folgen; Angriffe werden durch das Gefängnis nicht blockiert. Dauer auf Stufe 1/2/3: 1/2/4 Sekunden. Währenddessen erleidet der eingesperrte Gegner 3 Prozent mehr Schaden durch eingehende Lichtangriffe; dieser Bonus bleibt auf allen drei Skillstufen gleich und gilt nicht für ausgehende Angriffe des Ziels. Physikalische Darstellung und Sonderregeln für Bosse werden später geprüft. Magischer Grundschaden 291 auf Stufe 1, +109 je weiterer Stufe, insgesamt 509 auf Stufe 3. Kein wiederholter Schaden festgelegt. Mana 115, +47 je weiterer Stufe, insgesamt 209. Cooldown 130 Sekunden, -5 je weiterer Stufe, auf Stufe 3 120 Sekunden. Castzeit 0,5 Sekunden.",
+  "description_eng": "Creates a crystalline prison of light that roots the enemy in place. The enemy cannot move or follow the player; the prison does not block attacks. Duration at levels 1/2/3: 1/2/4 seconds. While imprisoned, the target takes 3 percent more damage from incoming light attacks, fixed across all three skill levels; outgoing attacks by the target are unaffected. Physical presentation and boss-specific rules will be reviewed later. Magical base damage 291 plus 109 per additional level, totaling 509 at level 3. No repeated damage defined. Mana 115 plus 47 per additional level, totaling 209. Cooldown 130 minus 5 per additional level, reaching 120 seconds at level 3. Cast time 0.5 seconds.",
+  "dmgType": "spell",
+  "dur": 1,
+  "matk": 291,
+  "maxSkillLv": 3,
+  "maxUpgradeLv": 10,
+  "nr": 218,
+  "skillName_de": "Licht kristallenes Gefängnis",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.5,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 130,
+    "perLevel": -5
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      1,
+      2,
+      4
+    ]
+  },
+  "effects": [
+    {
+      "key": "light-crystal-prison-root",
+      "type": "control",
+      "target": "enemy",
+      "controlKind": "root",
+      "durationSeconds": 1,
+      "durationScaling": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          4
+        ]
+      }
+    },
+    {
+      "key": "light-prison-incoming-light-bonus",
+      "type": "damageTakenBonus",
+      "target": "enemy",
+      "value": 0.03,
+      "unit": "fraction",
+      "damageSchool": "light",
+      "durationSeconds": 1,
+      "durationScaling": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          4
+        ]
+      },
+      "endWith": "light-crystal-prison-root"
+    }
+  ],
+  "effectsVersion": 1,
+  "prisonSettings": {
+    "preventsMovement": true,
+    "preventsLeaving": true,
+    "blocksMagicalAttacks": false,
+    "magicalAttackBlockingScopeStatus": "defined",
+    "physicalAttackInteractionStatus": "defined",
+    "bossInteractionStatus": "pending"
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 115,
+        "perLevel": 47
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 291,
+      "perLevel": 109
+    }
+  }
+}

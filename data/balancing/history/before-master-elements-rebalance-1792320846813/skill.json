@@ -1,0 +1,68 @@
+{
+  "_id": "6acc1c7e4826525c70d04c25",
+  "skillName_eng": "Master of the Elements",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Druide",
+    "Alchemist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht ausschließlich deine eigenen Attribute für 600 Sekunden. Auf Skilllevel 1 erhältst du 3 Stärke, 3 Vitalität, 2 Willenskraft und 2 Intelligenz. Je weiterer Stufe steigen alle vier Boni um 2, bis zu 21 Stärke, 21 Vitalität, 20 Willenskraft und 20 Intelligenz auf Stufe 10. Keine Faith- oder Victim-Boni. Mana-Kosten 127 auf Stufe 1, plus 56 je weiterer Stufe bis 631. Castzeit 0,6 Sekunden, Cooldown 60 Sekunden.",
+  "description_eng": "Increases only your own attributes for 600 seconds. Level 1 grants 3 Strength, 3 Vitality, 2 Wisdom and 2 Intelligence. Each additional level adds 2 to all four bonuses, reaching 21 Strength, 21 Vitality, 20 Wisdom and 20 Intelligence at level 10. No Faith or Victim bonuses. Mana cost starts at 127 and increases by 56 per additional level to 631. Cast time 0.6 seconds, cooldown 60 seconds.",
+  "dmgType": "selfbuff",
+  "dur": 600,
+  "int": 2,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 194,
+  "skillName_de": "Herr der Elemente",
+  "skillpoints": 1,
+  "str": 3,
+  "vita": 3,
+  "wis": 2,
+  "castTimeSeconds": 0.6,
+  "mana": 127,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 127,
+        "perLevel": 56
+      }
+    }
+  ],
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": 2
+    },
+    "vita": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": 2
+    },
+    "wis": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "int": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    }
+  },
+  "statBonusTargets": {
+    "str": "self",
+    "vita": "self",
+    "wis": "self",
+    "int": "self"
+  }
+}

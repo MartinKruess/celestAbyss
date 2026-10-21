@@ -1,0 +1,79 @@
+{
+  "_id": "6acc1c7e4826525c70d04bd0",
+  "skillName_eng": "Storm of Wrath",
+  "__v": 0,
+  "category": "active",
+  "cd": 72,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Kann nur eingesetzt werden, solange der Stärke-Buff von Ausbruch der Wut aktiv ist. Verursacht einmalig physischen Schaden an Gegnern um dich herum, ohne Mehrfachtreffer. Der physische Skill-Grundschaden steigt gleichmäßig von 281 auf Stufe 1 auf 1247 auf Stufe 10. Bei Anwendung erhältst du einmalig 5 Prozent deiner maximalen Wut zurück, unabhängig von der Anzahl getroffener Gegner. Der Cooldown sinkt von 72 um 1 Sekunde je weiterer Stufe auf 63 Sekunden. Castzeit 0,3 Sekunden. Die Animation dauert vorläufig 1 Sekunde; keine anhaltende Schadenswirkung. Der Radius beträgt 3 Meter. Der Skill kostet kein Mana. Kostet vor Anwendung 5 Wutpunkte und kein Mana; die bestehende Rückgabe von 5 Wutpunkten erfolgt anschließend, netto 0 Wut bei erfolgreicher Anwendung.",
+  "description_eng": "Requires the Strength buff from Outburst of Anger to be active. Deals physical damage once to enemies around you, without multiple hits. Physical skill base damage increases evenly from 281 at level 1 to 1247 at level 10. On use, restores 5 percent of maximum Rage once, independent of the number of enemies hit. Cooldown decreases from 72 by 1 second per additional level to 63 seconds. Cast time is 0.3 seconds. Provisional animation duration is 1 second, with no ongoing damage. Radius is 3 meters. The skill costs no Mana. Requires and consumes 5 Rage points before use, no Mana; existing 5-Rage gain is applied afterwards, net 0 Rage on successful use.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 109,
+  "patk": 281,
+  "skillName_de": "Sturm der Wut",
+  "skillpoints": 1,
+  "activationRequirements": {
+    "activeBuff": {
+      "skillNumber": 13,
+      "effectKey": "rage-outburst-strength"
+    }
+  },
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "attackArea": {
+    "shape": "circle",
+    "center": "caster",
+    "target": "enemiesInArea",
+    "evaluation": "atImpact",
+    "timingStatus": "pending",
+    "radiusMeters": 3
+  },
+  "attackExecution": {
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending"
+  },
+  "castTimeSeconds": 0.3,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 72,
+    "perLevel": -1
+  },
+  "effects": [
+    {
+      "key": "wrath-storm-rage-gain",
+      "type": "resourceGain",
+      "target": "self",
+      "resource": "rage",
+      "value": 0.05,
+      "unit": "fraction",
+      "durationSeconds": 0
+    }
+  ],
+  "hasLingeringDamage": false,
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 281,
+      "perLevel": 107.33333333333333
+    }
+  },
+  "resourceCosts": [
+    {
+      "resource": "rage",
+      "reference": "maxRage",
+      "unit": "flat",
+      "scaling": {
+        "type": "fixed",
+        "base": 5
+      }
+    }
+  ]
+}

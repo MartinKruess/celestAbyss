@@ -1,0 +1,104 @@
+[
+  {
+    "_id": "6ad0b3779cdbe618f141e06c",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      }
+    },
+    "durationScaling": {
+      "values": []
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 238,
+    "skillName_eng": "Assassin",
+    "skillName_de": "Attentäter",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Rogue self buff. Tentative concept: additional basic attack hits. Exact effects and interaction with Heart of the Traitor remain to be defined. Ten levels, a 60 second cooldown and a 600 second duration are inherited from the old source and are not yet confirmed. Mana cost, cast time and scaling are pending.",
+    "description_de": "Eigenbuff des Schurken. Vorläufige Idee: zusätzliche Auto-Attack-Treffer. Die genaue Wirkung und eine Beeinflussung durch Herz des Verräters sind noch zu klären. Zehn Stufen, 60 Sekunden Cooldown und 600 Sekunden Dauer stammen aus der alten Quelle und sind noch nicht bestätigt. Mana-Kosten, Castzeit und Skalierung sind offen.",
+    "dmgType": "selfbuff",
+    "skillpoints": 1,
+    "cd": 60,
+    "dur": 600
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c20",
+    "skillName_eng": "Heart of the Traitor",
+    "__v": 0,
+    "atkSpeed": 0.07,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht als Eigenbuff für 600 Sekunden deine Angriffsgeschwindigkeit und Bewegungsgeschwindigkeit. Auf Stufe 1 erhältst du 7 Prozent Angriffsgeschwindigkeit und 2 Prozent Bewegungsgeschwindigkeit. Jede weitere Stufe erhöht beide Boni um 0,75 Prozentpunkte, bis zu 10 Prozent Angriffsgeschwindigkeit und 5 Prozent Bewegungsgeschwindigkeit auf Stufe 5. Cooldown 60 Sekunden.",
+    "description_eng": "A self buff that increases attack speed and movement speed for 600 seconds. Level 1 grants 7 percent attack speed and 2 percent movement speed. Each additional level adds 0.75 percentage points to both bonuses, reaching 10 percent attack speed and 5 percent movement speed at level 5. Cooldown is 60 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.02,
+    "nr": 189,
+    "skillName_de": "Herz des Verräters",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.07,
+        "perLevel": 0.0075
+      },
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.02,
+        "perLevel": 0.0075
+      }
+    }
+  }
+]

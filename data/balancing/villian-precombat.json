@@ -1,0 +1,148 @@
+{
+  "classKey": "villian",
+  "level": 60,
+  "status": "confirmedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 2,
+      "name": "Überleben",
+      "stats": {
+        "str": 20,
+        "agi": 10,
+        "dex": 10,
+        "manaRegen": 10,
+        "healthRegen": 10
+      }
+    },
+    {
+      "nr": 22,
+      "name": "Dolchtraining",
+      "stats": {
+        "agi": 10,
+        "str": 11
+      }
+    },
+    {
+      "nr": 43,
+      "name": "Erweiterung der Sinne",
+      "stats": {
+        "dex": 22,
+        "agi": 22,
+        "vita": 16
+      }
+    },
+    {
+      "nr": 67,
+      "name": "Körperbeherrschung",
+      "stats": {
+        "agi": 12,
+        "dex": 23
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    },
+    {
+      "nr": 243,
+      "name": "Technische Perfektion",
+      "stats": {}
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Zwei Dolche",
+      "equipped": {
+        "maxHealth": 3686,
+        "maxMana": 3087.5,
+        "physicalAttack": 518.1,
+        "magicalAttack": 6,
+        "physicalDefense": 644,
+        "magicalDefense": 498,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 448,
+        "manaRegen": 292,
+        "criticalDamageBonus": 0.8
+      },
+      "passiveBonuses": {
+        "str": 31,
+        "agi": 54,
+        "dex": 55,
+        "manaRegen": 10,
+        "healthRegen": 10,
+        "vita": 36,
+        "wis": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        2,
+        22,
+        43,
+        67,
+        139,
+        144,
+        201,
+        243
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4766,
+        "maxMana": 3827.5,
+        "physicalAttack": 673.9,
+        "magicalAttack": 106,
+        "physicalDefense": 856,
+        "magicalDefense": 678,
+        "attackSpeed": 1.0324,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 88,
+        "dodge": 81,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 135,
+        "healthRegen": 602,
+        "manaRegen": 362,
+        "criticalDamageBonus": 0.8
+      }
+    }
+  ],
+  "excluded": [
+    "Active buffs",
+    "Pets",
+    "Jewelry/stones"
+  ],
+  "equipmentProposalApplied": false
+}

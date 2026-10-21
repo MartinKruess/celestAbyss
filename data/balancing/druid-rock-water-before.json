@@ -1,0 +1,111 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c23",
+    "skillName_eng": "Power of the Rock",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die physische Verteidigung deiner Gruppe einschließlich dir selbst um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 10 kommen zusätzlich 5 Vitalität hinzu. Die Mana-Kosten steigen von 54 um 16 je weiterer Stufe auf 198. Castzeit 0,6 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases physical defense for your group, including yourself, by 18 per learned skill level, reaching 180 at level 10. Level 10 additionally grants 5 Vitality. Mana cost increases from 54 by 16 per additional level to 198. Cast time is 0.6 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 192,
+    "pdef": 18,
+    "skillName_de": "Macht des Felsens",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "mana": 54,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      }
+    },
+    "vita": 0
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c24",
+    "skillName_eng": "Power of the Water",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht auf Skilllevel 1 die Mana-Regeneration deiner Gruppe um 15. Pro weiterem Skilllevel steigt der Bonus um 5 und es kommen 9 magischer Angriff hinzu. Auf Skilllevel 10 erhält die Gruppe +60 Mana-Regeneration und +81 magischen Angriff. Die Mana-Kosten steigen von 54 um 16 je weiterer Stufe auf 198. Castzeit 0,6 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "At skill level 1, increases your group mana regeneration by 15. Each additional level adds 5 mana regeneration and 9 magical attack, reaching 60 mana regeneration and 81 magical attack at level 10. Mana cost increases from 54 by 16 per additional level to 198. Cast time is 0.6 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 193,
+    "skillName_de": "Macht des Wassers",
+    "skillpoints": 1,
+    "manaRegen": 15,
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 0,
+        "perLevel": 9
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 5
+      }
+    },
+    "castTimeSeconds": 0.6,
+    "mana": 54,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": 16
+        }
+      }
+    ]
+  }
+]

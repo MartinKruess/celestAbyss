@@ -1,0 +1,99 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc6",
+  "skillName_eng": "Scream of the Underworld",
+  "__v": 0,
+  "category": "active",
+  "cd": 90,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Opfert 25 Prozent des maximalen Lebens. Nur aktivierbar, wenn das aktuelle Leben strikt über 25 Prozent des Maximal-Lebens liegt. Der dreisekündige Ablauf besteht aus 1 Sekunde Energie sammeln, 1 Sekunde Energie halten und 1 Sekunde Explosion; während dieser drei Sekunden +100 direkte P-Defense und +100 direkte M-Defense auf allen drei Stufen. In der dritten Sekunde wird die Energie mit einem Schrei kreisförmig im Radius von 5 Metern um den Anwender ausgestoßen und trifft alle Gegner dort einmal magisch. Cooldown 90/85/80 Sekunden. Magischer Skill-Schaden: auf allen Stufen 666 Grundschaden, auf Stufe 2 zusätzlich 50 Prozent und auf Stufe 3 zusätzlich 125 Prozent des tatsächlich für diesen Skill geopferten Lebens. Die Lebensanteile ersetzen die 666 nicht. Bei 8000 Max-HP werden 2000 HP geopfert; Skill-Schaden auf Stufe 1/2/3: 666/1666/3166 vor zusätzlichen Charakter- und Schadensberechnungen. Die alte Lebenszahl -25 war kein fixer HP-Abzug und wurde durch strukturierte Kosten ersetzt. Zusätzliche Castzeit, Unterbrechbarkeit, Bewegung während des Sammelns und Charakter-M-Angriffsbeitrag sind noch offen. Keine Manakosten im neuen Kostenentwurf. Sichtbarer Aufbau soll Gegner zum Abstandhalten bewegen und dem Anwender kurz Raum zum Reagieren oder Entkommen verschaffen. Kein erzwungenes Zurückstoßen oder anderer zusätzlicher Kontrolleffekt festgelegt. Der exakte einzelne Trefferzeitpunkt innerhalb der Explosionssekunde wird an die Animation angepasst.",
+  "description_eng": "Sacrifices 25 percent of maximum health. Usable only when current health is strictly above 25 percent of maximum. The three-second sequence consists of 1 second gathering energy, 1 second holding it and 1 second exploding, granting +100 direct physical and magical defense at all three levels during that time. During the third second releases the energy in a scream, hitting every enemy within a 5-meter radius once with magical damage. Cooldown 90/85/80 seconds. Magical skill damage: 666 base damage at all levels, plus 50 percent of actual health sacrificed for this skill at level 2 or 125 percent at level 3. Health-based damage adds to, rather than replaces, 666. At 8000 maximum HP, sacrifices 2000 HP and yields 666/1666/3166 skill damage at levels 1/2/3 before additional character and damage calculations. Legacy health -25 replaced by structured costs. Additional cast time, interruption, movement while gathering energy and character magical attack contribution remain pending. No Mana cost in the new cost design. Visible buildup is intended to encourage opponents to move away, giving the caster space to react or escape. No forced knockback or additional control effect defined. Exact single-hit timing within the explosion second will be matched to the animation.",
+  "dmgType": "spell",
+  "dur": 3,
+  "matk": 666,
+  "maxSkillLv": 3,
+  "maxUpgradeLv": 10,
+  "nr": 99,
+  "skillName_de": "Schrei der Unterwelt",
+  "skillpoints": 1,
+  "activationRequirements": {
+    "resource": "health",
+    "minimumFraction": 0.25,
+    "requiresStrictlyAboveMinimumFraction": true
+  },
+  "attackArea": {
+    "shape": "circle",
+    "center": "caster",
+    "radiusMeters": 5,
+    "geometryStatus": "defined",
+    "target": "enemiesInArea",
+    "evaluation": "atImpact"
+  },
+  "attackExecution": {
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "additionalDamageFromSacrificedHealth": {
+      "type": "table",
+      "values": [
+        0,
+        0.5,
+        1.25
+      ]
+    },
+    "energyGatherSeconds": 1,
+    "energyHoldSeconds": 1,
+    "explosionPhaseSeconds": 1,
+    "hitTimingStatus": "pending"
+  },
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 90,
+    "perLevel": -5
+  },
+  "effects": [
+    {
+      "key": "underworld-scream-pdef",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "pdef",
+      "value": 100,
+      "unit": "flat",
+      "durationSeconds": 3
+    },
+    {
+      "key": "underworld-scream-mdef",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "mdef",
+      "value": 100,
+      "unit": "flat",
+      "durationSeconds": 3
+    }
+  ],
+  "effectsVersion": 1,
+  "resourceCosts": [
+    {
+      "resource": "health",
+      "reference": "maxHealth",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.25
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "table",
+      "values": [
+        666,
+        666,
+        666
+      ]
+    }
+  }
+}

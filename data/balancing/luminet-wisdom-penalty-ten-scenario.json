@@ -1,0 +1,90 @@
+{
+  "status": "hypotheticalNotApplied",
+  "generatedAt": "2026-10-20T14:46:40.394Z",
+  "catalogHash": "7b21a4afd35bd9ce0ae01a4d8d181748edbb812b00bc7f83ee1e4d4d0b0ce716",
+  "skillNumber": 74,
+  "proposal": "Wisdom penalty -1 per skill level instead of -1.5; all other skill values unchanged.",
+  "baseDamage": 643869.5829999984,
+  "rows": [
+    {
+      "mode": "self",
+      "before": {
+        "totalDamage": 651078.3660000016,
+        "skillDamage": 464060.1659999977,
+        "autoDamage": 187018.19999999952,
+        "manaRegenerated": 44733.49999999983,
+        "manaSpent": 49607,
+        "initialMana": 5387,
+        "buffManaSpent": 1002,
+        "buffDrainManaSpent": 0,
+        "manaFromBuffAttacks": 0,
+        "firstManaShortageAt": 233.8,
+        "durationSeconds": 600,
+        "finalMana": 230.49999999999562,
+        "manaBlockedSeconds": 214.3800000000007,
+        "manaWaitEpisodeCount": 247,
+        "longestManaWaitSeconds": 1.2100000000000364,
+        "firstManaWaitAt": 233.8
+      },
+      "after": {
+        "totalDamage": 661165.5410000024,
+        "skillDamage": 475713.3409999977,
+        "autoDamage": 185452.19999999952,
+        "manaRegenerated": 45628.99999999983,
+        "manaSpent": 50587,
+        "initialMana": 5387,
+        "buffManaSpent": 1002,
+        "buffDrainManaSpent": 0,
+        "manaFromBuffAttacks": 0,
+        "firstManaShortageAt": 245.8,
+        "durationSeconds": 600,
+        "finalMana": 295.9999999999941,
+        "manaBlockedSeconds": 199.17000000000002,
+        "manaWaitEpisodeCount": 229,
+        "longestManaWaitSeconds": 1.2100000000000364,
+        "firstManaWaitAt": 245.8
+      },
+      "damageChangePercent": 1.5493027455316888,
+      "oldSelfGainPercent": 1.119602974008349,
+      "newSelfGainPercent": 2.6862517591554003
+    },
+    {
+      "mode": "groups",
+      "before": {
+        "totalDamage": 842527.8830000085,
+        "skillDamage": 605565.0830000001,
+        "autoDamage": 236962.7999999988,
+        "manaRegenerated": 55286.199999999866,
+        "manaSpent": 55549,
+        "initialMana": 6287,
+        "buffManaSpent": 1002,
+        "buffDrainManaSpent": 0,
+        "manaFromBuffAttacks": 0,
+        "durationSeconds": 600,
+        "finalMana": 5741.200000000003,
+        "manaBlockedSeconds": 0,
+        "manaWaitEpisodeCount": 0,
+        "longestManaWaitSeconds": 0
+      },
+      "after": {
+        "totalDamage": 842527.8830000085,
+        "skillDamage": 605565.0830000001,
+        "autoDamage": 236962.7999999988,
+        "manaRegenerated": 55317.69999999988,
+        "manaSpent": 55549,
+        "initialMana": 6287,
+        "buffManaSpent": 1002,
+        "buffDrainManaSpent": 0,
+        "manaFromBuffAttacks": 0,
+        "durationSeconds": 600,
+        "finalMana": 5922.700000000003,
+        "manaBlockedSeconds": 0,
+        "manaWaitEpisodeCount": 0,
+        "longestManaWaitSeconds": 0
+      },
+      "damageChangePercent": 0,
+      "oldSelfGainPercent": 30.85381034376502,
+      "newSelfGainPercent": 30.85381034376502
+    }
+  ]
+}

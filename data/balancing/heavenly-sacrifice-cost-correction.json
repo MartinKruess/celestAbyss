@@ -1,0 +1,53 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-sacrifice-mana-health-cost-correction-1792584317229",
+  "before": {
+    "description_de": "Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Kein Lebenspreis. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt.",
+    "description_eng": "Instant emergency group heal with one learnable level, for Healer/Priest only. Costs 90 percent of maximum Mana, which must be available and actually paid. No health cost. Each other own group member within a 10-meter radius of the caster at the instant healing resolves receives the same full healing: 500 HP plus 1.5 HP per Mana point actually sacrificed for this activation. Healing is not divided among recipients; the caster is excluded. Example: 3000 maximum Mana costs 2700 Mana and heals each other group member for 4550 HP before missing-health limits. No guaranteed full heal or ongoing heal ticks. Cooldown 900 seconds (15 minutes), cast time zero; healing resolves instantly. Provisional approximately 2-second animation does not delay healing; whether it blocks other actions remains pending. Mana/healing rounding will be defined centrally later."
+  },
+  "after": {
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "fraction",
+        "scaling": {
+          "type": "fixed",
+          "base": 0.9
+        }
+      },
+      {
+        "resource": "health",
+        "reference": "maxHealth",
+        "unit": "fraction",
+        "scaling": {
+          "type": "fixed",
+          "base": 0.1
+        }
+      }
+    ],
+    "description_de": "Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt.",
+    "description_eng": "Instant emergency group heal with one learnable level, for Healer/Priest only. Costs 90 percent of maximum Mana, which must be available and actually paid. Also sacrifices 10 percent of maximum health. Both resource costs must be affordable; the health price cannot kill the caster. Each other own group member within a 10-meter radius of the caster at the instant healing resolves receives the same full healing: 500 HP plus 1.5 HP per Mana point actually sacrificed for this activation. Healing is not divided among recipients; the caster is excluded. Example: 3000 maximum Mana costs 2700 Mana plus 10 percent of maximum health and heals each other group member for 4550 HP before missing-health limits. No guaranteed full heal or ongoing heal ticks. Cooldown 900 seconds (15 minutes), cast time zero; healing resolves instantly. Provisional approximately 2-second animation does not delay healing; whether it blocks other actions remains pending. Mana/healing rounding will be defined centrally later."
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.9
+      }
+    },
+    {
+      "resource": "health",
+      "reference": "maxHealth",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.1
+      }
+    }
+  ],
+  "reason": "User clarified original resource fractions were reversed: 90 percent max Mana plus 10 percent max Health. No self-heal; formula and 10-meter range unchanged."
+}

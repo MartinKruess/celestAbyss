@@ -1,0 +1,114 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bf1",
+    "skillName_eng": "Dodge Training",
+    "__v": 0,
+    "agi": 3,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter",
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Agilität um 3 und deine Geschicklichkeit um 1.",
+    "description_eng": "Increase your agility by 3 and your dexterity by 1.",
+    "dex": 1,
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 142,
+    "skillName_de": "Ausweichtraining",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1a",
+    "skillName_eng": "Good Reflexes",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Gewährt 1 Agilität je gelerntem Skilllevel, bis zu 10 auf Stufe 10. Während der Buff aktiv ist, kostet Dash 2 Ausdauerpunkte weniger, entsprechend 0,02 auf der Ausdauerskala von 0 bis 1. Der Rabatt gilt nur für Dash und steigt nicht mit der Skillstufe. Dash auf Stufe 10 kostet damit 0,18 statt 0,20 Ausdauer. Cooldown 60 Sekunden. Mana-Kosten und Castzeit sind noch offen.",
+    "description_eng": "Self buff lasting 600 seconds. Grants 1 Agility per learned skill level, reaching 10 at level 10. While active, Dash costs 2 fewer stamina points, equivalent to 0.02 on the 0 to 1 stamina scale. This reduction applies only to Dash and does not scale with skill level. Level 10 Dash therefore costs 0.18 instead of 0.20 stamina. Cooldown is 60 seconds. Mana cost and cast time remain pending.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 183,
+    "skillName_de": "Gute Reflexe",
+    "skillpoints": 1,
+    "agi": 1,
+    "effects": [
+      {
+        "key": "good-reflexes-dash-efficiency",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "resource": "stamina",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 21,
+        "value": 0.02,
+        "unit": "flat",
+        "durationSeconds": 600
+      }
+    ],
+    "statScaling": {
+      "agi": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1e",
+    "skillName_eng": "Hard Training",
+    "__v": 0,
+    "atkSpeed": 5,
+    "category": "passive",
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Das harte Trining zahlt sich aus und erhöht die Geschwindkeit deiner Pfeile.",
+    "description_eng": "The hard training pays off and increases the speed of your arrows.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 187,
+    "skillName_de": "Hartes training",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c21",
+    "skillName_eng": "No Mercy",
+    "__v": 0,
+    "atkSpeed": 4,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du kämpfst ohne Gnade, erhöhe deine Angriffsgeschwindigkeit und deine Angriffskraft.",
+    "description_eng": "You fight without mercy, increase your attack speed and your attack power.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 190,
+    "patk": 17,
+    "skillName_de": "Keine Gnade",
+    "skillpoints": 1
+  }
+]

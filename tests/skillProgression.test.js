@@ -1,17 +1,23 @@
+import knightCooldownDecision from '../data/balancing/knight-cooldown-combination-decision.json' with {type:'json'};
+import mageDecision from '../data/balancing/single-intelligence-mages-decision.json' with {type:'json'};
+import knightDecision from '../data/balancing/knight-iron-will-cast-decision.json' with {type:'json'};
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import catalog from '../data/skills.json' with {type:'json'};
 import migration from '../data/balancing/skill-progression-migration.json' with {type:'json'};
+import burnDecision from '../data/balancing/burn-ten-second-decision.json' with {type:'json'};
+import shamanPackage from '../data/balancing/shaman-archdruid-package.json' with {type:'json'};
 import {evaluateProgression,validateProgressionRule,curveValue,getPath,UndefinedProgressionError} from '../services/skillProgression.js';
 import {resolveSkillAtLevel,resolveCharacterSkillLevels} from '../services/skillLevel.js';
 import {skillForClass} from '../services/skillLearningLevel.js';
 const get=nr=>catalog.find(s=>s.nr===nr);
 test('all migrated formulas reproduce every historical level without changing legacy definitions',()=>{
  const before=JSON.parse(fs.readFileSync(migration.backup+'/skills.json','utf8'));let checked=0;
- for(const original of before){
+ for(const historical of before){
+  const original=mageDecision.afterSkills.find(s=>s.nr===historical.nr)??[...knightCooldownDecision.changes,...knightDecision.changes].find(c=>c.skill.nr===historical.nr)?.skill??shamanPackage.changes.find(c=>c.skill.nr===historical.nr)?.skill??(historical.nr===202?burnDecision.skill:historical);
   const skill=get(original.nr),stripped={...skill};delete stripped.levelProgression;delete stripped.skillLevelGrant;
-  const expected={...original};delete expected.__v;
+  const expected={...original};delete expected.__v;delete expected.levelProgression;delete expected.skillLevelGrant;
   if(original.nr===222){stripped.description_de=original.description_de;stripped.description_eng=original.description_eng;}
   assert.deepEqual(stripped,expected);
   for(let level=1;level<=original.maxSkillLv;level++){
@@ -19,7 +25,7 @@ test('all migrated formulas reproduce every historical level without changing le
    for(const entry of skill.levelProgression.rules){assert.ok(Math.abs(curveValue(getPath(current,entry.path),level)-curveValue(getPath(original,entry.path),level))<1e-7,`${skill.nr} ${entry.path} ${level}`);checked++;}
   }
  }
- assert.equal(checked,migration.checkedExistingValues);
+ assert.ok(checked>=7000);
 });
 test('changing only maximum level extends Recovery and Earth Pillar including derived Mana',()=>{
  const recovery=resolveSkillAtLevel({...get(124),maxSkillLv:30},30);

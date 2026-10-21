@@ -1,0 +1,73 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04ba7",
+    "skillName_eng": "Crystallized Water Sphere",
+    "__v": 0,
+    "category": "active",
+    "cd": 29,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert eine Eiskugel auf dein Ziel. Sie zerspringt beim Aufprall und kann den Gegner kurzzeitig außer Gefecht setzen. Die Mana-Kosten beginnen bei 39 auf Stufe 1 und steigen um 14 je weiterer Stufe auf 165 auf Stufe 10. Der Cooldown sinkt gleichmäßig von 29 auf 25 Sekunden. Der magische Grundschaden beträgt 137 auf Stufe 1 und steigt um 27 je weiterer Stufe auf 380 auf Stufe 10.",
+    "description_eng": "Hurls a sphere of ice at your target. It shatters on impact and can briefly incapacitate the enemy. Mana cost starts at 39 at level 1 and increases by 14 per additional level to 165 at level 10. Cooldown decreases evenly from 29 to 25 seconds. Base magical damage starts at 137 at level 1 and increases by 27 per additional level to 380 at level 10.",
+    "dmgType": "spell",
+    "dur": 2,
+    "matk": 137,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 68,
+    "skillName_de": "Kristallisierte Wasserspähre",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 29,
+      "perLevel": -0.4444444444444444
+    },
+    "mana": 39,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 39,
+          "perLevel": 14
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 27
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be0",
+    "skillName_eng": "Wind Shackles",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Fessel deinen Gegner mit dem Wind und verursache dabei Schaden.",
+    "description_eng": "Shackle your opponent with the wind and deal damage.",
+    "dmgType": "spell",
+    "dur": 3,
+    "matk": 223,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 125,
+    "skillName_de": "Windfesseln",
+    "skillpoints": 1
+  }
+]

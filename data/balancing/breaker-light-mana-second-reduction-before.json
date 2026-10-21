@@ -1,0 +1,71 @@
+{
+  "_id": "6acc1c7e4826525c70d04b77",
+  "skillName_eng": "Breaker of Light",
+  "__v": 0,
+  "category": "active",
+  "cd": 52,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Führt zwei schnelle physische Angriffe aus. Der Grundschaden je Treffer steigt von 234 um 37 je weiterer Stufe auf 567 auf Stufe 10. Zwei Treffer ergeben insgesamt 468 bis 1134 Skill-Grundschaden vor Charakterangriff und Verteidigung. Mana-Kosten steigen von 127 um 59 je weiterer Stufe auf 658. Der Cooldown sinkt von 52 um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0 Sekunden, vorläufige Animation 0,5 Sekunden. Keine Unsichtbarkeit und keine anhaltende Wirkungsdauer. Wenn der erste Treffer nicht kritisch ist, ist der zweite Treffer garantiert kritisch. War der erste Treffer kritisch, wird der zweite normal auf einen kritischen Treffer geprüft. Der Bonus gilt nur innerhalb dieser Zweierfolge; Crit-Immunitäten und das Verhalten bei verfehltem ersten Treffer werden später geprüft.",
+  "description_eng": "Performs two quick physical attacks. Base damage per hit increases from 234 by 37 per additional level to 567 at level 10. Both hits total 468 to 1134 skill base damage before character attack and defense. Mana cost increases from 127 by 59 per additional level to 658. Cooldown decreases from 52 by 1 second per additional level to 43 seconds. Cast time is 0 seconds; provisional animation is 0.5 seconds. No invisibility or lasting effect. If the first hit is not critical, the second hit is guaranteed critical. If the first hit was critical, the second uses a normal critical check. This rule only applies within the two-hit sequence; critical immunities and a missed first hit remain to be reviewed.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 20,
+  "patk": 234,
+  "skillName_de": "Brecher des Lichts",
+  "skillpoints": 1,
+  "animationDurationSeconds": 0.5,
+  "animationTimingStatus": "provisional",
+  "attackExecution": {
+    "hitCount": 2,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending"
+  },
+  "castTimeSeconds": 0,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 52,
+    "perLevel": -1
+  },
+  "hasLingeringDamage": false,
+  "mana": 127,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 127,
+        "perLevel": 59
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 234,
+      "perLevel": 37
+    }
+  },
+  "effects": [
+    {
+      "key": "breaker-light-second-crit",
+      "type": "conditionalCriticalHit",
+      "target": "enemy",
+      "hitIndex": 2,
+      "referenceHitIndex": 1,
+      "criticalCondition": "previousHitNotCritical",
+      "otherwiseCriticalCheck": "normal",
+      "value": 1,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "criticalImmunityStatus": "pending"
+    }
+  ]
+}

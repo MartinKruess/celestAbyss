@@ -1,0 +1,808 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6c",
+    "skillName_eng": "Ether Rain",
+    "__v": 0,
+    "category": "active",
+    "cd": 150,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört ein Ätherfeld, das alle 2 Sekunden Gegnern magischen Schaden zufügt und jedes eigene Gruppenmitglied im Feld heilt. Der magische Grundangriff je Auslösung steigt von 300 um 73 je weiterer Stufe auf 957. Die Heilung je Auslösung beträgt 75 HP plus 10 Prozent des Schadens an einem getroffenen Ziel und je 1 Prozent des Schadens an bis zu vier weiteren getroffenen Zielen. Weitere Gegner erhalten weiterhin Schaden, tragen aber nicht zur Heilung bei. Jedes Gruppenmitglied im Feld erhält die volle Heilung. Die Dauer beträgt zunächst 6 Sekunden, ab Stufe 5 7 Sekunden und auf Stufe 10 8 Sekunden. Auslösungen erfolgen nach 2, 4, 6 und gegebenenfalls 8 Sekunden. Mana-Kosten steigen von 210 um 85 je weiterer Stufe auf 975. Castzeit 0,6 Sekunden. Cooldown zunächst 150 Sekunden, je weiterer Stufe 3 Sekunden weniger, bis zu 123 Sekunden auf Level 10. Startdurchmesser, Auswahl des ersten Ziels und genaue Schadensbasis werden noch geklärt.",
+    "description_eng": "Summons an ether field that deals magical damage to enemies and heals each member of your own group within the field every 2 seconds. Base magical attack per pulse increases from 300 by 73 per additional level to 957. Healing per pulse is 75 HP plus 10 percent of damage to one hit target and 1 percent of damage to each of up to four additional hit targets. Further enemies still take damage but do not contribute to healing. Each group member within the field receives the full healing. Duration starts at 6 seconds, becomes 7 seconds at level 5 and 8 seconds at level 10. Pulses occur at 2, 4, 6 and, where applicable, 8 seconds. Mana cost increases from 210 by 85 per additional level to 975. Cast time is 0.6 seconds. Cooldown starts at 150 seconds and decreases by 3 seconds per additional level to 123 seconds at level 10. Starting diameter, primary target selection and exact damage basis remain pending.",
+    "dmgType": "spell",
+    "dur": 6,
+    "matk": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 9,
+    "skillName_de": "Ätherregen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8
+      ]
+    },
+    "mana": 210,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 210,
+          "perLevel": 85
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 300,
+        "perLevel": 73
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 150,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "key": "ether-rain-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 300,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "addsCasterMagicalAttack": true,
+        "valueScaling": {
+          "type": "linear",
+          "base": 300,
+          "perLevel": 73
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            7,
+            7,
+            8
+          ]
+        }
+      },
+      {
+        "key": "ether-rain-heal",
+        "type": "heal",
+        "target": "alliesInArea",
+        "recipientGroup": "ownGroup",
+        "distribution": "fullAmountToEachRecipient",
+        "value": 75,
+        "unit": "flat",
+        "damageSourceEffectKey": "ether-rain-damage",
+        "damageBasisStatus": "pending",
+        "primaryTargetSelectionStatus": "pending",
+        "healingFromDamage": {
+          "primaryTargetFraction": 0.1,
+          "additionalTargetFraction": 0.01,
+          "maxAdditionalTargets": 4,
+          "capsDamageTargets": false
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            7,
+            7,
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b82",
+    "skillName_eng": "Electric Field",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein kreisförmiges elektrisches Feld auf dem Boden. Vorläufig werden die genannten 4 Meter als Durchmesser gerechnet, also 2 Meter Radius; Flächengröße noch bestätigen. Beim Auslösen verursacht es einmalig 137 magischen Skill-Grundschaden, plus 45 je weiterer Stufe, bis zu 542 auf Stufe 10. Solange Gegner im Feld stehen, erleiden sie alle 2 Sekunden zusätzlich 10 magischen Schaden, plus 3 je weiterer Stufe, bis zu 37 auf Stufe 10, ohne zusätzlichen Charakter-M-Angriff auf diese Ticks. Gegner im Feld sind um 5 Prozent verlangsamt; beim Verlassen endet dieser Flächeneffekt. Feldlaufzeit vorläufig 4 Sekunden auf Stufe 1 bis 4, 6 Sekunden auf Stufe 5 bis 9 und 8 Sekunden auf Stufe 10. Erster Tick nach 2 Sekunden, somit 2, 3 oder 4 Ticks bei vollständigem Aufenthalt. Mana-Kosten 41, plus 19 je weiterer Stufe, bis zu 212. Cooldown 47 Sekunden, minus 1 je weiterer Stufe, bis zu 38 Sekunden. Castzeit 0,3 Sekunden. Die genauen Stufenübergänge der Laufzeit sind als vorläufige Staffelung festgehalten.",
+    "description_eng": "Creates a circular electrical field on the ground. The stated 4 metres are provisionally treated as diameter, giving a 2 metre radius; area size needs confirmation. Initial magical skill base damage is 137, increasing by 45 per additional level to 542 at level 10. Enemies inside take 10 additional magical damage every 2 seconds, increasing by 3 per additional level to 37 at level 10, without adding caster magical attack to these ticks. Enemies inside are slowed by 5 percent; this area effect ends when they leave. Provisional field duration is 4 seconds at levels 1 through 4, 6 seconds at levels 5 through 9 and 8 seconds at level 10. First tick is after 2 seconds, giving 2, 3 or 4 ticks with full exposure. Mana cost starts at 41 and increases by 19 per additional level to 212. Cooldown starts at 47 seconds and decreases by 1 per additional level to 38 seconds. Cast time is 0.3 seconds. Duration milestone levels remain provisional.",
+    "dmgType": "spell",
+    "dur": 4,
+    "matk": 137,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 31,
+    "skillName_de": "Elektrisches Feld",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 2,
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        8
+      ]
+    },
+    "effects": [
+      {
+        "key": "electric-field-periodic",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 10,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 3
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            8
+          ]
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "addsCasterMagicalAttack": false,
+        "onlyWhileTargetInsideArea": true,
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "electric-field-slow",
+        "type": "statModifier",
+        "target": "enemiesInArea",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            8
+          ]
+        },
+        "onlyWhileTargetInsideArea": true
+      }
+    ],
+    "mana": 41,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 41,
+          "perLevel": 19
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 45
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b93",
+    "skillName_eng": "Fire of the Damned",
+    "__v": 0,
+    "category": "active",
+    "cd": 57,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein Feld aus bläulich-schwarzen, astral wirkenden Flammen um das anvisierte Ziel, maximale Feldlaufzeit 10 Sekunden. Fläche und Gegnerlimit steigen in Stufen: Stufe 1–2: 3 Meter Durchmesser und bis zu 2 Gegner; Stufe 3–4: 5 Meter Durchmesser und bis zu 4 Gegner; Stufe 5: 7 Meter Durchmesser und bis zu 6 Gegner. Jeder erstmals erfolgreich getroffene Gegner gibt pro Anwendung genau 1 Seelenfragment, unabhängig von späteren Schadensticks und ohne Tötungsvoraussetzung. Das Limit gilt für unterschiedliche Gegner über die gesamte Anwendung, damit durch Zielwechsel nicht mehr als 2/4/6 Seelen gewonnen werden. Weitere Treffer desselben Gegners geben keine zusätzliche Seele. Maximal 6 Seelen auf Stufe 5, begrenzt durch freie Plätze im Reaper-Speicher. Zielauswahl bei mehr Gegnern sowie Mitbewegung des Felds bleiben offen. Initialtreffer bei Sekunde 0 mit vollem berechnetem Initialschaden. Danach Schadensticks bei Sekunde 1,5/3/4,5/6/7,5/9, jeweils 30 Prozent des berechneten Initialschadens (70 Prozent weniger); sechs Folgeticks. Vor weiteren Schadensberechnungen entspricht die gesamte Trefferfolge dem 2,8-Fachen des Initialwerts, falls alle Treffer treffen. Der erste erfolgreiche Treffer verlangsamt um 5 Prozent, jeder weitere erfolgreiche Feldtreffer um einen zusätzlichen Prozentpunkt, maximal 11 Prozent nach sieben Treffern. Verhalten bei Verlassen/Wiedereintritt und genaue Restdauer des Slow-Effekts sind noch zu klären. Magischer Initial-Grundschaden 273 auf Stufe 1 und +112 je weiterer Stufe, auf Stufe 5 721. Mana 167 auf Stufe 1, gleichmäßig steigend auf 469 auf Stufe 5. Cooldown 57 Sekunden und -1,5 je weiterer Stufe, auf Stufe 5 51 Sekunden. Castzeit 0,4 Sekunden. Der frühere Säulenentwurf mit 2 Sekunden Animation ist ersetzt. Historisch +1 Prozent Schaden je zehn Opfer; Definition von Opfern, Grenzen und Bonusbasis sind noch offen. Ein Wechsel dieses Opferbonus zu zusätzlicher Verlangsamung ist nur eine diskutierte Alternative, nicht festgelegt. Zeitpunkt der Feldplatzierung und Verrechnung der Folgeticks mit gegnerischer Verteidigung bleiben offen. Seelengewinn funktioniert auch gegen Spieler im PvP nach denselben Regeln: eine Seele je unterschiedlichem erfolgreich getroffenem Gegner pro Anwendung, begrenzt durch Gegnerlimit und freien Speicher. Übungspuppen geben keine Seelenfragmente; die konkrete Erkennung von Übungszielen wird später serverseitig umgesetzt.",
+    "description_eng": "Creates a field of bluish-black astral flames, around the selected target, lasting at most 10 seconds. Area and target limit increase in milestones: levels 1–2: 3-meter diameter, up to 2 enemies; levels 3–4: 5-meter diameter, up to 4 enemies; level 5: 7-meter diameter, up to 6 enemies. Each enemy successfully hit for the first time grants exactly 1 soul fragment per activation, regardless of subsequent damage ticks, with no kill requirement. The limit applies to unique enemies across the entire activation so switching targets cannot generate more than 2/4/6 souls. Further hits on the same enemy grant no extra souls. Maximum 6 souls at level 5, limited by remaining Reaper storage capacity. Target selection among excess enemies and field tracking remain pending. Initial hit at second 0 deals full calculated initial damage. Six subsequent ticks at 1.5/3/4.5/6/7.5/9 seconds each deal 30 percent of calculated initial damage (70 percent less). Before further damage calculations, all seven hits total 2.8 times the initial value if all land. The first successful hit slows movement by 5 percent; each subsequent successful field hit adds one percentage point, up to 11 percent after seven hits. Exit/reentry behavior and the exact slow expiry remain pending. Initial magical base damage 273 plus 112 per additional level, reaching 721 at level 5. Mana 167 at level 1, increasing linearly to 469 at level 5. Cooldown 57 minus 1.5 per additional level, reaching 51 seconds. Cast time 0.4 seconds. Replaces the previous pillar concept and its 2-second animation. Historical bonus of 1 percent damage per ten victims: victim definition, caps and bonus basis remain pending. Replacing this with additional slowing is only a discussed alternative. Field placement timing and mitigation of subsequent ticks remain pending. Soul generation also works against players in PvP under the same rules: one soul per distinct successfully hit opponent per activation, limited by target cap and available storage. Training dummies grant no soul fragments; exact training-target detection will be implemented server-side later.",
+    "dmgType": "spell",
+    "matk": 273,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 48,
+    "skillName_de": "Feuer der Verdammten",
+    "skillpoints": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 57,
+      "perLevel": -1.5
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 167,
+          "perLevel": 75.5
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 273,
+        "perLevel": 112
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 1.5,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "evaluation": "perHit",
+      "radiusScaling": {
+        "type": "table",
+        "values": [
+          1.5,
+          1.5,
+          2.5,
+          2.5,
+          3.5
+        ]
+      },
+      "maxTargets": 2,
+      "maxTargetsScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "centerTracking": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "dur": 10,
+    "effects": [
+      {
+        "key": "damned-fire-periodic-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 0.3,
+        "unit": "fraction",
+        "initialCalculatedDamageFraction": 0.3,
+        "intervalSeconds": 1.5,
+        "firstTickAfterSeconds": 1.5,
+        "durationSeconds": 10,
+        "damageTypes": [
+          "magical"
+        ],
+        "damageBasisStatus": "pending"
+      },
+      {
+        "key": "damned-fire-stacking-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 48,
+        "additionalSlowFractionPerHit": 0.01,
+        "maximumSlowFraction": 0.11,
+        "durationSeconds": 10,
+        "slowLifetimeStatus": "pending"
+      }
+    ],
+    "effectsVersion": 1,
+    "soulGenerationSettings": {
+      "onSuccessfulHit": true,
+      "fragmentsPerUniqueEnemy": 1,
+      "oncePerEnemyPerActivation": true,
+      "requiresKill": false,
+      "maximumUniqueEnemiesScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "allowsPvpTargets": true,
+      "excludesTrainingDummies": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba1",
+    "skillName_eng": "Infernal Cyclone",
+    "__v": 0,
+    "category": "active",
+    "cd": 150,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt einen Zyklon aus Höllenfeuer im betroffenen Gebiet. Der bisherige magische Grundschadenswert steigt von 368 um 142 je weiterer Stufe auf 936 auf Stufe 5. Mana-Kosten steigen von 172 um 91 je weiterer Stufe auf 536. Die Dauer steigt von 6 um 1 Sekunde je weiterer Stufe auf 10 Sekunden. Der Cooldown sinkt von 150 um 2 Sekunden je weiterer Stufe auf 142 Sekunden. Castzeit 1 Sekunde. Der genannte Grundschaden trifft einmal beim Auslösen. Danach verursacht der Zyklon alle 2 Sekunden zusätzlichen magischen Schaden: 72 auf Stufe 1, je weiterer Stufe +28,5 bis 186 auf Stufe 5, ohne erneuten Charakter-M-Angriff auf diese Ticks. Der erste zusätzliche Tick erfolgt nach 2 Sekunden. Bei voller Laufzeit trifft der DoT auf Stufe 1 dreimal (2/4/6 Sekunden) und auf Stufe 5 fünfmal (2/4/6/8/10 Sekunden). Trefferbereich und Verhalten bei Bewegung des Ziels bleiben offen.",
+    "description_eng": "Creates a cyclone of hellfire in the affected area. Existing magical base damage increases from 368 by 142 per additional level to 936 at level 5. Mana cost increases from 172 by 91 per additional level to 536. Duration increases from 6 by 1 second per additional level to 10 seconds. Cooldown decreases from 150 by 2 seconds per additional level to 142 seconds. Cast time is 1 second. The stated base damage hits once on activation. Additional magical damage ticks every 2 seconds: 72 at level 1 plus 28.5 per additional level to 186 at level 5, without adding caster magical attack to the ticks. First tick after 2 seconds. Full duration gives three ticks at level 1 (2/4/6 seconds) and five at level 5 (2/4/6/8/10 seconds). Hit area and behavior when the target moves remain pending.",
+    "dmgType": "spell",
+    "dur": 6,
+    "matk": 368,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 62,
+    "skillName_de": "Infernal Zyklon",
+    "skillpoints": 1,
+    "durationScaling": {
+      "type": "linear",
+      "base": 6,
+      "perLevel": 1
+    },
+    "castTimeSeconds": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 150,
+      "perLevel": -2
+    },
+    "mana": 172,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 172,
+          "perLevel": 91
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 368,
+        "perLevel": 142
+      }
+    },
+    "effects": [
+      {
+        "key": "infernal-cyclone-periodic",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 72,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 72,
+          "perLevel": 28.5
+        },
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "linear",
+          "base": 6,
+          "perLevel": 1
+        },
+        "firstTickAfterSeconds": 2,
+        "intervalSeconds": 2,
+        "addsCasterMagicalAttack": false,
+        "damageTypes": [
+          "magical"
+        ]
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd3",
+    "skillName_eng": "Raging Storm",
+    "__v": 0,
+    "category": "active",
+    "cd": 100,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eine Gewitterwolke bedeckt einen kreisförmigen Bereich mit 16 Metern Durchmesser beziehungsweise 8 Metern Radius. Kein Initialtreffer: Der erste volle Blitzschaden erfolgt 1 Sekunde nach Entstehung der Wolke, weitere Blitzwellen folgen alle 2 Sekunden. Pro Welle werden höchstens 5 Gegner innerhalb der Fläche getroffen, sowohl im PvE als auch im PvP. Bei jeder Welle werden die Ziele neu zufällig gewählt; sind weniger Gegner vorhanden, können entsprechend weniger getroffen werden. Die Wolke besteht auf Stufe 1 für 4 Sekunden und je weiterer Stufe 1,5 Sekunden länger, bis zu 17,5 Sekunden auf Stufe 10. Das ergibt 2 bis 9 Blitzwellen. Auf Stufe 10 trifft die letzte Welle bei Sekunde 17; die Wolke läuft danach noch 0,5 Sekunden aus. Jeder Blitz verursacht 266 magischen Skill-Grundschaden auf Stufe 1, plus 31 je weiterer Stufe, bis zu 545 auf Stufe 10, zusätzlich zum Charakter-M-Angriff. Mana-Kosten 123, plus 45 je weiterer Stufe, bis zu 528. Castzeit 0,8 Sekunden. Cooldown beginnt bei 100 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 91 Sekunden auf Stufe 10. Der Sturm hat keinen eigenen garantierten Stun; die passive Lähmung unterliegt ihren eigenen Regeln. Platzierung und genaue Proc-Prüfung periodischer Blitzwellen bleiben zu klären.",
+    "description_eng": "A thundercloud covers a circular area with a 16 metre diameter and 8 metre radius. No initial hit: the first full lightning damage occurs 1 second after the cloud appears, with subsequent waves every 2 seconds. Each wave hits at most 5 enemies in the area in both PvE and PvP. Targets are randomly selected again for each wave; fewer enemies allow fewer targets. Cloud duration starts at 4 seconds and increases by 1.5 per additional level to 17.5 seconds at level 10, producing 2 to 9 waves. At level 10 the final wave hits at second 17 and the cloud fades over the remaining 0.5 seconds. Each lightning hit deals 266 magical skill base damage at level 1 plus 31 per additional level to 545 at level 10, plus character magical attack. Mana cost starts at 123 and increases by 45 per additional level to 528. Cast time is 0.8 seconds. Cooldown starts at 100 seconds and decreases by 1 second per additional level to 91 seconds at level 10. The storm itself does not guarantee a stun; passive Paralysis follows its own rules. Placement and exact proc checks for periodic lightning waves remain pending.",
+    "dmgType": "spell",
+    "matk": 266,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 112,
+    "skillName_de": "Tobender Sturm",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 8,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "evaluation": "perHit",
+      "timingStatus": "defined",
+      "maxTargets": 5,
+      "targetSelection": "randomEachTick"
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 100,
+      "perLevel": -1
+    },
+    "dur": 4,
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 1.5
+    },
+    "effects": [
+      {
+        "key": "raging-storm-lightning",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "damageSchool": "electric",
+        "value": 266,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 266,
+          "perLevel": 31
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1.5
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 1,
+        "addsCasterMagicalAttack": true,
+        "onlyWhileTargetInsideArea": true,
+        "damageTypes": [
+          "magical"
+        ]
+      }
+    ],
+    "mana": 123,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 123,
+          "perLevel": 45
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 266,
+        "perLevel": 31
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2d",
+    "skillName_eng": "Burn",
+    "__v": 0,
+    "category": "active",
+    "cd": 22,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lässt getroffene Gegner für 5 Sekunden brennen. Jede Sekunde verursacht der Schaden über Zeit den magischen Grundschadenswert des Skills: 12 auf Stufe 1, plus 6 je weiterer Stufe, bis zu 96 je Tick auf Stufe 15. Insgesamt fünf Ticks. Die Mana-Kosten steigen von 8 um 8 je weiterer Stufe auf 120. Castzeit 0,8 Sekunden. Der bisherige Cooldown beträgt 22 Sekunden. Zielanzahl und Trefferbereich werden noch geprüft.",
+    "description_eng": "Burns affected enemies for 5 seconds. Each second deals the skill base magical damage value: 12 at level 1, increasing by 6 per additional level to 96 per tick at level 15. Five ticks in total. Mana cost increases from 8 by 8 per additional level to 120. Cast time is 0.8 seconds. Existing cooldown is 22 seconds. Target count and hit area remain to be reviewed.",
+    "dmgType": "spell",
+    "dur": 5,
+    "matk": 12,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 202,
+    "skillName_de": "Verbrennen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.8,
+    "effects": [
+      {
+        "key": "burn-dot",
+        "type": "periodicDamage",
+        "target": "enemy",
+        "value": 12,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 5,
+        "valueScaling": {
+          "type": "linear",
+          "base": 12,
+          "perLevel": 6
+        }
+      }
+    ],
+    "hasLingeringDamage": true,
+    "mana": 8,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 8,
+          "perLevel": 8
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 12,
+        "perLevel": 6
+      }
+    }
+  },
+  {
+    "_id": "6ad16c307a9be0e8beddf80f",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 32,
+        "perLevel": 26.555555555555557
+      }
+    },
+    "castTimeSeconds": 0.4,
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "attackArea": {
+      "centerTracking": "pending",
+      "maxTargets": 3,
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 5,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "evaluation": "perHit"
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 0.4444444444444444
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 56,
+          "perLevel": 34,
+          "values": []
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "targetCreatureTypes": [],
+        "damageSchool": "ice",
+        "requiredActiveSkillNumbers": [],
+        "firstTickAfterSeconds": 1.5,
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "linear",
+          "base": 32,
+          "perLevel": 26.555555555555557
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 0.4444444444444444
+        },
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "allowedRaces": [],
+        "value": 32,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1.5,
+        "durationSeconds": 4,
+        "key": "ice-rain-periodic-damage",
+        "addsCasterMagicalAttack": true
+      },
+      {
+        "key": "frost-shower-movement-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.01,
+        "unit": "fraction",
+        "valueAtMaxLevel": -0.1,
+        "progressionStatus": "defined",
+        "durationSeconds": 3,
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 239,
+        "maxStacksPerTarget": 1,
+        "reapplicationPolicy": "refreshDuration",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.01,
+          "perLevel": -0.01
+        }
+      }
+    ],
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 239,
+    "skillName_eng": "Frost Shower",
+    "skillName_de": "Frostschauer",
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Creates icy rain within a 5-meter radius around the selected target. Each tick hits at most 3 enemies. No additional initial hit; first tick at 1.5 seconds, then every 1.5 seconds. Field duration starts at 4 seconds and increases evenly to 8 seconds at level 10. Magical skill base damage per tick per enemy starts at 32 and increases evenly to 271 at level 10. At maximum level ticks occur at 1.5 / 3 / 4.5 / 6 / 7.5 seconds, totaling 1355 skill base damage per continuously hit target. Each tick adds the caster’s current magical attack to skill base damage. Each hit slows movement by 1 percent at level 1, plus 1 percentage point per additional level to 10 percent. Slow lasts 3 seconds after each hit; subsequent hits refresh duration only. Mana 56 plus 34 per additional level to 362. Cast time 0.4 seconds. Cooldown 52 minus 1 per additional level to 43 seconds. Target selection per tick and field tracking remain pending. No collected points.",
+    "description_de": "Erzeugt eisigen Regen um das anvisierte Ziel in 5 Metern Radius. Jeder Tick trifft höchstens 3 Gegner. Kein zusätzlicher Initialtreffer; erster Tick nach 1,5 Sekunden, danach alle 1,5 Sekunden. Feldlaufzeit 4 Sekunden auf Stufe 1, gleichmäßig steigend bis 8 Sekunden auf Stufe 10. Magischer Skill-Grundschaden je Tick und getroffenem Gegner 32 auf Stufe 1, gleichmäßig steigend bis 271 auf Stufe 10. Auf Maximalstufe Ticks bei 1,5 / 3 / 4,5 / 6 / 7,5 Sekunden, insgesamt 1355 Skill-Grundschaden je durchgehend getroffenem Ziel. Jeder Tick addiert zum Skill-Grundschaden den aktuellen M-Angriff des Anwenders. Bewegungstempo des getroffenen Gegners sinkt um 1 Prozent auf Stufe 1, je weiterer Stufe um 1 Prozentpunkt bis 10 Prozent. Die Verlangsamung hält nach jedem Treffer 3 Sekunden; erneute Treffer frischen nur die Dauer auf. Mana 56 plus 34 je weiterer Stufe bis 362. Castzeit 0,4 Sekunden. Cooldown 52 Sekunden minus 1 je weiterer Stufe bis 43 Sekunden. Auswahl der bis zu drei Ziele je Tick und Mitbewegung des Feldes bleiben offen. Keine Sammelpunkte.",
+    "dmgType": "spell",
+    "skillpoints": 1,
+    "matk": 32,
+    "dur": 4,
+    "__v": 0,
+    "cd": 52
+  }
+]

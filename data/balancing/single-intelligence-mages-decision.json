@@ -1,0 +1,2223 @@
+{
+  "backup": "data/balancing/history/before-single-intelligence-mages-1792377021814",
+  "rule": "Remove Faith/Victim where INT already exists; otherwise replace with INT. Weapons convert one to one. Luminet/Ritualist INT factor 1.8, no Faith/Victim attack conversion.",
+  "beforeSkills": [
+    {
+      "_id": "6acc1c7e4826525c70d04b9f",
+      "skillName_eng": "Ray of Hope",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Permanenter passiver Skill. Startboni +3 Faith, +2 Intelligenz und +1 Willenskraft. Faith bleibt konstant. Intelligenz und Willenskraft steigen gemäß Stufentabelle bis auf +6 Intelligenz und +5 Willenskraft auf Stufe 10. Stufen 1, 3, 5, 7 und 9 erhöhen die direkte MP-Regeneration jeweils um 8: insgesamt +40 MP je Tick. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanent passive. Starts with +3 Faith, +2 Intelligence and +1 Wisdom. Faith remains fixed. Level tables reach +6 Intelligence and +5 Wisdom at level 10. Levels 1, 3, 5, 7 and 9 each add +8 direct MP regeneration, totaling +40 per tick. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "faith": 3,
+      "int": 2,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 60,
+      "skillName_de": "Hoffnungsschimmer",
+      "skillpoints": 1,
+      "wis": 1,
+      "manaRegen": 8,
+      "resourceCosts": [],
+      "statScaling": {
+        "int": {
+          "type": "table",
+          "values": [
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6,
+            6,
+            6
+          ]
+        },
+        "wis": {
+          "type": "table",
+          "values": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5
+          ]
+        },
+        "manaRegen": {
+          "type": "table",
+          "values": [
+            8,
+            8,
+            16,
+            16,
+            24,
+            24,
+            32,
+            32,
+            40,
+            40
+          ]
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "ceil",
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 0.4444444444444444
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "wis"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "ceil",
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 0.4444444444444444
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "manaRegen"
+            ],
+            "rule": {
+              "kind": "periodicSteps",
+              "base": 8,
+              "steps": [
+                0,
+                8
+              ]
+            },
+            "source": "verifiedExistingLevels"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04bc8",
+      "skillName_eng": "Swords of Light",
+      "__v": 0,
+      "category": "active",
+      "cd": 72,
+      "charClass": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Faith auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 68 auf Stufe 1, +21 je weiterer Stufe, maximal 257 auf Stufe 10. Cooldown 72 Sekunden auf Stufe 1 und 63 Sekunden auf Stufe 10. Castzeit 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+      "description_eng": "A giant sword of light impales the selected enemy, dealing magical skill base damage once, starting at 273 and increasing by 84 per additional level to 1029 at level 10. The sword and a field with a 15 metre diameter and 7.5 metre radius remain afterward. Field duration increases evenly from 10 to 30 seconds. You and your allies inside gain 13 Faith at level 1 plus 0.5 per additional level to 17.5 at level 10. The bonus applies only while inside the field. No recurring damage ticks are defined. Mana cost 68 at level 1, maximum 257 at level 10. Cooldown 72 seconds at level 1 and 63 seconds at level 10. Cast time is 0.7 seconds.",
+      "dmgType": "spell",
+      "dur": 10,
+      "matk": 273,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 101,
+      "skillName_de": "Schwerter des Lichtes",
+      "skillpoints": 1,
+      "attackArea": {
+        "shape": "circle",
+        "center": "skillCenter",
+        "radiusMeters": 7.5,
+        "geometryStatus": "defined",
+        "timingStatus": "defined"
+      },
+      "attackExecution": {
+        "targetMode": "singleEnemy",
+        "hitCount": 1,
+        "damageValueScope": "perHit",
+        "timingStatus": "pending"
+      },
+      "castTimeSeconds": 0.7,
+      "cooldownScaling": {
+        "type": "linear",
+        "base": 72,
+        "perLevel": -1
+      },
+      "durationScaling": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 2.2222222222222223
+      },
+      "effects": [
+        {
+          "key": "swords-light-faith-field",
+          "type": "statModifier",
+          "target": "alliesInArea",
+          "stat": "faith",
+          "value": 13,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "linear",
+            "base": 13,
+            "perLevel": 0.5
+          },
+          "durationSeconds": 10,
+          "durationScaling": {
+            "type": "linear",
+            "base": 10,
+            "perLevel": 2.2222222222222223
+          },
+          "onlyWhileTargetInsideArea": true
+        }
+      ],
+      "mana": 68,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 68,
+            "perLevel": 21
+          }
+        }
+      ],
+      "statScaling": {
+        "matk": {
+          "type": "linear",
+          "base": 273,
+          "perLevel": 84
+        }
+      },
+      "manaPricing": {
+        "category": "normal",
+        "factor": 0.25,
+        "basis": "skillBaseDamagePerTarget",
+        "usesCharacterAttack": false,
+        "version": 1
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "cooldownScaling"
+            ],
+            "rule": {
+              "kind": "bounded",
+              "min": 0.1,
+              "rule": {
+                "kind": "linear",
+                "base": 72,
+                "perLevel": -1
+              }
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "durationScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 10,
+              "perLevel": 2.2222222222222223
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "effects",
+              "0",
+              "valueScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 13,
+              "perLevel": 0.5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "effects",
+              "0",
+              "durationScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 10,
+              "perLevel": 2.2222222222222223
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "resourceCosts",
+              "0",
+              "scaling"
+            ],
+            "rule": {
+              "kind": "outputCost",
+              "factor": 0.25,
+              "basis": "damage",
+              "minimum": 0
+            },
+            "source": "verifiedManaPricing"
+          },
+          {
+            "path": [
+              "statScaling",
+              "matk"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 273,
+              "perLevel": 84
+            },
+            "source": "storedFormula"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04bd7",
+      "skillName_eng": "Inexhaustible Hope",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Permanenter passiver Skill. +2 M-Angriff pro Stufe, insgesamt +20 auf Stufe 10. Ab Stufe 5 insgesamt +1 Glück und +1 Faith. Stufe 10 gewährt insgesamt +3 Glück und +2 Faith. Direkter M-Angriffsbonus unabhängig von Faith. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanent passive. +2 magical attack per level, +20 at level 10. From level 5: +1 Luck and +1 Faith total. At level 10: +3 Luck and +2 Faith total. Direct magical attack bonus is independent of Faith. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "matk": 2,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 116,
+      "skillName_de": "Unerschöpfliche Hoffnung",
+      "skillpoints": 1,
+      "resourceCosts": [],
+      "statScaling": {
+        "matk": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 2
+        },
+        "luck": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        "faith": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "statScaling",
+              "matk"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 2,
+              "perLevel": 2
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "luck"
+            ],
+            "rule": {
+              "kind": "thresholds",
+              "base": 0,
+              "changes": [
+                {
+                  "level": 5,
+                  "value": 1
+                },
+                {
+                  "level": 10,
+                  "value": 3
+                }
+              ]
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "faith"
+            ],
+            "rule": {
+              "kind": "thresholds",
+              "base": 0,
+              "changes": [
+                {
+                  "level": 5,
+                  "value": 1
+                },
+                {
+                  "level": 10,
+                  "value": 2
+                }
+              ]
+            },
+            "source": "verifiedExistingLevels"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04bdb",
+      "skillName_eng": "Reaper",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Reaper: permanenter passiver Skill. Erlaubt auf Stufe 1 einen Speicher von 10 Seelenfragmenten und je weiterer Stufe 10 zusätzliche Plätze, bis zu 100 auf Stufe 10. Je volle 10 aktuell gespeicherte Seelenfragmente erhältst du +2 Victim: Bonus = 2 × abrunden(aktueller Vorrat / 10). Bei 100 gespeicherten Fragmenten insgesamt +20 Victim; bei leerem Speicher kein Victim-Bonus. Der Bonus sinkt entsprechend, wenn Seelen ausgegeben werden. Seelenfragmente sind eine eigene Ressource, getrennt vom Attribut Victim. Vorrat bleibt dauerhaft auch offline erhalten, ohne zeitlichen Verfall. Überschüssige Gewinne oberhalb der Speicherkapazität werden nicht aufgenommen. Der Skill erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Dies sind Skilldefinitionen; die persistente Charakterressource ist später serverseitig anzubinden.",
+      "description_eng": "Reaper: permanent passive skill. Soul-fragment storage starts at 10 at level 1 and gains 10 capacity per additional level, reaching 100 at level 10. Every complete 10 currently stored fragments grants +2 Victim: bonus = 2 × floor(current storage / 10). At 100 stored fragments the bonus is +20 Victim; empty storage grants none. Spending souls reduces the bonus accordingly. Soul fragments are a separate resource from the Victim attribute. Storage persists offline with no time decay. Gains beyond storage capacity are discarded. This skill does not generate souls itself. No activation costs, cast time or cooldown. These are skill definitions; persistent character-resource behavior still requires server integration.",
+      "dmgType": "passive",
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 120,
+      "skillName_de": "Reaper",
+      "skillpoints": 1,
+      "resourceCosts": [],
+      "soulStorageSettings": {
+        "resource": "soulFragments",
+        "capacityScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 10
+        },
+        "persistsOffline": true,
+        "decaysOverTime": false,
+        "bonusStat": "vic",
+        "fragmentsPerBonusStep": 10,
+        "bonusPerFullStep": 2,
+        "usesCurrentStoredAmount": true,
+        "onCapacityReached": "discardExcess"
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "soulStorageSettings",
+              "capacityScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 10,
+              "perLevel": 10
+            },
+            "source": "storedFormula"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c33",
+      "skillName_eng": "The Eternal Knowledge",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Permanenter passiver Skill. Startwerte +5 Intelligenz, +2 Faith und +2 Willenskraft. Steigt gemäß ganzzahliger Stufentabelle auf insgesamt +12 Intelligenz, +9 Faith und +6 Willenskraft auf Stufe 10. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanent passive. Starts with +5 Intelligence, +2 Faith and +2 Wisdom. Integer level tables reach +12 Intelligence, +9 Faith and +6 Wisdom at level 10. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "faith": 2,
+      "int": 5,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 208,
+      "skillName_de": "Das ewige Wissen",
+      "skillpoints": 1,
+      "wis": 2,
+      "resourceCosts": [],
+      "statScaling": {
+        "faith": {
+          "type": "table",
+          "values": [
+            2,
+            2,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7,
+            8,
+            9
+          ]
+        },
+        "int": {
+          "type": "table",
+          "values": [
+            5,
+            5,
+            6,
+            7,
+            8,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "wis": {
+          "type": "table",
+          "values": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6
+          ]
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "statScaling",
+              "faith"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "round",
+              "rule": {
+                "kind": "linear",
+                "base": 1.5,
+                "perLevel": 0.7777777777777778
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "round",
+              "rule": {
+                "kind": "linear",
+                "base": 4.5,
+                "perLevel": 0.7777777777777778
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "wis"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "round",
+              "rule": {
+                "kind": "linear",
+                "base": 1.5,
+                "perLevel": 0.4444444444444444
+              }
+            },
+            "source": "verifiedExistingLevels"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c4f",
+      "skillName_eng": "Devil's Pact",
+      "__v": 0,
+      "category": "active",
+      "cd": 60,
+      "charClass": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Schließt einen Teufelspakt und verstärkt sich selbst für 600 Sekunden (10 Minuten). Je gelerntem Skilllevel +5 Victim, +5 Wisdom, +5 Intelligenz und +5 Vitalität, auf Stufe 3 jeweils +15. Kein zufälliger Buff und kein zusätzlicher Risikoeffekt im aktuellen Entwurf. Mana 61 auf Stufe 1, +25 je weiterer Stufe, auf Stufe 3 111. Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Erneute Anwendung erneuert den Eigenbuff, ohne seine Stärke mit sich selbst zu stapeln.",
+      "description_eng": "Makes a devil’s pact to enhance the caster for 600 seconds (10 minutes). Each learned skill level grants +5 Victim, +5 Wisdom, +5 Intelligence and +5 Vitality, reaching +15 each at level 3. No random buff or extra risk effect in the current design. Mana 61 plus 25 per additional level, reaching 111 at level 3. Cooldown 60 seconds, cast time 0.3 seconds. Reapplying refreshes the self buff without stacking its magnitude with itself.",
+      "dmgType": "selfbuff",
+      "dur": 600,
+      "int": 5,
+      "maxSkillLv": 3,
+      "maxUpgradeLv": 10,
+      "nr": 236,
+      "skillName_de": "Teufelspakt",
+      "skillpoints": 1,
+      "vic": 5,
+      "vita": 5,
+      "wis": 5,
+      "castTimeSeconds": 0.3,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 61,
+            "perLevel": 25
+          }
+        }
+      ],
+      "statScaling": {
+        "vic": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        },
+        "wis": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        },
+        "int": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        },
+        "vita": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "resourceCosts",
+              "0",
+              "scaling"
+            ],
+            "rule": {
+              "kind": "bounded",
+              "min": 0,
+              "rule": {
+                "kind": "linear",
+                "base": 61,
+                "perLevel": 25
+              }
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "vic"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "wis"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "vita"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c50",
+      "skillName_eng": "Morrak's Master",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Einstufige passive Verbesserung der questgebundenen Morrak-Beschwörung. Der Ritualist bezwingt Morrak in einer Quest und erhält dadurch zunächst die zusätzliche Möglichkeit, ihn als Nahkampf-Dämon zu beschwören; die erzählerische Meister-Wahl ist keine echte Auswahl. Sobald Morraks Meister auf Stufe 1 gelernt wird, ersetzt Morrak seine Nahkampf-Krallenangriffe durch magische Fernkampf-Auto-Attacks. Keine eigenen Casts oder Spells des Dämons; Attack-Speed-Wert bleibt 1, genaue Reichweite noch offen. Die separate Grundbeschwörung und Questfreischaltung müssen später in Quest- und Aktionsdaten angebunden werden; diese Passive selbst beschwört ihn nicht und hat keine aktive Castzeit. Bestehende Beschwörungsregeln bleiben: Castzeit 0,4 Sekunden, maximal 300 Sekunden Laufzeit bis Ablauf oder Tod. Die ursprüngliche questgebundene Nahkampf-Version gibt dem Anwender keine Attributboni. Erst mit gelernter Verbesserung Morraks Meister erhält der Anwender +5 Victim und +5 Wisdom, und nur solange der verbesserte Fernkampf-Morrak beschworen ist. Lernen allein gewährt keine dauerhaften Attributboni. Der Beschwörungspreis von -500 Max-HP gilt während der Beschwörung weiterhin auch für die Grundversion. Morraks Werte sind live an seinen Meister gekoppelt: Max-Leben und M-Angriff entsprechen jeweils einem Drittel des entsprechenden aktuellen Meisterwerts. Eigene Beschwörungskosten von -500 Max-HP werden aus der HP-Berechnungsbasis herausgerechnet. Buffs und Debuffs des Meisters wirken damit auch auf Morrak. Physische und magische Verteidigung Morraks entsprechen beide einem Drittel der aktuellen magischen Verteidigung des Meisters. Er ist angreifbar und nimmt Flächenschaden; kein Mana oder Cast-Spells. Jeder Auto-Attack hat 1,5 Prozent Chance auf 50 Prozent Bewegungstempo-Senkung für 1,5 Sekunden. Beschwörungs-Cooldown 360 Sekunden (6 Minuten), maximale Anwesenheit 300 Sekunden (5 Minuten). Keine weiteren Beschwörungskosten: kein Mana, keine Seelen und kein zusätzlicher einmaliger Lebensabzug; allein -500 Max-HP während der Beschwörung. Aggroregeln und genaue Anpassung aktueller HP bei wechselndem Max-Leben bleiben offen. Diese zeitlich begrenzte Skill-Beschwörung belegt keinen regulären dauerhaften Pet-Platz und darf gleichzeitig mit dem normalen Pet aktiv sein. Zwei dauerhafte Pets bleiben dem Abenteurer vorbehalten. Macht des Begleiters wirkt nicht direkt auf Morrak; er übernimmt ausschließlich die definierten Werte seines Meisters. Reguläre Pets des Ritualisten können den Begleiterbuff erhalten. Grundfrequenz seiner Auto-Attacks: 1,1 Angriffe pro Sekunde bei 100 % eigenem Angriffstempo; keine Übernahme des Meister-Angriffstempos. Zusätzliche eigene Grundwerte: 250 Max-Leben, 0 P-Angriff, 47 M-Angriff, 30 P-Verteidigung und 36 M-Verteidigung. Diese Werte werden zur bisherigen Vererbung addiert. Grundfrequenz 1,1 Angriffe pro Sekunde. Keine direkten Bindungsboni.",
+      "description_eng": "One-level passive upgrade to the quest-granted Morrak summon. The Ritualist defeats Morrak in a quest and initially gains a separate ability to summon him as a melee demon; the narrative master choice is not an actual option. Learning Morrak’s Master at level 1 replaces his melee claw attacks with magical ranged basic attacks. The demon still has no casts or spells; attack-speed rating remains 1, exact range pending. The separate base summon and quest unlock require later quest/action integration; this passive itself does not summon him and has no active cast time. Existing summon rules remain: cast 0.4 seconds, lifetime at most 300 seconds or until death. The original quest-granted melee version grants no caster attribute buffs. Only after learning Morrak’s Master does the caster gain +5 Victim and +5 Wisdom while the upgraded ranged Morrak is summoned; merely learning the passive grants no permanent attribute bonuses. The -500 max-HP summon penalty continues to apply while summoned, including the base version. Morrak is live-linked to his master: max HP and magical attack each equal one third of the corresponding current caster stat. His own -500 max-HP summon penalty is excluded from the health calculation basis. Caster buffs and debuffs therefore affect Morrak. Both physical and magical defense equal one third of the caster’s current magical defense. Targetable and affected by area damage, no Mana or casts. Each basic attack has 1.5 percent chance to slow movement by 50 percent for 1.5 seconds. Summon cooldown 360 seconds (6 minutes), maximum lifetime 300 seconds (5 minutes). No other summon costs: no Mana, souls or additional upfront health loss; only -500 max HP while summoned. Aggro rules and exact current-HP handling when maximum HP changes remain pending. This temporary skill summon does not occupy a regular permanent-pet slot and can coexist with the normal pet. Two permanent pets remain exclusive to the Adventurer. Power of the Pet does not directly affect Morrak; he inherits only the defined master stats. Regular Ritualist pets can receive the companion buff. Basic attack frequency: 1.1 attacks per second at 100% own attack speed; does not inherit caster attack speed. Additional fixed base stats: 250 maximum HP, 0 physical attack, 47 magical attack, 30 physical defense and 36 magical defense, added to existing inheritance. Base frequency 1.1 attacks per second. No direct Bond bonuses.",
+      "dmgType": "passive",
+      "maxSkillLv": 1,
+      "maxUpgradeLv": 10,
+      "nr": 237,
+      "skillName_de": "Morrak´s Meister",
+      "skillpoints": 1,
+      "effects": [
+        {
+          "key": "morrak-caster-vic",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "vic",
+          "value": 5,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        },
+        {
+          "key": "morrak-caster-wis",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "wis",
+          "value": 5,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        },
+        {
+          "key": "morrak-caster-maxHealth",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "maxHealth",
+          "value": -500,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        }
+      ],
+      "effectsVersion": 1,
+      "summonedCreatureSettings": {
+        "name": "Morrak",
+        "healthFractionOfCaster": 0.3333333333333333,
+        "magicalAttackFractionOfCaster": 0.3333333333333333,
+        "statSampling": "liveBeforeSummonHealthPenalty",
+        "defenseScalingStatus": "defined",
+        "attackStyle": "rangedBasicAttack",
+        "damageType": "magical",
+        "attackSpeed": 1,
+        "usesMana": false,
+        "hasCastSpells": false,
+        "targetable": true,
+        "affectedByAreaAttacks": true,
+        "lifetimeSeconds": 300,
+        "endsOnCreatureDeath": true,
+        "casterBuffsEndWithCreature": true,
+        "slowProcChancePerBasicAttack": 0.015,
+        "slowDurationSeconds": 1.5,
+        "movementSlowFraction": 0.5,
+        "threatAndAggroStatus": "pending",
+        "currentHealthAdjustmentStatus": "pending",
+        "baseSummonGrantedByQuest": true,
+        "questRequiresDefeatingCreature": true,
+        "skillIsRangedUpgrade": true,
+        "baseAttackStyle": "meleeClaws",
+        "summonCastTimeSeconds": 0.4,
+        "rangedAttackRangeStatus": "pending",
+        "baseSummonGrantsAttributeBuffs": false,
+        "attributeBuffsRequireLearnedUpgrade": true,
+        "occupiesPermanentPetSlot": false,
+        "canCoexistWithPermanentPet": true,
+        "summonCooldownSeconds": 360,
+        "physicalDefenseFractionOfCasterMagicalDefense": 0.3333333333333333,
+        "magicalDefenseFractionOfCasterMagicalDefense": 0.3333333333333333,
+        "acceptsGroupCompanionBuffs": false,
+        "baseAttacksPerSecond": 1.1,
+        "baseStats": {
+          "maxHealth": 250,
+          "magicalAttack": 47,
+          "physicalDefense": 30,
+          "magicalDefense": 36
+        },
+        "receivesBond": false
+      },
+      "resourceCosts": [],
+      "levelProgression": {
+        "version": 1,
+        "rules": [],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6ad207c878d209a368038d26",
+      "soulReserveBonusSettings": {
+        "stat": "matk",
+        "bonusPerStoredFragment": 1,
+        "maximumBonus": 100,
+        "usesCurrentStoredAmount": true,
+        "levelProgressionStatus": "defined"
+      },
+      "soulGenerationSettings": {
+        "maximumUniqueEnemiesScaling": {
+          "values": []
+        }
+      },
+      "soulStorageSettings": {
+        "capacityScaling": {
+          "values": []
+        }
+      },
+      "activationRequirements": {
+        "targetHealthBelowFractionScaling": {
+          "values": []
+        }
+      },
+      "tetherSettings": {
+        "worldAnchorKinds": []
+      },
+      "collectedPointScaling": {
+        "thresholds": [],
+        "durationSecondsByTier": [],
+        "baseDamageBonusFractionByTier": []
+      },
+      "attackExecution": {
+        "additionalDamageFromSacrificedHealth": {
+          "values": []
+        },
+        "hitCountScaling": {
+          "values": []
+        },
+        "damageMultiplierScaling": {
+          "values": []
+        },
+        "armorIgnoreFractionByLevel": []
+      },
+      "attackArea": {
+        "radiusScaling": {
+          "values": []
+        },
+        "maxTargetsScaling": {
+          "values": []
+        }
+      },
+      "movement": {
+        "distanceScaling": {
+          "values": []
+        },
+        "hopDirections": []
+      },
+      "durationScaling": {
+        "values": []
+      },
+      "cooldownScaling": {
+        "values": []
+      },
+      "resourceCosts": [],
+      "burstUsage": {
+        "usesPerBurstScaling": {
+          "values": []
+        },
+        "afterBurstCooldownScaling": {
+          "values": []
+        },
+        "belowTargetHealthFractionByLevel": [],
+        "usesBelowThresholdByLevel": []
+      },
+      "triggerCondition": {
+        "chancePerCheckScaling": {
+          "values": []
+        },
+        "chancePerCheck": null,
+        "healthThresholds": []
+      },
+      "allowedRaces": [],
+      "isClassCore": false,
+      "nr": 241,
+      "skillName_eng": "Number of Victims",
+      "skillName_de": "Zahl der Opfer",
+      "charClass": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "currentSkillLv": 0,
+      "maxSkillLv": 1,
+      "currentUpgradeLv": 0,
+      "maxUpgradeLv": 10,
+      "category": "passive",
+      "description_eng": "Permanent passive reserve bonus. Each currently stored soul in the Reaper-managed soul reserve grants +1 direct magical attack, capped at +100 with 100 stored souls. Collecting increases and spending decreases the bonus. Explicitly additional to Reaper’s Victim bonus. Generates no souls and uses neither historical kill counts nor morality. No activation cost, cast time or limited duration. One learnable level, no further level progression.",
+      "description_de": "Permanenter passiver Vorratsbonus. Jede aktuell gespeicherte Seele im durch Reaper verwalteten Seelenspeicher gewährt +1 direkten M-Angriff, maximal +100 bei 100 gespeicherten Seelen. Beim Sammeln steigt und beim Ausgeben sinkt der Bonus entsprechend. Gilt ausdrücklich zusätzlich zum Victim-Bonus von Reaper. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Eine einzige lernbare Stufe, keine weitere Levelskalierung.",
+      "dmgType": "passive",
+      "skillpoints": 1,
+      "__v": 0,
+      "levelProgression": {
+        "version": 1,
+        "rules": [],
+        "extensionNeedsDefinition": []
+      }
+    }
+  ],
+  "afterSkills": [
+    {
+      "_id": "6acc1c7e4826525c70d04b9f",
+      "skillName_eng": "Ray of Hope",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Permanenter passiver Skill. Startboni +2 Intelligenz und +1 Willenskraft. Intelligenz und Willenskraft steigen gemäß Stufentabelle bis auf +6 Intelligenz und +5 Willenskraft auf Stufe 10. Stufen 1, 3, 5, 7 und 9 erhöhen die direkte MP-Regeneration jeweils um 8: insgesamt +40 MP je Tick. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanent passive. Starts with +2 Intelligence and +1 Wisdom. Level tables reach +6 Intelligence and +5 Wisdom at level 10. Levels 1, 3, 5, 7 and 9 each add +8 direct MP regeneration, totaling +40 per tick. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "int": 2,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 60,
+      "skillName_de": "Hoffnungsschimmer",
+      "skillpoints": 1,
+      "wis": 1,
+      "manaRegen": 8,
+      "resourceCosts": [],
+      "statScaling": {
+        "int": {
+          "type": "table",
+          "values": [
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6,
+            6,
+            6
+          ]
+        },
+        "wis": {
+          "type": "table",
+          "values": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            5
+          ]
+        },
+        "manaRegen": {
+          "type": "table",
+          "values": [
+            8,
+            8,
+            16,
+            16,
+            24,
+            24,
+            32,
+            32,
+            40,
+            40
+          ]
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "ceil",
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 0.4444444444444444
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "wis"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "ceil",
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 0.4444444444444444
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "manaRegen"
+            ],
+            "rule": {
+              "kind": "periodicSteps",
+              "base": 8,
+              "steps": [
+                0,
+                8
+              ]
+            },
+            "source": "verifiedExistingLevels"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04bc8",
+      "skillName_eng": "Swords of Light",
+      "__v": 0,
+      "category": "active",
+      "cd": 72,
+      "charClass": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Intelligenz auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 68 auf Stufe 1, +21 je weiterer Stufe, maximal 257 auf Stufe 10. Cooldown 72 Sekunden auf Stufe 1 und 63 Sekunden auf Stufe 10. Castzeit 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+      "description_eng": "A giant sword of light impales the selected enemy, dealing magical skill base damage once, starting at 273 and increasing by 84 per additional level to 1029 at level 10. The sword and a field with a 15 metre diameter and 7.5 metre radius remain afterward. Field duration increases evenly from 10 to 30 seconds. You and your allies inside gain 13 Intelligence at level 1 plus 0.5 per additional level to 17.5 at level 10. The bonus applies only while inside the field. No recurring damage ticks are defined. Mana cost 68 at level 1, maximum 257 at level 10. Cooldown 72 seconds at level 1 and 63 seconds at level 10. Cast time is 0.7 seconds.",
+      "dmgType": "spell",
+      "dur": 10,
+      "matk": 273,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 101,
+      "skillName_de": "Schwerter des Lichtes",
+      "skillpoints": 1,
+      "attackArea": {
+        "shape": "circle",
+        "center": "skillCenter",
+        "radiusMeters": 7.5,
+        "geometryStatus": "defined",
+        "timingStatus": "defined"
+      },
+      "attackExecution": {
+        "targetMode": "singleEnemy",
+        "hitCount": 1,
+        "damageValueScope": "perHit",
+        "timingStatus": "pending"
+      },
+      "castTimeSeconds": 0.7,
+      "cooldownScaling": {
+        "type": "linear",
+        "base": 72,
+        "perLevel": -1
+      },
+      "durationScaling": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 2.2222222222222223
+      },
+      "effects": [
+        {
+          "key": "swords-light-intelligence-field",
+          "type": "statModifier",
+          "target": "alliesInArea",
+          "stat": "int",
+          "value": 13,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "linear",
+            "base": 13,
+            "perLevel": 0.5
+          },
+          "durationSeconds": 10,
+          "durationScaling": {
+            "type": "linear",
+            "base": 10,
+            "perLevel": 2.2222222222222223
+          },
+          "onlyWhileTargetInsideArea": true
+        }
+      ],
+      "mana": 68,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 68,
+            "perLevel": 21
+          }
+        }
+      ],
+      "statScaling": {
+        "matk": {
+          "type": "linear",
+          "base": 273,
+          "perLevel": 84
+        }
+      },
+      "manaPricing": {
+        "category": "normal",
+        "factor": 0.25,
+        "basis": "skillBaseDamagePerTarget",
+        "usesCharacterAttack": false,
+        "version": 1
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "cooldownScaling"
+            ],
+            "rule": {
+              "kind": "bounded",
+              "min": 0.1,
+              "rule": {
+                "kind": "linear",
+                "base": 72,
+                "perLevel": -1
+              }
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "durationScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 10,
+              "perLevel": 2.2222222222222223
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "effects",
+              "0",
+              "valueScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 13,
+              "perLevel": 0.5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "effects",
+              "0",
+              "durationScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 10,
+              "perLevel": 2.2222222222222223
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "resourceCosts",
+              "0",
+              "scaling"
+            ],
+            "rule": {
+              "kind": "outputCost",
+              "factor": 0.25,
+              "basis": "damage",
+              "minimum": 0
+            },
+            "source": "verifiedManaPricing"
+          },
+          {
+            "path": [
+              "statScaling",
+              "matk"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 273,
+              "perLevel": 84
+            },
+            "source": "storedFormula"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04bd7",
+      "skillName_eng": "Inexhaustible Hope",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Permanenter passiver Skill. +2 M-Angriff pro Stufe, insgesamt +20 auf Stufe 10. Ab Stufe 5 insgesamt +1 Glück und +1 Intelligenz. Stufe 10 gewährt insgesamt +3 Glück und +2 Intelligenz. Direkter M-Angriffsbonus unabhängig von Intelligenz. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanent passive. +2 magical attack per level, +20 at level 10. From level 5: +1 Luck and +1 Intelligence total. At level 10: +3 Luck and +2 Intelligence total. Direct magical attack bonus is independent of Intelligence. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "matk": 2,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 116,
+      "skillName_de": "Unerschöpfliche Hoffnung",
+      "skillpoints": 1,
+      "resourceCosts": [],
+      "statScaling": {
+        "matk": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 2
+        },
+        "luck": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3
+          ]
+        },
+        "int": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2
+          ]
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "statScaling",
+              "matk"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 2,
+              "perLevel": 2
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "luck"
+            ],
+            "rule": {
+              "kind": "thresholds",
+              "base": 0,
+              "changes": [
+                {
+                  "level": 5,
+                  "value": 1
+                },
+                {
+                  "level": 10,
+                  "value": 3
+                }
+              ]
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "thresholds",
+              "base": 0,
+              "changes": [
+                {
+                  "level": 5,
+                  "value": 1
+                },
+                {
+                  "level": 10,
+                  "value": 2
+                }
+              ]
+            },
+            "source": "verifiedExistingLevels"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04bdb",
+      "skillName_eng": "Reaper",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Reaper: permanenter passiver Skill. Erlaubt auf Stufe 1 einen Speicher von 10 Seelenfragmenten und je weiterer Stufe 10 zusätzliche Plätze, bis zu 100 auf Stufe 10. Je volle 10 aktuell gespeicherte Seelenfragmente erhältst du +2 Intelligenz: Bonus = 2 × abrunden(aktueller Vorrat / 10). Bei 100 gespeicherten Fragmenten insgesamt +20 Intelligenz; bei leerem Speicher kein Intelligenz-Bonus. Der Bonus sinkt entsprechend, wenn Seelen ausgegeben werden. Seelenfragmente sind eine eigene Ressource, getrennt vom Attribut Intelligenz. Vorrat bleibt dauerhaft auch offline erhalten, ohne zeitlichen Verfall. Überschüssige Gewinne oberhalb der Speicherkapazität werden nicht aufgenommen. Der Skill erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Dies sind Skilldefinitionen; die persistente Charakterressource ist später serverseitig anzubinden.",
+      "description_eng": "Reaper: permanent passive skill. Soul-fragment storage starts at 10 at level 1 and gains 10 capacity per additional level, reaching 100 at level 10. Every complete 10 currently stored fragments grants +2 Intelligence: bonus = 2 × floor(current storage / 10). At 100 stored fragments the bonus is +20 Intelligence; empty storage grants none. Spending souls reduces the bonus accordingly. Soul fragments are a separate resource from the Intelligence attribute. Storage persists offline with no time decay. Gains beyond storage capacity are discarded. This skill does not generate souls itself. No activation costs, cast time or cooldown. These are skill definitions; persistent character-resource behavior still requires server integration.",
+      "dmgType": "passive",
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 120,
+      "skillName_de": "Reaper",
+      "skillpoints": 1,
+      "resourceCosts": [],
+      "soulStorageSettings": {
+        "resource": "soulFragments",
+        "capacityScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 10
+        },
+        "persistsOffline": true,
+        "decaysOverTime": false,
+        "bonusStat": "int",
+        "fragmentsPerBonusStep": 10,
+        "bonusPerFullStep": 2,
+        "usesCurrentStoredAmount": true,
+        "onCapacityReached": "discardExcess"
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "soulStorageSettings",
+              "capacityScaling"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 10,
+              "perLevel": 10
+            },
+            "source": "storedFormula"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c33",
+      "skillName_eng": "The Eternal Knowledge",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Permanenter passiver Skill. Startwerte +5 Intelligenz, +2 Willenskraft. Steigt gemäß ganzzahliger Stufentabelle auf insgesamt +12 Intelligenz, +6 Willenskraft auf Stufe 10. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanent passive. Starts with +5 Intelligence, +2 Wisdom. Integer level tables reach +12 Intelligence, +6 Wisdom at level 10. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "int": 5,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 208,
+      "skillName_de": "Das ewige Wissen",
+      "skillpoints": 1,
+      "wis": 2,
+      "resourceCosts": [],
+      "statScaling": {
+        "int": {
+          "type": "table",
+          "values": [
+            5,
+            5,
+            6,
+            7,
+            8,
+            8,
+            9,
+            10,
+            11,
+            12
+          ]
+        },
+        "wis": {
+          "type": "table",
+          "values": [
+            2,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6
+          ]
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "round",
+              "rule": {
+                "kind": "linear",
+                "base": 4.5,
+                "perLevel": 0.7777777777777778
+              }
+            },
+            "source": "verifiedExistingLevels"
+          },
+          {
+            "path": [
+              "statScaling",
+              "wis"
+            ],
+            "rule": {
+              "kind": "rounded",
+              "mode": "round",
+              "rule": {
+                "kind": "linear",
+                "base": 1.5,
+                "perLevel": 0.4444444444444444
+              }
+            },
+            "source": "verifiedExistingLevels"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c4f",
+      "skillName_eng": "Devil's Pact",
+      "__v": 0,
+      "category": "active",
+      "cd": 60,
+      "charClass": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Schließt einen Teufelspakt und verstärkt sich selbst für 600 Sekunden (10 Minuten). Je gelerntem Skilllevel +5 Wisdom, +5 Intelligenz und +5 Vitalität, auf Stufe 3 jeweils +15. Kein zufälliger Buff und kein zusätzlicher Risikoeffekt im aktuellen Entwurf. Mana 61 auf Stufe 1, +25 je weiterer Stufe, auf Stufe 3 111. Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Erneute Anwendung erneuert den Eigenbuff, ohne seine Stärke mit sich selbst zu stapeln.",
+      "description_eng": "Makes a devil’s pact to enhance the caster for 600 seconds (10 minutes). Each learned skill level grants +5 Wisdom, +5 Intelligence and +5 Vitality, reaching +15 each at level 3. No random buff or extra risk effect in the current design. Mana 61 plus 25 per additional level, reaching 111 at level 3. Cooldown 60 seconds, cast time 0.3 seconds. Reapplying refreshes the self buff without stacking its magnitude with itself.",
+      "dmgType": "selfbuff",
+      "dur": 600,
+      "int": 5,
+      "maxSkillLv": 3,
+      "maxUpgradeLv": 10,
+      "nr": 236,
+      "skillName_de": "Teufelspakt",
+      "skillpoints": 1,
+      "vita": 5,
+      "wis": 5,
+      "castTimeSeconds": 0.3,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 61,
+            "perLevel": 25
+          }
+        }
+      ],
+      "statScaling": {
+        "wis": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        },
+        "int": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        },
+        "vita": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 5
+        }
+      },
+      "levelProgression": {
+        "version": 1,
+        "rules": [
+          {
+            "path": [
+              "resourceCosts",
+              "0",
+              "scaling"
+            ],
+            "rule": {
+              "kind": "bounded",
+              "min": 0,
+              "rule": {
+                "kind": "linear",
+                "base": 61,
+                "perLevel": 25
+              }
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "wis"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "int"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          },
+          {
+            "path": [
+              "statScaling",
+              "vita"
+            ],
+            "rule": {
+              "kind": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "source": "storedFormula"
+          }
+        ],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c50",
+      "skillName_eng": "Morrak's Master",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Einstufige passive Verbesserung der questgebundenen Morrak-Beschwörung. Der Ritualist bezwingt Morrak in einer Quest und erhält dadurch zunächst die zusätzliche Möglichkeit, ihn als Nahkampf-Dämon zu beschwören; die erzählerische Meister-Wahl ist keine echte Auswahl. Sobald Morraks Meister auf Stufe 1 gelernt wird, ersetzt Morrak seine Nahkampf-Krallenangriffe durch magische Fernkampf-Auto-Attacks. Keine eigenen Casts oder Spells des Dämons; Attack-Speed-Wert bleibt 1, genaue Reichweite noch offen. Die separate Grundbeschwörung und Questfreischaltung müssen später in Quest- und Aktionsdaten angebunden werden; diese Passive selbst beschwört ihn nicht und hat keine aktive Castzeit. Bestehende Beschwörungsregeln bleiben: Castzeit 0,4 Sekunden, maximal 300 Sekunden Laufzeit bis Ablauf oder Tod. Die ursprüngliche questgebundene Nahkampf-Version gibt dem Anwender keine Attributboni. Erst mit gelernter Verbesserung Morraks Meister erhält der Anwender +5 Intelligenz und +5 Wisdom, und nur solange der verbesserte Fernkampf-Morrak beschworen ist. Lernen allein gewährt keine dauerhaften Attributboni. Der Beschwörungspreis von -500 Max-HP gilt während der Beschwörung weiterhin auch für die Grundversion. Morraks Werte sind live an seinen Meister gekoppelt: Max-Leben und M-Angriff entsprechen jeweils einem Drittel des entsprechenden aktuellen Meisterwerts. Eigene Beschwörungskosten von -500 Max-HP werden aus der HP-Berechnungsbasis herausgerechnet. Buffs und Debuffs des Meisters wirken damit auch auf Morrak. Physische und magische Verteidigung Morraks entsprechen beide einem Drittel der aktuellen magischen Verteidigung des Meisters. Er ist angreifbar und nimmt Flächenschaden; kein Mana oder Cast-Spells. Jeder Auto-Attack hat 1,5 Prozent Chance auf 50 Prozent Bewegungstempo-Senkung für 1,5 Sekunden. Beschwörungs-Cooldown 360 Sekunden (6 Minuten), maximale Anwesenheit 300 Sekunden (5 Minuten). Keine weiteren Beschwörungskosten: kein Mana, keine Seelen und kein zusätzlicher einmaliger Lebensabzug; allein -500 Max-HP während der Beschwörung. Aggroregeln und genaue Anpassung aktueller HP bei wechselndem Max-Leben bleiben offen. Diese zeitlich begrenzte Skill-Beschwörung belegt keinen regulären dauerhaften Pet-Platz und darf gleichzeitig mit dem normalen Pet aktiv sein. Zwei dauerhafte Pets bleiben dem Abenteurer vorbehalten. Macht des Begleiters wirkt nicht direkt auf Morrak; er übernimmt ausschließlich die definierten Werte seines Meisters. Reguläre Pets des Ritualisten können den Begleiterbuff erhalten. Grundfrequenz seiner Auto-Attacks: 1,1 Angriffe pro Sekunde bei 100 % eigenem Angriffstempo; keine Übernahme des Meister-Angriffstempos. Zusätzliche eigene Grundwerte: 250 Max-Leben, 0 P-Angriff, 47 M-Angriff, 30 P-Verteidigung und 36 M-Verteidigung. Diese Werte werden zur bisherigen Vererbung addiert. Grundfrequenz 1,1 Angriffe pro Sekunde. Keine direkten Bindungsboni.",
+      "description_eng": "One-level passive upgrade to the quest-granted Morrak summon. The Ritualist defeats Morrak in a quest and initially gains a separate ability to summon him as a melee demon; the narrative master choice is not an actual option. Learning Morrak’s Master at level 1 replaces his melee claw attacks with magical ranged basic attacks. The demon still has no casts or spells; attack-speed rating remains 1, exact range pending. The separate base summon and quest unlock require later quest/action integration; this passive itself does not summon him and has no active cast time. Existing summon rules remain: cast 0.4 seconds, lifetime at most 300 seconds or until death. The original quest-granted melee version grants no caster attribute buffs. Only after learning Morrak’s Master does the caster gain +5 Intelligence and +5 Wisdom while the upgraded ranged Morrak is summoned; merely learning the passive grants no permanent attribute bonuses. The -500 max-HP summon penalty continues to apply while summoned, including the base version. Morrak is live-linked to his master: max HP and magical attack each equal one third of the corresponding current caster stat. His own -500 max-HP summon penalty is excluded from the health calculation basis. Caster buffs and debuffs therefore affect Morrak. Both physical and magical defense equal one third of the caster’s current magical defense. Targetable and affected by area damage, no Mana or casts. Each basic attack has 1.5 percent chance to slow movement by 50 percent for 1.5 seconds. Summon cooldown 360 seconds (6 minutes), maximum lifetime 300 seconds (5 minutes). No other summon costs: no Mana, souls or additional upfront health loss; only -500 max HP while summoned. Aggro rules and exact current-HP handling when maximum HP changes remain pending. This temporary skill summon does not occupy a regular permanent-pet slot and can coexist with the normal pet. Two permanent pets remain exclusive to the Adventurer. Power of the Pet does not directly affect Morrak; he inherits only the defined master stats. Regular Ritualist pets can receive the companion buff. Basic attack frequency: 1.1 attacks per second at 100% own attack speed; does not inherit caster attack speed. Additional fixed base stats: 250 maximum HP, 0 physical attack, 47 magical attack, 30 physical defense and 36 magical defense, added to existing inheritance. Base frequency 1.1 attacks per second. No direct Bond bonuses.",
+      "dmgType": "passive",
+      "maxSkillLv": 1,
+      "maxUpgradeLv": 10,
+      "nr": 237,
+      "skillName_de": "Morrak´s Meister",
+      "skillpoints": 1,
+      "effects": [
+        {
+          "key": "morrak-caster-int",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "int",
+          "value": 5,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        },
+        {
+          "key": "morrak-caster-wis",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "wis",
+          "value": 5,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        },
+        {
+          "key": "morrak-caster-maxHealth",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "maxHealth",
+          "value": -500,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        }
+      ],
+      "effectsVersion": 1,
+      "summonedCreatureSettings": {
+        "name": "Morrak",
+        "healthFractionOfCaster": 0.3333333333333333,
+        "magicalAttackFractionOfCaster": 0.3333333333333333,
+        "statSampling": "liveBeforeSummonHealthPenalty",
+        "defenseScalingStatus": "defined",
+        "attackStyle": "rangedBasicAttack",
+        "damageType": "magical",
+        "attackSpeed": 1,
+        "usesMana": false,
+        "hasCastSpells": false,
+        "targetable": true,
+        "affectedByAreaAttacks": true,
+        "lifetimeSeconds": 300,
+        "endsOnCreatureDeath": true,
+        "casterBuffsEndWithCreature": true,
+        "slowProcChancePerBasicAttack": 0.015,
+        "slowDurationSeconds": 1.5,
+        "movementSlowFraction": 0.5,
+        "threatAndAggroStatus": "pending",
+        "currentHealthAdjustmentStatus": "pending",
+        "baseSummonGrantedByQuest": true,
+        "questRequiresDefeatingCreature": true,
+        "skillIsRangedUpgrade": true,
+        "baseAttackStyle": "meleeClaws",
+        "summonCastTimeSeconds": 0.4,
+        "rangedAttackRangeStatus": "pending",
+        "baseSummonGrantsAttributeBuffs": false,
+        "attributeBuffsRequireLearnedUpgrade": true,
+        "occupiesPermanentPetSlot": false,
+        "canCoexistWithPermanentPet": true,
+        "summonCooldownSeconds": 360,
+        "physicalDefenseFractionOfCasterMagicalDefense": 0.3333333333333333,
+        "magicalDefenseFractionOfCasterMagicalDefense": 0.3333333333333333,
+        "acceptsGroupCompanionBuffs": false,
+        "baseAttacksPerSecond": 1.1,
+        "baseStats": {
+          "maxHealth": 250,
+          "magicalAttack": 47,
+          "physicalDefense": 30,
+          "magicalDefense": 36
+        },
+        "receivesBond": false
+      },
+      "resourceCosts": [],
+      "levelProgression": {
+        "version": 1,
+        "rules": [],
+        "extensionNeedsDefinition": []
+      }
+    },
+    {
+      "_id": "6ad207c878d209a368038d26",
+      "soulReserveBonusSettings": {
+        "stat": "matk",
+        "bonusPerStoredFragment": 1,
+        "maximumBonus": 100,
+        "usesCurrentStoredAmount": true,
+        "levelProgressionStatus": "defined"
+      },
+      "soulGenerationSettings": {
+        "maximumUniqueEnemiesScaling": {
+          "values": []
+        }
+      },
+      "soulStorageSettings": {
+        "capacityScaling": {
+          "values": []
+        }
+      },
+      "activationRequirements": {
+        "targetHealthBelowFractionScaling": {
+          "values": []
+        }
+      },
+      "tetherSettings": {
+        "worldAnchorKinds": []
+      },
+      "collectedPointScaling": {
+        "thresholds": [],
+        "durationSecondsByTier": [],
+        "baseDamageBonusFractionByTier": []
+      },
+      "attackExecution": {
+        "additionalDamageFromSacrificedHealth": {
+          "values": []
+        },
+        "hitCountScaling": {
+          "values": []
+        },
+        "damageMultiplierScaling": {
+          "values": []
+        },
+        "armorIgnoreFractionByLevel": []
+      },
+      "attackArea": {
+        "radiusScaling": {
+          "values": []
+        },
+        "maxTargetsScaling": {
+          "values": []
+        }
+      },
+      "movement": {
+        "distanceScaling": {
+          "values": []
+        },
+        "hopDirections": []
+      },
+      "durationScaling": {
+        "values": []
+      },
+      "cooldownScaling": {
+        "values": []
+      },
+      "resourceCosts": [],
+      "burstUsage": {
+        "usesPerBurstScaling": {
+          "values": []
+        },
+        "afterBurstCooldownScaling": {
+          "values": []
+        },
+        "belowTargetHealthFractionByLevel": [],
+        "usesBelowThresholdByLevel": []
+      },
+      "triggerCondition": {
+        "chancePerCheckScaling": {
+          "values": []
+        },
+        "chancePerCheck": null,
+        "healthThresholds": []
+      },
+      "allowedRaces": [],
+      "isClassCore": false,
+      "nr": 241,
+      "skillName_eng": "Number of Victims",
+      "skillName_de": "Zahl der Opfer",
+      "charClass": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "currentSkillLv": 0,
+      "maxSkillLv": 1,
+      "currentUpgradeLv": 0,
+      "maxUpgradeLv": 10,
+      "category": "passive",
+      "description_eng": "Permanent passive reserve bonus. Each currently stored soul in the Reaper-managed soul reserve grants +1 direct magical attack, capped at +100 with 100 stored souls. Collecting increases and spending decreases the bonus. Explicitly additional to Reaper’s Intelligence bonus. Generates no souls and uses neither historical kill counts nor morality. No activation cost, cast time or limited duration. One learnable level, no further level progression.",
+      "description_de": "Permanenter passiver Vorratsbonus. Jede aktuell gespeicherte Seele im durch Reaper verwalteten Seelenspeicher gewährt +1 direkten M-Angriff, maximal +100 bei 100 gespeicherten Seelen. Beim Sammeln steigt und beim Ausgeben sinkt der Bonus entsprechend. Gilt ausdrücklich zusätzlich zum Intelligenz-Bonus von Reaper. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Eine einzige lernbare Stufe, keine weitere Levelskalierung.",
+      "dmgType": "passive",
+      "skillpoints": 1,
+      "__v": 0,
+      "levelProgression": {
+        "version": 1,
+        "rules": [],
+        "extensionNeedsDefinition": []
+      }
+    }
+  ],
+  "beforeItems": [
+    {
+      "_id": "6acc1c7d4826525c70d04ac5",
+      "name": "Clearness of sins",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 60,
+        "maxLevel": 10,
+        "mang": 134,
+        "speed": -30,
+        "faith": 10,
+        "wisdom": 5
+      },
+      "category": "weapon",
+      "description": "A holy relic imbued with the power to cleanse the soul of its bearer, purging them of guilt and remorse. Wielded by repentant sinners and penitent pilgrims, it offers redemption and absolution.",
+      "isLegendary": false,
+      "rang": 4,
+      "rare": 2,
+      "sell": 783,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "description_de": "Eine heilige Reliquie mit der Kraft, die Seele ihres Trägers zu reinigen und sie von Schuld und Reue zu befreien. Reuigen Sündern und büßenden Pilgern bietet sie Erlösung und Vergebung.",
+      "description_eng": "A holy relic imbued with the power to cleanse the soul of its bearer, purging them of guilt and remorse. Wielded by repentant sinners and penitent pilgrims, it offers redemption and absolution.",
+      "name_de": "Läuterung der Sünden",
+      "name_eng": "Purification of Sins"
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ac7",
+      "name": "Scepter of Lunar Eclipse",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 60,
+        "maxLevel": 10,
+        "mang": 134,
+        "speed": -30,
+        "victim": 12,
+        "vita": 3
+      },
+      "category": "weapon",
+      "description": "A wand infused with the essence of vitality and renewal, capable of restoring health and vigor to the weary. Wielded by healers and druids, it brings new life to those in need.",
+      "isLegendary": false,
+      "rang": 4,
+      "rare": 2,
+      "sell": 783,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Zepter der Mondfinsternis",
+      "name_eng": "Scepter of Lunar Eclipse",
+      "description_de": "Ein finsteres Zepter, dessen Kern selbst im hellsten Mondlicht schwarz bleibt. Einst von Ritualisten für verbotene Opferzeremonien geführt, trägt es das Echo unzähliger Seelen in sich. Wer seine Macht entfesselt, spürt, dass die Dunkelheit jede Gabe annimmt und stets nach mehr verlangt.",
+      "description_eng": "A sinister scepter whose core remains black even in the brightest moonlight. Once wielded by ritualists in forbidden sacrificial rites, it holds the echoes of countless souls. Those who unleash its power sense that the darkness accepts every offering and always hungers for more."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ad2",
+      "name": "Glimmer of Hope",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 80,
+        "maxLevel": 10,
+        "mang": 229,
+        "speed": -30,
+        "faith": 15,
+        "wisdom": 10
+      },
+      "category": "weapon",
+      "description": "A talisman of hope in the darkest of times, its light pierces through despair and guides lost souls to safety. Wielded by healers and guardians of the light, it offers solace and protection to those in need.",
+      "isLegendary": false,
+      "rang": 5,
+      "rare": 2,
+      "sell": 1637,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Hoffnungsschimmer",
+      "name_eng": "Glimmer of Hope",
+      "description_de": "Ein Zeichen der Hoffnung in den dunkelsten Zeiten. Sein Licht durchdringt die Verzweiflung und geleitet verlorene Seelen in Sicherheit. Von Heilern und Hütern des Lichts getragen, spendet er Bedürftigen Trost und Schutz.",
+      "description_eng": "A symbol of hope in the darkest of times. Its light pierces through despair and guides lost souls to safety. Carried by healers and guardians of the light, it offers comfort and protection to those in need."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ad4",
+      "name": "Soulstealer",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 80,
+        "maxLevel": 10,
+        "mang": 229,
+        "speed": -30,
+        "victim": 20,
+        "vita": 5
+      },
+      "category": "weapon",
+      "description": "A cursed weapon that feeds on the souls of its victims, its blade hungers for the life force of the living. Wielded by necromancers and dark sorcerers, it enslaves the souls of the damned and drains them of their essence.",
+      "isLegendary": false,
+      "rang": 5,
+      "rare": 2,
+      "sell": 1637,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Seelenräuber",
+      "name_eng": "Soulreaver",
+      "description_de": "Eine verfluchte Waffe, die sich von den Seelen ihrer Opfer nährt. Sein dunkler Kern dürstet nach Lebenskraft. Von Nekromanten und dunklen Zauberern geführt, versklavt sie die Seelen der Verdammten und entzieht ihnen ihre Essenz.",
+      "description_eng": "A cursed weapon that feeds on the souls of its victims. Its dark core thirsts for life force. Wielded by necromancers and dark sorcerers, it enslaves the souls of the damned and drains them of their essence."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04adf",
+      "name": "Rod of Divine Light",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 100,
+        "maxLevel": 10,
+        "mang": 387,
+        "speed": -30,
+        "faith": 20,
+        "wisdom": 10
+      },
+      "category": "weapon",
+      "description": "d evil wherever it shone. It was wielded by prophets and clerics to bring hope and salvation to the faithful and to smite the forces of darkness.",
+      "isLegendary": false,
+      "rang": 6,
+      "rare": 3,
+      "sell": 3452,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Stab des göttlichen Lichts",
+      "name_eng": "Rod of Divine Light",
+      "description_de": "Ein heiliger Stab, durchdrungen von Auroras Licht. Einst ein Zeichen für Hoffnung und Erlösung gegen die Mächte der Dunkelheit.",
+      "description_eng": "A sacred staff imbued with Aurora’s light. Once a symbol of hope and salvation against the forces of darkness."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ae1",
+      "name": "Soul Eater",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 100,
+        "maxLevel": 10,
+        "mang": 387,
+        "speed": -30,
+        "victim": 22,
+        "vita": 8
+      },
+      "category": "weapon",
+      "description": "A staff of dark magic that consumed the life force of its victims, granting its wielder untold power. It was feared for its ability to drain the souls of the living and to fuel the dark ambitions of its master.",
+      "isLegendary": false,
+      "rang": 6,
+      "rare": 3,
+      "sell": 3452,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "description_de": "Ein Stab dunkler Magie, der die Lebenskraft seiner Opfer verzehrte und seinem Träger unermessliche Macht verlieh. Gefürchtet war er dafür, die Seelen der Lebenden auszusaugen und die finsteren Ziele seines Meisters zu nähren.",
+      "description_eng": "A staff of dark magic that consumed the life force of its victims, granting its wielder untold power. It was feared for its ability to drain the souls of the living and to fuel the dark ambitions of its master.",
+      "name_de": "Seelenverschlinger",
+      "name_eng": "Soul Eater"
+    }
+  ],
+  "afterItems": [
+    {
+      "_id": "6acc1c7d4826525c70d04ac5",
+      "name": "Clearness of sins",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 60,
+        "maxLevel": 10,
+        "mang": 134,
+        "speed": -30,
+        "wisdom": 5,
+        "int": 10
+      },
+      "category": "weapon",
+      "description": "A holy relic imbued with the power to cleanse the soul of its bearer, purging them of guilt and remorse. Wielded by repentant sinners and penitent pilgrims, it offers redemption and absolution.",
+      "isLegendary": false,
+      "rang": 4,
+      "rare": 2,
+      "sell": 783,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "description_de": "Eine heilige Reliquie mit der Kraft, die Seele ihres Trägers zu reinigen und sie von Schuld und Reue zu befreien. Reuigen Sündern und büßenden Pilgern bietet sie Erlösung und Vergebung.",
+      "description_eng": "A holy relic imbued with the power to cleanse the soul of its bearer, purging them of guilt and remorse. Wielded by repentant sinners and penitent pilgrims, it offers redemption and absolution.",
+      "name_de": "Läuterung der Sünden",
+      "name_eng": "Purification of Sins"
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ac7",
+      "name": "Scepter of Lunar Eclipse",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 60,
+        "maxLevel": 10,
+        "mang": 134,
+        "speed": -30,
+        "vita": 3,
+        "int": 12
+      },
+      "category": "weapon",
+      "description": "A wand infused with the essence of vitality and renewal, capable of restoring health and vigor to the weary. Wielded by healers and druids, it brings new life to those in need.",
+      "isLegendary": false,
+      "rang": 4,
+      "rare": 2,
+      "sell": 783,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Zepter der Mondfinsternis",
+      "name_eng": "Scepter of Lunar Eclipse",
+      "description_de": "Ein finsteres Zepter, dessen Kern selbst im hellsten Mondlicht schwarz bleibt. Einst von Ritualisten für verbotene Opferzeremonien geführt, trägt es das Echo unzähliger Seelen in sich. Wer seine Macht entfesselt, spürt, dass die Dunkelheit jede Gabe annimmt und stets nach mehr verlangt.",
+      "description_eng": "A sinister scepter whose core remains black even in the brightest moonlight. Once wielded by ritualists in forbidden sacrificial rites, it holds the echoes of countless souls. Those who unleash its power sense that the darkness accepts every offering and always hungers for more."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ad2",
+      "name": "Glimmer of Hope",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 80,
+        "maxLevel": 10,
+        "mang": 229,
+        "speed": -30,
+        "wisdom": 10,
+        "int": 15
+      },
+      "category": "weapon",
+      "description": "A talisman of hope in the darkest of times, its light pierces through despair and guides lost souls to safety. Wielded by healers and guardians of the light, it offers solace and protection to those in need.",
+      "isLegendary": false,
+      "rang": 5,
+      "rare": 2,
+      "sell": 1637,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Hoffnungsschimmer",
+      "name_eng": "Glimmer of Hope",
+      "description_de": "Ein Zeichen der Hoffnung in den dunkelsten Zeiten. Sein Licht durchdringt die Verzweiflung und geleitet verlorene Seelen in Sicherheit. Von Heilern und Hütern des Lichts getragen, spendet er Bedürftigen Trost und Schutz.",
+      "description_eng": "A symbol of hope in the darkest of times. Its light pierces through despair and guides lost souls to safety. Carried by healers and guardians of the light, it offers comfort and protection to those in need."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ad4",
+      "name": "Soulstealer",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 80,
+        "maxLevel": 10,
+        "mang": 229,
+        "speed": -30,
+        "vita": 5,
+        "int": 20
+      },
+      "category": "weapon",
+      "description": "A cursed weapon that feeds on the souls of its victims, its blade hungers for the life force of the living. Wielded by necromancers and dark sorcerers, it enslaves the souls of the damned and drains them of their essence.",
+      "isLegendary": false,
+      "rang": 5,
+      "rare": 2,
+      "sell": 1637,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Seelenräuber",
+      "name_eng": "Soulreaver",
+      "description_de": "Eine verfluchte Waffe, die sich von den Seelen ihrer Opfer nährt. Sein dunkler Kern dürstet nach Lebenskraft. Von Nekromanten und dunklen Zauberern geführt, versklavt sie die Seelen der Verdammten und entzieht ihnen ihre Essenz.",
+      "description_eng": "A cursed weapon that feeds on the souls of its victims. Its dark core thirsts for life force. Wielded by necromancers and dark sorcerers, it enslaves the souls of the damned and drains them of their essence."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04adf",
+      "name": "Rod of Divine Light",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 100,
+        "maxLevel": 10,
+        "mang": 387,
+        "speed": -30,
+        "wisdom": 10,
+        "int": 20
+      },
+      "category": "weapon",
+      "description": "d evil wherever it shone. It was wielded by prophets and clerics to bring hope and salvation to the faithful and to smite the forces of darkness.",
+      "isLegendary": false,
+      "rang": 6,
+      "rare": 3,
+      "sell": 3452,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "name_de": "Stab des göttlichen Lichts",
+      "name_eng": "Rod of Divine Light",
+      "description_de": "Ein heiliger Stab, durchdrungen von Auroras Licht. Einst ein Zeichen für Hoffnung und Erlösung gegen die Mächte der Dunkelheit.",
+      "description_eng": "A sacred staff imbued with Aurora’s light. Once a symbol of hope and salvation against the forces of darkness."
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ae1",
+      "name": "Soul Eater",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 100,
+        "maxLevel": 10,
+        "mang": 387,
+        "speed": -30,
+        "vita": 8,
+        "int": 22
+      },
+      "category": "weapon",
+      "description": "A staff of dark magic that consumed the life force of its victims, granting its wielder untold power. It was feared for its ability to drain the souls of the living and to fuel the dark ambitions of its master.",
+      "isLegendary": false,
+      "rang": 6,
+      "rare": 3,
+      "sell": 3452,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Wand2H",
+      "weight": 20,
+      "description_de": "Ein Stab dunkler Magie, der die Lebenskraft seiner Opfer verzehrte und seinem Träger unermessliche Macht verlieh. Gefürchtet war er dafür, die Seelen der Lebenden auszusaugen und die finsteren Ziele seines Meisters zu nähren.",
+      "description_eng": "A staff of dark magic that consumed the life force of its victims, granting its wielder untold power. It was feared for its ability to drain the souls of the living and to fuel the dark ambitions of its master.",
+      "name_de": "Seelenverschlinger",
+      "name_eng": "Soul Eater"
+    }
+  ]
+}

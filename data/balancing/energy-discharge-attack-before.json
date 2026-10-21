@@ -1,0 +1,35 @@
+{
+  "_id": "6acc1c7e4826525c70d04b86",
+  "skillName_eng": "Energy Discharge",
+  "__v": 0,
+  "category": "active",
+  "cd": 180,
+  "charClass": [
+    "Butcher",
+    "Destroyer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Du opferst auf Skilllevel 1 30 % deines maximalen Lebens für eine Explosion, die Gegner im Bereich physisch schädigt. Die Lebenskosten sinken pro weiterem Skilllevel um einen Prozentpunkt.",
+  "description_eng": "At skill level 1, sacrifice 30% of your maximum health to cause an explosion that deals physical damage to nearby enemies. The health cost decreases by one percentage point per additional skill level.",
+  "dmgType": "Physicas",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 35,
+  "patk": 787,
+  "skillName_de": "Energieentladung",
+  "skillpoints": 1,
+  "resourceCosts": [
+    {
+      "resource": "health",
+      "reference": "maxHealth",
+      "unit": "fraction",
+      "scaling": {
+        "type": "linear",
+        "base": 0.3,
+        "perLevel": -0.01,
+        "values": []
+      }
+    }
+  ]
+}

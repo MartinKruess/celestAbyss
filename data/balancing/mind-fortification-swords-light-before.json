@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bad",
+    "skillName_eng": "Mind Fortification",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Luminet",
+      "Lightmage",
+      "Ritualist",
+      "Bloodmage",
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht deine Intelligenz und Weisheit sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+    "description_eng": "Increases your Intelligence and Wisdom and those of your allies by 2 each per skill level for 300 seconds.",
+    "dmgType": "buff",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 74,
+    "skillName_de": "Festigung des Geistes",
+    "skillpoints": 1,
+    "activation": "manual",
+    "cd": 60,
+    "dur": 300,
+    "int": 2,
+    "statBonusTargets": {
+      "int": "selfAndAllies",
+      "wis": "selfAndAllies"
+    },
+    "statBonusUnits": {
+      "int": "flat",
+      "wis": "flat"
+    },
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "wis": 2
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc8",
+    "skillName_eng": "Swords of Light",
+    "__v": 0,
+    "category": "active",
+    "cd": 65,
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Auroras Macht bricht aus den Wolken und fällt auf deine Feinde herab.",
+    "description_eng": "Auroas power breaks out of the clouds and falls on your enemies.",
+    "dmgType": "spell",
+    "dur": 30,
+    "faith": 13,
+    "matk": 273,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 101,
+    "skillName_de": "Schwerter des Lichtes",
+    "skillpoints": 1
+  }
+]

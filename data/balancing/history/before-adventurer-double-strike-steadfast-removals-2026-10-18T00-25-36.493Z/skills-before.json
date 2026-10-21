@@ -1,0 +1,105 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04baf",
+    "skillName_eng": "Mighty Double Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt zwei physische Schläge aus. Jeder Treffer hat auf Skilllevel 1 einen Grundangriffswert von 166, der je weiterer Stufe um 32 auf 614 steigt. Die Mana-Kosten 83 auf Stufe 1, +16 je weiterer Stufe, maximal 307 auf Stufe 15. Der Angriff beginnt ohne Cast Time und hat auf Level 1 47 Sekunden Cooldown. Je weiterer Skillstufe sinkt der Cooldown um 1 Sekunde auf 33 Sekunden auf Level 15. Die Animation dauert vorläufig 0,5 Sekunden; die genauen Trefferzeitpunkte werden im Spiel festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Performs two physical strikes. Each hit has a base attack value of 166 at skill level 1, increasing by 32 per additional level to 614. Mana cost 83 at level 1, maximum 307 at level 15. The attack begins with no cast time and has a 47 second cooldown at level 1. Each additional skill level reduces cooldown by 1 second, reaching 33 seconds at level 15. Animation duration is provisionally 0.5 seconds; exact hit timings will be defined in game.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 76,
+    "patk": 166,
+    "skillName_de": "Mächtiger Doppelschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0,
+    "mana": 83,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 83,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 166,
+        "perLevel": 32
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bef",
+    "skillName_eng": "Steadfast",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Butcher",
+      "Destroyer",
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Berserker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft deine Vitalität um 2 und deine Willenskraft um 1 je gelerntem Skilllevel, bis zu 20 Vitalität und 10 Willenskraft auf Level 10. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently increases Vitality by 2 and Wisdom by 1 per learned skill level, up to 20 Vitality and 10 Wisdom at level 10. No activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 140,
+    "skillName_de": "Standhaft",
+    "skillpoints": 1,
+    "vita": 2,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    }
+  }
+]

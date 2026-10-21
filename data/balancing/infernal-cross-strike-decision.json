@@ -1,0 +1,73 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-infernal-cross-strike-1792332303472",
+  "skill": {
+    "_id": "6acc1c7e4826525c70d04baf",
+    "skillName_eng": "Infernal Cross Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entzündet Flammen um deine beiden Einhand-Streitkolben und führt zwei aufeinanderfolgende Schläge aus. Jeder Treffer verursacht physischen Grundschaden von 166, +32 je weiterer Stufe bis 614 auf Stufe 15, sowie magischen Feuer-Grundschaden in halber Höhe: 83, +16 je weiterer Stufe bis 307. Je Treffer kommen einmal der volle aktuelle P-Angriff und einmal der volle aktuelle M-Angriff hinzu. Zwei Treffer mit jeweils voller Wirkung, keine zusätzliche Schadensverdopplung und kein DoT. Keine Castzeit. Cooldown 47 Sekunden, −1 je weiterer Stufe bis 33. Vorläufige Animation 0,5 Sekunden; genaue Trefferzeitpunkte und Trefferbereich bleiben offen. Mana-Kosten 125 auf Stufe 1, +24 je weiterer Stufe bis 461 auf Stufe 15. Die Kosten entsprechen gerundet 25 Prozent des gesamten Skill-Grundschadens beider Treffer, ohne Charakterangriff und ohne zusätzliche Gegnerzahl.",
+    "description_eng": "Ignites flames around your two one-handed maces and performs two consecutive strikes. Each hit deals physical base damage 166 plus 32 per additional level to 614 at level 15, plus magical fire base damage equal to half: 83 plus 16 per additional level to 307. Each hit adds full current physical attack and full current magical attack once. Both hits deal full damage, without an extra doubling or damage over time. No cast time. Cooldown 47 seconds minus 1 per additional level to 33. Provisional animation 0.5 seconds; exact hit timing and hit area remain undefined. Mana 125 at level 1 plus 24 per additional level to 461, rounded from 25 percent of both hits total skill base damage, excluding character attack and target count.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 76,
+    "patk": 166,
+    "skillName_de": "Infernaler Kreuzschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending",
+      "magicalDamageElement": "fire"
+    },
+    "castTimeSeconds": 0,
+    "mana": 125,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 125,
+          "perLevel": 24
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 166,
+        "perLevel": 32
+      },
+      "matk": {
+        "type": "linear",
+        "base": 83,
+        "perLevel": 16
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "matk": 83
+  }
+}

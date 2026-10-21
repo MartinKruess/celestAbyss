@@ -1,0 +1,93 @@
+{
+  "_id": "6acc1c7e4826525c70d04bca",
+  "skillName_eng": "Soul Shackle",
+  "__v": 0,
+  "category": "active",
+  "cd": 61,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verbraucht 1 Seelenfragment und lässt zwei seelenhafte Hände aus dem Boden den Gegner festhalten. Kein Lebensopfer. Die Fessel betäubt das Ziel und senkt seine M-Defense währenddessen um 10 Prozent. Dauer gleichmäßig von 2 Sekunden auf Stufe 1 bis 3 Sekunden auf Stufe 15. Magischer Initial-Grundschaden 97, +34 je weiterer Stufe, auf Stufe 15 573. Mana 25, +12 je weiterer Stufe, auf Stufe 15 193. Cooldown 61 Sekunden, -1 je weiterer Stufe, auf Stufe 15 47 Sekunden. Castzeit vorläufig 0,1 Sekunden innerhalb des genannten Bereichs 0,1–0,2 Sekunden. Während der Fessel ist Seelenqual nutzbar. Definition, Kapazität und Wiederauffüllen des permanenten Seelenvorrats werden separat ausgearbeitet.",
+  "description_eng": "Consumes 1 soul fragment and summons two spectral hands from the ground to hold the enemy. No health cost. Stuns the target and reduces magical defense by 10 percent for the same duration. Duration increases linearly from 2 seconds at level 1 to 3 at level 15. Initial magical base damage 97 plus 34 per additional level, reaching 573. Mana 25 plus 12 per additional level, reaching 193. Cooldown 61 minus 1 per additional level, reaching 47 seconds. Provisional cast time 0.1 seconds within the stated 0.1–0.2 range. Soul Torment can be used during the shackle. Permanent soul storage capacity and replenishment are defined separately.",
+  "dmgType": "spell",
+  "dur": 2,
+  "matk": 97,
+  "maxSkillLv": 15,
+  "maxUpgradeLv": 10,
+  "nr": 103,
+  "skillName_de": "Seelenfessel",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 61,
+    "perLevel": -1
+  },
+  "durationScaling": {
+    "type": "linear",
+    "base": 2,
+    "perLevel": 0.07142857142857142
+  },
+  "effects": [
+    {
+      "key": "soul-shackle-control",
+      "type": "control",
+      "target": "enemy",
+      "controlKind": "stun",
+      "durationSeconds": 2,
+      "durationScaling": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 0.07142857142857142
+      }
+    },
+    {
+      "key": "soul-shackle-magical-defense",
+      "type": "statModifier",
+      "target": "enemy",
+      "stat": "mdef",
+      "value": -0.1,
+      "unit": "fraction",
+      "reference": "targetStat",
+      "durationSeconds": 2,
+      "durationScaling": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 0.07142857142857142
+      },
+      "endWith": "soul-shackle-control"
+    }
+  ],
+  "effectsVersion": 1,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 12
+      }
+    },
+    {
+      "resource": "soulFragments",
+      "reference": "currentSoulFragments",
+      "unit": "flat",
+      "scaling": {
+        "type": "fixed",
+        "base": 1
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 97,
+      "perLevel": 34
+    }
+  }
+}

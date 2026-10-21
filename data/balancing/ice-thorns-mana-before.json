@@ -1,0 +1,76 @@
+{
+  "_id": "6acc1c7e4826525c70d04b81",
+  "skillName_eng": "Ice Thorns",
+  "__v": 0,
+  "category": "active",
+  "cd": 22,
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer verursacht magischen Grundschaden von 123 auf Stufe 1, plus 37 je weiterer Stufe, bis zu 456 auf Stufe 10. Die Fesselwirkung steigt gleichmäßig von 1 auf 4 Sekunden über zehn Stufen. Währenddessen verursacht ein DoT nach jeder vollen Sekunde 8 festen magischen Schaden auf Stufe 1, plus 4 je weiterer Stufe, bis zu 44 je Tick auf Stufe 10. Der DoT erhält keinen zusätzlichen M-Angriffsbeitrag pro Tick. Auf Stufe 10 ergeben sich vier Ticks mit zusammen 176 und insgesamt 632 Skill-Grundschaden einschließlich erstem Treffer, vor zusätzlichem Charakterangriff auf den ersten Treffer und gegnerischer Verteidigung. Castzeit 0,5 Sekunden, bisheriger Cooldown 22 Sekunden. Mana-Kosten werden noch festgelegt.",
+  "description_eng": "Encloses the opponent in ice thorns, rooting them. Initial magical base damage starts at 123 at level 1 and increases by 37 per additional level to 456 at level 10. Root duration increases evenly from 1 to 4 seconds over ten levels. During this time a DoT ticks after each full second for 8 flat magical damage at level 1, increasing by 4 per additional level to 44 per tick at level 10. The DoT does not add caster magical attack per tick. At level 10 four ticks deal 176 damage, totaling 632 skill base damage including the initial hit, before additional character attack on the initial hit and enemy defense. Cast time is 0.5 seconds; existing cooldown is 22 seconds. Mana costs remain pending.",
+  "dmgType": "spell",
+  "dur": 1,
+  "matk": 123,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 30,
+  "skillName_de": "Eisranken",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.5,
+  "durationScaling": {
+    "type": "linear",
+    "base": 1,
+    "perLevel": 0.3333333333333333
+  },
+  "effects": [
+    {
+      "key": "ice-thorns-root",
+      "type": "control",
+      "controlKind": "root",
+      "target": "enemy",
+      "actionRestrictionsStatus": "defined",
+      "durationSeconds": 1,
+      "durationScaling": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 0.3333333333333333
+      }
+    },
+    {
+      "key": "ice-thorns-dot",
+      "type": "periodicDamage",
+      "target": "enemy",
+      "value": 8,
+      "unit": "flat",
+      "damageTypes": [
+        "magical"
+      ],
+      "addsCasterMagicalAttack": false,
+      "valueScaling": {
+        "type": "linear",
+        "base": 8,
+        "perLevel": 4
+      },
+      "intervalSeconds": 1,
+      "firstTickAfterSeconds": 1,
+      "durationSeconds": 1,
+      "durationScaling": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 0.3333333333333333
+      }
+    }
+  ],
+  "hasLingeringDamage": true,
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 123,
+      "perLevel": 37
+    }
+  }
+}

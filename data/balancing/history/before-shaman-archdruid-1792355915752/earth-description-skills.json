@@ -1,0 +1,484 @@
+[
+  {
+    "_id": "6ad4d5ac4b9572cb1e0ce934",
+    "nr": 255,
+    "skillName_de": "Felszähne",
+    "skillName_eng": "Rock Fangs",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 73,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 46
+      }
+    },
+    "mana": 18,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 18,
+          "values": [
+            18,
+            30,
+            41,
+            53,
+            64,
+            76,
+            87,
+            99,
+            110,
+            122,
+            133,
+            145,
+            156,
+            168,
+            179,
+            191,
+            202,
+            214,
+            225,
+            237
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.2,
+    "cd": 33,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 33,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "defined"
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "evaluation": "atImpact"
+    },
+    "description_de": "Lässt große, überkreuzte Felsspitzen um das anvisierte Ziel aus dem Boden schießen. Verursacht einmalig physischen Schaden an Gegnern in einem kleinen kreisförmigen Bereich um das Ziel; eng beieinanderstehende Gegner können gemeinsam getroffen werden. Grundschaden 73 auf Stufe 1, +46 je weiterer Stufe bis 947 auf Stufe 20, zuzüglich einmal des aktuellen P-Angriffs je getroffenem Gegner. Keine Verlangsamung, kein DoT und kein zusätzlicher Kontroll- oder Mehrfachtreffereffekt. Castzeit 0,2 Sekunden. Cooldown 33 Sekunden auf Stufe 1, −1 je weiterer Stufe bis 14 auf Stufe 20. Mana-Kosten entsprechen je Stufe gerundet 25 Prozent des Skill-Grundschadens, ohne Charakterangriff oder Gegnerzahl: 18 bis 237 Mana. Genauer Flächenradius, Reichweite und Animation noch offen. Der physische Schadensbonus von Weisheit des Salamanders gilt; deren Mana-Rabatt für Feuerangriffe gilt nicht.",
+    "description_eng": "Crossing rock spikes erupt around the selected target, dealing one physical hit to enemies in a small circular area. Closely grouped enemies can be hit together. Base damage 73 at level 1 plus 46 per additional level to 947 at level 20, plus full current physical attack once per target. No slow, damage over time, additional control or multi-hit effect. Cast time 0.2 seconds. Cooldown 33 seconds minus 1 per additional level to 14. Mana per level is rounded from 25 percent of skill base damage, excluding character attack and target count: 18 to 237. Exact area radius, range and animation remain undefined. Wisdom of the Salamander physical damage bonus applies; its fire Mana discount does not.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 73,
+            "perLevel": 46
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 33,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6ad4d939ec1879104cce1e72",
+    "nr": 256,
+    "skillName_de": "Felsensalve",
+    "skillName_eng": "Rock Volley",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 611,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 611,
+        "perLevel": 150
+      }
+    },
+    "mana": 306,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 306,
+          "values": [
+            306,
+            381,
+            456,
+            531,
+            908,
+            1021,
+            1133,
+            1246,
+            1358,
+            1961,
+            2111,
+            2261,
+            2411,
+            2561,
+            3389
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.6,
+    "cd": 65,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 65,
+      "perLevel": -1
+    },
+    "animationDurationSeconds": 2.5,
+    "animationTimingStatus": "provisional",
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "hitCount": 2,
+      "hitCountScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      "damageValueScope": "perHit",
+      "targetMode": "singleEnemy",
+      "hitTimingStatus": "pending",
+      "secondarySplinters": {
+        "damageFractionOfPrimaryHit": 0.1,
+        "maxTargetsPerProjectile": 4,
+        "reselectEachProjectile": true,
+        "distinctWithinProjectile": true,
+        "excludesPrimaryTarget": true,
+        "unusedSlotsExpire": true,
+        "canCauseFurtherSplinters": false,
+        "region": "behindPrimaryTarget",
+        "geometryStatus": "pending"
+      }
+    },
+    "description_de": "Hebt Felsplatten aus dem Boden und schleudert sie auf ein Hauptziel. Zwei Platten auf Stufe 1–4, drei auf Stufe 5–9, vier auf Stufe 10–14 und fünf auf Stufe 15. Jede Platte verursacht 611 physischen Grundschaden, +150 je weiterer Skillstufe bis 2711, zuzüglich einmal des aktuellen P-Angriffs. Jeder Einschlag erzeugt eine Splitterwelle hinter dem Hauptziel: bis zu vier verschiedene zufällige Nebenziele erhalten jeweils 10 Prozent des Schadens der jeweiligen Platte. Die Auswahl erfolgt je Platte neu aus den dann im Gebiet stehenden Gegnern. Das Hauptziel erhält keinen zusätzlichen Splitterschaden. Fehlende Nebenziele lassen Trefferplätze verfallen; keine Umverteilung auf bereits getroffene Gegner und keine weiteren Splitter aus Splittern. Exakte Fächergeometrie und Reichweite bleiben offen. Castzeit 0,6 Sekunden. Cooldown 65 Sekunden, −1 je weiterer Stufe bis 51 Sekunden. Vorläufige Animationsdauer 2,5 Sekunden; genaue Trefferzeitpunkte bleiben offen. Mana pro gesamter Anwendung: gerundet 25 Prozent des gesamten Grundschadens der Hauptziel-Platten, ohne Charakterangriff oder zusätzliche Gegnerzahl; 306 bis 3389. Kein DoT oder Kontrolleffekt. Weisheit des Salamanders erhöht den physischen Schaden, gibt diesem Erdangriff aber keinen Mana-Rabatt.",
+    "description_eng": "Lifts rock plates and throws them at one primary target. Two plates at levels1–4, three at5–9, four at10–14 and five at15. Each plate deals physical base damage611 plus150 per additional level to2711, plus full current physical attack once. Each impact sends splinters behind the primary target: up to four distinct random secondary enemies each receive10 percent of that plate damage. Targets are reselected independently for every plate from enemies currently inside. Excludes the primary target; unused slots expire, with no redistribution or recursive splinters. Exact fan geometry and range remain undefined. Cast0.6 seconds, cooldown65 minus1 per additional level to51. Provisional animation2.5 seconds, exact hit offsets pending. Mana per full application is rounded25 percent of all primary-projectile base damage, excluding character attack and secondary target count:306–3389. No DoT or control. Wisdom of the Salamander boosts physical damage but does not discount Mana for this earth skill.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 611,
+            "perLevel": 150
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 65,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "attackExecution",
+            "hitCountScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 2,
+            "steps": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6ad514a36f8a3e08cd8034d0",
+    "nr": 258,
+    "skillName_de": "Erdsäule",
+    "skillName_eng": "Earth Pillar",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 231,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 231,
+        "perLevel": 109
+      }
+    },
+    "mana": 58,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 58,
+          "values": [
+            58,
+            85,
+            112,
+            140,
+            167,
+            262,
+            290,
+            317,
+            344,
+            371
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.2,
+    "cd": 38,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 38,
+      "perLevel": -1
+    },
+    "dur": 5.85,
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "channelTimeSeconds": 0.1,
+      "hitCount": 1,
+      "damageValueScope": "perApplication",
+      "hitTimingStatus": "defined",
+      "knockbackDirection": "awayFromCaster",
+      "knockbackAppliesOnSuccessfulHit": true,
+      "knockbackResistanceStatus": "pending",
+      "terrainPlatform": {
+        "riseSeconds": 0.85,
+        "standingSeconds": 5,
+        "heightRangeMeters": {
+          "min": 1,
+          "max": 1.5
+        },
+        "liftsCaster": true,
+        "supportsFurtherTerrainSkills": false,
+        "geometryStatus": "pending",
+        "cooldownRunsDuringLifetime": true
+      },
+      "damagePhases": [
+        {
+          "stat": "patk",
+          "timing": "castEnd",
+          "offsetSeconds": 0,
+          "target": "enemiesInArea",
+          "addsCasterAttack": true
+        },
+        {
+          "stat": "patk",
+          "timing": "castEnd",
+          "offsetSeconds": 0.85,
+          "minimumSkillLevel": 6,
+          "baseDamage": 273,
+          "target": "enemiesInArea",
+          "addsCasterAttack": false
+        }
+      ]
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "centerTracking": "casterStartPosition",
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "evaluation": "perHit"
+    },
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "earth-pillar-initial-stun",
+        "type": "control",
+        "controlKind": "stun",
+        "target": "enemiesInArea",
+        "durationSeconds": 0.5,
+        "applicationDelaySeconds": 0
+      }
+    ],
+    "description_de": "Hebt unter dir eine steinerne Säule aus dem Boden und trägt dich mit nach oben. Nach 0,2 Sekunden Castzeit folgen 0,1 Sekunden gebundenes Weiterzaubern für die erste Anhebung. Kleine Felsspitzen verursachen einmalig 231 physischen Grundschaden, +109 je weiterer Stufe bis 1212, zuzüglich einmal deines P-Angriffs. Getroffene Gegner werden nach außen weggeschoben und 0,5 Sekunden betäubt. Die Säule fährt anschließend in vorläufig 0,85 Sekunden auf etwa 1 bis 1,5 Meter hoch und bleibt danach 5 Sekunden stehen. Ab Stufe 6 brechen beim vollständigen Ausfahren größere Spitzen um die Säule hervor: einmalig 273 zusätzlicher physischer Schaden ohne weiteren P-Angriff oder weitere Betäubung. Beide Phasen prüfen die dann anwesenden Gegner; entkommene Gegner werden nicht automatisch erneut getroffen. Cooldown ab Abschluss des gebundenen Zauberns: 38 bis 29 Sekunden, läuft während des Hochfahrens und der Standdauer. Mana je Anwendung: gerundet 25 Prozent des gesamten Grundschadens ohne P-Angriff, 58 bis 371. Weisheit des Salamanders erhöht beide physischen Schadensphasen, gewährt aber keinen Feuer-Mana-Rabatt. Kein DoT. Die Säule ist kein gültiger Boden für weitere Erdsäulen. Genaue Höhe, Radien, Wegschubstrecke und Höheninteraktion mit anderen Skills werden später im Spiel abgestimmt.",
+    "description_eng": "Raises a stone pillar beneath you, carrying you upward. A 0.2-second cast is followed by 0.1 seconds of continued channeling for the initial lift. Small rock spikes deal 231 physical base damage plus 109 per additional level, up to 1212, plus your physical attack once. Enemies hit are pushed outward and stunned for 0.5 seconds. The pillar then rises over a provisional 0.85 seconds to roughly 1 to 1.5 meters and remains standing for 5 seconds. From level 6, larger spikes erupt around the fully raised pillar, dealing an additional 273 physical damage once, without another physical-attack contribution or stun. Each phase checks enemies currently in its area; escaping enemies are not automatically hit again. Cooldown starts when channeling finishes: 38 seconds minus 1 per additional level to 29, running during ascent and standing time. Mana is rounded from 25 percent of total base damage, excluding character attack: 58 to 371. Wisdom of the Salamander boosts both physical phases but grants no fire Mana discount. No damage over time. The pillar cannot serve as ground for another pillar. Exact height, radii, push distance and interactions with other skills at different elevations remain subject to in-game tuning.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 231,
+            "perLevel": 109
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 38,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

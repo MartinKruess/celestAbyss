@@ -1,0 +1,578 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04ba3",
+    "skillName_eng": "Healing",
+    "__v": 0,
+    "category": "active",
+    "cd": 17,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 20, 26, 32, 38 und so weiter: Jeder nächste Zuwachs ist um 6 höher. Heilwerte von Stufe 1 bis 20: 20, 46, 78, 116, 160, 210, 266, 328, 396, 470, 550, 636, 728, 826, 930, 1040, 1156, 1278, 1406, 1540. Formel für Stufe L: 20 × L + 3 × L × (L - 1). Auf Stufe 20 beträgt der Heilwert 1540 HP. Castzeit 0,1 Sekunden. Bestehender Cooldown 17 Sekunden. Mana-Kosten 16 auf Stufe 1 und +6 je weiterer Stufe, insgesamt 130 auf Stufe 20. Einmalige Heilung nach der Castzeit, Wirkungsdauer 0 Sekunden, keine Heilticks.",
+    "description_eng": "Heals an allied target. Healing grows cumulatively with increments of 20, 26, 32, 38 and so on, increasing each successive increment by 6. Healing values at levels 1–20: 20, 46, 78, 116, 160, 210, 266, 328, 396, 470, 550, 636, 728, 826, 930, 1040, 1156, 1278, 1406, 1540. Formula for level L: 20 × L + 3 × L × (L - 1). Level 20 healing is 1540 HP. Cast time 0.1 seconds. Existing cooldown 17 seconds. Mana cost 16 at level 1 and +6 per additional level, totaling 130 at level 20. Heals once after casting, effect duration 0 seconds, no healing ticks.",
+    "dmgType": "spell",
+    "health": 20,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 64,
+    "skillName_de": "Heilung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "statScaling": {
+      "health": {
+        "type": "table",
+        "values": [
+          20,
+          46,
+          78,
+          116,
+          160,
+          210,
+          266,
+          328,
+          396,
+          470,
+          550,
+          636,
+          728,
+          826,
+          930,
+          1040,
+          1156,
+          1278,
+          1406,
+          1540
+        ]
+      }
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "effects": [
+      {
+        "key": "small-healing-single-target",
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 20,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            20,
+            46,
+            78,
+            116,
+            160,
+            210,
+            266,
+            328,
+            396,
+            470,
+            550,
+            636,
+            728,
+            826,
+            930,
+            1040,
+            1156,
+            1278,
+            1406,
+            1540
+          ]
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 16,
+          "perLevel": 6
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba7",
+    "skillName_eng": "Crystallized Water Sphere",
+    "__v": 0,
+    "category": "active",
+    "cd": 29,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmalig magischen Schaden verursacht. Der Grundschaden steigt von 137 um 27 je weiterer Stufe auf 380 auf Stufe 10. Mana-Kosten steigen von 39 um 14 je weiterer Stufe auf 165. Der Cooldown sinkt gleichmäßig von 29 auf 25 Sekunden. Castzeit 0,2 Sekunden. Die vorläufige Animation dauert 1 Sekunde; keine anhaltende Wirkungsdauer oder zusätzlicher Kontrolleffekt.",
+    "description_eng": "Hurls an ice sphere at your target, shattering on impact and dealing magical damage once. Base damage increases from 137 by 27 per additional level to 380 at level 10. Mana cost increases from 39 by 14 per additional level to 165. Cooldown decreases evenly from 29 to 25 seconds. Cast time is 0.2 seconds. Provisional animation lasts 1 second; no lasting effect or additional control effect.",
+    "dmgType": "spell",
+    "matk": 137,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 68,
+    "skillName_de": "Kristallisierte Wasserspähre",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 29,
+      "perLevel": -0.4444444444444444
+    },
+    "mana": 39,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 39,
+          "perLevel": 14
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 27
+      }
+    },
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.2,
+    "hasLingeringDamage": false
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcf",
+    "skillName_eng": "Radiant Aura Field",
+    "__v": 0,
+    "category": "active",
+    "cd": 72,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld mit 4 Metern Radius. Der Heiler erhält Selbstheilung bei Sekunde 1, 3, 5, 7, 9 und 11. Verbündete im Feld erhalten jeweils 30 Prozent des Selbstheilungswerts bei Sekunde 2, 4, 6, 8, 10 und 12; der Heiler erhält diese zusätzlichen Verbündeten-Ticks nicht. Selbstheilung je Tick 10 HP je gelerntem Skilllevel, auf Stufe 10 100 HP. Verbündetenheilung je Tick 3 HP je gelerntem Skilllevel, auf Stufe 10 30 HP je Empfänger. Über die volle Laufzeit insgesamt 60 bis 600 HP für den Heiler und 18 bis 180 HP je durchgehend anwesendem Verbündeten. Mana 15 auf Stufe 1 und +4 je weiterer Stufe, auf Stufe 10 51. Cooldown 72 Sekunden auf Stufe 1, je weiterer Stufe 3 Sekunden weniger, auf Stufe 10 45 Sekunden. Castzeit 0 Sekunden. Bewegung ist erlaubt; ein eigener Angriff oder eine andere aktive Heilung bricht das gesamte Feld und alle verbleibenden Ticks ab. Die eigenen Aura-Heilticks lösen keinen Abbruch aus. Regeln für andere Aktionen, erlittenen Schaden und Unterbrechungseffekte werden später geprüft. Kein zusätzlicher Faith-Bonus. Eine Skalierung mit Waffen- oder Charakter-M-Angriff ist noch nicht festgelegt.",
+    "description_eng": "Instantly activates a 12-second aura field with a 4-meter radius that moves with the healer. Self-healing occurs at seconds 1, 3, 5, 7, 9 and 11. Allies within the field receive 30 percent of the self-healing value at seconds 2, 4, 6, 8, 10 and 12; the caster does not receive these additional allied ticks. Self-healing per tick is 10 HP per learned skill level, reaching 100 at level 10. Allied healing per tick is 3 HP per learned skill level, reaching 30 per recipient at level 10. Full-duration totals: 60–600 HP for the healer and 18–180 per continuously present ally. Mana 15 plus 4 per additional level, reaching 51. Cooldown 72 seconds at level 1, reduced by 3 per additional level to 45 seconds at level 10; cast time zero. Movement is allowed; an own attack or another active healing action cancels the whole field and all remaining ticks. The aura’s own healing ticks do not cancel it. Other actions, incoming damage and interruption effects remain to be reviewed. No additional Faith bonus. Weapon/character magical-attack scaling remains undefined.",
+    "dmgType": "spell",
+    "dur": 12,
+    "health": 10,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 108,
+    "skillName_de": "Strahlendes Aurafeld",
+    "skillpoints": 1,
+    "areaSettings": {
+      "center": "caster",
+      "movesWithCaster": true,
+      "membership": "whileInside",
+      "includeCaster": false,
+      "radiusMeters": 4
+    },
+    "castTimeSeconds": 0,
+    "effects": [
+      {
+        "key": "radiant-aura-self-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 10,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 10
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 12
+      },
+      {
+        "key": "radiant-aura-allied-heal",
+        "type": "heal",
+        "target": "alliesInArea",
+        "excludesCaster": true,
+        "onlyWhileTargetInsideArea": true,
+        "value": 3,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 3,
+          "perLevel": 3
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 12
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 4
+        }
+      }
+    ],
+    "statScaling": {
+      "health": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 10
+      }
+    },
+    "sustainedActionSettings": {
+      "allowsMovement": true,
+      "cancelsOnOwnAttack": true,
+      "cancelsOnOtherHealingAction": true,
+      "ignoresOwnHealingTicksForCancellation": true,
+      "otherActionCancellationStatus": "pending",
+      "incomingDamageCancellationStatus": "pending"
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 72,
+      "perLevel": -3
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bdf",
+    "skillName_eng": "Recovery",
+    "__v": 0,
+    "category": "active",
+    "cd": 39,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt ein einzelnes anvisiertes verbündetes Ziel über Zeit. Jede Sekunde wird der Heilwert der aktuellen Skillstufe geheilt; erster Tick nach 1 Sekunde, kein zusätzlicher Sofort-Tick. Kumulative Heilwerte pro Tick von Stufe 1 bis 15: 11, 24, 39, 56, 75, 96, 119, 144, 171, 200, 231, 264, 299, 336, 375. Dauer auf Stufen 1 bis 14 jeweils 3 Sekunden (3 Ticks), erst auf Stufe 15 4 Sekunden (4 Ticks). Gesamt auf Stufe 1: 33 HP; auf Stufe 15: 1500 HP. Mana 22 auf Stufe 1 und +8 je weiterer Stufe, insgesamt 134 auf Stufe 15. Castzeit 0,2 Sekunden. Cooldown 39 Sekunden auf Stufe 1, je weiterer Stufe 1 Sekunde weniger, auf Stufe 15 25 Sekunden.",
+    "description_eng": "Heals a single selected allied target over time. Heals the current skill-level value once per second; first tick after 1 second, no additional instant tick. Cumulative healing per tick at levels 1–15: 11, 24, 39, 56, 75, 96, 119, 144, 171, 200, 231, 264, 299, 336, 375. Duration is 3 seconds (3 ticks) at levels 1–14, increasing only at level 15 to 4 seconds (4 ticks). Total healing: 33 HP at level 1, 1500 HP at level 15. Mana 22 plus 8 per additional level, totaling 134. Cast time 0.2 seconds. Cooldown 39 seconds at level 1, reduced by 1 second per additional level to 25 seconds at level 15.",
+    "dmgType": "spell",
+    "dur": 3,
+    "health": 11,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 124,
+    "skillName_de": "Wiederherstellung",
+    "skillpoints": 1,
+    "statScaling": {
+      "health": {
+        "type": "table",
+        "values": [
+          11,
+          24,
+          39,
+          56,
+          75,
+          96,
+          119,
+          144,
+          171,
+          200,
+          231,
+          264,
+          299,
+          336,
+          375
+        ]
+      }
+    },
+    "castTimeSeconds": 0.2,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ]
+    },
+    "effects": [
+      {
+        "key": "recovery-periodic-heal",
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 11,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            11,
+            24,
+            39,
+            56,
+            75,
+            96,
+            119,
+            144,
+            171,
+            200,
+            231,
+            264,
+            299,
+            336,
+            375
+          ]
+        },
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 3,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4
+          ]
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 22,
+          "perLevel": 8
+        }
+      }
+    ],
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 39,
+      "perLevel": -1
+    }
+  },
+  {
+    "_id": "6ad16c307a9be0e8beddf80f",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 32,
+        "perLevel": 26.555555555555557
+      }
+    },
+    "castTimeSeconds": 0.4,
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "attackArea": {
+      "centerTracking": "pending",
+      "maxTargets": 3,
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 5,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "evaluation": "perHit"
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 0.4444444444444444
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 56,
+          "perLevel": 34,
+          "values": []
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "targetCreatureTypes": [],
+        "damageSchool": "ice",
+        "requiredActiveSkillNumbers": [],
+        "firstTickAfterSeconds": 1.5,
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "linear",
+          "base": 32,
+          "perLevel": 26.555555555555557
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 0.4444444444444444
+        },
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "allowedRaces": [],
+        "value": 32,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1.5,
+        "durationSeconds": 4,
+        "key": "ice-rain-periodic-damage",
+        "addsCasterMagicalAttack": true,
+        "periodicDamageKind": "areaAttack"
+      },
+      {
+        "key": "frost-shower-movement-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.01,
+        "unit": "fraction",
+        "valueAtMaxLevel": -0.1,
+        "progressionStatus": "defined",
+        "durationSeconds": 3,
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 239,
+        "maxStacksPerTarget": 1,
+        "reapplicationPolicy": "refreshDuration",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.01,
+          "perLevel": -0.01
+        }
+      }
+    ],
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 239,
+    "skillName_eng": "Frost Shower",
+    "skillName_de": "Frostschauer",
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Creates icy rain within a 5-meter radius around the selected target. Each tick hits at most 3 enemies. No additional initial hit; first tick at 1.5 seconds, then every 1.5 seconds. Field duration starts at 4 seconds and increases evenly to 8 seconds at level 10. Magical skill base damage per tick per enemy starts at 32 and increases evenly to 271 at level 10. At maximum level ticks occur at 1.5 / 3 / 4.5 / 6 / 7.5 seconds, totaling 1355 skill base damage per continuously hit target. Each tick adds the caster’s current magical attack to skill base damage. Each hit slows movement by 1 percent at level 1, plus 1 percentage point per additional level to 10 percent. Slow lasts 3 seconds after each hit; subsequent hits refresh duration only. Mana 56 plus 34 per additional level to 362. Cast time 0.4 seconds. Cooldown 52 minus 1 per additional level to 43 seconds. Target selection per tick and field tracking remain pending. No collected points.",
+    "description_de": "Erzeugt eisigen Regen um das anvisierte Ziel in 5 Metern Radius. Jeder Tick trifft höchstens 3 Gegner. Kein zusätzlicher Initialtreffer; erster Tick nach 1,5 Sekunden, danach alle 1,5 Sekunden. Feldlaufzeit 4 Sekunden auf Stufe 1, gleichmäßig steigend bis 8 Sekunden auf Stufe 10. Magischer Skill-Grundschaden je Tick und getroffenem Gegner 32 auf Stufe 1, gleichmäßig steigend bis 271 auf Stufe 10. Auf Maximalstufe Ticks bei 1,5 / 3 / 4,5 / 6 / 7,5 Sekunden, insgesamt 1355 Skill-Grundschaden je durchgehend getroffenem Ziel. Jeder Tick addiert zum Skill-Grundschaden den aktuellen M-Angriff des Anwenders. Bewegungstempo des getroffenen Gegners sinkt um 1 Prozent auf Stufe 1, je weiterer Stufe um 1 Prozentpunkt bis 10 Prozent. Die Verlangsamung hält nach jedem Treffer 3 Sekunden; erneute Treffer frischen nur die Dauer auf. Mana 56 plus 34 je weiterer Stufe bis 362. Castzeit 0,4 Sekunden. Cooldown 52 Sekunden minus 1 je weiterer Stufe bis 43 Sekunden. Auswahl der bis zu drei Ziele je Tick und Mitbewegung des Feldes bleiben offen. Keine Sammelpunkte.",
+    "dmgType": "spell",
+    "skillpoints": 1,
+    "matk": 32,
+    "dur": 4,
+    "__v": 0,
+    "cd": 52
+  }
+]

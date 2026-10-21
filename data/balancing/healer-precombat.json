@@ -1,0 +1,139 @@
+{
+  "classKey": "healer",
+  "level": 60,
+  "status": "reviewedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 1,
+      "name": "Erleuchtung",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "manaRegen": 20
+      }
+    },
+    {
+      "nr": 44,
+      "name": "Erweiterung des Geistes",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "faith": 10,
+        "vic": 10
+      }
+    },
+    {
+      "nr": 60,
+      "name": "Hoffnungsschimmer",
+      "stats": {
+        "faith": 3,
+        "int": 7,
+        "wis": 6,
+        "manaRegen": 40
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 143,
+      "name": "Immunität",
+      "stats": {
+        "wis": 12,
+        "mdef": 42
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    },
+    {
+      "nr": 208,
+      "name": "Das ewige Wissen",
+      "stats": {
+        "wis": 2,
+        "faith": 11,
+        "int": 14
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Magiewaffe",
+      "equipped": {
+        "maxHealth": 3298,
+        "maxMana": 4242,
+        "physicalAttack": 108.2,
+        "magicalAttack": 688.2,
+        "physicalDefense": 483,
+        "magicalDefense": 960,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "int": 61,
+        "wis": 80,
+        "manaRegen": 60,
+        "faith": 24,
+        "vic": 10,
+        "vita": 20,
+        "pdef": 140,
+        "mdef": 182,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        1,
+        44,
+        60,
+        139,
+        143,
+        144,
+        201,
+        208
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 3898,
+        "maxMana": 6642,
+        "physicalAttack": 208.2,
+        "magicalAttack": 898,
+        "physicalDefense": 663,
+        "magicalDefense": 1302,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "directPassiveAttackSpeedBonus": 0.2,
+  "excluded": [
+    "Active buffs",
+    "Pet stats",
+    "Jewelry and stones",
+    "Agility speed conversion",
+    "Weapon speed calculation"
+  ],
+  "equipmentProposalApplied": false
+}

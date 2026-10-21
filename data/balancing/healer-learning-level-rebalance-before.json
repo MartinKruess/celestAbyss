@@ -1,0 +1,203 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b87",
+    "skillName_eng": "Energy Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 2.1,
+    "charClass": [
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Shamane",
+      "Druide",
+      "High Elves",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Wirft einen Ball aus purem Licht auf dein Ziel und verursacht einmalig magischen Schaden. Der magische Grundangriff steigt von 25 um 20 je weiterer Stufe auf 205. Die Mana-Kosten steigen von 12 um 12 je weiterer Stufe auf 120. Castzeit 0,15 Sekunden, kein anhaltender Effekt. Der Cooldown beträgt zunächst 2,1 Sekunden, ab Stufe 3 1,6 Sekunden, ab Stufe 5 1,1 Sekunden, ab Stufe 8 0,8 Sekunden und ab Stufe 10 0,6 Sekunden.",
+    "description_eng": "Throws a ball of pure light at your target, dealing magical damage once. Base magical attack increases from 25 by 20 per additional level to 205. Mana cost increases from 12 by 12 per additional level to 120. Cast time 0.15 seconds, no lasting effect. Cooldown starts at 2.1 seconds, then becomes 1.6 seconds at level 3, 1.1 seconds at level 5, 0.8 seconds at level 8, and 0.6 seconds at level 10.",
+    "dmgType": "spell",
+    "matk": 25,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 36,
+    "skillName_de": "Energieschlag",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.15,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        2.1,
+        2.1,
+        1.6,
+        1.6,
+        1.1,
+        1.1,
+        1.1,
+        0.8,
+        0.8,
+        0.6
+      ]
+    },
+    "hasLingeringDamage": false,
+    "mana": 12,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 12,
+          "perLevel": 12
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 20
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bdf",
+    "skillName_eng": "Recovery",
+    "__v": 0,
+    "category": "active",
+    "cd": 41,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt ein einzelnes anvisiertes verbündetes Ziel über Zeit. Jede Sekunde wird der Heilwert der aktuellen Skillstufe geheilt; erster Tick nach 1 Sekunde, kein zusätzlicher Sofort-Tick. Kumulative Heilwerte pro Tick von Stufe 1 bis 15: 11, 24, 39, 56, 75, 96, 119, 144, 171, 200, 231, 264, 299, 336, 375. Dauer auf Stufen 1 bis 14 jeweils 3 Sekunden (3 Ticks), erst auf Stufe 15 4 Sekunden (4 Ticks). Gesamt auf Stufe 1: 33 HP; auf Stufe 15: 1500 HP. Mana 22 auf Stufe 1 und +8 je weiterer Stufe, insgesamt 134 auf Stufe 15. Castzeit 0,2 Sekunden. Cooldown 41 Sekunden auf Stufe 1 und 27 Sekunden auf Stufe 15.",
+    "description_eng": "Heals a single selected allied target over time. Heals the current skill-level value once per second; first tick after 1 second, no additional instant tick. Cumulative healing per tick at levels 1–15: 11, 24, 39, 56, 75, 96, 119, 144, 171, 200, 231, 264, 299, 336, 375. Duration is 3 seconds (3 ticks) at levels 1–14, increasing only at level 15 to 4 seconds (4 ticks). Total healing: 33 HP at level 1, 1500 HP at level 15. Mana 22 plus 8 per additional level, totaling 134. Cast time 0.2 seconds. Cooldown 41 seconds at level 1 and 27 seconds at level 15.",
+    "dmgType": "spell",
+    "dur": 3,
+    "health": 11,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 124,
+    "skillName_de": "Wiederherstellung",
+    "skillpoints": 1,
+    "statScaling": {
+      "health": {
+        "type": "table",
+        "values": [
+          11,
+          24,
+          39,
+          56,
+          75,
+          96,
+          119,
+          144,
+          171,
+          200,
+          231,
+          264,
+          299,
+          336,
+          375
+        ]
+      }
+    },
+    "castTimeSeconds": 0.2,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ]
+    },
+    "effects": [
+      {
+        "key": "recovery-periodic-heal",
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 11,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            11,
+            24,
+            39,
+            56,
+            75,
+            96,
+            119,
+            144,
+            171,
+            200,
+            231,
+            264,
+            299,
+            336,
+            375
+          ]
+        },
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 3,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4
+          ]
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 22,
+          "perLevel": 8
+        }
+      }
+    ],
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 41,
+      "perLevel": -1
+    }
+  }
+]

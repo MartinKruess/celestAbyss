@@ -1,0 +1,118 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bea",
+    "skillName_eng": "Control",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Je besser du deine Kreaturen kontrollierst, desto effizienter werden sie. Alle Klassen können maximal Stufe 1 lernen, der Abenteurer und seine Weiterentwicklung maximal Stufe 3. Freischaltung ab Charakterlevel 5.",
+    "description_eng": "Improves creature control efficiency. All classes can learn up to level 1; the Adventurer and its advancement can learn up to level 3. Unlocks at character level 5.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 135,
+    "skillName_de": "Kontrolle",
+    "skillpoints": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3,
+        "Adventure": 3,
+        "Adventurer": 3,
+        "Scout": 3
+      },
+      "status": "defined"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 5,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad415ab43253f7922ed6ed9",
+    "charClass": [
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "skillpoints": 1,
+    "nr": 246,
+    "skillName_de": "Wilde Bindung",
+    "skillName_eng": "Wild Bond",
+    "category": "passive",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "resourceCosts": [],
+    "description_de": "Bei 100 % Vertrauen erhält das jeweilige Pet zusätzlich 10/15/20 % der aktuellen physischen Angriffskraft sowie 5/7,5/10 % der aktuellen physischen und magischen Verteidigung des Abenteurers. Der Abenteurer behält alle Werte. Die Verwendung des Angriffsbonus durch magische Pets bleibt offen; keine automatische Umwandlung festgelegt.",
+    "description_eng": "At 100% trust, the pet gains 10/15/20% of the owner’s current physical attack and 5/7.5/10% of each current defense. Owner retains all stats. Magical pet attack mapping remains pending.",
+    "companionBondSettings": {
+      "requiredTrustFraction": 1,
+      "usesCurrentOwnerStats": true,
+      "ownerRetainsStats": true,
+      "physicalAttackFractionByLevel": [
+        0.1,
+        0.15,
+        0.2
+      ],
+      "physicalDefenseFractionByLevel": [
+        0.05,
+        0.075,
+        0.1
+      ],
+      "magicalDefenseFractionByLevel": [
+        0.05,
+        0.075,
+        0.1
+      ],
+      "magicalPetAttackMappingStatus": "pending"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": [
+        "companionBondSettings.physicalAttackFractionByLevel",
+        "companionBondSettings.physicalDefenseFractionByLevel",
+        "companionBondSettings.magicalDefenseFractionByLevel"
+      ]
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

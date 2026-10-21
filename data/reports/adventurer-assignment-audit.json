@@ -1,0 +1,954 @@
+{
+  "source": "E:\\projects_g\\CA_Project\\Questsystem.ods",
+  "sourceSHA256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+  "slots": 28,
+  "assignments": [
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense1",
+      "sourceRow": 6,
+      "sourceColumn": 19,
+      "skillName": "Waffentraining",
+      "legacyID": "230",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04c2c",
+      "skillListID": 220,
+      "englishName": "Weapon Training",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Waffentraining",
+      "currentClassAssignment": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves"
+      ],
+      "isAssignedToAdventurer": true
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense1",
+      "sourceRow": 7,
+      "sourceColumn": 19,
+      "skillName": "Rotier Schlag",
+      "legacyID": "92",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bba",
+      "skillListID": 89,
+      "englishName": "Rotating Strike",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Rotier Schlag",
+      "currentClassAssignment": [
+        "Shamane",
+        "High Elves",
+        "Butcher",
+        "Destroyer"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense1",
+      "sourceRow": 8,
+      "sourceColumn": 19,
+      "skillName": "Beben",
+      "legacyID": "15",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04b72",
+      "skillListID": 15,
+      "englishName": "Tremor",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Beben",
+      "currentClassAssignment": [
+        "Druide",
+        "Alchemist",
+        "Shamane",
+        "High Elves"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense1",
+      "sourceRow": 9,
+      "sourceColumn": 19,
+      "skillName": "Mächtiger Doppelschlag",
+      "legacyID": "80",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04baf",
+      "skillListID": 77,
+      "englishName": "Mighty Double Strike",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Mächtiger Doppelschlag",
+      "currentClassAssignment": [
+        "Shamane",
+        "High Elves"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense1",
+      "sourceRow": 10,
+      "sourceColumn": 19,
+      "skillName": "Sprungschlag",
+      "legacyID": "111",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bcd",
+      "skillListID": 108,
+      "englishName": "Leap Strike",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Sprungschlag",
+      "currentClassAssignment": [
+        "Gladiator",
+        "Berserker",
+        "Druide",
+        "Alchemist"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense1",
+      "sourceRow": 11,
+      "sourceColumn": 19,
+      "skillName": "Wirbelnde Klinge",
+      "legacyID": "132",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04be1",
+      "skillListID": 128,
+      "englishName": "Bladestorm",
+      "sourceDefinitionDifferences": [
+        "description"
+      ],
+      "currentDatabaseName": "Wirbelnde Klinge",
+      "currentClassAssignment": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense2",
+      "sourceRow": 6,
+      "sourceColumn": 21,
+      "skillName": "Schwerttraining",
+      "legacyID": "107",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bc9",
+      "skillListID": 104,
+      "englishName": "Sword Training",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Schwerttraining",
+      "currentClassAssignment": [
+        "Knife",
+        "Templar"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense2",
+      "sourceRow": 7,
+      "sourceColumn": 21,
+      "skillName": "Doppelsprung",
+      "legacyID": "26",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04b7c",
+      "skillListID": 25,
+      "englishName": "Double Jump",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Doppelsprung",
+      "currentClassAssignment": [
+        "Hunter",
+        "Archer"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense2",
+      "sourceRow": 8,
+      "sourceColumn": 21,
+      "skillName": "Dashen",
+      "legacyID": "22",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04b78",
+      "skillListID": 21,
+      "englishName": "Dashing",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Dash",
+      "currentClassAssignment": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense2",
+      "sourceRow": 9,
+      "sourceColumn": 21,
+      "skillName": "Ausweichrolle",
+      "legacyID": "14",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04b71",
+      "skillListID": 14,
+      "englishName": "Dodge Roll",
+      "sourceDefinitionDifferences": [
+        "description"
+      ],
+      "currentDatabaseName": "Ausweichrolle",
+      "currentClassAssignment": [
+        "Hunter",
+        "Archer"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense2",
+      "sourceRow": 10,
+      "sourceColumn": 21,
+      "skillName": "Erste Hilfe",
+      "legacyID": "42",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04b8c",
+      "skillListID": 41,
+      "englishName": "First Aid",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Erste Hilfe",
+      "currentClassAssignment": [
+        "Druide",
+        "Alchemist",
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "offense2",
+      "sourceRow": 11,
+      "sourceColumn": 21,
+      "skillName": "Überschallklinge",
+      "legacyID": "121",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bd6",
+      "skillListID": 117,
+      "englishName": "Supersonic Strike",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Überschallklinge",
+      "currentClassAssignment": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "defense",
+      "sourceRow": 6,
+      "sourceColumn": 23,
+      "skillName": "Ausdauertraining",
+      "legacyID": "145",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bee",
+      "skillListID": 141,
+      "englishName": "Endurance Training",
+      "sourceDefinitionDifferences": [
+        "description"
+      ],
+      "currentDatabaseName": "Ausdauertraining",
+      "currentClassAssignment": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves"
+      ],
+      "isAssignedToAdventurer": true
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "defense",
+      "sourceRow": 7,
+      "sourceColumn": 23,
+      "skillName": "Durchhalten",
+      "legacyID": "67",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bf4",
+      "skillListID": 147,
+      "englishName": "Perseverance",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Durchhalten",
+      "currentClassAssignment": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "defense",
+      "sourceRow": 8,
+      "sourceColumn": 23,
+      "skillName": "Kleine Regeneration",
+      "legacyID": "79",
+      "status": "unresolved",
+      "mongoSkillID": null,
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "defense",
+      "sourceRow": 9,
+      "sourceColumn": 23,
+      "skillName": "Macht des Körpers",
+      "legacyID": "146",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bae",
+      "skillListID": 76,
+      "englishName": "Power of the Body",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Verstärkung des Körpers",
+      "currentClassAssignment": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Butcher",
+        "Destroyer",
+        "Berserker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "defense",
+      "sourceRow": 10,
+      "sourceColumn": 23,
+      "skillName": "Standhaft",
+      "legacyID": "150",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bef",
+      "skillListID": 142,
+      "englishName": "Steadfast",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Standhaft",
+      "currentClassAssignment": [
+        "Butcher",
+        "Destroyer",
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "defense",
+      "sourceRow": 11,
+      "sourceColumn": 23,
+      "skillName": "Rüstungstraining",
+      "legacyID": null,
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bf3",
+      "skillListID": 146,
+      "englishName": "Armortraining",
+      "sourceDefinitionDifferences": [
+        "description"
+      ],
+      "currentDatabaseName": "Rüstungstraining",
+      "currentClassAssignment": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves"
+      ],
+      "isAssignedToAdventurer": true
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "buff",
+      "sourceRow": 6,
+      "sourceColumn": 25,
+      "skillName": "Mut des Abenteurers",
+      "legacyID": "152",
+      "status": "sourceFoundDBMissing",
+      "mongoSkillID": null,
+      "skillListID": 148,
+      "englishName": "Adventurer's Courage",
+      "sourceDefinitionDifferences": [],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "buff",
+      "sourceRow": 7,
+      "sourceColumn": 25,
+      "skillName": "Erw. der Leidenschaft",
+      "legacyID": "153",
+      "status": "unresolved",
+      "mongoSkillID": null,
+      "suggestedAlias": "Passion Expansion",
+      "suggestedSkillListIDs": [
+        149
+      ],
+      "suggestedMongoIDs": [],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "buff",
+      "sourceRow": 8,
+      "sourceColumn": 25,
+      "skillName": "Scharfer Instinkte",
+      "legacyID": "154",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bf7",
+      "skillListID": 150,
+      "englishName": "Sharp Instincts",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Scharfer Instinkte",
+      "currentClassAssignment": [
+        "Villian",
+        "Shadowwarrior",
+        "Summoner",
+        "Soulseeker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "buff",
+      "sourceRow": 9,
+      "sourceColumn": 25,
+      "skillName": "Macht der Wildnis",
+      "legacyID": "155",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bf8",
+      "skillListID": 151,
+      "englishName": "Power of the Wilderness",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Macht der Wildnis",
+      "currentClassAssignment": [
+        "Shamane",
+        "High Elves"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "buff",
+      "sourceRow": 10,
+      "sourceColumn": 25,
+      "skillName": "Macht des Begleiters",
+      "legacyID": "156",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bf9",
+      "skillListID": 152,
+      "englishName": "Power of the Companion",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Macht des Begleiters",
+      "currentClassAssignment": [
+        "Hunter",
+        "Archer"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "buff",
+      "sourceRow": 11,
+      "sourceColumn": 25,
+      "skillName": "Für die Ehre",
+      "legacyID": "157",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bfa",
+      "skillListID": 153,
+      "englishName": "For Honor",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Für die Ehre",
+      "currentClassAssignment": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "passive",
+      "sourceRow": 6,
+      "sourceColumn": 27,
+      "skillName": "Erw. Kraft",
+      "legacyID": "44",
+      "status": "unresolved",
+      "mongoSkillID": null,
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "passive",
+      "sourceRow": 7,
+      "sourceColumn": 27,
+      "skillName": "Körperbeherrschung",
+      "legacyID": "70",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04ba6",
+      "skillListID": 68,
+      "englishName": "Body Control",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Körperbeherrschung",
+      "currentClassAssignment": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "passive",
+      "sourceRow": 8,
+      "sourceColumn": 27,
+      "skillName": "Überlebenswille",
+      "legacyID": "120",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04bd5",
+      "currentDatabaseName": "Überlebenswille",
+      "currentClassAssignment": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker"
+      ],
+      "isAssignedToAdventurer": false
+    },
+    {
+      "classSourceName": "Abenteurer",
+      "category": "passive",
+      "sourceRow": 9,
+      "sourceColumn": 27,
+      "skillName": "Adrenalin",
+      "legacyID": "6",
+      "status": "nameMatched",
+      "mongoSkillID": "6acc1c7e4826525c70d04b69",
+      "skillListID": 6,
+      "englishName": "Adrenaline",
+      "sourceDefinitionDifferences": [],
+      "currentDatabaseName": "Adrenalin",
+      "currentClassAssignment": [
+        "Shamane",
+        "High Elves",
+        "Druide",
+        "Alchemist"
+      ],
+      "isAssignedToAdventurer": false
+    }
+  ],
+  "conclusion": "Database class assignments are incomplete relative to recovered class skill board; counting database membership alone does not represent planned class skill set.",
+  "changesApplied": true,
+  "appliedAssignments": [
+    {
+      "id": "6acc1c7e4826525c70d04b69",
+      "name": "Adrenalin",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Druide",
+        "Alchemist",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04b71",
+      "name": "Ausweichrolle",
+      "classes": [
+        "Hunter",
+        "Archer",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04b72",
+      "name": "Beben",
+      "classes": [
+        "Druide",
+        "Alchemist",
+        "Shamane",
+        "High Elves",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04b78",
+      "name": "Dash",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04b7c",
+      "name": "Doppelsprung",
+      "classes": [
+        "Hunter",
+        "Archer",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04b8c",
+      "name": "Erste Hilfe",
+      "classes": [
+        "Druide",
+        "Alchemist",
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04ba6",
+      "name": "Körperbeherrschung",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bae",
+      "name": "Verstärkung des Körpers",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Butcher",
+        "Destroyer",
+        "Berserker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04baf",
+      "name": "Mächtiger Doppelschlag",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bba",
+      "name": "Rotier Schlag",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Butcher",
+        "Destroyer",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bc9",
+      "name": "Schwerttraining",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bcd",
+      "name": "Sprungschlag",
+      "classes": [
+        "Gladiator",
+        "Berserker",
+        "Druide",
+        "Alchemist",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bd5",
+      "name": "Überlebenswille",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bd6",
+      "name": "Überschallklinge",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04be1",
+      "name": "Wirbelnde Klinge",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bee",
+      "name": "Ausdauertraining",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bef",
+      "name": "Standhaft",
+      "classes": [
+        "Butcher",
+        "Destroyer",
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bf3",
+      "name": "Rüstungstraining",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bf4",
+      "name": "Durchhalten",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bf6",
+      "name": "Erweckung der Leidenschaft",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bf7",
+      "name": "Scharfer Instinkte",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bf8",
+      "name": "Macht der Wildnis",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bf9",
+      "name": "Macht des Begleiters",
+      "classes": [
+        "Hunter",
+        "Archer",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04bfa",
+      "name": "Für die Ehre",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ]
+    },
+    {
+      "id": "6acc1c7e4826525c70d04c2c",
+      "name": "Waffentraining",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves"
+      ]
+    }
+  ],
+  "addedAssignments": [
+    "Adrenalin",
+    "Ausweichrolle",
+    "Beben",
+    "Dash",
+    "Doppelsprung",
+    "Erste Hilfe",
+    "Körperbeherrschung",
+    "Verstärkung des Körpers",
+    "Mächtiger Doppelschlag",
+    "Rotier Schlag",
+    "Schwerttraining",
+    "Sprungschlag",
+    "Überlebenswille",
+    "Überschallklinge",
+    "Wirbelnde Klinge",
+    "Standhaft",
+    "Durchhalten",
+    "Erweckung der Leidenschaft",
+    "Scharfer Instinkte",
+    "Macht der Wildnis",
+    "Macht des Begleiters",
+    "Für die Ehre"
+  ],
+  "remainingUnresolved": [
+    "Kleine Regeneration",
+    "Mut des Abenteurers",
+    "Erw. Kraft"
+  ],
+  "historicalRename": "Erw. der Leidenschaft -> Erweckung der Leidenschaft, confirmed same existing skill"
+}

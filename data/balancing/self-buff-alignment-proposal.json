@@ -1,0 +1,729 @@
+{
+  "generatedAt": "2026-10-19T11:06:12.441Z",
+  "status": "simulatedProposalNotApplied",
+  "inputHashes": {
+    "data/skills.json": "caed4dca9c5388050d9487e8a8f3c077ca94b215b81a1c039044c150d9288891",
+    "data/balancing/class-comparison-level60.json": "abe63a14537f0f241aba614b3153de9b6e0b1a3854b0644395470a00a699b687",
+    "data/balancing/attribute-model.json": "8bbd65d3dac697d3ac5be12c8d7845a3b6993cfab3ef4cbb794c3b1029f595c2",
+    "data/balancing/all-class-damage-rotations.json": "03d7bd96350a020eb201d04d3ce985d9fb6d8a435f39a9068aa5d0729a636d33",
+    "services/timedDamageSimulation.js": "2d513f5d91a02a280a432e59d4db8baeca97acac128a6670aa61c41e9e2d0c86",
+    "services/attackSpeed.js": "fd7924cfcc6eb08f884fc0fea93dccecd44721611393ab131db787cb052f44bb"
+  },
+  "scope": "Two successive hypothetical packages. Current 600-second fixed policies; self-only and permanent-public-group scenarios tested for each package. Additional 1200-second self-only checks use freshly calculated 1200-second unbuffed controls. Existing durations, cooldowns and costs unchanged. No database, catalog or canonical Markdown/report changes.",
+  "packages": {
+    "first": [
+      {
+        "nr": 149,
+        "stat": "patk",
+        "base": 35,
+        "perLevel": 17.5
+      },
+      {
+        "nr": 148,
+        "stat": "atkSpeed",
+        "base": 0,
+        "perLevel": 0.0011111111111111111
+      },
+      {
+        "nr": 156,
+        "stat": "patk",
+        "base": 18,
+        "perLevel": 6
+      },
+      {
+        "nr": 154,
+        "stat": "patk",
+        "base": 2,
+        "perLevel": 2
+      },
+      {
+        "nr": 153,
+        "stat": "dex",
+        "base": 1.2,
+        "perLevel": 1.2
+      },
+      {
+        "nr": 190,
+        "stat": "patk",
+        "base": 17,
+        "perLevel": 8
+      },
+      {
+        "nr": 172,
+        "stat": "str",
+        "base": 4,
+        "perLevel": 1.3333333333333333
+      },
+      {
+        "nr": 12,
+        "stat": "patk",
+        "base": 120,
+        "perLevel": 30
+      },
+      {
+        "nr": 160,
+        "stat": "patk",
+        "base": 7,
+        "perLevel": 7
+      },
+      {
+        "nr": 162,
+        "stat": "str",
+        "base": 1.5,
+        "perLevel": 1.5
+      }
+    ],
+    "second": [
+      {
+        "nr": 149,
+        "stat": "patk",
+        "base": 30,
+        "perLevel": 15
+      },
+      {
+        "nr": 148,
+        "stat": "atkSpeed",
+        "base": 0,
+        "perLevel": 0.0011111111111111111
+      },
+      {
+        "nr": 156,
+        "stat": "patk",
+        "base": 12,
+        "perLevel": 4
+      },
+      {
+        "nr": 154,
+        "stat": "patk",
+        "base": 1,
+        "perLevel": 1
+      },
+      {
+        "nr": 153,
+        "stat": "dex",
+        "base": 1.2,
+        "perLevel": 1.2
+      },
+      {
+        "nr": 190,
+        "stat": "patk",
+        "base": 15,
+        "perLevel": 6
+      },
+      {
+        "nr": 172,
+        "stat": "str",
+        "base": 4,
+        "perLevel": 0.8888888888888888
+      },
+      {
+        "nr": 12,
+        "stat": "patk",
+        "base": 100,
+        "perLevel": 25
+      },
+      {
+        "nr": 160,
+        "stat": "patk",
+        "base": 7,
+        "perLevel": 7
+      },
+      {
+        "nr": 162,
+        "stat": "str",
+        "base": 1.5,
+        "perLevel": 1.5
+      },
+      {
+        "nr": 157,
+        "effectKey": "ancestor-three-arrows",
+        "base": 12,
+        "perLevel": 12
+      }
+    ]
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "unbuffed": {
+        "total": 506600.90000000515,
+        "auto": 307807.4000000032,
+        "skills": 198793.50000000003,
+        "summon": 0,
+        "manaSpent": 29415.35669999998,
+        "ownBuffMana": 0
+      },
+      "currentSelf": {
+        "total": 643206.1999999988,
+        "auto": 426997.70000000467,
+        "skills": 216208.5000000001,
+        "summon": 0,
+        "manaSpent": 30202.996699999978,
+        "ownBuffMana": 787.6399999999999
+      },
+      "currentParty": {
+        "total": 1104944.799999984,
+        "auto": 830416.299999991,
+        "skills": 274528.5000000002,
+        "summon": 0,
+        "manaSpent": 30202.996699999978,
+        "ownBuffMana": 787.6399999999999
+      },
+      "currentGainPercent": 26.965072505791497,
+      "longBase": {
+        "total": 1004315.1999999785,
+        "auto": 615614.8,
+        "skills": 388700.4000000008,
+        "summon": 0,
+        "manaSpent": 57770.31909999997,
+        "ownBuffMana": 0
+      },
+      "stages": {
+        "first": {
+          "self": {
+            "total": 565424.1000000029,
+            "auto": 355965.60000000376,
+            "skills": 209458.5000000001,
+            "summon": 0,
+            "manaSpent": 30202.996699999978,
+            "ownBuffMana": 787.6399999999999
+          },
+          "party": {
+            "total": 988753.1999999874,
+            "auto": 720974.6999999954,
+            "skills": 267778.5000000002,
+            "summon": 0,
+            "manaSpent": 30202.996699999978,
+            "ownBuffMana": 787.6399999999999
+          },
+          "gainPercent": 11.611349288956486,
+          "changeFromCurrent": -77782.0999999959,
+          "longSelf": {
+            "total": 1120702.8999999748,
+            "auto": 711304.499999993,
+            "skills": 409398.40000000084,
+            "summon": 0,
+            "manaSpent": 59054.59909999997,
+            "ownBuffMana": 1284.2799999999997
+          },
+          "longGainPercent": 11.588762173468915
+        },
+        "second": {
+          "self": {
+            "total": 558394.1000000035,
+            "auto": 350285.6000000037,
+            "skills": 208108.50000000006,
+            "summon": 0,
+            "manaSpent": 30202.996699999978,
+            "ownBuffMana": 787.6399999999999
+          },
+          "party": {
+            "total": 980593.1999999876,
+            "auto": 714164.6999999956,
+            "skills": 266428.5000000002,
+            "summon": 0,
+            "manaSpent": 30202.996699999978,
+            "ownBuffMana": 787.6399999999999
+          },
+          "gainPercent": 10.223669164424653,
+          "changeFromCurrent": -84812.09999999532,
+          "longSelf": {
+            "total": 1106732.8999999755,
+            "auto": 699954.4999999937,
+            "skills": 406778.4000000008,
+            "summon": 0,
+            "manaSpent": 59054.59909999997,
+            "ownBuffMana": 1284.2799999999997
+          },
+          "longGainPercent": 10.197764606171367
+        }
+      }
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "unbuffed": {
+        "total": 597263.8957499999,
+        "auto": 244529.2399999978,
+        "skills": 352734.6557499986,
+        "summon": 0,
+        "manaSpent": 51116.09,
+        "ownBuffMana": 0
+      },
+      "currentSelf": {
+        "total": 672136.3164000105,
+        "auto": 304138.5200000013,
+        "skills": 367997.79639999836,
+        "summon": 0,
+        "manaSpent": 50957.28,
+        "ownBuffMana": 300
+      },
+      "currentParty": {
+        "total": 1338878.1865999901,
+        "auto": 603417.7800000021,
+        "skills": 735460.4066000019,
+        "summon": 0,
+        "manaSpent": 91097.81999999996,
+        "ownBuffMana": 300
+      },
+      "currentGainPercent": 12.535902669286791,
+      "longBase": {
+        "total": 1167066.78025,
+        "auto": 493057.790000004,
+        "skills": 674008.9902500028,
+        "summon": 0,
+        "manaSpent": 96319.05999999994,
+        "ownBuffMana": 0
+      },
+      "stages": {
+        "first": {
+          "self": {
+            "total": 643229.8164000097,
+            "auto": 282438.5200000005,
+            "skills": 360791.29639999836,
+            "summon": 0,
+            "manaSpent": 50957.28,
+            "ownBuffMana": 300
+          },
+          "party": {
+            "total": 1301772.1865999908,
+            "auto": 576867.7800000021,
+            "skills": 724904.4066000015,
+            "summon": 0,
+            "manaSpent": 91097.81999999996,
+            "ownBuffMana": 300
+          },
+          "gainPercent": 7.696082247243341,
+          "changeFromCurrent": -28906.500000000815,
+          "longSelf": {
+            "total": 1259147.8436000273,
+            "auto": 562924.7000000125,
+            "skills": 696223.1436000059,
+            "summon": 0,
+            "manaSpent": 96261.12999999993,
+            "ownBuffMana": 300
+          },
+          "longGainPercent": 7.889956676712395
+        },
+        "second": {
+          "self": {
+            "total": 637448.5164000078,
+            "auto": 278098.52000000025,
+            "skills": 359349.9963999979,
+            "summon": 0,
+            "manaSpent": 50957.28,
+            "ownBuffMana": 300
+          },
+          "party": {
+            "total": 1294350.9865999902,
+            "auto": 571557.7800000021,
+            "skills": 722793.2066000021,
+            "summon": 0,
+            "manaSpent": 91097.81999999996,
+            "ownBuffMana": 300
+          },
+          "gainPercent": 6.728118162834362,
+          "changeFromCurrent": -34687.800000002724,
+          "longSelf": {
+            "total": 1247676.143600025,
+            "auto": 554274.7000000123,
+            "skills": 693401.4436000026,
+            "summon": 0,
+            "manaSpent": 96261.12999999993,
+            "ownBuffMana": 300
+          },
+          "longGainPercent": 6.90700521291141
+        }
+      }
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "unbuffed": {
+        "total": 709920.679999987,
+        "auto": 276640.4000000018,
+        "skills": 357609.36000000115,
+        "summon": 75670.92000000045,
+        "manaSpent": 35024,
+        "ownBuffMana": 0
+      },
+      "currentSelf": {
+        "total": 881017.8000000134,
+        "auto": 349860,
+        "skills": 443188.20000000007,
+        "summon": 87969.59999999937,
+        "manaSpent": 36868,
+        "ownBuffMana": 1844
+      },
+      "currentParty": {
+        "total": 1332098.600000023,
+        "auto": 602952,
+        "skills": 555695.5999999999,
+        "summon": 173450.99999999884,
+        "manaSpent": 36733,
+        "ownBuffMana": 1844
+      },
+      "currentGainPercent": 24.100878424900873,
+      "longBase": {
+        "total": 1400283.8400000029,
+        "auto": 556337.6000000037,
+        "skills": 692688.7599999988,
+        "summon": 151257.47999999748,
+        "manaSpent": 67792,
+        "ownBuffMana": 0
+      },
+      "stages": {
+        "first": {
+          "self": {
+            "total": 790872.5999999826,
+            "auto": 302236.2000000002,
+            "skills": 404528.87999999925,
+            "summon": 84107.52000000124,
+            "manaSpent": 36868,
+            "ownBuffMana": 1844
+          },
+          "party": {
+            "total": 1230476.6799999864,
+            "auto": 543722.3999999956,
+            "skills": 517169.67999999854,
+            "summon": 169584.6000000012,
+            "manaSpent": 36733,
+            "ownBuffMana": 1844
+          },
+          "gainPercent": 11.402952791852329,
+          "changeFromCurrent": -90145.2000000308,
+          "longSelf": {
+            "total": 1551653.160000041,
+            "auto": 610398.5999999917,
+            "skills": 772854.5999999956,
+            "summon": 168399.95999999702,
+            "manaSpent": 69626,
+            "ownBuffMana": 3688
+          },
+          "longGainPercent": 10.809902655167235
+        },
+        "second": {
+          "self": {
+            "total": 772176.5999999837,
+            "auto": 295096.20000000036,
+            "skills": 392972.8799999993,
+            "summon": 84107.52000000124,
+            "manaSpent": 36868,
+            "ownBuffMana": 1844
+          },
+          "party": {
+            "total": 1208860.6799999864,
+            "auto": 534842.3999999956,
+            "skills": 504433.67999999865,
+            "summon": 169584.6000000012,
+            "manaSpent": 36733,
+            "ownBuffMana": 1844
+          },
+          "gainPercent": 8.769419141304313,
+          "changeFromCurrent": -108841.20000002976,
+          "longSelf": {
+            "total": 1514593.160000035,
+            "auto": 595978.599999992,
+            "skills": 750214.5999999956,
+            "summon": 168399.95999999702,
+            "manaSpent": 69626,
+            "ownBuffMana": 3688
+          },
+          "longGainPercent": 8.163296378542228
+        }
+      }
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "unbuffed": {
+        "total": 603247.9899999991,
+        "auto": 340863.59999999666,
+        "skills": 262384.3899999996,
+        "summon": 0,
+        "manaSpent": 28959,
+        "ownBuffMana": 0
+      },
+      "currentSelf": {
+        "total": 708170.5100000039,
+        "auto": 447757.1999999955,
+        "skills": 260413.30999999944,
+        "summon": 0,
+        "manaSpent": 29075,
+        "ownBuffMana": 1848
+      },
+      "currentParty": {
+        "total": 1330585.8400000238,
+        "auto": 698320.6000000034,
+        "skills": 632265.24,
+        "summon": 0,
+        "manaSpent": 44386,
+        "ownBuffMana": 1848
+      },
+      "currentGainPercent": 17.392933211431828,
+      "longBase": {
+        "total": 1167622.7900000294,
+        "auto": 688842.0000000052,
+        "skills": 478780.7899999979,
+        "summon": 0,
+        "manaSpent": 54725,
+        "ownBuffMana": 0
+      },
+      "stages": {
+        "first": {
+          "self": {
+            "total": 667465.310000002,
+            "auto": 407051.9999999961,
+            "skills": 260413.30999999944,
+            "summon": 0,
+            "manaSpent": 29075,
+            "ownBuffMana": 1848
+          },
+          "party": {
+            "total": 1289841.0400000224,
+            "auto": 657575.8000000017,
+            "skills": 632265.24,
+            "summon": 0,
+            "manaSpent": 44386,
+            "ownBuffMana": 1848
+          },
+          "gainPercent": 10.645260500578392,
+          "changeFromCurrent": -40705.200000001816,
+          "longSelf": {
+            "total": 1295931.190000033,
+            "auto": 817119.2000000124,
+            "skills": 478811.9899999976,
+            "summon": 0,
+            "manaSpent": 54383,
+            "ownBuffMana": 3696
+          },
+          "longGainPercent": 10.988857111978811
+        },
+        "second": {
+          "self": {
+            "total": 652561.3100000013,
+            "auto": 396251.99999999616,
+            "skills": 256309.30999999944,
+            "summon": 0,
+            "manaSpent": 29075,
+            "ownBuffMana": 1848
+          },
+          "party": {
+            "total": 1269885.0400000222,
+            "auto": 645955.8000000012,
+            "skills": 623929.2399999999,
+            "summon": 0,
+            "manaSpent": 44386,
+            "ownBuffMana": 1848
+          },
+          "gainPercent": 8.174634779968738,
+          "changeFromCurrent": -55609.200000002515,
+          "longSelf": {
+            "total": 1266795.190000032,
+            "auto": 795439.2000000114,
+            "skills": 471355.9899999976,
+            "summon": 0,
+            "manaSpent": 54383,
+            "ownBuffMana": 3696
+          },
+          "longGainPercent": 8.493530688965079
+        }
+      }
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "unbuffed": {
+        "total": 605955.220000001,
+        "auto": 364580.99999999744,
+        "skills": 241374.21999999933,
+        "summon": 0,
+        "manaSpent": 35229,
+        "ownBuffMana": 0
+      },
+      "currentSelf": {
+        "total": 682106.241999999,
+        "auto": 442899.3619999985,
+        "skills": 239206.8800000002,
+        "summon": 0,
+        "manaSpent": 35108,
+        "ownBuffMana": 4277
+      },
+      "currentParty": {
+        "total": 1192528.1699999995,
+        "auto": 769700.4520000025,
+        "skills": 422827.7179999995,
+        "summon": 0,
+        "manaSpent": 66363,
+        "ownBuffMana": 4277
+      },
+      "currentGainPercent": 12.56710388599307,
+      "longBase": {
+        "total": 1202643.3400000134,
+        "auto": 738073.9800000095,
+        "skills": 464569.3599999985,
+        "summon": 0,
+        "manaSpent": 65965,
+        "ownBuffMana": 0
+      },
+      "stages": {
+        "first": {
+          "self": {
+            "total": 668910.1219999981,
+            "auto": 432580.72199999687,
+            "skills": 236329.40000000002,
+            "summon": 0,
+            "manaSpent": 35108,
+            "ownBuffMana": 4277
+          },
+          "party": {
+            "total": 1176377.73000001,
+            "auto": 758028.2520000029,
+            "skills": 418349.47799999936,
+            "summon": 0,
+            "manaSpent": 66363,
+            "ownBuffMana": 4277
+          },
+          "gainPercent": 10.389365405581774,
+          "changeFromCurrent": -13196.120000000927,
+          "longSelf": {
+            "total": 1306517.2820000073,
+            "auto": 854880.5699999923,
+            "skills": 451636.71199999895,
+            "summon": 0,
+            "manaSpent": 66005,
+            "ownBuffMana": 8204
+          },
+          "longGainPercent": 8.637136093897357
+        },
+        "second": {
+          "self": {
+            "total": 661126.0420000015,
+            "auto": 426474.9619999994,
+            "skills": 234651.0799999998,
+            "summon": 0,
+            "manaSpent": 35108,
+            "ownBuffMana": 4277
+          },
+          "party": {
+            "total": 1166890.7699999954,
+            "auto": 751073.4520000033,
+            "skills": 415817.31800000055,
+            "summon": 0,
+            "manaSpent": 66363,
+            "ownBuffMana": 4277
+          },
+          "gainPercent": 9.104768830937783,
+          "changeFromCurrent": -20980.19999999751,
+          "longSelf": {
+            "total": 1291180.0019999908,
+            "auto": 842820.3299999994,
+            "skills": 448359.672,
+            "summon": 0,
+            "manaSpent": 66005,
+            "ownBuffMana": 8204
+          },
+          "longGainPercent": 7.361838631225148
+        }
+      }
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "unbuffed": {
+        "total": 639898.3000000007,
+        "auto": 363753.5200000011,
+        "skills": 276144.77999999997,
+        "summon": 0,
+        "manaSpent": 40362,
+        "ownBuffMana": 0
+      },
+      "currentSelf": {
+        "total": 652528.3600000015,
+        "auto": 388522.81000000023,
+        "skills": 264005.5499999998,
+        "summon": 0,
+        "manaSpent": 39159.93999999999,
+        "ownBuffMana": 3364.9400000000032
+      },
+      "currentParty": {
+        "total": 1095606.959999996,
+        "auto": 725049.0599999971,
+        "skills": 370557.8999999995,
+        "summon": 0,
+        "manaSpent": 49164.93999999999,
+        "ownBuffMana": 3931.9400000000037
+      },
+      "currentGainPercent": 1.9737605178824058,
+      "longBase": {
+        "total": 1243469.1399999904,
+        "auto": 726848.0300000027,
+        "skills": 516621.11000000016,
+        "summon": 0,
+        "manaSpent": 75000,
+        "ownBuffMana": 0
+      },
+      "stages": {
+        "first": {
+          "self": {
+            "total": 691345.9975000039,
+            "auto": 419478.6475000005,
+            "skills": 271867.3500000006,
+            "summon": 0,
+            "manaSpent": 39159.93999999999,
+            "ownBuffMana": 3364.9400000000032
+          },
+          "party": {
+            "total": 1142332.2580000001,
+            "auto": 762733.2880000016,
+            "skills": 379598.9700000001,
+            "summon": 0,
+            "manaSpent": 49164.93999999999,
+            "ownBuffMana": 3931.9400000000037
+          },
+          "gainPercent": 8.039980337500996,
+          "changeFromCurrent": 38817.6375000024,
+          "longSelf": {
+            "total": 1362199.3145000061,
+            "auto": 846228.8795000107,
+            "skills": 515970.4350000003,
+            "summon": 0,
+            "manaSpent": 74966.88000000006,
+            "ownBuffMana": 6693.879999999991
+          },
+          "longGainPercent": 9.548300852887802
+        },
+        "second": {
+          "self": {
+            "total": 691345.9975000039,
+            "auto": 419478.6475000005,
+            "skills": 271867.3500000006,
+            "summon": 0,
+            "manaSpent": 39159.93999999999,
+            "ownBuffMana": 3364.9400000000032
+          },
+          "party": {
+            "total": 1142332.2580000001,
+            "auto": 762733.2880000016,
+            "skills": 379598.9700000001,
+            "summon": 0,
+            "manaSpent": 49164.93999999999,
+            "ownBuffMana": 3931.9400000000037
+          },
+          "gainPercent": 8.039980337500996,
+          "changeFromCurrent": 38817.6375000024,
+          "longSelf": {
+            "total": 1362199.3145000061,
+            "auto": 846228.8795000107,
+            "skills": 515970.4350000003,
+            "summon": 0,
+            "manaSpent": 74966.88000000006,
+            "ownBuffMana": 6693.879999999991
+          },
+          "longGainPercent": 9.548300852887802
+        }
+      }
+    }
+  ]
+}

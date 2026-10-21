@@ -1,0 +1,1911 @@
+{
+  "baseLevel": 1,
+  "attributeGainPerLevel": {
+    "vitality": 1,
+    "strength": 1,
+    "intelligence": 1,
+    "wisdom": 1
+  },
+  "directOperativeGainPerLevel": 0,
+  "rule": "Add conversions of gained attributes to existing Level-1 operative baselines; do not add starting attribute contributions twice.",
+  "confirmedDefaultConversions": {
+    "physicalAttackPerStrength": 1.8,
+    "magicalAttackPerIntelligence": 1.8,
+    "physicalAttackPerFaith": 1.8,
+    "physicalAttackPerVictim": 1.8,
+    "physicalAttackPerDexterity": 1.8,
+    "healthRegenPerVitality": 4,
+    "manaRegenPerWisdom": 3
+  },
+  "pendingConversions": [
+    "class-specific offensive attribute eligibility"
+  ],
+  "classes": [
+    {
+      "key": "adventurer",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 172,
+            "maxMana": 131,
+            "physicalAttack": 8,
+            "magicalAttack": 6,
+            "physicalDefense": 7,
+            "magicalDefense": 9,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 442,
+            "maxMana": 401,
+            "physicalAttack": 24.2,
+            "magicalAttack": 22.2,
+            "physicalDefense": 17.799999999999997,
+            "magicalDefense": 19.799999999999997,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 742,
+            "maxMana": 701,
+            "physicalAttack": 42.2,
+            "magicalAttack": 40.2,
+            "physicalDefense": 29.8,
+            "magicalDefense": 31.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1042,
+            "maxMana": 1001,
+            "physicalAttack": 60.2,
+            "magicalAttack": 58.2,
+            "physicalDefense": 41.8,
+            "magicalDefense": 43.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1342,
+            "maxMana": 1301,
+            "physicalAttack": 78.2,
+            "magicalAttack": 76.2,
+            "physicalDefense": 53.8,
+            "magicalDefense": 55.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1642,
+            "maxMana": 1601,
+            "physicalAttack": 96.2,
+            "magicalAttack": 94.2,
+            "physicalDefense": 65.8,
+            "magicalDefense": 67.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1942,
+            "maxMana": 1901,
+            "physicalAttack": 114.2,
+            "magicalAttack": 112.2,
+            "physicalDefense": 77.8,
+            "magicalDefense": 79.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 221,
+            "maxMana": 121,
+            "physicalAttack": 13,
+            "magicalAttack": 7,
+            "physicalDefense": 4,
+            "magicalDefense": 6,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 491,
+            "maxMana": 391,
+            "physicalAttack": 29.2,
+            "magicalAttack": 23.2,
+            "physicalDefense": 14.799999999999999,
+            "magicalDefense": 16.799999999999997,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 791,
+            "maxMana": 691,
+            "physicalAttack": 47.2,
+            "magicalAttack": 41.2,
+            "physicalDefense": 26.8,
+            "magicalDefense": 28.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1091,
+            "maxMana": 991,
+            "physicalAttack": 65.2,
+            "magicalAttack": 59.2,
+            "physicalDefense": 38.8,
+            "magicalDefense": 40.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1391,
+            "maxMana": 1291,
+            "physicalAttack": 83.2,
+            "magicalAttack": 77.2,
+            "physicalDefense": 50.8,
+            "magicalDefense": 52.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1691,
+            "maxMana": 1591,
+            "physicalAttack": 101.2,
+            "magicalAttack": 95.2,
+            "physicalDefense": 62.8,
+            "magicalDefense": 64.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1991,
+            "maxMana": 1891,
+            "physicalAttack": 119.2,
+            "magicalAttack": 113.2,
+            "physicalDefense": 74.8,
+            "magicalDefense": 76.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 183,
+            "maxMana": 151,
+            "physicalAttack": 9,
+            "magicalAttack": 11,
+            "physicalDefense": 5,
+            "magicalDefense": 5,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 453,
+            "maxMana": 421,
+            "physicalAttack": 25.2,
+            "magicalAttack": 27.2,
+            "physicalDefense": 15.799999999999999,
+            "magicalDefense": 15.799999999999999,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 753,
+            "maxMana": 721,
+            "physicalAttack": 43.2,
+            "magicalAttack": 45.2,
+            "physicalDefense": 27.8,
+            "magicalDefense": 27.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1053,
+            "maxMana": 1021,
+            "physicalAttack": 61.2,
+            "magicalAttack": 63.2,
+            "physicalDefense": 39.8,
+            "magicalDefense": 39.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1353,
+            "maxMana": 1321,
+            "physicalAttack": 79.2,
+            "magicalAttack": 81.2,
+            "physicalDefense": 51.8,
+            "magicalDefense": 51.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1653,
+            "maxMana": 1621,
+            "physicalAttack": 97.2,
+            "magicalAttack": 99.2,
+            "physicalDefense": 63.8,
+            "magicalDefense": 63.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1953,
+            "maxMana": 1921,
+            "physicalAttack": 115.2,
+            "magicalAttack": 117.2,
+            "physicalDefense": 75.8,
+            "magicalDefense": 75.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 212,
+            "maxMana": 137,
+            "physicalAttack": 12,
+            "magicalAttack": 6,
+            "physicalDefense": 9,
+            "magicalDefense": 3,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 482,
+            "maxMana": 407,
+            "physicalAttack": 28.2,
+            "magicalAttack": 22.2,
+            "physicalDefense": 20.34,
+            "magicalDefense": 13.799999999999999,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 782,
+            "maxMana": 707,
+            "physicalAttack": 46.2,
+            "magicalAttack": 40.2,
+            "physicalDefense": 32.94,
+            "magicalDefense": 25.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1082,
+            "maxMana": 1007,
+            "physicalAttack": 64.2,
+            "magicalAttack": 58.2,
+            "physicalDefense": 45.54,
+            "magicalDefense": 37.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1382,
+            "maxMana": 1307,
+            "physicalAttack": 82.2,
+            "magicalAttack": 76.2,
+            "physicalDefense": 58.14,
+            "magicalDefense": 49.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1682,
+            "maxMana": 1607,
+            "physicalAttack": 100.2,
+            "magicalAttack": 94.2,
+            "physicalDefense": 70.74000000000001,
+            "magicalDefense": 61.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1982,
+            "maxMana": 1907,
+            "physicalAttack": 118.2,
+            "magicalAttack": 112.2,
+            "physicalDefense": 83.34,
+            "magicalDefense": 73.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 153,
+            "maxMana": 182,
+            "physicalAttack": 2,
+            "magicalAttack": 12,
+            "physicalDefense": 3,
+            "magicalDefense": 13,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 423,
+            "maxMana": 452,
+            "physicalAttack": 18.2,
+            "magicalAttack": 28.2,
+            "physicalDefense": 13.799999999999999,
+            "magicalDefense": 23.799999999999997,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 723,
+            "maxMana": 752,
+            "physicalAttack": 36.2,
+            "magicalAttack": 46.2,
+            "physicalDefense": 25.8,
+            "magicalDefense": 35.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1023,
+            "maxMana": 1052,
+            "physicalAttack": 54.2,
+            "magicalAttack": 64.2,
+            "physicalDefense": 37.8,
+            "magicalDefense": 47.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1323,
+            "maxMana": 1352,
+            "physicalAttack": 72.2,
+            "magicalAttack": 82.2,
+            "physicalDefense": 49.8,
+            "magicalDefense": 59.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1623,
+            "maxMana": 1652,
+            "physicalAttack": 90.2,
+            "magicalAttack": 100.2,
+            "physicalDefense": 61.8,
+            "magicalDefense": 71.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1923,
+            "maxMana": 1952,
+            "physicalAttack": 108.2,
+            "magicalAttack": 118.2,
+            "physicalDefense": 73.8,
+            "magicalDefense": 83.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 176,
+            "maxMana": 163,
+            "physicalAttack": 6,
+            "magicalAttack": 12,
+            "physicalDefense": 6,
+            "magicalDefense": 6,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 446,
+            "maxMana": 433,
+            "physicalAttack": 22.2,
+            "magicalAttack": 28.2,
+            "physicalDefense": 16.799999999999997,
+            "magicalDefense": 17.34,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 746,
+            "maxMana": 733,
+            "physicalAttack": 40.2,
+            "magicalAttack": 46.2,
+            "physicalDefense": 28.8,
+            "magicalDefense": 29.94,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1046,
+            "maxMana": 1033,
+            "physicalAttack": 58.2,
+            "magicalAttack": 64.2,
+            "physicalDefense": 40.8,
+            "magicalDefense": 42.54,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1346,
+            "maxMana": 1333,
+            "physicalAttack": 76.2,
+            "magicalAttack": 82.2,
+            "physicalDefense": 52.8,
+            "magicalDefense": 55.14,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1646,
+            "maxMana": 1633,
+            "physicalAttack": 94.2,
+            "magicalAttack": 100.2,
+            "physicalDefense": 64.8,
+            "magicalDefense": 67.74000000000001,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1946,
+            "maxMana": 1933,
+            "physicalAttack": 112.2,
+            "magicalAttack": 118.2,
+            "physicalDefense": 76.8,
+            "magicalDefense": 80.34,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 184,
+            "maxMana": 111,
+            "physicalAttack": 13,
+            "magicalAttack": 3,
+            "physicalDefense": 6,
+            "magicalDefense": 8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 454,
+            "maxMana": 381,
+            "physicalAttack": 29.2,
+            "magicalAttack": 19.2,
+            "physicalDefense": 16.799999999999997,
+            "magicalDefense": 19.88,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 754,
+            "maxMana": 681,
+            "physicalAttack": 47.2,
+            "magicalAttack": 37.2,
+            "physicalDefense": 28.8,
+            "magicalDefense": 33.08,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1054,
+            "maxMana": 981,
+            "physicalAttack": 65.2,
+            "magicalAttack": 55.2,
+            "physicalDefense": 40.8,
+            "magicalDefense": 46.28,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1354,
+            "maxMana": 1281,
+            "physicalAttack": 83.2,
+            "magicalAttack": 73.2,
+            "physicalDefense": 52.8,
+            "magicalDefense": 59.480000000000004,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1654,
+            "maxMana": 1581,
+            "physicalAttack": 101.2,
+            "magicalAttack": 91.2,
+            "physicalDefense": 64.8,
+            "magicalDefense": 72.68,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1954,
+            "maxMana": 1881,
+            "physicalAttack": 119.2,
+            "magicalAttack": 109.2,
+            "physicalDefense": 76.8,
+            "magicalDefense": 85.88000000000001,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 231,
+            "maxMana": 133,
+            "physicalAttack": 5,
+            "magicalAttack": 4,
+            "physicalDefense": 11,
+            "magicalDefense": 10,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 501,
+            "maxMana": 403,
+            "physicalAttack": 21.2,
+            "magicalAttack": 20.2,
+            "physicalDefense": 22.34,
+            "magicalDefense": 21.34,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 801,
+            "maxMana": 703,
+            "physicalAttack": 39.2,
+            "magicalAttack": 38.2,
+            "physicalDefense": 34.94,
+            "magicalDefense": 33.94,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1101,
+            "maxMana": 1003,
+            "physicalAttack": 57.2,
+            "magicalAttack": 56.2,
+            "physicalDefense": 47.54,
+            "magicalDefense": 46.54,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1401,
+            "maxMana": 1303,
+            "physicalAttack": 75.2,
+            "magicalAttack": 74.2,
+            "physicalDefense": 60.14,
+            "magicalDefense": 59.14,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1701,
+            "maxMana": 1603,
+            "physicalAttack": 93.2,
+            "magicalAttack": 92.2,
+            "physicalDefense": 72.74000000000001,
+            "magicalDefense": 71.74000000000001,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 2001,
+            "maxMana": 1903,
+            "physicalAttack": 111.2,
+            "magicalAttack": 110.2,
+            "physicalDefense": 85.34,
+            "magicalDefense": 84.34,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 171,
+            "maxMana": 167,
+            "physicalAttack": 4,
+            "magicalAttack": 14,
+            "physicalDefense": 4,
+            "magicalDefense": 8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 441,
+            "maxMana": 437,
+            "physicalAttack": 20.2,
+            "magicalAttack": 30.2,
+            "physicalDefense": 14.799999999999999,
+            "magicalDefense": 18.799999999999997,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 741,
+            "maxMana": 737,
+            "physicalAttack": 38.2,
+            "magicalAttack": 48.2,
+            "physicalDefense": 26.8,
+            "magicalDefense": 30.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1041,
+            "maxMana": 1037,
+            "physicalAttack": 56.2,
+            "magicalAttack": 66.2,
+            "physicalDefense": 38.8,
+            "magicalDefense": 42.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1341,
+            "maxMana": 1337,
+            "physicalAttack": 74.2,
+            "magicalAttack": 84.2,
+            "physicalDefense": 50.8,
+            "magicalDefense": 54.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1641,
+            "maxMana": 1637,
+            "physicalAttack": 92.2,
+            "magicalAttack": 102.2,
+            "physicalDefense": 62.8,
+            "magicalDefense": 66.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1941,
+            "maxMana": 1937,
+            "physicalAttack": 110.2,
+            "magicalAttack": 120.2,
+            "physicalDefense": 74.8,
+            "magicalDefense": 78.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 169,
+            "maxMana": 167,
+            "physicalAttack": 4,
+            "magicalAttack": 14,
+            "physicalDefense": 4,
+            "magicalDefense": 8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 439,
+            "maxMana": 437,
+            "physicalAttack": 20.2,
+            "magicalAttack": 30.2,
+            "physicalDefense": 14.799999999999999,
+            "magicalDefense": 18.799999999999997,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 739,
+            "maxMana": 737,
+            "physicalAttack": 38.2,
+            "magicalAttack": 48.2,
+            "physicalDefense": 26.8,
+            "magicalDefense": 30.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1039,
+            "maxMana": 1037,
+            "physicalAttack": 56.2,
+            "magicalAttack": 66.2,
+            "physicalDefense": 38.8,
+            "magicalDefense": 42.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1339,
+            "maxMana": 1337,
+            "physicalAttack": 74.2,
+            "magicalAttack": 84.2,
+            "physicalDefense": 50.8,
+            "magicalDefense": 54.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1639,
+            "maxMana": 1637,
+            "physicalAttack": 92.2,
+            "magicalAttack": 102.2,
+            "physicalDefense": 62.8,
+            "magicalDefense": 66.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1939,
+            "maxMana": 1937,
+            "physicalAttack": 110.2,
+            "magicalAttack": 120.2,
+            "physicalDefense": 74.8,
+            "magicalDefense": 78.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 192,
+            "maxMana": 153,
+            "physicalAttack": 10,
+            "magicalAttack": 10,
+            "physicalDefense": 6,
+            "magicalDefense": 4,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 462,
+            "maxMana": 423,
+            "physicalAttack": 26.2,
+            "magicalAttack": 26.2,
+            "physicalDefense": 16.799999999999997,
+            "magicalDefense": 14.799999999999999,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 762,
+            "maxMana": 723,
+            "physicalAttack": 44.2,
+            "magicalAttack": 44.2,
+            "physicalDefense": 28.8,
+            "magicalDefense": 26.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1062,
+            "maxMana": 1023,
+            "physicalAttack": 62.2,
+            "magicalAttack": 62.2,
+            "physicalDefense": 40.8,
+            "magicalDefense": 38.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1362,
+            "maxMana": 1323,
+            "physicalAttack": 80.2,
+            "magicalAttack": 80.2,
+            "physicalDefense": 52.8,
+            "magicalDefense": 50.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1662,
+            "maxMana": 1623,
+            "physicalAttack": 98.2,
+            "magicalAttack": 98.2,
+            "physicalDefense": 64.8,
+            "magicalDefense": 62.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1962,
+            "maxMana": 1923,
+            "physicalAttack": 116.2,
+            "magicalAttack": 116.2,
+            "physicalDefense": 76.8,
+            "magicalDefense": 74.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 175,
+            "maxMana": 139,
+            "physicalAttack": 12,
+            "magicalAttack": 3,
+            "physicalDefense": 5,
+            "magicalDefense": 10,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 445,
+            "maxMana": 409,
+            "physicalAttack": 28.2,
+            "magicalAttack": 19.2,
+            "physicalDefense": 15.799999999999999,
+            "magicalDefense": 21.34,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 745,
+            "maxMana": 709,
+            "physicalAttack": 46.2,
+            "magicalAttack": 37.2,
+            "physicalDefense": 27.8,
+            "magicalDefense": 33.94,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1045,
+            "maxMana": 1009,
+            "physicalAttack": 64.2,
+            "magicalAttack": 55.2,
+            "physicalDefense": 39.8,
+            "magicalDefense": 46.54,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1345,
+            "maxMana": 1309,
+            "physicalAttack": 82.2,
+            "magicalAttack": 73.2,
+            "physicalDefense": 51.8,
+            "magicalDefense": 59.14,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1645,
+            "maxMana": 1609,
+            "physicalAttack": 100.2,
+            "magicalAttack": 91.2,
+            "physicalDefense": 63.8,
+            "magicalDefense": 71.74000000000001,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1945,
+            "maxMana": 1909,
+            "physicalAttack": 118.2,
+            "magicalAttack": 109.2,
+            "physicalDefense": 75.8,
+            "magicalDefense": 84.34,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "levels": [
+        {
+          "level": 1,
+          "attributeGain": {
+            "vitality": 0,
+            "strength": 0,
+            "intelligence": 0,
+            "wisdom": 0
+          },
+          "stats": {
+            "maxHealth": 166,
+            "maxMana": 134,
+            "physicalAttack": 11,
+            "magicalAttack": 6,
+            "physicalDefense": 5,
+            "magicalDefense": 8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 10,
+          "attributeGain": {
+            "vitality": 9,
+            "strength": 9,
+            "intelligence": 9,
+            "wisdom": 9
+          },
+          "stats": {
+            "maxHealth": 436,
+            "maxMana": 404,
+            "physicalAttack": 27.2,
+            "magicalAttack": 22.2,
+            "physicalDefense": 15.799999999999999,
+            "magicalDefense": 18.799999999999997,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 20,
+          "attributeGain": {
+            "vitality": 19,
+            "strength": 19,
+            "intelligence": 19,
+            "wisdom": 19
+          },
+          "stats": {
+            "maxHealth": 736,
+            "maxMana": 704,
+            "physicalAttack": 45.2,
+            "magicalAttack": 40.2,
+            "physicalDefense": 27.8,
+            "magicalDefense": 30.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 30,
+          "attributeGain": {
+            "vitality": 29,
+            "strength": 29,
+            "intelligence": 29,
+            "wisdom": 29
+          },
+          "stats": {
+            "maxHealth": 1036,
+            "maxMana": 1004,
+            "physicalAttack": 63.2,
+            "magicalAttack": 58.2,
+            "physicalDefense": 39.8,
+            "magicalDefense": 42.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 40,
+          "attributeGain": {
+            "vitality": 39,
+            "strength": 39,
+            "intelligence": 39,
+            "wisdom": 39
+          },
+          "stats": {
+            "maxHealth": 1336,
+            "maxMana": 1304,
+            "physicalAttack": 81.2,
+            "magicalAttack": 76.2,
+            "physicalDefense": 51.8,
+            "magicalDefense": 54.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributeGain": {
+            "vitality": 49,
+            "strength": 49,
+            "intelligence": 49,
+            "wisdom": 49
+          },
+          "stats": {
+            "maxHealth": 1636,
+            "maxMana": 1604,
+            "physicalAttack": 99.2,
+            "magicalAttack": 94.2,
+            "physicalDefense": 63.8,
+            "magicalDefense": 66.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributeGain": {
+            "vitality": 59,
+            "strength": 59,
+            "intelligence": 59,
+            "wisdom": 59
+          },
+          "stats": {
+            "maxHealth": 1936,
+            "maxMana": 1904,
+            "physicalAttack": 117.2,
+            "magicalAttack": 112.2,
+            "physicalDefense": 75.8,
+            "magicalDefense": 78.8,
+            "attackSpeed": 1,
+            "movementSpeed": 1,
+            "maxStamina": 1
+          }
+        }
+      ]
+    }
+  ],
+  "defenseConversionStatus": "Updated to current 1.2 factors and retained class modifiers"
+}

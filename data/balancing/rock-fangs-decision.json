@@ -1,0 +1,92 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-rock-fangs-1792333228108",
+  "skill": {
+    "_id": "6ad4d5ac4b9572cb1e0ce934",
+    "nr": 255,
+    "skillName_de": "Felszähne",
+    "skillName_eng": "Rock Fangs",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 73,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 46
+      }
+    },
+    "mana": 18,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 18,
+          "values": [
+            18,
+            30,
+            41,
+            53,
+            64,
+            76,
+            87,
+            99,
+            110,
+            122,
+            133,
+            145,
+            156,
+            168,
+            179,
+            191,
+            202,
+            214,
+            225,
+            237
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.2,
+    "cd": 33,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 33,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "defined"
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "evaluation": "atImpact"
+    },
+    "description_de": "Lässt große, überkreuzte Felsspitzen um das anvisierte Ziel aus dem Boden schießen. Verursacht einmalig physischen Schaden an Gegnern in einem kleinen kreisförmigen Bereich um das Ziel; eng beieinanderstehende Gegner können gemeinsam getroffen werden. Grundschaden 73 auf Stufe 1, +46 je weiterer Stufe bis 947 auf Stufe 20, zuzüglich einmal des aktuellen P-Angriffs je getroffenem Gegner. Keine Verlangsamung, kein DoT und kein zusätzlicher Kontroll- oder Mehrfachtreffereffekt. Castzeit 0,2 Sekunden. Cooldown 33 Sekunden auf Stufe 1, −1 je weiterer Stufe bis 14 auf Stufe 20. Mana-Kosten entsprechen je Stufe gerundet 25 Prozent des Skill-Grundschadens, ohne Charakterangriff oder Gegnerzahl: 18 bis 237 Mana. Genauer Flächenradius, Reichweite und Animation noch offen. Der physische Schadensbonus von Weisheit des Salamanders gilt; deren Mana-Rabatt für Feuerangriffe gilt nicht.",
+    "description_eng": "Crossing rock spikes erupt around the selected target, dealing one physical hit to enemies in a small circular area. Closely grouped enemies can be hit together. Base damage 73 at level 1 plus 46 per additional level to 947 at level 20, plus full current physical attack once per target. No slow, damage over time, additional control or multi-hit effect. Cast time 0.2 seconds. Cooldown 33 seconds minus 1 per additional level to 14. Mana per level is rounded from 25 percent of skill base damage, excluding character attack and target count: 18 to 237. Exact area radius, range and animation remain undefined. Wisdom of the Salamander physical damage bonus applies; its fire Mana discount does not."
+  }
+}

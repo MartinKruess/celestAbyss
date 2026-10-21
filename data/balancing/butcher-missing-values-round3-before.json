@@ -1,0 +1,164 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c0f",
+    "skillName_eng": "Combat Instinct",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Stärke.",
+    "description_eng": "Increase your strength.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 172,
+    "skillName_de": "Kampfinstinkt",
+    "skillpoints": 1,
+    "str": 6
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c10",
+    "skillName_eng": "Spirit of the Warrior",
+    "__v": 0,
+    "category": "active",
+    "cd": 600,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht deine Stärke auf Skilllevel 1 um 4 und deine Vitalität um 1. Pro weiterem Skilllevel steigen beide Boni um 1. Die Dauer steigt von 180 auf 270 Sekunden und der Cooldown sinkt von 600 auf 420 Sekunden bis Skilllevel 10.",
+    "description_eng": "At skill level 1, increases your Strength by 4 and Vitality by 1. Each additional skill level increases both bonuses by 1. By skill level 10, the duration increases from 180 to 270 seconds and the cooldown decreases from 600 to 420 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 180,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 173,
+    "skillName_de": "Geist des Kriegers",
+    "skillpoints": 1,
+    "str": 4,
+    "vita": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 600,
+      "perLevel": -20
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 180,
+      "perLevel": 10
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 1
+      },
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c11",
+    "skillName_eng": "Bloodlust",
+    "__v": 0,
+    "atkSpeed": 5,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verfalle in einen Blutrausch, der deine Stärke und dein Angriffstempo steigert.",
+    "description_eng": "Fall into a blood frenzy that increases your strength and attack speed.",
+    "dmgType": "selfbuff",
+    "dur": 60,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 174,
+    "skillName_de": "Blutrausch",
+    "skillpoints": 1,
+    "str": 3
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c12",
+    "skillName_eng": "Until Death",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du bist ein wahrer Krieger und lebst fur den Zweikampf. In einem Zweikampf (Boss) erhälst du einen Bonus auf deinen Angriff.",
+    "description_eng": "You are a true warrior and live for the duel. In a duel (boss) you get a bonus on your attack.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 175,
+    "patk": 55,
+    "skillName_de": "Bis in den Tot",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c46",
+    "skillName_eng": "Demonic Blast",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schlägt auf den Boden vor dir und erzeugt eine Schockwelle, die Gegner in einem kegelförmigen Bereich trifft.",
+    "description_eng": "Strikes the ground in front of you, creating a shock wave that hits enemies in a cone.",
+    "dmgType": "physical",
+    "dur": 2,
+    "matk": 109,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 227,
+    "patk": 172,
+    "skillName_de": "Dämonische Schockwelle",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4d",
+    "skillName_eng": "Executioner's Wrath",
+    "__v": 0,
+    "category": "active",
+    "cd": 440,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führe einen tödlichen Hieb aus, der schweren Schaden verursacht und eine hohe Kritchance hat.",
+    "description_eng": "Execute a lethal blow that deals heavy damage and has a high critical chance.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 234,
+    "patk": 600,
+    "skillName_de": "Zorn des Henkers",
+    "skillpoints": 1
+  }
+]

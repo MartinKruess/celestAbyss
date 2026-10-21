@@ -1,0 +1,1366 @@
+{
+  "_id": "armor-bonus-rules",
+  "generationStatus": "Approved ranges for six main attributes, HP/MP, regeneration, defenses, accuracy, dodge, critical rating, block, penetration and movement speed. Direct weapon attack/speed/skill damage ranges remain undefined. Critical damage is weapons-only and pending separate weapon-type rules. Range probabilities and smithing details remain undefined.",
+  "rules": {
+    "maximumCapacity": 6,
+    "availableByRank": {
+      "1": 0,
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 2,
+      "6": 3
+    },
+    "assignmentStatus": "No bonus values assigned yet",
+    "socketSlots": "Separate from bonus slots; not determined here",
+    "randomSelection": {
+      "mode": "weightedDrawWithoutReplacement",
+      "guaranteedOneValuePerAvailableSlot": true,
+      "duplicatesAllowed": false,
+      "totalWeight": 393,
+      "rollTiming": "Once on drop, persist on the individual item instance",
+      "rerollStatus": "Possible future crafting; not defined",
+      "valueRangesStatus": "Approved ranges for six main attributes, HP/MP, regeneration, defenses, accuracy, dodge, critical rating, block, penetration and movement speed. Direct weapon attack/speed/skill damage ranges remain undefined. Critical damage is weapons-only and pending separate weapon-type rules. Range probabilities and smithing details remain undefined.",
+      "qualityTiersStatus": "Not yet defined",
+      "precisionScope": "Approved integer roll stats: six main attributes, HP/MP, block, penetration, physical/magical defense, accuracy, dodge and critical rating. Luck retains up to one decimal; remaining stats up to two decimals. Derived character stats are not rounded by this rule.",
+      "pool": [
+        {
+          "stat": "strength",
+          "name": "Stärke",
+          "weight": 20,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 6,
+            "6": 8
+          },
+          "baseValueStatus": "Approved rank maxima and discrete integer roll values. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollValuesByRank": {
+            "1": [
+              1
+            ],
+            "2": [
+              1,
+              2
+            ],
+            "3": [
+              1,
+              2,
+              3
+            ],
+            "4": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "5": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "rollValueDistributionStatus": "Allowed discrete values approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "vitality",
+          "name": "Vitalität",
+          "weight": 20,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 6,
+            "6": 8
+          },
+          "baseValueStatus": "Approved rank maxima and discrete integer roll values. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollValuesByRank": {
+            "1": [
+              1
+            ],
+            "2": [
+              1,
+              2
+            ],
+            "3": [
+              1,
+              2,
+              3
+            ],
+            "4": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "5": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "rollValueDistributionStatus": "Allowed discrete values approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "intelligence",
+          "name": "Intelligenz",
+          "weight": 20,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 6,
+            "6": 8
+          },
+          "baseValueStatus": "Approved rank maxima and discrete integer roll values. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollValuesByRank": {
+            "1": [
+              1
+            ],
+            "2": [
+              1,
+              2
+            ],
+            "3": [
+              1,
+              2,
+              3
+            ],
+            "4": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "5": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "rollValueDistributionStatus": "Allowed discrete values approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "wisdom",
+          "name": "Willenskraft",
+          "weight": 20,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 6,
+            "6": 8
+          },
+          "baseValueStatus": "Approved rank maxima and discrete integer roll values. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollValuesByRank": {
+            "1": [
+              1
+            ],
+            "2": [
+              1,
+              2
+            ],
+            "3": [
+              1,
+              2,
+              3
+            ],
+            "4": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "5": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "rollValueDistributionStatus": "Allowed discrete values approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "dexterity",
+          "name": "Geschick",
+          "weight": 20,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 6,
+            "6": 8
+          },
+          "baseValueStatus": "Approved rank maxima and discrete integer roll values. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollValuesByRank": {
+            "1": [
+              1
+            ],
+            "2": [
+              1,
+              2
+            ],
+            "3": [
+              1,
+              2,
+              3
+            ],
+            "4": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "5": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "rollValueDistributionStatus": "Allowed discrete values approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "agility",
+          "name": "Agilität",
+          "weight": 20,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              8
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 2,
+            "3": 3,
+            "4": 4,
+            "5": 6,
+            "6": 8
+          },
+          "baseValueStatus": "Approved rank maxima and discrete integer roll values. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollValuesByRank": {
+            "1": [
+              1
+            ],
+            "2": [
+              1,
+              2
+            ],
+            "3": [
+              1,
+              2,
+              3
+            ],
+            "4": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "5": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "6": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "rollValueDistributionStatus": "Allowed discrete values approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "luck",
+          "name": "Glück",
+          "weight": 10,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.2
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.2,
+            "3": 1.4,
+            "4": 1.6,
+            "5": 1.8,
+            "6": 2
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots.",
+          "allowedItemCategories": [
+            "weapons"
+          ]
+        },
+        {
+          "stat": "maxHealth",
+          "name": "Maximales Leben",
+          "weight": 30,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              40,
+              80,
+              120,
+              160,
+              240,
+              320
+            ]
+          },
+          "baseValueByRank": {
+            "1": 40,
+            "2": 80,
+            "3": 120,
+            "4": 160,
+            "5": 240,
+            "6": 320
+          },
+          "baseValueStatus": "Approved rank maxima and inclusive integer roll ranges from 40 to rank maximum. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 40,
+              "max": 40,
+              "step": 1
+            },
+            "2": {
+              "min": 40,
+              "max": 80,
+              "step": 1
+            },
+            "3": {
+              "min": 40,
+              "max": 120,
+              "step": 1
+            },
+            "4": {
+              "min": 40,
+              "max": 160,
+              "step": 1
+            },
+            "5": {
+              "min": 40,
+              "max": 240,
+              "step": 1
+            },
+            "6": {
+              "min": 40,
+              "max": 320,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive integer bounds approved; probabilities within each range not yet specified.",
+          "allowedItemCategories": [
+            "armor"
+          ]
+        },
+        {
+          "stat": "maxMana",
+          "name": "Maximales Mana",
+          "weight": 25,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              40,
+              80,
+              120,
+              160,
+              240,
+              320
+            ]
+          },
+          "baseValueByRank": {
+            "1": 40,
+            "2": 80,
+            "3": 120,
+            "4": 160,
+            "5": 240,
+            "6": 320
+          },
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 40,
+              "max": 40,
+              "step": 1
+            },
+            "2": {
+              "min": 40,
+              "max": 80,
+              "step": 1
+            },
+            "3": {
+              "min": 40,
+              "max": 120,
+              "step": 1
+            },
+            "4": {
+              "min": 40,
+              "max": 160,
+              "step": 1
+            },
+            "5": {
+              "min": 40,
+              "max": 240,
+              "step": 1
+            },
+            "6": {
+              "min": 40,
+              "max": 320,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified.",
+          "allowedItemCategories": [
+            "armor"
+          ]
+        },
+        {
+          "stat": "healthRegen",
+          "name": "Lebensregeneration",
+          "weight": 30,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              0.2,
+              0.4,
+              0.6,
+              0.8,
+              1,
+              1.2
+            ]
+          },
+          "baseValueByRank": {
+            "1": 0.2,
+            "2": 0.4,
+            "3": 0.6,
+            "4": 0.8,
+            "5": 1,
+            "6": 1.2
+          },
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 0.1,
+              "max": 0.2,
+              "step": 0.01
+            },
+            "2": {
+              "min": 0.1,
+              "max": 0.4,
+              "step": 0.01
+            },
+            "3": {
+              "min": 0.1,
+              "max": 0.6,
+              "step": 0.01
+            },
+            "4": {
+              "min": 0.1,
+              "max": 0.8,
+              "step": 0.01
+            },
+            "5": {
+              "min": 0.1,
+              "max": 1,
+              "step": 0.01
+            },
+            "6": {
+              "min": 0.1,
+              "max": 1.2,
+              "step": 0.01
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "manaRegen",
+          "name": "Manaregeneration",
+          "weight": 25,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              0.2,
+              0.4,
+              0.6,
+              0.8,
+              1,
+              1.2
+            ]
+          },
+          "baseValueByRank": {
+            "1": 0.2,
+            "2": 0.4,
+            "3": 0.6,
+            "4": 0.8,
+            "5": 1,
+            "6": 1.2
+          },
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 0.1,
+              "max": 0.2,
+              "step": 0.01
+            },
+            "2": {
+              "min": 0.1,
+              "max": 0.4,
+              "step": 0.01
+            },
+            "3": {
+              "min": 0.1,
+              "max": 0.6,
+              "step": 0.01
+            },
+            "4": {
+              "min": 0.1,
+              "max": 0.8,
+              "step": 0.01
+            },
+            "5": {
+              "min": 0.1,
+              "max": 1,
+              "step": 0.01
+            },
+            "6": {
+              "min": 0.1,
+              "max": 1.2,
+              "step": 0.01
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "physicalAttack",
+          "name": "Physischer Angriff",
+          "weight": 3,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 2,
+            "perRank": 1
+          },
+          "baseValueByRank": {
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7
+          },
+          "valueUnit": "flat",
+          "baseValueStatus": "Approved base values; quality tiers undefined. R1 is only a curve anchor, with no random bonus slots.",
+          "allowedItemCategories": [
+            "weapons"
+          ]
+        },
+        {
+          "stat": "magicalAttack",
+          "name": "Magischer Angriff",
+          "weight": 3,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 2,
+            "perRank": 1
+          },
+          "baseValueByRank": {
+            "1": 2,
+            "2": 3,
+            "3": 4,
+            "4": 5,
+            "5": 6,
+            "6": 7
+          },
+          "valueUnit": "flat",
+          "baseValueStatus": "Approved base values; quality tiers undefined. R1 is only a curve anchor, with no random bonus slots.",
+          "allowedItemCategories": [
+            "weapons"
+          ]
+        },
+        {
+          "stat": "physicalDefense",
+          "name": "Physische Abwehr",
+          "weight": 15,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "baseValueByRank": {
+            "1": 5,
+            "2": 10,
+            "3": 15,
+            "4": 20,
+            "5": 25,
+            "6": 30
+          },
+          "valueUnit": "flat",
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 5,
+              "max": 5,
+              "step": 1
+            },
+            "2": {
+              "min": 5,
+              "max": 10,
+              "step": 1
+            },
+            "3": {
+              "min": 5,
+              "max": 15,
+              "step": 1
+            },
+            "4": {
+              "min": 5,
+              "max": 20,
+              "step": 1
+            },
+            "5": {
+              "min": 5,
+              "max": 25,
+              "step": 1
+            },
+            "6": {
+              "min": 5,
+              "max": 30,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified.",
+          "allowedItemCategories": [
+            "armor"
+          ]
+        },
+        {
+          "stat": "magicalDefense",
+          "name": "Magische Abwehr",
+          "weight": 15,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "baseValueByRank": {
+            "1": 5,
+            "2": 10,
+            "3": 15,
+            "4": 20,
+            "5": 25,
+            "6": 30
+          },
+          "valueUnit": "flat",
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 5,
+              "max": 5,
+              "step": 1
+            },
+            "2": {
+              "min": 5,
+              "max": 10,
+              "step": 1
+            },
+            "3": {
+              "min": 5,
+              "max": 15,
+              "step": 1
+            },
+            "4": {
+              "min": 5,
+              "max": 20,
+              "step": 1
+            },
+            "5": {
+              "min": 5,
+              "max": 25,
+              "step": 1
+            },
+            "6": {
+              "min": 5,
+              "max": 30,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified.",
+          "allowedItemCategories": [
+            "armor"
+          ]
+        },
+        {
+          "stat": "attackSpeed",
+          "name": "Angriffsgeschwindigkeit",
+          "weight": 10,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 0.5,
+            "perRank": 0.5
+          },
+          "baseValueByRank": {
+            "1": 0.5,
+            "2": 1,
+            "3": 1.5,
+            "4": 2,
+            "5": 2.5,
+            "6": 3
+          },
+          "valueUnit": "rawSpeedPoints",
+          "valueToStoredFractionFactor": 0.01,
+          "baseValueStatus": "Approved base values in raw speed points, before speed curve. Quality tiers undefined; R1 is a curve anchor with no random bonus slots.",
+          "allowedItemCategories": [
+            "weapons"
+          ]
+        },
+        {
+          "stat": "movementSpeed",
+          "name": "Laufgeschwindigkeit",
+          "weight": 10,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 4,
+            "values": [
+              1.5,
+              3,
+              4.5
+            ]
+          },
+          "baseValueByRank": {
+            "4": 1.5,
+            "5": 3,
+            "6": 4.5
+          },
+          "valueUnit": "rawSpeedPoints",
+          "valueToStoredFractionFactor": 0.01,
+          "baseValueStatus": "Approved boots-only rank 4-6 ranges; unavailable on ranks 1-3.",
+          "allowedItemCategories": [
+            "armor"
+          ],
+          "allowedEquipmentSlots": [
+            "boots"
+          ],
+          "minimumEquipmentRank": 4,
+          "rollRangeByRank": {
+            "4": {
+              "min": 0.1,
+              "max": 1.5,
+              "step": 0.01
+            },
+            "5": {
+              "min": 0.1,
+              "max": 3,
+              "step": 0.01
+            },
+            "6": {
+              "min": 0.1,
+              "max": 4.5,
+              "step": 0.01
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; existing two-decimal precision retained; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "accuracy",
+          "name": "Genauigkeit",
+          "weight": 15,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "baseValueByRank": {
+            "1": 5,
+            "2": 10,
+            "3": 15,
+            "4": 20,
+            "5": 25,
+            "6": 30
+          },
+          "valueUnit": "ratingPoints",
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 5,
+              "max": 5,
+              "step": 1
+            },
+            "2": {
+              "min": 5,
+              "max": 10,
+              "step": 1
+            },
+            "3": {
+              "min": 5,
+              "max": 15,
+              "step": 1
+            },
+            "4": {
+              "min": 5,
+              "max": 20,
+              "step": 1
+            },
+            "5": {
+              "min": 5,
+              "max": 25,
+              "step": 1
+            },
+            "6": {
+              "min": 5,
+              "max": 30,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "dodge",
+          "name": "Ausweichen",
+          "weight": 15,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              5,
+              10,
+              15,
+              20,
+              25,
+              30
+            ]
+          },
+          "baseValueByRank": {
+            "1": 5,
+            "2": 10,
+            "3": 15,
+            "4": 20,
+            "5": 25,
+            "6": 30
+          },
+          "valueUnit": "ratingPoints",
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 5,
+              "max": 5,
+              "step": 1
+            },
+            "2": {
+              "min": 5,
+              "max": 10,
+              "step": 1
+            },
+            "3": {
+              "min": 5,
+              "max": 15,
+              "step": 1
+            },
+            "4": {
+              "min": 5,
+              "max": 20,
+              "step": 1
+            },
+            "5": {
+              "min": 5,
+              "max": 25,
+              "step": 1
+            },
+            "6": {
+              "min": 5,
+              "max": 30,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified.",
+          "allowedItemCategories": [
+            "armor"
+          ]
+        },
+        {
+          "stat": "critChanceRating",
+          "name": "Kritischer Trefferwert",
+          "weight": 10,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              5,
+              9,
+              13,
+              17,
+              21,
+              25
+            ]
+          },
+          "baseValueByRank": {
+            "1": 5,
+            "2": 9,
+            "3": 13,
+            "4": 17,
+            "5": 21,
+            "6": 25
+          },
+          "valueUnit": "ratingPoints",
+          "baseValueStatus": "Approved rank maxima and roll ranges. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 5,
+              "max": 5,
+              "step": 1
+            },
+            "2": {
+              "min": 5,
+              "max": 9,
+              "step": 1
+            },
+            "3": {
+              "min": 5,
+              "max": 13,
+              "step": 1
+            },
+            "4": {
+              "min": 5,
+              "max": 17,
+              "step": 1
+            },
+            "5": {
+              "min": 5,
+              "max": 21,
+              "step": 1
+            },
+            "6": {
+              "min": 5,
+              "max": 25,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive bounds approved; probabilities within each range not yet specified."
+        },
+        {
+          "stat": "criticalDamageBonus",
+          "name": "Kritischer Zusatzschaden",
+          "weight": 3,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 0.75,
+            "perRank": 0.75
+          },
+          "baseValueByRank": {
+            "1": 0.75,
+            "2": 1.5,
+            "3": 2.25,
+            "4": 3,
+            "5": 3.75,
+            "6": 4.5
+          },
+          "baseValueStatus": "Previous maxima retained as reference only; deferred to separate weapon-type balance discussion.",
+          "valueUnit": "percentagePoints",
+          "valueToStoredFractionFactor": 0.01,
+          "allowedItemCategories": [
+            "weapons"
+          ],
+          "weaponBalanceStatus": "Pending separate one-handed/two-handed weapon rules; previous base maxima retained as reference only.",
+          "proposedRangeDesign": {
+            "status": "Deferred for separate weapon discussion; not approved for generation",
+            "minimumEquipmentRank": 4,
+            "minimum": 0.1,
+            "maximumByRank": {
+              "4": 1.5,
+              "5": 3,
+              "6": 4.5
+            },
+            "unit": "percentagePoints"
+          }
+        },
+        {
+          "stat": "block",
+          "name": "Block",
+          "weight": 15,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              3,
+              6,
+              10,
+              15,
+              20
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 3,
+            "3": 6,
+            "4": 10,
+            "5": 15,
+            "6": 20
+          },
+          "valueUnit": "ratingPoints",
+          "baseValueStatus": "Approved rank maxima and integer roll ranges from 1. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 1,
+              "max": 1,
+              "step": 1
+            },
+            "2": {
+              "min": 1,
+              "max": 3,
+              "step": 1
+            },
+            "3": {
+              "min": 1,
+              "max": 6,
+              "step": 1
+            },
+            "4": {
+              "min": 1,
+              "max": 10,
+              "step": 1
+            },
+            "5": {
+              "min": 1,
+              "max": 15,
+              "step": 1
+            },
+            "6": {
+              "min": 1,
+              "max": 20,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive integer bounds approved; probabilities within each range not yet specified.",
+          "equipmentAssignmentStatus": "Current eligibility unchanged; shield-only assignment is under consideration, not approved."
+        },
+        {
+          "stat": "penetration",
+          "name": "Penetration",
+          "weight": 15,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "tableByEquipmentRank",
+            "baseRank": 1,
+            "values": [
+              1,
+              3,
+              6,
+              10,
+              15,
+              20
+            ]
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 3,
+            "3": 6,
+            "4": 10,
+            "5": 15,
+            "6": 20
+          },
+          "valueUnit": "ratingPoints",
+          "baseValueStatus": "Approved rank maxima and integer roll ranges from 1. R1 is a curve anchor only, since R1 has no random affix slots.",
+          "rollRangeByRank": {
+            "1": {
+              "min": 1,
+              "max": 1,
+              "step": 1
+            },
+            "2": {
+              "min": 1,
+              "max": 3,
+              "step": 1
+            },
+            "3": {
+              "min": 1,
+              "max": 6,
+              "step": 1
+            },
+            "4": {
+              "min": 1,
+              "max": 10,
+              "step": 1
+            },
+            "5": {
+              "min": 1,
+              "max": 15,
+              "step": 1
+            },
+            "6": {
+              "min": 1,
+              "max": 20,
+              "step": 1
+            }
+          },
+          "rollValueDistributionStatus": "Inclusive integer bounds approved; probabilities within each range not yet specified.",
+          "allowedItemCategories": [
+            "weapons"
+          ]
+        },
+        {
+          "stat": "physicalSkillDamageBonus",
+          "name": "Physischer Skillschaden",
+          "weight": 12,
+          "decimalPlaces": 2,
+          "allowedItemCategories": [
+            "weapons"
+          ],
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 10,
+            "perRank": 10
+          },
+          "baseValueByRank": {
+            "1": 10,
+            "2": 20,
+            "3": 30,
+            "4": 40,
+            "5": 50,
+            "6": 60
+          },
+          "valueUnit": "flat",
+          "baseValueStatus": "Approved base values; quality tiers undefined. R1 is only a curve anchor, with no random bonus slots."
+        },
+        {
+          "stat": "magicalSkillDamageBonus",
+          "name": "Magischer Skillschaden",
+          "weight": 12,
+          "decimalPlaces": 2,
+          "allowedItemCategories": [
+            "weapons"
+          ],
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 10,
+            "perRank": 10
+          },
+          "baseValueByRank": {
+            "1": 10,
+            "2": 20,
+            "3": 30,
+            "4": 40,
+            "5": 50,
+            "6": 60
+          },
+          "valueUnit": "flat",
+          "baseValueStatus": "Approved base values; quality tiers undefined. R1 is only a curve anchor, with no random bonus slots."
+        }
+      ],
+      "eligibilityRule": "Before every draw, filter by allowedItemCategories AND allowedEquipmentSlots AND minimumEquipmentRank when present; remove stats already selected on this item and normalize remaining eligible weights. Direct physical/magical attack, skill damage, attack speed, critical damage, penetration and luck are weapons-only. Movement speed is armor boots-only from rank 4. Other attributes remain unrestricted. Block shield-only restriction is not decided. Random affixes only; gem sockets are separate.",
+      "uniquenessScope": "Per individual item across all random affix slots; armor and weapons. Same stat may appear on separate items. Attributes and their derived stats are distinct affixes.",
+      "drawRule": "Before each draw, filter by item eligibility and remove stat keys already selected on this item; normalize remaining eligible weights. Every available slot receives exactly one distinct stat. Slot count must not exceed eligible distinct stats.",
+      "futureSmithingDesign": {
+        "status": "Future design direction only; not implemented",
+        "scope": "Targeted improvement of individual rolled affix values",
+        "normalImprovement": "Use appropriate materials with a success chance to raise an existing value toward its normal rank maximum.",
+        "masterwork": "After reaching the normal maximum, rarer special materials may allow additional masterwork improvements; six main attributes could reach 10 instead of the R6 drop maximum 8 as an example.",
+        "dropMaximumUnchanged": true,
+        "parametersPending": [
+          "material types and costs",
+          "success probabilities",
+          "failure outcomes",
+          "eligibility by rank and stat",
+          "final masterwork limits"
+        ]
+      }
+    }
+  },
+  "source": "data/balancing/armor-defense-model.json"
+}

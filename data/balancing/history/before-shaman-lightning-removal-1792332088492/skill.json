@@ -1,0 +1,60 @@
+{
+  "_id": "6acc1c7e4826525c70d04b9c",
+  "skillName_eng": "Targeted Lightning",
+  "__v": 0,
+  "category": "active",
+  "cd": 42,
+  "charClass": [
+    "Shamane",
+    "High Elves",
+    "Herbalist",
+    "Witcher"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Schleudert einen gezielten Blitzschlag auf einen Gegner und verursacht einmalig magischen Grundschaden von 293 auf Stufe 1, plus 105 je weiterer Stufe, bis zu 1238 auf Stufe 10. Mana-Kosten 73 auf Stufe 1, +26 je weiterer Stufe, maximal 307 auf Stufe 10. Der Cooldown sinkt von 42 um 1 Sekunde je weiterer Stufe auf 33 Sekunden. Castzeit 0,2 Sekunden. Die Animation dauert vorläufig 1 Sekunde; keine anhaltende Wirkungsdauer oder Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+  "description_eng": "Hurls a targeted lightning strike at an enemy, dealing magical base damage once, starting at 293 at level 1 and increasing by 105 per additional level to 1238 at level 10. Mana cost 73 at level 1, maximum 307 at level 10. Cooldown decreases from 42 by 1 second per additional level to 33 seconds. Cast time is 0.2 seconds. Provisional animation duration is 1 second, with no lasting effect or damage over time.",
+  "dmgType": "spell",
+  "matk": 293,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 57,
+  "skillName_de": "Gezielter Blitz",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.2,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 42,
+    "perLevel": -1
+  },
+  "hasLingeringDamage": false,
+  "mana": 73,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 26
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 293,
+      "perLevel": 105
+    }
+  },
+  "manaPricing": {
+    "category": "normal",
+    "factor": 0.25,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  }
+}

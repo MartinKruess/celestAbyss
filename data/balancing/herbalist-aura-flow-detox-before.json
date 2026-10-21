@@ -1,0 +1,70 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c08",
+    "skillName_eng": "Aura Suppression",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verringere dein Aggrolevel dezent.",
+    "description_eng": "Reduce your aggro level discreetly.",
+    "dmgType": "selfbuff",
+    "dur": 180,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 165,
+    "skillName_de": "Aura Unterdrückung",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c09",
+    "skillName_eng": "Everything Flows",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärke Heilungen und magische Angriffe.",
+    "description_eng": "Strengthen healings and magical attacks.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "int": 3,
+    "matk": 17,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 166,
+    "skillName_de": "Alles im Fluss",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c0a",
+    "skillName_eng": "Detoxification",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Macht dich für 60 Sekunden immun gegen Vergiftungseffekte.",
+    "description_eng": "Makes you immune to poison effects for 60 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 60,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 167,
+    "skillName_de": "Entgiftung",
+    "skillpoints": 1
+  }
+]

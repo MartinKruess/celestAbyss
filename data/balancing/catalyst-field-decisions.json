@@ -1,0 +1,209 @@
+{
+  "status": "appliedAndVerified",
+  "variant": "B",
+  "backup": "data/balancing/history/before-catalyst-timing-1792329448880",
+  "skills": [
+    {
+      "_id": "6acc1c7e4826525c70d04c2f",
+      "skillName_eng": "Catalyst Pure",
+      "__v": 0,
+      "category": "active",
+      "charClass": [
+        "Druide",
+        "Alchemist"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Erschafft ein Verstärkungsfeld für Gruppenmitglieder der Völker Aurora. Im Feld steigen ihr physischer Angriff um 25 und ihr magischer Angriff um 50 pro Skilllevel. Auf Stufe 5 sind dies +125 P-Angriff und +250 M-Angriff. Die Felddauer beträgt 24 Sekunden auf Stufe 1 und steigt um 2 Sekunden je weiterer Stufe auf 32 Sekunden. Der Cooldown beginnt bei 180 Sekunden und sinkt um 2 Sekunden je weiterer Stufe auf 172 Sekunden. In einem bereits von einem Katalysator belegten Gebiet kann kein weiterer Katalysator platziert werden. Castzeit 1,8 Sekunden. Mana-Kosten unverändert 198 auf Stufe 1, plus 87 je weiterer Stufe bis 546 auf Stufe 5.",
+      "description_eng": "Creates an enhancement field for Aurora group members. Within the field, physical attack increases by 25 and magical attack by 50 per skill level, reaching +125 physical and +250 magical attack at level 5. Field duration starts at 24 seconds and increases by 2 per additional level to 32 seconds. Cooldown starts at 180 seconds and decreases by 2 per additional level to 172 seconds. Another catalyst cannot be placed in an area already occupied by a catalyst. Cast time is 1.8 seconds. Mana cost remains 198 at level 1, plus 87 per additional level to 546 at level 5.",
+      "dmgType": "spell",
+      "maxSkillLv": 5,
+      "maxUpgradeLv": 10,
+      "nr": 204,
+      "skillName_de": "Katalysator Rein",
+      "skillpoints": 1,
+      "activation": "manual",
+      "areaSettings": {
+        "exclusiveGroup": "catalystField",
+        "overlapPolicy": "rejectPlacement"
+      },
+      "cd": 180,
+      "dur": 24,
+      "durationScaling": {
+        "type": "linear",
+        "base": 24,
+        "perLevel": 2
+      },
+      "effects": [
+        {
+          "valueScaling": {
+            "type": "linear",
+            "base": 25,
+            "perLevel": 25
+          },
+          "durationScaling": {
+            "type": "linear",
+            "base": 24,
+            "perLevel": 2
+          },
+          "type": "statModifier",
+          "target": "alliesInArea",
+          "allowedRaces": [
+            "Aurora"
+          ],
+          "stat": "patk",
+          "value": 25,
+          "unit": "flat",
+          "damageTypes": [],
+          "durationSeconds": 24,
+          "key": "field-patk"
+        },
+        {
+          "valueScaling": {
+            "type": "linear",
+            "base": 50,
+            "perLevel": 50
+          },
+          "durationScaling": {
+            "type": "linear",
+            "base": 24,
+            "perLevel": 2
+          },
+          "type": "statModifier",
+          "target": "alliesInArea",
+          "allowedRaces": [
+            "Aurora"
+          ],
+          "stat": "matk",
+          "value": 50,
+          "unit": "flat",
+          "damageTypes": [],
+          "durationSeconds": 24,
+          "key": "field-matk"
+        }
+      ],
+      "effectsVersion": 1,
+      "castTimeSeconds": 1.8,
+      "mana": 198,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 198,
+            "perLevel": 87
+          }
+        }
+      ],
+      "cooldownScaling": {
+        "type": "linear",
+        "base": 180,
+        "perLevel": -2
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c30",
+      "skillName_eng": "Catalyst Impure",
+      "__v": 0,
+      "category": "active",
+      "charClass": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Erschafft ein Verstärkungsfeld für Gruppenmitglieder der Völker Menschen und Umbra. Im Feld steigen ihr physischer Angriff um 25 und ihr magischer Angriff um 50 pro Skilllevel. Auf Stufe 5 sind dies +125 P-Angriff und +250 M-Angriff. Die Felddauer beträgt 24 Sekunden auf Stufe 1 und steigt um 2 Sekunden je weiterer Stufe auf 32 Sekunden. Der Cooldown beginnt bei 180 Sekunden und sinkt um 2 Sekunden je weiterer Stufe auf 172 Sekunden. In einem bereits von einem Katalysator belegten Gebiet kann kein weiterer Katalysator platziert werden. Castzeit 1,8 Sekunden. Mana-Kosten unverändert 198 auf Stufe 1, plus 87 je weiterer Stufe bis 546 auf Stufe 5.",
+      "description_eng": "Creates an enhancement field for Human and Umbra group members. Within the field, physical attack increases by 25 and magical attack by 50 per skill level, reaching +125 physical and +250 magical attack at level 5. Field duration starts at 24 seconds and increases by 2 per additional level to 32 seconds. Cooldown starts at 180 seconds and decreases by 2 per additional level to 172 seconds. Another catalyst cannot be placed in an area already occupied by a catalyst. Cast time is 1.8 seconds. Mana cost remains 198 at level 1, plus 87 per additional level to 546 at level 5.",
+      "dmgType": "spell",
+      "maxSkillLv": 5,
+      "maxUpgradeLv": 10,
+      "nr": 205,
+      "skillName_de": "Katalysator Unrein",
+      "skillpoints": 1,
+      "activation": "manual",
+      "areaSettings": {
+        "exclusiveGroup": "catalystField",
+        "overlapPolicy": "rejectPlacement"
+      },
+      "cd": 180,
+      "dur": 24,
+      "durationScaling": {
+        "type": "linear",
+        "base": 24,
+        "perLevel": 2
+      },
+      "effects": [
+        {
+          "valueScaling": {
+            "type": "linear",
+            "base": 25,
+            "perLevel": 25
+          },
+          "durationScaling": {
+            "type": "linear",
+            "base": 24,
+            "perLevel": 2
+          },
+          "type": "statModifier",
+          "target": "alliesInArea",
+          "allowedRaces": [
+            "Human",
+            "Umbra"
+          ],
+          "stat": "patk",
+          "value": 25,
+          "unit": "flat",
+          "damageTypes": [],
+          "durationSeconds": 24,
+          "key": "field-patk"
+        },
+        {
+          "valueScaling": {
+            "type": "linear",
+            "base": 50,
+            "perLevel": 50
+          },
+          "durationScaling": {
+            "type": "linear",
+            "base": 24,
+            "perLevel": 2
+          },
+          "type": "statModifier",
+          "target": "alliesInArea",
+          "allowedRaces": [
+            "Human",
+            "Umbra"
+          ],
+          "stat": "matk",
+          "value": 50,
+          "unit": "flat",
+          "damageTypes": [],
+          "durationSeconds": 24,
+          "key": "field-matk"
+        }
+      ],
+      "effectsVersion": 1,
+      "castTimeSeconds": 1.8,
+      "mana": 198,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 198,
+            "perLevel": 87
+          }
+        }
+      ],
+      "cooldownScaling": {
+        "type": "linear",
+        "base": 180,
+        "perLevel": -2
+      }
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "classKey": "knight",
+  "level": 60,
+  "rank": 6,
+  "status": "confirmedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 1,
+      "name": "Erleuchtung",
+      "stats": {
+        "int": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 28,
+      "name": "Eiserner Schild",
+      "stats": {
+        "vita": 11,
+        "wis": 5.5
+      }
+    },
+    {
+      "nr": 45,
+      "name": "Erweiterung des Körpers",
+      "stats": {
+        "health": 1100,
+        "vita": 22,
+        "wis": 20,
+        "agi": 20
+      }
+    },
+    {
+      "nr": 93,
+      "name": "Schildangriffstraining",
+      "stats": {
+        "str": 3,
+        "vita": 6
+      }
+    },
+    {
+      "nr": 102,
+      "name": "Schwerttraining",
+      "stats": {
+        "str": 6,
+        "dex": 2
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 140,
+      "name": "Standhaft",
+      "stats": {
+        "vita": 20,
+        "wis": 10
+      }
+    },
+    {
+      "nr": 141,
+      "name": "Eiserner Wille",
+      "stats": {
+        "vita": 30,
+        "block": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Schwert + Schild",
+      "equipped": {
+        "maxHealth": 6451,
+        "maxMana": 3253,
+        "physicalAttack": 388.2,
+        "magicalAttack": 110.2,
+        "physicalDefense": 1304,
+        "magicalDefense": 659,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "int": 20,
+        "wis": 95.5,
+        "vita": 109,
+        "health": 1100,
+        "agi": 20,
+        "str": 9,
+        "dex": 2,
+        "pdef": 140,
+        "mdef": 140,
+        "block": 20,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        1,
+        28,
+        45,
+        93,
+        102,
+        139,
+        140,
+        141,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 10821,
+        "maxMana": 6118,
+        "physicalAttack": 504.4,
+        "magicalAttack": 246.2,
+        "physicalDefense": 1662,
+        "magicalDefense": 990,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "excluded": [
+    "Erwachen and Überlebenswille: combat procs",
+    "Active buffs",
+    "Pets",
+    "Jewelry/stones"
+  ],
+  "equipmentProposalApplied": false
+}

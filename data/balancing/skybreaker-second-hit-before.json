@@ -1,0 +1,52 @@
+{
+  "_id": "6acc1c7e4826525c70d04c37",
+  "skillName_eng": "Skybreaker",
+  "__v": 0,
+  "category": "active",
+  "cd": 137,
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Ein gleißendes Licht trifft deine Feinde und verursacht einmalig kombinierten physischen und magischen Schaden. Physischer Grundschaden steigt von 144 um 22 je weiterer Stufe auf 342 auf Stufe 10; magischer Grundschaden steigt von 292 um 44 auf 688. Zusammen 1030 Skill-Grundschaden auf Stufe 10 vor Charakterangriff und gegnerischer Verteidigung. Mana-Kosten steigen von 207 um 109 je weiterer Stufe auf 1188. Castzeit 0,6 Sekunden, vorläufige Animation 2,5 Sekunden. Bisheriger Cooldown 137 Sekunden. Keine anhaltende Schadenswirkung; Trefferbereich wird noch geprüft.",
+  "description_eng": "A dazzling light hits your enemies once, dealing combined physical and magical damage. Base physical damage increases from 144 by 22 per additional level to 342 at level 10; base magical damage increases from 292 by 44 to 688. Combined skill base damage is 1030 at level 10 before character attack and enemy defense. Mana cost increases from 207 by 109 per additional level to 1188. Cast time is 0.6 seconds; provisional animation is 2.5 seconds. Existing cooldown is 137 seconds. No ongoing damage; hit area remains pending.",
+  "dmgType": "spell",
+  "matk": 292,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 212,
+  "patk": 144,
+  "skillName_de": "Himmelsbrecher",
+  "skillpoints": 1,
+  "animationDurationSeconds": 2.5,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.6,
+  "hasLingeringDamage": false,
+  "mana": 207,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 207,
+        "perLevel": 109
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 144,
+      "perLevel": 22
+    },
+    "matk": {
+      "type": "linear",
+      "base": 292,
+      "perLevel": 44
+    }
+  }
+}

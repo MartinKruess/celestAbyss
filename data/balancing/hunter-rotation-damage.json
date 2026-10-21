@@ -1,0 +1,235 @@
+{
+  "classKey": "hunter",
+  "level": 60,
+  "rank": 6,
+  "physicalAttack": 930.4000000000001,
+  "rows": [
+    {
+      "nr": 37,
+      "name": "Entzugspfeil",
+      "hits": 1,
+      "skillBaseDamage": 434,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 1364.4,
+      "mana": 135,
+      "guaranteedCritical": false
+    },
+    {
+      "nr": 51,
+      "name": "Feuerpfeil",
+      "hits": 1,
+      "skillBaseDamage": 428,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 1358.4,
+      "mana": 279,
+      "guaranteedCritical": false
+    },
+    {
+      "nr": 53,
+      "name": "Gebundener Schuss",
+      "hits": 1,
+      "skillBaseDamage": 136,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 1066.4,
+      "mana": 102,
+      "guaranteedCritical": false
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "hits": 1,
+      "skillBaseDamage": 104,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 1034.4,
+      "mana": 30,
+      "guaranteedCritical": false
+    },
+    {
+      "nr": 86,
+      "name": "Präzisionsschuss",
+      "hits": 1,
+      "skillBaseDamage": 2409,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 3339.4,
+      "mana": 1069,
+      "guaranteedCritical": true
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "hits": 12,
+      "skillBaseDamage": 138,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 12820.800000000001,
+      "mana": 214,
+      "guaranteedCritical": false
+    },
+    {
+      "nr": 97,
+      "name": "Schockschuss",
+      "hits": 1,
+      "skillBaseDamage": 632,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 1562.4,
+      "mana": 466,
+      "guaranteedCritical": false
+    },
+    {
+      "nr": 121,
+      "name": "Verstärkter Pfeil",
+      "hits": 1,
+      "skillBaseDamage": 1479,
+      "physicalAttack": 930.4000000000001,
+      "rawDamage": 2409.4,
+      "mana": 732,
+      "guaranteedCritical": false
+    }
+  ],
+  "totalBeforeCritAndDefense": 24955.600000000006,
+  "guaranteedCritBase": 3339.4,
+  "criticalFormula": "totalBeforeCritAndDefense + guaranteedCritBase * (criticalMultiplier - 1)",
+  "ownBuffScenario": {
+    "physicalAttack": 1146.2,
+    "physicalAttackBonus": 215.8,
+    "totalBeforeCritAndDefense": 29055.800000000003,
+    "guaranteedCritBase": 3555.2,
+    "excluded": [
+      "Poison procs",
+      "Ancestor Arrow procs, require own basic attacks",
+      "Temporary Spirit Companion",
+      "Pets"
+    ]
+  },
+  "assumptions": [
+    "Single enemy, all twelve Volley arrows hit",
+    "Skill base plus character attack per hit is provisional damage formula",
+    "No defense, random critical hits, auto-attacks or pets",
+    "Guaranteed Precision Shot critical shown as formula, critical multiplier not defined",
+    "No elapsed-time or cooldown simulation",
+    "Normal scenario excludes active buffs"
+  ],
+  "mana": {
+    "classKey": "hunter",
+    "level": 60,
+    "rank": 6,
+    "manaPool": 4581,
+    "attacks": [
+      {
+        "nr": 37,
+        "name": "Entzugspfeil",
+        "level": 10,
+        "mana": 135
+      },
+      {
+        "nr": 51,
+        "name": "Feuerpfeil",
+        "level": 20,
+        "mana": 279
+      },
+      {
+        "nr": 53,
+        "name": "Gebundener Schuss",
+        "level": 10,
+        "mana": 102
+      },
+      {
+        "nr": 63,
+        "name": "Kettenschuss",
+        "level": 5,
+        "mana": 30
+      },
+      {
+        "nr": 86,
+        "name": "Präzisionsschuss",
+        "level": 15,
+        "mana": 1069
+      },
+      {
+        "nr": 88,
+        "name": "Salve",
+        "level": 5,
+        "mana": 214
+      },
+      {
+        "nr": 97,
+        "name": "Schockschuss",
+        "level": 10,
+        "mana": 466
+      },
+      {
+        "nr": 121,
+        "name": "Verstärkter Pfeil",
+        "level": 20,
+        "mana": 732
+      }
+    ],
+    "oneRotation": 3027,
+    "twoRotations": 6054,
+    "deficitWithoutRegeneration": 1473,
+    "selfBuffs": [
+      {
+        "nr": 152,
+        "name": "Giftpfeil",
+        "level": 20,
+        "mana": 301
+      },
+      {
+        "nr": 153,
+        "name": "Treffsicherheit",
+        "level": 10,
+        "mana": 164
+      },
+      {
+        "nr": 154,
+        "name": "Auge des Falken",
+        "level": 10,
+        "mana": 192
+      },
+      {
+        "nr": 155,
+        "name": "Sechster Sinn",
+        "level": 5,
+        "mana": 141
+      },
+      {
+        "nr": 156,
+        "name": "Waldläufer",
+        "level": 3,
+        "mana": 165
+      },
+      {
+        "nr": 157,
+        "name": "Pfeil der Vorfahren",
+        "level": 10,
+        "mana": 189
+      }
+    ],
+    "selfBuffSetupMana": 1152,
+    "companionGroupBuff": {
+      "nr": 150,
+      "name": "Macht des Begleiters",
+      "level": 10,
+      "mana": 645
+    },
+    "temporarySpiritCompanion": {
+      "nr": 226,
+      "name": "Seelenbegleiter",
+      "level": 10,
+      "mana": 251
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "knownAddedWisdom": 139,
+      "manaPerTickWithProvisionalWisdomFactor": 164,
+      "startingWisdomContribution": "not independently confirmed",
+      "intervalSeconds": null
+    },
+    "limitations": [
+      "All attack skills cast once per rotation, all at maximum skill level",
+      "Multi-hit skills charged once per activation, including all twelve Volley arrows",
+      "No cooldown waits, regeneration, active buff setup costs or pet costs included in main total",
+      "No jewellery, stones or equipment upgrades",
+      "No physical runtime simulation"
+    ]
+  }
+}

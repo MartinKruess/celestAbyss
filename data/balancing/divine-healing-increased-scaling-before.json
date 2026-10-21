@@ -1,0 +1,73 @@
+{
+  "_id": "6acc1c7e4826525c70d04b9d",
+  "skillName_eng": "Divine Healing",
+  "__v": 0,
+  "category": "active",
+  "cd": 80,
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. Fünf Skillstufen. Heilung 550 HP auf Stufe 1 und +330 je weiterer Stufe: 550, 880, 1210, 1540, 1870 HP. Mana 283 auf Stufe 1 und +185 je weiterer Stufe: 283, 468, 653, 838, 1023. Cooldown 80 Sekunden und je weiterer Stufe 2 Sekunden weniger, auf Stufe 5 72 Sekunden. Castzeit 0,6 Sekunden. Die Heilung wirkt einmalig nach der Castzeit; keine anschließende Wirkungsdauer oder wiederholten Heilticks.",
+  "description_eng": "Uses the power of Aurora to heal one allied target once. Five skill levels. Healing starts at 550 HP and increases by 330 per additional level: 550, 880, 1210, 1540, 1870 HP. Mana starts at 283 and increases by 185 per additional level: 283, 468, 653, 838, 1023. Cooldown starts at 80 seconds and decreases by 2 per additional level, reaching 72 seconds at level 5. Cast time 0.6 seconds. Healing resolves once after casting; no lingering effect or repeated healing ticks.",
+  "dmgType": "spell",
+  "health": 550,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 58,
+  "skillName_de": "Göttliche Heilung",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.6,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 80,
+    "perLevel": -2
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "effects": [
+    {
+      "key": "divine-healing-single-target",
+      "type": "heal",
+      "target": "allyOrCompanion",
+      "value": 550,
+      "unit": "flat",
+      "valueScaling": {
+        "type": "linear",
+        "base": 550,
+        "perLevel": 330
+      },
+      "durationSeconds": 0
+    }
+  ],
+  "effectsVersion": 1,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 283,
+        "perLevel": 185
+      }
+    }
+  ],
+  "statScaling": {
+    "health": {
+      "type": "linear",
+      "base": 550,
+      "perLevel": 330
+    }
+  }
+}

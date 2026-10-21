@@ -1,0 +1,52 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba3",
+  "skillName_eng": "Small Healing",
+  "__v": 0,
+  "category": "active",
+  "cd": 17,
+  "charClass": [
+    "Knife",
+    "Templar",
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 7, 13, 19, 25 und so weiter: Jeder nächste Zuwachs ist um 6 höher. Heilwerte von Stufe 1 bis 20: 7, 20, 39, 64, 95, 132, 175, 224, 279, 340, 407, 480, 559, 644, 735, 832, 935, 1044, 1159, 1280. Formel für Stufe L: 7 × L + 3 × L × (L - 1). Auf Stufe 20 beträgt der Heilwert 1280 HP. Castzeit 0,1 Sekunden. Bestehender Cooldown 17 Sekunden. Mana-Kosten sind noch festzulegen.",
+  "description_eng": "Heals an allied target. Healing grows cumulatively with increments of 7, 13, 19, 25 and so on: each successive increment increases by 6. Healing values at levels 1–20: 7, 20, 39, 64, 95, 132, 175, 224, 279, 340, 407, 480, 559, 644, 735, 832, 935, 1044, 1159, 1280. Formula for level L: 7 × L + 3 × L × (L - 1). Level 20 healing is 1280 HP. Cast time 0.1 seconds. Existing cooldown 17 seconds. Mana costs remain undefined.",
+  "dmgType": "spell",
+  "health": 7,
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 64,
+  "skillName_de": "Kleine Heilung",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.1,
+  "statScaling": {
+    "health": {
+      "type": "table",
+      "values": [
+        7,
+        20,
+        39,
+        64,
+        95,
+        132,
+        175,
+        224,
+        279,
+        340,
+        407,
+        480,
+        559,
+        644,
+        735,
+        832,
+        935,
+        1044,
+        1159,
+        1280
+      ]
+    }
+  }
+}

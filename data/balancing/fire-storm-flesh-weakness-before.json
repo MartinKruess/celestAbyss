@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bc7",
+    "skillName_eng": "Weakness of the Flesh",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schwäche die Wiederstandskraft deines Gegners.",
+    "description_eng": "Weaken the resistance of your opponent.",
+    "dmgType": "spell",
+    "dur": 30,
+    "health": -50,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": -0.05,
+    "nr": 100,
+    "pdef": -0.03,
+    "skillName_de": "Schwäche des Fleisches",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd1",
+    "skillName_eng": "Storm of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entfessele einen Sturm aus Feuer, der Gegnern im Umkreis Schaden zufügt.",
+    "description_eng": "Unleash a storm of fire that damages enemies in the area.",
+    "dmgType": "spell",
+    "dur": 35,
+    "matk": 83,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 110,
+    "skillName_de": "Sturm des Feuers",
+    "skillpoints": 1
+  }
+]

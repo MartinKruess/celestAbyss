@@ -1,0 +1,59 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba2",
+  "skillName_eng": "Chain Shot",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Summoner",
+    "Soulseeker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Binde dich an deine Feinde. Die genaue Mechanik von Verbindung und erneuter Aktivierung wird noch festgelegt. Physischer Grundschaden 52 auf Stufe 1, plus 13 je weiterer Stufe, bis zu 104 auf Stufe 5. Mana-Kosten steigen vorläufig gleichmäßig von 5 auf 30. Cooldown beginnt bei 60 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 56 Sekunden. Castzeit 0,2 Sekunden. Vorläufige Dauer: 1 Sekunde auf Stufe 1, 4 Sekunden auf Stufe 3 und 8 Sekunden auf Stufe 5; Zwischenstufen 2,5 und 6 Sekunden. Eine mögliche Verlängerung auf 10 Sekunden ist noch offen.",
+  "description_eng": "Bind yourself to your enemies. Exact link and reactivation mechanics remain to be defined. Physical base damage starts at 52 and increases by 13 per additional level to 104 at level 5. Provisional Mana costs increase evenly from 5 to 30. Cooldown starts at 60 seconds and decreases by 1 second per additional level to 56 seconds. Cast time is 0.2 seconds. Provisional durations: 1 second at level 1, 4 seconds at level 3 and 8 seconds at level 5, with intermediate durations of 2.5 and 6 seconds. A possible extension to 10 seconds is pending.",
+  "dmgType": "physical",
+  "dur": 1,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 63,
+  "patk": 52,
+  "skillName_de": "Kettenschuss",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.2,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 60,
+    "perLevel": -1
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      1,
+      2.5,
+      4,
+      6,
+      8
+    ]
+  },
+  "mana": 5,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 6.25
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": 13
+    }
+  }
+}

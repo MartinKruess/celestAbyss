@@ -1,0 +1,274 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c03",
+    "skillName_eng": "Energy of Courage",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff, der deinen physischen Angriff um 5 je gelerntem Skilllevel erhöht, bis zu 50 auf Stufe 10. Ab Stufe 5 erhältst du zusätzlich 15 Penetration, auf Stufe 10 insgesamt 30 Penetration. Penetration ist ein fixer Wert, keine direkte Prozentangabe. Mana-Kosten steigen von 62 um 27 je weiterer Stufe auf 305. Dauer 600 Sekunden, Cooldown 60 Sekunden. Die Castzeit wird noch festgelegt.",
+    "description_eng": "Self buff increasing physical attack by 5 per learned skill level, reaching 50 at level 10. From level 5, additionally grants 15 Penetration, increasing to a total of 30 at level 10. Penetration is a flat rating, not a direct percentage. Mana cost increases from 62 by 27 per additional level to 305. Duration is 600 seconds, cooldown is 60 seconds. Cast time remains pending.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 160,
+    "patk": 5,
+    "skillName_de": "Energie des Mutes",
+    "skillpoints": 1,
+    "mana": 62,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 62,
+          "perLevel": 27
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "penetration": "flat"
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "penetration": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          15,
+          15,
+          15,
+          15,
+          15,
+          30
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c04",
+    "skillName_eng": "Energy of Anger",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff, der deinen physischen Angriff auf allen Skillstufen um 50 erhöht. Während der Buff aktiv ist, erzeugen ausschließlich deine Auto-Attacks Wut: 0,5 Wutpunkte je Angriff auf Stufe 1 bei einer Leiste von 100 Punkten. Je weiterer Stufe kommen bis Stufe 9 0,05 Punkte hinzu; Stufe 10 erreicht genau 1 Wutpunkt je Auto-Attack. Skills und Begleiter erzeugen durch diesen Effekt keine Wut. Die Dauer steigt gleichmäßig von 45 auf 50 Sekunden, der Cooldown sinkt gleichmäßig von 90 auf 85 Sekunden. Mana-Kosten steigen von 77 um 42 je weiterer Stufe auf 455. Castzeit und Wutaufbau im Verhältnis zum Angriffstempo werden später geprüft.",
+    "description_eng": "Self buff increasing physical attack by 50 at every skill level. While active, only your basic attacks generate Rage: 0.5 Rage points per attack at level 1 on a 100 point bar. Each additional level adds 0.05 points through level 9; level 10 reaches exactly 1 Rage point per basic attack. Skills and companions do not generate Rage through this effect. Duration increases evenly from 45 to 50 seconds and cooldown decreases evenly from 90 to 85 seconds. Mana cost increases from 77 by 42 per additional level to 455. Cast time and Rage generation relative to attack speed remain to be reviewed.",
+    "dmgType": "selfbuff",
+    "dur": 45,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 161,
+    "patk": 50,
+    "skillName_de": "Energie der Wut",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 90,
+      "perLevel": -0.5555555555555556
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": 0.5555555555555556
+    },
+    "effects": [
+      {
+        "key": "energy-anger-basic-attack-rage",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "rage",
+        "reference": "maxRage",
+        "value": 0.005,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0.005,
+            0.0055,
+            0.006,
+            0.0065,
+            0.007,
+            0.0075,
+            0.008,
+            0.0085,
+            0.009,
+            0.01
+          ]
+        },
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "excludeCompanionAttacks": true,
+        "durationSeconds": 45,
+        "durationScaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 0.5555555555555556
+        }
+      }
+    ],
+    "mana": 77,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 77,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c05",
+    "skillName_eng": "Inner Strength",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff mit 15 Skillstufen. Auf Stufe 1 erhältst du 2 Stärke und 3 Vitalität. Auf jeder geraden Stufe steigen Stärke und Vitalität jeweils um 1. Auf den dazwischenliegenden ungeraden Stufen ab Stufe 3 kommen jeweils 5 Penetration hinzu. Auf Stufe 15 erhältst du insgesamt 9 Stärke, 10 Vitalität und 35 Penetration. Penetration ist ein fixer Wert, keine Prozentangabe. Bisherige Dauer 600 Sekunden, Cooldown 60 Sekunden. Mana-Kosten und Castzeit werden noch festgelegt.",
+    "description_eng": "Self buff with 15 skill levels. At level 1 grants 2 Strength and 3 Vitality. Each even level adds 1 Strength and 1 Vitality. Each intervening odd level from level 3 adds 5 Penetration. Level 15 grants a total of 9 Strength, 10 Vitality and 35 Penetration. Penetration is a flat rating, not a percentage. Existing duration is 600 seconds and cooldown is 60 seconds. Mana cost and cast time remain pending.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 162,
+    "skillName_de": "Innere Kraft",
+    "skillpoints": 1,
+    "str": 2,
+    "vita": 3,
+    "statBonusUnits": {
+      "penetration": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9
+        ]
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10
+        ]
+      },
+      "penetration": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          5,
+          5,
+          10,
+          10,
+          15,
+          15,
+          20,
+          20,
+          25,
+          25,
+          30,
+          30,
+          35
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c06",
+    "skillName_eng": "Full Potential",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Maxleben um 500 und deinen Angriff um 25 Punkte.",
+    "description_eng": "Power up your Health by 500 and Attack by 25 points.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "health": 500,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 163,
+    "patk": 25,
+    "skillName_de": "Volles Potential",
+    "skillpoints": 1
+  }
+]

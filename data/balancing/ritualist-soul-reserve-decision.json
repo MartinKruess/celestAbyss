@@ -1,0 +1,334 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T16:49:20.341Z",
+  "backup": "data/balancing/history/before-ritualist-soul-reserve-1792514960246",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bdb",
+        "skillName_eng": "Reaper",
+        "category": "passive",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Reaper: permanenter passiver Skill. Erlaubt auf Stufe 1 einen Speicher von 10 Seelenfragmenten und je weiterer Stufe 10 zusätzliche Plätze, bis zu 100 auf Stufe 10. Je volle 10 aktuell gespeicherte Seelenfragmente erhältst du +1 Intelligenz: Bonus = 1 × abrunden(aktueller Vorrat / 10). Bei 100 gespeicherten Fragmenten insgesamt +10 Intelligenz; bei leerem Speicher kein Intelligenz-Bonus. Der Bonus sinkt entsprechend, wenn Seelen ausgegeben werden. Seelenfragmente sind eine eigene Ressource, getrennt vom Attribut Intelligenz. Vorrat bleibt dauerhaft auch offline erhalten, ohne zeitlichen Verfall. Überschüssige Gewinne oberhalb der Speicherkapazität werden nicht aufgenommen. Der Skill erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Dies sind Skilldefinitionen; die persistente Charakterressource ist später serverseitig anzubinden.",
+        "description_eng": "Reaper: permanent passive skill. Soul-fragment storage starts at 10 at level 1 and gains 10 capacity per additional level, reaching 100 at level 10. Every complete 10 currently stored fragments grants +1 Intelligence: bonus = 1 × floor(current storage / 10). At 100 stored fragments the bonus is +10 Intelligence; empty storage grants none. Spending souls reduces the bonus accordingly. Soul fragments are a separate resource from the Intelligence attribute. Storage persists offline with no time decay. Gains beyond storage capacity are discarded. This skill does not generate souls itself. No activation costs, cast time or cooldown. These are skill definitions; persistent character-resource behavior still requires server integration.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 120,
+        "skillName_de": "Reaper",
+        "skillpoints": 1,
+        "resourceCosts": [],
+        "soulStorageSettings": {
+          "resource": "soulFragments",
+          "capacityScaling": {
+            "type": "linear",
+            "base": 10,
+            "perLevel": 10
+          },
+          "persistsOffline": true,
+          "decaysOverTime": false,
+          "bonusStat": "int",
+          "fragmentsPerBonusStep": 10,
+          "bonusPerFullStep": 1,
+          "usesCurrentStoredAmount": true,
+          "onCapacityReached": "discardExcess"
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "soulStorageSettings",
+                "capacityScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 10,
+                "perLevel": 10
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bdb",
+        "skillName_eng": "Reaper",
+        "category": "passive",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Reaper: permanente Passive mit zehn Stufen, ausschließlich Seelenspeicher. Kapazität 10 Seelen auf Stufe 1, +10 je weiterer Stufe bis 100. Kein Intelligenz- oder sonstiger Attributbonus. Aktueller Vorrat bleibt auch offline erhalten, ohne zeitlichen Verfall. Gewinne oberhalb der Kapazität verfallen. Erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Persistente Charakterressource ist später serverseitig anzubinden.",
+        "description_eng": "Reaper: permanent passive with ten levels, soul storage only. Capacity starts at 10 and increases by 10 per additional level to 100. No Intelligence or other attribute bonus. Storage persists offline without time decay; excess gains are discarded. Generates no souls. No activation costs, cast time or cooldown. Persistent character storage still requires server integration.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 120,
+        "skillName_de": "Reaper",
+        "skillpoints": 1,
+        "resourceCosts": [],
+        "soulStorageSettings": {
+          "resource": "soulFragments",
+          "capacityScaling": {
+            "type": "linear",
+            "base": 10,
+            "perLevel": 10
+          },
+          "persistsOffline": true,
+          "decaysOverTime": false,
+          "onCapacityReached": "discardExcess"
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "soulStorageSettings",
+                "capacityScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 10,
+                "perLevel": 10
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      }
+    },
+    {
+      "before": {
+        "_id": "6ad207c878d209a368038d26",
+        "soulReserveBonusSettings": {
+          "stat": "matk",
+          "bonusPerStoredFragment": 1,
+          "maximumBonus": 100,
+          "usesCurrentStoredAmount": true,
+          "levelProgressionStatus": "defined"
+        },
+        "soulGenerationSettings": {
+          "maximumUniqueEnemiesScaling": {
+            "values": []
+          }
+        },
+        "soulStorageSettings": {
+          "capacityScaling": {
+            "values": []
+          }
+        },
+        "activationRequirements": {
+          "targetHealthBelowFractionScaling": {
+            "values": []
+          }
+        },
+        "tetherSettings": {
+          "worldAnchorKinds": []
+        },
+        "collectedPointScaling": {
+          "thresholds": [],
+          "durationSecondsByTier": [],
+          "baseDamageBonusFractionByTier": []
+        },
+        "attackExecution": {
+          "additionalDamageFromSacrificedHealth": {
+            "values": []
+          },
+          "hitCountScaling": {
+            "values": []
+          },
+          "damageMultiplierScaling": {
+            "values": []
+          },
+          "armorIgnoreFractionByLevel": []
+        },
+        "attackArea": {
+          "radiusScaling": {
+            "values": []
+          },
+          "maxTargetsScaling": {
+            "values": []
+          }
+        },
+        "movement": {
+          "distanceScaling": {
+            "values": []
+          },
+          "hopDirections": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "cooldownScaling": {
+          "values": []
+        },
+        "resourceCosts": [],
+        "burstUsage": {
+          "usesPerBurstScaling": {
+            "values": []
+          },
+          "afterBurstCooldownScaling": {
+            "values": []
+          },
+          "belowTargetHealthFractionByLevel": [],
+          "usesBelowThresholdByLevel": []
+        },
+        "triggerCondition": {
+          "chancePerCheckScaling": {
+            "values": []
+          },
+          "chancePerCheck": null,
+          "healthThresholds": []
+        },
+        "allowedRaces": [],
+        "isClassCore": false,
+        "nr": 241,
+        "skillName_eng": "Number of Victims",
+        "skillName_de": "Zahl der Opfer",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "maxSkillLv": 1,
+        "currentUpgradeLv": 0,
+        "maxUpgradeLv": 10,
+        "category": "passive",
+        "description_eng": "Permanent passive reserve bonus. Each currently stored soul in the Reaper-managed soul reserve grants +1 direct magical attack, capped at +100 with 100 stored souls. Collecting increases and spending decreases the bonus. Explicitly additional to Reaper’s Intelligence bonus. Generates no souls and uses neither historical kill counts nor morality. No activation cost, cast time or limited duration. One learnable level, no further level progression.",
+        "description_de": "Permanenter passiver Vorratsbonus. Jede aktuell gespeicherte Seele im durch Reaper verwalteten Seelenspeicher gewährt +1 direkten M-Angriff, maximal +100 bei 100 gespeicherten Seelen. Beim Sammeln steigt und beim Ausgeben sinkt der Bonus entsprechend. Gilt ausdrücklich zusätzlich zum Intelligenz-Bonus von Reaper. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Eine einzige lernbare Stufe, keine weitere Levelskalierung.",
+        "dmgType": "passive",
+        "skillpoints": 1,
+        "levelProgression": {
+          "version": 1,
+          "rules": [],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      },
+      "after": {
+        "_id": "6ad207c878d209a368038d26",
+        "soulReserveBonusSettings": {
+          "stat": "matk",
+          "maximumBonus": 50,
+          "usesCurrentStoredAmount": true,
+          "levelProgressionStatus": "defined",
+          "fragmentsPerBonusStep": 10,
+          "bonusPerFullStep": 5
+        },
+        "soulGenerationSettings": {
+          "maximumUniqueEnemiesScaling": {
+            "values": []
+          }
+        },
+        "soulStorageSettings": {
+          "capacityScaling": {
+            "values": []
+          }
+        },
+        "activationRequirements": {
+          "targetHealthBelowFractionScaling": {
+            "values": []
+          }
+        },
+        "tetherSettings": {
+          "worldAnchorKinds": []
+        },
+        "collectedPointScaling": {
+          "thresholds": [],
+          "durationSecondsByTier": [],
+          "baseDamageBonusFractionByTier": []
+        },
+        "attackExecution": {
+          "additionalDamageFromSacrificedHealth": {
+            "values": []
+          },
+          "hitCountScaling": {
+            "values": []
+          },
+          "damageMultiplierScaling": {
+            "values": []
+          },
+          "armorIgnoreFractionByLevel": []
+        },
+        "attackArea": {
+          "radiusScaling": {
+            "values": []
+          },
+          "maxTargetsScaling": {
+            "values": []
+          }
+        },
+        "movement": {
+          "distanceScaling": {
+            "values": []
+          },
+          "hopDirections": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "cooldownScaling": {
+          "values": []
+        },
+        "resourceCosts": [],
+        "burstUsage": {
+          "usesPerBurstScaling": {
+            "values": []
+          },
+          "afterBurstCooldownScaling": {
+            "values": []
+          },
+          "belowTargetHealthFractionByLevel": [],
+          "usesBelowThresholdByLevel": []
+        },
+        "triggerCondition": {
+          "chancePerCheckScaling": {
+            "values": []
+          },
+          "chancePerCheck": null,
+          "healthThresholds": []
+        },
+        "allowedRaces": [],
+        "isClassCore": false,
+        "nr": 241,
+        "skillName_eng": "Number of Victims",
+        "skillName_de": "Zahl der Opfer",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "maxSkillLv": 1,
+        "currentUpgradeLv": 0,
+        "maxUpgradeLv": 10,
+        "category": "passive",
+        "description_eng": "Permanent passive reserve bonus with one learnable level. Each complete ten currently stored souls in the Reaper-managed reserve grants 5 direct magical attack: 0–9 souls grant 0, 10–19 grant 5, up to 50 at 100 souls. Spending souls reduces the bonus at ten-soul thresholds. Reaper itself grants no Intelligence. Generates no souls and uses no historical kill count or morality. No activation costs, cast time, cooldown or limited duration.",
+        "description_de": "Permanenter passiver Vorratsbonus mit einer lernbaren Stufe. Je volle zehn aktuell gespeicherte Seelen im durch Reaper verwalteten Speicher +5 direkter M-Angriff: 0–9 Seelen geben 0, 10–19 geben +5, bis maximal +50 bei 100 Seelen. Bonus sinkt beim Ausgeben entsprechend der vollen Zehnergruppen. Reaper selbst gibt keinen Intelligenzbonus. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+        "dmgType": "passive",
+        "skillpoints": 1,
+        "levelProgression": {
+          "version": 1,
+          "rules": [],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      }
+    }
+  ]
+}

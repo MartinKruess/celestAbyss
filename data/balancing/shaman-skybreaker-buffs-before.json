@@ -1,0 +1,95 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c37",
+    "skillName_eng": "Skybreaker",
+    "__v": 0,
+    "category": "active",
+    "cd": 137,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Der Himmel bricht auf und ein gleißendes Licht trifft deine Feinde.",
+    "description_eng": "The sky breaks open and a dazzling light hits your enemies.",
+    "dmgType": "spell",
+    "matk": 292,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 212,
+    "patk": 144,
+    "skillName_de": "Himmelsbrecher",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c42",
+    "skillName_eng": "Speed of the Dox",
+    "__v": 0,
+    "atkSpeed": 15,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Das Blut der Dox fließt durch deine Adern und verleiht dir mehr Geschwindigkeit. Teile dieses Wissen mit deinen Verbündeten.",
+    "description_eng": "The blood of the Dox flows through your veins and gives you more speed. Share this knowledge with your allies.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 10,
+    "nr": 223,
+    "skillName_de": "Geschwindigkeit der Dox",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c43",
+    "skillName_eng": "Power of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Steigere die physische Angriffe deiner Gruppe.",
+    "description_eng": "Increase the physical attacks of your group.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 224,
+    "patk": 18,
+    "skillName_de": "Macht des Feuers",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c44",
+    "skillName_eng": "Power of Mind",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die magische Verteidigung deiner Gruppe um 18 für 30 Minuten.",
+    "description_eng": "Increases your group’s magical defense by 18 for 30 minutes.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 18,
+    "nr": 225,
+    "skillName_de": "Macht des Geistes",
+    "skillpoints": 1
+  }
+]

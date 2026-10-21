@@ -1,0 +1,663 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6b",
+    "skillName_eng": "Astral Body",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft ein Abbild deiner selbst, das durch die Gegner fliegt, ihnen Schaden zufügt und dahinter verschwindet. Es kann auch Gegnergruppen treffen, laut bisheriger Beschreibung bis zu sieben Gegner. Die vorläufige Animation dauert 4 Sekunden und blockiert keine weiteren Angriffe. Kein viersekündiger DoT. Magischer Skill-Grundschaden 506 auf Stufe 1, plus 236 je weiterer Stufe, bis zu 1450 auf Stufe 5. Mana-Kosten 234, plus 112 je weiterer Stufe, bis zu 682. Cooldown beginnt bei 120 Sekunden und sinkt um 2 Sekunden je weiterer Stufe auf 112 Sekunden. Castzeit 0,5 Sekunden. Genaue Flugbahn, Trefferbereich und mögliche Mehrfachtreffer auf dasselbe Ziel bleiben noch offen.",
+    "description_eng": "Creates an image of yourself that flies through enemies, deals damage and disappears behind them. Can hit groups, up to seven enemies according to the existing description. Provisional animation lasts 4 seconds and does not block further attacks. Does not deal damage over time for four seconds. Magical skill base damage starts at 506 and increases by 236 per additional level to 1450 at level 5. Mana cost starts at 234 and increases by 112 per additional level to 682. Cooldown starts at 120 seconds and decreases by 2 per additional level to 112 seconds. Cast time is 0.5 seconds. Exact trajectory, hit area and possible repeated hits on one target remain pending.",
+    "dmgType": "spell",
+    "matk": 506,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 8,
+    "skillName_de": "Astralkörper",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.5,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -2
+    },
+    "mana": 234,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 234,
+          "perLevel": 112
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 506,
+        "perLevel": 236
+      }
+    },
+    "animationDurationSeconds": 4,
+    "animationTimingStatus": "provisional",
+    "blocksOtherSkillsDuringAnimation": false,
+    "hasLingeringDamage": false
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b6c",
+    "skillName_eng": "Ether Rain",
+    "__v": 0,
+    "category": "active",
+    "cd": 150,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört ein Ätherfeld, das alle 2 Sekunden Gegnern magischen Schaden zufügt und jedes eigene Gruppenmitglied im Feld heilt. Der magische Grundangriff je Auslösung steigt von 300 um 73 je weiterer Stufe auf 957. Die Heilung je Auslösung beträgt 75 HP plus 10 Prozent des Schadens an einem getroffenen Ziel und je 1 Prozent des Schadens an bis zu vier weiteren getroffenen Zielen. Weitere Gegner erhalten weiterhin Schaden, tragen aber nicht zur Heilung bei. Jedes Gruppenmitglied im Feld erhält die volle Heilung. Die Dauer beträgt zunächst 6 Sekunden, ab Stufe 5 7 Sekunden und auf Stufe 10 8 Sekunden. Auslösungen erfolgen nach 2, 4, 6 und gegebenenfalls 8 Sekunden. Mana-Kosten steigen von 210 um 85 je weiterer Stufe auf 975. Castzeit 0,6 Sekunden. Cooldown zunächst 150 Sekunden, je weiterer Stufe 3 Sekunden weniger, bis zu 123 Sekunden auf Level 10. Startdurchmesser, Auswahl des ersten Ziels und genaue Schadensbasis werden noch geklärt.",
+    "description_eng": "Summons an ether field that deals magical damage to enemies and heals each member of your own group within the field every 2 seconds. Base magical attack per pulse increases from 300 by 73 per additional level to 957. Healing per pulse is 75 HP plus 10 percent of damage to one hit target and 1 percent of damage to each of up to four additional hit targets. Further enemies still take damage but do not contribute to healing. Each group member within the field receives the full healing. Duration starts at 6 seconds, becomes 7 seconds at level 5 and 8 seconds at level 10. Pulses occur at 2, 4, 6 and, where applicable, 8 seconds. Mana cost increases from 210 by 85 per additional level to 975. Cast time is 0.6 seconds. Cooldown starts at 150 seconds and decreases by 3 seconds per additional level to 123 seconds at level 10. Starting diameter, primary target selection and exact damage basis remain pending.",
+    "dmgType": "spell",
+    "dur": 6,
+    "matk": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 9,
+    "skillName_de": "Ätherregen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8
+      ]
+    },
+    "mana": 210,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 210,
+          "perLevel": 85
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 300,
+        "perLevel": 73
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 150,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "key": "ether-rain-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 300,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "addsCasterMagicalAttack": true,
+        "valueScaling": {
+          "type": "linear",
+          "base": 300,
+          "perLevel": 73
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            7,
+            7,
+            8
+          ]
+        },
+        "periodicDamageKind": "areaAttack"
+      },
+      {
+        "key": "ether-rain-heal",
+        "type": "heal",
+        "target": "alliesInArea",
+        "recipientGroup": "ownGroup",
+        "distribution": "fullAmountToEachRecipient",
+        "value": 75,
+        "unit": "flat",
+        "damageSourceEffectKey": "ether-rain-damage",
+        "damageBasisStatus": "pending",
+        "primaryTargetSelectionStatus": "pending",
+        "healingFromDamage": {
+          "primaryTargetFraction": 0.1,
+          "additionalTargetFraction": 0.01,
+          "maxAdditionalTargets": 4,
+          "capsDamageTargets": false
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            7,
+            7,
+            8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b80",
+    "skillName_eng": "Ice Lance",
+    "__v": 0,
+    "category": "active",
+    "cd": 48,
+    "charClass": [
+      "Herbalist",
+      "Witcher",
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung für 5 Sekunden um 5 Prozent verringert. Der magische Grundangriff steigt von 187 um 49 je weiterer Stufe auf 628. Die Mana-Kosten steigen von 84 um 42 je weiterer Stufe auf 462. Die Castzeit beträgt 0,6 Sekunden. Der Cooldown sinkt von 48 auf 39 Sekunden. Die fünf Sekunden betreffen den Rüstungseffekt, keinen Schaden über Zeit.",
+    "description_eng": "Summons an ice lance that pierces the target once and reduces its armor by 5 percent for 5 seconds. Base magical attack increases from 187 by 49 per additional level to 628. Mana cost increases from 84 by 42 per additional level to 462. Cast time is 0.6 seconds. Cooldown decreases from 48 to 39 seconds. The five seconds refer to the armor effect, not damage over time.",
+    "dmgType": "spell",
+    "dur": 5,
+    "matk": 187,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 29,
+    "skillName_de": "Eislanze",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 48,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 84,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 84,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 187,
+        "perLevel": 49
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc8",
+    "skillName_eng": "Swords of Light",
+    "__v": 0,
+    "category": "active",
+    "cd": 65,
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Faith auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 123, plus 65 je weiterer Stufe, bis zu 708. Cooldown 65 Sekunden, minus 1 je weiterer Stufe, bis zu 56 Sekunden. Castzeit 0,7 Sekunden.",
+    "description_eng": "A giant sword of light impales the selected enemy, dealing magical skill base damage once, starting at 273 and increasing by 84 per additional level to 1029 at level 10. The sword and a field with a 15 metre diameter and 7.5 metre radius remain afterward. Field duration increases evenly from 10 to 30 seconds. You and your allies inside gain 13 Faith at level 1 plus 0.5 per additional level to 17.5 at level 10. The bonus applies only while inside the field. No recurring damage ticks are defined. Mana cost starts at 123 and increases by 65 per additional level to 708. Cooldown starts at 65 seconds and decreases by 1 per additional level to 56 seconds. Cast time is 0.7 seconds.",
+    "dmgType": "spell",
+    "dur": 10,
+    "matk": 273,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 101,
+    "skillName_de": "Schwerter des Lichtes",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 7.5,
+      "geometryStatus": "defined",
+      "timingStatus": "defined"
+    },
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.7,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 65,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 10,
+      "perLevel": 2.2222222222222223
+    },
+    "effects": [
+      {
+        "key": "swords-light-faith-field",
+        "type": "statModifier",
+        "target": "alliesInArea",
+        "stat": "faith",
+        "value": 13,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 13,
+          "perLevel": 0.5
+        },
+        "durationSeconds": 10,
+        "durationScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 2.2222222222222223
+        },
+        "onlyWhileTargetInsideArea": true
+      }
+    ],
+    "mana": 123,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 123,
+          "perLevel": 65
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 273,
+        "perLevel": 84
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd8",
+    "skillName_eng": "Judgement of Heaven",
+    "__v": 0,
+    "category": "active",
+    "cd": 42,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ruft einen Strahl vom Himmel herab, der Gegner im betroffenen Bereich zuerst mit dem vollen magischen Skill-Schadenswert trifft. Nach 2 Sekunden verursacht der abschließende zweite Treffer 50 Prozent des ursprünglichen Schadenswerts. Der physische Grundschaden des ersten Treffers steigt von 316 um 113 je weiterer Stufe auf 768 auf Stufe 5. Der zweite Treffer entspricht 158 bis 384 Grundschaden; zusammen 474 bis 1152 vor weiteren Schadensberechnungen. Mana-Kosten steigen von 157 um 62 je weiterer Stufe auf 405. Bisheriger Cooldown 42 Sekunden. Castzeit 0,5 Sekunden. Genauer Trefferbereich und Verrechnung mit gegnerischer Verteidigung werden noch geprüft.",
+    "description_eng": "Calls down a beam from heaven that first hits enemies in the affected area for the full magical skill damage value. After 2 seconds, a final second hit deals 50 percent of the original damage value. First-hit base magical damage increases from 316 by 113 per additional level to 768 at level 5. Second-hit base damage is 158 to 384, totaling 474 to 1152 before further damage calculations. Mana cost increases from 157 by 62 per additional level to 405. Existing cooldown is 42 seconds. Cast time is 0.5 seconds. Exact area and interaction with enemy defense remain to be reviewed.",
+    "dmgType": "spell",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 117,
+    "skillName_de": "Urteil des Himmels",
+    "skillpoints": 1,
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "defined",
+      "hitSequence": [
+        {
+          "offsetSeconds": 0,
+          "damageMultiplier": 1
+        },
+        {
+          "offsetSeconds": 2,
+          "damageMultiplier": 0.5
+        }
+      ]
+    },
+    "dur": 2,
+    "mana": 157,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 157,
+          "perLevel": 62
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 316,
+        "perLevel": 113
+      }
+    },
+    "castTimeSeconds": 0.5,
+    "matk": 316
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c35",
+    "skillName_eng": "Lightning Flash",
+    "__v": 0,
+    "category": "active",
+    "cd": 12,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen grellen Lichtblitz auf den Gegner. Einmaliger magischer Angriff: 62 auf Stufe 1, +28 je weiterer Stufe, insgesamt 594 auf Stufe 20. Manakosten 32, +18 je weiterer Stufe, insgesamt 374. Cooldown 12 Sekunden, je weiterer Stufe 0,5 Sekunden weniger, auf Stufe 20 2,5 Sekunden. Castzeit 0,1 Sekunde. Wirkungsdauer 0 Sekunden; nur eine Angriffsanimation, keine anhaltende Wirkung. Animationslänge noch nicht festgelegt.",
+    "description_eng": "Hurls a brilliant flash of light at the enemy. One magical hit: 62 at level 1, +28 per additional level, totaling 594 at level 20. Mana cost 32, +18 per additional level, totaling 374. Cooldown starts at 12 seconds and decreases by 0.5 per additional level to 2.5 seconds at level 20. Cast time 0.1 seconds. Effect duration 0 seconds; attack animation only, no ongoing effect. Animation length remains undefined.",
+    "dmgType": "spell",
+    "matk": 62,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 210,
+    "skillName_de": "Lichtblitz",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 12,
+      "perLevel": -0.5
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 32,
+          "perLevel": 18
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 62,
+        "perLevel": 28
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c3a",
+    "skillName_eng": "Holy Cross",
+    "__v": 0,
+    "category": "active",
+    "cd": 43,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft ein heiliges Kreuz, schleudert es nach vorne und lässt es explodieren. Magischer Grundschaden 237 auf Stufe 1. Je weiterer Stufe steigt er durchgehend um 101: auf 641 auf Stufe 5 und insgesamt 1146 auf Stufe 10. Mana 77 auf Stufe 1 und +43 je weiterer Stufe, insgesamt 464 auf Stufe 10. Castzeit 0,2 Sekunden. Vorläufige Animationsdauer 1 Sekunde, keine anhaltende Wirkung. Bestehender Cooldown 43 Sekunden.",
+    "description_eng": "Creates a holy cross, hurls it forward and makes it explode. Magical base damage starts at 237. Each additional level adds 101 throughout, reaching 641 at level 5 and 1146 at level 10. Mana starts at 77 and increases by 43 per additional level to 464. Cast time 0.2 seconds. Provisional animation duration 1 second; no lingering effect. Existing cooldown remains 43 seconds.",
+    "dmgType": "spell",
+    "matk": 237,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 215,
+    "skillName_de": "Heiliges Kreuz",
+    "skillpoints": 1,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.2,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 77,
+          "perLevel": 43
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 237,
+        "perLevel": 101
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c3b",
+    "skillName_eng": "Holy Destruction",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert drei Lichtspeere auf einen Gegner. Jeder Speer verursacht den vollen angegebenen magischen Skill-Schaden: 113 auf Stufe 1, +37 je weiterer Stufe, auf Stufe 10 446 je Speer, zusammen 1338 Skill-Grundschaden bei drei Treffern. Mana 67 auf Stufe 1, gleichmäßig steigend auf 298 auf Stufe 10; Kosten einmal pro Anwendung. Cooldown 52 Sekunden, -1 je weiterer Stufe, auf Stufe 10 43 Sekunden. Castzeit 0,1 Sekunden, vorläufige Animationsdauer 0,6 Sekunden. Keine anhaltende Wirkung.",
+    "description_eng": "Hurls three spears of light at one enemy. Each spear deals full listed magical skill damage: 113 at level 1, +37 per additional level, reaching 446 per spear and 1338 total skill base damage for three hits at level 10. Mana 67 at level 1, increasing linearly to 298 at level 10; charged once per activation. Cooldown 52 minus 1 per additional level, reaching 43 seconds. Cast time 0.1 seconds; provisional animation duration 0.6 seconds. No lingering effect.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 216,
+    "skillName_de": "Heilige Vernichtung",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.6,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 3,
+      "damageValueScope": "perHit"
+    },
+    "castTimeSeconds": 0.1,
+    "cd": 52,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "matk": 113,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 25.666666666666668
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 113,
+        "perLevel": 37
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4a",
+    "skillName_eng": "Luminus",
+    "__v": 0,
+    "category": "active",
+    "cd": 16,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen schwach leuchtenden Energieball auf deinen Gegner; dieser kann ebenfalls als Lichtquelle dienen. Magischer Grundschaden 17 auf Stufe 1, +9 je weiterer Stufe, insgesamt 98 auf Stufe 10. Mana 21, +6 je weiterer Stufe, insgesamt 75. Cooldown 16 Sekunden, -1 je weiterer Stufe, auf Stufe 10 7 Sekunden. Castzeit 0 Sekunden. Vorläufige Flug-/Animationszeit ungefähr 0,2 Sekunden, keine anhaltende Schadenswirkung. Eine eigenständige Leuchtdauer ist noch nicht festgelegt.",
+    "description_eng": "Throws a faintly glowing energy ball at the enemy; it can also serve as a light source. Magical base damage 17 at level 1, +9 per additional level, reaching 98 at level 10. Mana 21 plus 6 per additional level, totaling 75. Cooldown 16 minus 1 per additional level, reaching 7 seconds. Cast time 0 seconds. Provisional flight/animation time approximately 0.2 seconds; no lingering damage. A separate illumination duration remains undefined.",
+    "dmgType": "spell",
+    "matk": 17,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 231,
+    "skillName_de": "Luminus",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.2,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 16,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 6
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 17,
+        "perLevel": 9
+      }
+    }
+  }
+]

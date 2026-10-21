@@ -1,0 +1,243 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-summon-base-stats-1792330454184",
+  "skills": [
+    {
+      "_id": "6acc1c7e4826525c70d04c45",
+      "skillName_eng": "Spirit Animal",
+      "__v": 0,
+      "category": "active",
+      "cd": 360,
+      "charClass": [
+        "Archer",
+        "Hunter"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Beschwört einen Seelenbegleiter für maximal 360 Sekunden (6 Minuten), sofern er nicht vorher stirbt. Eine lernbare Stufe. Mana-Kosten 132, Cooldown 360 Sekunden, Castzeit 0,4 Sekunden. Er greift ausschließlich mit physischen Fernkampf-Auto-Attacks an und bufft den Meister nicht. Seine Attribute entsprechen live jeweils 30 Prozent des aktuellen Geschicks, der Vitalität und der Wisdom seines Meisters. Standardumrechnung für physische Fernkämpfer: je Geschick 1,8 P-Angriff und 1,6 Genauigkeit; je Vita 30 Max-HP, 2 P-Abwehr und 4 HP-Regeneration pro Tick; je Wisdom 30 Max-Mana, 2 M-Abwehr und 3 MP-Regeneration pro Tick. Keine direkte Übernahme von Waffenangriff oder fertigen Kampfwerten des Meisters. Kein eigener M-Angriff. Buffs und Debuffs des Meisters verändern die übernommenen Attribute live. Macht des Begleiters wirkt direkt auf seine Attribute, zusätzlich zu den übernommenen Meisterattributen. Der Begleiter ist angreifbar, wird von Flächeneffekten getroffen und belegt keinen dauerhaften Pet-Platz. Maximal ein Seelenbegleiter dieses Skills gleichzeitig; erneutes Beschwören ersetzt den bisherigen. Grund-Angriffstempo 100 Prozent wie bei Morrak; keine Übernahme von Agilität. Reichweite und Anpassung aktueller HP bei wechselndem Max-Leben bleiben offen. Der Cooldown beginnt mit der Beschwörung. Bei vorzeitigem Tod verschwindet der Begleiter; erneutes Rufen ist erst nach Ablauf des noch laufenden Beschwörungs-Cooldowns möglich. Tod startet keine zusätzliche Wartezeit. Bei voller Laufzeit von 360 Sekunden kann er nach Ablauf erneut gerufen werden. Kein Wiederbeleben auf 1 HP und keine separate Todessperre. Zusätzliche eigene Grundwerte: 125 Max-Leben, 39 P-Angriff, 0 M-Angriff, 25 P-Verteidigung und 24 M-Verteidigung. Diese Werte werden zur bisherigen Vererbung addiert. Grundfrequenz 1,5 Angriffe pro Sekunde. Bindung wirkt direkt und zusätzlich auf die Kreaturenattribute; die normale Lerngrenze des Meisters ist zu beachten.",
+      "description_eng": "Summons a spirit companion for up to 360 seconds (6 minutes), unless killed earlier. One learnable level. Mana cost 132, cooldown 360 seconds, cast time 0.4 seconds. Uses only physical ranged basic attacks and does not buff the master. Live inherits 30% each of current master dexterity, vitality and wisdom. Standard ranged physical conversions: each dexterity gives 1.8 physical attack and 1.6 accuracy; each vitality gives 30 maximum HP, 2 physical defense and 4 HP regeneration per tick; each wisdom gives 30 maximum Mana, 2 magical defense and 3 Mana regeneration per tick. No direct inheritance of weapon attack or derived master combat stats. No own magical attack. Master buffs and debuffs affect inherited attributes live. Power of the Pet directly buffs its attributes in addition to inherited master attributes. Targetable and affected by area attacks; does not occupy a permanent pet slot. At most one spirit companion from this skill; recasting replaces it. Base attack-speed multiplier is 100%, matching Morrak; no agility inheritance. Range and current-HP adjustment when maximum HP changes remain pending. Cooldown starts on summoning. If killed early, the companion disappears and can be summoned again once the remaining summon cooldown expires. Death does not restart the cooldown. After a full 360-second lifetime, it can be summoned again. No 1-HP revival or separate death lockout. Additional fixed base stats: 125 maximum HP, 39 physical attack, 0 magical attack, 25 physical defense and 24 magical defense, added to existing inheritance. Base frequency 1.5 attacks per second. Bond applies directly to creature attributes in addition to inheritance, at the master class learning cap.",
+      "dmgType": "spell",
+      "dur": 360,
+      "maxSkillLv": 1,
+      "maxUpgradeLv": 10,
+      "nr": 226,
+      "skillName_de": "Seelenbegleiter",
+      "skillpoints": 1,
+      "castTimeSeconds": 0.4,
+      "mana": 132,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 132,
+            "perLevel": 0
+          }
+        }
+      ],
+      "summonedCreatureSettings": {
+        "occupiesPermanentPetSlot": false,
+        "canCoexistWithPermanentPet": true,
+        "inheritedAttributeFractions": {
+          "dexterity": 0.3,
+          "vitality": 0.3,
+          "wisdom": 0.3
+        },
+        "attributeConversionMode": "standardRangedPhysical",
+        "acceptsGroupCompanionBuffs": true,
+        "maximumActiveInstances": 1,
+        "statSampling": "liveBeforeSummonHealthPenalty",
+        "defenseScalingStatus": "defined",
+        "attackStyle": "rangedBasicAttack",
+        "damageType": "physical",
+        "targetable": true,
+        "affectedByAreaAttacks": true,
+        "lifetimeSeconds": 360,
+        "endsOnCreatureDeath": true,
+        "currentHealthAdjustmentStatus": "pending",
+        "summonCooldownSeconds": 360,
+        "cooldownStartsOn": "summon",
+        "deathRestartsCooldown": false,
+        "attackSpeed": 1,
+        "baseStats": {
+          "maxHealth": 125,
+          "physicalAttack": 39,
+          "physicalDefense": 25,
+          "magicalDefense": 24
+        },
+        "baseAttacksPerSecond": 1.5,
+        "receivesBond": true
+      }
+    },
+    {
+      "_id": "6acc1c7e4826525c70d04c50",
+      "skillName_eng": "Morrak's Master",
+      "__v": 0,
+      "category": "passive",
+      "charClass": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Einstufige passive Verbesserung der questgebundenen Morrak-Beschwörung. Der Ritualist bezwingt Morrak in einer Quest und erhält dadurch zunächst die zusätzliche Möglichkeit, ihn als Nahkampf-Dämon zu beschwören; die erzählerische Meister-Wahl ist keine echte Auswahl. Sobald Morraks Meister auf Stufe 1 gelernt wird, ersetzt Morrak seine Nahkampf-Krallenangriffe durch magische Fernkampf-Auto-Attacks. Keine eigenen Casts oder Spells des Dämons; Attack-Speed-Wert bleibt 1, genaue Reichweite noch offen. Die separate Grundbeschwörung und Questfreischaltung müssen später in Quest- und Aktionsdaten angebunden werden; diese Passive selbst beschwört ihn nicht und hat keine aktive Castzeit. Bestehende Beschwörungsregeln bleiben: Castzeit 0,4 Sekunden, maximal 300 Sekunden Laufzeit bis Ablauf oder Tod. Die ursprüngliche questgebundene Nahkampf-Version gibt dem Anwender keine Attributboni. Erst mit gelernter Verbesserung Morraks Meister erhält der Anwender +5 Victim und +5 Wisdom, und nur solange der verbesserte Fernkampf-Morrak beschworen ist. Lernen allein gewährt keine dauerhaften Attributboni. Der Beschwörungspreis von -500 Max-HP gilt während der Beschwörung weiterhin auch für die Grundversion. Morraks Werte sind live an seinen Meister gekoppelt: Max-Leben und M-Angriff entsprechen jeweils einem Drittel des entsprechenden aktuellen Meisterwerts. Eigene Beschwörungskosten von -500 Max-HP werden aus der HP-Berechnungsbasis herausgerechnet. Buffs und Debuffs des Meisters wirken damit auch auf Morrak. Physische und magische Verteidigung Morraks entsprechen beide einem Drittel der aktuellen magischen Verteidigung des Meisters. Er ist angreifbar und nimmt Flächenschaden; kein Mana oder Cast-Spells. Jeder Auto-Attack hat 1,5 Prozent Chance auf 50 Prozent Bewegungstempo-Senkung für 1,5 Sekunden. Beschwörungs-Cooldown 360 Sekunden (6 Minuten), maximale Anwesenheit 300 Sekunden (5 Minuten). Keine weiteren Beschwörungskosten: kein Mana, keine Seelen und kein zusätzlicher einmaliger Lebensabzug; allein -500 Max-HP während der Beschwörung. Aggroregeln und genaue Anpassung aktueller HP bei wechselndem Max-Leben bleiben offen. Diese zeitlich begrenzte Skill-Beschwörung belegt keinen regulären dauerhaften Pet-Platz und darf gleichzeitig mit dem normalen Pet aktiv sein. Zwei dauerhafte Pets bleiben dem Abenteurer vorbehalten. Macht des Begleiters wirkt nicht direkt auf Morrak; er übernimmt ausschließlich die definierten Werte seines Meisters. Reguläre Pets des Ritualisten können den Begleiterbuff erhalten. Grundfrequenz seiner Auto-Attacks: 1,1 Angriffe pro Sekunde bei 100 % eigenem Angriffstempo; keine Übernahme des Meister-Angriffstempos. Zusätzliche eigene Grundwerte: 250 Max-Leben, 0 P-Angriff, 74 M-Angriff, 24 P-Verteidigung und 50 M-Verteidigung. Diese Werte werden zur bisherigen Vererbung addiert. Grundfrequenz 1,1 Angriffe pro Sekunde. Keine direkten Bindungsboni.",
+      "description_eng": "One-level passive upgrade to the quest-granted Morrak summon. The Ritualist defeats Morrak in a quest and initially gains a separate ability to summon him as a melee demon; the narrative master choice is not an actual option. Learning Morrak’s Master at level 1 replaces his melee claw attacks with magical ranged basic attacks. The demon still has no casts or spells; attack-speed rating remains 1, exact range pending. The separate base summon and quest unlock require later quest/action integration; this passive itself does not summon him and has no active cast time. Existing summon rules remain: cast 0.4 seconds, lifetime at most 300 seconds or until death. The original quest-granted melee version grants no caster attribute buffs. Only after learning Morrak’s Master does the caster gain +5 Victim and +5 Wisdom while the upgraded ranged Morrak is summoned; merely learning the passive grants no permanent attribute bonuses. The -500 max-HP summon penalty continues to apply while summoned, including the base version. Morrak is live-linked to his master: max HP and magical attack each equal one third of the corresponding current caster stat. His own -500 max-HP summon penalty is excluded from the health calculation basis. Caster buffs and debuffs therefore affect Morrak. Both physical and magical defense equal one third of the caster’s current magical defense. Targetable and affected by area damage, no Mana or casts. Each basic attack has 1.5 percent chance to slow movement by 50 percent for 1.5 seconds. Summon cooldown 360 seconds (6 minutes), maximum lifetime 300 seconds (5 minutes). No other summon costs: no Mana, souls or additional upfront health loss; only -500 max HP while summoned. Aggro rules and exact current-HP handling when maximum HP changes remain pending. This temporary skill summon does not occupy a regular permanent-pet slot and can coexist with the normal pet. Two permanent pets remain exclusive to the Adventurer. Power of the Pet does not directly affect Morrak; he inherits only the defined master stats. Regular Ritualist pets can receive the companion buff. Basic attack frequency: 1.1 attacks per second at 100% own attack speed; does not inherit caster attack speed. Additional fixed base stats: 250 maximum HP, 0 physical attack, 74 magical attack, 24 physical defense and 50 magical defense, added to existing inheritance. Base frequency 1.1 attacks per second. No direct Bond bonuses.",
+      "dmgType": "passive",
+      "maxSkillLv": 1,
+      "maxUpgradeLv": 10,
+      "nr": 237,
+      "skillName_de": "Morrak´s Meister",
+      "skillpoints": 1,
+      "effects": [
+        {
+          "key": "morrak-caster-vic",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "vic",
+          "value": 5,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        },
+        {
+          "key": "morrak-caster-wis",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "wis",
+          "value": 5,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        },
+        {
+          "key": "morrak-caster-maxHealth",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "maxHealth",
+          "value": -500,
+          "unit": "flat",
+          "durationSeconds": 300,
+          "endWith": "morrak-summon"
+        }
+      ],
+      "effectsVersion": 1,
+      "summonedCreatureSettings": {
+        "name": "Morrak",
+        "healthFractionOfCaster": 0.3333333333333333,
+        "magicalAttackFractionOfCaster": 0.3333333333333333,
+        "statSampling": "liveBeforeSummonHealthPenalty",
+        "defenseScalingStatus": "defined",
+        "attackStyle": "rangedBasicAttack",
+        "damageType": "magical",
+        "attackSpeed": 1,
+        "usesMana": false,
+        "hasCastSpells": false,
+        "targetable": true,
+        "affectedByAreaAttacks": true,
+        "lifetimeSeconds": 300,
+        "endsOnCreatureDeath": true,
+        "casterBuffsEndWithCreature": true,
+        "slowProcChancePerBasicAttack": 0.015,
+        "slowDurationSeconds": 1.5,
+        "movementSlowFraction": 0.5,
+        "threatAndAggroStatus": "pending",
+        "currentHealthAdjustmentStatus": "pending",
+        "baseSummonGrantedByQuest": true,
+        "questRequiresDefeatingCreature": true,
+        "skillIsRangedUpgrade": true,
+        "baseAttackStyle": "meleeClaws",
+        "summonCastTimeSeconds": 0.4,
+        "rangedAttackRangeStatus": "pending",
+        "baseSummonGrantsAttributeBuffs": false,
+        "attributeBuffsRequireLearnedUpgrade": true,
+        "occupiesPermanentPetSlot": false,
+        "canCoexistWithPermanentPet": true,
+        "summonCooldownSeconds": 360,
+        "physicalDefenseFractionOfCasterMagicalDefense": 0.3333333333333333,
+        "magicalDefenseFractionOfCasterMagicalDefense": 0.3333333333333333,
+        "acceptsGroupCompanionBuffs": false,
+        "baseAttacksPerSecond": 1.1,
+        "baseStats": {
+          "maxHealth": 250,
+          "magicalAttack": 74,
+          "physicalDefense": 24,
+          "magicalDefense": 50
+        },
+        "receivesBond": false
+      },
+      "resourceCosts": []
+    },
+    {
+      "_id": "6ad3a9de427c3c124063398e",
+      "skillName_eng": "Nature Spirit",
+      "__v": 0,
+      "category": "active",
+      "cd": 360,
+      "charClass": [
+        "Druide",
+        "Alchemist"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Beschwört einen Naturgeist, der mit kleinen Wirbelstürmen magischen Windschaden aus der Entfernung verursacht. Eigene Skilldefinition nur für Druide/Alchemist, getrennt vom Seelenbegleiter des Jägers. Übernimmt live jeweils 30 % der aktuellen Intelligenz, Vitalität und Willenskraft seines Meisters. Statt Geschick liefert Intelligenz den Angriff: 1,8 M-Angriff je übernommenes Intelligenz-Punkt; keine direkte Übernahme von Waffenangriff oder fertigem M-Angriff. Vita und Willenskraft werden nach den normalen Begleiterregeln verwertet. Keine physische Angriffskomponente. Eine lernbare Stufe, 132 Mana, 0,4 Sekunden Castzeit, 360 Sekunden Dauer und 360 Sekunden Cooldown ab Beschwörung. Maximal ein Naturgeist gleichzeitig; erneutes Rufen ersetzt den bisherigen. Bei Tod nur verbleibenden Beschwörungs-Cooldown abwarten. Angreifbar und von Flächenschaden betroffen. Kein dauerhafter Pet-Platz, mit normalem Pet kombinierbar. Grundfrequenz 1,1 Angriffe pro Sekunde bei 100 % eigenem Angriffstempo, keine Übernahme von Agilität. Meister-Buffs und -Debuffs wirken live auf die übernommenen Attribute. Begleiterbuffs wirken direkt auf den Naturgeist. Reichweite und Anpassung aktueller HP bei Max-HP-Änderungen noch offen. Zusätzliche eigene Grundwerte: 125 Max-Leben, 0 P-Angriff, 37 M-Angriff, 22 P-Verteidigung und 31 M-Verteidigung. Diese Werte werden zur bisherigen Vererbung addiert. Grundfrequenz 1,1 Angriffe pro Sekunde. Bindung wirkt direkt und zusätzlich auf die Kreaturenattribute; die normale Lerngrenze des Meisters ist zu beachten.",
+      "description_eng": "Summons a Nature Spirit that uses small tornadoes as ranged magical wind basic attacks. Separate Druid/Alchemist skill. Live inheritance: 30% each of current master Intelligence, Vitality and Wisdom. Intelligence replaces Dexterity as the attack source: 1.8 magical attack per inherited Intelligence point, without direct weapon or final master attack inheritance. Standard companion Vitality/Wisdom conversions. No physical attack component. One learnable level, 132 Mana, 0.4-second cast, 360-second lifetime and cooldown starting on summon. Maximum one active instance; resummoning replaces it. Death requires waiting only the remaining summon cooldown. Targetable and affected by area damage. Does not occupy a permanent pet slot. Base frequency 1.1 attacks per second at 100% own speed; no Agility inheritance. Master attribute changes apply live; companion buffs apply directly. Range and current-HP adjustments remain pending. Additional fixed base stats: 125 maximum HP, 0 physical attack, 37 magical attack, 22 physical defense and 31 magical defense, added to existing inheritance. Base frequency 1.1 attacks per second. Bond applies directly to creature attributes in addition to inheritance, at the master class learning cap.",
+      "dmgType": "spell",
+      "dur": 360,
+      "maxSkillLv": 1,
+      "maxUpgradeLv": 10,
+      "nr": 244,
+      "skillName_de": "Naturgeist",
+      "skillpoints": 1,
+      "castTimeSeconds": 0.4,
+      "mana": 132,
+      "resourceCosts": [
+        {
+          "resource": "mana",
+          "reference": "maxMana",
+          "unit": "flat",
+          "scaling": {
+            "type": "linear",
+            "base": 132,
+            "perLevel": 0
+          }
+        }
+      ],
+      "summonedCreatureSettings": {
+        "occupiesPermanentPetSlot": false,
+        "canCoexistWithPermanentPet": true,
+        "inheritedAttributeFractions": {
+          "intelligence": 0.3,
+          "vitality": 0.3,
+          "wisdom": 0.3
+        },
+        "attributeConversionMode": "standardMagical",
+        "acceptsGroupCompanionBuffs": true,
+        "maximumActiveInstances": 1,
+        "statSampling": "liveBeforeSummonHealthPenalty",
+        "defenseScalingStatus": "defined",
+        "attackStyle": "rangedBasicAttack",
+        "damageType": "magical",
+        "targetable": true,
+        "affectedByAreaAttacks": true,
+        "lifetimeSeconds": 360,
+        "endsOnCreatureDeath": true,
+        "currentHealthAdjustmentStatus": "pending",
+        "summonCooldownSeconds": 360,
+        "cooldownStartsOn": "summon",
+        "deathRestartsCooldown": false,
+        "attackSpeed": 1,
+        "damageElement": "wind",
+        "baseAttacksPerSecond": 1.1,
+        "baseStats": {
+          "maxHealth": 125,
+          "magicalAttack": 37,
+          "physicalDefense": 22,
+          "magicalDefense": 31
+        },
+        "receivesBond": true
+      }
+    }
+  ]
+}

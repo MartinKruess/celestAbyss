@@ -1,0 +1,159 @@
+{
+  "_id": "6acc1c7e4826525c70d04b85",
+  "skillName_eng": "Energy Outburst",
+  "__v": 0,
+  "category": "active",
+  "cd": 120,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erzeugt einen Schild gegen physischen und magischen Schaden mit einer Kapazität von 10 % deines maximalen Lebens, ab Skilllevel 5 mit 12 % und auf Skilllevel 10 mit 15 %. Solange der Schild besteht und ausreichend Mana vorhanden ist, verursachen normale Angriffe 10 % mehr Schaden und du verbrauchst pro Sekunde 1 % deines maximalen Manas. Bei unzureichendem Mana enden Angriffsbonus und Manaverbrauch, der Schild bleibt bestehen. Schildbruch beendet alle zugehörigen Effekte. Der Schild hält maximal 15 Sekunden, auf Skilllevel 10 maximal 18 Sekunden. Der Cooldown sinkt von 120 Sekunden auf Skilllevel 1 auf 90 Sekunden auf Skilllevel 10.",
+  "description_eng": "Creates a shield against physical and magical damage with a capacity of 10% of your maximum health, increasing to 12% at skill level 5 and 15% at skill level 10. While the shield remains and sufficient mana is available, basic attacks deal 10% more damage and consume 1% of your maximum mana per second. Insufficient mana ends the attack bonus and mana drain, but the shield remains. Shield break ends all linked effects. The shield lasts up to 15 seconds, or 18 seconds at skill level 10. The cooldown decreases from 120 seconds at skill level 1 to 90 seconds at skill level 10.",
+  "dmgType": "spell",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 34,
+  "skillName_de": "Energieausbruch",
+  "skillpoints": 1,
+  "activation": "manual",
+  "dur": 15,
+  "effects": [
+    {
+      "disablesEffects": [],
+      "valueScaling": {
+        "type": "table",
+        "values": [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.12,
+          0.15
+        ]
+      },
+      "durationScaling": {
+        "type": "table",
+        "values": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          18
+        ]
+      },
+      "type": "shield",
+      "target": "self",
+      "allowedRaces": [],
+      "value": 0.1,
+      "unit": "fraction",
+      "reference": "maxHealth",
+      "damageTypes": [
+        "physical",
+        "magical"
+      ],
+      "durationSeconds": 15,
+      "key": "shield"
+    },
+    {
+      "disablesEffects": [],
+      "valueScaling": {
+        "values": []
+      },
+      "durationScaling": {
+        "type": "table",
+        "values": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          18
+        ]
+      },
+      "type": "damageBonus",
+      "target": "self",
+      "allowedRaces": [],
+      "value": 0.1,
+      "unit": "fraction",
+      "appliesTo": "basicAttack",
+      "damageTypes": [],
+      "durationSeconds": 15,
+      "endWith": "shield",
+      "key": "basic-attack-bonus"
+    },
+    {
+      "onInsufficientResource": "disableEffects",
+      "disablesEffects": [
+        "basic-attack-bonus",
+        "mana-drain"
+      ],
+      "valueScaling": {
+        "values": []
+      },
+      "durationScaling": {
+        "type": "table",
+        "values": [
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          15,
+          18
+        ]
+      },
+      "type": "resourceDrain",
+      "target": "self",
+      "allowedRaces": [],
+      "value": 0.01,
+      "unit": "fraction",
+      "reference": "maxMana",
+      "resource": "mana",
+      "damageTypes": [],
+      "intervalSeconds": 1,
+      "durationSeconds": 15,
+      "endWith": "shield",
+      "key": "mana-drain"
+    }
+  ],
+  "effectsVersion": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 120,
+    "perLevel": -3.3333333333333335
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      18
+    ]
+  }
+}

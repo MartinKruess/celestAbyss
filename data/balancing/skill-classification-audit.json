@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-10-19T14:16:24.347Z",
+  "status": "readOnlyAudit",
+  "catalogSize": 260,
+  "findings": {
+    "legacyPhysicalTypo": 35,
+    "selfBuffLabeledSpell": 34,
+    "healingSkillsLabeledSpell": [
+      41,
+      58,
+      64,
+      71,
+      78,
+      108,
+      124
+    ],
+    "mixedPhysicalLabel": [
+      38,
+      76,
+      227
+    ],
+    "utilityAndSummonsLabeledSpell": [
+      100,
+      133,
+      136,
+      137,
+      185,
+      204,
+      205,
+      206,
+      207,
+      226,
+      228,
+      244
+    ],
+    "notes": [
+      "category mixes activation classification with race and creature ownership.",
+      "dmgType mixes activation purpose, casting method and damage type.",
+      "spell does not guarantee magical damage; physical does not exclude a magical component.",
+      "Damage element and scaling attribute are separate; Meteor uses magicalAttack for physical damage.",
+      "No database, damage or skill assignments changed."
+    ]
+  },
+  "sensitivity": [
+    {
+      "nr": 35,
+      "name": "Energieentladung",
+      "label": "Physicas",
+      "base": 1993,
+      "plus100P": 100,
+      "plus100M": 0
+    },
+    {
+      "nr": 15,
+      "name": "Beben",
+      "label": "physical",
+      "base": 822,
+      "plus100P": 100,
+      "plus100M": 0
+    },
+    {
+      "nr": 255,
+      "name": "Felszähne",
+      "label": "physical",
+      "base": 947,
+      "plus100P": 100,
+      "plus100M": 0
+    },
+    {
+      "nr": 258,
+      "name": "Erdsäule",
+      "label": "physical",
+      "base": 1485,
+      "plus100P": 100,
+      "plus100M": 0
+    },
+    {
+      "nr": 256,
+      "name": "Felsensalve",
+      "label": "physical",
+      "base": 13555,
+      "plus100P": 500,
+      "plus100M": 0
+    },
+    {
+      "nr": 38,
+      "name": "Erdbeben",
+      "label": "physical",
+      "base": 904,
+      "plus100P": 100,
+      "plus100M": 100
+    },
+    {
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "label": "spell",
+      "base": 6516,
+      "plus100P": 0,
+      "plus100M": 300
+    }
+  ]
+}

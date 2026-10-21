@@ -1,0 +1,35 @@
+{
+  "_id": "6acc1c7e4826525c70d04b7d",
+  "skillName_eng": "Dual Axe Training",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verbessert dauerhaft deine Fertigkeiten im Kampf mit zwei Einhandäxten. Je gelerntem Skilllevel erhältst du 2 Stärke und 1 Agility, bis zu 20 Stärke und 10 Agility auf Stufe 10. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer.",
+  "description_eng": "Permanently improves your proficiency with two one-handed axes. Each learned skill level grants 2 Strength and 1 Agility, reaching 20 Strength and 10 Agility at level 10. Permanent passive skill with no activation cost, cast time, cooldown or limited duration.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 26,
+  "skillName_de": "Dual Axttraining",
+  "skillpoints": 1,
+  "str": 2,
+  "agi": 1,
+  "resourceCosts": [],
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "agi": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    }
+  }
+}

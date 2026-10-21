@@ -1,0 +1,65 @@
+{
+  "_id": "6acc1c7e4826525c70d04bcb",
+  "skillName_eng": "Soul Torment",
+  "__v": 0,
+  "category": "active",
+  "cd": 0.15,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 127, +22 je weiterer Stufe, auf Stufe 10 325. Mana 77 je Anwendung auf Stufe 1, +31 je weiterer Stufe, auf Stufe 10 356 je Anwendung. Castzeit 0,2 Sekunden, Cooldown 0,15 Sekunden. Bei überlappender Cooldown-/Castzeitrechnung theoretisch maximal 15 Anwendungen in einem vollen 3-Sekunden-Fenster; bei nacheinander addierter Zeit weniger. Tatsächlicher Serverablauf und Fensterbeginn sind noch zu prüfen. Als Entwurf für Seelentrennung vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, 12–15 ergeben 2; manuelle oder automatische Ernte noch nicht entschieden. Ein Treffer der Fessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.",
+  "description_eng": "One magical hit, usable only while Soul Shackle affects the target. No health cost or damage over time. Base damage 127 plus 22 per additional level, reaching 325 at level 10. Mana 77 per activation plus 31 per additional level, reaching 356 per activation. Cast time 0.2 seconds, cooldown 0.15 seconds. If cooldown overlaps casting, at most 15 theoretical uses fit into a full 3-second window; sequential timing permits fewer. Server timing and window start remain pending. Soul Separation design proposal: 0–4 successful Torment hits yield 0 souls, 5–11 yield 1, 12–15 yield 2; manual versus automatic harvesting is undecided. Shackle consumes 1 soul first, so harvesting 1 only recovers the initial investment.",
+  "dmgType": "spell",
+  "matk": 127,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 104,
+  "skillName_de": "Seelenqual",
+  "skillpoints": 1,
+  "activationRequirements": {
+    "requiredTargetMarkSkillNumber": 103
+  },
+  "attackExecution": {
+    "targetMode": "singleEnemy",
+    "hitCount": 1,
+    "damageValueScope": "perHit"
+  },
+  "castTimeSeconds": 0.2,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 77,
+        "perLevel": 31
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 127,
+      "perLevel": 22
+    }
+  }
+}

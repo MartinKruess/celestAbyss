@@ -1,0 +1,35 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc0",
+  "skillName_eng": "Shield Attack Training",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verbessert dauerhaft deine Fertigkeiten im Kampf mit dem Schild. Auf Stufe 1 erhältst du 1 Stärke und 2 Vitalität. Je weiterer Stufe kommen 0,5 Stärke und 1 Vitalität hinzu, bis zu 3 Stärke und 6 Vitalität auf Stufe 5. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer.",
+  "description_eng": "Permanently improves your proficiency with a shield. At level 1 grants 1 Strength and 2 Vitality. Each additional level adds 0.5 Strength and 1 Vitality, reaching 3 Strength and 6 Vitality at level 5. No activation costs, cast time, cooldown or limited duration.",
+  "dmgType": "passive",
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 93,
+  "skillName_de": "Schildangriffstraining",
+  "skillpoints": 1,
+  "vita": 2,
+  "str": 1,
+  "resourceCosts": [],
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.5
+    },
+    "vita": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 1
+    }
+  }
+}

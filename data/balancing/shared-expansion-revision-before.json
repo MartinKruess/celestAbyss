@@ -1,0 +1,250 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b8e",
+    "skillName_eng": "Expansion of the Senses",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter",
+      "Summoner",
+      "Soulseeker",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Bonus ohne Aktivierungskosten. Auf Stufe 1 erhältst du jeweils 3 Agilität und Geschicklichkeit. Bis Stufe 9 steigt jeder Attributbonus je weiterer Stufe um 1 auf jeweils 11. Auf Stufe 10 werden die Stufe-9-Boni verdoppelt, ohne einen weiteren normalen Zuwachs: jeweils 22 Agilität und Geschicklichkeit.",
+    "description_eng": "Permanent passive bonus with no activation cost. Level 1 grants 3 Agility and 3 Dexterity. Each additional level up to level 9 adds 1 to both, reaching 11 each. At level 10 the level 9 bonuses are doubled without another normal increment, granting 22 Agility and 22 Dexterity.",
+    "dex": 3,
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 43,
+    "skillName_de": "Erweiterung der Sinne",
+    "skillpoints": 1,
+    "agi": 3,
+    "resourceCosts": [],
+    "statScaling": {
+      "dex": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          22
+        ]
+      },
+      "agi": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          22
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b8f",
+    "skillName_eng": "Expansion of the Spirit",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher",
+      "Ritualist",
+      "Bloodmage",
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Shamane",
+      "High Elves",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft Intelligenz und Wisdom auf Stufe 1 jeweils um 2 sowie Faith und Victim jeweils um 1. Bis Stufe 9 steigen Intelligenz und Wisdom je weiterer Stufe um 1; Faith und Victim steigen auf Stufe 2, 4, 6 und 8 jeweils um 1. Auf Stufe 10 werden die Stufe-9-Boni verdoppelt: 20 Intelligenz, 20 Wisdom, 10 Faith und 10 Victim. Keine Aktivierungskosten, Castzeit, Wirkungsdauer oder Cooldown. Kein direkter Mana-Bonus; Wisdom erhöht Mana über die Attributumrechnung.",
+    "description_eng": "Permanently grants 2 Intelligence and 2 Wisdom plus 1 Faith and 1 Victim at level 1. Up to level 9, Intelligence and Wisdom increase by 1 each additional level; Faith and Victim increase by 1 at levels 2, 4, 6 and 8. At level 10, the level 9 bonuses are doubled, granting 20 Intelligence, 20 Wisdom, 10 Faith and 10 Victim. No activation costs, cast time, duration or cooldown. No direct Mana bonus; Wisdom increases Mana through attribute conversion.",
+    "dmgType": "passive",
+    "faith": 1,
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 44,
+    "skillName_de": "Erweiterung des Geistes",
+    "skillpoints": 1,
+    "vic": 1,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "faith": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          10
+        ]
+      },
+      "vic": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          10
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b90",
+    "skillName_eng": "Expansion of the Body",
+    "__v": 0,
+    "agi": 2,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Berserker",
+      "Abenteuer",
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Bonus ohne Aktivierungskosten. Bis Skilllevel 9 steigt jeder Attributbonus je weiterer Stufe um 1, der direkte Lebensbonus zusätzlich um 50. Auf Skilllevel 10 werden die Boni von Level 9 verdoppelt, ohne vorher einen weiteren normalen Zuwachs hinzuzufügen.",
+    "description_eng": "Permanent passive bonus with no activation cost. Up to skill level 9, each attribute bonus increases by 1 per additional level, and the direct Health bonus increases by 50. At skill level 10, the level 9 bonuses are doubled without applying another normal increment first.",
+    "dmgType": "passive",
+    "health": 150,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 45,
+    "skillName_de": "Erweiterung des Körpers",
+    "skillpoints": 1,
+    "vita": 3,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "health": {
+        "type": "table",
+        "values": [
+          150,
+          200,
+          250,
+          300,
+          350,
+          400,
+          450,
+          500,
+          550,
+          1100
+        ]
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          22
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "agi": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      }
+    }
+  }
+]

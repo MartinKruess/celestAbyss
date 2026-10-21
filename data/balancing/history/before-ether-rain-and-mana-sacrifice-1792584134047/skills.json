@@ -1,0 +1,394 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6c",
+    "skillName_eng": "Ether Rain",
+    "__v": 0,
+    "category": "active",
+    "cd": 152,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört ein Ätherfeld, das alle 2 Sekunden Gegnern magischen Schaden zufügt und jedes eigene Gruppenmitglied im Feld heilt. Der magische Grundangriff je Auslösung steigt von 300 um 73 je weiterer Stufe auf 957. Die Heilung je Auslösung beträgt 75 HP plus 10 Prozent des Schadens an einem getroffenen Ziel und je 1 Prozent des Schadens an bis zu vier weiteren getroffenen Zielen. Weitere Gegner erhalten weiterhin Schaden, tragen aber nicht zur Heilung bei. Jedes Gruppenmitglied im Feld erhält die volle Heilung. Die Dauer beträgt zunächst 6 Sekunden, ab Stufe 5 7 Sekunden und auf Stufe 10 8 Sekunden. Auslösungen erfolgen nach 2, 4, 6 und gegebenenfalls 8 Sekunden. Mana-Kosten 110 auf Stufe 1, Stufenwerte 110, 118, 126, 133, 141, 149, 156, 164, 172, 239, maximal 239 auf Stufe 10. Castzeit 0,6 Sekunden. Cooldown 152 Sekunden auf Stufe 1, 125 Sekunden auf Stufe 10; bisheriger Stufenverlauf um 2 Sekunden erhöht. Startdurchmesser, Auswahl des ersten Ziels und genaue Schadensbasis werden noch geklärt. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Summons an ether field that deals magical damage to enemies and heals each member of your own group within the field every 2 seconds. Base magical attack per pulse increases from 300 by 73 per additional level to 957. Healing per pulse is 75 HP plus 10 percent of damage to one hit target and 1 percent of damage to each of up to four additional hit targets. Further enemies still take damage but do not contribute to healing. Each group member within the field receives the full healing. Duration starts at 6 seconds, becomes 7 seconds at level 5 and 8 seconds at level 10. Pulses occur at 2, 4, 6 and, where applicable, 8 seconds. Mana cost 110 at level 1, maximum 239 at level 10. Cast time is 0.6 seconds. Cooldown 152 seconds at level 1 and 125 seconds at level 10; previous progression increased by 2 seconds throughout. Starting diameter, primary target selection and exact damage basis remain pending.",
+    "dmgType": "spell",
+    "dur": 6,
+    "matk": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 9,
+    "skillName_de": "Ätherregen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        7,
+        7,
+        7,
+        7,
+        7,
+        8
+      ]
+    },
+    "mana": 110,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            110,
+            118,
+            126,
+            133,
+            141,
+            149,
+            156,
+            164,
+            172,
+            239
+          ],
+          "base": 110
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 300,
+        "perLevel": 73
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 152,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "key": "ether-rain-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 300,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "addsCasterMagicalAttack": true,
+        "valueScaling": {
+          "type": "linear",
+          "base": 300,
+          "perLevel": 73
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            7,
+            7,
+            8
+          ]
+        },
+        "periodicDamageKind": "areaAttack"
+      },
+      {
+        "key": "ether-rain-heal",
+        "type": "heal",
+        "target": "alliesInArea",
+        "recipientGroup": "ownGroup",
+        "distribution": "fullAmountToEachRecipient",
+        "value": 75,
+        "unit": "flat",
+        "damageSourceEffectKey": "ether-rain-damage",
+        "damageBasisStatus": "pending",
+        "primaryTargetSelectionStatus": "pending",
+        "healingFromDamage": {
+          "primaryTargetFraction": 0.1,
+          "additionalTargetFraction": 0.01,
+          "maxAdditionalTargets": 4,
+          "capsDamageTargets": false
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            6,
+            6,
+            6,
+            6,
+            7,
+            7,
+            7,
+            7,
+            7,
+            8
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "heal",
+      "factor": 0.35,
+      "basis": "healingPerRecipient",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 6,
+            "changes": [
+              {
+                "level": 5,
+                "value": 7
+              },
+              {
+                "level": 10,
+                "value": 8
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "sum",
+              "terms": [
+                {
+                  "kind": "periodicSteps",
+                  "base": 110,
+                  "steps": [
+                    8,
+                    8,
+                    7
+                  ]
+                },
+                {
+                  "kind": "thresholds",
+                  "base": 0,
+                  "changes": [
+                    {
+                      "level": 10,
+                      "value": 60
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 300,
+            "perLevel": 73
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 152,
+              "perLevel": -3
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 300,
+            "perLevel": 73
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 6,
+            "changes": [
+              {
+                "level": 5,
+                "value": 7
+              },
+              {
+                "level": 10,
+                "value": 8
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 6,
+            "changes": [
+              {
+                "level": 5,
+                "value": 7
+              },
+              {
+                "level": 10,
+                "value": 8
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c32",
+    "skillName_eng": "Heavenly Sacrifice",
+    "__v": 0,
+    "category": "active",
+    "cd": 900,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Opfert 90 Prozent der maximalen Lebenspunkte, um die anderen Gruppenmitglieder zu heilen. Je mehr Lebenspunkte tatsächlich geopfert werden, desto höher ist die Heilung; Umrechnungsfaktor und Verteilung sind noch festzulegen. Keine garantierte vollständige Heilung. Kostet zusätzlich 10 Prozent des Maximal-Manas; dieses Mana muss zur Aktivierung vorhanden sein. Notfallheilung mit 900 Sekunden (15 Minuten) Cooldown und 0 Sekunden Castzeit: Die Wirkung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Heilung nicht; ob sie andere Aktionen blockiert, ist noch offen. Keine fortlaufende Heilwirkung festgelegt. Der Skill bleibt vorerst erhalten; seine langfristige Notwendigkeit wird später geprüft. Verhalten bei unzureichenden aktuellen Lebenspunkten ist noch zu klären. Nur dem Heiler zugeordnet; beim Luminet entfernt.",
+    "description_eng": "Sacrifices 90 percent of maximum health to heal the other group members. Healing increases with the health actually sacrificed; conversion factor and distribution remain to be defined. Does not guarantee a full heal. Also costs 10 percent of maximum Mana, which must be available to activate the skill. Emergency heal with a 900-second (15-minute) cooldown and 0-second cast time: the effect resolves instantly. The provisional approximately 2-second animation does not delay healing; whether it blocks other actions remains pending. No ongoing healing effect defined. Retained provisionally; its long-term necessity will be reviewed later. Behavior with insufficient current health remains unresolved. Assigned only to the Healer; removed from the Luminet.",
+    "dmgType": "spell",
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 207,
+    "skillName_de": "Himmlische Aufopferung",
+    "skillpoints": 1,
+    "animationDurationSeconds": 2,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "resourceCosts": [
+      {
+        "resource": "health",
+        "reference": "maxHealth",
+        "unit": "fraction",
+        "scaling": {
+          "type": "fixed",
+          "base": 0.9
+        }
+      },
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "fraction",
+        "scaling": {
+          "type": "fixed",
+          "base": 0.1
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "max": 1,
+            "rule": {
+              "kind": "constant",
+              "value": 0.9
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "1",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "max": 1,
+            "rule": {
+              "kind": "constant",
+              "value": 0.1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  }
+]

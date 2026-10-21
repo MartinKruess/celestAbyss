@@ -1,0 +1,92 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc1",
+  "skillName_eng": "Shield Strike",
+  "__v": 0,
+  "category": "active",
+  "cd": 29,
+  "charClass": [
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Stößt mit dem Schild gegen den Gegner und verursacht einmalig physischen Grundschaden von 137 auf Stufe 1, plus 47 je weiterer Stufe auf 1030 auf Stufe 20. Keine Benommenheit oder zusätzliche Kontrollwirkung. Mana-Kosten 34 auf Stufe 1, +12 je weiterer Stufe, maximal 262 auf Stufe 20. Castzeit 0,1 Sekunden, vorläufige Animation 1 Sekunde, Cooldown 29 Sekunden auf Stufe 1 und 29 Sekunden auf Stufe 20. Keine anhaltende Schadenswirkung. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+  "description_eng": "Hits the enemy with a shield thrust, dealing base physical damage once, starting at 137 and increasing by 47 per additional level to 1030 at level 20. No daze or additional control effect. Mana cost 34 at level 1, maximum 262 at level 20. Cast time is 0.1 seconds, provisional animation is 1 second, Cooldown 29 seconds at level 1 and 29 seconds at level 20. No ongoing damage.",
+  "dmgType": "physical",
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 94,
+  "patk": 137,
+  "skillName_de": "Schildstoß",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.1,
+  "effects": [],
+  "hasLingeringDamage": false,
+  "mana": 34,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 34,
+        "perLevel": 12
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 137,
+      "perLevel": 47
+    }
+  },
+  "manaPricing": {
+    "category": "normal",
+    "factor": 0.25,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 34,
+            "perLevel": 12
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "patk"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 137,
+          "perLevel": 47
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "damageType": "physical",
+  "type": "skill"
+}

@@ -1,0 +1,687 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-soul-collection-prepayment-1792402808398",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c1c",
+        "skillName_eng": "Soulshot",
+        "__v": 0,
+        "category": "active",
+        "cd": 90,
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Markiert einen Gegner auffällig für 5 Sekunden. Verursacht keinen Schaden und kostet kein Mana. Castzeit 0 Sekunden, vorläufige Animation 0,1 Sekunden. Seelensammler ist nur während der Markierung einsetzbar. Spektralketten darf als Abschluss zusätzlich bis 1,5 Sekunden nach Ende der Markierung gegen dasselbe Ziel eingesetzt werden. Der Cooldown sinkt gleichmäßig von 90 Sekunden auf Stufe 1 auf 75 Sekunden auf Stufe 10.",
+        "description_eng": "Prominently marks one enemy for 5 seconds. Deals no damage and costs no Mana. Cast time is 0 seconds; provisional animation is 0.1 seconds. Soul Collector requires the active mark. Spectral Chains may additionally finish against the same target for up to 1.5 seconds after mark expiry. Cooldown decreases evenly from 90 seconds at level 1 to 75 seconds at level 10.",
+        "dmgType": "spell",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 185,
+        "skillName_de": "Seelenschuss",
+        "skillpoints": 1,
+        "castTimeSeconds": 0,
+        "animationDurationSeconds": 0.1,
+        "animationTimingStatus": "provisional",
+        "dur": 5,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "fixed",
+              "base": 0
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "table",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "targetMarkSettings": {
+          "durationSeconds": 5,
+          "visuallyProminent": true
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 90,
+          "perLevel": -1.6666666666666667
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "constant",
+                  "value": 0
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "constant",
+                "value": 0
+              },
+              "source": "verifiedExistingLevels"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 90,
+                  "perLevel": -1.6666666666666667
+                }
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "skillName_eng": "Soulshot",
+        "__v": 0,
+        "category": "active",
+        "cd": 90,
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Markiert einen Gegner für 5 Sekunden und eröffnet das Seelensammler-Fenster. Verursacht selbst keinen Schaden. Castzeit 0 Sekunden, vorläufige Animation 0,1 Sekunden. Bezahlt die Sammlung im Voraus: Kosten von 20 Seelensammler-Anwendungen auf der jeweiligen Stufe, Mana je Stufe 40/140/240/340/440/560/660/760/860/960. Während der Markierung ist Seelensammler kostenlos; maximal 25 vollständige Anwendungen sind möglich. Nicht genutzte Anwendungen werden nicht erstattet. Spektralketten bleibt ein separat bezahlter Abschluss und kann gegen dasselbe Ziel bis 1,5 Sekunden nach Markierungsende eingesetzt werden. Cooldown gleichmäßig von 90 Sekunden auf Stufe 1 bis 75 Sekunden auf Stufe 10.",
+        "description_eng": "Marks an enemy for 5 seconds and opens the Soul Collector window. Deals no damage itself. Cast time 0 seconds; provisional animation 0.1 seconds. Prepays collection at the price of 20 Soul Collector applications at the corresponding level. Mana costs by level: 40/140/240/340/440/560/660/760/860/960. Soul Collector is free during the mark, allowing at most 25 completed applications. Unused applications are not refunded. Spectral Chains remains a separately paid finisher usable against the same target for up to 1.5 seconds after mark expiry. Cooldown decreases evenly from 90 seconds at level 1 to 75 seconds at level 10.",
+        "dmgType": "spell",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 185,
+        "skillName_de": "Seelenschuss",
+        "skillpoints": 1,
+        "castTimeSeconds": 0,
+        "animationDurationSeconds": 0.1,
+        "animationTimingStatus": "provisional",
+        "dur": 5,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "table",
+              "base": 40,
+              "values": [
+                40,
+                140,
+                240,
+                340,
+                440,
+                560,
+                660,
+                760,
+                860,
+                960
+              ]
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "table",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "targetMarkSettings": {
+          "durationSeconds": 5,
+          "visuallyProminent": true
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 90,
+          "perLevel": -1.6666666666666667
+        },
+        "mana": 40,
+        "manaPricing": {
+          "category": "combo",
+          "factor": 0.4,
+          "basis": "sharedComboBudget",
+          "usesCharacterAttack": false,
+          "version": 2
+        },
+        "prepaidComboBudget": {
+          "sourceSkillNumber": 186,
+          "paidApplications": 20,
+          "maxApplications": 25,
+          "perApplicationManaScaling": {
+            "type": "table",
+            "values": [
+              2,
+              7,
+              12,
+              17,
+              22,
+              28,
+              33,
+              38,
+              43,
+              48
+            ],
+            "base": 2
+          },
+          "finisherSkillNumber": 229,
+          "finisherPaidSeparately": true
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "sum",
+                "terms": [
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  },
+                  {
+                    "kind": "rounded",
+                    "mode": "round",
+                    "rule": {
+                      "kind": "linear",
+                      "base": 2,
+                      "perLevel": 5.111111111111111
+                    }
+                  }
+                ]
+              },
+              "source": "verifiedPrepaidComboBudget"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "constant",
+                "value": 0
+              },
+              "source": "verifiedExistingLevels"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 90,
+                  "perLevel": -1.6666666666666667
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "prepaidComboBudget",
+                "perApplicationManaScaling"
+              ],
+              "rule": {
+                "kind": "rounded",
+                "mode": "round",
+                "rule": {
+                  "kind": "linear",
+                  "base": 2,
+                  "perLevel": 5.111111111111111
+                }
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c1d",
+        "skillName_eng": "Soul Collector",
+        "__v": 0,
+        "category": "active",
+        "cd": 0,
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Nur gegen ein mit Seelenschuss markiertes Ziel einsetzbar. Verursacht einmalig physischen Schaden aus dem regulären Charakter-P-Angriff plus zusätzlichem Skill-Grundschaden. Dieser Zusatz beträgt auf Stufe 1 genau 4 und steigt je weiterer Stufe um 13 bis auf 121 auf Stufe 10. Es wird kein separater Auto-Attack zusätzlich ausgelöst. Jeder erfolgreiche Treffer gibt 1 Sammelpunkt. Geblockte und kritische Treffer geben ebenfalls genau 1 Punkt, verfehlte und ausgewichene Angriffe keinen. Feste Castzeit 0,2 Sekunden, kein zusätzlicher Cooldown. Die vorläufige Animation von 0,3 Sekunden blockiert keine weiteren Aktionen. Die fünf Sekunden lange Markierung begrenzt das Sammelfenster.  Eine neue Anwendung beginnt frühestens nach Abschluss der vorherigen 0,2 Sekunden Castzeit. Angriffstempo, Cast-Speed-Boni und Cooldown-Reduktion verkürzen diese Zeit nicht. Im fünfsekündigen Sammelfenster sind daher höchstens 25 vollständige Anwendungen möglich. Mana-Kosten 2 auf Stufe 1, Stufenwerte 2, 7, 12, 17, 22, 28, 33, 38, 43, 48, maximal 48 auf Stufe 10. Aktuelle Mana-Gruppe: combo (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Requires a target marked by Soulshot. Deals physical damage from normal character physical attack plus additional skill base damage. The extra damage is 4 at level 1 and increases by 13 per additional level, reaching 121 at level 10. No separate basic attack is added. Each successful hit grants one collected point; blocked and critical hits also grant one, while misses and dodges grant none. Fixed cast time 0.2 seconds, no additional cooldown. The provisional 0.3-second animation does not block other actions. The 5-second target mark limits the collection window. No Mana cost. A new application starts only after the previous 0.2-second cast completes. Attack speed, cast-speed bonuses and cooldown reduction cannot shorten this timing. The five-second collection window therefore permits at most 25 completed applications. Mana cost 2 at level 1, maximum 48 at level 10.",
+        "dmgType": "physical",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 186,
+        "skillName_de": "Seelensammler",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.2,
+        "activationRequirements": {
+          "requiredTargetMarkSkillNumber": 185
+        },
+        "animationDurationSeconds": 0.3,
+        "animationTimingStatus": "provisional",
+        "blocksOtherSkillsDuringAnimation": false,
+        "hasLingeringDamage": false,
+        "pointGeneration": {
+          "requiresTargetMarkSkillNumber": 185,
+          "pointsPerSuccessfulHit": 1,
+          "countsBlockedHits": true,
+          "countsMissedOrDodgedHits": false,
+          "criticalHitPoints": 1
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 4,
+            "perLevel": 13
+          }
+        },
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "table",
+              "values": [
+                2,
+                7,
+                12,
+                17,
+                22,
+                28,
+                33,
+                38,
+                43,
+                48
+              ],
+              "base": 2
+            }
+          }
+        ],
+        "patk": 4,
+        "timingModifiers": {
+          "castTimeIsFixed": true,
+          "affectedByAttackSpeed": false,
+          "affectedByCastSpeed": false,
+          "affectedByCooldownReduction": false
+        },
+        "manaPricing": {
+          "category": "combo",
+          "factor": 0.4,
+          "basis": "sharedComboBudget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 4,
+                "perLevel": 13
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "rounded",
+                  "mode": "round",
+                  "rule": {
+                    "kind": "linear",
+                    "base": 2,
+                    "perLevel": 5.111111111111111
+                  }
+                }
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "skillName_eng": "Soul Collector",
+        "__v": 0,
+        "category": "active",
+        "cd": 0,
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Nur gegen ein mit Seelenschuss markiertes Ziel einsetzbar. Verursacht einmalig physischen Schaden aus dem regulären Charakter-P-Angriff plus zusätzlichem Skill-Grundschaden. Dieser Zusatz beträgt auf Stufe 1 genau 4 und steigt je weiterer Stufe um 13 bis auf 121 auf Stufe 10. Es wird kein separater Auto-Attack zusätzlich ausgelöst. Jeder erfolgreiche Treffer gibt 1 Sammelpunkt. Geblockte und kritische Treffer geben ebenfalls genau 1 Punkt, verfehlte und ausgewichene Angriffe keinen. Feste Castzeit 0,2 Sekunden, kein zusätzlicher Cooldown. Die vorläufige Animation von 0,3 Sekunden blockiert keine weiteren Aktionen. Die fünf Sekunden lange Markierung begrenzt das Sammelfenster.  Eine neue Anwendung beginnt frühestens nach Abschluss der vorherigen 0,2 Sekunden Castzeit. Angriffstempo, Cast-Speed-Boni und Cooldown-Reduktion verkürzen diese Zeit nicht. Im fünfsekündigen Sammelfenster sind daher höchstens 25 vollständige Anwendungen möglich. Seelensammler selbst kostet kein Mana: Seelenschuss bezahlt bereits ein gemeinsames Budget für 20 Anwendungen auf der jeweiligen Stufe. Im fünfsekündigen Fenster sind weiterhin bis zu 25 Anwendungen möglich. Spektralketten wird separat bezahlt.",
+        "description_eng": "Requires a target marked by Soulshot. Deals physical damage from normal character physical attack plus additional skill base damage. The extra damage is 4 at level 1 and increases by 13 per additional level, reaching 121 at level 10. No separate basic attack is added. Each successful hit grants one collected point; blocked and critical hits also grant one, while misses and dodges grant none. Fixed cast time 0.2 seconds, no additional cooldown. The provisional 0.3-second animation does not block other actions. The 5-second target mark limits the collection window. No Mana cost. A new application starts only after the previous 0.2-second cast completes. Attack speed, cast-speed bonuses and cooldown reduction cannot shorten this timing. The five-second collection window therefore permits at most 25 completed applications. Soul Collector itself costs no Mana: Soulshot prepays a shared budget for 20 applications at the corresponding level. The five-second window still allows up to 25 applications. Spectral Chains is paid separately.",
+        "dmgType": "physical",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 186,
+        "skillName_de": "Seelensammler",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.2,
+        "activationRequirements": {
+          "requiredTargetMarkSkillNumber": 185
+        },
+        "animationDurationSeconds": 0.3,
+        "animationTimingStatus": "provisional",
+        "blocksOtherSkillsDuringAnimation": false,
+        "hasLingeringDamage": false,
+        "pointGeneration": {
+          "requiresTargetMarkSkillNumber": 185,
+          "pointsPerSuccessfulHit": 1,
+          "countsBlockedHits": true,
+          "countsMissedOrDodgedHits": false,
+          "criticalHitPoints": 1
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 4,
+            "perLevel": 13
+          }
+        },
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "fixed",
+              "base": 0
+            }
+          }
+        ],
+        "patk": 4,
+        "timingModifiers": {
+          "castTimeIsFixed": true,
+          "affectedByAttackSpeed": false,
+          "affectedByCastSpeed": false,
+          "affectedByCooldownReduction": false
+        },
+        "manaPricing": {
+          "category": "combo",
+          "factor": 0.4,
+          "basis": "sharedComboBudget",
+          "usesCharacterAttack": false,
+          "version": 2
+        },
+        "mana": 0,
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 4,
+                "perLevel": 13
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "constant",
+                  "value": 0
+                }
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    }
+  ],
+  "scope": "Opener prepays 20 collector actions at the corresponding level. Collector free, maximum 25 actions. Spectral Chains unchanged and paid separately. Runtime already prioritizes the open collection sequence independently of direct-damage rankings."
+}

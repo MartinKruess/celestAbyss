@@ -1,0 +1,178 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc6",
+  "skillName_eng": "Scream of the Underworld",
+  "__v": 0,
+  "category": "active",
+  "cd": 90,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Opfert 25 Prozent des maximalen Lebens. Nur aktivierbar, wenn das aktuelle Leben strikt über 25 Prozent des Maximal-Lebens liegt. Der dreisekündige Ablauf besteht aus 1 Sekunde Energie sammeln, 1 Sekunde Energie halten und 1 Sekunde Explosion; während dieser drei Sekunden +100 direkte P-Defense und +100 direkte M-Defense auf allen drei Stufen. In der dritten Sekunde wird die Energie mit einem Schrei kreisförmig im Radius von 5 Metern um den Anwender ausgestoßen und trifft alle Gegner dort einmal magisch. Cooldown 90/85/80 Sekunden. Magischer Skill-Schaden: auf allen Stufen 666 Grundschaden, auf Stufe 2 zusätzlich 50 Prozent und auf Stufe 3 zusätzlich 125 Prozent des tatsächlich für diesen Skill geopferten Lebens. Die Lebensanteile ersetzen die 666 nicht. Bei 8000 Max-HP werden 2000 HP geopfert; Skill-Schaden auf Stufe 1/2/3: 666/1666/3166 vor zusätzlichen Charakter- und Schadensberechnungen. Die alte Lebenszahl -25 war kein fixer HP-Abzug und wurde durch strukturierte Kosten ersetzt. Castzeit 0,1 Sekunden vor dem dreisekündigen Energieablauf. Freiwillige Bewegung während des Sammelns und Charakter-M-Angriffsbeitrag sind noch offen. Keine Manakosten im neuen Kostenentwurf. Sichtbarer Aufbau soll Gegner zum Abstandhalten bewegen und dem Anwender kurz Raum zum Reagieren oder Entkommen verschaffen. Die Explosion stößt erfolgreich getroffene Gegner um 1 Meter radial vom Anwender weg. Bossresistenzen, Kollisionsverhalten und weitere Knockback-Regeln werden in der zweiten Runde festgelegt. Der exakte einzelne Trefferzeitpunkt innerhalb der Explosionssekunde wird an die Animation angepasst. Stun und Rückstoß treffen den Anwender weiterhin, unterbrechen jedoch den aktivierten Energieablauf nicht. Gewöhnliche Stopp-Befehle brechen den Ablauf ebenfalls nicht ab. Die Explosion erfolgt um die aktuelle Position des Anwenders bei Freisetzung; ein Rückstoß kann die Gefahrenzone somit verschieben. Tod vor der Freisetzung lässt die Energie verflüchtigen, ohne Todesexplosion; eine bereits freigesetzte Explosion bleibt wirksam. Keine allgemeine Kontrollimmunität, der Skill entfernt keinen Stun.",
+  "description_eng": "Sacrifices 25 percent of maximum health. Usable only when current health is strictly above 25 percent of maximum. The three-second sequence consists of 1 second gathering energy, 1 second holding it and 1 second exploding, granting +100 direct physical and magical defense at all three levels during that time. During the third second releases the energy in a scream, hitting every enemy within a 5-meter radius once with magical damage. Cooldown 90/85/80 seconds. Magical skill damage: 666 base damage at all levels, plus 50 percent of actual health sacrificed for this skill at level 2 or 125 percent at level 3. Health-based damage adds to, rather than replaces, 666. At 8000 maximum HP, sacrifices 2000 HP and yields 666/1666/3166 skill damage at levels 1/2/3 before additional character and damage calculations. Legacy health -25 replaced by structured costs. Cast time 0.1 seconds before the three-second energy sequence. Voluntary movement while gathering energy and character magical attack contribution remain pending. No Mana cost in the new cost design. Visible buildup is intended to encourage opponents to move away, giving the caster space to react or escape. The explosion knocks successfully hit enemies 1 meter radially away from the caster. Boss resistance, collision and further knockback rules will be defined in the second review round. Exact single-hit timing within the explosion second will be matched to the animation. Stuns and displacement still affect the caster but do not interrupt the activated energy sequence. Ordinary stop commands do not cancel it either. Explosion centers on the caster’s current position at release; displacement can therefore move the danger zone. Death before release dissipates the energy without a death explosion; an already released explosion remains effective. No general crowd-control immunity and no stun removal.",
+  "dmgType": "spell",
+  "dur": 3,
+  "matk": 666,
+  "maxSkillLv": 3,
+  "maxUpgradeLv": 10,
+  "nr": 99,
+  "skillName_de": "Schrei der Unterwelt",
+  "skillpoints": 1,
+  "activationRequirements": {
+    "resource": "health",
+    "minimumFraction": 0.25,
+    "requiresStrictlyAboveMinimumFraction": true
+  },
+  "attackArea": {
+    "shape": "circle",
+    "center": "caster",
+    "radiusMeters": 5,
+    "geometryStatus": "defined",
+    "target": "enemiesInArea",
+    "evaluation": "atImpact"
+  },
+  "attackExecution": {
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "additionalDamageFromSacrificedHealth": {
+      "type": "table",
+      "values": [
+        0,
+        0.5,
+        1.25
+      ]
+    },
+    "energyGatherSeconds": 1,
+    "energyHoldSeconds": 1,
+    "explosionPhaseSeconds": 1,
+    "hitTimingStatus": "pending",
+    "continuesThroughStun": true,
+    "continuesThroughDisplacement": true,
+    "cancelsOnCasterDeathBeforeRelease": true,
+    "releasedExplosionPersistsAfterCasterDeath": true,
+    "centersOnCasterAtRelease": true,
+    "ignoresOrdinaryStopCommand": true,
+    "knockbackMeters": 1,
+    "knockbackDirection": "awayFromCaster",
+    "knockbackAppliesOnSuccessfulHit": true,
+    "knockbackResistanceStatus": "pending"
+  },
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 90,
+    "perLevel": -5
+  },
+  "effects": [
+    {
+      "key": "underworld-scream-pdef",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "pdef",
+      "value": 100,
+      "unit": "flat",
+      "durationSeconds": 3
+    },
+    {
+      "key": "underworld-scream-mdef",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "mdef",
+      "value": 100,
+      "unit": "flat",
+      "durationSeconds": 3
+    }
+  ],
+  "effectsVersion": 1,
+  "resourceCosts": [
+    {
+      "resource": "health",
+      "reference": "maxHealth",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.25
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "table",
+      "values": [
+        666,
+        666,
+        666
+      ]
+    }
+  },
+  "castTimeSeconds": 0.1,
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "attackExecution",
+          "additionalDamageFromSacrificedHealth"
+        ],
+        "rule": {
+          "kind": "legacyTable",
+          "values": [
+            0,
+            0.5,
+            1.25
+          ],
+          "beyond": "requiresDefinition"
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "cooldownScaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0.1,
+          "rule": {
+            "kind": "linear",
+            "base": 90,
+            "perLevel": -5
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "max": 1,
+          "rule": {
+            "kind": "constant",
+            "value": 0.25
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "matk"
+        ],
+        "rule": {
+          "kind": "constant",
+          "value": 666
+        },
+        "source": "verifiedExistingLevels"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "damageType": "magical",
+  "type": "skill"
+}

@@ -1,0 +1,131 @@
+{
+  "_id": "6acc1c7e4826525c70d04c08",
+  "skillName_eng": "Aura Suppression",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Herbalist",
+    "Witcher",
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Eigenbuff für Kräuterkundler und Luminet, Dauer 180 Sekunden. Reduziert die durch Schaden neu erzeugte Aggro um 0,5 Prozent je gelerntem Skilllevel, bis zu 5 Prozent auf Stufe 10. Der Aggro-Multiplikator sinkt von 0,995 auf 0,95; der tatsächlich verursachte Schaden bleibt unverändert. Bei 1000 Schaden entstehen auf Stufe 10 950 Schadens-Aggro. Bereits angesammelte Aggro wird nicht rückwirkend gelöscht. Gewährt zusätzlich 1,2 Intelligenz je Skillstufe, bis zu 12 Intelligenz auf Stufe 10. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Cooldown 60 Sekunden. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+  "description_eng": "Self buff shared by Herbalist and Luminet, lasting 180 seconds. Reduces newly generated damage threat by 0.5 percent per learned skill level, reaching 5 percent at level 10. Threat multiplier decreases from 0.995 to 0.95; actual damage is unchanged. At level 10, 1000 damage generates 950 damage threat. Does not retroactively erase accumulated threat. Also grants 1.2 Intelligence per skill level, up to 12 Intelligence at level 10. Fixed cast time 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Cooldown 60 seconds. Activation costs 50 Mana at level 1 plus 13 per additional level, reaching 167 Mana at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+  "dmgType": "selfbuff",
+  "dur": 180,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 165,
+  "skillName_de": "Aura Unterdrückung",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.1,
+  "effects": [
+    {
+      "key": "aura-suppression-threat",
+      "type": "threatMultiplier",
+      "target": "self",
+      "value": 0.995,
+      "unit": "fraction",
+      "threatBasis": "damageDealt",
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.995,
+        "perLevel": -0.005
+      },
+      "durationSeconds": 180
+    }
+  ],
+  "mana": 50,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 50,
+        "perLevel": 13
+      }
+    }
+  ],
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "effects",
+          "0",
+          "valueScaling"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 0.995,
+          "perLevel": -0.005
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 50,
+            "perLevel": 13
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "int"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 1.2,
+          "perLevel": 1.2
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "castTimeStatus": "defined",
+  "timingModifiers": {
+    "castTimeIsFixed": true,
+    "affectedByAttackSpeed": false,
+    "affectedByCastSpeed": false
+  },
+  "manaPricing": {
+    "category": "selfbuff",
+    "basis": "skillLevel",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "int": 1.2,
+  "statBonusTargets": {
+    "int": "self"
+  },
+  "statBonusUnits": {
+    "int": "flat"
+  },
+  "statScaling": {
+    "int": {
+      "type": "linear",
+      "base": 1.2,
+      "perLevel": 1.2
+    }
+  },
+  "classificationVersion": 1,
+  "target": "self",
+  "type": "selfBuff"
+}

@@ -1,0 +1,377 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bae",
+    "skillName_eng": "Body Reinforcement",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Berserker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt dich selbst, deine Gruppenmitglieder und Begleiter für 300 Sekunden. Erhöht Stärke und Vitalität jeweils um 2 je gelerntem Skilllevel, bis zu jeweils 20. Die Cast Time beträgt 0,3 Sekunden. Die Mana-Kosten steigen von 47 um 23 je weiterer Stufe auf 254. Der Cooldown beträgt 60 Sekunden.",
+    "description_eng": "Strengthens you, your group members and companions for 300 seconds. Increases Strength and Vitality by 2 each per learned skill level, up to 20 each. Cast time is 0.3 seconds. Mana cost increases from 47 by 23 per additional level to 254. Cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 75,
+    "skillName_de": "Verstärkung des Körpers",
+    "skillpoints": 1,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "activation": "manual",
+    "statBonusTargets": {
+      "str": "selfGroupAndCompanions",
+      "vita": "selfGroupAndCompanions"
+    },
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat"
+    },
+    "str": 2,
+    "vita": 2,
+    "castTimeSeconds": 0.3,
+    "mana": 47,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 47,
+          "perLevel": 23
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": 23
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bce",
+    "skillName_eng": "Steel Armor",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Templar",
+      "Knife"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt die physische Verteidigung verbündeter Spieler in der Nähe um 400 und die magische Verteidigung um 250. Der Buff hält 25 Minuten. Einmalige Mana-Kosten 92, Castzeit 0,6 Sekunden, bisheriger Cooldown 45 Sekunden. Eine Skillstufe, keine Levelskalierung.",
+    "description_eng": "Increases nearby allied players physical defense by 400 and magical defense by 250. The buff lasts 25 minutes. One-time Mana cost is 92, cast time is 0.6 seconds, existing cooldown is 45 seconds. One skill level, no level scaling.",
+    "dmgType": "buff",
+    "dur": 1500,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "mdef": 250,
+    "nr": 107,
+    "pdef": 400,
+    "skillName_de": "Stählerne Rüstung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "mana": 92,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 92
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 92
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf6",
+    "skillName_eng": "Passion Awakening",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erweckt die Leidenschaft und erhöht deine Geschicklichkeit und Agilität sowie die deiner Verbündeten jeweils um 2 je gelerntem Skilllevel, bis zu jeweils 10 auf Level 5. Der Buff hält 300 Sekunden und hat 60 Sekunden Cooldown. Die Mana-Kosten steigen von 75 um 25 je weiterer Stufe auf 175. Die Cast Time beträgt vorläufig 0,3 Sekunden.",
+    "description_eng": "Awakens passion, increasing your Dexterity and Agility and those of your allies by 2 each per learned skill level, up to 10 each at level 5. The buff lasts 300 seconds and has a 60 second cooldown. Mana cost increases from 75 by 25 per additional level to 175. Cast time is provisionally 0.3 seconds.",
+    "dex": 2,
+    "dmgType": "buff",
+    "dur": 300,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 147,
+    "skillName_de": "Erweckung der Leidenschaft",
+    "skillpoints": 1,
+    "agi": 2,
+    "activation": "manual",
+    "statBonusTargets": {
+      "dex": "selfAndAllies",
+      "agi": "selfAndAllies"
+    },
+    "statBonusUnits": {
+      "dex": "flat",
+      "agi": "flat"
+    },
+    "statScaling": {
+      "dex": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "agi": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "castTimeSeconds": 0.3,
+    "castTimeStatus": "provisional",
+    "mana": 75,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 75,
+          "perLevel": 25
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 75,
+              "perLevel": 25
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c22",
+    "skillName_eng": "Quick Feet",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht für 180 Sekunden die Bewegungsgeschwindigkeit deiner Gruppe. Stufe 1 gewährt 1 Prozent, Stufe 2 5,5 Prozent und Stufe 3 10 Prozent. Mana-Kosten 47, plus 19 je weiterer Stufe, bis zu 85. Castzeit 0,3 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases group movement speed for 180 seconds. Grants 1 percent at level 1, 5.5 percent at level 2 and 10 percent at level 3. Mana cost starts at 47 and increases by 19 per additional level to 85. Cast time is 0.3 seconds and cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 180,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.01,
+    "nr": 191,
+    "skillName_de": "Flinke Füße",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "mana": 47,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 47,
+          "perLevel": 19
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "movementSpeed": "selfAndAllies"
+    },
+    "statBonusUnits": {
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.045
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": 19
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "movementSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.045
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  }
+]

@@ -1,0 +1,196 @@
+{
+  "classKey": "adventurer",
+  "level": 60,
+  "rank": 6,
+  "status": "PermanentPassivesCalculatedWithProvisionalWeaponCondition",
+  "bonuses": [
+    {
+      "nr": 5,
+      "name": "Adaption",
+      "maxSkillLevel": 20,
+      "stats": {
+        "vita": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 45,
+      "name": "Erweiterung des Körpers",
+      "maxSkillLevel": 10,
+      "stats": {
+        "health": 1100,
+        "vita": 22,
+        "wis": 20,
+        "agi": 20
+      }
+    },
+    {
+      "nr": 67,
+      "name": "Körperbeherrschung",
+      "maxSkillLevel": 10,
+      "stats": {
+        "agi": 12,
+        "dex": 23
+      }
+    },
+    {
+      "nr": 102,
+      "name": "Schwerttraining",
+      "maxSkillLevel": 5,
+      "stats": {
+        "str": 6,
+        "dex": 2
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "maxSkillLevel": 20,
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 140,
+      "name": "Standhaft",
+      "maxSkillLevel": 10,
+      "stats": {
+        "vita": 20,
+        "wis": 10
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "maxSkillLevel": 10,
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "maxSkillLevel": 20,
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Mace",
+      "equipped": {
+        "maxHealth": 4292,
+        "maxMana": 3851,
+        "physicalAttack": 397.2,
+        "magicalAttack": 267.2,
+        "physicalDefense": 777,
+        "magicalDefense": 577,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "vita": 82,
+        "wis": 70,
+        "health": 1100,
+        "agi": 32,
+        "dex": 23,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        5,
+        45,
+        67,
+        139,
+        140,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 7852,
+        "maxMana": 5951,
+        "physicalAttack": 497.2,
+        "magicalAttack": 367.2,
+        "physicalDefense": 1081,
+        "magicalDefense": 857,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    },
+    {
+      "weapon": "Sword",
+      "equipped": {
+        "maxHealth": 4292,
+        "maxMana": 3851,
+        "physicalAttack": 391.2,
+        "magicalAttack": 112.2,
+        "physicalDefense": 777,
+        "magicalDefense": 577,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "vita": 82,
+        "wis": 70,
+        "health": 1100,
+        "agi": 32,
+        "dex": 25,
+        "str": 6,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        5,
+        45,
+        67,
+        102,
+        139,
+        140,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 7852,
+        "maxMana": 5951,
+        "physicalAttack": 502,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1081,
+        "magicalDefense": 857,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "excluded": [
+    "Adrenalin",
+    "Überlebenswille",
+    "Durchhalten proc draft",
+    "All active buffs",
+    "Pets",
+    "Jewelry and stones",
+    "Crit, Block and incomplete speed conversions"
+  ],
+  "assumptions": [
+    "Sword Training applies only with sword, provisional weapon condition",
+    "Dexterity does not add physical attack for Adventurer here; user described sword Dexterity as accuracy",
+    "Starting attribute contributions already included in operative baseline"
+  ],
+  "note": "These are combat-independent permanent bonuses only; not a full balance verdict."
+}

@@ -1,0 +1,19 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {isDeepStrictEqual} from 'node:util';
+import {SkillDataModel} from '../models/skillSchema.js';
+try{
+ if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Development database required');
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+ const col=SkillDataModel.collection;if(await col.findOne({nr:251}))throw Error('Skill exists');
+ const s={_id:new mongoose.Types.ObjectId(),nr:251,skillName_de:'Blutender Schnitt',skillName_eng:'Bleeding Cut',charClass:['Abenteuer'],category:'active',dmgType:'physical',currentSkillLv:0,currentUpgradeLv:0,maxSkillLv:6,maxUpgradeLv:10,skillpoints:1,patk:117,statScaling:{patk:{type:'linear',base:117,perLevel:57}},mana:29,resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:29,perLevel:14}}],manaPricing:{category:'normal',factor:.25,basis:'skillBaseDamagePerTarget',usesCharacterAttack:false,version:1},castTimeSeconds:.1,castTimeStatus:'defined',animationDurationSeconds:0,animationTimingStatus:'provisional',cd:48,cooldownScaling:{type:'table',values:[48,47,46,44,43,42]},
+ description_de:'Horizontaler physischer Schwerthieb: 117 Grundschaden, +57 je weiterer Stufe bis 402 auf Stufe 6, dazu einmal aktueller P-Angriff. Markiert das getroffene Ziel zwölf Sekunden mit Blutgeruch. Alle Begleiter der eigenen Gruppe einschließlich temporärer Beschwörungen verursachen gegen dieses Ziel 0,5 Prozentpunkte mehr Schaden je Skillstufe, maximal 3 %. Kein Blutungs- oder sonstiger periodischer Schaden. Mehrere Blutgeruch-Markierungen stapeln nicht; erneute Anwendung erneuert die Dauer. Mana 29 +14 bis 99 je Anwendung. Cast 0,1 Sekunden; Animation im vorläufigen Modell 0. Cooldown je Stufe 48/47/46/44/43/42 Sekunden.',
+ description_eng:'One horizontal physical sword hit: base 117 +57 per additional level to 402, plus current physical attack once. Marks the target with Blood Scent for 12 seconds; own group companions including temporary summons deal 0.5 percentage points more damage per level, maximum 3%, against this target. No bleeding or periodic damage. Does not stack; reapplication refreshes duration. Mana 29 +14 to99, cast0.1s, provisional animation0, cooldown48/47/46/44/43/42s.',
+ companionVulnerabilitySettings:{debuffName:'Blutgeruch',durationSeconds:12,damageBonusFractionByLevel:[.005,.01,.015,.02,.025,.03],appliesTo:'ownGroupCompanionDamageAgainstMarkedTarget',includesTemporarySummons:true,stacking:'refreshDurationNoStack',dealsPeriodicDamage:false}};
+ const doc=new SkillDataModel(s);await doc.validate();
+ const path='data/reports/class-skill-counts.json',r=JSON.parse(await fs.readFile(path,'utf8')),c=r.counts.find(c=>c.name==='Abenteurer / Scout');if(c.total!==31)throw Error('Unexpected count');
+ const dir='data/balancing/history/before-adventurer-bleeding-cut-'+new Date().toISOString().replaceAll(':','-');await fs.mkdir(dir,{recursive:true});await fs.copyFile(path,dir+'/class-skill-counts-before.json');await fs.writeFile(dir+'/new-skill.json',JSON.stringify(s,null,2)+'\n',{flag:'wx'});
+ await col.insertOne(s);if(!isDeepStrictEqual(await col.findOne({nr:251}),s))throw Error('Read-back mismatch');
+ c.skillNumbers.push(251);c.offensive++;c.total=c.skillNumbers.length;r.catalogCount=await col.countDocuments({});r.classified.push({nr:251,id:s._id.toString(),name:s.skillName_de,classes:s.charClass,category:'offensive',activeDefensive:false});await fs.writeFile(path,JSON.stringify(r,null,2)+'\n');console.log('Verified Bleeding Cut: six levels, base117–402, mana29–99, cooldown48/47/46/44/43/42; Adventurer32.');
+}catch(e){console.error(e.message);process.exitCode=1;}finally{await mongoose.disconnect();}

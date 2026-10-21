@@ -1,0 +1,1033 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6f",
+    "skillName_eng": "Charge",
+    "__v": 0,
+    "category": "active",
+    "cd": 130,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt dich für 15 Sekunden. Stärke 20 +2 je weiterer Stufe bis 28, maximale Lebenspunkte 80 +40 bis 240, P-Angriff 100 +25 bis 200 auf Stufe 5. Der Lebensbonus ist keine direkte Heilung. Cooldown 130 Sekunden, -2 je weiterer Stufe bis 122. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 102 auf Stufe 5, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Empowers you for 15 seconds. Strength starts at 20 and increases by 2 to 28, maximum health starts at 80 and increases by 40 to 240, physical attack starts at 100 and increases by 25 to 200 at level 5. Maximum health is not direct healing. Cooldown starts at 130 seconds and decreases by 2 per additional level to 122. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 102 at level 5, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 15,
+    "health": 80,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 12,
+    "skillName_de": "Aufladung",
+    "skillpoints": 1,
+    "str": 20,
+    "activation": "manual",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 130,
+      "perLevel": -2
+    },
+    "mana": 50,
+    "patk": 100,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "str": "self",
+      "health": "self",
+      "patk": "self"
+    },
+    "statBonusUnits": {
+      "str": "flat",
+      "health": "flat",
+      "patk": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 20,
+        "perLevel": 2
+      },
+      "health": {
+        "type": "linear",
+        "base": 80,
+        "perLevel": 40
+      },
+      "patk": {
+        "type": "linear",
+        "base": 100,
+        "perLevel": 25
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 130,
+              "perLevel": -2
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 20,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "health"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 80,
+            "perLevel": 40
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 100,
+            "perLevel": 25
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b85",
+    "skillName_eng": "Energy Outburst",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt einen Schild gegen physischen und magischen Schaden mit einer Kapazität von 10 % deines maximalen Lebens, ab Skilllevel 5 mit 12 % und auf Skilllevel 10 mit 15 %. Solange der Schild besteht und ausreichend Mana vorhanden ist, verursachen normale Angriffe 10 % mehr Schaden und du verbrauchst je Mana-Regenerationstick 1 % deines maximalen Manas. Bei unzureichendem Mana enden Angriffsbonus und Manaverbrauch, der Schild bleibt bestehen. Schildbruch beendet alle zugehörigen Effekte. Der Schild hält maximal 15 Sekunden, auf Skilllevel 10 maximal 18 Sekunden. Der Cooldown sinkt von 120 Sekunden auf Skilllevel 1 auf 90 Sekunden auf Skilllevel 10. Die Aktivierung kostet keine zusätzliche Ressource. Castzeit fest 0,1 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Creates a shield against physical and magical damage with a capacity of 10% of your maximum health, increasing to 12% at skill level 5 and 15% at skill level 10. While the shield remains and sufficient mana is available, basic attacks deal 10% more damage and consume 1% of your maximum mana per Mana regeneration tick. Insufficient mana ends the attack bonus and mana drain, but the shield remains. Shield break ends all linked effects. The shield lasts up to 15 seconds, or 18 seconds at skill level 10. The cooldown decreases from 120 seconds at skill level 1 to 90 seconds at skill level 10. Activation has no additional resource cost. Fixed cast time 0.1 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 34,
+    "skillName_de": "Energieausbruch",
+    "skillpoints": 1,
+    "activation": "manual",
+    "dur": 15,
+    "effects": [
+      {
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.12,
+            0.12,
+            0.12,
+            0.12,
+            0.12,
+            0.15
+          ]
+        },
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            18
+          ]
+        },
+        "type": "shield",
+        "target": "self",
+        "allowedRaces": [],
+        "value": 0.1,
+        "unit": "fraction",
+        "reference": "maxHealth",
+        "damageTypes": [
+          "physical",
+          "magical"
+        ],
+        "durationSeconds": 15,
+        "key": "shield"
+      },
+      {
+        "disablesEffects": [],
+        "valueScaling": {
+          "values": []
+        },
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            18
+          ]
+        },
+        "type": "damageBonus",
+        "target": "self",
+        "allowedRaces": [],
+        "value": 0.1,
+        "unit": "fraction",
+        "appliesTo": "basicAttack",
+        "damageTypes": [],
+        "durationSeconds": 15,
+        "endWith": "shield",
+        "key": "basic-attack-bonus"
+      },
+      {
+        "onInsufficientResource": "disableEffects",
+        "disablesEffects": [
+          "basic-attack-bonus",
+          "mana-drain"
+        ],
+        "valueScaling": {
+          "values": []
+        },
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            18
+          ]
+        },
+        "type": "resourceDrain",
+        "target": "self",
+        "allowedRaces": [],
+        "value": 0.01,
+        "unit": "fraction",
+        "reference": "maxMana",
+        "resource": "mana",
+        "damageTypes": [],
+        "durationSeconds": 15,
+        "endWith": "shield",
+        "key": "mana-drain",
+        "intervalSource": "manaRegenerationTick"
+      }
+    ],
+    "effectsVersion": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -3.3333333333333335
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        15,
+        18
+      ]
+    },
+    "castTimeSeconds": 0.1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0.1,
+            "changes": [
+              {
+                "level": 5,
+                "value": 0.12
+              },
+              {
+                "level": 10,
+                "value": 0.15
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 15,
+            "changes": [
+              {
+                "level": 10,
+                "value": 18
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 15,
+            "changes": [
+              {
+                "level": 10,
+                "value": 18
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 15,
+            "changes": [
+              {
+                "level": 10,
+                "value": 18
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 120,
+              "perLevel": -3.3333333333333335
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 15,
+            "changes": [
+              {
+                "level": 10,
+                "value": 18
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "mana": 50,
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c03",
+    "skillName_eng": "Warrior's Pride",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Selbstbuff. Gewährt je Skillstufe +1 Stärke und +1 Vitalität, bis zu jeweils +10 auf Stufe 10. Dauer 300 Sekunden, Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden. Aktivierungskosten 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10 vor Vergünstigungen.",
+    "description_eng": "Self-buff granting +1 Strength and +1 Vitality per skill level, reaching +10 each at level 10. Lasts 300 seconds. Cooldown: 60 seconds. Fixed cast time: 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, reaching 167 Mana at level 10 before discounts.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 160,
+    "skillName_de": "Stolz des Kriegers",
+    "skillpoints": 1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff",
+    "str": 1,
+    "vita": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c04",
+    "skillName_eng": "Energy of Anger",
+    "__v": 0,
+    "category": "active",
+    "cd": 67,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff, der deinen physischen Angriff auf allen Skillstufen um 50 erhöht. Während der Buff aktiv ist, erzeugen ausschließlich deine Auto-Attacks Wut: 0,5 Wutpunkte je Angriff auf Stufe 1 bei einer Leiste von 100 Punkten. Je weiterer Stufe kommen bis Stufe 9 0,05 Punkte hinzu; Stufe 10 erreicht genau 1 Wutpunkt je Auto-Attack. Skills und Begleiter erzeugen durch diesen Effekt keine Wut. Die Dauer steigt gemäß ganzzahliger Stufentabelle von 45 auf 59 Sekunden, der Cooldown 67 Sekunden auf Stufe 1 und 58 Sekunden auf Stufe 10. Wutaufbau im Verhältnis zum Angriffstempo wird später geprüft. Castzeit fest 0,1 Sekunden. Wutaufbau durch Auto-Attacks ist ausschließlich während dieses Buffs möglich; es gibt keinen zusätzlichen Grund-Wutgewinn außerhalb des Buffs. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff increasing physical attack by 50 at every skill level. While active, only your basic attacks generate Rage: 0.5 Rage points per attack at level 1 on a 100 point bar. Each additional level adds 0.05 points through level 9; level 10 reaches exactly 1 Rage point per basic attack. Skills and companions do not generate Rage through this effect. Duration increases through an integer level table from 45 to 59 seconds and Cooldown 67 seconds at level 1 and 58 seconds at level 10. Rage generation relative to attack speed remains to be reviewed. Fixed cast time 0.1 seconds. Basic attacks generate Rage only while this buff is active; no additional baseline Rage generation outside the buff. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 45,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 161,
+    "patk": 50,
+    "skillName_de": "Energie der Wut",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 67,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        45,
+        46,
+        48,
+        49,
+        51,
+        52,
+        54,
+        55,
+        57,
+        59
+      ]
+    },
+    "effects": [
+      {
+        "key": "energy-anger-basic-attack-rage",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "rage",
+        "reference": "maxRage",
+        "value": 0.005,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0.005,
+            0.0055,
+            0.006,
+            0.0065,
+            0.007,
+            0.0075,
+            0.008,
+            0.0085,
+            0.009,
+            0.01
+          ]
+        },
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "excludeCompanionAttacks": true,
+        "durationSeconds": 45,
+        "durationScaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 0.5555555555555556
+        }
+      }
+    ],
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 67,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "round",
+            "rule": {
+              "kind": "linear",
+              "base": 44.5,
+              "perLevel": 1.5555555555555556
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 0.005,
+                "perLevel": 0.0004999999999999996
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 0.0005000000000000039
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 45,
+            "perLevel": 0.5555555555555556
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "constant",
+            "value": 50
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c0f",
+    "skillName_eng": "Combat Instinct",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Stärke steigt gleichmäßig von 4 auf Stufe 1 bis 12 auf Stufe 10. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 600 seconds. Strength increases evenly from 4 at level 1 to 12 at level 10. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 172,
+    "skillName_de": "Kampfinstinkt",
+    "skillpoints": 1,
+    "str": 4,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 0.8888888888888888
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 0.8888888888888888
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c11",
+    "skillName_eng": "Bloodlust",
+    "__v": 0,
+    "atkSpeed": 0.05,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 60 Sekunden. Gewährt 5 bis 10 Punkte Angriffsgeschwindigkeit über 10 Stufen und 3 bis 7,5 Stärke. Mana 73, je weiterer Stufe +41 bis 442. Castzeit fest 0,1 Sekunden., Dauer 60 Sekunden, Cooldown 300 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 60 seconds. Grants 5 to 10 attack speed rating points and 3 to 7.5 Strength across 10 levels. Fixed cast time 0.1 seconds.; cooldown 300 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 60,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 174,
+    "skillName_de": "Blutrausch",
+    "skillpoints": 1,
+    "str": 3,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 0.5
+      },
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.05,
+        "perLevel": 0.005555555555555556
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.05,
+            "perLevel": 0.005555555555555556
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  }
+]

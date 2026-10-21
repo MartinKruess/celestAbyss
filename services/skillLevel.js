@@ -1,6 +1,7 @@
 import {attachProgressionRules,curveValue,evaluateProgression,getPath,setPath,UndefinedProgressionError} from './skillProgression.js';
 import {evaluateDamageSkill} from './rotationDamage.js';
 import {learnableSkillLevel} from './skillLearningLimits.js';
+import {skillClassVariant} from './skillClassVariant.js';
 
 function baseOutput(out,basis){
  const level=out.maxSkillLv;
@@ -16,6 +17,7 @@ export function skillOutputAtLevel(definition,level,basis){
 }
 
 export function resolveSkillAtLevel(definition,learnedLevel,{classKey,bonusLevels=0,authorizedBonusLevels=0}={}){
+ definition=skillClassVariant(definition,classKey);
  if(!Number.isInteger(learnedLevel)||learnedLevel<1)throw RangeError('Invalid learned level');
  if(!Number.isInteger(bonusLevels)||bonusLevels<0||bonusLevels>authorizedBonusLevels)throw RangeError('Unauthorized bonus level');
  const cap=classKey?learnableSkillLevel(definition,classKey):definition.maxSkillLv;
@@ -39,6 +41,9 @@ export function resolveSkillAtLevel(definition,learnedLevel,{classKey,bonusLevel
  for(const [stat,curve]of Object.entries(out.statScaling??{}))out[stat]=curveValue(curve,level);
  for(const [field,path]of Object.entries({cd:'cooldownScaling',dur:'durationScaling',castTimeSeconds:'castTimeScaling'}))if(out[path])out[field]=curveValue(out[path],level);
  for(const e of out.effects??[]){if(e.valueScaling)e.value=curveValue(e.valueScaling,level);if(e.durationScaling)e.durationSeconds=curveValue(e.durationScaling,level);}
+ for(const [attribute,curve]of Object.entries(out.skillLevelGrant?.attributeCostScaling??{}))out.skillLevelGrant.attributeCost[attribute]=curveValue(curve,level);
+ if(out.resurrectionSettings?.restoredHealthScaling)out.resurrectionSettings.restoredHealth=curveValue(out.resurrectionSettings.restoredHealthScaling,level);
+ if(out.attributeConversionBonus?.amountPerPointScaling)out.attributeConversionBonus.amountPerPoint=curveValue(out.attributeConversionBonus.amountPerPointScaling,level);
  const mana=out.resourceCosts?.find(c=>c.resource==='mana'&&c.unit==='flat');if(mana)out.mana=curveValue(mana.scaling,level);
  return out;
 }
@@ -54,7 +59,7 @@ export function resolveCharacterSkillLevels({catalog,classKey,learnedSkills,forg
  if(forgottenSpellTargetId){
   const source=[...records.values()].find(r=>r.definition.nr===222&&r.level>0);
   if(classKey!=='druid'||!source?.definition.skillLevelGrant)throw Error('Forgotten Spell not learned');
-  grant=source.definition.skillLevelGrant;target=records.get(String(forgottenSpellTargetId));
+  grant=resolveSkillAtLevel(source.definition,source.level,{classKey}).skillLevelGrant;target=records.get(String(forgottenSpellTargetId));
   if(!target||target.level<1||(grant.excludesSelf&&target.definition.nr===222))throw Error('Invalid Forgotten Spell target');
  }
  const skills=[...records.values()].map(r=>resolveSkillAtLevel(r.definition,r.level,{classKey,bonusLevels:r===target?grant.levels:0,authorizedBonusLevels:r===target?grant.levels:0}));

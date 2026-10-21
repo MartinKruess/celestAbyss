@@ -1,0 +1,281 @@
+{
+  "scaling": "perSkillLevel",
+  "unchanged": [
+    "Two-handed Axe Training",
+    "Dagger and Sword Training"
+  ],
+  "decisions": [
+    {
+      "nr": 7,
+      "en": "Crossbow Training",
+      "stats": {
+        "dex": 1,
+        "agi": 2
+      },
+      "de": "Verbessert deine Fertigkeiten mit der Armbrust. +1 Geschicklichkeit und +2 Agilität pro Skilllevel.",
+      "eng": "Improves your crossbow skills. +1 Dexterity and +2 Agility per skill level.",
+      "before": {
+        "_id": "6acc1c7e4826525c70d04b6a",
+        "skillName_eng": "Crossbow Training",
+        "__v": 0,
+        "agi": 2,
+        "category": "passive",
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten mit der Armbrust. +1 Geschicklichkeit und +2 Agilität pro Skilllevel.",
+        "description_eng": "Improves your crossbow skills. +1 Dexterity and +2 Agility per skill level.",
+        "dex": 1,
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 7,
+        "skillName_de": "Armbursttraining",
+        "skillpoints": 1
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04b6a",
+        "skillName_eng": "Crossbow Training",
+        "__v": 0,
+        "agi": 2,
+        "category": "passive",
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten mit der Armbrust. +1 Geschicklichkeit und +2 Agilität pro Skilllevel.",
+        "description_eng": "Improves your crossbow skills. +1 Dexterity and +2 Agility per skill level.",
+        "dex": 1,
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 7,
+        "skillName_de": "Armbursttraining",
+        "skillpoints": 1
+      }
+    },
+    {
+      "nr": 18,
+      "en": "Bow Training",
+      "stats": {
+        "dex": 2,
+        "agi": 1
+      },
+      "de": "Verbessert deine Fertigkeiten mit dem Bogen. +2 Geschicklichkeit und +1 Agilität pro Skilllevel.",
+      "eng": "Improves your bow skills. +2 Dexterity and +1 Agility per skill level.",
+      "before": {
+        "_id": "6acc1c7e4826525c70d04b75",
+        "skillName_eng": "Bow Training",
+        "__v": 0,
+        "agi": 1,
+        "category": "passive",
+        "charClass": [
+          "Archer",
+          "Hunter"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten mit dem Bogen. +2 Geschicklichkeit und +1 Agilität pro Skilllevel.",
+        "description_eng": "Improves your bow skills. +2 Dexterity and +1 Agility per skill level.",
+        "dex": 2,
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 18,
+        "skillName_de": "Bogenschießtraining",
+        "skillpoints": 1
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04b75",
+        "skillName_eng": "Bow Training",
+        "__v": 0,
+        "agi": 1,
+        "category": "passive",
+        "charClass": [
+          "Archer",
+          "Hunter"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten mit dem Bogen. +2 Geschicklichkeit und +1 Agilität pro Skilllevel.",
+        "description_eng": "Improves your bow skills. +2 Dexterity and +1 Agility per skill level.",
+        "dex": 2,
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 18,
+        "skillName_de": "Bogenschießtraining",
+        "skillpoints": 1
+      }
+    },
+    {
+      "nr": 26,
+      "en": "Dual Axe Training",
+      "stats": {
+        "str": 2,
+        "agi": 1
+      },
+      "de": "Verbessert deine Fertigkeiten im Kampf mit zwei Äxten. +2 Stärke und +1 Agilität pro Skilllevel.",
+      "eng": "Improves your skills with dual axes. +2 Strength and +1 Agility per skill level.",
+      "before": {
+        "_id": "6acc1c7e4826525c70d04b7d",
+        "skillName_eng": "Dual Axe Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Gladiator",
+          "Berserker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten im Kampf mit zwei Äxten. +2 Stärke und +1 Agilität pro Skilllevel.",
+        "description_eng": "Improves your skills with dual axes. +2 Strength and +1 Agility per skill level.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 26,
+        "skillName_de": "Dual Axttraining",
+        "skillpoints": 1,
+        "str": 2,
+        "agi": 1
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04b7d",
+        "skillName_eng": "Dual Axe Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Gladiator",
+          "Berserker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten im Kampf mit zwei Äxten. +2 Stärke und +1 Agilität pro Skilllevel.",
+        "description_eng": "Improves your skills with dual axes. +2 Strength and +1 Agility per skill level.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 26,
+        "skillName_de": "Dual Axttraining",
+        "skillpoints": 1,
+        "str": 2,
+        "agi": 1
+      }
+    },
+    {
+      "nr": 102,
+      "en": "Sword Training",
+      "maxSkillLv": 5,
+      "stats": {
+        "str": 2,
+        "wis": 1,
+        "agi": 0,
+        "vita": 0
+      },
+      "de": "Verbessert deine Fertigkeiten mit dem Schwert. +2 Stärke und +1 Weisheit pro Skilllevel.",
+      "eng": "Improves your sword skills. +2 Strength and +1 Wisdom per skill level.",
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bc9",
+        "skillName_eng": "Sword Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten mit dem Schwert. +2 Stärke pro Skilllevel.",
+        "description_eng": "Improves your sword skills. +2 Strength per skill level.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 102,
+        "skillName_de": "Schwerttraining",
+        "skillpoints": 1,
+        "str": 2
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bc9",
+        "skillName_eng": "Sword Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten mit dem Schwert. +2 Stärke und +1 Weisheit pro Skilllevel.",
+        "description_eng": "Improves your sword skills. +2 Strength and +1 Wisdom per skill level.",
+        "dmgType": "passive",
+        "maxSkillLv": 5,
+        "maxUpgradeLv": 10,
+        "nr": 102,
+        "skillName_de": "Schwerttraining",
+        "skillpoints": 1,
+        "str": 2,
+        "wis": 1
+      }
+    },
+    {
+      "nr": 93,
+      "en": "Shield Attack Training",
+      "maxSkillLv": 5,
+      "stats": {
+        "vita": 2,
+        "str": 1
+      },
+      "de": "Verbessert deine Fertigkeiten im Kampf mit dem Schild. +2 Vitalität und +1 Stärke pro Skilllevel.",
+      "eng": "Improves your skills in combat with a shield. +2 Vitality and +1 Strength per skill level.",
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bc0",
+        "skillName_eng": "Shield Attack Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten im Kampf mit dem Schild. +2 Vitalität pro Skilllevel.",
+        "description_eng": "Improves your skills in combat with a shield. +2 Vitality per skill level.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 93,
+        "skillName_de": "Schildangriffstraining",
+        "skillpoints": 1,
+        "vita": 2
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bc0",
+        "skillName_eng": "Shield Attack Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert deine Fertigkeiten im Kampf mit dem Schild. +2 Vitalität und +1 Stärke pro Skilllevel.",
+        "description_eng": "Improves your skills in combat with a shield. +2 Vitality and +1 Strength per skill level.",
+        "dmgType": "passive",
+        "maxSkillLv": 5,
+        "maxUpgradeLv": 10,
+        "nr": 93,
+        "skillName_de": "Schildangriffstraining",
+        "skillpoints": 1,
+        "vita": 2,
+        "str": 1
+      }
+    }
+  ]
+}

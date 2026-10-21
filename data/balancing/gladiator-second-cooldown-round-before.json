@@ -1,0 +1,453 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04ba0",
+    "skillName_eng": "Woodsplitter",
+    "__v": 0,
+    "category": "active",
+    "cd": 39,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen mächtigen Schlag aus einem Sprung heraus aus. Der physische Grundschaden beginnt bei 25 und steigt um 40 je weiterer Stufe auf 785 auf Stufe 20. Senkt die physische Verteidigung getroffener Gegner zunächst um 2,5 Prozent, je weiterer Stufe um 0,5 Prozentpunkte stärker, bis zu 12 Prozent. Der Effekt hält zunächst 5 Sekunden und steigt gleichmäßig auf 9,5 Sekunden auf Stufe 20. Mana-Kosten steigen von 34 um 19 je weiterer Stufe auf 395. Castzeit 0,1 Sekunden, Cooldown 39 Sekunden auf Stufe 1 und 39 Sekunden auf Stufe 20. Die bisherige Zusatzregel einer Erstattung von 50 Prozent der Mana-Kosten bei einem kritischen Treffer bleibt zur weiteren Prüfung vorgemerkt.",
+    "description_eng": "Performs a powerful strike from a jump. Base physical damage starts at 25 and increases by 40 per additional level to 785 at level 20. Reduces affected enemies physical defense by 2.5 percent initially, increasing by 0.5 percentage points per additional level to 12 percent. The effect duration increases evenly from 5 to 9.5 seconds at level 20. Mana cost increases from 34 by 19 per additional level to 395. Cast time is 0.1 seconds; Cooldown 39 seconds at level 1 and 39 seconds at level 20. The previous rule refunding 50 percent of Mana cost on a critical hit remains noted for further review.",
+    "dmgType": "physical",
+    "dur": 5,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 61,
+    "patk": 25,
+    "skillName_de": "Holzspalter",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "durationScaling": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 0.23684210526315788
+    },
+    "effects": [
+      {
+        "key": "woodsplitter-defense-reduction",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "pdef",
+        "reference": "targetStat",
+        "value": -0.025,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.025,
+          "perLevel": -0.005
+        },
+        "durationSeconds": 5,
+        "durationScaling": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 0.23684210526315788
+        }
+      }
+    ],
+    "mana": 34,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 34,
+          "perLevel": 19
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 40
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd0",
+    "skillName_eng": "Storm of Wrath",
+    "__v": 0,
+    "category": "active",
+    "cd": 70,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Kann nur eingesetzt werden, solange der Stärke-Buff von Ausbruch der Wut aktiv ist. Verursacht einmalig physischen Schaden an Gegnern um dich herum, ohne Mehrfachtreffer. Der physische Skill-Grundschaden steigt gleichmäßig von 281 auf Stufe 1 auf 1247 auf Stufe 10. Der Cooldown 70 Sekunden auf Stufe 1 und 60 Sekunden auf Stufe 10. Castzeit 0,3 Sekunden. Die Animation dauert vorläufig 1 Sekunde; keine anhaltende Schadenswirkung. Der Radius beträgt 3 Meter. Der Skill kostet kein Mana. Kostet 5 Wutpunkte und kein Mana. Gibt keine Wut zurück. Zusammen mit Ausbruch der Wut (55), Wutexplosion (35) und Wutklinge (5) werden genau 100 Wutpunkte verbraucht.",
+    "description_eng": "Requires the Strength buff from Outburst of Anger to be active. Deals physical damage once to enemies around you, without multiple hits. Physical skill base damage increases evenly from 281 at level 1 to 1247 at level 10. Cooldown 70 seconds at level 1 and 60 seconds at level 10. Cast time is 0.3 seconds. Provisional animation duration is 1 second, with no ongoing damage. Radius is 3 meters. The skill costs no Mana. Costs 5 Rage points and no Mana. Does not restore Rage. Together with Outburst of Anger (55), Rage Explosion (35) and Berserk Slash (5), the four attacks consume exactly 100 Rage points.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 109,
+    "patk": 281,
+    "skillName_de": "Sturm der Wut",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "activeBuff": {
+        "skillNumber": 13,
+        "effectKey": "rage-outburst-strength"
+      }
+    },
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending",
+      "radiusMeters": 3
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0.3,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        70,
+        69,
+        68,
+        67,
+        66,
+        65,
+        64,
+        63,
+        62,
+        60
+      ]
+    },
+    "effects": [],
+    "hasLingeringDamage": false,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 281,
+        "perLevel": 107.33333333333333
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "rage",
+        "reference": "maxRage",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 5
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be2",
+    "skillName_eng": "Rage Explosion",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Kann nur eingesetzt werden, solange der Buff Ausbruch der Wut aktiv ist. Verursacht einmalig physischen Schaden an Gegnern in einem Radius von 3 Metern um dich. Der Grundschaden steigt von 399 um 168 je weiterer Stufe auf 1911 auf Stufe 10. Gewährt keinen zusätzlichen Stärke-Buff und erzeugt keine Wut. Castzeit 0,8 Sekunden, bisheriger Cooldown 90 Sekunden. Kostet 35 Wutpunkte und kein Mana.",
+    "description_eng": "Requires the Outburst of Anger buff to be active. Deals physical damage once to enemies within a 3 meter radius around you. Base damage increases from 399 by 168 per additional level to 1911 at level 10. Grants no additional Strength buff and generates no Rage. Cast time is 0.8 seconds; existing cooldown is 90 seconds. Costs 35 Rage points and no Mana.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 127,
+    "patk": 399,
+    "skillName_de": "Wutexplosion",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "activeBuff": {
+        "skillNumber": 13,
+        "effectKey": "rage-outburst-strength"
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 3,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0.8,
+    "effects": [],
+    "hasLingeringDamage": false,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 399,
+        "perLevel": 168
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "rage",
+        "reference": "maxRage",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 35
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c04",
+    "skillName_eng": "Energy of Anger",
+    "__v": 0,
+    "category": "active",
+    "cd": 70,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff, der deinen physischen Angriff auf allen Skillstufen um 50 erhöht. Während der Buff aktiv ist, erzeugen ausschließlich deine Auto-Attacks Wut: 0,5 Wutpunkte je Angriff auf Stufe 1 bei einer Leiste von 100 Punkten. Je weiterer Stufe kommen bis Stufe 9 0,05 Punkte hinzu; Stufe 10 erreicht genau 1 Wutpunkt je Auto-Attack. Skills und Begleiter erzeugen durch diesen Effekt keine Wut. Die Dauer steigt gleichmäßig von 45 auf 50 Sekunden, der Cooldown sinkt von 70 Sekunden um 1 Sekunde je weiterer Stufe auf 61 Sekunden auf Stufe 10. Mana-Kosten steigen von 77 um 42 je weiterer Stufe auf 455. Wutaufbau im Verhältnis zum Angriffstempo wird später geprüft. Castzeit 0,1 Sekunden. Wutaufbau durch Auto-Attacks ist ausschließlich während dieses Buffs möglich; es gibt keinen zusätzlichen Grund-Wutgewinn außerhalb des Buffs.",
+    "description_eng": "Self buff increasing physical attack by 50 at every skill level. While active, only your basic attacks generate Rage: 0.5 Rage points per attack at level 1 on a 100 point bar. Each additional level adds 0.05 points through level 9; level 10 reaches exactly 1 Rage point per basic attack. Skills and companions do not generate Rage through this effect. Duration increases evenly from 45 to 50 seconds and cooldown decreases from 70 seconds by 1 second per additional level to 61 seconds at level 10. Mana cost increases from 77 by 42 per additional level to 455. Rage generation relative to attack speed remains to be reviewed. Cast time is 0.1 seconds. Basic attacks generate Rage only while this buff is active; no additional baseline Rage generation outside the buff.",
+    "dmgType": "selfbuff",
+    "dur": 45,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 161,
+    "patk": 50,
+    "skillName_de": "Energie der Wut",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 70,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": 0.5555555555555556
+    },
+    "effects": [
+      {
+        "key": "energy-anger-basic-attack-rage",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "rage",
+        "reference": "maxRage",
+        "value": 0.005,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0.005,
+            0.0055,
+            0.006,
+            0.0065,
+            0.007,
+            0.0075,
+            0.008,
+            0.0085,
+            0.009,
+            0.01
+          ]
+        },
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "excludeCompanionAttacks": true,
+        "durationSeconds": 45,
+        "durationScaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 0.5555555555555556
+        }
+      }
+    ],
+    "mana": 77,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 77,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50,
+          50
+        ]
+      }
+    },
+    "castTimeSeconds": 0.1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c49",
+    "skillName_eng": "Whirlwind",
+    "__v": 0,
+    "category": "active",
+    "cd": 95,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Dreht sich um die eigene Achse und trifft bis zu fünf Gegner innerhalb von 3 Metern Radius jeweils einmal. Der physische Skill-Grundschaden steigt gleichmäßig von 153 auf Stufe 1 auf 912 auf Stufe 10. Mana-Kosten steigen von 83 um 34 je weiterer Stufe auf 389. Der Cooldown 95 Sekunden auf Stufe 1 und 86 Sekunden auf Stufe 10. Castzeit 0,4 Sekunden. Die Animation dauert vorläufig 3 Sekunden und blockiert währenddessen weitere Skills. Keine anhaltende Schadenswirkung oder wiederholten Treffer; die Animationsdauer wird später im Spiel angepasst.",
+    "description_eng": "Spins around, hitting up to five enemies within a 3 meter radius once each. Physical skill base damage increases evenly from 153 at level 1 to 912 at level 10. Mana cost increases from 83 by 34 per additional level to 389. Cooldown 95 seconds at level 1 and 86 seconds at level 10. Cast time is 0.4 seconds. The provisional 3 second animation blocks other skills while running. No ongoing damage or repeated hits; animation duration will be adjusted in game.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 230,
+    "patk": 153,
+    "skillName_de": "Wirbelsturm",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 3,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending",
+      "maxTargets": 5
+    },
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 95,
+      "perLevel": -1
+    },
+    "mana": 83,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 83,
+          "perLevel": 34
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 153,
+        "perLevel": 84.33333333333333
+      }
+    },
+    "animationDurationSeconds": 3,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "blocksOtherSkillsDuringAnimation": true,
+    "hasLingeringDamage": false
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4c",
+    "skillName_eng": "Warrior's Charge",
+    "__v": 0,
+    "atkSpeed": 0.1,
+    "category": "active",
+    "cd": 61,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Stürmt auf den Gegner zu und stößt ihn zurück. Verursacht einmalig physischen Grundschaden von 137 auf Skilllevel 1, plus 140 je weiterer Stufe, bis zu 1397 auf Stufe 10. Mana-Kosten steigen von 44 um 29 je weiterer Stufe auf 305. Castzeit 0,3 Sekunden, Cooldown 61 Sekunden auf Stufe 1 und 61 Sekunden auf Stufe 10. Anschließend erhöht ein Eigenbuff Attack Speed um 10 Prozent auf Stufe 1, gleichmäßig steigend bis exakt 20 Prozent auf Stufe 10. Die Buffdauer steigt von 1 Sekunde um 0,2 Sekunden je weiterer Stufe auf 2,8 Sekunden. Der Angriff selbst verursacht keinen Schaden über Zeit. Ansturmdistanz und Rückstoß werden später genauer festgelegt.",
+    "description_eng": "Charges at the enemy and pushes them back. Deals base physical damage once, starting at 137 at skill level 1 and increasing by 140 per additional level to 1397 at level 10. Mana cost increases from 44 by 29 per additional level to 305. Cast time is 0.3 seconds; Cooldown 61 seconds at level 1 and 61 seconds at level 10. A subsequent self buff increases attack speed by 10 percent at level 1, increasing evenly to exactly 20 percent at level 10. Buff duration increases from 1 second by 0.2 seconds per additional level to 2.8 seconds. The attack itself deals no damage over time. Charge distance and knockback details will be defined later.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 233,
+    "patk": 137,
+    "skillName_de": "Kriegerischer Ansturm",
+    "skillpoints": 1,
+    "mana": 44,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 44,
+          "perLevel": 29
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 140
+      }
+    },
+    "castTimeSeconds": 0.3,
+    "dur": 1,
+    "durationScaling": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.2
+    },
+    "effects": [
+      {
+        "key": "warrior-charge-attack-speed",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "atkSpeed",
+        "value": 0.1,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.1,
+          "perLevel": 0.011111111111111112
+        },
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.2
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction"
+    }
+  }
+]

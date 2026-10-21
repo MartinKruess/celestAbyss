@@ -1,0 +1,125 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b91",
+    "skillName_eng": "Eternal Ice",
+    "__v": 0,
+    "category": "active",
+    "cd": 39,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eis fliegt aus mehreren Richtungen auf einen Gegner zu und verfolgt dessen Bewegung. Weglaufen oder Wegrollen allein schüttelt die Projektile nicht ab; die normale Treffer-/Ausweichberechnung kann den Angriff dennoch verfehlen lassen. Verursacht einmalig 137 magischen Skill-Grundschaden, plus 43 je weiterer Stufe, bis zu 739 auf Stufe 15. Bei einem Treffer wird das Ziel mit 50 Prozent Wahrscheinlichkeit eingefroren. Die Einfrierdauer steigt gleichmäßig von 0,5 auf 2,5 Sekunden. Während des Einfrierens bleibt der Gegner angreifbar, nimmt aber nur 80 Prozent des sonst ankommenden Schadens. Dieser Schutz endet zusammen mit dem Einfrieren und gilt nur, wenn Einfrieren tatsächlich ausgelöst wurde. Mana-Kosten 67, plus 32 je weiterer Stufe, bis zu 515. Castzeit 0,6 Sekunden, bisheriger Cooldown 39 Sekunden. Ein vorheriger Treffer durch einen Wasserspruch erhöht die Einfrierchance über die Grundchance von 50 Prozent hinaus. Die Höhe dieses Bonus und das Zeitfenster nach dem Wasserspruch werden später festgelegt. Der Wasserspruch ist keine Voraussetzung für Aktivierung oder Einfrieren.",
+    "description_eng": "Ice approaches an enemy from several directions and tracks its movement. Running or rolling alone does not shake off the projectiles; normal hit/dodge resolution may still make the attack miss. Deals 137 magical skill base damage once, increasing by 43 per additional level to 739 at level 15. A hit has a 50 percent chance to freeze the target. Freeze duration increases evenly from 0.5 to 2.5 seconds. While frozen, the enemy remains attackable but takes only 80 percent of otherwise incoming damage. This protection ends with the freeze and applies only if freezing actually triggers. Mana cost starts at 67 and increases by 32 per additional level to 515. Cast time is 0.6 seconds; existing cooldown is 39 seconds. A previous water-spell hit increases freeze chance above the 50 percent base chance. The bonus amount and qualifying time window will be defined later. A water-spell hit is not required to activate the skill or freeze the target.",
+    "dmgType": "spell",
+    "dur": 0.5,
+    "matk": 137,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 46,
+    "skillName_de": "Ewiges Eis",
+    "skillpoints": 1,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "tracksTargetMovement": true,
+      "canMissFromHitCalculation": true,
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.6,
+    "durationScaling": {
+      "type": "linear",
+      "base": 0.5,
+      "perLevel": 0.14285714285714285
+    },
+    "effects": [
+      {
+        "key": "eternal-ice-freeze",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "freeze",
+        "hitChance": 0.5,
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 0.5,
+        "durationScaling": {
+          "type": "linear",
+          "base": 0.5,
+          "perLevel": 0.14285714285714285
+        },
+        "actionRestrictionsStatus": "pending"
+      },
+      {
+        "key": "eternal-ice-protection",
+        "type": "damageReduction",
+        "target": "enemy",
+        "value": 0.2,
+        "unit": "fraction",
+        "durationSeconds": 0.5,
+        "durationScaling": {
+          "type": "linear",
+          "base": 0.5,
+          "perLevel": 0.14285714285714285
+        },
+        "endWith": "eternal-ice-freeze",
+        "damageTypes": [
+          "physical",
+          "magical"
+        ]
+      }
+    ],
+    "mana": 67,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 32
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 43
+      }
+    },
+    "conditionalProcBonus": {
+      "condition": "targetPreviouslyHitByWaterSpell",
+      "effectKey": "eternal-ice-freeze",
+      "increasesChance": true,
+      "bonusAmountStatus": "pending",
+      "conditionDurationStatus": "pending",
+      "isActivationRequirement": false
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9b",
+    "skillName_eng": "Charged Mist",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Feinde, die nass sind, sollten sich vor elektrischen Schlägen in Acht nehmen.",
+    "description_eng": "Enemies who are wet should be careful of electric shocks. ",
+    "dmgType": "spell",
+    "matk": 177,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 56,
+    "skillName_de": "Geladener Nebel",
+    "skillpoints": 1
+  }
+]

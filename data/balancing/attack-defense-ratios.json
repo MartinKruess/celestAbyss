@@ -1,0 +1,256 @@
+{
+  "generatedAt": "2026-10-21T06:23:53.370Z",
+  "assumptions": {
+    "level": 60,
+    "rank": 6,
+    "upgrade": 0,
+    "included": "Current weapons including knight shield, five armor parts, permanent passive comparison contributions. Ritualist empty and full soul reserve separately.",
+    "excluded": "Active self/group buffs, combat-triggered bonuses including Ausbrennen, physical/magical skill-only damage bonuses in attack stats, cloaks, future equipment bonus slots, jewelry, stones, upgrades and set bonuses.",
+    "reference": "User discussion: matching attack:defense ~3:2; matching:other defense ~3:2, reversed physical/magical orientation for mages. These are reference ratios, not validated balance requirements. Knight defensive role and hybrids require separate interpretation.",
+    "limitations": "Defense point ratios are not damage reduction. Attack points are not DPS; attack speed, skill coefficients, mana, healing and pets are not represented. Same upgrade number does not guarantee constant total-stat ratios."
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "role": "physical",
+      "weapons": [
+        "2H Schwert"
+      ],
+      "physicalAttack": 472.20000000000005,
+      "magicalAttack": 132.2,
+      "physicalDefense": 463.8,
+      "magicalDefense": 373.8,
+      "physicalDefensePerPhysicalAttack": 0.9822109275730622,
+      "magicalDefensePerMagicalAttack": 2.8275340393343424,
+      "matchingDefensePerAttack": 0.9822109275730622,
+      "matchingDefensePerOtherDefense": 1.2407704654895666,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 314.8
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "role": "physical",
+      "weapons": [
+        "2H Axt"
+      ],
+      "physicalAttack": 690.58,
+      "magicalAttack": 27,
+      "physicalDefense": 461.8,
+      "magicalDefense": 339.8,
+      "physicalDefensePerPhysicalAttack": 0.6687132555243418,
+      "magicalDefensePerMagicalAttack": 12.585185185185185,
+      "matchingDefensePerAttack": 0.6687132555243418,
+      "matchingDefensePerOtherDefense": 1.3590347263095939,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 460.3866666666667
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "role": "hybrid",
+      "weapons": [
+        "2H Mace"
+      ],
+      "physicalAttack": 335.20000000000005,
+      "magicalAttack": 486.9,
+      "physicalDefense": 426.8,
+      "magicalDefense": 424.8,
+      "physicalDefensePerPhysicalAttack": 1.27326968973747,
+      "magicalDefensePerMagicalAttack": 0.8724584103512015,
+      "matchingDefensePerAttack": null,
+      "matchingDefensePerOtherDefense": null,
+      "referenceMatchingDefenseAtTwoThirdsAttack": null
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "role": "physical",
+      "weapons": [
+        "1H Axt",
+        "1H Axt"
+      ],
+      "physicalAttack": 629.36,
+      "magicalAttack": 26,
+      "physicalDefense": 536.64,
+      "magicalDefense": 310.8,
+      "physicalDefensePerPhysicalAttack": 0.8526757340790644,
+      "magicalDefensePerMagicalAttack": 11.953846153846154,
+      "matchingDefensePerAttack": 0.8526757340790644,
+      "matchingDefensePerOtherDefense": 1.7266409266409266,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 419.5733333333333
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "role": "magical",
+      "weapons": [
+        "Wand"
+      ],
+      "physicalAttack": 22,
+      "magicalAttack": 638.6,
+      "physicalDefense": 307.8,
+      "magicalDefense": 709.2,
+      "physicalDefensePerPhysicalAttack": 13.990909090909092,
+      "magicalDefensePerMagicalAttack": 1.1105543376135296,
+      "matchingDefensePerAttack": 1.1105543376135296,
+      "matchingDefensePerOtherDefense": 2.304093567251462,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 425.73333333333335
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "role": "magical",
+      "weapons": [
+        "Wand"
+      ],
+      "physicalAttack": 26,
+      "magicalAttack": 640.13,
+      "physicalDefense": 415.8,
+      "magicalDefense": 423.15999999999997,
+      "physicalDefensePerPhysicalAttack": 15.992307692307692,
+      "magicalDefensePerMagicalAttack": 0.6610532235639636,
+      "matchingDefensePerAttack": 0.6610532235639636,
+      "matchingDefensePerOtherDefense": 1.0177008177008176,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 426.75333333333333
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "role": "physical",
+      "weapons": [
+        "Bow"
+      ],
+      "physicalAttack": 628.2,
+      "magicalAttack": 23,
+      "physicalDefense": 402.8,
+      "magicalDefense": 403.08000000000004,
+      "physicalDefensePerPhysicalAttack": 0.6411970709964979,
+      "magicalDefensePerMagicalAttack": 17.52521739130435,
+      "matchingDefensePerAttack": 0.6411970709964979,
+      "matchingDefensePerOtherDefense": 0.9993053488141311,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 418.8
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "role": "physical",
+      "weapons": [
+        "Sword",
+        "Shield"
+      ],
+      "physicalAttack": 421.42,
+      "magicalAttack": 24,
+      "physicalDefense": 770.54,
+      "magicalDefense": 499.03999999999996,
+      "physicalDefensePerPhysicalAttack": 1.8284371885529873,
+      "magicalDefensePerMagicalAttack": 20.793333333333333,
+      "matchingDefensePerAttack": 1.8284371885529873,
+      "matchingDefensePerOtherDefense": 1.5440445655658865,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 280.94666666666666
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "role": "magical",
+      "weapons": [
+        "Lichtstab"
+      ],
+      "physicalAttack": 24,
+      "magicalAttack": 655.2,
+      "physicalDefense": 355.8,
+      "magicalDefense": 564.8,
+      "physicalDefensePerPhysicalAttack": 14.825000000000001,
+      "magicalDefensePerMagicalAttack": 0.8620268620268619,
+      "matchingDefensePerAttack": 0.8620268620268619,
+      "matchingDefensePerOtherDefense": 1.5874086565486227,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 436.8
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "role": "magical",
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "physicalAttack": 24,
+      "magicalAttack": 584.8,
+      "physicalDefense": 385.4,
+      "magicalDefense": 483.8,
+      "physicalDefensePerPhysicalAttack": 16.058333333333334,
+      "magicalDefensePerMagicalAttack": 0.8272913816689468,
+      "matchingDefensePerAttack": 0.8272913816689468,
+      "matchingDefensePerOtherDefense": 1.2553191489361704,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 389.8666666666666
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, 100 Seelen",
+      "role": "magical",
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "physicalAttack": 24,
+      "magicalAttack": 614.8,
+      "physicalDefense": 385.4,
+      "magicalDefense": 483.8,
+      "physicalDefensePerPhysicalAttack": 16.058333333333334,
+      "magicalDefensePerMagicalAttack": 0.7869225764476253,
+      "matchingDefensePerAttack": 0.7869225764476253,
+      "matchingDefensePerOtherDefense": 1.2553191489361704,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 409.8666666666666
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "role": "hybrid",
+      "weapons": [
+        "Mace",
+        "Mace"
+      ],
+      "physicalAttack": 481.88,
+      "magicalAttack": 391.20000000000005,
+      "physicalDefense": 416.4,
+      "magicalDefense": 429.8,
+      "physicalDefensePerPhysicalAttack": 0.8641155474391965,
+      "magicalDefensePerMagicalAttack": 1.0986707566462166,
+      "matchingDefensePerAttack": null,
+      "matchingDefensePerOtherDefense": null,
+      "referenceMatchingDefenseAtTwoThirdsAttack": null
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "role": "physical",
+      "weapons": [
+        "Crossbow"
+      ],
+      "physicalAttack": 535.2,
+      "magicalAttack": 23,
+      "physicalDefense": 334.8,
+      "magicalDefense": 365.84000000000003,
+      "physicalDefensePerPhysicalAttack": 0.6255605381165918,
+      "magicalDefensePerMagicalAttack": 15.90608695652174,
+      "matchingDefensePerAttack": 0.6255605381165918,
+      "matchingDefensePerOtherDefense": 0.9151541657555214,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 356.8
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "role": "physical",
+      "weapons": [
+        "Dagger",
+        "Dagger"
+      ],
+      "physicalAttack": 452.00000000000006,
+      "magicalAttack": 26,
+      "physicalDefense": 404.8,
+      "magicalDefense": 367.8,
+      "physicalDefensePerPhysicalAttack": 0.895575221238938,
+      "magicalDefensePerMagicalAttack": 14.146153846153847,
+      "matchingDefensePerAttack": 0.895575221238938,
+      "matchingDefensePerOtherDefense": 1.1005981511691136,
+      "referenceMatchingDefenseAtTwoThirdsAttack": 301.33333333333337
+    }
+  ]
+}

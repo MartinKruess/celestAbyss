@@ -1,0 +1,54 @@
+{
+  "_id": "6acc1c7e4826525c70d04c36",
+  "skillName_eng": "Aurora Waves",
+  "__v": 0,
+  "category": "active",
+  "cd": 300,
+  "charClass": [
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört eine Welle aus Licht, die durch eine größere Fläche fliegt. In der Mitte voller Schaden, an den äußeren Rändern halber Schaden. Genaue Flächengröße und Breite der Randzonen (besprochen: äußere 20 oder 30 Prozent) sind noch offen. M-Angriff 384 auf Stufe 1, +124 je weiterer Stufe, auf Stufe 10 insgesamt 1500. Mana 270, +57 je weiterer Stufe, auf Stufe 10 insgesamt 783. Cooldown 300 Sekunden, -7 je weiterer Stufe, auf Stufe 10 237 Sekunden. Castzeit 0,8 Sekunden. Die bisherigen 12 Sekunden sind keine bestätigte Wirkungsdauer: Animationsdauer (beispielsweise 4 Sekunden statt 12), Trefferzahl und mögliche anhaltende Wirkung müssen noch geklärt werden.",
+  "description_eng": "Summons a wave of light traveling through a large area. Full damage in the center, half damage at the outer edges. Area dimensions and edge widths (20 or 30 percent were discussed) remain pending. Magical attack 384 plus 124 per additional level, totaling 1500 at level 10. Mana 270 plus 57 per additional level, totaling 783. Cooldown 300 minus 7 per additional level, totaling 237 seconds. Cast time 0.8 seconds. The old 12-second duration is unconfirmed: animation duration (possibly 4 rather than 12 seconds), hit count and any lingering effect remain pending.",
+  "dmgType": "spell",
+  "matk": 384,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 211,
+  "skillName_de": "Aurora Wellen",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.8,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 300,
+    "perLevel": -7
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 270,
+        "perLevel": 57
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 384,
+      "perLevel": 124
+    }
+  },
+  "waveDamageProfile": {
+    "centerDamageMultiplier": 1,
+    "edgeDamageMultiplier": 0.5,
+    "edgeWidthStatus": "pending",
+    "areaDimensionsStatus": "pending",
+    "hitFrequencyStatus": "pending"
+  }
+}

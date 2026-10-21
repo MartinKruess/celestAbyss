@@ -1,0 +1,78 @@
+{
+  "_id": "6ad423f0d601960f55b4f1b3",
+  "nr": 251,
+  "skillName_de": "Blutender Schnitt",
+  "skillName_eng": "Bleeding Cut",
+  "charClass": [
+    "Abenteuer"
+  ],
+  "category": "active",
+  "dmgType": "physical",
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "maxSkillLv": 6,
+  "maxUpgradeLv": 10,
+  "skillpoints": 1,
+  "patk": 117,
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 117,
+      "perLevel": 57
+    }
+  },
+  "mana": 29,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 29,
+        "perLevel": 14
+      }
+    }
+  ],
+  "manaPricing": {
+    "category": "normal",
+    "factor": 0.25,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "castTimeSeconds": 0.1,
+  "castTimeStatus": "defined",
+  "animationDurationSeconds": 0,
+  "animationTimingStatus": "provisional",
+  "cd": 48,
+  "cooldownScaling": {
+    "type": "table",
+    "values": [
+      48,
+      47,
+      46,
+      44,
+      43,
+      42
+    ]
+  },
+  "description_de": "Horizontaler physischer Schwerthieb: 117 Grundschaden, +57 je weiterer Stufe bis 402 auf Stufe 6, dazu einmal aktueller P-Angriff. Markiert das getroffene Ziel zwölf Sekunden mit Blutgeruch. Alle Begleiter der eigenen Gruppe einschließlich temporärer Beschwörungen verursachen gegen dieses Ziel 0,5 Prozentpunkte mehr Schaden je Skillstufe, maximal 3 %. Kein Blutungs- oder sonstiger periodischer Schaden. Mehrere Blutgeruch-Markierungen stapeln nicht; erneute Anwendung erneuert die Dauer. Mana 29 +14 bis 99 je Anwendung. Cast 0,1 Sekunden; Animation im vorläufigen Modell 0. Cooldown je Stufe 48/47/46/44/43/42 Sekunden.",
+  "description_eng": "One horizontal physical sword hit: base 117 +57 per additional level to 402, plus current physical attack once. Marks the target with Blood Scent for 12 seconds; own group companions including temporary summons deal 0.5 percentage points more damage per level, maximum 3%, against this target. No bleeding or periodic damage. Does not stack; reapplication refreshes duration. Mana 29 +14 to99, cast0.1s, provisional animation0, cooldown48/47/46/44/43/42s.",
+  "companionVulnerabilitySettings": {
+    "debuffName": "Blutgeruch",
+    "durationSeconds": 12,
+    "damageBonusFractionByLevel": [
+      0.005,
+      0.01,
+      0.015,
+      0.02,
+      0.025,
+      0.03
+    ],
+    "appliesTo": "ownGroupCompanionDamageAgainstMarkedTarget",
+    "includesTemporarySummons": true,
+    "stacking": "refreshDurationNoStack",
+    "dealsPeriodicDamage": false
+  }
+}

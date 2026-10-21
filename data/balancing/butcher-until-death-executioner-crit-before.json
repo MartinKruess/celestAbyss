@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c12",
+    "skillName_eng": "Until Death",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du bist ein wahrer Krieger und lebst fur den Zweikampf. In einem Zweikampf (Boss) erhälst du einen Bonus auf deinen Angriff. Gespeicherter Startbonus +55 P-Angriff; dessen Levelskalierung und genaue Bedingung für Zweikampf/Boss sind noch offen. Keine Wiederbelebung. Mana 39, je weiterer Stufe +16 bis 183 auf Stufe 10. Castzeit 0,3 Sekunden.",
+    "description_eng": "You are a true warrior and live for the duel. In a duel (boss) you get a bonus on your attack. Stored starting bonus is +55 physical attack; its level scaling and exact duel/boss condition remain pending. No resurrection. Mana 39 plus 16 per additional level to 183 at level 10. Cast time 0.3 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 175,
+    "patk": 55,
+    "skillName_de": "Bis in den Tot",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "mana": 39,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 39,
+          "perLevel": 16
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4d",
+    "skillName_eng": "Executioner's Wrath",
+    "__v": 0,
+    "category": "active",
+    "cd": 440,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führe einen tödlichen Hieb aus, der schweren Schaden verursacht und eine hohe Kritchance hat. Physischer Grundangriff 600 auf Stufe 1, je weiterer Stufe +555 bis 2820 auf Stufe 5. Mana 217, je weiterer Stufe +123 bis 709. Castzeit 0,2 Sekunden, Cooldown 440 Sekunden. Die im alten Text genannte erhöhte Kritchance ist noch nicht numerisch festgelegt und wird nicht als garantierter Krit berechnet.",
+    "description_eng": "Execute a lethal blow that deals heavy damage and has a high critical chance. Physical base attack 600 at level 1 plus 555 per additional level to 2820 at level 5. Mana 217 plus 123 per additional level to 709. Cast time 0.2 seconds, cooldown 440 seconds. The increased critical chance in the original text is not numerically defined and is not treated as a guaranteed critical hit.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 234,
+    "patk": 600,
+    "skillName_de": "Zorn des Henkers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "mana": 217,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 217,
+          "perLevel": 123
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 600,
+        "perLevel": 555
+      }
+    }
+  }
+]

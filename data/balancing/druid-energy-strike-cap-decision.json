@@ -1,0 +1,90 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-druid-energy-cap-1792326962465",
+  "classOverrides": {
+    "Druide": 5,
+    "Alchemist": 5
+  },
+  "skill": {
+    "_id": "6acc1c7e4826525c70d04b87",
+    "skillName_eng": "Energy Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 2.1,
+    "charClass": [
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Shamane",
+      "Druide",
+      "High Elves",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Wirft einen Ball aus purem Licht auf dein Ziel und verursacht einmalig magischen Schaden. Der magische Grundangriff steigt von 25 um 20 je weiterer Stufe auf 205. Die Mana-Kosten 6 auf Stufe 1, +5 je weiterer Stufe, maximal 51 auf Stufe 10. Castzeit 0,15 Sekunden, kein anhaltender Effekt. Der Cooldown beträgt zunächst 2,1 Sekunden, ab Stufe 3 1,6 Sekunden, ab Stufe 5 1,1 Sekunden, ab Stufe 8 0,8 Sekunden und ab Stufe 10 0,6 Sekunden. Heiler, Priester, Druide und Alchemist können maximal Stufe 5 lernen; alle übrigen zugeordneten Klassen weiterhin Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Throws a ball of pure light at your target, dealing magical damage once. Base magical attack increases from 25 by 20 per additional level to 205. Mana cost 6 at level 1, maximum 51 at level 10. Cast time 0.15 seconds, no lasting effect. Cooldown starts at 2.1 seconds, then becomes 1.6 seconds at level 3, 1.1 seconds at level 5, 0.8 seconds at level 8, and 0.6 seconds at level 10. Healer and Priest can learn up to level 5; all other assigned classes retain level 10. Druid and Alchemist can learn at most level 5; other existing class limits remain unchanged.",
+    "dmgType": "spell",
+    "matk": 25,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 36,
+    "skillName_de": "Energieschlag",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.15,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        2.1,
+        2.1,
+        1.6,
+        1.6,
+        1.1,
+        1.1,
+        1.1,
+        0.8,
+        0.8,
+        0.6
+      ]
+    },
+    "hasLingeringDamage": false,
+    "mana": 6,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 6,
+          "perLevel": 5
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 20
+      }
+    },
+    "learningLimits": {
+      "defaultMaxLevel": 10,
+      "classOverrides": {
+        "Healer": 5,
+        "Priest": 5,
+        "Druide": 5,
+        "Alchemist": 5
+      },
+      "status": "defined"
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  }
+}

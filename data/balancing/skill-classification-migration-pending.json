@@ -1,0 +1,17 @@
+{
+  "status": "resolvedAndVerified",
+  "generatedAt": "2026-10-19T14:36:23.138Z",
+  "reason": "MongooseServerSelectionError",
+  "preview": "data/balancing/skill-classification-migration-preview.json",
+  "script": "scripts/migrateSkillClassification.js",
+  "codeStatus": "implementedAndValidated",
+  "validation": {
+    "catalogDefinitions": 260,
+    "focusedTestsPassed": 58,
+    "baselineControlsUnchanged": 13,
+    "buffScenariosUnchanged": 26,
+    "damageAndResourceValuesChanged": false
+  },
+  "compatibility": "Canonical type/damageType/effectKind/target used by active code and report views; deprecated dmgType retained for historical scripts. Database migration still pending connectivity.",
+  "resolvedAt": "2026-10-19T15:08:46.280Z"
+}

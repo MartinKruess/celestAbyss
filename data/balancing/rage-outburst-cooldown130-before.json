@@ -1,0 +1,72 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b70",
+    "skillName_eng": "Outburst of Anger",
+    "__v": 0,
+    "category": "active",
+    "cd": 170,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entfesselt bei mindestens 55 Wutpunkten einen einmaligen physischen Angriff und stärkt dich anschließend. Der physische Skill-Grundschaden steigt gleichmäßig von 463 auf Stufe 1 auf 1299 auf Stufe 5. Anschließend erhältst du 15 Stärke, die auch deine anderen Angriffe und Skills beeinflusst. Der Buff hält zunächst 60 Sekunden und je weiterer Stufe 1 Sekunde länger, bis zu 64 Sekunden. Castzeit 0,3 Sekunden, Cooldown 170 Sekunden auf Stufe 1 und 170 Sekunden auf Stufe 5. Verbraucht 55 Wutpunkte und kein Mana. Eigene Auto-Attacks erzeugen ausschließlich während Energie der Wut Wutpunkte; zwei Waffen zählen als eine gemeinsame Aktion. Wut ist die spezielle Ressource des Gladiators und seiner Weiterentwicklung Berserker.",
+    "description_eng": "Requires at least 55 Rage points to unleash a single physical attack followed by a Strength buff. Physical skill base damage increases evenly from 463 at level 1 to 1299 at level 5. Afterwards grants 15 Strength, also benefiting your other attacks and skills. The buff starts at 60 seconds and lasts 1 second longer per additional level, reaching 64 seconds. Cast time is 0.3 seconds, Cooldown 170 seconds at level 1 and 170 seconds at level 5. Costs 55 Rage points and no Mana. Own basic attacks generate Rage only while Energy of Anger is active; dual weapons count as one action. Rage is the special resource of Gladiator and its advancement Berserker.",
+    "dmgType": "physical",
+    "dur": 60,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 13,
+    "patk": 463,
+    "skillName_de": "Ausbruch der Wut",
+    "skillpoints": 1,
+    "activation": "manual",
+    "activationRequirements": {
+      "resource": "rage",
+      "minimumFraction": 0.55,
+      "generationSource": "basicAttacks",
+      "generationAmountStatus": "defined"
+    },
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "linear",
+      "base": 60,
+      "perLevel": 1
+    },
+    "effects": [
+      {
+        "key": "rage-outburst-strength",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "str",
+        "value": 15,
+        "unit": "flat",
+        "durationSeconds": 60,
+        "durationScaling": {
+          "type": "linear",
+          "base": 60,
+          "perLevel": 1
+        }
+      }
+    ],
+    "resourceCosts": [
+      {
+        "resource": "rage",
+        "reference": "maxRage",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 55
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 463,
+        "perLevel": 209
+      }
+    }
+  }
+]

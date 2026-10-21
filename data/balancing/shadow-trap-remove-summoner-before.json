@@ -1,0 +1,75 @@
+{
+  "_id": "6acc1c7e4826525c70d04bbe",
+  "skillName_eng": "Shadow Trap",
+  "__v": 0,
+  "category": "active",
+  "cd": 36,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior",
+    "Summoner",
+    "Soulseeker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Nur während der Tarnung einsetzbar. Platziere eine für dich sichtbare und für Gegner unsichtbare Falle, ohne dadurch sichtbar zu werden. Pro Tarnung kann eine Schattenfalle platziert werden. Die Falle verschwindet spätestens nach 10 Sekunden. Beim Betreten verursacht sie physischen Schaden und macht das Ziel kurz benommen. Grundschaden 171, plus 53 je weiterer Stufe, bis zu 648 auf Stufe 10. Benommenheit steigt über die zehn Stufen von 0,5 auf 1,5 Sekunden. Mana-Kosten 54, plus 24 je weiterer Stufe, bis zu 270. Cooldown 36 Sekunden, Castzeit 0,2 Sekunden. Liegezeit und Benommenheit sind getrennte Zeitangaben.",
+  "description_eng": "Usable only while stealthed. Place a trap visible to you but invisible to enemies without revealing yourself. One Shadow Trap may be placed per stealth activation. The trap disappears after at most 10 seconds. An enemy entering it takes physical damage and is briefly dazed. Base damage starts at 171 and increases by 53 per additional level to 648 at level 10. Daze duration increases from 0.5 to 1.5 seconds across ten levels. Mana cost starts at 54 and increases by 24 per additional level to 270. Cooldown is 36 seconds and cast time is 0.2 seconds. Trap lifetime and daze duration are separate.",
+  "dmgType": "physical",
+  "dur": 0.5,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 91,
+  "patk": 171,
+  "skillName_de": "Schattenfalle",
+  "skillpoints": 1,
+  "activationRequirements": {
+    "requiresStealth": true
+  },
+  "castTimeSeconds": 0.2,
+  "effects": [
+    {
+      "key": "shadow-trap-daze",
+      "type": "control",
+      "target": "enemy",
+      "controlKind": "dazed",
+      "value": 1,
+      "unit": "flat",
+      "durationSeconds": 0.5,
+      "durationScaling": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.1111111111111111
+      }
+    }
+  ],
+  "mana": 54,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 54,
+        "perLevel": 24
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 171,
+      "perLevel": 53
+    }
+  },
+  "stealthInteraction": {
+    "preservesStealthOnPlacement": true,
+    "maxPlacementsPerStealth": 1
+  },
+  "trapSettings": {
+    "lifetimeSeconds": 10,
+    "visibleToCaster": true,
+    "visibleToEnemies": false,
+    "trigger": "enemyEnters"
+  }
+}

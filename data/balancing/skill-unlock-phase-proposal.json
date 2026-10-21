@@ -1,0 +1,7338 @@
+{
+  "status": "proposalNotAppliedToDatabase",
+  "generatedAt": "2026-10-19T15:08:47.999Z",
+  "scope": "All currently assigned skills, first unlock only. Skill values, learning caps, SP costs and existing DB unlocks unchanged. New proposal supersedes early pet unlock plan. Selected intermediate unlocks between levels 21 and 39; class-defining combinations start at level 40 and expand through level 43. All existing character classes retained; no invented advancement quest.",
+  "sharedRules": {
+    "racialPassives": 1,
+    "generalTraining": 2,
+    "classFamilyPassives": 3,
+    "firstAid": 5,
+    "weaponSpecificTraining": 10,
+    "regularPetSkillsStart": 20,
+    "regularPetSkillLevels": {
+      "133": 20,
+      "134": 21,
+      "135": 22,
+      "136": 20,
+      "137": 20,
+      "138": 24
+    },
+    "classIdentitySkillsStart": 40,
+    "classIdentitySkillsEnd": 43
+  },
+  "notes": [
+    "Skill rank upgrade character-level requirements remain undefined. Unlocking does not auto-learn a skill; prerequisite ranks require SP as usual.",
+    "Advanced packages unlock across levels 40-43; prerequisite skills must be learned first. No minimum rank above 1 invented.",
+    "Morrak, Nature Spirit and Soul Companion each unlock at level 40 through their quest. Quest names and identifiers are not defined; only Morrak explicitly requires defeating the demon.",
+    "Holzspalter proposed at level 1 instead of tentative level 2 to give Gladiator a simple initial attack.",
+    "Volles Potential proposed at level 40 instead of tentative level 30, matching new specialization boundary.",
+    "Body Reinforcement proposed at level 21; early attacks and weapon training remain available before it.",
+    "Knight Heal removed by user instruction. Replacement slot intentionally empty."
+  ],
+  "classes": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "skillCount": 32,
+      "sp": 283,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 5,
+              "name": "Adaption"
+            },
+            {
+              "nr": 14,
+              "name": "Ausweichrolle"
+            },
+            {
+              "nr": 21,
+              "name": "Dash"
+            },
+            {
+              "nr": 25,
+              "name": "Doppelsprung"
+            },
+            {
+              "nr": 248,
+              "name": "Kreuzhieb"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 45,
+              "name": "Erweiterung des Körpers"
+            },
+            {
+              "nr": 106,
+              "name": "Sprungschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 41,
+              "name": "Erste Hilfe"
+            },
+            {
+              "nr": 251,
+              "name": "Blutender Schnitt"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 67,
+              "name": "Körperbeherrschung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 9,
+          "skills": [
+            {
+              "nr": 145,
+              "name": "Durchhalten"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 245,
+              "name": "Breitschwert-Training"
+            }
+          ]
+        },
+        {
+          "characterLevel": 15,
+          "skills": [
+            {
+              "nr": 114,
+              "name": "Überlebenswille"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 247,
+              "name": "Beharrlichkeit"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 148,
+              "name": "Scharfer Instinkte"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 75,
+              "name": "Verstärkung des Körpers"
+            },
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 250,
+              "name": "Lebenstransfer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 23,
+          "skills": [
+            {
+              "nr": 147,
+              "name": "Erweckung der Leidenschaft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            },
+            {
+              "nr": 149,
+              "name": "Macht der Wildnis"
+            }
+          ]
+        },
+        {
+          "characterLevel": 25,
+          "skills": [
+            {
+              "nr": 150,
+              "name": "Macht des Begleiters"
+            }
+          ]
+        },
+        {
+          "characterLevel": 26,
+          "skills": [
+            {
+              "nr": 126,
+              "name": "Wirbelnde Klinge"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 246,
+              "name": "Wilde Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 249,
+              "name": "Rudelangriff"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "type": "buff",
+          "effectKind": "movement",
+          "target": "self",
+          "maxSkillLevel": 2,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 21,
+          "name": "Dash",
+          "type": "buff",
+          "effectKind": "movement",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung",
+          "type": "buff",
+          "effectKind": "movement",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 41,
+          "name": "Erste Hilfe",
+          "type": "skill",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 6,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 9,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 245,
+          "name": "Breitschwert-Training",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 15,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 247,
+          "name": "Beharrlichkeit",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 250,
+          "name": "Lebenstransfer",
+          "type": "skill",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": [
+            {
+              "nr": 136,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 23,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "type": "buff",
+          "target": "companions",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 25,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": [
+            {
+              "nr": 136,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 26,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 246,
+          "name": "Wilde Bindung",
+          "type": "passive",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 134,
+              "minimumSkillLevel": 1
+            },
+            {
+              "nr": 136,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 136,
+              "minimumSkillLevel": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "skillCount": 32,
+      "sp": 284,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 2,
+              "name": "Überleben"
+            },
+            {
+              "nr": 87,
+              "name": "Rotier Schlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 77,
+              "name": "Mächtiger Hieb"
+            },
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 11,
+              "name": "Aufgeladener Schlag"
+            },
+            {
+              "nr": 45,
+              "name": "Erweiterung des Körpers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 3,
+              "name": "Abräumer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 96,
+              "name": "Schmetterschlag"
+            },
+            {
+              "nr": 140,
+              "name": "Standhaft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 131,
+              "name": "Zweihändiges Axttraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 172,
+              "name": "Kampfinstinkt"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 89,
+              "name": "Schädelspalter"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 173,
+              "name": "Geist des Kriegers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 38,
+              "name": "Erdbeben"
+            },
+            {
+              "nr": 175,
+              "name": "Bis in den Tot"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 12,
+              "name": "Aufladung"
+            },
+            {
+              "nr": 174,
+              "name": "Blutrausch"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 35,
+              "name": "Energieentladung"
+            },
+            {
+              "nr": 98,
+              "name": "Schockwelle der Regeneration"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 176,
+              "name": "Ewiger Sieger"
+            },
+            {
+              "nr": 227,
+              "name": "Dämonische Schockwelle"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 39,
+              "name": "Erdbrecher"
+            },
+            {
+              "nr": 177,
+              "name": "Ungebrochen"
+            },
+            {
+              "nr": 234,
+              "name": "Zorn des Henkers"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 11,
+          "name": "Aufgeladener Schlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 3,
+          "name": "Abräumer",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 131,
+          "name": "Zweihändiges Axttraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 89,
+          "name": "Schädelspalter",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 12,
+          "name": "Aufladung",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 174,
+          "name": "Blutrausch",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 35,
+          "name": "Energieentladung",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 98,
+          "name": "Schockwelle der Regeneration",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 176,
+          "name": "Ewiger Sieger",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 227,
+          "name": "Dämonische Schockwelle",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 39,
+          "name": "Erdbrecher",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 177,
+          "name": "Ungebrochen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 234,
+          "name": "Zorn des Henkers",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "skillCount": 31,
+      "sp": 264,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 1,
+              "name": "Erleuchtung"
+            },
+            {
+              "nr": 29,
+              "name": "Eislanze"
+            },
+            {
+              "nr": 36,
+              "name": "Energieschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 44,
+              "name": "Erweiterung des Geistes"
+            },
+            {
+              "nr": 221,
+              "name": "Windschlitzer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 30,
+              "name": "Eisranken"
+            }
+          ]
+        },
+        {
+          "characterLevel": 7,
+          "skills": [
+            {
+              "nr": 125,
+              "name": "Windfesseln"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 6,
+              "name": "Adrenalin"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 132,
+              "name": "Zweihändiges Streitkolbentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 220,
+              "name": "Bannmagie"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 203,
+              "name": "Kanalisierung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            },
+            {
+              "nr": 193,
+              "name": "Macht des Wassers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            }
+          ]
+        },
+        {
+          "characterLevel": 23,
+          "skills": [
+            {
+              "nr": 225,
+              "name": "Macht des Geistes"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 9,
+              "name": "Ätherregen"
+            },
+            {
+              "nr": 219,
+              "name": "Manaexplosion"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 244,
+              "name": "Naturgeist"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 194,
+              "name": "Herr der Elemente"
+            },
+            {
+              "nr": 253,
+              "name": "Gunst der Sylphen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 118,
+              "name": "Vakuumimpuls"
+            },
+            {
+              "nr": 204,
+              "name": "Katalysator Rein"
+            },
+            {
+              "nr": 222,
+              "name": "Vergessener Zauber"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 212,
+              "name": "Himmelsbrecher"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 7,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 6,
+          "name": "Adrenalin",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 132,
+          "name": "Zweihändiges Streitkolbentraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 203,
+          "name": "Kanalisierung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 193,
+          "name": "Macht des Wassers",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 225,
+          "name": "Macht des Geistes",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 23,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "type": "skill",
+          "maxSkillLevel": 2,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [],
+          "questRequirement": {
+            "status": "questIdentifierPending",
+            "name": null,
+            "offeredAtCharacterLevel": 40,
+            "requiredOutcome": "Nature Spirit quest completed"
+          }
+        },
+        {
+          "nr": 194,
+          "name": "Herr der Elemente",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 253,
+          "name": "Gunst der Sylphen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 204,
+          "name": "Katalysator Rein",
+          "type": "skill",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 222,
+          "name": "Vergessener Zauber",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "skillCount": 32,
+      "sp": 285,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 5,
+              "name": "Adaption"
+            },
+            {
+              "nr": 61,
+              "name": "Holzspalter"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 77,
+              "name": "Mächtiger Hieb"
+            },
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 45,
+              "name": "Erweiterung des Körpers"
+            },
+            {
+              "nr": 106,
+              "name": "Sprungschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 96,
+              "name": "Schmetterschlag"
+            },
+            {
+              "nr": 140,
+              "name": "Standhaft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 9,
+          "skills": [
+            {
+              "nr": 145,
+              "name": "Durchhalten"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 26,
+              "name": "Dual Axttraining"
+            },
+            {
+              "nr": 158,
+              "name": "Provozieren"
+            }
+          ]
+        },
+        {
+          "characterLevel": 15,
+          "skills": [
+            {
+              "nr": 114,
+              "name": "Überlebenswille"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 233,
+              "name": "Kriegerischer Ansturm"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 75,
+              "name": "Verstärkung des Körpers"
+            },
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 162,
+              "name": "Innere Kraft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 34,
+              "name": "Energieausbruch"
+            },
+            {
+              "nr": 52,
+              "name": "Glück des Narrens"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 13,
+              "name": "Ausbruch der Wut"
+            },
+            {
+              "nr": 161,
+              "name": "Energie der Wut"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 109,
+              "name": "Sturm der Wut"
+            },
+            {
+              "nr": 128,
+              "name": "Wutklinge"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 127,
+              "name": "Wutexplosion"
+            },
+            {
+              "nr": 163,
+              "name": "Volles Potential"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 230,
+              "name": "Blutiger Durchbruch"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 61,
+          "name": "Holzspalter",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 9,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 26,
+          "name": "Dual Axttraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 15,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 233,
+          "name": "Kriegerischer Ansturm",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 162,
+          "name": "Innere Kraft",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 34,
+          "name": "Energieausbruch",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 52,
+          "name": "Glück des Narrens",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 13,
+          "name": "Ausbruch der Wut",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 161,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 161,
+          "name": "Energie der Wut",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 109,
+          "name": "Sturm der Wut",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 13,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 128,
+          "name": "Wutklinge",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 13,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 127,
+          "name": "Wutexplosion",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 13,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 163,
+          "name": "Volles Potential",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 230,
+          "name": "Blutiger Durchbruch",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "skillCount": 31,
+      "sp": 267,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 1,
+              "name": "Erleuchtung"
+            },
+            {
+              "nr": 29,
+              "name": "Eislanze"
+            },
+            {
+              "nr": 36,
+              "name": "Energieschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 44,
+              "name": "Erweiterung des Geistes"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 68,
+              "name": "Kristallisierte Wasserspähre"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 60,
+              "name": "Hoffnungsschimmer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 54,
+              "name": "Gefrierbrand"
+            }
+          ]
+        },
+        {
+          "characterLevel": 14,
+          "skills": [
+            {
+              "nr": 64,
+              "name": "Heilung"
+            },
+            {
+              "nr": 124,
+              "name": "Wiederherstellung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 15,
+          "skills": [
+            {
+              "nr": 143,
+              "name": "Immunität"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 208,
+              "name": "Das ewige Wissen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 242,
+              "name": "Assimilation"
+            }
+          ]
+        },
+        {
+          "characterLevel": 23,
+          "skills": [
+            {
+              "nr": 239,
+              "name": "Frostschauer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 101,
+              "name": "Schwerter des Lichtes"
+            },
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 108,
+              "name": "Strahlendes Aurafeld"
+            },
+            {
+              "nr": 217,
+              "name": "Göttliche Nova"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 58,
+              "name": "Kuss der Aurora"
+            },
+            {
+              "nr": 206,
+              "name": "Lunare Inkanation"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 78,
+              "name": "Göttliche Heilung"
+            },
+            {
+              "nr": 240,
+              "name": "Permafrost"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 197,
+              "name": "Aurora-Segen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 207,
+              "name": "Himmlische Aufopferung"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 54,
+          "name": "Gefrierbrand",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 64,
+          "name": "Heilung",
+          "type": "skill",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 14,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 124,
+          "name": "Wiederherstellung",
+          "type": "skill",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 14,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 143,
+          "name": "Immunität",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 15,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 242,
+          "name": "Assimilation",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 23,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "type": "skill",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 58,
+          "name": "Kuss der Aurora",
+          "type": "skill",
+          "maxSkillLevel": 6,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 206,
+          "name": "Lunare Inkanation",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 78,
+          "name": "Göttliche Heilung",
+          "type": "skill",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 240,
+          "name": "Permafrost",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 197,
+          "name": "Aurora-Segen",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 207,
+          "name": "Himmlische Aufopferung",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "skillCount": 32,
+      "sp": 292,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 5,
+              "name": "Adaption"
+            },
+            {
+              "nr": 16,
+              "name": "Wasserfesseln"
+            },
+            {
+              "nr": 29,
+              "name": "Eislanze"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 44,
+              "name": "Erweiterung des Geistes"
+            },
+            {
+              "nr": 57,
+              "name": "Gezielter Blitz"
+            },
+            {
+              "nr": 221,
+              "name": "Windschlitzer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 46,
+              "name": "Ewiges Eis"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 4,
+              "name": "Abschöpfen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 32,
+              "name": "Elementarenergie"
+            },
+            {
+              "nr": 69,
+              "name": "Kugelblitz"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 31,
+              "name": "Elektrisches Feld"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 167,
+              "name": "Entgiftung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 14,
+          "skills": [
+            {
+              "nr": 164,
+              "name": "Natürlicher Schutz"
+            }
+          ]
+        },
+        {
+          "characterLevel": 15,
+          "skills": [
+            {
+              "nr": 56,
+              "name": "Geladener Nebel"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 84,
+              "name": "Lähmung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 71,
+              "name": "Lebensessenz"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 123,
+              "name": "Wiederaufladung"
+            },
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 165,
+              "name": "Aura Unterdrückung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            },
+            {
+              "nr": 166,
+              "name": "Alles im Fluss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 81,
+              "name": "Naturgewalt"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 169,
+              "name": "Innere Unruhe"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 205,
+              "name": "Katalysator Unrein"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 112,
+              "name": "Tobender Sturm"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 16,
+          "name": "Wasserfesseln",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 57,
+          "name": "Gezielter Blitz",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 46,
+          "name": "Ewiges Eis",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 4,
+          "name": "Abschöpfen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 32,
+          "name": "Elementarenergie",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 69,
+          "name": "Kugelblitz",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 31,
+          "name": "Elektrisches Feld",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 167,
+          "name": "Entgiftung",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 164,
+          "name": "Natürlicher Schutz",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 14,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 56,
+          "name": "Geladener Nebel",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 15,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 84,
+          "name": "Lähmung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 71,
+          "name": "Lebensessenz",
+          "type": "skill",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 123,
+          "name": "Wiederaufladung",
+          "type": "passive",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 166,
+          "name": "Alles im Fluss",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 81,
+          "name": "Naturgewalt",
+          "type": "passive",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 169,
+          "name": "Innere Unruhe",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 205,
+          "name": "Katalysator Unrein",
+          "type": "skill",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 112,
+          "name": "Tobender Sturm",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "skillCount": 32,
+      "sp": 292,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 5,
+              "name": "Adaption"
+            },
+            {
+              "nr": 14,
+              "name": "Ausweichrolle"
+            },
+            {
+              "nr": 25,
+              "name": "Doppelsprung"
+            },
+            {
+              "nr": 53,
+              "name": "Gebundener Schuss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 43,
+              "name": "Erweiterung der Sinne"
+            },
+            {
+              "nr": 51,
+              "name": "Feuerpfeil"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 63,
+              "name": "Kettenschuss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 10,
+              "name": "Auf der Jagd"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 37,
+              "name": "Entzugspfeil"
+            },
+            {
+              "nr": 122,
+              "name": "Voll Durchziehen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 18,
+              "name": "Bogenschießtraining"
+            },
+            {
+              "nr": 142,
+              "name": "Ausweichtraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 97,
+              "name": "Schockschuss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 86,
+              "name": "Präzisionsschuss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 121,
+              "name": "Verstärkter Pfeil"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            },
+            {
+              "nr": 153,
+              "name": "Treffsicherheit"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 152,
+              "name": "Giftpfeil"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            },
+            {
+              "nr": 154,
+              "name": "Auge des Falken"
+            }
+          ]
+        },
+        {
+          "characterLevel": 25,
+          "skills": [
+            {
+              "nr": 150,
+              "name": "Macht des Begleiters"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 226,
+              "name": "Seelenbegleiter"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 156,
+              "name": "Waldläufer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 88,
+              "name": "Salve"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 157,
+              "name": "Pfeil der Vorfahren"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "type": "buff",
+          "effectKind": "movement",
+          "target": "self",
+          "maxSkillLevel": 2,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung",
+          "type": "buff",
+          "effectKind": "movement",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 10,
+          "name": "Auf der Jagd",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 122,
+          "name": "Voll Durchziehen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 18,
+          "name": "Bogenschießtraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 152,
+          "name": "Giftpfeil",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "type": "buff",
+          "target": "companions",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 25,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": [
+            {
+              "nr": 136,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [],
+          "questRequirement": {
+            "status": "questIdentifierPending",
+            "name": null,
+            "offeredAtCharacterLevel": 40,
+            "requiredOutcome": "Soul Companion quest completed"
+          }
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "skillCount": 31,
+      "sp": 266,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 1,
+              "name": "Erleuchtung"
+            },
+            {
+              "nr": 94,
+              "name": "Schildstoß"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 77,
+              "name": "Mächtiger Hieb"
+            },
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 19,
+              "name": "Brecher der Deckung"
+            },
+            {
+              "nr": 45,
+              "name": "Erweiterung des Körpers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 55,
+              "name": "Brecher des Geistes"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 140,
+              "name": "Standhaft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 28,
+              "name": "Eiserner Schild"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 93,
+              "name": "Schildangriffstraining"
+            },
+            {
+              "nr": 102,
+              "name": "Schwerttraining"
+            },
+            {
+              "nr": 158,
+              "name": "Provozieren"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 141,
+              "name": "Eiserner Wille"
+            }
+          ]
+        },
+        {
+          "characterLevel": 15,
+          "skills": [
+            {
+              "nr": 114,
+              "name": "Überlebenswille"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 75,
+              "name": "Verstärkung des Körpers"
+            },
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            }
+          ]
+        },
+        {
+          "characterLevel": 23,
+          "skills": [
+            {
+              "nr": 82,
+              "name": "Schutz Aura"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 26,
+          "skills": [
+            {
+              "nr": 95,
+              "name": "Schildsturm"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 23,
+              "name": "Donnernde Lanze"
+            },
+            {
+              "nr": 42,
+              "name": "Erwachen"
+            },
+            {
+              "nr": 171,
+              "name": "Aktive Deckung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 40,
+              "name": "Erlösendes Feld"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 59,
+              "name": "Göttlicher Schutz"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 107,
+              "name": "Stählerne Rüstung"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 28,
+          "name": "Eiserner Schild",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 93,
+          "name": "Schildangriffstraining",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 102,
+          "name": "Schwerttraining",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 2,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 141,
+          "name": "Eiserner Wille",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 15,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 82,
+          "name": "Schutz Aura",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 23,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 95,
+          "name": "Schildsturm",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 26,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 42,
+          "name": "Erwachen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 171,
+          "name": "Aktive Deckung",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 59,
+          "name": "Göttlicher Schutz",
+          "type": "skill",
+          "maxSkillLevel": 2,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 107,
+          "name": "Stählerne Rüstung",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "skillCount": 31,
+      "sp": 270,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 1,
+              "name": "Erleuchtung"
+            },
+            {
+              "nr": 29,
+              "name": "Eislanze"
+            },
+            {
+              "nr": 36,
+              "name": "Energieschlag"
+            },
+            {
+              "nr": 231,
+              "name": "Luminus"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 44,
+              "name": "Erweiterung des Geistes"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 41,
+              "name": "Erste Hilfe"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 215,
+              "name": "Heiliges Kreuz"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 60,
+              "name": "Hoffnungsschimmer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 12,
+          "skills": [
+            {
+              "nr": 218,
+              "name": "Licht kristallenes Gefängnis"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 116,
+              "name": "Unerschöpfliche Hoffnung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 260,
+              "name": "Läuterung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 208,
+              "name": "Das ewige Wissen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 74,
+              "name": "Festigung des Glaubens"
+            },
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 213,
+              "name": "Strafendes Licht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 101,
+              "name": "Schwerter des Lichtes"
+            },
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 25,
+          "skills": [
+            {
+              "nr": 117,
+              "name": "Urteil des Himmels"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 9,
+              "name": "Ätherregen"
+            },
+            {
+              "nr": 217,
+              "name": "Göttliche Nova"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 216,
+              "name": "Heilige Vernichtung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 8,
+              "name": "Astralkörper"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 211,
+              "name": "Aurora Wellen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 228,
+              "name": "Geheiligte Barriere"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 231,
+          "name": "Luminus",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 41,
+          "name": "Erste Hilfe",
+          "type": "skill",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 215,
+          "name": "Heiliges Kreuz",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 218,
+          "name": "Licht kristallenes Gefängnis",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 12,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 116,
+          "name": "Unerschöpfliche Hoffnung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 260,
+          "name": "Läuterung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 74,
+          "name": "Festigung des Glaubens",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 213,
+          "name": "Strafendes Licht",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 117,
+          "name": "Urteil des Himmels",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 25,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 216,
+          "name": "Heilige Vernichtung",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 8,
+          "name": "Astralkörper",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 211,
+          "name": "Aurora Wellen",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 228,
+          "name": "Geheiligte Barriere",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "skillCount": 32,
+      "sp": 262,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 2,
+              "name": "Überleben"
+            },
+            {
+              "nr": 49,
+              "name": "Feuerball"
+            },
+            {
+              "nr": 232,
+              "name": "Dunkler Impuls"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 44,
+              "name": "Erweiterung des Geistes"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 72,
+              "name": "Lebenssauger"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 181,
+              "name": "Arkane Aufladung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 12,
+          "skills": [
+            {
+              "nr": 100,
+              "name": "Schwäche des Fleisches"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 83,
+              "name": "Opfergabe"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 178,
+              "name": "Geist des Feuers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 25,
+          "skills": [
+            {
+              "nr": 110,
+              "name": "Sturm des Feuers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 99,
+              "name": "Schrei der Unterwelt"
+            },
+            {
+              "nr": 214,
+              "name": "Ausbrennen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 103,
+              "name": "Seelenfessel"
+            },
+            {
+              "nr": 120,
+              "name": "Reaper"
+            },
+            {
+              "nr": 237,
+              "name": "Morrak´s Meister"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 48,
+              "name": "Feuer der Verdammten"
+            },
+            {
+              "nr": 104,
+              "name": "Seelenqual"
+            },
+            {
+              "nr": 236,
+              "name": "Teufelspakt"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 105,
+              "name": "Seelenernte"
+            },
+            {
+              "nr": 241,
+              "name": "Zahl der Opfer"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 180,
+              "name": "Seelenplage"
+            },
+            {
+              "nr": 209,
+              "name": "Verloren in der Dunkelheit"
+            },
+            {
+              "nr": 235,
+              "name": "Meteoritenschauer"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 49,
+          "name": "Feuerball",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 232,
+          "name": "Dunkler Impuls",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 72,
+          "name": "Lebenssauger",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 181,
+          "name": "Arkane Aufladung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 100,
+          "name": "Schwäche des Fleisches",
+          "type": "skill",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 12,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 83,
+          "name": "Opfergabe",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 110,
+          "name": "Sturm des Feuers",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 25,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 99,
+          "name": "Schrei der Unterwelt",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 214,
+          "name": "Ausbrennen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 103,
+          "name": "Seelenfessel",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 120,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 120,
+          "name": "Reaper",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 237,
+          "name": "Morrak´s Meister",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [],
+          "questRequirement": {
+            "status": "questIdentifierPending",
+            "name": null,
+            "offeredAtCharacterLevel": 40,
+            "requiredOutcome": "Morrak defeated and associated quest completed"
+          }
+        },
+        {
+          "nr": 48,
+          "name": "Feuer der Verdammten",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 120,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 104,
+          "name": "Seelenqual",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 103,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 236,
+          "name": "Teufelspakt",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 237,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 105,
+          "name": "Seelenernte",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 103,
+              "minimumSkillLevel": 1
+            },
+            {
+              "nr": 104,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 241,
+          "name": "Zahl der Opfer",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 120,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 180,
+          "name": "Seelenplage",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 120,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 209,
+          "name": "Verloren in der Dunkelheit",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 120,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 235,
+          "name": "Meteoritenschauer",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "skillCount": 31,
+      "sp": 287,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 1,
+              "name": "Erleuchtung"
+            },
+            {
+              "nr": 15,
+              "name": "Beben"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 44,
+              "name": "Erweiterung des Geistes"
+            },
+            {
+              "nr": 50,
+              "name": "Feuerlanze"
+            },
+            {
+              "nr": 106,
+              "name": "Sprungschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 255,
+              "name": "Felszähne"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 202,
+              "name": "Verbrennen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 6,
+              "name": "Adrenalin"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 252,
+              "name": "Streitkolbentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 33,
+              "name": "Energie Umwandler"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 76,
+              "name": "Infernaler Kreuzschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 19,
+          "skills": [
+            {
+              "nr": 258,
+              "name": "Erdsäule"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            },
+            {
+              "nr": 192,
+              "name": "Macht des Felsens"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 257,
+              "name": "Feurige Leidenschaft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 23,
+          "skills": [
+            {
+              "nr": 223,
+              "name": "Geschwindigkeit der Dox"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 138,
+              "name": "Zucht"
+            },
+            {
+              "nr": 149,
+              "name": "Macht der Wildnis"
+            }
+          ]
+        },
+        {
+          "characterLevel": 25,
+          "skills": [
+            {
+              "nr": 224,
+              "name": "Macht des Feuers"
+            }
+          ]
+        },
+        {
+          "characterLevel": 30,
+          "skills": [
+            {
+              "nr": 38,
+              "name": "Erdbeben"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 62,
+              "name": "Infernal Zyklon"
+            },
+            {
+              "nr": 254,
+              "name": "Weisheit des Salamanders"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 259,
+              "name": "Weisheit des Erdweisen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 256,
+              "name": "Felsensalve"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 15,
+          "name": "Beben",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 50,
+          "name": "Feuerlanze",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 255,
+          "name": "Felszähne",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 202,
+          "name": "Verbrennen",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 6,
+          "name": "Adrenalin",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 252,
+          "name": "Streitkolbentraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 33,
+          "name": "Energie Umwandler",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 76,
+          "name": "Infernaler Kreuzschlag",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 258,
+          "name": "Erdsäule",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 19,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 192,
+          "name": "Macht des Felsens",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 257,
+          "name": "Feurige Leidenschaft",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 223,
+          "name": "Geschwindigkeit der Dox",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 23,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 224,
+          "name": "Macht des Feuers",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 25,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 30,
+          "phase": "advancedBridge",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 62,
+          "name": "Infernal Zyklon",
+          "type": "skill",
+          "damageType": "magical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 254,
+          "name": "Weisheit des Salamanders",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 259,
+          "name": "Weisheit des Erdweisen",
+          "type": "passive",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 256,
+          "name": "Felsensalve",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "skillCount": 31,
+      "sp": 270,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 2,
+              "name": "Überleben"
+            },
+            {
+              "nr": 21,
+              "name": "Dash"
+            },
+            {
+              "nr": 184,
+              "name": "Hinterhältiger Pfeil"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 43,
+              "name": "Erweiterung der Sinne"
+            },
+            {
+              "nr": 51,
+              "name": "Feuerpfeil"
+            }
+          ]
+        },
+        {
+          "characterLevel": 5,
+          "skills": [
+            {
+              "nr": 63,
+              "name": "Kettenschuss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 119,
+              "name": "Verbessertes Nachladen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 8,
+          "skills": [
+            {
+              "nr": 24,
+              "name": "Doppelschuss"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 7,
+              "name": "Armbrusttraining"
+            },
+            {
+              "nr": 142,
+              "name": "Ausweichtraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 80,
+              "name": "Beweglichkeit"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 191,
+              "name": "Flinke Füße"
+            }
+          ]
+        },
+        {
+          "characterLevel": 16,
+          "skills": [
+            {
+              "nr": 183,
+              "name": "Gute Reflexe"
+            }
+          ]
+        },
+        {
+          "characterLevel": 17,
+          "skills": [
+            {
+              "nr": 187,
+              "name": "Hartes Training"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 148,
+              "name": "Scharfer Instinkte"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            },
+            {
+              "nr": 190,
+              "name": "Keine Gnade"
+            }
+          ]
+        },
+        {
+          "characterLevel": 23,
+          "skills": [
+            {
+              "nr": 147,
+              "name": "Erweckung der Leidenschaft"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 47,
+              "name": "Explosionspfeil"
+            },
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 185,
+              "name": "Seelenschuss"
+            },
+            {
+              "nr": 186,
+              "name": "Seelensammler"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 229,
+              "name": "Spektralketten"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 66,
+              "name": "Kopfschuss"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 21,
+          "name": "Dash",
+          "type": "buff",
+          "effectKind": "movement",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 5,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 119,
+          "name": "Verbessertes Nachladen",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 8,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 7,
+          "name": "Armbrusttraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 16,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 187,
+          "name": "Hartes Training",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 17,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 23,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 185,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "type": "skill",
+          "damageType": "mixed",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 185,
+              "minimumSkillLevel": 1
+            },
+            {
+              "nr": 186,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "skillCount": 32,
+      "sp": 266,
+      "levelGroups": [
+        {
+          "characterLevel": 1,
+          "skills": [
+            {
+              "nr": 2,
+              "name": "Überleben"
+            },
+            {
+              "nr": 27,
+              "name": "Dunkler Schlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 2,
+          "skills": [
+            {
+              "nr": 139,
+              "name": "Ausdauertraining"
+            },
+            {
+              "nr": 144,
+              "name": "Rüstungstraining"
+            },
+            {
+              "nr": 201,
+              "name": "Waffentraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 3,
+          "skills": [
+            {
+              "nr": 43,
+              "name": "Erweiterung der Sinne"
+            },
+            {
+              "nr": 70,
+              "name": "Kunai Todesstoß"
+            }
+          ]
+        },
+        {
+          "characterLevel": 6,
+          "skills": [
+            {
+              "nr": 17,
+              "name": "Blutklinge"
+            },
+            {
+              "nr": 67,
+              "name": "Körperbeherrschung"
+            }
+          ]
+        },
+        {
+          "characterLevel": 10,
+          "skills": [
+            {
+              "nr": 22,
+              "name": "Dolchtraining"
+            }
+          ]
+        },
+        {
+          "characterLevel": 11,
+          "skills": [
+            {
+              "nr": 20,
+              "name": "Brecher des Lichts"
+            },
+            {
+              "nr": 80,
+              "name": "Beweglichkeit"
+            }
+          ]
+        },
+        {
+          "characterLevel": 13,
+          "skills": [
+            {
+              "nr": 191,
+              "name": "Flinke Füße"
+            }
+          ]
+        },
+        {
+          "characterLevel": 14,
+          "skills": [
+            {
+              "nr": 146,
+              "name": "List des Schurken"
+            }
+          ]
+        },
+        {
+          "characterLevel": 18,
+          "skills": [
+            {
+              "nr": 111,
+              "name": "Sturmklinge"
+            }
+          ]
+        },
+        {
+          "characterLevel": 20,
+          "skills": [
+            {
+              "nr": 133,
+              "name": "Tamen"
+            },
+            {
+              "nr": 136,
+              "name": "Beschwören"
+            },
+            {
+              "nr": 137,
+              "name": "Zurückrufen"
+            }
+          ]
+        },
+        {
+          "characterLevel": 21,
+          "skills": [
+            {
+              "nr": 134,
+              "name": "Bindung"
+            },
+            {
+              "nr": 243,
+              "name": "Technische Perfektion"
+            }
+          ]
+        },
+        {
+          "characterLevel": 22,
+          "skills": [
+            {
+              "nr": 65,
+              "name": "Klingentornado"
+            },
+            {
+              "nr": 135,
+              "name": "Kontrolle"
+            }
+          ]
+        },
+        {
+          "characterLevel": 24,
+          "skills": [
+            {
+              "nr": 115,
+              "name": "Überschallklinge"
+            },
+            {
+              "nr": 138,
+              "name": "Zucht"
+            }
+          ]
+        },
+        {
+          "characterLevel": 26,
+          "skills": [
+            {
+              "nr": 126,
+              "name": "Wirbelnde Klinge"
+            }
+          ]
+        },
+        {
+          "characterLevel": 40,
+          "skills": [
+            {
+              "nr": 90,
+              "name": "Schattendolch"
+            },
+            {
+              "nr": 188,
+              "name": "Dunkler Schleier"
+            }
+          ]
+        },
+        {
+          "characterLevel": 41,
+          "skills": [
+            {
+              "nr": 91,
+              "name": "Schattenfalle"
+            },
+            {
+              "nr": 92,
+              "name": "Schattenschlag"
+            }
+          ]
+        },
+        {
+          "characterLevel": 42,
+          "skills": [
+            {
+              "nr": 189,
+              "name": "Herz des Verräters"
+            },
+            {
+              "nr": 238,
+              "name": "Attentäter"
+            }
+          ]
+        },
+        {
+          "characterLevel": 43,
+          "skills": [
+            {
+              "nr": 113,
+              "name": "Tödlicher Tanz"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 27,
+          "name": "Dunkler Schlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 1,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "type": "passive",
+          "maxSkillLevel": 20,
+          "minimumCharacterLevel": 2,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 70,
+          "name": "Kunai Todesstoß",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 4,
+          "minimumCharacterLevel": 3,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 17,
+          "name": "Blutklinge",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 6,
+          "phase": "starter",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 22,
+          "name": "Dolchtraining",
+          "type": "passive",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 10,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 20,
+          "name": "Brecher des Lichts",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 11,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "type": "buff",
+          "target": "group",
+          "maxSkillLevel": 3,
+          "minimumCharacterLevel": 13,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 146,
+          "name": "List des Schurken",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 14,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 111,
+          "name": "Sturmklinge",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 18,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "type": "skill",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 20,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 243,
+          "name": "Technische Perfektion",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 21,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 65,
+          "name": "Klingentornado",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 22,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 22,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 115,
+          "name": "Überschallklinge",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 24,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "type": "passive",
+          "maxSkillLevel": 1,
+          "minimumCharacterLevel": 24,
+          "phase": "regularPets",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 26,
+          "phase": "expandedBasics",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 90,
+          "name": "Schattendolch",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 15,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 188,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 188,
+          "name": "Dunkler Schleier",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 2,
+          "minimumCharacterLevel": 40,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 91,
+          "name": "Schattenfalle",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 188,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 92,
+          "name": "Schattenschlag",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 41,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": [
+            {
+              "nr": 188,
+              "minimumSkillLevel": 1
+            }
+          ]
+        },
+        {
+          "nr": 189,
+          "name": "Herz des Verräters",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 5,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 238,
+          "name": "Attentäter",
+          "type": "selfBuff",
+          "target": "self",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 42,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        },
+        {
+          "nr": 113,
+          "name": "Tödlicher Tanz",
+          "type": "skill",
+          "damageType": "physical",
+          "maxSkillLevel": 10,
+          "minimumCharacterLevel": 43,
+          "phase": "classSpecialization",
+          "requiresLearnedSkills": []
+        }
+      ]
+    }
+  ],
+  "userReview": {
+    "reviewedThroughClass": "herbalist",
+    "changes": [
+      {
+        "nr": 175,
+        "level": 30
+      },
+      {
+        "nr": 9,
+        "level": 30,
+        "sharedBy": [
+          "druid",
+          "luminet"
+        ]
+      },
+      {
+        "nr": 219,
+        "level": 30
+      },
+      {
+        "nr": 52,
+        "level": 30
+      },
+      {
+        "nr": 34,
+        "level": 30,
+        "reason": "Shield and temporary basic-attack buff; independent of Rage package."
+      },
+      {
+        "nr": 64,
+        "level": 14,
+        "sharedBy": [
+          "healer"
+        ]
+      },
+      {
+        "nr": 124,
+        "level": 14
+      },
+      {
+        "nr": 143,
+        "level": 15
+      },
+      {
+        "nr": 108,
+        "level": 30
+      },
+      {
+        "nr": 56,
+        "level": 15
+      }
+    ],
+    "petLearningCaps": "Adventurer/Tamer 3 for Bond, Control and Breeding; all other current classes 1.",
+    "secondPass": {
+      "reviewedThroughClass": "villian",
+      "changes": [
+        {
+          "nr": 23,
+          "level": 30
+        },
+        {
+          "nr": 171,
+          "level": 30
+        },
+        {
+          "nr": 42,
+          "level": 30,
+          "agentProposal": true
+        },
+        {
+          "nr": 217,
+          "level": 30,
+          "agentProposal": true,
+          "sharedBy": [
+            "luminet",
+            "healer"
+          ]
+        },
+        {
+          "nr": 214,
+          "level": 30
+        },
+        {
+          "nr": 99,
+          "level": 30,
+          "agentProposal": true
+        },
+        {
+          "nr": 257,
+          "level": 22,
+          "agentProposal": true
+        },
+        {
+          "nr": 258,
+          "level": 19,
+          "agentProposal": true
+        },
+        {
+          "nr": 38,
+          "level": 30,
+          "sharedBy": [
+            "shaman",
+            "butcher"
+          ]
+        }
+      ],
+      "rogueSpacing": {
+        "20": 11,
+        "65": 17,
+        "111": 15,
+        "115": 19,
+        "191": 13,
+        "243": 16
+      },
+      "notes": [
+        "Astralkörper 8 and Ätherregen 9 are separate existing skills, not a rename.",
+        "Knight Heal removed; 31 remaining Knight skills, one replacement slot open.",
+        "Verbrennen maximum skill rank is 15; proposed first character-level unlock remains 6.",
+        "Verloren in der Dunkelheit remains 40 because its soul attacks and Reaper are level 40.",
+        "Intermediate levels 19 and 22 distinguish early terrain control and modest fire proc from powerful level-40 masteries."
+      ]
+    },
+    "progressionSpacing": {
+      "status": "userRequestedAgentDistribution",
+      "bounds": {
+        "starter": [
+          1,
+          9
+        ],
+        "expansion": [
+          10,
+          29
+        ],
+        "bridge": [
+          30,
+          39
+        ],
+        "specialization": [
+          40,
+          43
+        ]
+      },
+      "levelsBySkill": {
+        "8": 41,
+        "12": 40,
+        "13": 40,
+        "31": 11,
+        "33": 11,
+        "35": 41,
+        "39": 43,
+        "40": 40,
+        "47": 24,
+        "48": 41,
+        "54": 11,
+        "58": 40,
+        "59": 41,
+        "62": 40,
+        "65": 22,
+        "66": 42,
+        "71": 18,
+        "74": 21,
+        "75": 21,
+        "76": 17,
+        "78": 41,
+        "80": 11,
+        "81": 40,
+        "82": 23,
+        "83": 17,
+        "84": 17,
+        "86": 13,
+        "88": 42,
+        "89": 18,
+        "90": 40,
+        "91": 41,
+        "92": 41,
+        "95": 26,
+        "97": 11,
+        "98": 41,
+        "100": 12,
+        "101": 24,
+        "103": 40,
+        "104": 41,
+        "105": 42,
+        "107": 42,
+        "109": 41,
+        "110": 25,
+        "111": 18,
+        "112": 43,
+        "113": 43,
+        "115": 24,
+        "116": 13,
+        "117": 25,
+        "118": 42,
+        "120": 40,
+        "121": 17,
+        "123": 21,
+        "126": 26,
+        "127": 42,
+        "128": 41,
+        "134": 21,
+        "135": 22,
+        "138": 24,
+        "141": 13,
+        "146": 14,
+        "147": 23,
+        "148": 18,
+        "149": 24,
+        "150": 25,
+        "152": 22,
+        "153": 21,
+        "154": 24,
+        "156": 41,
+        "157": 43,
+        "161": 40,
+        "162": 22,
+        "163": 42,
+        "164": 14,
+        "165": 22,
+        "166": 24,
+        "167": 13,
+        "169": 41,
+        "172": 13,
+        "173": 22,
+        "174": 40,
+        "176": 42,
+        "177": 43,
+        "178": 22,
+        "180": 43,
+        "183": 16,
+        "185": 40,
+        "186": 40,
+        "187": 17,
+        "188": 40,
+        "189": 42,
+        "190": 22,
+        "192": 21,
+        "193": 21,
+        "194": 41,
+        "197": 42,
+        "203": 13,
+        "204": 42,
+        "205": 42,
+        "206": 40,
+        "207": 43,
+        "208": 18,
+        "209": 43,
+        "211": 42,
+        "212": 43,
+        "213": 22,
+        "216": 40,
+        "218": 12,
+        "220": 11,
+        "222": 42,
+        "223": 23,
+        "224": 25,
+        "225": 23,
+        "226": 40,
+        "227": 42,
+        "228": 43,
+        "229": 41,
+        "230": 43,
+        "233": 18,
+        "234": 43,
+        "235": 43,
+        "236": 41,
+        "237": 40,
+        "238": 42,
+        "239": 23,
+        "240": 41,
+        "241": 42,
+        "242": 22,
+        "243": 21,
+        "244": 40,
+        "246": 40,
+        "247": 17,
+        "249": 42,
+        "250": 22,
+        "253": 41,
+        "254": 40,
+        "256": 43,
+        "259": 41,
+        "260": 17
+      },
+      "notes": [
+        "Not random at runtime; deterministic proposed learning levels. Shared definitions retain the same unlock across all owners.",
+        "Morrak, Nature Spirit and Soul Companion remain exactly level 40 with quest conditions.",
+        "Related skills may share a level or follow on consecutive levels. Pet support starts no earlier than regular pets.",
+        "Skill values, ranks and SP costs are not changed."
+      ]
+    }
+  },
+  "pendingSkillRemovals": [],
+  "pendingRenames": []
+}

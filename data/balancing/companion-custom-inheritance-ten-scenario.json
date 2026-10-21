@@ -1,0 +1,220 @@
+{
+  "generatedAt": "2026-10-20T14:21:22.178Z",
+  "status": "hypotheticalNotApplied",
+  "durationSeconds": 600,
+  "proposal": "Custom bases: Morrak 1000 HP / 135 MAtk / 90 PDef / 110 MDef; Nature 500 HP / 100 MAtk / 45 PDef / 81 MDef; Spirit 500 HP / 100 PAtk / 63 PDef / 52 MDef; caster inheritance reduced to exactly 10%, not one sixth. Companion frequencies, skills, Bindung and buffs unchanged.",
+  "scope": "Current level60/R6, fixed attack policy, same dummy. Companion survivability has no damage effect because the dummy never attacks.",
+  "rows": [
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "companion": "Morrak",
+      "mode": "none",
+      "oldSummonDamage": 167351.79999999952,
+      "newSummonDamage": 121778.33999999969,
+      "summonDamageChangePercent": -27.23213015934096,
+      "oldTotal": 814378.1047000054,
+      "newTotal": 768804.6447000022,
+      "totalChangePercent": -5.596105756894243,
+      "attacks": 592
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "companion": "Morrak",
+      "mode": "self",
+      "oldSummonDamage": 176102.3333333325,
+      "newSummonDamage": 124282.6000000003,
+      "summonDamageChangePercent": -29.4259209134078,
+      "oldTotal": 863286.6894333396,
+      "newTotal": 811466.956100001,
+      "totalChangePercent": -6.002610021400079,
+      "attacks": 591
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "companion": "Morrak",
+      "mode": "groups",
+      "oldSummonDamage": 187409.59999999995,
+      "newSummonDamage": 127674.77999999937,
+      "summonDamageChangePercent": -31.873938154715976,
+      "oldTotal": 1100320.6629000048,
+      "newTotal": 1040585.8429000061,
+      "totalChangePercent": -5.428855606742999,
+      "attacks": 591
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "companion": "Naturgeist",
+      "mode": "none",
+      "oldSummonDamage": 87119.19999999956,
+      "newSummonDamage": 102516.40000000119,
+      "summonDamageChangePercent": 17.673716012086537,
+      "oldTotal": 580340.210000012,
+      "newTotal": 595737.4100000028,
+      "totalChangePercent": 2.6531334094514136,
+      "attacks": 658
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "companion": "Naturgeist",
+      "mode": "self",
+      "oldSummonDamage": 90534.6000000011,
+      "newSummonDamage": 103543.20000000099,
+      "summonDamageChangePercent": 14.368650217706524,
+      "oldTotal": 593600.4749999987,
+      "newTotal": 606609.0749999925,
+      "totalChangePercent": 2.1914739876166323,
+      "attacks": 657
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "companion": "Naturgeist",
+      "mode": "groups",
+      "oldSummonDamage": 101178,
+      "newSummonDamage": 107091,
+      "summonDamageChangePercent": 5.844155844155852,
+      "oldTotal": 736817.0799999969,
+      "newTotal": 742730.0799999968,
+      "totalChangePercent": 0.8025058268193108,
+      "attacks": 657
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "companion": "Seelenbegleiter",
+      "mode": "none",
+      "oldSummonDamage": 65983.3199999992,
+      "newSummonDamage": 100033.44000000042,
+      "summonDamageChangePercent": 51.604132680807254,
+      "oldTotal": 610331.8800000058,
+      "newTotal": 644382.0000000073,
+      "totalChangePercent": 5.5789515697592496,
+      "attacks": 897
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "companion": "Seelenbegleiter",
+      "mode": "self",
+      "oldSummonDamage": 73167.36000000167,
+      "newSummonDamage": 102341.12000000082,
+      "summonDamageChangePercent": 39.872642664705246,
+      "oldTotal": 655736.9199999964,
+      "newTotal": 684910.6799999826,
+      "totalChangePercent": 4.4490037254553805,
+      "attacks": 896
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "companion": "Seelenbegleiter",
+      "mode": "groups",
+      "oldSummonDamage": 110261.75999999869,
+      "newSummonDamage": 136209.9200000008,
+      "summonDamageChangePercent": 23.533235819927434,
+      "oldTotal": 799602.9200000102,
+      "newTotal": 825551.0800000037,
+      "totalChangePercent": 3.2451307206323277,
+      "attacks": 896
+    }
+  ],
+  "selfBuffReview": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "currentDamageGainPercent": 11.411543070623598,
+      "provisionalTargetGainPercent": 8.411543070623598,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "currentDamageGainPercent": 13.051583669961175,
+      "provisionalTargetGainPercent": 10.051583669961175,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "currentDamageGainPercent": 2.2849123275443084,
+      "provisionalTargetGainPercent": 4.284912327544308,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "currentDamageGainPercent": 1.5857021853701303,
+      "provisionalTargetGainPercent": 3.5857021853701303,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "currentDamageGainPercent": 2.3924190151259905,
+      "provisionalTargetGainPercent": 4.3924190151259905,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "currentDamageGainPercent": 4.84289065263992,
+      "provisionalTargetGainPercent": 4.84289065263992,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "currentDamageGainPercent": 7.439401657994682,
+      "provisionalTargetGainPercent": 4.439401657994682,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "currentDamageGainPercent": 6.346440631606387,
+      "provisionalTargetGainPercent": 3.346440631606387,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "currentDamageGainPercent": 1.119602974008349,
+      "provisionalTargetGainPercent": 3.119602974008349,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "currentDamageGainPercent": 6.005636012445459,
+      "provisionalTargetGainPercent": 3.005636012445459,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "currentDamageGainPercent": 7.395512397144555,
+      "provisionalTargetGainPercent": 4.395512397144555,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "currentDamageGainPercent": 10.722172873045555,
+      "provisionalTargetGainPercent": 7.7221728730455546,
+      "status": "discussionOnlyNotApplied"
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "currentDamageGainPercent": 5.956248628335659,
+      "provisionalTargetGainPercent": 2.9562486283356586,
+      "status": "discussionOnlyNotApplied"
+    }
+  ],
+  "catalogUnchanged": true
+}

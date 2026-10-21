@@ -1,0 +1,66 @@
+{
+  "_id": "6acc1c7e4826525c70d04bcb",
+  "skillName_eng": "Soul Torment",
+  "__v": 0,
+  "category": "active",
+  "cd": 0.19,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 97, +19 je weiterer Stufe, auf Stufe 10 268. Mana 23 je Anwendung auf Stufe 1, plus 6 je weiterer Stufe, auf Stufe 10 77 je Anwendung. Castzeit 0 Sekunden, Cooldown 0,19 Sekunden. Bei sofortiger erster Anwendung passen theoretisch bis zu 16 Anwendungen in ein volles 3-Sekunden-Fenster (Zeitpunkte 0 bis 2,85 Sekunden); Reaktionszeit und Serverablauf können das reduzieren. 15 Anwendungen kosten auf Stufe 10 1155 Mana; 16 Anwendungen kosten 1232 Mana. Für Seelenernte vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, ab 12 ergeben 2; höhere Trefferzahlen durch das geänderte Timing erhöhen die Ernte nicht über 2. Manueller Abschluss bevorzugt, genaue Umsetzung noch offen. Seelenfessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.",
+  "description_eng": "Deals one magical hit only while Soul Shackle affects the target. Base damage starts at 97 and increases by 19 per additional level, reaching 268 at level 10. Mana cost starts at 23 and increases by 6 per additional level to 77. Fifteen uses cost 1155 Mana; sixteen cost 1232. No health sacrifice, no damage over time, zero cast time, cooldown 0.19 seconds. Up to 16 immediate uses theoretically fit into a full 3-second shackle; the comparison uses 15. Harvest yields 0 fragments for 0–4 hits, 1 for 5–11 and 2 for 12 or more, capped at 2. Each shackle costs 1 fragment. Exact server timing and manual finisher implementation remain pending.",
+  "dmgType": "spell",
+  "matk": 97,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 104,
+  "skillName_de": "Seelenqual",
+  "skillpoints": 1,
+  "activationRequirements": {
+    "requiredTargetMarkSkillNumber": 103
+  },
+  "attackExecution": {
+    "targetMode": "singleEnemy",
+    "hitCount": 1,
+    "damageValueScope": "perHit"
+  },
+  "castTimeSeconds": 0,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 23,
+        "perLevel": 6
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 97,
+      "perLevel": 19
+    }
+  },
+  "mana": 23
+}

@@ -1,0 +1,46 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc9",
+  "skillName_eng": "Sword Training",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Knife",
+    "Templar",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verbessert dauerhaft dein Schwerttraining. Auf Skilllevel 1 erhältst du 2 Stärke und 1 Geschicklichkeit. Je weiterer Stufe steigt die Stärke um 1. Auf Level 5 kommt zusätzlich 1 Geschicklichkeit hinzu, sodass du insgesamt 6 Stärke und 2 Geschicklichkeit erhältst.",
+  "description_eng": "Permanently improves sword training. At skill level 1, gain 2 Strength and 1 Dexterity. Each additional level adds 1 Strength. Level 5 also adds 1 Dexterity, reaching 6 Strength and 2 Dexterity.",
+  "dmgType": "passive",
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 102,
+  "skillName_de": "Schwerttraining",
+  "skillpoints": 1,
+  "str": 2,
+  "dex": 1,
+  "resourceCosts": [],
+  "statScaling": {
+    "str": {
+      "type": "table",
+      "values": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "dex": {
+      "type": "table",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        2
+      ]
+    }
+  }
+}

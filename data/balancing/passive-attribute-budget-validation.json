@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-10-20T07:42:30.541Z",
+  "classes": 13,
+  "secondsPerRun": 600,
+  "freshMainRuns": 39,
+  "identicalControlRuns": 13,
+  "resourceAndDamageChecks": "passed",
+  "freshInputHashes": "passed",
+  "comparison": [
+    {
+      "scenario": "Ohne optionale Buffs",
+      "luminet": 643869.5829999984,
+      "ritualist": 814378.1047000054,
+      "ritualistSummon": 167351.79999999952,
+      "ritualistAheadPercent": 26.48184138557257
+    },
+    {
+      "scenario": "Eigene Buffs",
+      "luminet": 651078.3660000016,
+      "ritualist": 863286.6894333396,
+      "ritualistSummon": 176102.3333333325,
+      "ritualistAheadPercent": 32.593361185854164
+    },
+    {
+      "scenario": "Eigene + Gruppenbuffs",
+      "luminet": 1117557.4210000057,
+      "ritualist": 1496596.195833342,
+      "ritualistSummon": 271254.13333333284,
+      "ritualistAheadPercent": 33.91671584035183
+    }
+  ]
+}

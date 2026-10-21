@@ -1,0 +1,489 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b93",
+    "skillName_eng": "Fire of the Damned",
+    "__v": 0,
+    "category": "active",
+    "cd": 57,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein Feld aus bläulich-schwarzen, astral wirkenden Flammen um das anvisierte Ziel, maximale Feldlaufzeit 10 Sekunden. Fläche und Gegnerlimit steigen in Stufen: Stufe 1–2: 3 Meter Durchmesser und bis zu 2 Gegner; Stufe 3–4: 5 Meter Durchmesser und bis zu 4 Gegner; Stufe 5: 7 Meter Durchmesser und bis zu 6 Gegner. Jeder erstmals erfolgreich getroffene Gegner gibt pro Anwendung genau 1 Seelenfragment, unabhängig von späteren Schadensticks und ohne Tötungsvoraussetzung. Das Limit gilt für unterschiedliche Gegner über die gesamte Anwendung, damit durch Zielwechsel nicht mehr als 2/4/6 Seelen gewonnen werden. Weitere Treffer desselben Gegners geben keine zusätzliche Seele. Maximal 6 Seelen auf Stufe 5, begrenzt durch freie Plätze im Reaper-Speicher. Zielauswahl bei mehr Gegnern sowie Mitbewegung des Felds bleiben offen. Initialtreffer bei Sekunde 0 mit vollem berechnetem Initialschaden. Danach Schadensticks bei Sekunde 1,5/3/4,5/6/7,5/9, jeweils 30 Prozent des berechneten Initialschadens (70 Prozent weniger); sechs Folgeticks. Vor weiteren Schadensberechnungen entspricht die gesamte Trefferfolge dem 2,8-Fachen des Initialwerts, falls alle Treffer treffen. Der erste erfolgreiche Treffer verlangsamt um 5 Prozent, jeder weitere erfolgreiche Feldtreffer um einen zusätzlichen Prozentpunkt, maximal 11 Prozent nach sieben Treffern. Verhalten bei Verlassen/Wiedereintritt und genaue Restdauer des Slow-Effekts sind noch zu klären. Magischer Initial-Grundschaden 273 auf Stufe 1 und +112 je weiterer Stufe, auf Stufe 5 721. Mana 167 und +83 je weiterer Stufe, auf Stufe 5 499. Cooldown 57 Sekunden und -1,5 je weiterer Stufe, auf Stufe 5 51 Sekunden. Castzeit 0,4 Sekunden. Der frühere Säulenentwurf mit 2 Sekunden Animation ist ersetzt. Historisch +1 Prozent Schaden je zehn Opfer; Definition von Opfern, Grenzen und Bonusbasis sind noch offen. Ein Wechsel dieses Opferbonus zu zusätzlicher Verlangsamung ist nur eine diskutierte Alternative, nicht festgelegt. Zeitpunkt der Feldplatzierung und Verrechnung der Folgeticks mit gegnerischer Verteidigung bleiben offen. Seelengewinn funktioniert auch gegen Spieler im PvP nach denselben Regeln: eine Seele je unterschiedlichem erfolgreich getroffenem Gegner pro Anwendung, begrenzt durch Gegnerlimit und freien Speicher. Übungspuppen geben keine Seelenfragmente; die konkrete Erkennung von Übungszielen wird später serverseitig umgesetzt.",
+    "description_eng": "Creates a field of bluish-black astral flames, around the selected target, lasting at most 10 seconds. Area and target limit increase in milestones: levels 1–2: 3-meter diameter, up to 2 enemies; levels 3–4: 5-meter diameter, up to 4 enemies; level 5: 7-meter diameter, up to 6 enemies. Each enemy successfully hit for the first time grants exactly 1 soul fragment per activation, regardless of subsequent damage ticks, with no kill requirement. The limit applies to unique enemies across the entire activation so switching targets cannot generate more than 2/4/6 souls. Further hits on the same enemy grant no extra souls. Maximum 6 souls at level 5, limited by remaining Reaper storage capacity. Target selection among excess enemies and field tracking remain pending. Initial hit at second 0 deals full calculated initial damage. Six subsequent ticks at 1.5/3/4.5/6/7.5/9 seconds each deal 30 percent of calculated initial damage (70 percent less). Before further damage calculations, all seven hits total 2.8 times the initial value if all land. The first successful hit slows movement by 5 percent; each subsequent successful field hit adds one percentage point, up to 11 percent after seven hits. Exit/reentry behavior and the exact slow expiry remain pending. Initial magical base damage 273 plus 112 per additional level, reaching 721 at level 5. Mana 167 plus 83 per additional level, reaching 499. Cooldown 57 minus 1.5 per additional level, reaching 51 seconds. Cast time 0.4 seconds. Replaces the previous pillar concept and its 2-second animation. Historical bonus of 1 percent damage per ten victims: victim definition, caps and bonus basis remain pending. Replacing this with additional slowing is only a discussed alternative. Field placement timing and mitigation of subsequent ticks remain pending. Soul generation also works against players in PvP under the same rules: one soul per distinct successfully hit opponent per activation, limited by target cap and available storage. Training dummies grant no soul fragments; exact training-target detection will be implemented server-side later.",
+    "dmgType": "spell",
+    "matk": 273,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 48,
+    "skillName_de": "Feuer der Verdammten",
+    "skillpoints": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 57,
+      "perLevel": -1.5
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 167,
+          "perLevel": 83
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 273,
+        "perLevel": 112
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 1.5,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "evaluation": "perHit",
+      "radiusScaling": {
+        "type": "table",
+        "values": [
+          1.5,
+          1.5,
+          2.5,
+          2.5,
+          3.5
+        ]
+      },
+      "maxTargets": 2,
+      "maxTargetsScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "centerTracking": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "dur": 10,
+    "effects": [
+      {
+        "key": "damned-fire-periodic-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 0.3,
+        "unit": "fraction",
+        "initialCalculatedDamageFraction": 0.3,
+        "intervalSeconds": 1.5,
+        "firstTickAfterSeconds": 1.5,
+        "durationSeconds": 10,
+        "damageTypes": [
+          "magical"
+        ],
+        "damageBasisStatus": "pending"
+      },
+      {
+        "key": "damned-fire-stacking-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 48,
+        "additionalSlowFractionPerHit": 0.01,
+        "maximumSlowFraction": 0.11,
+        "durationSeconds": 10,
+        "slowLifetimeStatus": "pending"
+      }
+    ],
+    "effectsVersion": 1,
+    "soulGenerationSettings": {
+      "onSuccessfulHit": true,
+      "fragmentsPerUniqueEnemy": 1,
+      "oncePerEnemyPerActivation": true,
+      "requiresKill": false,
+      "maximumUniqueEnemiesScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "allowsPvpTargets": true,
+      "excludesTrainingDummies": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b94",
+    "skillName_eng": "Fireball",
+    "__v": 0,
+    "category": "active",
+    "cd": 12,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen Feuerball auf dein Ziel und verursacht einmalig magischen Schaden. Grundschaden 63 auf Stufe 1, +29 je weiterer Stufe, auf Stufe 20 614. Mana 31 auf Stufe 1, +15 je weiterer Stufe, auf Stufe 20 316. Cooldown Stufen 1–4: 12 Sekunden; 5–9: 10 Sekunden; 10–14: 8 Sekunden; 15–19: 6 Sekunden; Stufe 20: 4 Sekunden. Castzeit 0,1 Sekunden. Vorläufige Flug-/Animationszeit 0,5 Sekunden, keine anhaltende Wirkung oder zusätzlicher Verbrennungs-DoT.",
+    "description_eng": "Hurls a fireball at one target, dealing magical damage once. Base damage 63 plus 29 per additional level, reaching 614 at level 20. Mana 31 plus 15 per additional level, reaching 316. Cooldown levels 1–4: 12 seconds; 5–9: 10; 10–14: 8; 15–19: 6; level 20: 4. Cast time 0.1 seconds. Provisional flight/animation time 0.5 seconds; no lingering effect or additional burning DoT.",
+    "dmgType": "spell",
+    "matk": 63,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 49,
+    "skillName_de": "Feuerball",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        12,
+        12,
+        12,
+        12,
+        10,
+        10,
+        10,
+        10,
+        10,
+        8,
+        8,
+        8,
+        8,
+        8,
+        6,
+        6,
+        6,
+        6,
+        6,
+        4
+      ]
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "hasLingeringDamage": false,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 31,
+          "perLevel": 15
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 63,
+        "perLevel": 29
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bab",
+    "skillName_eng": "Life Drainer",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Greift einen Gegner einmalig magisch an und heilt den Anwender. Magischer Skill-Grundschaden 112 auf Stufe 1 und +43 je weiterer Stufe, auf Stufe 10 499. Mana 67 und +43 je weiterer Stufe, auf Stufe 10 454. Cooldown gleichmäßig von 45 auf 40 Sekunden über zehn Stufen. Castzeit 0,1 Sekunden, vorläufige Animation 0,5 Sekunden, kein Schaden über Zeit. Einmalige Selbstheilung: 35 HP je gelerntem Skilllevel, insgesamt 350 HP auf Stufe 10. Erst auf Stufe 10 zusätzlich 2 Prozent des tatsächlich durch diese Anwendung verursachten Lebensschadens. Beide Komponenten gehören zu derselben Heilung. Beispiele auf Stufe 10: 6000 Schaden heilt 470 HP; 10000 heilt 550 HP; 20000 heilt 750 HP; 100000 heilt 2350 HP. Kein höherer prozentualer Lebensraub und keine automatische prozentuale Steigerung über die Skillstufen. Heil-Auslösung bei verfehltem oder vollständig abgewehrtem Angriff wird noch geklärt.",
+    "description_eng": "Attacks one enemy once with magic and heals the caster. Magical skill base damage 112 plus 43 per additional level, reaching 499 at level 10. Mana 67 plus 43 per additional level, reaching 454. Cooldown decreases linearly from 45 to 40 seconds across ten levels. Cast time 0.1 seconds, provisional animation 0.5 seconds, no damage over time. One self-heal: 35 HP per learned skill level, totaling 350 at level 10. Only at level 10 additionally restores 2 percent of actual health damage dealt by this activation. Both components form the same heal. Level-10 examples: 6000 damage heals 470 HP; 10000 heals 550; 20000 heals 750; 100000 heals 2350. No higher percentage lifesteal or automatic percentage growth across skill levels. Healing on missed or fully blocked attacks remains pending.",
+    "dmgType": "spell",
+    "matk": 112,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 72,
+    "skillName_de": "Lebenssauger",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": -0.5555555555555556
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 43
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 112,
+        "perLevel": 43
+      }
+    },
+    "effects": [
+      {
+        "key": "life-drainer-flat-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 35,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 35,
+          "perLevel": 35
+        },
+        "durationSeconds": 0
+      },
+      {
+        "key": "life-drainer-damage-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 0,
+        "unit": "fraction",
+        "reference": "damageDealt",
+        "damageBasis": "actualHealthDamage",
+        "damageSource": "caster",
+        "targetSkillNumber": 72,
+        "appliesTo": "specificSkill",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02
+          ]
+        },
+        "minimumSkillLevel": 10,
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcb",
+    "skillName_eng": "Soul Torment",
+    "__v": 0,
+    "category": "active",
+    "cd": 0.19,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 127, +22 je weiterer Stufe, auf Stufe 10 325. Mana 23 je Anwendung auf Stufe 1, +9 je weiterer Stufe, auf Stufe 10 104 je Anwendung. Castzeit 0 Sekunden, Cooldown 0,19 Sekunden. Bei sofortiger erster Anwendung passen theoretisch bis zu 16 Anwendungen in ein volles 3-Sekunden-Fenster (Zeitpunkte 0 bis 2,85 Sekunden); Reaktionszeit und Serverablauf können das reduzieren. 15 Anwendungen kosten auf Stufe 10 1560 Mana; 16 Anwendungen kosten 1664 Mana. Für Seelenernte vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, ab 12 ergeben 2; höhere Trefferzahlen durch das geänderte Timing erhöhen die Ernte nicht über 2. Manueller Abschluss bevorzugt, genaue Umsetzung noch offen. Seelenfessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.",
+    "description_eng": "One magical hit, usable only while Soul Shackle affects the target. No health cost or damage over time. Base damage 127 plus 22 per additional level, reaching 325 at level 10. Mana 23 per activation plus 9 per additional level, reaching 104. Cast time zero, cooldown 0.19 seconds. If the first activation is immediate, up to 16 theoretical activations fit into a full 3-second window (times 0 through 2.85 seconds); reaction time and server timing can reduce this. At level 10, 15 activations cost 1560 Mana; 16 activations cost 1664 Mana. Soul Harvest proposal: 0–4 successful Torment hits yield 0 souls, 5–11 yield 1, at least 12 yield 2; additional hits possible under the new timing do not increase the proposed maximum reward above 2. Manual finishing preferred, exact implementation pending. Shackle costs 1 soul first, so harvesting 1 only recovers the initial investment.",
+    "dmgType": "spell",
+    "matk": 127,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 104,
+    "skillName_de": "Seelenqual",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 103
+    },
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "castTimeSeconds": 0,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 23,
+          "perLevel": 9
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 127,
+        "perLevel": 22
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcc",
+    "skillName_eng": "Soul Harvest",
+    "__v": 0,
+    "category": "active",
+    "cd": 160,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Manueller Abschluss der Kombination Seelenfessel → Seelenqual → Seelenernte. Verursacht einmalig magischen Schaden und heilt den Anwender. Magischer Grundschaden 481 auf Stufe 1, +183 je weiterer Stufe, auf Stufe 5 1213. Bestehende feste Selbstheilung 150 je gelerntem Skilllevel, von 150 bis 750 HP; bisher keine bestätigte zusätzliche Abhängigkeit der Heilmenge von der Trefferzahl. Die Zahl erfolgreicher Seelenqual-Treffer auf dem gefesselten Ziel bestimmt die Ernte: 0–4 ergibt 0 Seelenfragmente, 5–11 ergibt 1, ab 12 ergibt 2. Maximal 2 Seelenfragmente pro Abschluss. Seelenfessel kostet zuvor 1 Fragment. Seelenernte ist bis 1,5 Sekunden nach Auflösung der Seelenfessel abfeuerbar; genaue serverseitige Ablaufprüfung und Verhalten bei vorzeitigem Tod des Ziels noch offen. Cooldown 160 Sekunden, je weiterer Stufe 5 Sekunden weniger, auf Stufe 5 140 Sekunden. Castzeit 0,3 Sekunden, einmalige Wirkung. Mana-Kosten 178 auf Stufe 1, +83 je weiterer Stufe, auf Stufe 5 510. Speicherregeln sind durch Reaper definiert. Eine zusätzliche Schadens-/Heilskalierung nach Trefferzahl ist bisher nicht festgelegt. Übungspuppen geben keine Seelenfragmente; die konkrete Erkennung von Übungszielen wird später serverseitig umgesetzt.",
+    "description_eng": "Manual finisher for Soul Shackle → Soul Torment → Soul Harvest. Deals magical damage once and heals the caster. Base damage 481 plus 183 per additional level, reaching 1213 at level 5. Existing fixed self-healing remains 150 per learned skill level, from 150 to 750 HP; no extra hit-count-based healing amount is confirmed. Successful Torment hits on the shackled target determine the harvest: 0–4 yields 0 soul fragments, 5–11 yields 1, at least 12 yields 2. Maximum 2 fragments per finisher. Shackle costs 1 fragment first. Finisher can be fired up to 1.5 seconds after Shackle ends; precise server timing and target death behavior remain pending. Cooldown starts at 160 seconds, decreases by 5 per additional level, reaching 140 at level 5. Cast time 0.3 seconds; one-time effect. Mana cost 178 at level 1 plus 83 per additional level, reaching 510 at level 5. Storage rules are defined by Reaper. No additional hit-count damage/healing scaling is currently confirmed. Training dummies grant no soul fragments; exact training-target detection will be implemented server-side later.",
+    "dmgType": "spell",
+    "matk": 481,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 105,
+    "skillName_de": "Seelenernte",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 160,
+      "perLevel": -5
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 150,
+          "perLevel": 150
+        },
+        "type": "heal",
+        "target": "self",
+        "value": 150,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "self-heal"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "soulHarvestSettings": {
+      "sourceSkillNumber": 104,
+      "shackleSkillNumber": 103,
+      "minimumHitsForOneFragment": 5,
+      "minimumHitsForTwoFragments": 12,
+      "maximumFragments": 2,
+      "manualFinisher": true,
+      "postShackleWindowSeconds": 1.5,
+      "damageAndHealingScalingByHitCountStatus": "pending",
+      "excludesTrainingDummies": true
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 481,
+        "perLevel": 183
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 178,
+          "perLevel": 83
+        }
+      }
+    ]
+  }
+]

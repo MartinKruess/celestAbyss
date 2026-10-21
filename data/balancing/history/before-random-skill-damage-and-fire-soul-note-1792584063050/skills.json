@@ -1,0 +1,391 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b93",
+    "skillName_eng": "Fire of the Damned",
+    "__v": 0,
+    "category": "active",
+    "cd": 57,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein Feld aus bläulich-schwarzen, astral wirkenden Flammen um das anvisierte Ziel, maximale Feldlaufzeit 10 Sekunden. Fläche und Gegnerlimit steigen in Stufen: Stufe 1–2: 3 Meter Durchmesser und bis zu 2 Gegner; Stufe 3–4: 5 Meter Durchmesser und bis zu 4 Gegner; Stufe 5: 7 Meter Durchmesser und bis zu 6 Gegner. Jeder erstmals erfolgreich getroffene Gegner gibt pro Anwendung genau 1 Seelenfragment, unabhängig von späteren Schadensticks und ohne Tötungsvoraussetzung. Das Limit gilt für unterschiedliche Gegner über die gesamte Anwendung, damit durch Zielwechsel nicht mehr als 2/4/6 Seelen gewonnen werden. Weitere Treffer desselben Gegners geben keine zusätzliche Seele. Maximal 6 Seelen auf Stufe 5, begrenzt durch freie Plätze im Reaper-Speicher. Zielauswahl bei mehr Gegnern sowie Mitbewegung des Felds bleiben offen. Initialtreffer bei Sekunde 0 mit vollem berechnetem Initialschaden. Danach Schadensticks bei Sekunde 1,5/3/4,5/6/7,5/9, jeweils 30 Prozent des berechneten Initialschadens (70 Prozent weniger); sechs Folgeticks. Vor weiteren Schadensberechnungen entspricht die gesamte Trefferfolge dem 2,8-Fachen des Initialwerts, falls alle Treffer treffen. Der erste erfolgreiche Treffer verlangsamt um 5 Prozent, jeder weitere erfolgreiche Feldtreffer um einen zusätzlichen Prozentpunkt, maximal 11 Prozent nach sieben Treffern. Verhalten bei Verlassen/Wiedereintritt und genaue Restdauer des Slow-Effekts sind noch zu klären. Magischer Initial-Grundschaden 273 auf Stufe 1 und +112 je weiterer Stufe, auf Stufe 5 721. Mana-Kosten 191 auf Stufe 1, +78 je weiterer Stufe, maximal 503 auf Stufe 5. Cooldown 57 Sekunden und -1,5 je weiterer Stufe, auf Stufe 5 51 Sekunden. Castzeit 0,4 Sekunden. Der frühere Säulenentwurf mit 2 Sekunden Animation ist ersetzt. Historisch +1 Prozent Schaden je zehn Opfer; Definition von Opfern, Grenzen und Bonusbasis sind noch offen. Ein Wechsel dieses Opferbonus zu zusätzlicher Verlangsamung ist nur eine diskutierte Alternative, nicht festgelegt. Zeitpunkt der Feldplatzierung und Verrechnung der Folgeticks mit gegnerischer Verteidigung bleiben offen. Seelengewinn funktioniert auch gegen Spieler im PvP nach denselben Regeln: eine Seele je unterschiedlichem erfolgreich getroffenem Gegner pro Anwendung, begrenzt durch Gegnerlimit und freien Speicher. Übungspuppen geben keine Seelenfragmente; die konkrete Erkennung von Übungszielen wird später serverseitig umgesetzt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates a field of bluish-black astral flames, around the selected target, lasting at most 10 seconds. Area and target limit increase in milestones: levels 1–2: 3-meter diameter, up to 2 enemies; levels 3–4: 5-meter diameter, up to 4 enemies; level 5: 7-meter diameter, up to 6 enemies. Each enemy successfully hit for the first time grants exactly 1 soul fragment per activation, regardless of subsequent damage ticks, with no kill requirement. The limit applies to unique enemies across the entire activation so switching targets cannot generate more than 2/4/6 souls. Further hits on the same enemy grant no extra souls. Maximum 6 souls at level 5, limited by remaining Reaper storage capacity. Target selection among excess enemies and field tracking remain pending. Initial hit at second 0 deals full calculated initial damage. Six subsequent ticks at 1.5/3/4.5/6/7.5/9 seconds each deal 30 percent of calculated initial damage (70 percent less). Before further damage calculations, all seven hits total 2.8 times the initial value if all land. The first successful hit slows movement by 5 percent; each subsequent successful field hit adds one percentage point, up to 11 percent after seven hits. Exit/reentry behavior and the exact slow expiry remain pending. Initial magical base damage 273 plus 112 per additional level, reaching 721 at level 5. Mana cost 191 at level 1, maximum 503 at level 5. Cooldown 57 minus 1.5 per additional level, reaching 51 seconds. Cast time 0.4 seconds. Replaces the previous pillar concept and its 2-second animation. Historical bonus of 1 percent damage per ten victims: victim definition, caps and bonus basis remain pending. Replacing this with additional slowing is only a discussed alternative. Field placement timing and mitigation of subsequent ticks remain pending. Soul generation also works against players in PvP under the same rules: one soul per distinct successfully hit opponent per activation, limited by target cap and available storage. Training dummies grant no soul fragments; exact training-target detection will be implemented server-side later.",
+    "dmgType": "spell",
+    "matk": 273,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 48,
+    "skillName_de": "Feuer der Verdammten",
+    "skillpoints": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 57,
+      "perLevel": -1.5
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 191,
+          "perLevel": 78
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 273,
+        "perLevel": 112
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 1.5,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "evaluation": "perHit",
+      "radiusScaling": {
+        "type": "table",
+        "values": [
+          1.5,
+          1.5,
+          2.5,
+          2.5,
+          3.5
+        ]
+      },
+      "maxTargets": 2,
+      "maxTargetsScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "centerTracking": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "dur": 10,
+    "effects": [
+      {
+        "key": "damned-fire-periodic-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 0.3,
+        "unit": "fraction",
+        "initialCalculatedDamageFraction": 0.3,
+        "intervalSeconds": 1.5,
+        "firstTickAfterSeconds": 1.5,
+        "durationSeconds": 10,
+        "damageTypes": [
+          "magical"
+        ],
+        "damageBasisStatus": "pending",
+        "periodicDamageKind": "areaAttack"
+      },
+      {
+        "key": "damned-fire-stacking-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 48,
+        "additionalSlowFractionPerHit": 0.01,
+        "maximumSlowFraction": 0.11,
+        "durationSeconds": 10,
+        "slowLifetimeStatus": "pending"
+      }
+    ],
+    "effectsVersion": 1,
+    "soulGenerationSettings": {
+      "onSuccessfulHit": true,
+      "fragmentsPerUniqueEnemy": 1,
+      "oncePerEnemyPerActivation": true,
+      "requiresKill": false,
+      "maximumUniqueEnemiesScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "allowsPvpTargets": true,
+      "excludesTrainingDummies": true
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 57,
+              "perLevel": -1.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 191,
+              "perLevel": 78
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 273,
+            "perLevel": 112
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "attackArea",
+            "radiusScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1.5,
+            "steps": [
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "attackArea",
+            "maxTargetsScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 2,
+            "steps": [
+              0,
+              2
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "soulGenerationSettings",
+            "maximumUniqueEnemiesScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 2,
+            "steps": [
+              0,
+              2
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c0c",
+    "skillName_eng": "Inner Restlessness",
+    "__v": 0,
+    "category": "active",
+    "cd": 70,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff mit wechselndem magischem Schadensbonus. Für jeden eigenen magischen Angriff wird ein zusätzlicher Schadenswert neu ausgewürfelt. Auf Stufe 1 liegt der Bonus zwischen 13 und 31. Die Untergrenze steigt je weiterer Stufe um 5, die Obergrenze um 10, bis zu 58 bis 121 auf Stufe 10. Der Buff gibt keine Stärke, Intelligenz oder Angriffsgeschwindigkeit mehr. Dauer steigt gleichmäßig von 30 auf 35 Sekunden. Cooldown 70 Sekunden, minus 1 je weiterer Stufe, bis zu 61 Sekunden. Castzeit fest 0,1 Sekunden. Die genaue Zufallsverteilung und Behandlung mehrteiliger Angriffe oder DoT-Ticks sind noch offen. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff granting a varying magical damage bonus. A new additional damage value is rolled for each own magical attack. At level 1 the bonus ranges from 13 to 31. Each additional level adds 5 to the minimum and 10 to the maximum, reaching 58 to 121 at level 10. No longer grants Strength, Intelligence or attack speed. Duration increases evenly from 30 to 35 seconds. Cooldown starts at 70 seconds and decreases by 1 per additional level to 61 seconds. Fixed cast time 0.1 seconds. Exact random distribution and treatment of multi-part attacks or damage-over-time ticks remain pending. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 30,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 169,
+    "skillName_de": "Innere Unruhe",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 70,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 30,
+      "perLevel": 0.5555555555555556
+    },
+    "effects": [
+      {
+        "key": "inner-restlessness-random-magic",
+        "type": "randomDamageBonus",
+        "target": "self",
+        "value": 13,
+        "unit": "flat",
+        "appliesTo": "allSkills",
+        "damageTypes": [
+          "magical"
+        ],
+        "durationSeconds": 30,
+        "durationScaling": {
+          "type": "linear",
+          "base": 30,
+          "perLevel": 0.5555555555555556
+        },
+        "randomDamageRange": {
+          "minimum": 13,
+          "maximum": 31,
+          "minimumPerAdditionalLevel": 5,
+          "maximumPerAdditionalLevel": 10,
+          "rerollPerAttackAction": true,
+          "distributionStatus": "pending"
+        }
+      }
+    ],
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 70,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 30,
+            "perLevel": 0.5555555555555556
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 30,
+            "perLevel": 0.5555555555555556
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  }
+]

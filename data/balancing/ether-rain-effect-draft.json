@@ -1,0 +1,58 @@
+{
+  "nr": 9,
+  "status": "structuredEffectsStoredAreaAndDamageBasisPending",
+  "damage": {
+    "type": "periodicMagicalDamage",
+    "base": 300,
+    "perAdditionalLevel": 73,
+    "intervalSeconds": 2,
+    "firstTickAfterSeconds": 2
+  },
+  "healing": {
+    "target": "eachOwnGroupMemberInArea",
+    "distribution": "fullAmountToEachMember",
+    "flatPerTick": 75,
+    "primaryTargetDamageFraction": 0.1,
+    "additionalTargetDamageFraction": 0.01,
+    "maxAdditionalHealingTargets": 4,
+    "maxHealingTargets": 5,
+    "damageSource": "casterEtherRainTick",
+    "damageBasisPending": true,
+    "primaryTargetSelectionStatus": "pending",
+    "levelScalingStatus": "fixedFractionsUnlessRevised",
+    "damageTargetCap": false
+  },
+  "area": {
+    "shape": "circle",
+    "diameterStartCandidatesMeters": [
+      4,
+      5
+    ],
+    "diameterAtMaxLevelMeters": 8,
+    "placementPending": true
+  },
+  "durationSecondsByLevel": [
+    6,
+    6,
+    6,
+    6,
+    7,
+    7,
+    7,
+    7,
+    7,
+    8
+  ],
+  "mana": {
+    "base": 210,
+    "perAdditionalLevel": 85
+  },
+  "castTimeSeconds": 0.6,
+  "cooldownSeconds": 150,
+  "cooldownChanged": false,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 150,
+    "perLevel": -3
+  }
+}

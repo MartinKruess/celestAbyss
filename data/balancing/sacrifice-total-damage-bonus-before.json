@@ -1,0 +1,39 @@
+{
+  "_id": "6acc1c7e4826525c70d04bb6",
+  "skillName_eng": "Sacrifice",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanenter passiver Skill mit Lebensopfer bei Angriffsskill-Anwendungen, kein fortlaufender Verbrauch pro Regenerationstick. Je gelerntem Skilllevel werden 0,05 Prozent des maximalen Lebens geopfert und der Skill-Grundschaden um 0,1 Prozent erhöht. Auf Stufe 10: 0,5 Prozent Max-Leben Kosten pro Angriffsskill-Anwendung für 1 Prozent mehr Skill-Grundschaden. Charakter-/Waffenangriff wird nicht durch diesen Bonus erhöht. Lebenspreis einmal pro Anwendung, nicht je Mehrfachtreffer oder Feldtick. Jede wiederholte Seelenqual-Anwendung zählt separat. Der bisherige feste Victim-Bonus entfällt zugunsten dieser Wirkung. Wechselwirkung mit Auto-Attacks, nicht offensiven Skills, tödlichem Lebenspreis und HP-Regeneration bleibt noch zu prüfen. Keine eigene aktive Nutzung, keine Castzeit, kein Cooldown.",
+  "description_eng": "Permanent passive with health sacrifice on attack-skill activations, not continuous regeneration-tick drain. Each learned level sacrifices 0.05 percent of maximum health and increases skill base damage by 0.1 percent. At level 10: 0.5 percent max-health cost per attack-skill activation for 1 percent additional skill base damage. Does not increase character/weapon attack. Health is charged once per activation, not per multi-hit or field tick. Every repeated Soul Torment activation counts separately. Replaces the old fixed Victim bonus. Interaction with basic attacks, non-offensive skills, potentially lethal health costs and health regeneration remains pending. No manual activation, cast time or cooldown.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 83,
+  "skillName_de": "Opfergabe",
+  "skillpoints": 1,
+  "attackSacrificeSettings": {
+    "healthReference": "maxHealth",
+    "healthCostFractionScaling": {
+      "type": "linear",
+      "base": 0.0005,
+      "perLevel": 0.0005
+    },
+    "skillBaseDamageBonusFractionScaling": {
+      "type": "linear",
+      "base": 0.001,
+      "perLevel": 0.001
+    },
+    "oncePerAttackSkillActivation": true,
+    "costsPerHit": false,
+    "basicAttackInteractionStatus": "pending",
+    "nonAttackSkillInteractionStatus": "pending",
+    "lethalCostPolicyStatus": "pending"
+  },
+  "resourceCosts": []
+}

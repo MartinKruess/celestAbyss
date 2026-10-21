@@ -33,7 +33,13 @@
     "test:db-characters": "node scripts/checkCharacterDatabase.js",
     "test:db-chat": "node scripts/checkChatDatabase.js",
     "moderation:check": "node scripts/seedModeration.js --check",
-    "moderation:seed": "node scripts/seedModeration.js --apply"
+    "moderation:seed": "node scripts/seedModeration.js --apply",
+    "moderation:activate": "node scripts/activateModeration.js",
+    "test:db-moderation": "node scripts/checkModerationDatabase.js",
+    "classes:check": "node scripts/seedClasses.js --check",
+    "classes:seed": "node scripts/seedClasses.js --apply",
+    "skills:export": "node scripts/exportSkillCatalog.js",
+    "skills:verify-db": "node scripts/checkSkillCatalogDatabase.js"
   },
   "dependencies": {
     "argon2": "^0.45.1",

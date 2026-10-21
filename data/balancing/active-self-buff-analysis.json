@@ -1,0 +1,860 @@
+{
+  "generatedAt": "2026-10-20T14:34:38.159Z",
+  "status": "proposalOnlyNotApplied",
+  "catalogHash": "659a092ab8410dbaca6a6bc1e7e6994ec349e8cafbf95d409406ff348fa709cb",
+  "scope": "600 seconds level60/R6; fixed policy, current companion definitions; all candidate changes combined. Omission results include saved mana/cast time and are not additive. Shared Power of the Wild affects Adventurer and Shaman. Self buffs only; no passives or group buffs changed.",
+  "changes": [
+    {
+      "nr": 236,
+      "name": "Teufelspakt",
+      "field": "int",
+      "oldMax": 15,
+      "newMax": 6
+    },
+    {
+      "nr": 236,
+      "name": "Teufelspakt",
+      "field": "wis",
+      "oldMax": 15,
+      "newMax": 9
+    },
+    {
+      "nr": 178,
+      "name": "Geist des Feuers",
+      "field": "int",
+      "oldMax": 10,
+      "newMax": 5
+    },
+    {
+      "nr": 178,
+      "name": "Geist des Feuers",
+      "field": "fireDamage",
+      "oldMax": 20,
+      "newMax": 10
+    },
+    {
+      "nr": 12,
+      "name": "Aufladung",
+      "field": "patk",
+      "oldMax": 200,
+      "newMax": 140
+    },
+    {
+      "nr": 173,
+      "name": "Geist des Kriegers",
+      "field": "str",
+      "oldMax": 20,
+      "newMax": 15
+    },
+    {
+      "nr": 74,
+      "name": "Festigung des Glaubens",
+      "field": "wis",
+      "oldMax": -15,
+      "newMax": 0
+    },
+    {
+      "nr": 194,
+      "name": "Herr der Elemente",
+      "field": "int",
+      "oldMax": 10,
+      "newMax": 20
+    },
+    {
+      "nr": 190,
+      "name": "Keine Gnade",
+      "field": "patk",
+      "oldMax": 69,
+      "newMax": 40
+    },
+    {
+      "nr": 190,
+      "name": "Keine Gnade",
+      "field": "dex",
+      "oldMax": 10,
+      "newMax": 8
+    },
+    {
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "field": "patk",
+      "oldMax": 60,
+      "newMax": 40
+    },
+    {
+      "nr": 162,
+      "name": "Innere Kraft",
+      "field": "str",
+      "oldMax": 20,
+      "newMax": 30
+    }
+  ],
+  "inventory": [
+    {
+      "key": "ritualist",
+      "nr": 178,
+      "name": "Geist des Feuers",
+      "level": 10,
+      "description": "Eigenbuff für 300 Sekunden mit zehn Stufen. Gewährt +1 Intelligenz je gelerntem Skilllevel, maximal +10 auf Stufe 10. Feuerangriffe erhalten zusätzlich +2 direkten Angriff je Skillstufe, maximal +20. Beide Boni sind gegenüber der bisherigen Definition halbiert. Aktivierungskosten 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana vor Rabatten. Feste Castzeit 0,1 Sekunden unabhängig von Angriffs- oder Castgeschwindigkeit; Cooldown 60 Sekunden. Einheitliche Element-Zuordnung und genaue Anwendung des flachen Feuerbonus bei Mehrfachtreffern und DoTs werden noch abgestimmt. Animationsdauer ist von der Castzeit getrennt.",
+      "maxStats": {
+        "int": 10
+      },
+      "effects": [
+        {
+          "key": "fire-spirit-fire-attack",
+          "type": "damageBonus",
+          "target": "self",
+          "appliesTo": "allSkills",
+          "damageSchool": "fire",
+          "value": 20,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "fixed",
+            "base": 20
+          },
+          "durationSeconds": 300
+        }
+      ],
+      "duration": 300,
+      "cooldown": 60
+    },
+    {
+      "key": "ritualist",
+      "nr": 236,
+      "name": "Teufelspakt",
+      "level": 3,
+      "description": "Schließt einen Teufelspakt und verstärkt sich selbst für 600 Sekunden (10 Minuten). Je gelerntem Skilllevel +5 Wisdom, +5 Intelligenz und +5 Vitalität, auf Stufe 3 jeweils +15. Kein zufälliger Buff und kein zusätzlicher Risikoeffekt im aktuellen Entwurf. Mana 61 auf Stufe 1, +25 je weiterer Stufe, auf Stufe 3 111. Cooldown 60 Sekunden, Castzeit fest 0,1 Sekunden. Erneute Anwendung erneuert den Eigenbuff, ohne seine Stärke mit sich selbst zu stapeln. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "vita": 15,
+        "int": 15,
+        "wis": 15
+      },
+      "duration": 600,
+      "cooldown": 60
+    },
+    {
+      "key": "butcher",
+      "nr": 12,
+      "name": "Aufladung",
+      "level": 1,
+      "description": "Aktiver Eigenbuff mit einer einzigen Skillstufe. Verstärkt dich für 15 Sekunden um 25 Stärke, 240 maximale Lebenspunkte und 200 P-Angriff. Der Lebensbonus ist keine direkte Heilung. Cooldown 122 Sekunden. Feste Castzeit 0,1 Sekunden, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 102 Mana vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet. Die einzige Stufe übernimmt die bisherigen Werte von Skillstufe 5 und kostet einen Skillpunkt.",
+      "maxStats": {
+        "str": 25,
+        "patk": 200
+      },
+      "duration": 15,
+      "cooldown": 122
+    },
+    {
+      "key": "butcher",
+      "nr": 172,
+      "name": "Kampfinstinkt",
+      "level": 10,
+      "description": "Eigenbuff für 600 Sekunden. Stärke steigt gleichmäßig von 4 auf Stufe 1 bis 10 auf Stufe 10. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "str": 10
+      },
+      "duration": 600,
+      "cooldown": 60
+    },
+    {
+      "key": "butcher",
+      "nr": 173,
+      "name": "Geist des Kriegers",
+      "level": 10,
+      "description": "Selbstbuff des Butchers. Erhöht Stärke und Vitalität jeweils um 2 je Skillstufe, bis zu jeweils 20 auf Stufe 10. Dauer 300 Sekunden, Cooldown 60 Sekunden auf allen Stufen. Aktivierung fest 0,1 Sekunden, unabhängig von Angriffs- oder Castgeschwindigkeit. Aktivierungskosten 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10 vor Vergünstigungen.",
+      "maxStats": {
+        "str": 20,
+        "vita": 20
+      },
+      "duration": 300,
+      "cooldown": 60
+    },
+    {
+      "key": "butcher",
+      "nr": 174,
+      "name": "Blutrausch",
+      "level": 10,
+      "description": "Eigenbuff für 60 Sekunden. Gewährt 5 bis 10 Punkte Angriffsgeschwindigkeit über 10 Stufen und 3 bis 7 Stärke. Castzeit fest 0,1 Sekunden., Dauer 60 Sekunden, Cooldown 300 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "str": 7,
+        "atkSpeed": 0.1
+      },
+      "duration": 60,
+      "cooldown": 300
+    },
+    {
+      "key": "butcher",
+      "nr": 175,
+      "name": "Bis in den Tot",
+      "level": 10,
+      "description": "Eigenbuff für 15 Sekunden. Erhöht das Angriffstempo auf allen Stufen um 15 Prozent. Tauscht auf Stufe 1 vorübergehend 1 Prozent der aktuellen Vitalität gegen dieselbe Anzahl zusätzlicher Stärkepunkte. Je weiterer Stufe steigt der getauschte Vita-Anteil um 1 Prozentpunkt, bis zu 10 Prozent auf Stufe 10. Berechnung einmalig bei Aktivierung vor dem eigenen Effekt; kein prozentualer Stärke-Bonus und kein wiederholtes Abziehen. Beispiel: 100 Vita und 200 Stärke werden auf Stufe 10 zu 90 Vita und 210 Stärke. Beide Änderungen enden nach 15 Sekunden. Der alte feste Bonus von 55 P-Angriff und die Zweikampf-/Boss-Bedingung entfallen. Mana bleibt 39 plus 16 je weiterer Stufe bis 183. Cooldown 150 Sekunden, je weiterer Stufe 1 Sekunde weniger bis 141. Castzeit fest 0,1 Sekunden. Vita-Abzug senkt entsprechend Max-Leben, P-Abwehr und HP-Regeneration; Umgang mit aktuellen HP beim Wechsel des Max-Lebens bleibt offen. Kein Wiederbelebungseffekt. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "atkSpeed": 0.15
+      },
+      "effects": [
+        {
+          "key": "until-death-attack-speed",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "atkSpeed",
+          "value": 0.15,
+          "unit": "fraction",
+          "durationSeconds": 15
+        }
+      ],
+      "duration": 15,
+      "cooldown": 141
+    },
+    {
+      "key": "gladiator",
+      "nr": 34,
+      "name": "Energieausbruch",
+      "level": 10,
+      "description": "Erzeugt einen Schild gegen physischen und magischen Schaden mit einer Kapazität von 10 % deines maximalen Lebens, ab Skilllevel 5 mit 12 % und auf Skilllevel 10 mit 15 %. Solange der Schild besteht und ausreichend Mana vorhanden ist, verursachen normale Angriffe 10 % mehr Schaden und du verbrauchst je Mana-Regenerationstick 1 % deines maximalen Manas. Bei unzureichendem Mana enden Angriffsbonus und Manaverbrauch, der Schild bleibt bestehen. Schildbruch beendet alle zugehörigen Effekte. Der Schild hält maximal 15 Sekunden, auf Skilllevel 10 maximal 20 Sekunden. Der Cooldown sinkt von 120 Sekunden auf Skilllevel 1 auf 90 Sekunden auf Skilllevel 10. Castzeit fest 0,1 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {},
+      "effects": [
+        {
+          "disablesEffects": [],
+          "valueScaling": {
+            "type": "fixed",
+            "base": 0.15
+          },
+          "durationScaling": {
+            "type": "fixed",
+            "base": 20
+          },
+          "type": "shield",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 0.15,
+          "unit": "fraction",
+          "reference": "maxHealth",
+          "damageTypes": [
+            "physical",
+            "magical"
+          ],
+          "durationSeconds": 20,
+          "key": "shield"
+        },
+        {
+          "disablesEffects": [],
+          "valueScaling": {
+            "values": []
+          },
+          "durationScaling": {
+            "type": "fixed",
+            "base": 20
+          },
+          "type": "damageBonus",
+          "target": "self",
+          "allowedRaces": [],
+          "unit": "fraction",
+          "appliesTo": "basicAttack",
+          "damageTypes": [],
+          "durationSeconds": 20,
+          "endWith": "shield",
+          "key": "basic-attack-bonus"
+        },
+        {
+          "onInsufficientResource": "disableEffects",
+          "disablesEffects": [
+            "basic-attack-bonus",
+            "mana-drain"
+          ],
+          "valueScaling": {
+            "values": []
+          },
+          "durationScaling": {
+            "type": "fixed",
+            "base": 20
+          },
+          "type": "resourceDrain",
+          "target": "self",
+          "allowedRaces": [],
+          "unit": "fraction",
+          "reference": "maxMana",
+          "resource": "mana",
+          "damageTypes": [],
+          "durationSeconds": 20,
+          "endWith": "shield",
+          "key": "mana-drain",
+          "intervalSource": "manaRegenerationTick"
+        }
+      ],
+      "duration": 20,
+      "cooldown": 90
+    },
+    {
+      "key": "gladiator",
+      "nr": 162,
+      "name": "Innere Kraft",
+      "level": 15,
+      "description": "Eigenbuff mit 15 Skillstufen für 600 Sekunden. Stärke je Stufe: 2/3/5/6/7/8/10/11/12/14/15/16/17/19/20. Vitalität beginnt bei 3 und steigt auf jeder geraden Stufe um 1 bis 10. Auf ungeraden Stufen ab Stufe 3 kommen jeweils 5 feste Penetrationspunkte hinzu, maximal 35. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 232 auf Stufe 15, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "str": 20,
+        "vita": 10
+      },
+      "duration": 600,
+      "cooldown": 60
+    },
+    {
+      "key": "gladiator",
+      "nr": 163,
+      "name": "Volles Potential",
+      "level": 3,
+      "description": "Eigenbuff mit drei Stufen; vereint Volles Potential und Kritische Schläge. Max-Leben +250/+500/+750; Glück +1/+2/+3; Max-Mana +66/+133/+200. Auf Maximalstufe zusätzlich +1 Prozentpunkt kritischer Schadensbonus (ohne weitere Boni 81 statt 80 Prozent Zusatzschaden bei kritischen Treffern). Normale Treffer erhalten diesen Bonus nicht. Kein zusätzlicher P-Angriff mehr. Kritische Schläge wird nicht zusätzlich gelernt oder gestapelt. Lebens- und Manaboni erhöhen die Maximalwerte, stellen die Ressourcen nicht sofort wieder her. Dauer 600 Sekunden, Cooldown 900 Sekunden, Castzeit fest 0,1 Sekunden. Aktivierungskosten unverändert 133 +62 je weiterer Stufe bis 257 Mana. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {},
+      "effects": [
+        {
+          "key": "full-potential-max-mana",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "maxMana",
+          "value": 200,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "fixed",
+            "base": 200
+          },
+          "durationSeconds": 600
+        }
+      ],
+      "duration": 600,
+      "cooldown": 900
+    },
+    {
+      "key": "luminet",
+      "nr": 74,
+      "name": "Festigung des Glaubens",
+      "level": 10,
+      "description": "Selbstbuff des Lumineten. Gewährt je Skillstufe 3 Intelligenz und senkt während der Wirkung die Willenskraft um 1,5. Auf Stufe 10: +30 Intelligenz und −15 Willenskraft. Dauer 300 Sekunden, Cooldown 60 Sekunden. Aktivierung fest 0,1 Sekunden. Kostet 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10 vor Vergünstigungen. Wirkt ausschließlich auf dich selbst; nach Ablauf entfallen beide Attributänderungen.",
+      "maxStats": {
+        "int": 30,
+        "wis": -15
+      },
+      "duration": 300,
+      "cooldown": 60
+    },
+    {
+      "key": "luminet",
+      "nr": 165,
+      "name": "Aura Unterdrückung",
+      "level": 10,
+      "description": "Eigenbuff für Kräuterkundler und Luminet, Dauer 180 Sekunden. Reduziert die durch Schaden neu erzeugte Aggro um 0,5 Prozent je gelerntem Skilllevel, bis zu 5 Prozent auf Stufe 10. Der Aggro-Multiplikator sinkt von 0,995 auf 0,95; der tatsächlich verursachte Schaden bleibt unverändert. Bei 1000 Schaden entstehen auf Stufe 10 950 Schadens-Aggro. Bereits angesammelte Aggro wird nicht rückwirkend gelöscht. Gewährt zusätzlich 1,2 Intelligenz je Skillstufe, bis zu 12 Intelligenz auf Stufe 10. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Cooldown 60 Sekunden. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "int": 11.999999999999998
+      },
+      "effects": [
+        {
+          "key": "aura-suppression-threat",
+          "type": "threatMultiplier",
+          "target": "self",
+          "value": 0.95,
+          "unit": "fraction",
+          "threatBasis": "damageDealt",
+          "valueScaling": {
+            "type": "fixed",
+            "base": 0.95
+          },
+          "durationSeconds": 180
+        }
+      ],
+      "duration": 180,
+      "cooldown": 60
+    },
+    {
+      "key": "druid",
+      "nr": 194,
+      "name": "Herr der Elemente",
+      "level": 10,
+      "description": "Eigenbuff mit zehn Stufen für 600 Sekunden. Stärke, Vitalität und Willenskraft steigen jeweils gemäß Stufentabelle 1/1/2/2/3/3/4/4/5/5. Intelligenz steigt um 1 je Skillstufe von 1 auf 10. Wirkt ausschließlich auf dich selbst; keine Faith- oder Victim-Boni. Aktivierungskosten unverändert: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana vor Rabatten. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist von der Castzeit getrennt. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "str": 5,
+        "vita": 5,
+        "int": 10,
+        "wis": 5
+      },
+      "duration": 600,
+      "cooldown": 60
+    },
+    {
+      "key": "summoner",
+      "nr": 80,
+      "name": "Beweglichkeit",
+      "level": 10,
+      "description": "Eigenbuff für 20 bis 24,5 Sekunden. Bewegungsgeschwindigkeit steigt von 1 Prozent auf Stufe 1 um 1 Prozentpunkt je weiterer Stufe auf 10 Prozent auf Stufe 10. Agilität steigt gleichmäßig von 0 auf 5. Castzeit fest 0,1 Sekunden. Cooldown sinkt von 120 um 2 Sekunden je weiterer Stufe auf 102 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "agi": 5
+      },
+      "duration": 24.5,
+      "cooldown": 102
+    },
+    {
+      "key": "summoner",
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "level": 10,
+      "description": "Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriffsgeschwindigkeitspunkt über zehn Stufen. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "atkSpeed": 0.01,
+        "amb": 11
+      },
+      "duration": 300,
+      "cooldown": 60
+    },
+    {
+      "key": "summoner",
+      "nr": 183,
+      "name": "Gute Reflexe",
+      "level": 10,
+      "description": "Eigenbuff für 600 Sekunden. Gewährt 1 Agilität je gelerntem Skilllevel, bis zu 10 auf Stufe 10. Während der Buff aktiv ist, kostet Dash 2 Ausdauerpunkte weniger, entsprechend 0,02 auf der Ausdauerskala von 0 bis 1. Der Rabatt gilt nur für Dash und steigt nicht mit der Skillstufe. Dash auf Stufe 10 kostet damit 0,18 statt 0,20 Ausdauer. Cooldown 60 Sekunden. Castzeit fest 0,1 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "agi": 10
+      },
+      "effects": [
+        {
+          "key": "good-reflexes-dash-efficiency",
+          "type": "resourceCostReduction",
+          "target": "self",
+          "resource": "stamina",
+          "appliesTo": "specificSkill",
+          "targetSkillNumber": 21,
+          "value": 0.02,
+          "unit": "flat",
+          "durationSeconds": 600
+        }
+      ],
+      "duration": 600,
+      "cooldown": 60
+    },
+    {
+      "key": "summoner",
+      "nr": 190,
+      "name": "Keine Gnade",
+      "level": 10,
+      "description": "Eigenbuff für 600 Sekunden. Gewährt 1 Geschicklichkeit je Skillstufe bis 10. P-Angriff 15 +6 je weiterer Stufe bis 69 auf Stufe 10. Kein direkter Angriffsgeschwindigkeitsbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "dex": 10,
+        "patk": 69
+      },
+      "duration": 600,
+      "cooldown": 60
+    },
+    {
+      "key": "adventurer",
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "level": 10,
+      "description": "Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriffsgeschwindigkeitspunkt über zehn Stufen. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "atkSpeed": 0.01,
+        "amb": 11
+      },
+      "duration": 300,
+      "cooldown": 60
+    },
+    {
+      "key": "adventurer",
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "level": 3,
+      "description": "Eigenbuff für Abenteurer und Schamane, Dauer 1200 Sekunden. Stärke 3 +1 je weiterer Stufe bis 5 und P-Angriff 30 +15 je weiterer Stufe bis 60 auf Stufe 3. Kein Intelligenzbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "str": 5,
+        "patk": 60
+      },
+      "duration": 1200,
+      "cooldown": 60
+    },
+    {
+      "key": "shaman",
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "level": 3,
+      "description": "Eigenbuff für Abenteurer und Schamane, Dauer 1200 Sekunden. Stärke 3 +1 je weiterer Stufe bis 5 und P-Angriff 30 +15 je weiterer Stufe bis 60 auf Stufe 3. Kein Intelligenzbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+      "maxStats": {
+        "str": 5,
+        "patk": 60
+      },
+      "duration": 1200,
+      "cooldown": 60
+    }
+  ],
+  "omissions": [
+    {
+      "key": "ritualist",
+      "nr": 178,
+      "name": "Geist des Feuers",
+      "damageWithout": 797276.4760999974,
+      "netDamageContribution": 14190.48000000359,
+      "baselinePercentagePoints": 1.8457848944891462,
+      "manaBlockedWithout": 269.5000000000003
+    },
+    {
+      "key": "ritualist",
+      "nr": 236,
+      "name": "Teufelspakt",
+      "damageWithout": 772517.153699999,
+      "netDamageContribution": 38949.80240000202,
+      "baselinePercentagePoints": 5.06628083850882,
+      "manaBlockedWithout": 292.9900000000006
+    },
+    {
+      "key": "butcher",
+      "nr": 12,
+      "name": "Aufladung",
+      "damageWithout": 595094.3899999956,
+      "netDamageContribution": 13022.875999999931,
+      "baselinePercentagePoints": 2.4210079832489613,
+      "manaBlockedWithout": 326.70999999999975
+    },
+    {
+      "key": "butcher",
+      "nr": 172,
+      "name": "Kampfinstinkt",
+      "damageWithout": 596525.5300000026,
+      "netDamageContribution": 11591.735999992932,
+      "baselinePercentagePoints": 2.1549529762624955,
+      "manaBlockedWithout": 326.7100000000004
+    },
+    {
+      "key": "butcher",
+      "nr": 173,
+      "name": "Geist des Kriegers",
+      "damageWithout": 588888.6559999969,
+      "netDamageContribution": 19228.60999999859,
+      "baselinePercentagePoints": 3.5746803023216716,
+      "manaBlockedWithout": 326.1399999999999
+    },
+    {
+      "key": "butcher",
+      "nr": 174,
+      "name": "Blutrausch",
+      "damageWithout": 601551.9519999928,
+      "netDamageContribution": 6565.314000002691,
+      "baselinePercentagePoints": 1.2205197689467957,
+      "manaBlockedWithout": 331.5300000000001
+    },
+    {
+      "key": "butcher",
+      "nr": 175,
+      "name": "Bis in den Tot",
+      "damageWithout": 600105.7199999938,
+      "netDamageContribution": 8011.546000001719,
+      "baselinePercentagePoints": 1.48938044285844,
+      "manaBlockedWithout": 333.9500000000004
+    },
+    {
+      "key": "gladiator",
+      "nr": 34,
+      "name": "Energieausbruch",
+      "damageWithout": 623524.1599999982,
+      "netDamageContribution": -7023.247999999439,
+      "baselinePercentagePoints": -1.1572757895643484,
+      "manaBlockedWithout": 170.7100000000003
+    },
+    {
+      "key": "gladiator",
+      "nr": 162,
+      "name": "Innere Kraft",
+      "damageWithout": 593127.439999996,
+      "netDamageContribution": 23373.472000002745,
+      "baselinePercentagePoints": 3.85143074310711,
+      "manaBlockedWithout": 242.51999999999933
+    },
+    {
+      "key": "gladiator",
+      "nr": 163,
+      "name": "Volles Potential",
+      "damageWithout": 618132.5719999989,
+      "netDamageContribution": -1631.660000000149,
+      "baselinePercentagePoints": -0.2688614462711395,
+      "manaBlockedWithout": 224.66999999999985
+    },
+    {
+      "key": "luminet",
+      "nr": 74,
+      "name": "Festigung des Glaubens",
+      "damageWithout": 651844.1830000019,
+      "netDamageContribution": -765.8170000003884,
+      "baselinePercentagePoints": -0.11893976982608764,
+      "manaBlockedWithout": 88.25000000000034
+    },
+    {
+      "key": "luminet",
+      "nr": 165,
+      "name": "Aura Unterdrückung",
+      "damageWithout": 652264.469999998,
+      "netDamageContribution": -1186.1039999964414,
+      "baselinePercentagePoints": -0.1842149452797562,
+      "manaBlockedWithout": 196.71999999999994
+    },
+    {
+      "key": "druid",
+      "nr": 194,
+      "name": "Herr der Elemente",
+      "damageWithout": 595737.4100000028,
+      "netDamageContribution": 10871.664999989676,
+      "baselinePercentagePoints": 1.8249088973595975,
+      "manaBlockedWithout": 0.40000000000000036
+    },
+    {
+      "key": "summoner",
+      "nr": 80,
+      "name": "Beweglichkeit",
+      "damageWithout": 578787.4700000024,
+      "netDamageContribution": -8015.919999999576,
+      "baselinePercentagePoints": -1.554983040020919,
+      "manaBlockedWithout": 282.9600000000003
+    },
+    {
+      "key": "summoner",
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "damageWithout": 572674.7500000028,
+      "netDamageContribution": -1903.1999999999534,
+      "baselinePercentagePoints": -0.3691957656473489,
+      "manaBlockedWithout": 284.8700000000007
+    },
+    {
+      "key": "summoner",
+      "nr": 183,
+      "name": "Gute Reflexe",
+      "damageWithout": 569720.3500000029,
+      "netDamageContribution": 1051.1999999999534,
+      "baselinePercentagePoints": 0.20391897270307138,
+      "manaBlockedWithout": 284.4300000000012
+    },
+    {
+      "key": "summoner",
+      "nr": 190,
+      "name": "Keine Gnade",
+      "damageWithout": 508360.1900000059,
+      "netDamageContribution": 62411.35999999696,
+      "baselinePercentagePoints": 12.106982892124721,
+      "manaBlockedWithout": 282.8600000000008
+    },
+    {
+      "key": "adventurer",
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "damageWithout": 499364.40000000503,
+      "netDamageContribution": 3788.4000000000815,
+      "baselinePercentagePoints": 0.838853504877157,
+      "manaBlockedWithout": 0
+    },
+    {
+      "key": "adventurer",
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "damageWithout": 454921.8000000048,
+      "netDamageContribution": 48231.00000000029,
+      "baselinePercentagePoints": 10.679638737654296,
+      "manaBlockedWithout": 0
+    },
+    {
+      "key": "shaman",
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "damageWithout": 494442.4609999995,
+      "netDamageContribution": 36566.55350000161,
+      "baselinePercentagePoints": 7.395512397144558,
+      "manaBlockedWithout": 337.61
+    }
+  ],
+  "rows": [
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "mode": "self",
+      "baseDamage": 768804.6447000022,
+      "oldDamage": 811466.956100001,
+      "newDamage": 785810.548499994,
+      "oldGain": 5.549174513201116,
+      "newGain": 2.2119928537408517,
+      "oldManaBlocked": 273.0500000000012,
+      "newManaBlocked": 276.9100000000004
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "mode": "groups",
+      "baseDamage": 768804.6447000022,
+      "oldDamage": 1040585.8429000061,
+      "newDamage": 1017973.3557000026,
+      "oldGain": 35.35113894974666,
+      "newGain": 32.409886271853814,
+      "oldManaBlocked": 0,
+      "newManaBlocked": 0
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "mode": "self",
+      "baseDamage": 537911.3200000026,
+      "oldDamage": 608117.2659999955,
+      "newDamage": 597697.0659999981,
+      "oldGain": 13.051583669961175,
+      "newGain": 11.114424214012676,
+      "oldManaBlocked": 327.7600000000004,
+      "newManaBlocked": 327.7600000000004
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "mode": "groups",
+      "baseDamage": 537911.3200000026,
+      "oldDamage": 800974.2999999957,
+      "newDamage": 789111.9999999902,
+      "oldGain": 48.90452574970756,
+      "newGain": 46.6992737762028,
+      "oldManaBlocked": 167.69999999999973,
+      "newManaBlocked": 167.69999999999973
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "mode": "self",
+      "baseDamage": 606877.6399999962,
+      "oldDamage": 616500.9119999987,
+      "newDamage": 627731.2920000002,
+      "oldGain": 1.5857021853701303,
+      "newGain": 3.4362201909439616,
+      "oldManaBlocked": 232.9199999999995,
+      "newManaBlocked": 232.9199999999995
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "mode": "groups",
+      "baseDamage": 606877.6399999962,
+      "oldDamage": 788695.8140000001,
+      "newDamage": 801659.3240000086,
+      "oldGain": 29.95960998002911,
+      "newGain": 32.095709441529884,
+      "oldManaBlocked": 0,
+      "newManaBlocked": 0
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "mode": "self",
+      "baseDamage": 643869.5829999984,
+      "oldDamage": 651078.3660000016,
+      "newDamage": 674298.8970000029,
+      "oldGain": 1.119602974008349,
+      "newGain": 4.72600582531395,
+      "oldManaBlocked": 214.3800000000007,
+      "newManaBlocked": 108.70999999999987
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "mode": "groups",
+      "baseDamage": 643869.5829999984,
+      "oldDamage": 842527.8830000085,
+      "newDamage": 842527.8830000085,
+      "oldGain": 30.85381034376502,
+      "newGain": 30.85381034376502,
+      "oldManaBlocked": 0,
+      "newManaBlocked": 0
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "mode": "self",
+      "baseDamage": 595737.4100000028,
+      "oldDamage": 606609.0749999925,
+      "newDamage": 614347.1400000079,
+      "oldGain": 1.8249088973596006,
+      "newGain": 3.123814232180755,
+      "oldManaBlocked": 0.20000000000000018,
+      "newManaBlocked": 0.20000000000000018
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "mode": "groups",
+      "baseDamage": 595737.4100000028,
+      "oldDamage": 742730.0799999968,
+      "newDamage": 750789.4450000062,
+      "oldGain": 24.674070745363007,
+      "newGain": 26.026909238418085,
+      "oldManaBlocked": 0.20000000000000018,
+      "newManaBlocked": 0.20000000000000018
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "mode": "self",
+      "baseDamage": 515498.8700000059,
+      "oldDamage": 570771.5500000028,
+      "newDamage": 546712.7499999931,
+      "oldGain": 10.722172873045555,
+      "newGain": 6.055082138198853,
+      "oldManaBlocked": 287.139999999998,
+      "newManaBlocked": 287.139999999998
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "mode": "groups",
+      "baseDamage": 515498.8700000059,
+      "oldDamage": 875835.3599999881,
+      "newDamage": 843959.0799999865,
+      "oldGain": 69.90053925820985,
+      "newGain": 63.71696023309941,
+      "oldManaBlocked": 0,
+      "newManaBlocked": 0
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "mode": "self",
+      "baseDamage": 451616.4000000048,
+      "oldDamage": 503152.8000000051,
+      "newDamage": 489172.80000000505,
+      "oldGain": 11.411543070623598,
+      "newGain": 8.315995610433946,
+      "oldManaBlocked": 0,
+      "newManaBlocked": 0
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "mode": "groups",
+      "baseDamage": 451616.4000000048,
+      "oldDamage": 611624.4000000007,
+      "newDamage": 596084.4000000011,
+      "oldGain": 35.4300685271824,
+      "newGain": 31.989095170147653,
+      "oldManaBlocked": 0,
+      "newManaBlocked": 0
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "mode": "self",
+      "baseDamage": 494442.4609999995,
+      "oldDamage": 531009.0145000011,
+      "newDamage": 519790.0144999997,
+      "oldGain": 7.395512397144555,
+      "newGain": 5.12649205910336,
+      "oldManaBlocked": 341.2699999999999,
+      "newManaBlocked": 341.2699999999999
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "mode": "groups",
+      "baseDamage": 494442.4609999995,
+      "oldDamage": 783523.4835000111,
+      "newDamage": 770292.4835000125,
+      "oldGain": 58.46605930958102,
+      "newGain": 55.79011599087025,
+      "oldManaBlocked": 218.25999999999988,
+      "newManaBlocked": 218.25999999999988
+    }
+  ]
+}

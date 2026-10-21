@@ -1,0 +1,183 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c1c",
+    "skillName_eng": "Soulshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Markiert einen Gegner auffällig für 7 Sekunden. Verursacht keinen Schaden und kostet kein Mana. Castzeit 0 Sekunden, vorläufige Animation 0,1 Sekunden. Seelensammler und Spektralketten sind nur gegen ein mit diesem Skill markiertes Ziel einsetzbar. Der Cooldown sinkt gleichmäßig von 90 Sekunden auf Stufe 1 auf 75 Sekunden auf Stufe 10.",
+    "description_eng": "Prominently marks one enemy for 7 seconds. Deals no damage and costs no Mana. Cast time is 0 seconds; provisional animation is 0.1 seconds. Soul Collector and Spectral Chains require a target marked by this skill. Cooldown decreases evenly from 90 seconds at level 1 to 75 seconds at level 10.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 185,
+    "skillName_de": "Seelenschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "animationDurationSeconds": 0.1,
+    "animationTimingStatus": "provisional",
+    "dur": 7,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 0
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "targetMarkSettings": {
+      "durationSeconds": 7,
+      "visuallyProminent": true
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 90,
+      "perLevel": -1.6666666666666667
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1d",
+    "skillName_eng": "Soul Collector",
+    "__v": 0,
+    "category": "active",
+    "cd": 0.15,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nur gegen ein mit Seelenschuss markiertes Ziel einsetzbar. Verursacht einmalig physischen Schaden aus dem regulären Charakter-P-Angriff plus zusätzlichem Skill-Grundschaden. Dieser Zusatz beträgt auf Stufe 1 genau 0 und steigt gleichmäßig bis auf 59 auf Stufe 10. Auch auf Stufe 1 bleibt der Charakterangriff enthalten; es wird kein separater Auto-Attack zusätzlich ausgelöst. Jeder erfolgreiche Treffer gibt 1 Sammelpunkt. Geblockte und kritische Treffer geben ebenfalls genau 1 Punkt, verfehlte und ausgewichene Angriffe keinen. Castzeit 0,2 Sekunden, Cooldown 0,15 Sekunden. Die vorläufige Animation von 0,3 Sekunden blockiert keine weiteren Aktionen. Die sieben Sekunden lange Markierung begrenzt das Sammelfenster. Kostet kein Mana. Die genaue zeitliche Verrechnung von Castzeit und Cooldown ist noch offen.",
+    "description_eng": "Requires a target marked by Soulshot. Deals physical damage from normal character physical attack plus additional skill base damage. This extra damage is exactly 0 at level 1, increasing evenly to 59 at level 10. Character attack still applies at level 1; no separate basic attack is added. Each successful hit grants one collected point; blocked and critical hits also grant one, while misses and dodges grant none. Cast time 0.2 seconds, cooldown 0.15 seconds. The provisional 0.3-second animation does not block other actions. The 7-second target mark limits the collection window. No Mana cost. Exact cast/cooldown scheduling remains pending.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 186,
+    "skillName_de": "Seelensammler",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 185
+    },
+    "animationDurationSeconds": 0.3,
+    "animationTimingStatus": "provisional",
+    "blocksOtherSkillsDuringAnimation": false,
+    "hasLingeringDamage": false,
+    "pointGeneration": {
+      "requiresTargetMarkSkillNumber": 185,
+      "pointsPerSuccessfulHit": 1,
+      "countsBlockedHits": true,
+      "countsMissedOrDodgedHits": false,
+      "criticalHitPoints": 1
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 0,
+        "perLevel": 6.555555555555555
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 0
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c48",
+    "skillName_eng": "Spectral Chains",
+    "__v": 0,
+    "category": "active",
+    "cd": 69,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Triff ein markiertes Ziel und entfessle die Macht der mit Seelensammler gesammelten Punkte, um es in Ketten zu legen. Bei 0 bis 13 Punkten beträgt die Fesselungsdauer 1 Sekunde ohne Grundschadensbonus. Bei 14 bis 22 Punkten: 2 Sekunden und 4 Prozent mehr Skill-Grundschaden. Bei 23 bis 31 Punkten: 3 Sekunden und 9 Prozent mehr Skill-Grundschaden. Ab 32 Punkten: 4 Sekunden und 15 Prozent mehr Skill-Grundschaden. Die Prozentboni gelten ausschließlich für den Skill-Grundschaden, nicht für Charakterangriff oder Waffenbeiträge. Jeder erfolgreiche Seelensammler-Treffer gibt genau einen Punkt, auch ein geblockter oder kritischer Treffer. Verfehlte oder ausgewichene Angriffe geben keinen Punkt. Die Anwendung kostet kein Mana und hat eine Castzeit von 0,3 Sekunden. Sie verbraucht alle gesammelten Punkte, setzt den Punktestand auf null und beendet die Sammelphase. Die Fesselungsdauer beträgt abhängig vom erreichten Punktebereich 1 bis 4 Sekunden. Der einmalig erlernbare Skill hat 730 physischen und 203 magischen Grundschaden. Cooldown 69 Sekunden. Die nach Sammelpunkten vergebenen Prozentboni wirken auf diese Skill-Grundschäden, nicht auf Charakter- oder Waffenangriff.",
+    "description_eng": "Hit a marked target and unleash points collected with Soul Collector to bind it in chains. At 0 to 13 points, binding lasts 1 second with no base damage bonus. At 14 to 22 points: 2 seconds and 4 percent additional skill base damage. At 23 to 31 points: 3 seconds and 9 percent additional skill base damage. At 32 or more points: 4 seconds and 15 percent additional skill base damage. Percentage bonuses apply only to skill base damage, excluding character and weapon attack contributions. Each successful Soul Collector hit grants exactly one point, including blocked and critical hits. Missed or dodged attacks grant no points. Costs no Mana and has a cast time of 0.3 seconds. Using this skill consumes all collected points, resets the point total to zero and ends the collection phase. Binding lasts 1 to 4 seconds according to the reached point tier. This single-level skill has 730 physical and 203 magical base damage. Cooldown is 69 seconds. Point-tier percentage bonuses apply to these skill base damage values, not to character or weapon attack.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 203,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 229,
+    "patk": 730,
+    "skillName_de": "Spektralketten",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "collectedPointScaling": {
+      "sourceSkillNumber": 186,
+      "thresholds": [
+        14,
+        23,
+        32
+      ],
+      "durationSecondsByTier": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "baseDamageBonusFractionByTier": [
+        0,
+        0.04,
+        0.09,
+        0.15
+      ],
+      "countsBlockedHits": true,
+      "countsMissedOrDodgedHits": false,
+      "pointsPerSuccessfulHit": 1,
+      "consumesAllPointsOnUse": true,
+      "resetsPointsTo": 0,
+      "endsCollectionPhaseOnUse": true
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 0
+        }
+      }
+    ],
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 185
+    }
+  }
+]

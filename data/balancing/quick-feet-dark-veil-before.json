@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c22",
+    "skillName_eng": "Quick Feet",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe die Geschwindigkeit deiner Gruppe.",
+    "description_eng": "Increase the speed of your group.",
+    "dmgType": "buff",
+    "dur": 180,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 5,
+    "nr": 191,
+    "skillName_de": "Flinke Füße",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1f",
+    "skillName_eng": "Dark Veil",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Der dunkle Schleier umhüllt dich und erhöht deine Geschwindigkeit.",
+    "description_eng": "The dark veil surrounds you and increases your speed.",
+    "dmgType": "selfbuff",
+    "dur": 25,
+    "maxSkillLv": 2,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 25,
+    "nr": 188,
+    "skillName_de": "Dunkler Schleier",
+    "skillpoints": 1
+  }
+]

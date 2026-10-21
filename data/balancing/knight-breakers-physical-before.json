@@ -1,0 +1,120 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b76",
+    "skillName_eng": "Breaker of the Shield",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Trifft den Gegner mit einem Schildangriff und senkt seine physische Verteidigung für zunächst 15 Sekunden um 1 Prozent. Der bisher als magisch gespeicherte Grundschaden startet bei 97 und steigt um 32 je weiterer Stufe auf 385 auf Stufe 10. Die Schadensart bleibt bis zur gesonderten Prüfung unverändert. Mana-Kosten steigen von 45 um 27 je weiterer Stufe auf 288. Castzeit 0,1 Sekunden, Cooldown zunächst 55 Sekunden, je weiterer Stufe 1 Sekunde weniger bis zu 46 Sekunden. Die Dauer der Verteidigungssenkung steigt um 1 Sekunde je weiterer Stufe auf 24 Sekunden; ihre Stärke bleibt bei 1 Prozent.",
+    "description_eng": "Hits the enemy with a shield attack and reduces physical defense by 1 percent for initially 15 seconds. Existing magical base damage starts at 97 and increases by 32 per additional level to 385 at level 10. Damage type remains unchanged pending separate review. Mana cost increases from 45 by 27 per additional level to 288. Cast time is 0.1 seconds; cooldown starts at 55 seconds and decreases by 1 second per additional level to 46 seconds. Defense reduction duration increases by 1 second per additional level to 24 seconds; reduction strength remains at 1 percent.",
+    "dmgType": "spell",
+    "dur": 15,
+    "matk": 97,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 19,
+    "skillName_de": "Brecher der Deckung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "shield-breaker-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "pdef",
+        "reference": "targetStat",
+        "value": -0.01,
+        "unit": "fraction",
+        "durationSeconds": 15,
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        }
+      }
+    ],
+    "mana": 45,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 27
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 97,
+        "perLevel": 32
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 55,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 15,
+      "perLevel": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9a",
+    "skillName_eng": "Mindbreaker",
+    "__v": 0,
+    "category": "active",
+    "cd": 43,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein mächtiger Schildstoß verursacht physischen Schaden und senkt die magische Verteidigung des Gegners um 10 %. Auf Skilllevel 1 hält der Effekt 21 Sekunden und der Cooldown beträgt 43 Sekunden. Pro weiterem Skilllevel steigt die Effektdauer um eine Sekunde und der Cooldown sinkt um eine Sekunde.",
+    "description_eng": "A powerful shield bash deals physical damage and reduces the enemy's magical defense by 10%. At skill level 1, the effect lasts 21 seconds and the cooldown is 43 seconds. Each additional skill level increases the effect duration by one second and reduces the cooldown by one second.",
+    "dmgType": "physical",
+    "dur": 21,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 55,
+    "patk": 81,
+    "skillName_de": "Brecher des Geistes",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 43,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 1
+        },
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "mdef",
+        "value": -0.1,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "damageTypes": [],
+        "durationSeconds": 21,
+        "key": "enemy-magic-defense"
+      }
+    ],
+    "effectsVersion": 1
+  }
+]

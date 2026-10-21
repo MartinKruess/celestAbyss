@@ -1,0 +1,226 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-sylph-favor-refinement-1792326075840",
+  "skill": {
+    "_id": "6ad4b8bb74540d489e8e8e17",
+    "nr": 253,
+    "skillName_de": "Gunst der Sylphen",
+    "skillName_eng": "Favor of the Sylphs",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "sylph-cooldown-118",
+        "type": "cooldownReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 118,
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 1
+        }
+      },
+      {
+        "key": "sylph-damage-118",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 118,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        }
+      },
+      {
+        "key": "sylph-mana-118",
+        "type": "resourceCostReduction",
+        "resource": "mana",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 118,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        }
+      },
+      {
+        "key": "sylph-cooldown-125",
+        "type": "cooldownReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 125,
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 1
+        }
+      },
+      {
+        "key": "sylph-damage-125",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 125,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        }
+      },
+      {
+        "key": "sylph-mana-125",
+        "type": "resourceCostReduction",
+        "resource": "mana",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 125,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        }
+      },
+      {
+        "key": "sylph-cooldown-221",
+        "type": "cooldownReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 221,
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 1
+        }
+      },
+      {
+        "key": "sylph-damage-221",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 221,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        }
+      },
+      {
+        "key": "sylph-mana-221",
+        "type": "resourceCostReduction",
+        "resource": "mana",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 221,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        }
+      },
+      {
+        "key": "sylph-cast-118",
+        "type": "castTimeReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 118,
+        "value": 0,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0.1
+          ]
+        }
+      },
+      {
+        "key": "sylph-cast-125",
+        "type": "castTimeReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 125,
+        "value": 0,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0.1
+          ]
+        }
+      },
+      {
+        "key": "sylph-cast-221",
+        "type": "castTimeReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 221,
+        "value": 0,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0.1
+          ]
+        }
+      }
+    ],
+    "description_de": "Die Gunst der Sylphen ermöglicht dir eine bessere und gezieltere Windkontrolle. Je Skillstufe verkürzt sich der Cooldown von Windschlitzer, Windfesseln und Vakuumimpuls um 1 Sekunde, ihr gesamter verursachter Schaden steigt um 0,5 Prozent und ihre Mana-Kosten sinken um 0,5 Prozent. Auf Stufe 5 sind dies 5 Sekunden weniger Cooldown, 2,5 Prozent mehr Schaden und 2,5 Prozent weniger Mana-Kosten. Ausschließlich auf Stufe 5 verkürzt sich zusätzlich die Castzeit dieser drei Skills um 0,1 Sekunden. Bei Vakuumimpuls gilt der Schadensbonus für Initialtreffer und Explosion einschließlich des jeweiligen Charakterangriffs. Ansaugdauer und Animation werden durch diesen Castzeitbonus nicht verkürzt. Keine Wirkung auf Naturgeist, Auto-Attacks oder andere Skills. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "The favor of the sylphs enables more precise control of wind magic. Each level reduces Wind Slasher, Wind Shackles and Vacuum Impulse cooldowns by 1 second, increases their total damage by 0.5 percent and reduces Mana costs by 0.5 percent. At level 5: 5 seconds less cooldown, 2.5 percent more damage and 2.5 percent lower Mana cost. Only at level 5, their cast times are additionally reduced by 0.1 seconds. Vacuum Impulse damage bonuses apply to both initial hit and explosion including character attack. Pull duration and animation are unaffected by cast-time reduction. No effect on Nature Spirit, basic attacks or other skills. Permanent passive without activation cost, cast time or cooldown."
+  },
+  "simulationStatus": "Previous 600-second report predates this passive"
+}

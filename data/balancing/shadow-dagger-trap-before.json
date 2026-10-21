@@ -1,0 +1,71 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bbd",
+    "skillName_eng": "Shadow Dagger",
+    "__v": 0,
+    "category": "active",
+    "cd": 9,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verschleiere deinen Angriff und füge deinem Gegner Schaden, aus dem Schatten heraus, zu.",
+    "description_eng": "Conceal your attack and deal damage to your opponent from the shadows.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 90,
+    "patk": 94,
+    "skillName_de": "Schattendolch",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bbe",
+    "skillName_eng": "Shadow Trap",
+    "__v": 0,
+    "category": "active",
+    "cd": 36,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Stelle eine Falle, die Gegner für 3 Sekunden festhält.",
+    "description_eng": "Set a trap that holds enemies for 3 seconds.",
+    "dmgType": "physical",
+    "dur": 3,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 91,
+    "patk": 171,
+    "skillName_de": "Schattenfalle",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bbf",
+    "skillName_eng": "Shadow Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 33,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Greife deinen Gegner aus dem Schatten heraus an und verursache dabei Schaden.",
+    "description_eng": "Attack your opponent from the shadows and deal damage.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 92,
+    "patk": 253,
+    "skillName_de": "Schattenschlag",
+    "skillpoints": 1
+  }
+]

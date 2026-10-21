@@ -1,0 +1,3677 @@
+{
+  "source": "data/skills.json",
+  "catalogCount": 252,
+  "grouping": "Union of base and advancement class; shared skill counted once",
+  "defensive": "Additional non-exclusive active protection/avoidance tag",
+  "starterIncluded": "Six creature skills 133-138 counted according to actual class assignment",
+  "raceCore": "Use explicit allowedRaces for class core skills",
+  "counts": [
+    {
+      "name": "Gladiator / Berserker",
+      "race": "Human",
+      "total": 34,
+      "offensive": 10,
+      "self": 5,
+      "group": 1,
+      "healing": 0,
+      "passive": 14,
+      "utility": 4,
+      "unclear": 0,
+      "defensive": 1,
+      "taming": 6,
+      "skillNumbers": [
+        5,
+        13,
+        26,
+        34,
+        45,
+        52,
+        61,
+        73,
+        75,
+        77,
+        96,
+        106,
+        109,
+        114,
+        127,
+        128,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        144,
+        145,
+        158,
+        160,
+        161,
+        162,
+        163,
+        201,
+        230,
+        233
+      ]
+    },
+    {
+      "name": "Kräuterkundler / Witcher",
+      "race": "Human",
+      "total": 32,
+      "offensive": 9,
+      "self": 4,
+      "group": 2,
+      "healing": 1,
+      "passive": 13,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 2,
+      "taming": 6,
+      "skillNumbers": [
+        4,
+        5,
+        16,
+        29,
+        31,
+        32,
+        44,
+        46,
+        56,
+        57,
+        69,
+        71,
+        81,
+        84,
+        112,
+        123,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        164,
+        165,
+        166,
+        167,
+        169,
+        201,
+        205,
+        221
+      ]
+    },
+    {
+      "name": "Abenteurer / Scout",
+      "race": "Human",
+      "total": 32,
+      "offensive": 5,
+      "self": 2,
+      "group": 3,
+      "healing": 2,
+      "passive": 14,
+      "utility": 6,
+      "unclear": 0,
+      "defensive": 2,
+      "taming": 6,
+      "skillNumbers": [
+        5,
+        14,
+        21,
+        25,
+        41,
+        45,
+        67,
+        75,
+        106,
+        114,
+        126,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        145,
+        147,
+        148,
+        149,
+        150,
+        201,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250,
+        251
+      ]
+    },
+    {
+      "name": "Jäger / Schütze",
+      "race": "Human",
+      "total": 32,
+      "offensive": 8,
+      "self": 5,
+      "group": 1,
+      "healing": 0,
+      "passive": 12,
+      "utility": 6,
+      "unclear": 0,
+      "defensive": 1,
+      "taming": 6,
+      "skillNumbers": [
+        5,
+        10,
+        14,
+        18,
+        25,
+        37,
+        43,
+        51,
+        53,
+        63,
+        86,
+        88,
+        97,
+        121,
+        122,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        142,
+        144,
+        150,
+        152,
+        153,
+        154,
+        156,
+        157,
+        201,
+        226
+      ]
+    },
+    {
+      "name": "Butcher / Destroyer",
+      "race": "Umbra",
+      "total": 33,
+      "offensive": 12,
+      "self": 5,
+      "group": 1,
+      "healing": 0,
+      "passive": 12,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 0,
+      "taming": 6,
+      "skillNumbers": [
+        2,
+        3,
+        11,
+        12,
+        35,
+        38,
+        39,
+        45,
+        75,
+        77,
+        87,
+        89,
+        96,
+        98,
+        131,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        144,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        201,
+        227,
+        234
+      ]
+    },
+    {
+      "name": "Schurke / Schattenkrieger",
+      "race": "Umbra",
+      "total": 32,
+      "offensive": 12,
+      "self": 5,
+      "group": 1,
+      "healing": 0,
+      "passive": 11,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 0,
+      "taming": 6,
+      "skillNumbers": [
+        2,
+        17,
+        20,
+        22,
+        27,
+        43,
+        65,
+        67,
+        70,
+        80,
+        90,
+        91,
+        92,
+        111,
+        113,
+        115,
+        126,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        146,
+        188,
+        189,
+        191,
+        201,
+        238,
+        243
+      ]
+    },
+    {
+      "name": "Nachtjäger / Seelenjäger",
+      "race": "Umbra",
+      "total": 31,
+      "offensive": 9,
+      "self": 4,
+      "group": 2,
+      "healing": 0,
+      "passive": 12,
+      "utility": 4,
+      "unclear": 0,
+      "defensive": 1,
+      "taming": 6,
+      "skillNumbers": [
+        2,
+        7,
+        21,
+        24,
+        43,
+        47,
+        51,
+        63,
+        66,
+        80,
+        119,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        142,
+        144,
+        147,
+        148,
+        183,
+        184,
+        185,
+        186,
+        187,
+        190,
+        191,
+        201,
+        229
+      ]
+    },
+    {
+      "name": "Ritualist / Blutmagier",
+      "race": "Umbra",
+      "total": 32,
+      "offensive": 12,
+      "self": 2,
+      "group": 0,
+      "healing": 0,
+      "passive": 15,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 0,
+      "taming": 6,
+      "skillNumbers": [
+        2,
+        44,
+        48,
+        49,
+        72,
+        83,
+        99,
+        100,
+        103,
+        104,
+        105,
+        110,
+        120,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        178,
+        180,
+        181,
+        201,
+        209,
+        214,
+        232,
+        235,
+        236,
+        237,
+        241
+      ]
+    },
+    {
+      "name": "Druide / Alchemist",
+      "race": "Aurora",
+      "total": 30,
+      "offensive": 10,
+      "self": 1,
+      "group": 3,
+      "healing": 0,
+      "passive": 12,
+      "utility": 4,
+      "unclear": 0,
+      "defensive": 1,
+      "taming": 6,
+      "skillNumbers": [
+        1,
+        6,
+        9,
+        29,
+        30,
+        36,
+        44,
+        118,
+        125,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        193,
+        194,
+        201,
+        203,
+        204,
+        212,
+        219,
+        220,
+        221,
+        222,
+        225,
+        244
+      ]
+    },
+    {
+      "name": "Heiler / Priester",
+      "race": "Aurora",
+      "total": 32,
+      "offensive": 6,
+      "self": 2,
+      "group": 2,
+      "healing": 7,
+      "passive": 12,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 0,
+      "taming": 6,
+      "skillNumbers": [
+        1,
+        29,
+        36,
+        44,
+        54,
+        58,
+        60,
+        64,
+        68,
+        74,
+        78,
+        101,
+        108,
+        124,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        143,
+        144,
+        197,
+        201,
+        206,
+        207,
+        208,
+        217,
+        239,
+        240,
+        242
+      ]
+    },
+    {
+      "name": "Schamane / Hochelfe",
+      "race": "Aurora",
+      "total": 29,
+      "offensive": 11,
+      "self": 1,
+      "group": 3,
+      "healing": 0,
+      "passive": 11,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 1,
+      "taming": 6,
+      "skillNumbers": [
+        1,
+        6,
+        15,
+        33,
+        36,
+        38,
+        44,
+        50,
+        57,
+        62,
+        68,
+        76,
+        87,
+        106,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        149,
+        192,
+        201,
+        202,
+        223,
+        224,
+        252
+      ]
+    },
+    {
+      "name": "Luminet / Lichtmagier",
+      "race": "Aurora",
+      "total": 31,
+      "offensive": 14,
+      "self": 0,
+      "group": 2,
+      "healing": 1,
+      "passive": 11,
+      "utility": 3,
+      "unclear": 0,
+      "defensive": 1,
+      "taming": 6,
+      "skillNumbers": [
+        1,
+        8,
+        9,
+        29,
+        36,
+        41,
+        44,
+        60,
+        74,
+        101,
+        116,
+        117,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        201,
+        208,
+        210,
+        211,
+        213,
+        215,
+        216,
+        217,
+        218,
+        228,
+        231
+      ]
+    },
+    {
+      "name": "Ritter / Tempelritter",
+      "race": "Aurora",
+      "total": 32,
+      "offensive": 6,
+      "self": 2,
+      "group": 3,
+      "healing": 1,
+      "passive": 15,
+      "utility": 4,
+      "unclear": 1,
+      "defensive": 4,
+      "taming": 6,
+      "skillNumbers": [
+        1,
+        19,
+        23,
+        28,
+        40,
+        42,
+        45,
+        55,
+        59,
+        64,
+        75,
+        77,
+        82,
+        93,
+        94,
+        95,
+        102,
+        107,
+        114,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        144,
+        158,
+        171,
+        201
+      ]
+    }
+  ],
+  "classified": [
+    {
+      "nr": 1,
+      "id": "6acc1c7e4826525c70d04b64",
+      "name": "Erleuchtung",
+      "classes": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage",
+        "Shamane",
+        "High Elves",
+        "Druide",
+        "Alchemist",
+        "Ritter",
+        "Tempelritter"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 2,
+      "id": "6acc1c7e4826525c70d04b65",
+      "name": "Überleben",
+      "classes": [
+        "Butcher",
+        "Destroyer",
+        "Summoner",
+        "Soulseeker",
+        "Ritualist",
+        "Bloodmage",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 3,
+      "id": "6acc1c7e4826525c70d04b66",
+      "name": "Abräumer",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 4,
+      "id": "6acc1c7e4826525c70d04b67",
+      "name": "Abschöpfen",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 5,
+      "id": "6acc1c7e4826525c70d04b68",
+      "name": "Adaption",
+      "classes": [
+        "Witcher",
+        "Herbalist",
+        "Knife",
+        "Templar",
+        "Archer",
+        "Hunter",
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 6,
+      "id": "6acc1c7e4826525c70d04b69",
+      "name": "Adrenalin",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 7,
+      "id": "6acc1c7e4826525c70d04b6a",
+      "name": "Armbrusttraining",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 8,
+      "id": "6acc1c7e4826525c70d04b6b",
+      "name": "Astralkörper",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 9,
+      "id": "6acc1c7e4826525c70d04b6c",
+      "name": "Ätherregen",
+      "classes": [
+        "Druide",
+        "Alchemist",
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 10,
+      "id": "6acc1c7e4826525c70d04b6d",
+      "name": "Auf der Jagd",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 11,
+      "id": "6acc1c7e4826525c70d04b6e",
+      "name": "Aufgeladener Schlag",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 12,
+      "id": "6acc1c7e4826525c70d04b6f",
+      "name": "Aufladung",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 13,
+      "id": "6acc1c7e4826525c70d04b70",
+      "name": "Ausbruch der Wut",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 14,
+      "id": "6acc1c7e4826525c70d04b71",
+      "name": "Ausweichrolle",
+      "classes": [
+        "Hunter",
+        "Archer",
+        "Abenteuer"
+      ],
+      "category": "utility",
+      "activeDefensive": true
+    },
+    {
+      "nr": 15,
+      "id": "6acc1c7e4826525c70d04b72",
+      "name": "Beben",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 16,
+      "id": "6acc1c7e4826525c70d04b73",
+      "name": "Wasserfesseln",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 17,
+      "id": "6acc1c7e4826525c70d04b74",
+      "name": "Blutklinge",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 18,
+      "id": "6acc1c7e4826525c70d04b75",
+      "name": "Bogenschießtraining",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 19,
+      "id": "6acc1c7e4826525c70d04b76",
+      "name": "Brecher der Deckung",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 20,
+      "id": "6acc1c7e4826525c70d04b77",
+      "name": "Brecher des Lichts",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 21,
+      "id": "6acc1c7e4826525c70d04b78",
+      "name": "Dash",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ],
+      "category": "utility",
+      "activeDefensive": true
+    },
+    {
+      "nr": 22,
+      "id": "6acc1c7e4826525c70d04b79",
+      "name": "Dolchtraining",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 23,
+      "id": "6acc1c7e4826525c70d04b7a",
+      "name": "Donnernde Lanze",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 24,
+      "id": "6acc1c7e4826525c70d04b7b",
+      "name": "Doppelschuss",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 25,
+      "id": "6acc1c7e4826525c70d04b7c",
+      "name": "Doppelsprung",
+      "classes": [
+        "Hunter",
+        "Archer",
+        "Abenteuer"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 26,
+      "id": "6acc1c7e4826525c70d04b7d",
+      "name": "Dual Axttraining",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 27,
+      "id": "6acc1c7e4826525c70d04b7e",
+      "name": "Dunkler Schlag",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 28,
+      "id": "6acc1c7e4826525c70d04b7f",
+      "name": "Eiserner Schild",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 29,
+      "id": "6acc1c7e4826525c70d04b80",
+      "name": "Eislanze",
+      "classes": [
+        "Herbalist",
+        "Witcher",
+        "Druide",
+        "Alchemist",
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 30,
+      "id": "6acc1c7e4826525c70d04b81",
+      "name": "Eisranken",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 31,
+      "id": "6acc1c7e4826525c70d04b82",
+      "name": "Elektrisches Feld",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 32,
+      "id": "6acc1c7e4826525c70d04b83",
+      "name": "Elementarenergie",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 33,
+      "id": "6acc1c7e4826525c70d04b84",
+      "name": "Energie Umwandler",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 34,
+      "id": "6acc1c7e4826525c70d04b85",
+      "name": "Energieausbruch",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "self",
+      "activeDefensive": true
+    },
+    {
+      "nr": 35,
+      "id": "6acc1c7e4826525c70d04b86",
+      "name": "Energieentladung",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 36,
+      "id": "6acc1c7e4826525c70d04b87",
+      "name": "Energieschlag",
+      "classes": [
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Shamane",
+        "Druide",
+        "High Elves",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 37,
+      "id": "6acc1c7e4826525c70d04b88",
+      "name": "Entzugspfeil",
+      "classes": [
+        "Hunter",
+        "Archer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 38,
+      "id": "6acc1c7e4826525c70d04b89",
+      "name": "Erdbeben",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 39,
+      "id": "6acc1c7e4826525c70d04b8a",
+      "name": "Erdbrecher",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 40,
+      "id": "6acc1c7e4826525c70d04b8b",
+      "name": "Erlösendes Feld der Schwäche",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "unclear",
+      "activeDefensive": false
+    },
+    {
+      "nr": 41,
+      "id": "6acc1c7e4826525c70d04b8c",
+      "name": "Erste Hilfe",
+      "classes": [
+        "Luminet",
+        "Lightmage",
+        "Abenteuer"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 42,
+      "id": "6acc1c7e4826525c70d04b8d",
+      "name": "Erwachen",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 43,
+      "id": "6acc1c7e4826525c70d04b8e",
+      "name": "Erweiterung der Sinne",
+      "classes": [
+        "Archer",
+        "Hunter",
+        "Summoner",
+        "Soulseeker",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 44,
+      "id": "6acc1c7e4826525c70d04b8f",
+      "name": "Erweiterung des Geistes",
+      "classes": [
+        "Herbalist",
+        "Witcher",
+        "Ritualist",
+        "Bloodmage",
+        "Druide",
+        "Alchemist",
+        "Healer",
+        "Priest",
+        "Shamane",
+        "High Elves",
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 45,
+      "id": "6acc1c7e4826525c70d04b90",
+      "name": "Erweiterung des Körpers",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker",
+        "Abenteuer",
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 46,
+      "id": "6acc1c7e4826525c70d04b91",
+      "name": "Ewiges Eis",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 47,
+      "id": "6acc1c7e4826525c70d04b92",
+      "name": "Explosionspfeil",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 48,
+      "id": "6acc1c7e4826525c70d04b93",
+      "name": "Feuer der Verdammten",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 49,
+      "id": "6acc1c7e4826525c70d04b94",
+      "name": "Feuerball",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 50,
+      "id": "6acc1c7e4826525c70d04b95",
+      "name": "Feuerlanze",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 51,
+      "id": "6acc1c7e4826525c70d04b96",
+      "name": "Feuerpfeil",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Archer",
+        "Hunter"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 52,
+      "id": "6acc1c7e4826525c70d04b97",
+      "name": "Glück des Narrens",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 53,
+      "id": "6acc1c7e4826525c70d04b98",
+      "name": "Gebundener Schuss",
+      "classes": [
+        "Hunter",
+        "Archer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 54,
+      "id": "6acc1c7e4826525c70d04b99",
+      "name": "Gefrierbrand",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 55,
+      "id": "6acc1c7e4826525c70d04b9a",
+      "name": "Brecher des Geistes",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 56,
+      "id": "6acc1c7e4826525c70d04b9b",
+      "name": "Geladener Nebel",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 57,
+      "id": "6acc1c7e4826525c70d04b9c",
+      "name": "Gezielter Blitz",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 58,
+      "id": "6acc1c7e4826525c70d04b9d",
+      "name": "Kuss der Aurora",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 59,
+      "id": "6acc1c7e4826525c70d04b9e",
+      "name": "Göttlicher Schutz",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 60,
+      "id": "6acc1c7e4826525c70d04b9f",
+      "name": "Hoffnungsschimmer",
+      "classes": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 61,
+      "id": "6acc1c7e4826525c70d04ba0",
+      "name": "Holzspalter",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 62,
+      "id": "6acc1c7e4826525c70d04ba1",
+      "name": "Infernal Zyklon",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 63,
+      "id": "6acc1c7e4826525c70d04ba2",
+      "name": "Kettenschuss",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Hunter",
+        "Archer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 64,
+      "id": "6acc1c7e4826525c70d04ba3",
+      "name": "Heilung",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 65,
+      "id": "6acc1c7e4826525c70d04ba4",
+      "name": "Klingentornado",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 66,
+      "id": "6acc1c7e4826525c70d04ba5",
+      "name": "Kopfschuss",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 67,
+      "id": "6acc1c7e4826525c70d04ba6",
+      "name": "Körperbeherrschung",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Abenteuer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 68,
+      "id": "6acc1c7e4826525c70d04ba7",
+      "name": "Kristallisierte Wasserspähre",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Healer",
+        "Priest"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 69,
+      "id": "6acc1c7e4826525c70d04ba8",
+      "name": "Kugelblitz",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 70,
+      "id": "6acc1c7e4826525c70d04ba9",
+      "name": "Kunai Todesstoß",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 71,
+      "id": "6acc1c7e4826525c70d04baa",
+      "name": "Lebensessenz",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 72,
+      "id": "6acc1c7e4826525c70d04bab",
+      "name": "Lebenssauger",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 73,
+      "id": "6acc1c7e4826525c70d04bac",
+      "name": "Lucky Strike",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 74,
+      "id": "6acc1c7e4826525c70d04bad",
+      "name": "Festigung des Geistes",
+      "classes": [
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 75,
+      "id": "6acc1c7e4826525c70d04bae",
+      "name": "Verstärkung des Körpers",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Butcher",
+        "Destroyer",
+        "Berserker",
+        "Abenteuer"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 76,
+      "id": "6acc1c7e4826525c70d04baf",
+      "name": "Mächtiger Doppelschlag",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 77,
+      "id": "6acc1c7e4826525c70d04bb0",
+      "name": "Mächtiger Hieb",
+      "classes": [
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 78,
+      "id": "6acc1c7e4826525c70d04bb1",
+      "name": "Göttliche Heilung",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 79,
+      "id": "6acc1c7e4826525c70d04bb2",
+      "name": "Mentale Erweiterung",
+      "classes": [],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 80,
+      "id": "6acc1c7e4826525c70d04bb3",
+      "name": "Beweglichkeit",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 81,
+      "id": "6acc1c7e4826525c70d04bb4",
+      "name": "Naturgewalt",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 82,
+      "id": "6acc1c7e4826525c70d04bb5",
+      "name": "Schutz Aura",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "self",
+      "activeDefensive": true
+    },
+    {
+      "nr": 83,
+      "id": "6acc1c7e4826525c70d04bb6",
+      "name": "Opfergabe",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 84,
+      "id": "6acc1c7e4826525c70d04bb7",
+      "name": "Lähmung",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 85,
+      "id": "6acc1c7e4826525c70d04bb8",
+      "name": "Pforte der Verbannung",
+      "classes": [],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 86,
+      "id": "6acc1c7e4826525c70d04bb9",
+      "name": "Präzisionsschuss",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 87,
+      "id": "6acc1c7e4826525c70d04bba",
+      "name": "Rotier Schlag",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 88,
+      "id": "6acc1c7e4826525c70d04bbb",
+      "name": "Salve",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 89,
+      "id": "6acc1c7e4826525c70d04bbc",
+      "name": "Schädelspalter",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 90,
+      "id": "6acc1c7e4826525c70d04bbd",
+      "name": "Schattendolch",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 91,
+      "id": "6acc1c7e4826525c70d04bbe",
+      "name": "Schattenfalle",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 92,
+      "id": "6acc1c7e4826525c70d04bbf",
+      "name": "Schattenschlag",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 93,
+      "id": "6acc1c7e4826525c70d04bc0",
+      "name": "Schildangriffstraining",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 94,
+      "id": "6acc1c7e4826525c70d04bc1",
+      "name": "Schildstoß",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 95,
+      "id": "6acc1c7e4826525c70d04bc2",
+      "name": "Schildsturm",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 96,
+      "id": "6acc1c7e4826525c70d04bc3",
+      "name": "Schmetterschlag",
+      "classes": [
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 97,
+      "id": "6acc1c7e4826525c70d04bc4",
+      "name": "Schockschuss",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 98,
+      "id": "6acc1c7e4826525c70d04bc5",
+      "name": "Schockwelle der Regeneration",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 99,
+      "id": "6acc1c7e4826525c70d04bc6",
+      "name": "Schrei der Unterwelt",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 100,
+      "id": "6acc1c7e4826525c70d04bc7",
+      "name": "Schwäche des Fleisches",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 101,
+      "id": "6acc1c7e4826525c70d04bc8",
+      "name": "Schwerter des Lichtes",
+      "classes": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 102,
+      "id": "6acc1c7e4826525c70d04bc9",
+      "name": "Schwerttraining",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 103,
+      "id": "6acc1c7e4826525c70d04bca",
+      "name": "Seelenfessel",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 104,
+      "id": "6acc1c7e4826525c70d04bcb",
+      "name": "Seelenqual",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 105,
+      "id": "6acc1c7e4826525c70d04bcc",
+      "name": "Seelenernte",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 106,
+      "id": "6acc1c7e4826525c70d04bcd",
+      "name": "Sprungschlag",
+      "classes": [
+        "Gladiator",
+        "Berserker",
+        "Abenteuer",
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 107,
+      "id": "6acc1c7e4826525c70d04bce",
+      "name": "Stählerne Rüstung",
+      "classes": [
+        "Templar",
+        "Knife"
+      ],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 108,
+      "id": "6acc1c7e4826525c70d04bcf",
+      "name": "Strahlendes Aurafeld",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 109,
+      "id": "6acc1c7e4826525c70d04bd0",
+      "name": "Sturm der Wut",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 110,
+      "id": "6acc1c7e4826525c70d04bd1",
+      "name": "Sturm des Feuers",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 111,
+      "id": "6acc1c7e4826525c70d04bd2",
+      "name": "Sturmklinge",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 112,
+      "id": "6acc1c7e4826525c70d04bd3",
+      "name": "Tobender Sturm",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 113,
+      "id": "6acc1c7e4826525c70d04bd4",
+      "name": "Tödlicher Tanz",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 114,
+      "id": "6acc1c7e4826525c70d04bd5",
+      "name": "Überlebenswille",
+      "classes": [
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker",
+        "Abenteuer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 115,
+      "id": "6acc1c7e4826525c70d04bd6",
+      "name": "Überschallklinge",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 116,
+      "id": "6acc1c7e4826525c70d04bd7",
+      "name": "Unerschöpfliche Hoffnung",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 117,
+      "id": "6acc1c7e4826525c70d04bd8",
+      "name": "Urteil des Himmels",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 118,
+      "id": "6acc1c7e4826525c70d04bd9",
+      "name": "Vakuumimpuls",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 119,
+      "id": "6acc1c7e4826525c70d04bda",
+      "name": "Verbessertes Nachladen",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 120,
+      "id": "6acc1c7e4826525c70d04bdb",
+      "name": "Reaper",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 121,
+      "id": "6acc1c7e4826525c70d04bdc",
+      "name": "Verstärkter Pfeil",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 122,
+      "id": "6acc1c7e4826525c70d04bdd",
+      "name": "Voll Durchziehen",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 123,
+      "id": "6acc1c7e4826525c70d04bde",
+      "name": "Wiederaufladung",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 124,
+      "id": "6acc1c7e4826525c70d04bdf",
+      "name": "Wiederherstellung",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 125,
+      "id": "6acc1c7e4826525c70d04be0",
+      "name": "Windfesseln",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 126,
+      "id": "6acc1c7e4826525c70d04be1",
+      "name": "Wirbelnde Klinge",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Abenteuer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 127,
+      "id": "6acc1c7e4826525c70d04be2",
+      "name": "Wutexplosion",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 128,
+      "id": "6acc1c7e4826525c70d04be3",
+      "name": "Wutklinge",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 129,
+      "id": "6acc1c7e4826525c70d04be4",
+      "name": "Ewige Verderbnis",
+      "classes": [],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 130,
+      "id": "6acc1c7e4826525c70d04be5",
+      "name": "Zielschuss",
+      "classes": [],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 131,
+      "id": "6acc1c7e4826525c70d04be6",
+      "name": "Zweihändiges Axttraining",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 132,
+      "id": "6acc1c7e4826525c70d04be7",
+      "name": "Zweihändiges Streitkolbentraining",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 133,
+      "id": "6acc1c7e4826525c70d04be8",
+      "name": "Tamen",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 134,
+      "id": "6acc1c7e4826525c70d04be9",
+      "name": "Bindung",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 135,
+      "id": "6acc1c7e4826525c70d04bea",
+      "name": "Kontrolle",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 136,
+      "id": "6acc1c7e4826525c70d04beb",
+      "name": "Beschwören",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualiost",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 137,
+      "id": "6acc1c7e4826525c70d04bec",
+      "name": "Zurückrufen",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 138,
+      "id": "6acc1c7e4826525c70d04bed",
+      "name": "Zucht",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 139,
+      "id": "6acc1c7e4826525c70d04bee",
+      "name": "Ausdauertraining",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 140,
+      "id": "6acc1c7e4826525c70d04bef",
+      "name": "Standhaft",
+      "classes": [
+        "Butcher",
+        "Destroyer",
+        "Knife",
+        "Templar",
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 141,
+      "id": "6acc1c7e4826525c70d04bf0",
+      "name": "Eiserner Wille",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 142,
+      "id": "6acc1c7e4826525c70d04bf1",
+      "name": "Ausweichtraining",
+      "classes": [
+        "Archer",
+        "Hunter",
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 143,
+      "id": "6acc1c7e4826525c70d04bf2",
+      "name": "Immunität",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 144,
+      "id": "6acc1c7e4826525c70d04bf3",
+      "name": "Rüstungstraining",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 145,
+      "id": "6acc1c7e4826525c70d04bf4",
+      "name": "Durchhalten",
+      "classes": [
+        "Gladiator",
+        "Berserker",
+        "Abenteuer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 146,
+      "id": "6acc1c7e4826525c70d04bf5",
+      "name": "List des Schurken",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 147,
+      "id": "6acc1c7e4826525c70d04bf6",
+      "name": "Erweckung der Leidenschaft",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 148,
+      "id": "6acc1c7e4826525c70d04bf7",
+      "name": "Scharfer Instinkte",
+      "classes": [
+        "Summoner",
+        "Soulseeker",
+        "Abenteuer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 149,
+      "id": "6acc1c7e4826525c70d04bf8",
+      "name": "Macht der Wildnis",
+      "classes": [
+        "Shamane",
+        "High Elves",
+        "Abenteuer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 150,
+      "id": "6acc1c7e4826525c70d04bf9",
+      "name": "Macht des Begleiters",
+      "classes": [
+        "Hunter",
+        "Archer",
+        "Abenteuer"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 151,
+      "id": "6acc1c7e4826525c70d04bfa",
+      "name": "Für die Ehre",
+      "classes": [],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 152,
+      "id": "6acc1c7e4826525c70d04bfb",
+      "name": "Giftpfeil",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 153,
+      "id": "6acc1c7e4826525c70d04bfc",
+      "name": "Treffsicherheit",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 154,
+      "id": "6acc1c7e4826525c70d04bfd",
+      "name": "Auge des Falken",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 155,
+      "id": "6acc1c7e4826525c70d04bfe",
+      "name": "Sechster Sinn",
+      "classes": [],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 156,
+      "id": "6acc1c7e4826525c70d04bff",
+      "name": "Waldläufer",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 157,
+      "id": "6acc1c7e4826525c70d04c00",
+      "name": "Pfeil der Vorfahren",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 158,
+      "id": "6acc1c7e4826525c70d04c01",
+      "name": "Provozieren",
+      "classes": [
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 159,
+      "id": "6acc1c7e4826525c70d04c02",
+      "name": "Kritische Schläge",
+      "classes": [],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 160,
+      "id": "6acc1c7e4826525c70d04c03",
+      "name": "Energie des Mutes",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 161,
+      "id": "6acc1c7e4826525c70d04c04",
+      "name": "Energie der Wut",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 162,
+      "id": "6acc1c7e4826525c70d04c05",
+      "name": "Innere Kraft",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 163,
+      "id": "6acc1c7e4826525c70d04c06",
+      "name": "Volles Potential",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 164,
+      "id": "6acc1c7e4826525c70d04c07",
+      "name": "Natürlicher Schutz",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "self",
+      "activeDefensive": true
+    },
+    {
+      "nr": 165,
+      "id": "6acc1c7e4826525c70d04c08",
+      "name": "Aura Unterdrückung",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 166,
+      "id": "6acc1c7e4826525c70d04c09",
+      "name": "Alles im Fluss",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 167,
+      "id": "6acc1c7e4826525c70d04c0a",
+      "name": "Entgiftung",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "self",
+      "activeDefensive": true
+    },
+    {
+      "nr": 168,
+      "id": "6acc1c7e4826525c70d04c0b",
+      "name": "Widerliches Gebräu",
+      "classes": [],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 169,
+      "id": "6acc1c7e4826525c70d04c0c",
+      "name": "Innere Unruhe",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 170,
+      "id": "6acc1c7e4826525c70d04c0d",
+      "name": "Energie des Lebens",
+      "classes": [],
+      "category": "self",
+      "activeDefensive": true
+    },
+    {
+      "nr": 171,
+      "id": "6acc1c7e4826525c70d04c0e",
+      "name": "Aktive Deckung",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "category": "self",
+      "activeDefensive": true
+    },
+    {
+      "nr": 172,
+      "id": "6acc1c7e4826525c70d04c0f",
+      "name": "Kampfinstinkt",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 173,
+      "id": "6acc1c7e4826525c70d04c10",
+      "name": "Geist des Kriegers",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 174,
+      "id": "6acc1c7e4826525c70d04c11",
+      "name": "Blutrausch",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 175,
+      "id": "6acc1c7e4826525c70d04c12",
+      "name": "Bis in den Tot",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 176,
+      "id": "6acc1c7e4826525c70d04c13",
+      "name": "Ewiger Sieger",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 177,
+      "id": "6acc1c7e4826525c70d04c14",
+      "name": "Ungebrochen",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 178,
+      "id": "6acc1c7e4826525c70d04c15",
+      "name": "Geist des Feuers",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 179,
+      "id": "6acc1c7e4826525c70d04c16",
+      "name": "Dunkle Macht",
+      "classes": [],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 180,
+      "id": "6acc1c7e4826525c70d04c17",
+      "name": "Seelenplage",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 181,
+      "id": "6acc1c7e4826525c70d04c18",
+      "name": "Arkane Aufladung",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 182,
+      "id": "6acc1c7e4826525c70d04c19",
+      "name": "Macht der Seelen",
+      "classes": [],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 183,
+      "id": "6acc1c7e4826525c70d04c1a",
+      "name": "Gute Reflexe",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 184,
+      "id": "6acc1c7e4826525c70d04c1b",
+      "name": "Hinterhältiger Pfeil",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 185,
+      "id": "6acc1c7e4826525c70d04c1c",
+      "name": "Seelenschuss",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 186,
+      "id": "6acc1c7e4826525c70d04c1d",
+      "name": "Seelensammler",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 187,
+      "id": "6acc1c7e4826525c70d04c1e",
+      "name": "Hartes Training",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 188,
+      "id": "6acc1c7e4826525c70d04c1f",
+      "name": "Dunkler Schleier",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 189,
+      "id": "6acc1c7e4826525c70d04c20",
+      "name": "Herz des Verräters",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 190,
+      "id": "6acc1c7e4826525c70d04c21",
+      "name": "Keine Gnade",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 191,
+      "id": "6acc1c7e4826525c70d04c22",
+      "name": "Flinke Füße",
+      "classes": [
+        "Villian",
+        "Shadowwarrior",
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 192,
+      "id": "6acc1c7e4826525c70d04c23",
+      "name": "Macht des Felsens",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 193,
+      "id": "6acc1c7e4826525c70d04c24",
+      "name": "Macht des Wassers",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 194,
+      "id": "6acc1c7e4826525c70d04c25",
+      "name": "Herr der Elemente",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 195,
+      "id": "6acc1c7e4826525c70d04c26",
+      "name": "Lichtwaffe",
+      "classes": [],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 196,
+      "id": "6acc1c7e4826525c70d04c27",
+      "name": "Strahlende Rüstung",
+      "classes": [],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 197,
+      "id": "6acc1c7e4826525c70d04c28",
+      "name": "Aurora-Segen",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 198,
+      "id": "6acc1c7e4826525c70d04c29",
+      "name": "Segen der Mentalität",
+      "classes": [],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 199,
+      "id": "6acc1c7e4826525c70d04c2a",
+      "name": "Segen der Verteidigung",
+      "classes": [],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 200,
+      "id": "6acc1c7e4826525c70d04c2b",
+      "name": "Mana Umwandlung",
+      "classes": [],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 201,
+      "id": "6acc1c7e4826525c70d04c2c",
+      "name": "Waffentraining",
+      "classes": [
+        "Abenteuer",
+        "Butcher",
+        "Destroyer",
+        "Gladiator",
+        "Berserker",
+        "Knife",
+        "Templar",
+        "Herbalist",
+        "Witcher",
+        "Archer",
+        "Hunter",
+        "Druide",
+        "Alchemist",
+        "Summoner",
+        "Soulseeker",
+        "Bloodmage",
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest",
+        "Ritualist",
+        "Shamane",
+        "High Elves",
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 202,
+      "id": "6acc1c7e4826525c70d04c2d",
+      "name": "Verbrennen",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 203,
+      "id": "6acc1c7e4826525c70d04c2e",
+      "name": "Kanalisation",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 204,
+      "id": "6acc1c7e4826525c70d04c2f",
+      "name": "Katalysator Rein",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 205,
+      "id": "6acc1c7e4826525c70d04c30",
+      "name": "Katalysator Unrein",
+      "classes": [
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 206,
+      "id": "6acc1c7e4826525c70d04c31",
+      "name": "Lunare Inkanation",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 207,
+      "id": "6acc1c7e4826525c70d04c32",
+      "name": "Himmlische Aufopferung",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 208,
+      "id": "6acc1c7e4826525c70d04c33",
+      "name": "Das ewige Wissen",
+      "classes": [
+        "Healer",
+        "Priest",
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 209,
+      "id": "6acc1c7e4826525c70d04c34",
+      "name": "Verloren in der Dunkelheit",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 210,
+      "id": "6acc1c7e4826525c70d04c35",
+      "name": "Lichtblitz",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 211,
+      "id": "6acc1c7e4826525c70d04c36",
+      "name": "Aurora Wellen",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 212,
+      "id": "6acc1c7e4826525c70d04c37",
+      "name": "Himmelsbrecher",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 213,
+      "id": "6acc1c7e4826525c70d04c38",
+      "name": "Strafendes Licht",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 214,
+      "id": "6acc1c7e4826525c70d04c39",
+      "name": "Ausbrennen",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 215,
+      "id": "6acc1c7e4826525c70d04c3a",
+      "name": "Heiliges Kreuz",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 216,
+      "id": "6acc1c7e4826525c70d04c3b",
+      "name": "Heilige Vernichtung",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 217,
+      "id": "6acc1c7e4826525c70d04c3c",
+      "name": "Göttliche Nova",
+      "classes": [
+        "Luminet",
+        "Lightmage",
+        "Healer",
+        "Priest"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 218,
+      "id": "6acc1c7e4826525c70d04c3d",
+      "name": "Licht kristallenes Gefängnis",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 219,
+      "id": "6acc1c7e4826525c70d04c3e",
+      "name": "Manaexplosion",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 220,
+      "id": "6acc1c7e4826525c70d04c3f",
+      "name": "Bannmagie",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 221,
+      "id": "6acc1c7e4826525c70d04c40",
+      "name": "Windschlitzer",
+      "classes": [
+        "Druide",
+        "Alchemist",
+        "Herbalist",
+        "Witcher"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 222,
+      "id": "6acc1c7e4826525c70d04c41",
+      "name": "Vergessener Zauber",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 223,
+      "id": "6acc1c7e4826525c70d04c42",
+      "name": "Geschwindigkeit der Dox",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 224,
+      "id": "6acc1c7e4826525c70d04c43",
+      "name": "Macht des Feuers",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "group",
+      "activeDefensive": false
+    },
+    {
+      "nr": 225,
+      "id": "6acc1c7e4826525c70d04c44",
+      "name": "Macht des Geistes",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 226,
+      "id": "6acc1c7e4826525c70d04c45",
+      "name": "Seelenbegleiter",
+      "classes": [
+        "Archer",
+        "Hunter"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 227,
+      "id": "6acc1c7e4826525c70d04c46",
+      "name": "Dämonische Schockwelle",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 228,
+      "id": "6acc1c7e4826525c70d04c47",
+      "name": "Geheiligte Barriere",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "group",
+      "activeDefensive": true
+    },
+    {
+      "nr": 229,
+      "id": "6acc1c7e4826525c70d04c48",
+      "name": "Spektralketten",
+      "classes": [
+        "Summoner",
+        "Soulseeker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 230,
+      "id": "6acc1c7e4826525c70d04c49",
+      "name": "Blutiger Durchbruch",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 231,
+      "id": "6acc1c7e4826525c70d04c4a",
+      "name": "Luminus",
+      "classes": [
+        "Luminet",
+        "Lightmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 232,
+      "id": "6acc1c7e4826525c70d04c4b",
+      "name": "Dunkler Impuls",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 233,
+      "id": "6acc1c7e4826525c70d04c4c",
+      "name": "Kriegerischer Ansturm",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 234,
+      "id": "6acc1c7e4826525c70d04c4d",
+      "name": "Zorn des Henkers",
+      "classes": [
+        "Butcher",
+        "Destroyer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 235,
+      "id": "6acc1c7e4826525c70d04c4e",
+      "name": "Meteoritenschauer",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 236,
+      "id": "6acc1c7e4826525c70d04c4f",
+      "name": "Teufelspakt",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 237,
+      "id": "6acc1c7e4826525c70d04c50",
+      "name": "Morrak´s Meister",
+      "classes": [
+        "Ritualist",
+        "Bloodmage"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 238,
+      "id": "6ad0b3779cdbe618f141e06c",
+      "name": "Attentäter",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 239,
+      "id": "6ad16c307a9be0e8beddf80f",
+      "name": "Frostschauer",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 240,
+      "id": "6ad16dcf22dc4aad4f9a76fd",
+      "name": "Permafrost",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 241,
+      "id": "6ad207c878d209a368038d26",
+      "name": "Zahl der Opfer",
+      "classes": [
+        "Bloodmage",
+        "Ritualist"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 242,
+      "id": "6ad20e33128795dc1b739de2",
+      "name": "Assimilation",
+      "classes": [
+        "Healer",
+        "Priest"
+      ],
+      "category": "self",
+      "activeDefensive": false
+    },
+    {
+      "nr": 243,
+      "id": "6ad23ba7a21c2357f9e61cdd",
+      "name": "Technische Perfektion",
+      "classes": [
+        "Villian",
+        "Shadowwarrior"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 244,
+      "id": "6ad3a9de427c3c124063398e",
+      "name": "Naturgeist",
+      "classes": [
+        "Druide",
+        "Alchemist"
+      ],
+      "category": "utility",
+      "activeDefensive": false
+    },
+    {
+      "nr": 245,
+      "id": "6ad410f1fc17bccb4657488b",
+      "name": "Breitschwert-Training",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 246,
+      "id": "6ad415ab43253f7922ed6ed9",
+      "name": "Wilde Bindung",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 247,
+      "id": "6ad415ab43253f7922ed6edc",
+      "name": "Beharrlichkeit",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 248,
+      "id": "6ad415ab43253f7922ed6edf",
+      "name": "Kreuzhieb",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 249,
+      "id": "6ad41b704e67141870eba8bb",
+      "name": "Rudelangriff",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 250,
+      "id": "6ad41b704e67141870eba8bc",
+      "name": "Lebenstransfer",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "healing",
+      "activeDefensive": false
+    },
+    {
+      "nr": 251,
+      "id": "6ad423f0d601960f55b4f1b3",
+      "name": "Blutender Schnitt",
+      "classes": [
+        "Abenteuer"
+      ],
+      "category": "offensive",
+      "activeDefensive": false
+    },
+    {
+      "nr": 252,
+      "id": "6ad499d7b7588146a87c6fb5",
+      "name": "Streitkolbentraining",
+      "classes": [
+        "Shamane",
+        "High Elves"
+      ],
+      "category": "passive",
+      "activeDefensive": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+const set={mana:183,cd:77,dur:1,castTimeSeconds:1,hasLingeringDamage:false,statScaling:{patk:{type:'linear',base:337,perLevel:67}},cooldownScaling:{type:'linear',base:77,perLevel:-1},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:183,perLevel:92}}],effectsVersion:1,effects:[{key:'shockwaveSelfHeal',type:'heal',target:'self',value:0.015,unit:'fraction',reference:'damageDealt',damageBasis:'actualHealthDamage',durationSeconds:0,progressionStatus:'defined'}],description_de:'Erzeugt nach 1 Sekunde Cast Time eine Schockwelle, die Gegner im Umkreis physisch schädigt und dich um 1,5 Prozent des tatsächlich verursachten Schadens heilt. Der physische Grundangriffswert steigt von 337 um 67 je weiterer Skillstufe auf 940 auf Level 10. Die Mana-Kosten steigen von 183 um 92 je weiterer Stufe auf 1011. Der Cooldown sinkt von 77 um 1 Sekunde je weiterer Stufe auf 68 Sekunden. Die gespeicherte Ausführungsdauer beträgt 1 Sekunde; es gibt keinen anhaltenden Schaden über Zeit. Der Flächenradius und der genaue Trefferzeitpunkt sind noch festzulegen.',description_eng:'After a 1 second cast time, creates a shockwave that deals physical damage to nearby enemies and heals you for 1.5 percent of actual damage dealt. Physical base attack increases from 337 by 67 per additional skill level to 940 at level 10. Mana cost increases from 183 by 92 per additional level to 1011. Cooldown decreases from 77 by 1 second per additional level to 68 seconds. Stored execution duration is 1 second; there is no lingering damage over time. Area radius and exact hit timing remain to be defined.'};
+try{
+if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Requires development database');
+await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+const before=await SkillDataModel.collection.findOne({nr:98});if(!before)throw Error('Missing skill');
+const candidate={...before,...set};delete candidate.health;await new SkillDataModel(candidate).validate();
+await fs.writeFile('data/balancing/regeneration-shockwave-before.json',JSON.stringify(before,null,2)+'\n');
+await SkillDataModel.collection.updateOne({_id:before._id},{$set:set,$unset:{health:''}});
+const after=await SkillDataModel.collection.findOne({_id:before._id});for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');if(after.health!==undefined)throw Error('Legacy healing field retained');
+console.log('Shockwave verified: 337 to 940 attack, Mana 183 to 1011, cooldown 77 to 68 s, cast 1 s, execution 1 s, heals 1.5 percent damage dealt.');
+}catch(e){console.error(`Shockwave update failed (${e.name}); credentials omitted.`);process.exitCode=1;}finally{await mongoose.disconnect();}

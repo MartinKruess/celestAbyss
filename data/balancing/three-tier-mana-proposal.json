@@ -1,0 +1,5530 @@
+{
+  "status": "proposalOnlyNotApplied",
+  "sourceCatalogSHA256": "dcb73781c54923ba2038c414d40b8f207854daa7d119ec49ceef8a9ec0b3b42f",
+  "factors": {
+    "normal": 0.25,
+    "heal": 0.35,
+    "finisher": 0.4,
+    "combo": 0.4
+  },
+  "explicitAssignments": {
+    "9": "heal",
+    "62": "finisher"
+  },
+  "rows": [
+    {
+      "nr": 3,
+      "name": "Abräumer",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        75,
+        127,
+        179,
+        231,
+        283,
+        335,
+        387,
+        439,
+        491,
+        543
+      ],
+      "currentManaByLevel": [
+        45,
+        68,
+        91,
+        114,
+        137,
+        160,
+        183,
+        206,
+        229,
+        252
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 19,
+        "perLevel": 13
+      },
+      "proposedManaByLevel": [
+        19,
+        32,
+        45,
+        58,
+        71,
+        84,
+        97,
+        110,
+        123,
+        136
+      ],
+      "notes": []
+    },
+    {
+      "nr": 8,
+      "name": "Astralkörper",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        506,
+        742,
+        978,
+        1214,
+        1450
+      ],
+      "currentManaByLevel": [
+        134,
+        246,
+        358,
+        470,
+        582
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 127,
+        "perLevel": 59
+      },
+      "proposedManaByLevel": [
+        127,
+        186,
+        245,
+        304,
+        363
+      ],
+      "notes": []
+    },
+    {
+      "nr": 9,
+      "name": "Ätherregen",
+      "classes": [
+        "Druide",
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        315,
+        336.90000000000003,
+        358.79999999999995,
+        380.70000000000005,
+        402.59999999999997,
+        424.5,
+        446.40000000000003,
+        468.30000000000007,
+        490.20000000000005,
+        682.8
+      ],
+      "currentManaByLevel": [
+        210,
+        244,
+        278,
+        312,
+        346,
+        380,
+        414,
+        448,
+        482,
+        516
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          110,
+          118,
+          126,
+          133,
+          141,
+          149,
+          156,
+          164,
+          172,
+          239
+        ]
+      },
+      "proposedManaByLevel": [
+        110,
+        118,
+        126,
+        133,
+        141,
+        149,
+        156,
+        164,
+        172,
+        239
+      ],
+      "notes": [
+        "Vom Nutzer ausdrücklich als Heilung eingeordnet. Referenz: Heilung eines Empfängers aus einem getroffenen Gegner, ohne Charakterangriff und weitere Gegner; tatsächliche Heilung ist schadensabhängig. Schaden wird nicht zusätzlich bepreist."
+      ]
+    },
+    {
+      "nr": 11,
+      "name": "Aufgeladener Schlag",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        85,
+        140,
+        195,
+        250,
+        305,
+        360,
+        415,
+        470,
+        525,
+        580,
+        635,
+        690,
+        745,
+        800,
+        855
+      ],
+      "currentManaByLevel": [
+        65,
+        95,
+        125,
+        155,
+        185,
+        215,
+        245,
+        275,
+        305,
+        335,
+        365,
+        395,
+        425,
+        455,
+        485
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 21,
+        "perLevel": 14
+      },
+      "proposedManaByLevel": [
+        21,
+        35,
+        49,
+        63,
+        77,
+        91,
+        105,
+        119,
+        133,
+        147,
+        161,
+        175,
+        189,
+        203,
+        217
+      ],
+      "notes": []
+    },
+    {
+      "nr": 13,
+      "name": "Ausbruch der Wut",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 15,
+      "name": "Beben",
+      "classes": [
+        "Abenteurer",
+        "Druide",
+        "Schamane"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        81,
+        120,
+        159,
+        198,
+        237,
+        276,
+        315,
+        354,
+        393,
+        432,
+        471,
+        510,
+        549,
+        588,
+        627,
+        666,
+        705,
+        744,
+        783,
+        822
+      ],
+      "currentManaByLevel": [
+        20,
+        31,
+        42,
+        53,
+        64,
+        75,
+        86,
+        97,
+        108,
+        119,
+        130,
+        141,
+        152,
+        163,
+        174,
+        185,
+        196,
+        207,
+        218,
+        229
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 20,
+        "perLevel": 10
+      },
+      "proposedManaByLevel": [
+        20,
+        30,
+        40,
+        50,
+        60,
+        70,
+        80,
+        90,
+        100,
+        110,
+        120,
+        130,
+        140,
+        150,
+        160,
+        170,
+        180,
+        190,
+        200,
+        210
+      ],
+      "notes": []
+    },
+    {
+      "nr": 16,
+      "name": "Wasserfesseln",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47,
+        47
+      ],
+      "currentManaByLevel": [
+        23,
+        34,
+        45,
+        56,
+        67,
+        78,
+        89,
+        100,
+        111,
+        122,
+        133,
+        144,
+        155,
+        166,
+        177,
+        188,
+        199,
+        210,
+        221,
+        232
+      ],
+      "proposedManaCurve": {
+        "type": "fixed",
+        "base": 12
+      },
+      "proposedManaByLevel": [
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12,
+        12
+      ],
+      "notes": []
+    },
+    {
+      "nr": 17,
+      "name": "Blutklinge",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "hybridReview",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        56,
+        88,
+        120,
+        152,
+        184,
+        216,
+        248,
+        280,
+        312,
+        344
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Schadensangriff mit zusätzlicher Heilung: Komponenten getrennt prüfen, keine doppelte Vollbepreisung."
+      ]
+    },
+    {
+      "nr": 19,
+      "name": "Brecher der Deckung",
+      "classes": [
+        "Ritter"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        97,
+        130,
+        163,
+        196,
+        229,
+        262,
+        295,
+        328,
+        361,
+        394
+      ],
+      "currentManaByLevel": [
+        45,
+        72,
+        99,
+        126,
+        153,
+        180,
+        207,
+        234,
+        261,
+        288
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 24,
+        "perLevel": 8
+      },
+      "proposedManaByLevel": [
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96
+      ],
+      "notes": []
+    },
+    {
+      "nr": 20,
+      "name": "Brecher des Lichts",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        655.1999999999999,
+        758.8,
+        862.4,
+        965.9999999999999,
+        1069.6,
+        1173.1999999999998,
+        1276.8,
+        1380.3999999999999,
+        1484,
+        1587.6
+      ],
+      "currentManaByLevel": [
+        127,
+        177.66666666666666,
+        228.33333333333331,
+        279,
+        329.66666666666663,
+        380.3333333333333,
+        431,
+        481.66666666666663,
+        532.3333333333333,
+        583
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 164,
+        "perLevel": 26
+      },
+      "proposedManaByLevel": [
+        164,
+        190,
+        216,
+        242,
+        268,
+        294,
+        320,
+        346,
+        372,
+        398
+      ],
+      "notes": []
+    },
+    {
+      "nr": 23,
+      "name": "Donnernde Lanze",
+      "classes": [
+        "Ritter"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        280,
+        370,
+        460,
+        550,
+        640,
+        730,
+        820,
+        910,
+        1000,
+        1090,
+        1180,
+        1270,
+        1360,
+        1450,
+        1540
+      ],
+      "currentManaByLevel": [
+        64,
+        89,
+        114,
+        139,
+        164,
+        189,
+        214,
+        239,
+        264,
+        289,
+        314,
+        339,
+        364,
+        389,
+        414
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 70,
+        "perLevel": 23
+      },
+      "proposedManaByLevel": [
+        70,
+        93,
+        116,
+        139,
+        162,
+        185,
+        208,
+        231,
+        254,
+        277,
+        300,
+        323,
+        346,
+        369,
+        392
+      ],
+      "notes": []
+    },
+    {
+      "nr": 24,
+      "name": "Doppelschuss",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        486,
+        560,
+        634,
+        708,
+        782,
+        856,
+        930,
+        1004,
+        1078,
+        1152
+      ],
+      "currentManaByLevel": [
+        103,
+        127,
+        151,
+        175,
+        199,
+        223,
+        247,
+        271,
+        295,
+        319
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 122,
+        "perLevel": 19
+      },
+      "proposedManaByLevel": [
+        122,
+        141,
+        160,
+        179,
+        198,
+        217,
+        236,
+        255,
+        274,
+        293
+      ],
+      "notes": []
+    },
+    {
+      "nr": 27,
+      "name": "Dunkler Schlag",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        41,
+        58,
+        75,
+        92,
+        109,
+        126,
+        143,
+        160,
+        177,
+        194,
+        211,
+        228,
+        245,
+        262,
+        279
+      ],
+      "currentManaByLevel": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37,
+        41,
+        45,
+        49,
+        53,
+        57,
+        61,
+        65,
+        69
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 4
+      },
+      "proposedManaByLevel": [
+        10,
+        14,
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42,
+        46,
+        50,
+        54,
+        58,
+        62,
+        66
+      ],
+      "notes": []
+    },
+    {
+      "nr": 29,
+      "name": "Eislanze",
+      "classes": [
+        "Kräuterkundler",
+        "Druide",
+        "Heiler",
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        187,
+        236,
+        285,
+        334,
+        383,
+        432,
+        481,
+        530,
+        579,
+        628
+      ],
+      "currentManaByLevel": [
+        84,
+        126,
+        168,
+        210,
+        252,
+        294,
+        336,
+        378,
+        420,
+        462
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 47,
+        "perLevel": 12
+      },
+      "proposedManaByLevel": [
+        47,
+        59,
+        71,
+        83,
+        95,
+        107,
+        119,
+        131,
+        143,
+        155
+      ],
+      "notes": []
+    },
+    {
+      "nr": 30,
+      "name": "Eisranken",
+      "classes": [
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        131,
+        172,
+        213,
+        274,
+        319,
+        364,
+        441,
+        490,
+        539,
+        632
+      ],
+      "currentManaByLevel": [
+        65,
+        94,
+        123,
+        152,
+        181,
+        210,
+        239,
+        268,
+        297,
+        326
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          33,
+          43,
+          53,
+          69,
+          80,
+          91,
+          110,
+          123,
+          135,
+          158
+        ]
+      },
+      "proposedManaByLevel": [
+        33,
+        43,
+        53,
+        69,
+        80,
+        91,
+        110,
+        123,
+        135,
+        158
+      ],
+      "notes": []
+    },
+    {
+      "nr": 31,
+      "name": "Elektrisches Feld",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 10,
+      "group": "finisher",
+      "factor": 0.4,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        157,
+        208,
+        259,
+        310,
+        383,
+        437,
+        491,
+        545,
+        599,
+        690
+      ],
+      "currentManaByLevel": [
+        41,
+        60,
+        79,
+        98,
+        117,
+        136,
+        155,
+        174,
+        193,
+        212
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          63,
+          83,
+          104,
+          124,
+          153,
+          175,
+          196,
+          218,
+          240,
+          276
+        ]
+      },
+      "proposedManaByLevel": [
+        63,
+        83,
+        104,
+        124,
+        153,
+        175,
+        196,
+        218,
+        240,
+        276
+      ],
+      "notes": [
+        "Anhaltendes Feld/Großangriff; vollständige definierte Anwendung gegen ein Ziel. Infernal Zyklon vom Nutzer ausdrücklich eingeschlossen."
+      ]
+    },
+    {
+      "nr": 35,
+      "name": "Energieentladung",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 36,
+      "name": "Energieschlag",
+      "classes": [
+        "Druide",
+        "Heiler",
+        "Schamane",
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        25,
+        45,
+        65,
+        85,
+        105,
+        125,
+        145,
+        165,
+        185,
+        205
+      ],
+      "currentManaByLevel": [
+        12,
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 5
+      },
+      "proposedManaByLevel": [
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46,
+        51
+      ],
+      "notes": [
+        "Neue 25-%-Gruppenzuordnung: ersetzt nur im Vorschlag die frühere Ausnahme; gespeicherter Energieschlag unverändert, Heiler weiter maximal Stufe 5."
+      ]
+    },
+    {
+      "nr": 37,
+      "name": "Entzugspfeil",
+      "classes": [
+        "Jäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "hybridReview",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        27,
+        39,
+        51,
+        63,
+        75,
+        87,
+        99,
+        111,
+        123,
+        135
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Schadensangriff mit zusätzlicher Heilung: Komponenten getrennt prüfen, keine doppelte Vollbepreisung."
+      ]
+    },
+    {
+      "nr": 38,
+      "name": "Erdbeben",
+      "classes": [
+        "Butcher",
+        "Druide",
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        202,
+        280,
+        358,
+        436,
+        514,
+        592,
+        670,
+        748,
+        826,
+        904
+      ],
+      "currentManaByLevel": [
+        87,
+        129,
+        171,
+        213,
+        255,
+        297,
+        339,
+        381,
+        423,
+        465
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 51,
+        "perLevel": 20
+      },
+      "proposedManaByLevel": [
+        51,
+        71,
+        91,
+        111,
+        131,
+        151,
+        171,
+        191,
+        211,
+        231
+      ],
+      "notes": []
+    },
+    {
+      "nr": 39,
+      "name": "Erdbrecher",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        284,
+        365,
+        446,
+        527,
+        608,
+        689,
+        770,
+        851,
+        932,
+        1013
+      ],
+      "currentManaByLevel": [
+        134,
+        182,
+        230,
+        278,
+        326,
+        374,
+        422,
+        470,
+        518,
+        566
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 71,
+        "perLevel": 20
+      },
+      "proposedManaByLevel": [
+        71,
+        91,
+        111,
+        131,
+        151,
+        171,
+        191,
+        211,
+        231,
+        251
+      ],
+      "notes": []
+    },
+    {
+      "nr": 40,
+      "name": "Erlösendes Feld",
+      "classes": [
+        "Ritter"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        187,
+        270,
+        353,
+        436,
+        519,
+        602,
+        685,
+        768,
+        851,
+        934
+      ],
+      "currentManaByLevel": [
+        83,
+        117,
+        151,
+        185,
+        219,
+        253,
+        287,
+        321,
+        355,
+        389
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 47,
+        "perLevel": 21
+      },
+      "proposedManaByLevel": [
+        47,
+        68,
+        89,
+        110,
+        131,
+        152,
+        173,
+        194,
+        215,
+        236
+      ],
+      "notes": []
+    },
+    {
+      "nr": 41,
+      "name": "Erste Hilfe",
+      "classes": [
+        "Abenteurer",
+        "Druide",
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        50,
+        75,
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275
+      ],
+      "currentManaByLevel": [
+        20,
+        36,
+        52,
+        68,
+        84,
+        100,
+        116,
+        132,
+        148,
+        164
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 9
+      },
+      "proposedManaByLevel": [
+        18,
+        27,
+        36,
+        45,
+        54,
+        63,
+        72,
+        81,
+        90,
+        99
+      ],
+      "notes": []
+    },
+    {
+      "nr": 46,
+      "name": "Ewiges Eis",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        137,
+        180,
+        223,
+        266,
+        309,
+        352,
+        395,
+        438,
+        481,
+        524,
+        567,
+        610,
+        653,
+        696,
+        739
+      ],
+      "currentManaByLevel": [
+        57,
+        81,
+        105,
+        129,
+        153,
+        177,
+        201,
+        225,
+        249,
+        273,
+        297,
+        321,
+        345,
+        369,
+        393
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 34,
+        "perLevel": 11
+      },
+      "proposedManaByLevel": [
+        34,
+        45,
+        56,
+        67,
+        78,
+        89,
+        100,
+        111,
+        122,
+        133,
+        144,
+        155,
+        166,
+        177,
+        188
+      ],
+      "notes": []
+    },
+    {
+      "nr": 47,
+      "name": "Explosionspfeil",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        1002,
+        1128,
+        1254,
+        1380,
+        1506,
+        1632,
+        1758,
+        1884,
+        2010,
+        2136
+      ],
+      "currentManaByLevel": [
+        147,
+        173,
+        199,
+        225,
+        251,
+        277,
+        303,
+        329,
+        355,
+        381
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 251,
+        "perLevel": 32
+      },
+      "proposedManaByLevel": [
+        251,
+        283,
+        315,
+        347,
+        379,
+        411,
+        443,
+        475,
+        507,
+        539
+      ],
+      "notes": []
+    },
+    {
+      "nr": 48,
+      "name": "Feuer der Verdammten",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        764.4,
+        1078,
+        1391.6,
+        1705.1999999999998,
+        2018.8
+      ],
+      "currentManaByLevel": [
+        167,
+        242.5,
+        318,
+        393.5,
+        469
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 191,
+        "perLevel": 78
+      },
+      "proposedManaByLevel": [
+        191,
+        269,
+        347,
+        425,
+        503
+      ],
+      "notes": []
+    },
+    {
+      "nr": 49,
+      "name": "Feuerball",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        63,
+        92,
+        121,
+        150,
+        179,
+        208,
+        237,
+        266,
+        295,
+        324,
+        353,
+        382,
+        411,
+        440,
+        469,
+        498,
+        527,
+        556,
+        585,
+        614
+      ],
+      "currentManaByLevel": [
+        31,
+        40,
+        49,
+        58,
+        67,
+        76,
+        85,
+        94,
+        103,
+        112,
+        121,
+        130,
+        139,
+        148,
+        157,
+        166,
+        175,
+        184,
+        193,
+        202
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 16,
+        "perLevel": 7
+      },
+      "proposedManaByLevel": [
+        16,
+        23,
+        30,
+        37,
+        44,
+        51,
+        58,
+        65,
+        72,
+        79,
+        86,
+        93,
+        100,
+        107,
+        114,
+        121,
+        128,
+        135,
+        142,
+        149
+      ],
+      "notes": []
+    },
+    {
+      "nr": 50,
+      "name": "Feuerlanze",
+      "classes": [
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        197,
+        243,
+        289,
+        335,
+        381,
+        427,
+        473,
+        519,
+        565,
+        611
+      ],
+      "currentManaByLevel": [
+        74,
+        106,
+        138,
+        170,
+        202,
+        234,
+        266,
+        298,
+        330,
+        362
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 49,
+        "perLevel": 12
+      },
+      "proposedManaByLevel": [
+        49,
+        61,
+        73,
+        85,
+        97,
+        109,
+        121,
+        133,
+        145,
+        157
+      ],
+      "notes": []
+    },
+    {
+      "nr": 51,
+      "name": "Feuerpfeil",
+      "classes": [
+        "Jäger",
+        "Nachtjäger"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        67,
+        86,
+        105,
+        124,
+        143,
+        162,
+        181,
+        200,
+        219,
+        238,
+        257,
+        276,
+        295,
+        314,
+        333,
+        352,
+        371,
+        390,
+        409,
+        428
+      ],
+      "currentManaByLevel": [
+        32,
+        45,
+        58,
+        71,
+        84,
+        97,
+        110,
+        123,
+        136,
+        149,
+        162,
+        175,
+        188,
+        201,
+        214,
+        227,
+        240,
+        253,
+        266,
+        279
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 17,
+        "perLevel": 5
+      },
+      "proposedManaByLevel": [
+        17,
+        22,
+        27,
+        32,
+        37,
+        42,
+        47,
+        52,
+        57,
+        62,
+        67,
+        72,
+        77,
+        82,
+        87,
+        92,
+        97,
+        102,
+        107,
+        112
+      ],
+      "notes": []
+    },
+    {
+      "nr": 53,
+      "name": "Gebundener Schuss",
+      "classes": [
+        "Jäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        37,
+        55,
+        73,
+        91,
+        109,
+        127,
+        145,
+        163,
+        181,
+        199
+      ],
+      "currentManaByLevel": [
+        21,
+        30,
+        39,
+        48,
+        57,
+        66,
+        75,
+        84,
+        93,
+        102
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 9,
+        "perLevel": 5
+      },
+      "proposedManaByLevel": [
+        9,
+        14,
+        19,
+        24,
+        29,
+        34,
+        39,
+        44,
+        49,
+        54
+      ],
+      "notes": []
+    },
+    {
+      "nr": 55,
+      "name": "Brecher des Geistes",
+      "classes": [
+        "Ritter"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        81,
+        113,
+        145,
+        178,
+        210,
+        242,
+        275,
+        307,
+        339,
+        372
+      ],
+      "currentManaByLevel": [
+        37,
+        60,
+        83,
+        106,
+        129,
+        152,
+        175,
+        198,
+        221,
+        244
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          20,
+          28,
+          36,
+          45,
+          53,
+          61,
+          69,
+          77,
+          85,
+          93
+        ]
+      },
+      "proposedManaByLevel": [
+        20,
+        28,
+        36,
+        45,
+        53,
+        61,
+        69,
+        77,
+        85,
+        93
+      ],
+      "notes": []
+    },
+    {
+      "nr": 56,
+      "name": "Geladener Nebel",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        177,
+        240,
+        303,
+        366,
+        429,
+        492,
+        555,
+        618,
+        681,
+        744,
+        807,
+        870,
+        933,
+        996,
+        1059
+      ],
+      "currentManaByLevel": [
+        75,
+        107,
+        139,
+        171,
+        203,
+        235,
+        267,
+        299,
+        331,
+        363,
+        395,
+        427,
+        459,
+        491,
+        523
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 44,
+        "perLevel": 16
+      },
+      "proposedManaByLevel": [
+        44,
+        60,
+        76,
+        92,
+        108,
+        124,
+        140,
+        156,
+        172,
+        188,
+        204,
+        220,
+        236,
+        252,
+        268
+      ],
+      "notes": []
+    },
+    {
+      "nr": 57,
+      "name": "Gezielter Blitz",
+      "classes": [
+        "Kräuterkundler",
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        293,
+        398,
+        503,
+        608,
+        713,
+        818,
+        923,
+        1028,
+        1133,
+        1238
+      ],
+      "currentManaByLevel": [
+        101,
+        140,
+        179,
+        218,
+        257,
+        296,
+        335,
+        374,
+        413,
+        452
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 26
+      },
+      "proposedManaByLevel": [
+        73,
+        99,
+        125,
+        151,
+        177,
+        203,
+        229,
+        255,
+        281,
+        307
+      ],
+      "notes": []
+    },
+    {
+      "nr": 58,
+      "name": "Kuss der Aurora",
+      "classes": [
+        "Heiler"
+      ],
+      "levels": 6,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        550,
+        980,
+        1410,
+        1840,
+        2270,
+        2700
+      ],
+      "currentManaByLevel": [
+        283,
+        468,
+        653,
+        838,
+        1023,
+        1208
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 193,
+        "perLevel": 151
+      },
+      "proposedManaByLevel": [
+        193,
+        344,
+        495,
+        646,
+        797,
+        948
+      ],
+      "notes": [
+        "Referenz deckt nur feste Grundheilung; zusätzlicher 3-/5-%-Max-HP-Anteil braucht ein Referenzziel."
+      ]
+    },
+    {
+      "nr": 61,
+      "name": "Holzspalter",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        25,
+        65,
+        105,
+        145,
+        185,
+        225,
+        265,
+        305,
+        345,
+        385,
+        425,
+        465,
+        505,
+        545,
+        585,
+        625,
+        665,
+        705,
+        745,
+        785
+      ],
+      "currentManaByLevel": [
+        34,
+        53,
+        72,
+        91,
+        110,
+        129,
+        148,
+        167,
+        186,
+        205,
+        224,
+        243,
+        262,
+        281,
+        300,
+        319,
+        338,
+        357,
+        376,
+        395
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 10
+      },
+      "proposedManaByLevel": [
+        6,
+        16,
+        26,
+        36,
+        46,
+        56,
+        66,
+        76,
+        86,
+        96,
+        106,
+        116,
+        126,
+        136,
+        146,
+        156,
+        166,
+        176,
+        186,
+        196
+      ],
+      "notes": []
+    },
+    {
+      "nr": 62,
+      "name": "Infernal Zyklon",
+      "classes": [
+        "Schamane"
+      ],
+      "levels": 5,
+      "group": "finisher",
+      "factor": 0.4,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        584,
+        811.5,
+        1168,
+        1424,
+        1866
+      ],
+      "currentManaByLevel": [
+        172,
+        263,
+        354,
+        445,
+        536
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          234,
+          325,
+          467,
+          570,
+          746
+        ]
+      },
+      "proposedManaByLevel": [
+        234,
+        325,
+        467,
+        570,
+        746
+      ],
+      "notes": [
+        "Anhaltendes Feld/Großangriff; vollständige definierte Anwendung gegen ein Ziel. Infernal Zyklon vom Nutzer ausdrücklich eingeschlossen."
+      ]
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "classes": [
+        "Jäger",
+        "Nachtjäger"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        52,
+        75,
+        98,
+        121,
+        144
+      ],
+      "currentManaByLevel": [
+        5,
+        11.25,
+        17.5,
+        23.75,
+        30
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 13,
+        "perLevel": 6
+      },
+      "proposedManaByLevel": [
+        13,
+        19,
+        25,
+        31,
+        37
+      ],
+      "notes": []
+    },
+    {
+      "nr": 64,
+      "name": "Heilung",
+      "classes": [
+        "Heiler",
+        "Ritter"
+      ],
+      "levels": 20,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        20,
+        46,
+        78,
+        116,
+        160,
+        210,
+        266,
+        328,
+        396,
+        470,
+        550,
+        636,
+        728,
+        826,
+        930,
+        1040,
+        1156,
+        1278,
+        1406,
+        1540
+      ],
+      "currentManaByLevel": [
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52,
+        58,
+        64,
+        70,
+        76,
+        82,
+        88,
+        94,
+        100,
+        106,
+        112,
+        118,
+        124,
+        130
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          7,
+          16,
+          27,
+          41,
+          56,
+          74,
+          93,
+          115,
+          139,
+          165,
+          193,
+          223,
+          255,
+          289,
+          326,
+          364,
+          405,
+          447,
+          492,
+          539
+        ]
+      },
+      "proposedManaByLevel": [
+        7,
+        16,
+        27,
+        41,
+        56,
+        74,
+        93,
+        115,
+        139,
+        165,
+        193,
+        223,
+        255,
+        289,
+        326,
+        364,
+        405,
+        447,
+        492,
+        539
+      ],
+      "notes": []
+    },
+    {
+      "nr": 65,
+      "name": "Klingentornado",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        452,
+        616,
+        780,
+        944,
+        1108,
+        1272,
+        1436,
+        1600,
+        1764,
+        1928
+      ],
+      "currentManaByLevel": [
+        61,
+        84,
+        107,
+        130,
+        153,
+        176,
+        199,
+        222,
+        245,
+        268
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 113,
+        "perLevel": 41
+      },
+      "proposedManaByLevel": [
+        113,
+        154,
+        195,
+        236,
+        277,
+        318,
+        359,
+        400,
+        441,
+        482
+      ],
+      "notes": [
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 66,
+      "name": "Kopfschuss",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        853.2,
+        999,
+        1144.8,
+        1290.6000000000001,
+        1436.4,
+        1582.2,
+        1728,
+        1873.8,
+        2019.6000000000001,
+        2165.4
+      ],
+      "currentManaByLevel": [
+        217,
+        280,
+        343,
+        406,
+        469,
+        532,
+        595,
+        658,
+        721,
+        784
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 213,
+        "perLevel": 36
+      },
+      "proposedManaByLevel": [
+        213,
+        249,
+        285,
+        321,
+        357,
+        393,
+        429,
+        465,
+        501,
+        537
+      ],
+      "notes": []
+    },
+    {
+      "nr": 68,
+      "name": "Kristallisierte Wasserspähre",
+      "classes": [
+        "Heiler",
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        137,
+        164,
+        191,
+        218,
+        245,
+        272,
+        299,
+        326,
+        353,
+        380
+      ],
+      "currentManaByLevel": [
+        39,
+        53,
+        67,
+        81,
+        95,
+        109,
+        123,
+        137,
+        151,
+        165
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 34,
+        "perLevel": 7
+      },
+      "proposedManaByLevel": [
+        34,
+        41,
+        48,
+        55,
+        62,
+        69,
+        76,
+        83,
+        90,
+        97
+      ],
+      "notes": []
+    },
+    {
+      "nr": 69,
+      "name": "Kugelblitz",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        398,
+        541,
+        684,
+        827,
+        970,
+        1113,
+        1256,
+        1399,
+        1542,
+        1685
+      ],
+      "currentManaByLevel": [
+        181,
+        236,
+        291,
+        346,
+        401,
+        456,
+        511,
+        566,
+        621,
+        676
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 100,
+        "perLevel": 36
+      },
+      "proposedManaByLevel": [
+        100,
+        136,
+        172,
+        208,
+        244,
+        280,
+        316,
+        352,
+        388,
+        424
+      ],
+      "notes": []
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 4,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen.",
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 71,
+      "name": "Lebensessenz",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 5,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceTargetRequired",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        113,
+        168,
+        223,
+        278,
+        333
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Heilung hängt vollständig vom Max-Leben des Ziels ab; ohne festgelegtes Referenzziel keine feste Kostenkurve erfinden."
+      ]
+    },
+    {
+      "nr": 72,
+      "name": "Lebenssauger",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "hybridReview",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        67,
+        98.88888888888889,
+        130.77777777777777,
+        162.66666666666669,
+        194.55555555555554,
+        226.44444444444446,
+        258.33333333333337,
+        290.22222222222223,
+        322.1111111111111,
+        354
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Schadensangriff mit zusätzlicher Heilung: Komponenten getrennt prüfen, keine doppelte Vollbepreisung."
+      ]
+    },
+    {
+      "nr": 76,
+      "name": "Mächtiger Doppelschlag",
+      "classes": [
+        "Abenteurer",
+        "Schamane"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        332,
+        396,
+        460,
+        524,
+        588,
+        652,
+        716,
+        780,
+        844,
+        908,
+        972,
+        1036,
+        1100,
+        1164,
+        1228
+      ],
+      "currentManaByLevel": [
+        83,
+        113,
+        143,
+        173,
+        203,
+        233,
+        263,
+        293,
+        323,
+        353,
+        383,
+        413,
+        443,
+        473,
+        503
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 83,
+        "perLevel": 16
+      },
+      "proposedManaByLevel": [
+        83,
+        99,
+        115,
+        131,
+        147,
+        163,
+        179,
+        195,
+        211,
+        227,
+        243,
+        259,
+        275,
+        291,
+        307
+      ],
+      "notes": []
+    },
+    {
+      "nr": 77,
+      "name": "Mächtiger Hieb",
+      "classes": [
+        "Gladiator",
+        "Butcher",
+        "Ritter"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        73,
+        146.33333333333331,
+        219.66666666666666,
+        293,
+        366.3333333333333,
+        439.66666666666663,
+        513,
+        586.3333333333333,
+        659.6666666666666,
+        733
+      ],
+      "currentManaByLevel": [
+        42,
+        64,
+        86,
+        108,
+        130,
+        152,
+        174,
+        196,
+        218,
+        240
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "proposedManaByLevel": [
+        18,
+        36,
+        54,
+        72,
+        90,
+        108,
+        126,
+        144,
+        162,
+        180
+      ],
+      "notes": []
+    },
+    {
+      "nr": 78,
+      "name": "Göttliche Heilung",
+      "classes": [
+        "Heiler"
+      ],
+      "levels": 10,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        243,
+        388.5,
+        534,
+        679.5,
+        825,
+        970.5,
+        1116,
+        1261.5,
+        1407,
+        1552.5
+      ],
+      "currentManaByLevel": [
+        92,
+        161,
+        230,
+        299,
+        368,
+        437,
+        506,
+        575,
+        644,
+        713
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 85,
+        "perLevel": 51
+      },
+      "proposedManaByLevel": [
+        85,
+        136,
+        187,
+        238,
+        289,
+        340,
+        391,
+        442,
+        493,
+        544
+      ],
+      "notes": []
+    },
+    {
+      "nr": 86,
+      "name": "Präzisionsschuss",
+      "classes": [
+        "Jäger"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        883.8000000000001,
+        1130.4,
+        1377,
+        1623.6000000000001,
+        1870.2,
+        2116.8,
+        2363.4,
+        2610,
+        2856.6,
+        3103.2000000000003,
+        3349.8,
+        3596.4,
+        3843,
+        4089.6,
+        4336.2
+      ],
+      "currentManaByLevel": [
+        173,
+        237,
+        301,
+        365,
+        429,
+        493,
+        557,
+        621,
+        685,
+        749,
+        813,
+        877,
+        941,
+        1005,
+        1069
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 221,
+        "perLevel": 62
+      },
+      "proposedManaByLevel": [
+        221,
+        283,
+        345,
+        407,
+        469,
+        531,
+        593,
+        655,
+        717,
+        779,
+        841,
+        903,
+        965,
+        1027,
+        1089
+      ],
+      "notes": []
+    },
+    {
+      "nr": 87,
+      "name": "Rotier Schlag",
+      "classes": [
+        "Abenteurer",
+        "Butcher",
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        36,
+        98,
+        160,
+        222,
+        284,
+        346,
+        408,
+        470,
+        532,
+        594
+      ],
+      "currentManaByLevel": [
+        24,
+        36,
+        48,
+        60,
+        72,
+        84,
+        96,
+        108,
+        120,
+        132
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 9,
+        "perLevel": 16
+      },
+      "proposedManaByLevel": [
+        9,
+        25,
+        41,
+        57,
+        73,
+        89,
+        105,
+        121,
+        137,
+        153
+      ],
+      "notes": []
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "classes": [
+        "Jäger"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        414,
+        828,
+        966,
+        1104,
+        1656
+      ],
+      "currentManaByLevel": [
+        82,
+        115,
+        148,
+        181,
+        214
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          104,
+          207,
+          242,
+          276,
+          414
+        ]
+      },
+      "proposedManaByLevel": [
+        104,
+        207,
+        242,
+        276,
+        414
+      ],
+      "notes": [
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 89,
+      "name": "Schädelspalter",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        387,
+        628,
+        869,
+        1110,
+        1351,
+        1592,
+        1833,
+        2074,
+        2315,
+        2556
+      ],
+      "currentManaByLevel": [
+        210,
+        297,
+        384,
+        471,
+        558,
+        645,
+        732,
+        819,
+        906,
+        993
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 97,
+        "perLevel": 60
+      },
+      "proposedManaByLevel": [
+        97,
+        157,
+        217,
+        277,
+        337,
+        397,
+        457,
+        517,
+        577,
+        637
+      ],
+      "notes": []
+    },
+    {
+      "nr": 90,
+      "name": "Schattendolch",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        94,
+        145,
+        196,
+        247,
+        298,
+        349,
+        400,
+        451,
+        502,
+        553,
+        604,
+        655,
+        706,
+        757,
+        808
+      ],
+      "currentManaByLevel": [
+        42,
+        61,
+        80,
+        99,
+        118,
+        137,
+        156,
+        175,
+        194,
+        213,
+        232,
+        251,
+        270,
+        289,
+        308
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 24,
+        "perLevel": 13
+      },
+      "proposedManaByLevel": [
+        24,
+        37,
+        50,
+        63,
+        76,
+        89,
+        102,
+        115,
+        128,
+        141,
+        154,
+        167,
+        180,
+        193,
+        206
+      ],
+      "notes": []
+    },
+    {
+      "nr": 91,
+      "name": "Schattenfalle",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        171,
+        224,
+        277,
+        330,
+        383,
+        436,
+        489,
+        542,
+        595,
+        648
+      ],
+      "currentManaByLevel": [
+        54,
+        78,
+        102,
+        126,
+        150,
+        174,
+        198,
+        222,
+        246,
+        270
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 43,
+        "perLevel": 13
+      },
+      "proposedManaByLevel": [
+        43,
+        56,
+        69,
+        82,
+        95,
+        108,
+        121,
+        134,
+        147,
+        160
+      ],
+      "notes": []
+    },
+    {
+      "nr": 92,
+      "name": "Schattenschlag",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        253,
+        325,
+        397,
+        469,
+        541,
+        613,
+        685,
+        757,
+        829,
+        901
+      ],
+      "currentManaByLevel": [
+        154,
+        201,
+        248,
+        295,
+        342,
+        389,
+        436,
+        483,
+        530,
+        577
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 63,
+        "perLevel": 18
+      },
+      "proposedManaByLevel": [
+        63,
+        81,
+        99,
+        117,
+        135,
+        153,
+        171,
+        189,
+        207,
+        225
+      ],
+      "notes": []
+    },
+    {
+      "nr": 94,
+      "name": "Schildstoß",
+      "classes": [
+        "Ritter"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        137,
+        184,
+        231,
+        278,
+        325,
+        372,
+        419,
+        466,
+        513,
+        560,
+        607,
+        654,
+        701,
+        748,
+        795,
+        842,
+        889,
+        936,
+        983,
+        1030
+      ],
+      "currentManaByLevel": [
+        68,
+        99,
+        130,
+        161,
+        192,
+        223,
+        254,
+        285,
+        316,
+        347,
+        378,
+        409,
+        440,
+        471,
+        502,
+        533,
+        564,
+        595,
+        626,
+        657
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 34,
+        "perLevel": 12
+      },
+      "proposedManaByLevel": [
+        34,
+        46,
+        58,
+        70,
+        82,
+        94,
+        106,
+        118,
+        130,
+        142,
+        154,
+        166,
+        178,
+        190,
+        202,
+        214,
+        226,
+        238,
+        250,
+        262
+      ],
+      "notes": []
+    },
+    {
+      "nr": 95,
+      "name": "Schildsturm",
+      "classes": [
+        "Ritter"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        272,
+        329,
+        387,
+        445,
+        503,
+        561,
+        619,
+        677,
+        735,
+        793,
+        851,
+        909,
+        967,
+        1025,
+        1083
+      ],
+      "currentManaByLevel": [
+        87,
+        123,
+        159,
+        195,
+        231,
+        267,
+        303,
+        339,
+        375,
+        411,
+        447,
+        483,
+        519,
+        555,
+        591
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          68,
+          82,
+          97,
+          111,
+          126,
+          140,
+          155,
+          169,
+          184,
+          198,
+          213,
+          227,
+          242,
+          256,
+          271
+        ]
+      },
+      "proposedManaByLevel": [
+        68,
+        82,
+        97,
+        111,
+        126,
+        140,
+        155,
+        169,
+        184,
+        198,
+        213,
+        227,
+        242,
+        256,
+        271
+      ],
+      "notes": []
+    },
+    {
+      "nr": 96,
+      "name": "Schmetterschlag",
+      "classes": [
+        "Gladiator",
+        "Butcher"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        111,
+        250.66666666666666,
+        390.3333333333333,
+        530,
+        669.6666666666666,
+        809.3333333333333,
+        949,
+        1088.6666666666665,
+        1228.3333333333333,
+        1368
+      ],
+      "currentManaByLevel": [
+        54,
+        97,
+        140,
+        183,
+        226,
+        269,
+        312,
+        355,
+        398,
+        441
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 28,
+        "perLevel": 35
+      },
+      "proposedManaByLevel": [
+        28,
+        63,
+        98,
+        133,
+        168,
+        203,
+        238,
+        273,
+        308,
+        343
+      ],
+      "notes": []
+    },
+    {
+      "nr": 97,
+      "name": "Schockschuss",
+      "classes": [
+        "Jäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        236,
+        280,
+        324,
+        368,
+        412,
+        456,
+        500,
+        544,
+        588,
+        632
+      ],
+      "currentManaByLevel": [
+        97,
+        138,
+        179,
+        220,
+        261,
+        302,
+        343,
+        384,
+        425,
+        466
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 59,
+        "perLevel": 11
+      },
+      "proposedManaByLevel": [
+        59,
+        70,
+        81,
+        92,
+        103,
+        114,
+        125,
+        136,
+        147,
+        158
+      ],
+      "notes": []
+    },
+    {
+      "nr": 98,
+      "name": "Schockwelle der Regeneration",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "hybridReview",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        183,
+        233,
+        283,
+        333,
+        383,
+        433,
+        483,
+        533,
+        583,
+        633
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Schadensangriff mit zusätzlicher Heilung: Komponenten getrennt prüfen, keine doppelte Vollbepreisung."
+      ]
+    },
+    {
+      "nr": 99,
+      "name": "Schrei der Unterwelt",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 3,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 101,
+      "name": "Schwerter des Lichtes",
+      "classes": [
+        "Heiler",
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        273,
+        357,
+        441,
+        525,
+        609,
+        693,
+        777,
+        861,
+        945,
+        1029
+      ],
+      "currentManaByLevel": [
+        123,
+        180,
+        237,
+        294,
+        351,
+        408,
+        465,
+        522,
+        579,
+        636
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 68,
+        "perLevel": 21
+      },
+      "proposedManaByLevel": [
+        68,
+        89,
+        110,
+        131,
+        152,
+        173,
+        194,
+        215,
+        236,
+        257
+      ],
+      "notes": []
+    },
+    {
+      "nr": 103,
+      "name": "Seelenfessel",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 15,
+      "group": "combo",
+      "factor": 0.4,
+      "status": "comboBudgetPendingDistribution",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        25,
+        37,
+        49,
+        61,
+        73,
+        85,
+        97,
+        109,
+        121,
+        133,
+        145,
+        157,
+        169,
+        181,
+        193
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Gemeinsames Kombobudget unten; keine zusätzliche Einzelbepreisung."
+      ]
+    },
+    {
+      "nr": 104,
+      "name": "Seelenqual",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 10,
+      "group": "combo",
+      "factor": 0.4,
+      "status": "comboBudgetPendingDistribution",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        23,
+        28,
+        33,
+        38,
+        43,
+        48,
+        53,
+        58,
+        63,
+        68
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Gemeinsames Kombobudget unten; keine zusätzliche Einzelbepreisung."
+      ]
+    },
+    {
+      "nr": 105,
+      "name": "Seelenernte",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 5,
+      "group": "combo",
+      "factor": 0.4,
+      "status": "comboBudgetPendingDistribution",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        153,
+        231,
+        309,
+        387,
+        465
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Gemeinsames Kombobudget unten; keine zusätzliche Einzelbepreisung."
+      ]
+    },
+    {
+      "nr": 106,
+      "name": "Sprungschlag",
+      "classes": [
+        "Gladiator",
+        "Abenteurer",
+        "Druide"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        391,
+        526,
+        661,
+        796,
+        931,
+        1066,
+        1201,
+        1336,
+        1471,
+        1606
+      ],
+      "currentManaByLevel": [
+        174,
+        234,
+        294,
+        354,
+        414,
+        474,
+        534,
+        594,
+        654,
+        714
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 98,
+        "perLevel": 34
+      },
+      "proposedManaByLevel": [
+        98,
+        132,
+        166,
+        200,
+        234,
+        268,
+        302,
+        336,
+        370,
+        404
+      ],
+      "notes": []
+    },
+    {
+      "nr": 108,
+      "name": "Strahlendes Aurafeld",
+      "classes": [
+        "Heiler"
+      ],
+      "levels": 10,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        60,
+        120,
+        180,
+        240,
+        300,
+        360,
+        420,
+        480,
+        540,
+        600
+      ],
+      "currentManaByLevel": [
+        15,
+        19,
+        23,
+        27,
+        31,
+        35,
+        39,
+        43,
+        47,
+        51
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 21,
+        "perLevel": 21
+      },
+      "proposedManaByLevel": [
+        21,
+        42,
+        63,
+        84,
+        105,
+        126,
+        147,
+        168,
+        189,
+        210
+      ],
+      "notes": [
+        "Referenz: Selbstheilung eines Empfängers; Verbündetenheilung separat, nicht mit der Gruppengröße multipliziert."
+      ]
+    },
+    {
+      "nr": 109,
+      "name": "Sturm der Wut",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 110,
+      "name": "Sturm des Feuers",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        113,
+        182,
+        251,
+        320,
+        389,
+        458,
+        527,
+        596,
+        665,
+        734
+      ],
+      "currentManaByLevel": [
+        42,
+        79,
+        116,
+        153,
+        190,
+        227,
+        264,
+        301,
+        338,
+        375
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 28,
+        "perLevel": 17
+      },
+      "proposedManaByLevel": [
+        28,
+        45,
+        62,
+        79,
+        96,
+        113,
+        130,
+        147,
+        164,
+        181
+      ],
+      "notes": []
+    },
+    {
+      "nr": 111,
+      "name": "Sturmklinge",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        333,
+        444,
+        555,
+        666,
+        777,
+        888,
+        999,
+        1110,
+        1221,
+        1332
+      ],
+      "currentManaByLevel": [
+        217,
+        279.55555555555554,
+        342.1111111111111,
+        404.6666666666667,
+        467.22222222222223,
+        529.7777777777778,
+        592.3333333333334,
+        654.8888888888889,
+        717.4444444444445,
+        780
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 83,
+        "perLevel": 28
+      },
+      "proposedManaByLevel": [
+        83,
+        111,
+        139,
+        167,
+        195,
+        223,
+        251,
+        279,
+        307,
+        335
+      ],
+      "notes": []
+    },
+    {
+      "nr": 112,
+      "name": "Tobender Sturm",
+      "classes": [
+        "Kräuterkundler"
+      ],
+      "levels": 10,
+      "group": "finisher",
+      "factor": 0.4,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        532,
+        891,
+        1312,
+        1436,
+        1950,
+        2526,
+        3164,
+        3381,
+        4112,
+        4905
+      ],
+      "currentManaByLevel": [
+        123,
+        168,
+        213,
+        258,
+        303,
+        348,
+        393,
+        438,
+        483,
+        528
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          213,
+          356,
+          525,
+          574,
+          780,
+          1010,
+          1266,
+          1352,
+          1645,
+          1962
+        ]
+      },
+      "proposedManaByLevel": [
+        213,
+        356,
+        525,
+        574,
+        780,
+        1010,
+        1266,
+        1352,
+        1645,
+        1962
+      ],
+      "notes": [
+        "Anhaltendes Feld/Großangriff; vollständige definierte Anwendung gegen ein Ziel. Infernal Zyklon vom Nutzer ausdrücklich eingeschlossen."
+      ]
+    },
+    {
+      "nr": 113,
+      "name": "Tödlicher Tanz",
+      "classes": [
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        414,
+        525,
+        848,
+        996,
+        1430,
+        1615,
+        2160,
+        2382,
+        3038,
+        3768
+      ],
+      "currentManaByLevel": [
+        45,
+        76,
+        107,
+        138,
+        169,
+        200,
+        231,
+        262,
+        293,
+        324
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          104,
+          131,
+          212,
+          249,
+          358,
+          404,
+          540,
+          596,
+          760,
+          942
+        ]
+      },
+      "proposedManaByLevel": [
+        104,
+        131,
+        212,
+        249,
+        358,
+        404,
+        540,
+        596,
+        760,
+        942
+      ],
+      "notes": [
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 115,
+      "name": "Überschallklinge",
+      "classes": [
+        "Abenteurer",
+        "Schurke"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        636,
+        866,
+        1096,
+        1326,
+        1556
+      ],
+      "currentManaByLevel": [
+        231,
+        305,
+        379,
+        453,
+        527
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 159,
+        "perLevel": 58
+      },
+      "proposedManaByLevel": [
+        159,
+        217,
+        275,
+        333,
+        391
+      ],
+      "notes": []
+    },
+    {
+      "nr": 117,
+      "name": "Urteil des Himmels",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        474,
+        643.5,
+        813,
+        982.5,
+        1152
+      ],
+      "currentManaByLevel": [
+        157,
+        219,
+        281,
+        343,
+        405
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 119,
+        "perLevel": 42
+      },
+      "proposedManaByLevel": [
+        119,
+        161,
+        203,
+        245,
+        287
+      ],
+      "notes": []
+    },
+    {
+      "nr": 118,
+      "name": "Vakuumimpuls",
+      "classes": [
+        "Schamane"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        532,
+        889,
+        1246,
+        1603,
+        1960
+      ],
+      "currentManaByLevel": [
+        225,
+        307,
+        389,
+        471,
+        553
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 133,
+        "perLevel": 89
+      },
+      "proposedManaByLevel": [
+        133,
+        222,
+        311,
+        400,
+        489
+      ],
+      "notes": []
+    },
+    {
+      "nr": 121,
+      "name": "Verstärkter Pfeil",
+      "classes": [
+        "Jäger"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        257,
+        329,
+        401,
+        473,
+        545,
+        617,
+        689,
+        761,
+        833,
+        905,
+        977,
+        1049,
+        1121,
+        1193,
+        1265,
+        1337,
+        1409,
+        1481,
+        1553,
+        1625
+      ],
+      "currentManaByLevel": [
+        67,
+        102,
+        137,
+        172,
+        207,
+        242,
+        277,
+        312,
+        347,
+        382,
+        417,
+        452,
+        487,
+        522,
+        557,
+        592,
+        627,
+        662,
+        697,
+        732
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 64,
+        "perLevel": 18
+      },
+      "proposedManaByLevel": [
+        64,
+        82,
+        100,
+        118,
+        136,
+        154,
+        172,
+        190,
+        208,
+        226,
+        244,
+        262,
+        280,
+        298,
+        316,
+        334,
+        352,
+        370,
+        388,
+        406
+      ],
+      "notes": []
+    },
+    {
+      "nr": 124,
+      "name": "Wiederherstellung",
+      "classes": [
+        "Heiler"
+      ],
+      "levels": 20,
+      "group": "heal",
+      "factor": 0.35,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        33,
+        72,
+        117,
+        168,
+        225,
+        288,
+        357,
+        432,
+        513,
+        600,
+        693,
+        792,
+        897,
+        1008,
+        1500,
+        1664,
+        1836,
+        2016,
+        2204,
+        2400
+      ],
+      "currentManaByLevel": [
+        22,
+        30,
+        38,
+        46,
+        54,
+        62,
+        70,
+        78,
+        86,
+        94,
+        102,
+        110,
+        118,
+        126,
+        134,
+        142,
+        150,
+        158,
+        166,
+        174
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          12,
+          25,
+          41,
+          59,
+          79,
+          101,
+          125,
+          151,
+          180,
+          210,
+          243,
+          277,
+          314,
+          353,
+          525,
+          582,
+          643,
+          706,
+          771,
+          840
+        ]
+      },
+      "proposedManaByLevel": [
+        12,
+        25,
+        41,
+        59,
+        79,
+        101,
+        125,
+        151,
+        180,
+        210,
+        243,
+        277,
+        314,
+        353,
+        525,
+        582,
+        643,
+        706,
+        771,
+        840
+      ],
+      "notes": []
+    },
+    {
+      "nr": 125,
+      "name": "Windfesseln",
+      "classes": [
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        223,
+        257,
+        291,
+        325,
+        359,
+        393,
+        427,
+        461,
+        495,
+        529
+      ],
+      "currentManaByLevel": [
+        87,
+        109,
+        131,
+        153,
+        175,
+        197,
+        219,
+        241,
+        263,
+        285
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 56,
+        "perLevel": 9
+      },
+      "proposedManaByLevel": [
+        56,
+        65,
+        74,
+        83,
+        92,
+        101,
+        110,
+        119,
+        128,
+        137
+      ],
+      "notes": []
+    },
+    {
+      "nr": 126,
+      "name": "Wirbelnde Klinge",
+      "classes": [
+        "Abenteurer",
+        "Schurke"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        1385,
+        1560,
+        1735,
+        1910,
+        2085,
+        2260,
+        2435,
+        2610,
+        2785,
+        2960
+      ],
+      "currentManaByLevel": [
+        123,
+        152.55555555555554,
+        182.11111111111111,
+        211.66666666666669,
+        241.22222222222223,
+        270.77777777777777,
+        300.33333333333337,
+        329.8888888888889,
+        359.44444444444446,
+        389
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 346,
+        "perLevel": 44
+      },
+      "proposedManaByLevel": [
+        346,
+        390,
+        434,
+        478,
+        522,
+        566,
+        610,
+        654,
+        698,
+        742
+      ],
+      "notes": [
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 127,
+      "name": "Wutexplosion",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 128,
+      "name": "Wutklinge",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 180,
+      "name": "Seelenplage",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 184,
+      "name": "Hinterhältiger Pfeil",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        37,
+        40,
+        43,
+        46,
+        49,
+        52,
+        55,
+        58,
+        61,
+        64
+      ],
+      "currentManaByLevel": [
+        39,
+        45,
+        51,
+        57,
+        63,
+        69,
+        75,
+        81,
+        87,
+        93
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 9,
+        "perLevel": 1
+      },
+      "proposedManaByLevel": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "notes": [
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 185,
+      "name": "Seelenschuss",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 10,
+      "group": "combo",
+      "factor": 0.4,
+      "status": "comboBudgetPendingDistribution",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Gemeinsames Kombobudget unten; keine zusätzliche Einzelbepreisung."
+      ]
+    },
+    {
+      "nr": 186,
+      "name": "Seelensammler",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 10,
+      "group": "combo",
+      "factor": 0.4,
+      "status": "comboBudgetPendingDistribution",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Gemeinsames Kombobudget unten; keine zusätzliche Einzelbepreisung."
+      ]
+    },
+    {
+      "nr": 202,
+      "name": "Verbrennen",
+      "classes": [
+        "Druide"
+      ],
+      "levels": 15,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        60,
+        90,
+        120,
+        150,
+        180,
+        210,
+        240,
+        270,
+        300,
+        330,
+        360,
+        390,
+        420,
+        450,
+        480
+      ],
+      "currentManaByLevel": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 8
+      },
+      "proposedManaByLevel": [
+        15,
+        23,
+        31,
+        39,
+        47,
+        55,
+        63,
+        71,
+        79,
+        87,
+        95,
+        103,
+        111,
+        119,
+        127
+      ],
+      "notes": []
+    },
+    {
+      "nr": 210,
+      "name": "Lichtblitz",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 20,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        62,
+        90,
+        118,
+        146,
+        174,
+        202,
+        230,
+        258,
+        286,
+        314,
+        342,
+        370,
+        398,
+        426,
+        454,
+        482,
+        510,
+        538,
+        566,
+        594
+      ],
+      "currentManaByLevel": [
+        32,
+        42,
+        52,
+        62,
+        72,
+        82,
+        92,
+        102,
+        112,
+        122,
+        132,
+        142,
+        152,
+        162,
+        172,
+        182,
+        192,
+        202,
+        212,
+        222
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 16,
+        "perLevel": 7
+      },
+      "proposedManaByLevel": [
+        16,
+        23,
+        30,
+        37,
+        44,
+        51,
+        58,
+        65,
+        72,
+        79,
+        86,
+        93,
+        100,
+        107,
+        114,
+        121,
+        128,
+        135,
+        142,
+        149
+      ],
+      "notes": []
+    },
+    {
+      "nr": 211,
+      "name": "Aurora Wellen",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        384,
+        508,
+        632,
+        756,
+        880,
+        1004,
+        1128,
+        1252,
+        1376,
+        1500
+      ],
+      "currentManaByLevel": [
+        170,
+        209,
+        248,
+        287,
+        326,
+        365,
+        404,
+        443,
+        482,
+        521
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 96,
+        "perLevel": 31
+      },
+      "proposedManaByLevel": [
+        96,
+        127,
+        158,
+        189,
+        220,
+        251,
+        282,
+        313,
+        344,
+        375
+      ],
+      "notes": [
+        "Grenzfall: Mehrfachtreffer, besondere Kombo oder offene Mechanik; Gruppenzuordnung vor Übernahme prüfen."
+      ]
+    },
+    {
+      "nr": 212,
+      "name": "Himmelsbrecher",
+      "classes": [
+        "Schamane"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        784.8000000000001,
+        903.6,
+        1022.4,
+        1141.2,
+        1260,
+        1378.8,
+        1497.6000000000001,
+        1616.4,
+        1735.2,
+        1854
+      ],
+      "currentManaByLevel": [
+        207,
+        316,
+        425,
+        534,
+        643,
+        752,
+        861,
+        970,
+        1079,
+        1188
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 196,
+        "perLevel": 30
+      },
+      "proposedManaByLevel": [
+        196,
+        226,
+        256,
+        286,
+        316,
+        346,
+        376,
+        406,
+        436,
+        466
+      ],
+      "notes": []
+    },
+    {
+      "nr": 213,
+      "name": "Strafendes Licht",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        292,
+        399,
+        506,
+        613,
+        720,
+        827,
+        934,
+        1041,
+        1148,
+        1255
+      ],
+      "currentManaByLevel": [
+        89,
+        152,
+        215,
+        278,
+        341,
+        404,
+        467,
+        530,
+        593,
+        656
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 27
+      },
+      "proposedManaByLevel": [
+        73,
+        100,
+        127,
+        154,
+        181,
+        208,
+        235,
+        262,
+        289,
+        316
+      ],
+      "notes": []
+    },
+    {
+      "nr": 215,
+      "name": "Heiliges Kreuz",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        237,
+        338,
+        439,
+        540,
+        641,
+        742,
+        843,
+        944,
+        1045,
+        1146
+      ],
+      "currentManaByLevel": [
+        77,
+        120,
+        163,
+        206,
+        249,
+        292,
+        335,
+        378,
+        421,
+        464
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 59,
+        "perLevel": 25
+      },
+      "proposedManaByLevel": [
+        59,
+        84,
+        109,
+        134,
+        159,
+        184,
+        209,
+        234,
+        259,
+        284
+      ],
+      "notes": []
+    },
+    {
+      "nr": 216,
+      "name": "Heilige Vernichtung",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        339,
+        450,
+        561,
+        672,
+        783,
+        894,
+        1005,
+        1116,
+        1227,
+        1338
+      ],
+      "currentManaByLevel": [
+        67,
+        92.66666666666667,
+        118.33333333333334,
+        144,
+        169.66666666666669,
+        195.33333333333334,
+        221,
+        246.66666666666669,
+        272.33333333333337,
+        298
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 85,
+        "perLevel": 28
+      },
+      "proposedManaByLevel": [
+        85,
+        113,
+        141,
+        169,
+        197,
+        225,
+        253,
+        281,
+        309,
+        337
+      ],
+      "notes": []
+    },
+    {
+      "nr": 217,
+      "name": "Göttliche Nova",
+      "classes": [
+        "Heiler",
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        473,
+        566,
+        659,
+        752,
+        845,
+        938,
+        1031,
+        1124,
+        1217,
+        1415
+      ],
+      "currentManaByLevel": [
+        137,
+        193.88888888888889,
+        250.77777777777777,
+        307.66666666666663,
+        364.55555555555554,
+        421.44444444444446,
+        478.3333333333333,
+        535.2222222222222,
+        592.1111111111111,
+        649
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          118,
+          142,
+          165,
+          188,
+          211,
+          235,
+          258,
+          281,
+          304,
+          354
+        ]
+      },
+      "proposedManaByLevel": [
+        118,
+        142,
+        165,
+        188,
+        211,
+        235,
+        258,
+        281,
+        304,
+        354
+      ],
+      "notes": []
+    },
+    {
+      "nr": 218,
+      "name": "Licht kristallenes Gefängnis",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 3,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        291,
+        400,
+        509
+      ],
+      "currentManaByLevel": [
+        115,
+        162,
+        209
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 27
+      },
+      "proposedManaByLevel": [
+        73,
+        100,
+        127
+      ],
+      "notes": []
+    },
+    {
+      "nr": 219,
+      "name": "Manaexplosion",
+      "classes": [
+        "Druide"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "specialCostUnchanged",
+      "basisByLevel": null,
+      "currentManaByLevel": null,
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Bestehende Sonderressource/prozentuale/kostenlose Mechanik nicht automatisch ersetzen."
+      ]
+    },
+    {
+      "nr": 220,
+      "name": "Bannmagie",
+      "classes": [
+        "Druide"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        37,
+        50,
+        63,
+        76,
+        89,
+        102,
+        115,
+        128,
+        141,
+        154
+      ],
+      "currentManaByLevel": [
+        17,
+        28,
+        39,
+        50,
+        61,
+        72,
+        83,
+        94,
+        105,
+        116
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 9,
+        "perLevel": 3
+      },
+      "proposedManaByLevel": [
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36
+      ],
+      "notes": []
+    },
+    {
+      "nr": 221,
+      "name": "Windschlitzer",
+      "classes": [
+        "Kräuterkundler",
+        "Druide"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        211,
+        282,
+        353,
+        424,
+        495,
+        566,
+        637,
+        708,
+        779,
+        850
+      ],
+      "currentManaByLevel": [
+        73,
+        110,
+        147,
+        184,
+        221,
+        258,
+        295,
+        332,
+        369,
+        406
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 53,
+        "perLevel": 18
+      },
+      "proposedManaByLevel": [
+        53,
+        71,
+        89,
+        107,
+        125,
+        143,
+        161,
+        179,
+        197,
+        215
+      ],
+      "notes": []
+    },
+    {
+      "nr": 227,
+      "name": "Dämonische Schockwelle",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 3,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        281,
+        562,
+        1124
+      ],
+      "currentManaByLevel": [
+        55,
+        110,
+        220
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          70,
+          140,
+          280
+        ]
+      },
+      "proposedManaByLevel": [
+        70,
+        140,
+        280
+      ],
+      "notes": []
+    },
+    {
+      "nr": 229,
+      "name": "Spektralketten",
+      "classes": [
+        "Nachtjäger"
+      ],
+      "levels": 1,
+      "group": "combo",
+      "factor": 0.4,
+      "status": "comboBudgetPendingDistribution",
+      "basisByLevel": null,
+      "currentManaByLevel": [
+        0
+      ],
+      "proposedManaCurve": null,
+      "proposedManaByLevel": null,
+      "notes": [
+        "Gemeinsames Kombobudget unten; keine zusätzliche Einzelbepreisung."
+      ]
+    },
+    {
+      "nr": 230,
+      "name": "Wirbelsturm",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        153,
+        237.33333333333331,
+        321.66666666666663,
+        406,
+        490.3333333333333,
+        574.6666666666666,
+        659,
+        743.3333333333333,
+        827.6666666666666,
+        912
+      ],
+      "currentManaByLevel": [
+        83,
+        117,
+        151,
+        185,
+        219,
+        253,
+        287,
+        321,
+        355,
+        389
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 38,
+        "perLevel": 21
+      },
+      "proposedManaByLevel": [
+        38,
+        59,
+        80,
+        101,
+        122,
+        143,
+        164,
+        185,
+        206,
+        227
+      ],
+      "notes": []
+    },
+    {
+      "nr": 231,
+      "name": "Luminus",
+      "classes": [
+        "Luminet"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        17,
+        26,
+        35,
+        44,
+        53,
+        62,
+        71,
+        80,
+        89,
+        98
+      ],
+      "currentManaByLevel": [
+        21,
+        27,
+        33,
+        39,
+        45,
+        51,
+        57,
+        63,
+        69,
+        75
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 2
+      },
+      "proposedManaByLevel": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22
+      ],
+      "notes": []
+    },
+    {
+      "nr": 232,
+      "name": "Dunkler Impuls",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        42,
+        65,
+        88,
+        111,
+        134,
+        157,
+        180,
+        203,
+        226,
+        249
+      ],
+      "currentManaByLevel": [
+        18,
+        26,
+        34,
+        42,
+        50,
+        58,
+        66,
+        74,
+        82,
+        90
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 11,
+        "perLevel": 6
+      },
+      "proposedManaByLevel": [
+        11,
+        17,
+        23,
+        29,
+        35,
+        41,
+        47,
+        53,
+        59,
+        65
+      ],
+      "notes": []
+    },
+    {
+      "nr": 233,
+      "name": "Kriegerischer Ansturm",
+      "classes": [
+        "Gladiator"
+      ],
+      "levels": 10,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        137,
+        277,
+        417,
+        557,
+        697,
+        837,
+        977,
+        1117,
+        1257,
+        1397
+      ],
+      "currentManaByLevel": [
+        44,
+        73,
+        102,
+        131,
+        160,
+        189,
+        218,
+        247,
+        276,
+        305
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 34,
+        "perLevel": 35
+      },
+      "proposedManaByLevel": [
+        34,
+        69,
+        104,
+        139,
+        174,
+        209,
+        244,
+        279,
+        314,
+        349
+      ],
+      "notes": []
+    },
+    {
+      "nr": 234,
+      "name": "Zorn des Henkers",
+      "classes": [
+        "Butcher"
+      ],
+      "levels": 5,
+      "group": "normal",
+      "factor": 0.25,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        600,
+        1155,
+        1710,
+        2265,
+        2820
+      ],
+      "currentManaByLevel": [
+        217,
+        340,
+        463,
+        586,
+        709
+      ],
+      "proposedManaCurve": {
+        "type": "linear",
+        "base": 150,
+        "perLevel": 139
+      },
+      "proposedManaByLevel": [
+        150,
+        289,
+        428,
+        567,
+        706
+      ],
+      "notes": []
+    },
+    {
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "classes": [
+        "Ritualist"
+      ],
+      "levels": 3,
+      "group": "finisher",
+      "factor": 0.4,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        1629,
+        3258,
+        6516
+      ],
+      "currentManaByLevel": [
+        255,
+        362,
+        469
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          652,
+          1304,
+          2608
+        ]
+      },
+      "proposedManaByLevel": [
+        652,
+        1304,
+        2608
+      ],
+      "notes": [
+        "Anhaltendes Feld/Großangriff; vollständige definierte Anwendung gegen ein Ziel. Infernal Zyklon vom Nutzer ausdrücklich eingeschlossen."
+      ]
+    },
+    {
+      "nr": 239,
+      "name": "Frostschauer",
+      "classes": [
+        "Heiler"
+      ],
+      "levels": 10,
+      "group": "finisher",
+      "factor": 0.4,
+      "status": "referenceOnly",
+      "basisByLevel": [
+        64,
+        117.11111111111111,
+        255.33333333333334,
+        335,
+        414.6666666666667,
+        659.1111111111111,
+        765.3333333333334,
+        871.5555555555557,
+        1222.2222222222222,
+        1355
+      ],
+      "currentManaByLevel": [
+        56,
+        90,
+        124,
+        158,
+        192,
+        226,
+        260,
+        294,
+        328,
+        362
+      ],
+      "proposedManaCurve": {
+        "type": "table",
+        "values": [
+          26,
+          47,
+          102,
+          134,
+          166,
+          264,
+          306,
+          349,
+          489,
+          542
+        ]
+      },
+      "proposedManaByLevel": [
+        26,
+        47,
+        102,
+        134,
+        166,
+        264,
+        306,
+        349,
+        489,
+        542
+      ],
+      "notes": [
+        "Anhaltendes Feld/Großangriff; vollständige definierte Anwendung gegen ein Ziel. Infernal Zyklon vom Nutzer ausdrücklich eingeschlossen."
+      ]
+    }
+  ],
+  "comboBudgets": [
+    {
+      "name": "Ritualist: Seelenfessel + 15 Seelenqual + Seelenernte",
+      "skills": [
+        103,
+        104,
+        105
+      ],
+      "basis": 3770,
+      "factor": 0.4,
+      "budget": 1508,
+      "currentMana": 1678,
+      "additionalCost": "1 Seele für Seelenfessel; variable Rückgewinnung separat",
+      "status": "maximumLevelBudgetOnlyDistributionPending"
+    },
+    {
+      "name": "Seelenjäger: Markierung + 25 Seelensammler + Spektralketten",
+      "skills": [
+        185,
+        186,
+        229
+      ],
+      "basis": 4097.95,
+      "factor": 0.4,
+      "budget": 1639,
+      "currentMana": 0,
+      "additionalCost": "Sammelfenster und erreichter Punktestand",
+      "status": "maximumLevelBudgetOnlyDistributionPending"
+    }
+  ],
+  "damageChanges": [],
+  "simulationRun": false
+}

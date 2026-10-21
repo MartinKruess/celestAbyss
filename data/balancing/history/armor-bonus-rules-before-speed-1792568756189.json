@@ -1,0 +1,346 @@
+{
+  "_id": "armor-bonus-rules",
+  "generationStatus": "Approved attribute, regeneration and health/mana bases; awaiting remaining values and quality tiers",
+  "rules": {
+    "maximumCapacity": 6,
+    "availableByRank": {
+      "1": 0,
+      "2": 1,
+      "3": 1,
+      "4": 2,
+      "5": 2,
+      "6": 3
+    },
+    "assignmentStatus": "No bonus values assigned yet",
+    "socketSlots": "Separate from bonus slots; not determined here",
+    "randomSelection": {
+      "mode": "weightedDrawWithReplacement",
+      "guaranteedOneValuePerAvailableSlot": true,
+      "duplicatesAllowed": true,
+      "totalWeight": 393,
+      "rollTiming": "Once on drop, persist on the individual item instance",
+      "rerollStatus": "Possible future crafting; not defined",
+      "valueRangesStatus": "Base values approved for seven attributes, both regeneration stats and maximum health/mana; remaining values and quality tiers undefined",
+      "qualityTiersStatus": "Not yet defined",
+      "precisionScope": "Rolled bonus value in the displayed stat unit; derived character values are not rounded by this rule",
+      "pool": [
+        {
+          "stat": "strength",
+          "name": "Stärke",
+          "weight": 20,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.4
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.4,
+            "3": 1.8,
+            "4": 2.2,
+            "5": 2.6,
+            "6": 3
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "vitality",
+          "name": "Vitalität",
+          "weight": 20,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.4
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.4,
+            "3": 1.8,
+            "4": 2.2,
+            "5": 2.6,
+            "6": 3
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "intelligence",
+          "name": "Intelligenz",
+          "weight": 20,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.4
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.4,
+            "3": 1.8,
+            "4": 2.2,
+            "5": 2.6,
+            "6": 3
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "wisdom",
+          "name": "Willenskraft",
+          "weight": 20,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.4
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.4,
+            "3": 1.8,
+            "4": 2.2,
+            "5": 2.6,
+            "6": 3
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "dexterity",
+          "name": "Geschick",
+          "weight": 20,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.4
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.4,
+            "3": 1.8,
+            "4": 2.2,
+            "5": 2.6,
+            "6": 3
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "agility",
+          "name": "Agilität",
+          "weight": 20,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.4
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.4,
+            "3": 1.8,
+            "4": 2.2,
+            "5": 2.6,
+            "6": 3
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "luck",
+          "name": "Glück",
+          "weight": 10,
+          "decimalPlaces": 1,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 1,
+            "perRank": 0.2
+          },
+          "baseValueByRank": {
+            "1": 1,
+            "2": 1.2,
+            "3": 1.4,
+            "4": 1.6,
+            "5": 1.8,
+            "6": 2
+          },
+          "baseValueStatus": "Approved base values; quality tiers not defined. R1 is a curve anchor only, since R1 has no random bonus slots."
+        },
+        {
+          "stat": "maxHealth",
+          "name": "Maximales Leben",
+          "weight": 30,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 35,
+            "perRank": 35
+          },
+          "baseValueByRank": {
+            "1": 35,
+            "2": 70,
+            "3": 105,
+            "4": 140,
+            "5": 175,
+            "6": 210
+          },
+          "baseValueStatus": "Approved base values 35 per equipment rank, up to 210 at R6. Quality tiers undefined; R1 is a curve anchor only, with no random bonus slots."
+        },
+        {
+          "stat": "maxMana",
+          "name": "Maximales Mana",
+          "weight": 25,
+          "decimalPlaces": 0,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 40,
+            "perRank": 40
+          },
+          "baseValueByRank": {
+            "1": 40,
+            "2": 80,
+            "3": 120,
+            "4": 160,
+            "5": 200,
+            "6": 240
+          },
+          "baseValueStatus": "Approved base values 40 per equipment rank, up to 240 at R6. Quality tiers undefined; R1 is a curve anchor only, with no random bonus slots."
+        },
+        {
+          "stat": "healthRegen",
+          "name": "Lebensregeneration",
+          "weight": 30,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 0.2,
+            "perRank": 0.1
+          },
+          "baseValueByRank": {
+            "1": 0.2,
+            "2": 0.3,
+            "3": 0.4,
+            "4": 0.5,
+            "5": 0.6,
+            "6": 0.7
+          },
+          "baseValueStatus": "Approved per-tick base values; R6 reaches 0.7. Quality tiers remain undefined. R1 is only a curve anchor, with no random bonus slots."
+        },
+        {
+          "stat": "manaRegen",
+          "name": "Manaregeneration",
+          "weight": 25,
+          "decimalPlaces": 2,
+          "baseValueProgression": {
+            "type": "linearByEquipmentRank",
+            "baseRank": 1,
+            "baseValue": 0.2,
+            "perRank": 0.1
+          },
+          "baseValueByRank": {
+            "1": 0.2,
+            "2": 0.3,
+            "3": 0.4,
+            "4": 0.5,
+            "5": 0.6,
+            "6": 0.7
+          },
+          "baseValueStatus": "Approved per-tick base values; R6 reaches 0.7. Quality tiers remain undefined. R1 is only a curve anchor, with no random bonus slots."
+        },
+        {
+          "stat": "physicalAttack",
+          "name": "Physischer Angriff",
+          "weight": 3,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "magicalAttack",
+          "name": "Magischer Angriff",
+          "weight": 3,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "physicalDefense",
+          "name": "Physische Abwehr",
+          "weight": 15,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "magicalDefense",
+          "name": "Magische Abwehr",
+          "weight": 15,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "attackSpeed",
+          "name": "Angriffsgeschwindigkeit",
+          "weight": 10,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "movementSpeed",
+          "name": "Laufgeschwindigkeit",
+          "weight": 10,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "accuracy",
+          "name": "Genauigkeit",
+          "weight": 15,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "dodge",
+          "name": "Ausweichen",
+          "weight": 15,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "critChanceRating",
+          "name": "Kritischer Trefferwert",
+          "weight": 10,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "criticalDamageBonus",
+          "name": "Kritischer Zusatzschaden",
+          "weight": 3,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "block",
+          "name": "Block",
+          "weight": 15,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "penetration",
+          "name": "Penetration",
+          "weight": 15,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "physicalSkillDamageBonus",
+          "name": "Physischer Skillschaden",
+          "weight": 12,
+          "decimalPlaces": 2
+        },
+        {
+          "stat": "magicalSkillDamageBonus",
+          "name": "Magischer Skillschaden",
+          "weight": 12,
+          "decimalPlaces": 2
+        }
+      ]
+    }
+  },
+  "source": "data/balancing/armor-defense-model.json"
+}

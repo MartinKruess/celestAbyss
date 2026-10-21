@@ -1,0 +1,691 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b74",
+    "skillName_eng": "Blood Reaver",
+    "__v": 0,
+    "category": "active",
+    "cd": 80,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verursacht einmalig physischen Schaden und heilt dich um 2 Prozent des tatsächlich durch diesen Angriff verursachten Lebensschadens auf Stufe 1. Je weiterer Stufe steigt der Heilungsanteil um 0,5 Prozentpunkte auf 6,5 Prozent auf Stufe 10. Der physische Grundschaden steigt von 100 um 73 je weiterer Stufe auf 757. Mana-Kosten steigen von 56 um 32 je weiterer Stufe auf 344. Der Cooldown sinkt von 80 um 1 Sekunde je weiterer Stufe auf 71 Sekunden. Castzeit 0,1 Sekunden, vorläufige Animation 0,5 Sekunden. Keine anhaltende Heilungswirkung für weitere Angriffe.",
+    "description_eng": "Deals physical damage once and heals you for 2 percent of the actual Health damage dealt by this attack at level 1. Each additional level adds 0.5 percentage points, reaching 6.5 percent at level 10. Base physical damage increases from 100 by 73 per additional level to 757. Mana cost increases from 56 by 32 per additional level to 344. Cooldown decreases from 80 by 1 second per additional level to 71 seconds. Cast time is 0.1 seconds; provisional animation is 0.5 seconds. Does not grant ongoing healing for later attacks.",
+    "dmgType": "physical",
+    "health": 0.02,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 17,
+    "patk": 100,
+    "skillName_de": "Blutklinge",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 80,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "key": "blood-blade-self-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 0.02,
+        "unit": "fraction",
+        "reference": "damageDealt",
+        "damageBasis": "actualHealthDamage",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.02,
+          "perLevel": 0.005
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 56,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 56,
+          "perLevel": 32
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 100,
+        "perLevel": 73
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 80,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.02,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 56,
+              "perLevel": 32
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 100,
+            "perLevel": 73
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b92",
+    "skillName_eng": "Explosive Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 36,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Die nächsten drei Pfeile verursachen jeweils 2 Sekunden nach dem Auftreffen zusätzlichen physischen Explosionsschaden. Der Explosionsgrundschaden startet bei 334 und steigt um 42 je weiterer Stufe auf 712 auf Stufe 10. Die Aktivierung kostet einmalig 147 Mana-Kosten 251 auf Stufe 1, +32 je weiterer Stufe, maximal 539 auf Stufe 10. Cooldown sinkt gleichmäßig von 36 auf 30 Sekunden. Zusätzliche Castzeit 0 Sekunden. Vorläufige Ausführungs-/Fluganimation 1,5 Sekunden; die Explosionsverzögerung nach dem Treffer ist davon getrennt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "The next three arrows each deal additional physical explosion damage 2 seconds after impact. Base explosion damage starts at 334 and increases by 42 per additional level to 712 at level 10. Activation costs 147 Mana cost 251 at level 1, maximum 539 at level 10. Cooldown decreases evenly from 36 to 30 seconds. Additional cast time is 0 seconds. Provisional execution/travel animation is 1.5 seconds; post-impact explosion delay is separate.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 47,
+    "patk": 334,
+    "skillName_de": "Explosionspfeil",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "animationDurationSeconds": 1.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "empoweredBasicAttacks": 3,
+      "explosionDelayAfterImpactSeconds": 2,
+      "damageValueScope": "perHit",
+      "timingStatus": "pending"
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 36,
+      "perLevel": -0.6666666666666666
+    },
+    "mana": 251,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 251,
+          "perLevel": 32
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 334,
+        "perLevel": 42
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 36,
+              "perLevel": -0.6666666666666666
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 251,
+              "perLevel": 32
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 334,
+            "perLevel": 42
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b95",
+    "skillName_eng": "Firelance",
+    "__v": 0,
+    "category": "active",
+    "cd": 49,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft eine Feuerlanze, die einen Gegner einmalig durchbohrt. Der magische Grundschaden steigt von 197 um 46 je weiterer Stufe auf 611 auf Stufe 10. Mana-Kosten 49 auf Stufe 1, +12 je weiterer Stufe, maximal 157 auf Stufe 10. Der Cooldown sinkt von 49 um 1 Sekunde je weiterer Stufe auf 40 Sekunden. Castzeit 0,2 Sekunden. Keine anhaltende Schadenswirkung; der Rüstungseffekt der Eislanze wird nicht übernommen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates a lance of fire that pierces an enemy once. Base magical damage increases from 197 by 46 per additional level to 611 at level 10. Mana cost 49 at level 1, maximum 157 at level 10. Cooldown decreases from 49 by 1 second per additional level to 40 seconds. Cast time is 0.2 seconds. No ongoing damage; the Ice Lance armor effect is not copied.",
+    "dmgType": "spell",
+    "matk": 197,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 50,
+    "skillName_de": "Feuerlanze",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 49,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 49,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 49,
+          "perLevel": 12
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 197,
+        "perLevel": 46
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 49,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 49,
+              "perLevel": 12
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 197,
+            "perLevel": 46
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba5",
+    "skillName_eng": "Headshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein gezielter Schuss auf einen Gegner, der garantiert kritisch trifft. Physischer Grundschaden 474, plus 81 je weiterer Stufe, bis zu 1203 auf Stufe 10 vor Krit-Multiplikator, Charakterangriff und Verteidigung. Mana-Kosten 213 auf Stufe 1, +36 je weiterer Stufe, maximal 537 auf Stufe 10. Castzeit 0,3 Sekunden, vorläufige Animation 1 Sekunde. Cooldown weiterhin 55 Sekunden. Krit-Immunitäten werden später geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "A targeted shot at one enemy that is guaranteed to be critical. Physical base damage starts at 474 and increases by 81 per additional level to 1203 at level 10 before critical multiplier, character attack and defence. Mana cost 213 at level 1, maximum 537 at level 10. Cast time is 0.3 seconds; provisional animation is 1 second. Cooldown remains 55 seconds. Critical immunities will be reviewed later.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 66,
+    "patk": 474,
+    "skillName_de": "Kopfschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "guaranteedCriticalHit": true,
+      "criticalImmunityStatus": "pending",
+      "timingStatus": "pending"
+    },
+    "hasLingeringDamage": false,
+    "mana": 213,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 213,
+          "perLevel": 36
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 474,
+        "perLevel": 81
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 213,
+              "perLevel": 36
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 474,
+            "perLevel": 81
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd6",
+    "skillName_eng": "Supersonic Blade",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lädt die Klinge 1 Sekunde auf und führt einen einzelnen physischen Treffer aus. Der getroffene Gegner wird für 0,5 Sekunden kurz paralysiert. Der physische Grundangriffswert steigt von 636 um 230 je weiterer Stufe auf 1556. Die Mana-Kosten 159 auf Stufe 1, +58 je weiterer Stufe, maximal 391 auf Stufe 5. Der Cooldown sinkt von 120 um 3 Sekunden je weiterer Stufe auf 108 Sekunden. Die Paralyse dauert auf allen Stufen gleich lang; ihre genaue Einschränkung von Aktionen ist noch festzulegen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Charges the blade for 1 second and performs one physical hit. The affected enemy is briefly paralyzed for 0.5 seconds. Physical base attack increases from 636 by 230 per additional level to 1556. Mana cost 159 at level 1, maximum 391 at level 5. Cooldown decreases from 120 by 3 seconds per additional level to 108 seconds. Paralysis duration is unchanged across levels; exact action restrictions are still to be defined.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 115,
+    "patk": 636,
+    "skillName_de": "Überschallklinge",
+    "skillpoints": 1,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "key": "supersonicParalysis",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "paralysis",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 0.5,
+        "durationStatus": "defined",
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 159,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 159,
+          "perLevel": 58
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 636,
+        "perLevel": 230
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 120,
+              "perLevel": -3
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 159,
+              "perLevel": 58
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 636,
+            "perLevel": 230
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2d",
+    "skillName_eng": "Burn",
+    "__v": 0,
+    "category": "active",
+    "cd": 22,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lässt einen Gegner für 10 Sekunden brennen. Verursacht insgesamt zehn Schadensticks, einen je Sekunde; erster Tick nach einer Sekunde, kein zusätzlicher Initialtreffer. Magischer Grundschaden je Tick: 12 auf Stufe 1, +6 je weiterer Stufe bis 96 auf Stufe 15. Gesamter Grundschaden: 120 bis 960. Nachwirkender Feuer-DoT ohne zusätzlichen Charakter-M-Angriff je Tick. Mana-Kosten entsprechen exakt gerundet 25 Prozent des gesamten Grundschadens ohne Charakterangriff: 30 auf Stufe 1, +15 je weiterer Stufe bis 240 auf Stufe 15, vor passiven Rabatten. Weisheit des Salamanders verstärkt den Feuerschaden und reduziert die Mana-Kosten. Castzeit 0,2 Sekunden, Cooldown 22 Sekunden. Zielanzahl und Trefferbereich werden später geprüft.",
+    "description_eng": "Burns an enemy for 10 seconds, dealing ten damage ticks, one per second. The first tick occurs after one second; there is no additional initial hit. Magical base damage per tick is 12 at level 1 plus 6 per additional level, reaching 96 at level 15. Total base damage ranges from 120 to 960. Residual fire damage over time does not add caster magical attack per tick. Mana is exactly 25 percent of total base damage, rounded and excluding character attack: 30 at level 1 plus 15 per additional level to 240 at level 15, before passive discounts. Wisdom of the Salamander boosts fire damage and reduces Mana costs. Cast time 0.2 seconds, cooldown 22 seconds. Target count and area remain subject to later review.",
+    "dmgType": "spell",
+    "dur": 10,
+    "matk": 12,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 202,
+    "skillName_de": "Verbrennen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "effects": [
+      {
+        "key": "burn-dot",
+        "type": "periodicDamage",
+        "target": "enemy",
+        "value": 12,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 10,
+        "valueScaling": {
+          "type": "linear",
+          "base": 12,
+          "perLevel": 6
+        },
+        "periodicDamageKind": "residualDot",
+        "addsCasterMagicalAttack": false
+      }
+    ],
+    "hasLingeringDamage": true,
+    "mana": 30,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 30,
+          "perLevel": 15
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 12,
+        "perLevel": 6
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 12,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 12,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

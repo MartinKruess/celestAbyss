@@ -1,0 +1,78 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6d",
+    "skillName_eng": "On the Hunt",
+    "__v": 0,
+    "agi": 3,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du bist ein erfolgreicher Jäger, der die Fähigkeit hat, mit nur einem Pfeil zu töten.\n+ 8 Geschicklichkeit und +3 Agilität",
+    "description_eng": "You are a successful Hunter, who has the ability to kill with just one arrow.\n+ 8 dexterity and +3 agility",
+    "dex": 8,
+    "dmgType": "passive",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 10,
+    "skillName_de": "Auf der Jagd",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b71",
+    "skillName_eng": "Dodge Roll",
+    "__v": 0,
+    "category": "active",
+    "cd": 4,
+    "charClass": [
+      "Hunter",
+      "Archer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Weiche mit einer Rolle aus. Auf Skilllevel 1 verbraucht sie 15 Prozent deiner maximalen Ausdauer und hat 4 Sekunden Cooldown, auf Skilllevel 2 sind es 10 Prozent und 2 Sekunden. Die Rolle dauert vorläufig 1 Sekunde und kostet kein Mana.",
+    "description_eng": "Dodge with a roll. At skill level 1 it costs 15 percent of maximum stamina with a 4 second cooldown; at level 2 it costs 10 percent with a 2 second cooldown. The provisional roll duration is 1 second. It costs no mana.",
+    "dmgType": "Movement",
+    "maxSkillLv": 2,
+    "maxUpgradeLv": 10,
+    "nr": 14,
+    "skillName_de": "Ausweichrolle",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        4,
+        2
+      ]
+    },
+    "dur": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 0
+        }
+      },
+      {
+        "resource": "stamina",
+        "reference": "maxStamina",
+        "unit": "fraction",
+        "scaling": {
+          "type": "table",
+          "base": 0.15,
+          "values": [
+            0.15,
+            0.1
+          ]
+        }
+      }
+    ]
+  }
+]

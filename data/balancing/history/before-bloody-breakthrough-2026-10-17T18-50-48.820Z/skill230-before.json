@@ -1,0 +1,73 @@
+{
+  "_id": "6acc1c7e4826525c70d04c49",
+  "skillName_eng": "Whirlwind",
+  "__v": 0,
+  "category": "active",
+  "cd": 90,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Dreht sich um die eigene Achse und trifft bis zu fünf Gegner innerhalb von 3 Metern Radius jeweils einmal. Der physische Skill-Grundschaden steigt gleichmäßig von 153 auf Stufe 1 auf 912 auf Stufe 10. Mana-Kosten 38 auf Stufe 1, +21 je weiterer Stufe, maximal 227 auf Stufe 10. Der Cooldown 90 Sekunden auf Stufe 1 und 81 Sekunden auf Stufe 10. Castzeit 0,4 Sekunden. Die Animation dauert vorläufig 3 Sekunden und blockiert währenddessen weitere Skills. Keine anhaltende Schadenswirkung oder wiederholten Treffer; die Animationsdauer wird später im Spiel angepasst. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+  "description_eng": "Spins around, hitting up to five enemies within a 3 meter radius once each. Physical skill base damage increases evenly from 153 at level 1 to 912 at level 10. Mana cost 38 at level 1, maximum 227 at level 10. Cooldown 90 seconds at level 1 and 81 seconds at level 10. Cast time is 0.4 seconds. The provisional 3 second animation blocks other skills while running. No ongoing damage or repeated hits; animation duration will be adjusted in game.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 230,
+  "patk": 153,
+  "skillName_de": "Wirbelsturm",
+  "skillpoints": 1,
+  "attackArea": {
+    "shape": "circle",
+    "center": "caster",
+    "radiusMeters": 3,
+    "target": "enemiesInArea",
+    "evaluation": "atImpact",
+    "timingStatus": "pending",
+    "maxTargets": 5
+  },
+  "castTimeSeconds": 0.4,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 90,
+    "perLevel": -1
+  },
+  "mana": 38,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 38,
+        "perLevel": 21
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 153,
+      "perLevel": 84.33333333333333
+    }
+  },
+  "animationDurationSeconds": 3,
+  "animationTimingStatus": "provisional",
+  "attackExecution": {
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending"
+  },
+  "blocksOtherSkillsDuringAnimation": true,
+  "hasLingeringDamage": false,
+  "manaPricing": {
+    "category": "normal",
+    "factor": 0.25,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  }
+}

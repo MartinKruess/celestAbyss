@@ -1,0 +1,3883 @@
+{
+  "costPerLearnedLevel": 1,
+  "levelOneCostsPoint": true,
+  "sharedSkillsCountedOnce": true,
+  "unresolvedSourceSkillsExcluded": true,
+  "status": "Current stored learning caps; unreviewed classes provisional",
+  "classes": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 151,
+      "passiveSP": 129,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 21,
+          "name": "Dash",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 41,
+          "name": "Erste Hilfe",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": true,
+          "source": "classOverride"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": true,
+          "source": "classOverride"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": true,
+          "source": "classOverride"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 245,
+          "name": "Breitschwert-Training",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 246,
+          "name": "Wilde Bindung",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 247,
+          "name": "Beharrlichkeit",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 250,
+          "name": "Lebenstransfer",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "definitionMaxLevel": 6,
+          "learnableMaxLevel": 6,
+          "sp": 6,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 157,
+      "passiveSP": 123,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 3,
+          "name": "Abräumer",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 11,
+          "name": "Aufgeladener Schlag",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 12,
+          "name": "Aufladung",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 35,
+          "name": "Energieentladung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 39,
+          "name": "Erdbrecher",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 89,
+          "name": "Schädelspalter",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 98,
+          "name": "Schockwelle der Regeneration",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 131,
+          "name": "Zweihändiges Axttraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 174,
+          "name": "Blutrausch",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 176,
+          "name": "Ewiger Sieger",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 177,
+          "name": "Ungebrochen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 227,
+          "name": "Dämonische Schockwelle",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 234,
+          "name": "Zorn des Henkers",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 155,
+      "passiveSP": 125,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 6,
+          "name": "Adrenalin",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 132,
+          "name": "Zweihändiges Streitkolbentraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 193,
+          "name": "Macht des Wassers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 194,
+          "name": "Herr der Elemente",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 203,
+          "name": "Kanalisierung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 204,
+          "name": "Katalysator Rein",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 222,
+          "name": "Vergessener Zauber",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 225,
+          "name": "Macht des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 253,
+          "name": "Gunst der Sylphen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 261,
+          "name": "Dornige Rose",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 157,
+      "passiveSP": 123,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 13,
+          "name": "Ausbruch der Wut",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 26,
+          "name": "Dual Axttraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 34,
+          "name": "Energieausbruch",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 52,
+          "name": "Glück des Narrens",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 61,
+          "name": "Holzspalter",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 109,
+          "name": "Sturm der Wut",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 127,
+          "name": "Wutexplosion",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 128,
+          "name": "Wutklinge",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 161,
+          "name": "Energie der Wut",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 162,
+          "name": "Innere Kraft",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 163,
+          "name": "Volles Potential",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 230,
+          "name": "Blutiger Durchbruch",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 233,
+          "name": "Kriegerischer Ansturm",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 142,
+      "passiveSP": 138,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 28,
+          "name": "Eiserner Schild",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 42,
+          "name": "Erwachen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 59,
+          "name": "Göttlicher Schutz",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 82,
+          "name": "Schutz Aura",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 93,
+          "name": "Schildangriffstraining",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 95,
+          "name": "Schildsturm",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 102,
+          "name": "Schwerttraining",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 107,
+          "name": "Stählerne Rüstung",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 141,
+          "name": "Eiserner Wille",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 160,
+          "name": "Stolz des Kriegers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 171,
+          "name": "Aktive Deckung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 152,
+      "passiveSP": 128,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 6,
+          "name": "Adrenalin",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 15,
+          "name": "Beben",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 33,
+          "name": "Energie Umwandler",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 50,
+          "name": "Feuerlanze",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 62,
+          "name": "Infernal Zyklon",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 76,
+          "name": "Infernaler Kreuzschlag",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 192,
+          "name": "Macht des Felsens",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 202,
+          "name": "Verbrennen",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 223,
+          "name": "Geschwindigkeit der Dox",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 224,
+          "name": "Macht des Feuers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 252,
+          "name": "Streitkolbentraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 254,
+          "name": "Weisheit des Salamanders",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 255,
+          "name": "Felszähne",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 256,
+          "name": "Felsensalve",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 257,
+          "name": "Feurige Leidenschaft",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 258,
+          "name": "Erdsäule",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 259,
+          "name": "Weisheit des Erdweisen",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 263,
+          "name": "Stoßgebet",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 157,
+      "passiveSP": 123,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 54,
+          "name": "Gefrierbrand",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 58,
+          "name": "Kuss der Aurora",
+          "definitionMaxLevel": 6,
+          "learnableMaxLevel": 6,
+          "sp": 6,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 64,
+          "name": "Heilung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 78,
+          "name": "Göttliche Heilung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 124,
+          "name": "Wiederherstellung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 143,
+          "name": "Immunität",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 197,
+          "name": "Aurora-Segen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 206,
+          "name": "Lunare Inkanation",
+          "definitionMaxLevel": 4,
+          "learnableMaxLevel": 4,
+          "sp": 4,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 207,
+          "name": "Himmlische Aufopferung",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 240,
+          "name": "Permafrost",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 242,
+          "name": "Assimilation",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 163,
+      "passiveSP": 117,
+      "skills": [
+        {
+          "nr": 4,
+          "name": "Abschöpfen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 16,
+          "name": "Wasserfesseln",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 31,
+          "name": "Elektrisches Feld",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 32,
+          "name": "Elementarenergie",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 46,
+          "name": "Ewiges Eis",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 56,
+          "name": "Geladener Nebel",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 57,
+          "name": "Gezielter Blitz",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 69,
+          "name": "Kugelblitz",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 71,
+          "name": "Lebensessenz",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 81,
+          "name": "Naturgewalt",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 84,
+          "name": "Lähmung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 112,
+          "name": "Tobender Sturm",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 123,
+          "name": "Wiederaufladung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 164,
+          "name": "Natürlicher Schutz",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 166,
+          "name": "Alles im Fluss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 167,
+          "name": "Entgiftung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 169,
+          "name": "Innere Unruhe",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 205,
+          "name": "Katalysator Unrein",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "classOverride"
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 162,
+      "passiveSP": 118,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 10,
+          "name": "Auf der Jagd",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 18,
+          "name": "Bogenschießtraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 122,
+          "name": "Voll Durchziehen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 152,
+          "name": "Giftpfeil",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Nachtjäger",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 157,
+      "passiveSP": 123,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 7,
+          "name": "Armbrusttraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 21,
+          "name": "Dash",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 119,
+          "name": "Verbessertes Nachladen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 187,
+          "name": "Hartes Training",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 145,
+      "passiveSP": 135,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 48,
+          "name": "Feuer der Verdammten",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 49,
+          "name": "Feuerball",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 72,
+          "name": "Lebenssauger",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 83,
+          "name": "Opfergabe",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 99,
+          "name": "Schrei der Unterwelt",
+          "definitionMaxLevel": 6,
+          "learnableMaxLevel": 6,
+          "sp": 6,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 100,
+          "name": "Schwäche des Fleisches",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 103,
+          "name": "Seelenfessel",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 104,
+          "name": "Seelenqual",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 105,
+          "name": "Seelenernte",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 110,
+          "name": "Sturm des Feuers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 120,
+          "name": "Reaper",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 180,
+          "name": "Seelenplage",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 181,
+          "name": "Arkane Aufladung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 209,
+          "name": "Verloren in der Dunkelheit",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 214,
+          "name": "Ausbrennen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 232,
+          "name": "Dunkler Impuls",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 235,
+          "name": "Meteoritenschauer",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 236,
+          "name": "Teufelspakt",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 237,
+          "name": "Morrak´s Meister",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 241,
+          "name": "Zahl der Opfer",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 157,
+      "passiveSP": 123,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 8,
+          "name": "Astralkörper",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "classOverride"
+        },
+        {
+          "nr": 41,
+          "name": "Erste Hilfe",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 74,
+          "name": "Festigung des Glaubens",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 116,
+          "name": "Unerschöpfliche Hoffnung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 117,
+          "name": "Urteil des Himmels",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 211,
+          "name": "Aurora Wellen",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 213,
+          "name": "Strafendes Licht",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 215,
+          "name": "Heiliges Kreuz",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 216,
+          "name": "Heilige Vernichtung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 218,
+          "name": "Licht kristallenes Gefängnis",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 228,
+          "name": "Geheiligte Barriere",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 231,
+          "name": "Luminus",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 260,
+          "name": "Läuterung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "skillCount": 32,
+      "sp": 280,
+      "activeSP": 173,
+      "passiveSP": 107,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 17,
+          "name": "Blutklinge",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 20,
+          "name": "Brecher des Lichts",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 22,
+          "name": "Dolchtraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 27,
+          "name": "Dunkler Schlag",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 65,
+          "name": "Klingentornado",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 70,
+          "name": "Kunai Todesstoß",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 90,
+          "name": "Schattendolch",
+          "definitionMaxLevel": 15,
+          "learnableMaxLevel": 15,
+          "sp": 15,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 91,
+          "name": "Schattenfalle",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 92,
+          "name": "Schattenschlag",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 111,
+          "name": "Sturmklinge",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 113,
+          "name": "Tödlicher Tanz",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 115,
+          "name": "Überschallklinge",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "definitionMaxLevel": 1,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 1,
+          "sp": 1,
+          "passive": true,
+          "source": "defaultLearningLimit"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 146,
+          "name": "List des Schurken",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 188,
+          "name": "Dunkler Schleier",
+          "definitionMaxLevel": 2,
+          "learnableMaxLevel": 2,
+          "sp": 2,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 189,
+          "name": "Herz des Verräters",
+          "definitionMaxLevel": 5,
+          "learnableMaxLevel": 5,
+          "sp": 5,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "definitionMaxLevel": 3,
+          "learnableMaxLevel": 3,
+          "sp": 3,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "definitionMaxLevel": 20,
+          "learnableMaxLevel": 20,
+          "sp": 20,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 238,
+          "name": "Attentäter",
+          "definitionMaxLevel": 10,
+          "learnableMaxLevel": 10,
+          "sp": 10,
+          "passive": false,
+          "source": "definitionMaxLevel"
+        },
+        {
+          "nr": 243,
+          "name": "Technische Perfektion",
+          "definitionMaxLevel": 4,
+          "learnableMaxLevel": 4,
+          "sp": 4,
+          "passive": true,
+          "source": "definitionMaxLevel"
+        }
+      ]
+    }
+  ]
+}

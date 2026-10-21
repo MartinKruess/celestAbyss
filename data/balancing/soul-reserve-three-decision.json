@@ -1,0 +1,227 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T16:56:22.678Z",
+  "backup": "data/balancing/history/before-soul-reserve-three-1792515382627",
+  "changes": [
+    {
+      "before": {
+        "_id": "6ad207c878d209a368038d26",
+        "soulReserveBonusSettings": {
+          "stat": "matk",
+          "maximumBonus": 50,
+          "usesCurrentStoredAmount": true,
+          "levelProgressionStatus": "defined",
+          "fragmentsPerBonusStep": 10,
+          "bonusPerFullStep": 5
+        },
+        "soulGenerationSettings": {
+          "maximumUniqueEnemiesScaling": {
+            "values": []
+          }
+        },
+        "soulStorageSettings": {
+          "capacityScaling": {
+            "values": []
+          }
+        },
+        "activationRequirements": {
+          "targetHealthBelowFractionScaling": {
+            "values": []
+          }
+        },
+        "tetherSettings": {
+          "worldAnchorKinds": []
+        },
+        "collectedPointScaling": {
+          "thresholds": [],
+          "durationSecondsByTier": [],
+          "baseDamageBonusFractionByTier": []
+        },
+        "attackExecution": {
+          "additionalDamageFromSacrificedHealth": {
+            "values": []
+          },
+          "hitCountScaling": {
+            "values": []
+          },
+          "damageMultiplierScaling": {
+            "values": []
+          },
+          "armorIgnoreFractionByLevel": []
+        },
+        "attackArea": {
+          "radiusScaling": {
+            "values": []
+          },
+          "maxTargetsScaling": {
+            "values": []
+          }
+        },
+        "movement": {
+          "distanceScaling": {
+            "values": []
+          },
+          "hopDirections": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "cooldownScaling": {
+          "values": []
+        },
+        "resourceCosts": [],
+        "burstUsage": {
+          "usesPerBurstScaling": {
+            "values": []
+          },
+          "afterBurstCooldownScaling": {
+            "values": []
+          },
+          "belowTargetHealthFractionByLevel": [],
+          "usesBelowThresholdByLevel": []
+        },
+        "triggerCondition": {
+          "chancePerCheckScaling": {
+            "values": []
+          },
+          "chancePerCheck": null,
+          "healthThresholds": []
+        },
+        "allowedRaces": [],
+        "isClassCore": false,
+        "nr": 241,
+        "skillName_eng": "Number of Victims",
+        "skillName_de": "Zahl der Opfer",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "maxSkillLv": 1,
+        "currentUpgradeLv": 0,
+        "maxUpgradeLv": 10,
+        "category": "passive",
+        "description_eng": "Permanent passive reserve bonus with one learnable level. Each complete ten currently stored souls in the Reaper-managed reserve grants 5 direct magical attack: 0–9 souls grant 0, 10–19 grant 5, up to 50 at 100 souls. Spending souls reduces the bonus at ten-soul thresholds. Reaper itself grants no Intelligence. Generates no souls and uses no historical kill count or morality. No activation costs, cast time, cooldown or limited duration.",
+        "description_de": "Permanenter passiver Vorratsbonus mit einer lernbaren Stufe. Je volle zehn aktuell gespeicherte Seelen im durch Reaper verwalteten Speicher +5 direkter M-Angriff: 0–9 Seelen geben 0, 10–19 geben +5, bis maximal +50 bei 100 Seelen. Bonus sinkt beim Ausgeben entsprechend der vollen Zehnergruppen. Reaper selbst gibt keinen Intelligenzbonus. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+        "dmgType": "passive",
+        "skillpoints": 1,
+        "levelProgression": {
+          "version": 1,
+          "rules": [],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      },
+      "after": {
+        "_id": "6ad207c878d209a368038d26",
+        "soulReserveBonusSettings": {
+          "stat": "matk",
+          "maximumBonus": 30,
+          "usesCurrentStoredAmount": true,
+          "levelProgressionStatus": "defined",
+          "fragmentsPerBonusStep": 10,
+          "bonusPerFullStep": 3
+        },
+        "soulGenerationSettings": {
+          "maximumUniqueEnemiesScaling": {
+            "values": []
+          }
+        },
+        "soulStorageSettings": {
+          "capacityScaling": {
+            "values": []
+          }
+        },
+        "activationRequirements": {
+          "targetHealthBelowFractionScaling": {
+            "values": []
+          }
+        },
+        "tetherSettings": {
+          "worldAnchorKinds": []
+        },
+        "collectedPointScaling": {
+          "thresholds": [],
+          "durationSecondsByTier": [],
+          "baseDamageBonusFractionByTier": []
+        },
+        "attackExecution": {
+          "additionalDamageFromSacrificedHealth": {
+            "values": []
+          },
+          "hitCountScaling": {
+            "values": []
+          },
+          "damageMultiplierScaling": {
+            "values": []
+          },
+          "armorIgnoreFractionByLevel": []
+        },
+        "attackArea": {
+          "radiusScaling": {
+            "values": []
+          },
+          "maxTargetsScaling": {
+            "values": []
+          }
+        },
+        "movement": {
+          "distanceScaling": {
+            "values": []
+          },
+          "hopDirections": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "cooldownScaling": {
+          "values": []
+        },
+        "resourceCosts": [],
+        "burstUsage": {
+          "usesPerBurstScaling": {
+            "values": []
+          },
+          "afterBurstCooldownScaling": {
+            "values": []
+          },
+          "belowTargetHealthFractionByLevel": [],
+          "usesBelowThresholdByLevel": []
+        },
+        "triggerCondition": {
+          "chancePerCheckScaling": {
+            "values": []
+          },
+          "chancePerCheck": null,
+          "healthThresholds": []
+        },
+        "allowedRaces": [],
+        "isClassCore": false,
+        "nr": 241,
+        "skillName_eng": "Number of Victims",
+        "skillName_de": "Zahl der Opfer",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "maxSkillLv": 1,
+        "currentUpgradeLv": 0,
+        "maxUpgradeLv": 10,
+        "category": "passive",
+        "description_eng": "Permanent passive reserve bonus with one learnable level. Each complete ten currently stored souls in the Reaper-managed reserve grants 3 direct magical attack: 0–9 souls grant 0, 10–19 grant 3, 20–29 grant 6, up to 30 at 100 souls. Spending souls reduces the bonus at ten-soul thresholds. Reaper itself grants no Intelligence. Generates no souls and uses no historical kill count or morality. No activation costs, cast time, cooldown or limited duration.",
+        "description_de": "Permanenter passiver Vorratsbonus mit einer lernbaren Stufe. Je volle zehn aktuell gespeicherte Seelen im durch Reaper verwalteten Speicher +3 direkter M-Angriff: 0–9 Seelen geben 0, 10–19 geben +3, 20–29 geben +6, bis maximal +30 bei 100 Seelen. Bonus sinkt beim Ausgeben entsprechend der vollen Zehnergruppen. Reaper selbst gibt keinen Intelligenzbonus. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+        "dmgType": "passive",
+        "skillpoints": 1,
+        "levelProgression": {
+          "version": 1,
+          "rules": [],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-19T18:33:01.406Z",
+  "backup": "data/balancing/history/before-thorned-rose-1792434781314",
+  "rose": {
+    "nr": 261,
+    "skillName_de": "Dornige Rose",
+    "skillName_eng": "Thorned Rose",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "thorned-rose-ice-thorns",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 30,
+        "value": 37,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 37,
+          "perLevel": 37
+        },
+        "replacementSkillName_de": "Dornige Eisranken",
+        "replacementSkillName_eng": "Thorned Ice Vines"
+      }
+    ],
+    "description_de": "Permanente passive Spezialisierung mit 5 Stufen, nur für Druide und seine Weiterentwicklung. Mit gelernter Dornige Rose wird Eisranken als Dornige Eisranken angezeigt. Jede Stufe erhöht den einmaligen Initialschaden dieses Angriffs um 37, bis zu +185 auf Stufe 5. Die Mana-Kosten des aktiven Skills bleiben unverändert; Fesselwirkung, DoT, Castzeit und Cooldown bleiben ebenfalls unverändert. Kein zusätzlicher Charakterangriffsbeitrag. Die Passive selbst hat keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent five-level passive specialization for the Druid and its advancement. Learning Thorned Rose changes the displayed name of Ice Thorns to Thorned Ice Vines. Each level adds 37 damage to the initial hit, up to 185 at level 5. The active skill retains its Mana cost, root, damage-over-time ticks, cast time and cooldown. No additional character attack contribution. The passive has no activation cost, cast time or cooldown.",
+    "classificationVersion": 1,
+    "type": "passive",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 37,
+            "perLevel": 37
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  "banEffect": {
+    "key": "magic-ban-suppression",
+    "type": "control",
+    "controlKind": "spellSuppression",
+    "target": "enemy",
+    "affectsBosses": true,
+    "actionRestrictionsStatus": "defined",
+    "durationSeconds": 3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ]
+    },
+    "interruptsCurrentCast": true,
+    "requiresSuccessfulHit": true
+  },
+  "himmelsbrecher": "unchanged at ten levels"
+}

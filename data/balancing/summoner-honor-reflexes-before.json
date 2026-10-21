@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bfa",
+    "skillName_eng": "For Honor",
+    "__v": 0,
+    "agi": 1,
+    "amb": 3,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Stärkt dich selbst für 600 Sekunden. Auf Skilllevel 1 erhältst du 1 Agilität und 3 Ambush. Auf den Stufen 2, 4, 6, 8 und 10 kommt jeweils 1 Agilität hinzu. Je weiterer Stufe steigt Ambush um 1, bis zu 6 Agilität und 12 Ambush auf Level 10. Die Mana-Kosten steigen von 321 um 42 je weiterer Stufe auf 699. Der Cooldown beträgt 60 Sekunden. Der Buff wirkt sofort mit einer kurzen, noch festzulegenden Animation.",
+    "description_eng": "Strengthens you for 600 seconds. At skill level 1, gain 1 Agility and 3 Ambush. Skill levels 2, 4, 6, 8 and 10 each add 1 Agility. Each additional level adds 1 Ambush, reaching 6 Agility and 12 Ambush at level 10. Mana cost increases from 321 by 42 per additional level to 699. Cooldown is 60 seconds. The buff activates instantly with a brief animation still to be defined.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 151,
+    "skillName_de": "Für die Ehre",
+    "skillpoints": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "mana": 321,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 321,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "agi": "self",
+      "amb": "self"
+    },
+    "statScaling": {
+      "agi": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6
+        ]
+      },
+      "amb": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1a",
+    "skillName_eng": "Good Reflexes",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt deine Reflexe und erhöht deine Agilität.",
+    "description_eng": "Sharpens your reflexes and increases your Agility.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 183,
+    "skillName_de": "Gute Reflexe",
+    "skillpoints": 1
+  }
+]

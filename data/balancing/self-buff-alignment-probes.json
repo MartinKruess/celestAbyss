@@ -1,0 +1,2557 @@
+{
+  "generatedAt": "2026-10-19T11:03:46.060Z",
+  "scope": "Hypothetical self-buff definition changes in memory only; same fixed 600s attack policies, all existing buff costs/durations/cooldowns retained. No database, catalog, Markdown or canonical report changes. Shared candidates evaluated together.",
+  "inputHashes": {
+    "data/skills.json": "caed4dca9c5388050d9487e8a8f3c077ca94b215b81a1c039044c150d9288891",
+    "data/balancing/class-comparison-level60.json": "abe63a14537f0f241aba614b3153de9b6e0b1a3854b0644395470a00a699b687",
+    "data/balancing/attribute-model.json": "8bbd65d3dac697d3ac5be12c8d7845a3b6993cfab3ef4cbb794c3b1029f595c2",
+    "data/balancing/all-class-damage-rotations.json": "03d7bd96350a020eb201d04d3ce985d9fb6d8a435f39a9068aa5d0729a636d33",
+    "services/timedDamageSimulation.js": "2d513f5d91a02a280a432e59d4db8baeca97acac128a6670aa61c41e9e2d0c86",
+    "services/attackSpeed.js": "fd7924cfcc6eb08f884fc0fea93dccecd44721611393ab131db787cb052f44bb"
+  },
+  "rows": [
+    {
+      "group": "shared",
+      "name": "wild40/speed1",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 20,
+          "perLevel": 10
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 544334.1000000038,
+          "gainPercent": 7.448308915360857,
+          "auto": 338925.6000000036,
+          "skills": 205408.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 625885.9164000074,
+          "gainPercent": 4.792189994016982,
+          "auto": 269418.5199999999,
+          "skills": 356467.39639999846,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 667465.310000002,
+          "gainPercent": 10.645260500578392,
+          "auto": 407051.9999999961,
+          "skills": 260413.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild40/speed2",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 20,
+          "perLevel": 10
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 549107.7000000038,
+          "gainPercent": 8.390589120547997,
+          "auto": 343699.2000000037,
+          "skills": 205408.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 625885.9164000074,
+          "gainPercent": 4.792189994016982,
+          "auto": 269418.5199999999,
+          "skills": 356467.39639999846,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 669726.7100000022,
+          "gainPercent": 11.020131206736927,
+          "auto": 409313.39999999607,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild40/speed3",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 20,
+          "perLevel": 10
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 553284.6000000036,
+          "gainPercent": 9.215084300086707,
+          "auto": 347876.10000000376,
+          "skills": 205408.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 625885.9164000074,
+          "gainPercent": 4.792189994016982,
+          "auto": 269418.5199999999,
+          "skills": 356467.39639999846,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 675757.1100000024,
+          "gainPercent": 12.01978642315964,
+          "auto": 415343.799999996,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild40/speed4",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 20,
+          "perLevel": 10
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 558058.2000000036,
+          "gainPercent": 10.157364505273847,
+          "auto": 352649.70000000385,
+          "skills": 205408.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 625885.9164000074,
+          "gainPercent": 4.792189994016982,
+          "auto": 269418.5199999999,
+          "skills": 356467.39639999846,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 680401.2700000027,
+          "gainPercent": 12.789645598322474,
+          "auto": 419112.7999999959,
+          "skills": 261288.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild40/speed5",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 20,
+          "perLevel": 10
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 560445.0000000035,
+          "gainPercent": 10.628504607867416,
+          "auto": 355036.5000000039,
+          "skills": 205408.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 625885.9164000074,
+          "gainPercent": 4.792189994016982,
+          "auto": 269418.5199999999,
+          "skills": 356467.39639999846,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 684924.070000003,
+          "gainPercent": 13.539387010639526,
+          "auto": 423635.59999999584,
+          "skills": 261288.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild50/speed1",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 25,
+          "perLevel": 12.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 551364.1000000037,
+          "gainPercent": 8.835989039892755,
+          "auto": 344605.60000000364,
+          "skills": 206758.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 631667.2164000069,
+          "gainPercent": 5.760154078425561,
+          "auto": 273758.5200000001,
+          "skills": 357908.69639999775,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 667465.310000002,
+          "gainPercent": 10.645260500578392,
+          "auto": 407051.9999999961,
+          "skills": 260413.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild50/speed2",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 25,
+          "perLevel": 12.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 556217.7000000034,
+          "gainPercent": 9.794060768545387,
+          "auto": 349459.20000000374,
+          "skills": 206758.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 631667.2164000069,
+          "gainPercent": 5.760154078425561,
+          "auto": 273758.5200000001,
+          "skills": 357908.69639999775,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 669726.7100000022,
+          "gainPercent": 11.020131206736927,
+          "auto": 409313.39999999607,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild50/speed3",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 25,
+          "perLevel": 12.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 560464.6000000034,
+          "gainPercent": 10.632373531116436,
+          "auto": 353706.1000000038,
+          "skills": 206758.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 631667.2164000069,
+          "gainPercent": 5.760154078425561,
+          "auto": 273758.5200000001,
+          "skills": 357908.69639999775,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 675757.1100000024,
+          "gainPercent": 12.01978642315964,
+          "auto": 415343.799999996,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild50/speed4",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 25,
+          "perLevel": 12.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 565318.200000003,
+          "gainPercent": 11.590445259769023,
+          "auto": 358559.7000000039,
+          "skills": 206758.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 631667.2164000069,
+          "gainPercent": 5.760154078425561,
+          "auto": 273758.5200000001,
+          "skills": 357908.69639999775,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 680401.2700000027,
+          "gainPercent": 12.789645598322474,
+          "auto": 419112.7999999959,
+          "skills": 261288.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild50/speed5",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 25,
+          "perLevel": 12.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 567745.0000000028,
+          "gainPercent": 12.069481124095315,
+          "auto": 360986.50000000396,
+          "skills": 206758.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 631667.2164000069,
+          "gainPercent": 5.760154078425561,
+          "auto": 273758.5200000001,
+          "skills": 357908.69639999775,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 684924.070000003,
+          "gainPercent": 13.539387010639526,
+          "auto": 423635.59999999584,
+          "skills": 261288.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild60/speed1",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 30,
+          "perLevel": 15
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 558394.1000000035,
+          "gainPercent": 10.223669164424653,
+          "auto": 350285.6000000037,
+          "skills": 208108.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 637448.5164000078,
+          "gainPercent": 6.728118162834362,
+          "auto": 278098.52000000025,
+          "skills": 359349.9963999979,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 667465.310000002,
+          "gainPercent": 10.645260500578392,
+          "auto": 407051.9999999961,
+          "skills": 260413.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild60/speed2",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 30,
+          "perLevel": 15
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 563327.7000000031,
+          "gainPercent": 11.197532416542755,
+          "auto": 355219.2000000038,
+          "skills": 208108.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 637448.5164000078,
+          "gainPercent": 6.728118162834362,
+          "auto": 278098.52000000025,
+          "skills": 359349.9963999979,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 669726.7100000022,
+          "gainPercent": 11.020131206736927,
+          "auto": 409313.39999999607,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild60/speed3",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 30,
+          "perLevel": 15
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 567644.6000000028,
+          "gainPercent": 12.049662762146095,
+          "auto": 359536.1000000039,
+          "skills": 208108.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 637448.5164000078,
+          "gainPercent": 6.728118162834362,
+          "auto": 278098.52000000025,
+          "skills": 359349.9963999979,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 675757.1100000024,
+          "gainPercent": 12.01978642315964,
+          "auto": 415343.799999996,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild60/speed4",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 30,
+          "perLevel": 15
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 572578.2000000026,
+          "gainPercent": 13.023526014264242,
+          "auto": 364469.70000000397,
+          "skills": 208108.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 637448.5164000078,
+          "gainPercent": 6.728118162834362,
+          "auto": 278098.52000000025,
+          "skills": 359349.9963999979,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 680401.2700000027,
+          "gainPercent": 12.789645598322474,
+          "auto": 419112.7999999959,
+          "skills": 261288.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild60/speed5",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 30,
+          "perLevel": 15
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 575045.0000000024,
+          "gainPercent": 13.510457640323303,
+          "auto": 366936.500000004,
+          "skills": 208108.50000000006,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 637448.5164000078,
+          "gainPercent": 6.728118162834362,
+          "auto": 278098.52000000025,
+          "skills": 359349.9963999979,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 684924.070000003,
+          "gainPercent": 13.539387010639526,
+          "auto": 423635.59999999584,
+          "skills": 261288.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild70/speed1",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 35,
+          "perLevel": 17.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 565424.1000000029,
+          "gainPercent": 11.611349288956486,
+          "auto": 355965.60000000376,
+          "skills": 209458.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 643229.8164000097,
+          "gainPercent": 7.696082247243341,
+          "auto": 282438.5200000005,
+          "skills": 360791.29639999836,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 667465.310000002,
+          "gainPercent": 10.645260500578392,
+          "auto": 407051.9999999961,
+          "skills": 260413.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild70/speed2",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 35,
+          "perLevel": 17.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 570437.7000000025,
+          "gainPercent": 12.6010040645401,
+          "auto": 360979.20000000385,
+          "skills": 209458.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 643229.8164000097,
+          "gainPercent": 7.696082247243341,
+          "auto": 282438.5200000005,
+          "skills": 360791.29639999836,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 669726.7100000022,
+          "gainPercent": 11.020131206736927,
+          "auto": 409313.39999999607,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild70/speed3",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 35,
+          "perLevel": 17.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 574824.6000000024,
+          "gainPercent": 13.466951993175801,
+          "auto": 365366.10000000393,
+          "skills": 209458.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 643229.8164000097,
+          "gainPercent": 7.696082247243341,
+          "auto": 282438.5200000005,
+          "skills": 360791.29639999836,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 675757.1100000024,
+          "gainPercent": 12.01978642315964,
+          "auto": 415343.799999996,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild70/speed4",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 35,
+          "perLevel": 17.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 579838.2000000023,
+          "gainPercent": 14.45660676875946,
+          "auto": 370379.700000004,
+          "skills": 209458.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 643229.8164000097,
+          "gainPercent": 7.696082247243341,
+          "auto": 282438.5200000005,
+          "skills": 360791.29639999836,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 680401.2700000027,
+          "gainPercent": 12.789645598322474,
+          "auto": 419112.7999999959,
+          "skills": 261288.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild70/speed5",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 35,
+          "perLevel": 17.5
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 582345.0000000021,
+          "gainPercent": 14.951434156551269,
+          "auto": 372886.5000000041,
+          "skills": 209458.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 643229.8164000097,
+          "gainPercent": 7.696082247243341,
+          "auto": 282438.5200000005,
+          "skills": 360791.29639999836,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 684924.070000003,
+          "gainPercent": 13.539387010639526,
+          "auto": 423635.59999999584,
+          "skills": 261288.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild80/speed1",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 40,
+          "perLevel": 20
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 572454.1000000025,
+          "gainPercent": 12.999029413488362,
+          "auto": 361645.60000000376,
+          "skills": 210808.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 649011.1164000091,
+          "gainPercent": 8.664046331651921,
+          "auto": 286778.52000000066,
+          "skills": 362232.59639999835,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 667465.310000002,
+          "gainPercent": 10.645260500578392,
+          "auto": 407051.9999999961,
+          "skills": 260413.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild80/speed2",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 40,
+          "perLevel": 20
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 577547.7000000022,
+          "gainPercent": 14.00447571253749,
+          "auto": 366739.20000000385,
+          "skills": 210808.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 649011.1164000091,
+          "gainPercent": 8.664046331651921,
+          "auto": 286778.52000000066,
+          "skills": 362232.59639999835,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 669726.7100000022,
+          "gainPercent": 11.020131206736927,
+          "auto": 409313.39999999607,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild80/speed3",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 40,
+          "perLevel": 20
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 582004.600000002,
+          "gainPercent": 14.884241224205486,
+          "auto": 371196.10000000393,
+          "skills": 210808.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 649011.1164000091,
+          "gainPercent": 8.664046331651921,
+          "auto": 286778.52000000066,
+          "skills": 362232.59639999835,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 675757.1100000024,
+          "gainPercent": 12.01978642315964,
+          "auto": 415343.799999996,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild80/speed4",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 40,
+          "perLevel": 20
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 587098.2000000016,
+          "gainPercent": 15.889687523254615,
+          "auto": 376289.700000004,
+          "skills": 210808.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 649011.1164000091,
+          "gainPercent": 8.664046331651921,
+          "auto": 286778.52000000066,
+          "skills": 362232.59639999835,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 680401.2700000027,
+          "gainPercent": 12.789645598322474,
+          "auto": 419112.7999999959,
+          "skills": 261288.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "shared",
+      "name": "wild80/speed5",
+      "changes": [
+        {
+          "nr": 149,
+          "stat": "patk",
+          "base": 40,
+          "perLevel": 20
+        },
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        }
+      ],
+      "outcomes": {
+        "adventurer": {
+          "total": 589645.0000000014,
+          "gainPercent": 16.39241067277919,
+          "auto": 378836.5000000041,
+          "skills": 210808.5000000001,
+          "summon": 0
+        },
+        "shaman": {
+          "total": 649011.1164000091,
+          "gainPercent": 8.664046331651921,
+          "auto": 286778.52000000066,
+          "skills": 362232.59639999835,
+          "summon": 0
+        },
+        "summoner": {
+          "total": 684924.070000003,
+          "gainPercent": 13.539387010639526,
+          "auto": 423635.59999999584,
+          "skills": 261288.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger60/eye30/dex20",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 36,
+          "perLevel": 12
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 3,
+          "perLevel": 3
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 2,
+          "perLevel": 2
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 829920.600000013,
+          "gainPercent": 16.903285589599705,
+          "auto": 321657,
+          "skills": 420294,
+          "summon": 87969.59999999937
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger50/eye30/dex16",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 30,
+          "perLevel": 10
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 3,
+          "perLevel": 3
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.6,
+          "perLevel": 1.6
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 816864.5999999988,
+          "gainPercent": 15.06420689139718,
+          "auto": 315516.5999999979,
+          "skills": 415309.4399999988,
+          "summon": 86038.56000000067
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger40/eye30/dex16",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 24,
+          "perLevel": 8
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 3,
+          "perLevel": 3
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.6,
+          "perLevel": 1.6
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 810396.5999999989,
+          "gainPercent": 14.153119190726171,
+          "auto": 311946.59999999794,
+          "skills": 412411.4399999988,
+          "summon": 86038.56000000067
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger40/eye20/dex16",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 24,
+          "perLevel": 8
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 2,
+          "perLevel": 2
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.6,
+          "perLevel": 1.6
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 803928.5999999989,
+          "gainPercent": 13.24203149005514,
+          "auto": 308376.59999999794,
+          "skills": 409513.4399999988,
+          "summon": 86038.56000000067
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger30/eye20/dex16",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 18,
+          "perLevel": 6
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 2,
+          "perLevel": 2
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.6,
+          "perLevel": 1.6
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 797460.5999999988,
+          "gainPercent": 12.330943789384108,
+          "auto": 304806.59999999794,
+          "skills": 406615.4399999988,
+          "summon": 86038.56000000067
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger30/eye20/dex12",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 18,
+          "perLevel": 6
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 2,
+          "perLevel": 2
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 790872.5999999826,
+          "gainPercent": 11.402952791852329,
+          "auto": 302236.2000000002,
+          "skills": 404528.87999999925,
+          "summon": 84107.52000000124
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger30/eye15/dex12",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 18,
+          "perLevel": 6
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 1.5,
+          "perLevel": 1.5
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 787638.599999983,
+          "gainPercent": 10.947408941516867,
+          "auto": 300451.20000000024,
+          "skills": 403079.87999999925,
+          "summon": 84107.52000000124
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger20/eye15/dex12",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 12,
+          "perLevel": 4
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 1.5,
+          "perLevel": 1.5
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 781170.5999999832,
+          "gainPercent": 10.03632124084588,
+          "auto": 296881.2000000003,
+          "skills": 400181.87999999925,
+          "summon": 84107.52000000124
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger20/eye10/dex12",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 12,
+          "perLevel": 4
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 1,
+          "perLevel": 1
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 777936.5999999834,
+          "gainPercent": 9.580777390510399,
+          "auto": 295096.20000000036,
+          "skills": 398732.87999999925,
+          "summon": 84107.52000000124
+        }
+      }
+    },
+    {
+      "group": "hunter",
+      "name": "ranger40/eye20/dex12",
+      "changes": [
+        {
+          "nr": 156,
+          "stat": "patk",
+          "base": 24,
+          "perLevel": 8
+        },
+        {
+          "nr": 154,
+          "stat": "patk",
+          "base": 2,
+          "perLevel": 2
+        },
+        {
+          "nr": 153,
+          "stat": "dex",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "hunter": {
+          "total": 797340.5999999823,
+          "gainPercent": 12.314040492523315,
+          "auto": 305806.20000000007,
+          "skills": 407426.87999999925,
+          "summon": 84107.52000000124
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed1/mercy49",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 13,
+          "perLevel": 4
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 637657.3100000006,
+          "gainPercent": 5.704009059359083,
+          "auto": 385451.9999999962,
+          "skills": 252205.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed1/mercy59",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 14,
+          "perLevel": 5
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 645109.310000001,
+          "gainPercent": 6.93932191966391,
+          "auto": 390851.9999999962,
+          "skills": 254257.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed1/mercy69",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 15,
+          "perLevel": 6
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 652561.3100000013,
+          "gainPercent": 8.174634779968738,
+          "auto": 396251.99999999616,
+          "skills": 256309.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed1/mercy79",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 16,
+          "perLevel": 7
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 660013.3100000017,
+          "gainPercent": 9.409947640273565,
+          "auto": 401651.99999999616,
+          "skills": 258361.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed1/mercy89",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 17,
+          "perLevel": 8
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 667465.310000002,
+          "gainPercent": 10.645260500578392,
+          "auto": 407051.9999999961,
+          "skills": 260413.30999999944,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed2/mercy49",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 13,
+          "perLevel": 4
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 639798.7100000008,
+          "gainPercent": 6.058987448926567,
+          "auto": 387593.3999999962,
+          "skills": 252205.3099999995,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed2/mercy59",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 14,
+          "perLevel": 5
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 647280.7100000011,
+          "gainPercent": 7.299273388379146,
+          "auto": 393023.3999999962,
+          "skills": 254257.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed2/mercy69",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 15,
+          "perLevel": 6
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 654762.7100000015,
+          "gainPercent": 8.539559327831746,
+          "auto": 398453.3999999961,
+          "skills": 256309.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed2/mercy79",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 16,
+          "perLevel": 7
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 662244.7100000017,
+          "gainPercent": 9.779845267284305,
+          "auto": 403883.3999999961,
+          "skills": 258361.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed2/mercy89",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0022222222222222222
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 17,
+          "perLevel": 8
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 669726.7100000022,
+          "gainPercent": 11.020131206736927,
+          "auto": 409313.39999999607,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed3/mercy49",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 13,
+          "perLevel": 4
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 645509.1100000012,
+          "gainPercent": 7.005596487773147,
+          "auto": 393303.7999999961,
+          "skills": 252205.3099999995,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed3/mercy59",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 14,
+          "perLevel": 5
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 653071.1100000014,
+          "gainPercent": 8.259143971619775,
+          "auto": 398813.7999999961,
+          "skills": 254257.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed3/mercy69",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 15,
+          "perLevel": 6
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 660633.1100000017,
+          "gainPercent": 9.512691455466381,
+          "auto": 404323.79999999603,
+          "skills": 256309.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed3/mercy79",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 16,
+          "perLevel": 7
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 668195.1100000021,
+          "gainPercent": 10.766238939313011,
+          "auto": 409833.79999999603,
+          "skills": 258361.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed3/mercy89",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.003333333333333333
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 17,
+          "perLevel": 8
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 675757.1100000024,
+          "gainPercent": 12.01978642315964,
+          "auto": 415343.799999996,
+          "skills": 260413.30999999947,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed4/mercy49",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 13,
+          "perLevel": 4
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 649905.2700000014,
+          "gainPercent": 7.734344875314458,
+          "auto": 396872.79999999603,
+          "skills": 253032.46999999948,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed4/mercy59",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 14,
+          "perLevel": 5
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 657529.2700000018,
+          "gainPercent": 8.998170056066467,
+          "auto": 402432.79999999603,
+          "skills": 255096.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed4/mercy69",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 15,
+          "perLevel": 6
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 665153.2700000019,
+          "gainPercent": 10.261995236818432,
+          "auto": 407992.799999996,
+          "skills": 257160.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed4/mercy79",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 16,
+          "perLevel": 7
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 672777.2700000023,
+          "gainPercent": 11.525820417570465,
+          "auto": 413552.799999996,
+          "skills": 259224.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed4/mercy89",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.0044444444444444444
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 17,
+          "perLevel": 8
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 680401.2700000027,
+          "gainPercent": 12.789645598322474,
+          "auto": 419112.7999999959,
+          "skills": 261288.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed5/mercy49",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 13,
+          "perLevel": 4
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 654188.0700000015,
+          "gainPercent": 8.44430165444936,
+          "auto": 401155.59999999596,
+          "skills": 253032.46999999945,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed5/mercy59",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 14,
+          "perLevel": 5
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 661872.0700000018,
+          "gainPercent": 9.718072993496897,
+          "auto": 406775.59999999596,
+          "skills": 255096.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed5/mercy69",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 15,
+          "perLevel": 6
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 669556.0700000022,
+          "gainPercent": 10.991844332544431,
+          "auto": 412395.5999999959,
+          "skills": 257160.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed5/mercy79",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 16,
+          "perLevel": 7
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 677240.0700000026,
+          "gainPercent": 12.26561567159199,
+          "auto": 418015.5999999959,
+          "skills": 259224.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "summoner",
+      "name": "speed5/mercy89",
+      "changes": [
+        {
+          "nr": 148,
+          "stat": "atkSpeed",
+          "base": 0,
+          "perLevel": 0.005555555555555556
+        },
+        {
+          "nr": 190,
+          "stat": "patk",
+          "base": 17,
+          "perLevel": 8
+        }
+      ],
+      "outcomes": {
+        "summoner": {
+          "total": 684924.070000003,
+          "gainPercent": 13.539387010639526,
+          "auto": 423635.59999999584,
+          "skills": 261288.46999999942,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct22/charge280",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 2
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 140,
+          "perLevel": 35
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 679066.241999999,
+          "gainPercent": 12.06541664910452,
+          "auto": 440579.36199999845,
+          "skills": 238486.8800000002,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct18/charge280",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 1.5555555555555556
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 140,
+          "perLevel": 35
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 674322.1620000043,
+          "gainPercent": 11.282507311349367,
+          "auto": 436793.60200000077,
+          "skills": 237528.56000000006,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct18/charge240",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 1.5555555555555556
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 120,
+          "perLevel": 30
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 671282.1620000042,
+          "gainPercent": 10.780820074460795,
+          "auto": 434473.6020000008,
+          "skills": 236808.56000000006,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct16/charge240",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 1.3333333333333333
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 120,
+          "perLevel": 30
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 668910.1219999981,
+          "gainPercent": 10.389365405581774,
+          "auto": 432580.72199999687,
+          "skills": 236329.40000000002,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct14/charge240",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 1.1111111111111112
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 120,
+          "perLevel": 30
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 666538.082000005,
+          "gainPercent": 9.997910736704906,
+          "auto": 430687.8420000026,
+          "skills": 235850.24000000037,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct12/charge240",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 0.8888888888888888
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 120,
+          "perLevel": 30
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 664166.0420000016,
+          "gainPercent": 9.606456067826352,
+          "auto": 428794.96199999936,
+          "skills": 235371.0799999998,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct16/charge200",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 1.3333333333333333
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 100,
+          "perLevel": 25
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 665870.1219999981,
+          "gainPercent": 9.887678168693226,
+          "auto": 430260.7219999968,
+          "skills": 235609.40000000005,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct14/charge200",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 1.1111111111111112
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 100,
+          "perLevel": 25
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 663498.0820000048,
+          "gainPercent": 9.496223499816313,
+          "auto": 428367.8420000026,
+          "skills": 235130.24000000034,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "butcher",
+      "name": "instinct12/charge200",
+      "changes": [
+        {
+          "nr": 172,
+          "stat": "str",
+          "base": 4,
+          "perLevel": 0.8888888888888888
+        },
+        {
+          "nr": 12,
+          "stat": "patk",
+          "base": 100,
+          "perLevel": 25
+        }
+      ],
+      "outcomes": {
+        "butcher": {
+          "total": 661126.0420000015,
+          "gainPercent": 9.104768830937783,
+          "auto": 426474.9619999994,
+          "skills": 234651.0799999998,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage50/strength12",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 5,
+          "perLevel": 5
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 674456.7850000017,
+          "gainPercent": 5.400621473756195,
+          "auto": 406010.0349999993,
+          "skills": 268446.7500000004,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage60/strength12",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 6,
+          "perLevel": 6
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.2,
+          "perLevel": 1.2
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 680381.7850000018,
+          "gainPercent": 6.326549859563779,
+          "auto": 410735.03499999916,
+          "skills": 269646.7500000004,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage60/strength15",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 6,
+          "perLevel": 6
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.5,
+          "perLevel": 1.5
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 685420.9975000039,
+          "gainPercent": 7.114051951693434,
+          "auto": 414753.6475000005,
+          "skills": 270667.35000000056,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage66/strength15",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 6.6,
+          "perLevel": 6.6
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.5,
+          "perLevel": 1.5
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 688975.9975000034,
+          "gainPercent": 7.6696089831779,
+          "auto": 417588.6475000008,
+          "skills": 271387.3500000006,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage70/strength15",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 7,
+          "perLevel": 7
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.5,
+          "perLevel": 1.5
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 691345.9975000039,
+          "gainPercent": 8.039980337500996,
+          "auto": 419478.6475000005,
+          "skills": 271867.3500000006,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage80/strength15",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 8,
+          "perLevel": 8
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.5,
+          "perLevel": 1.5
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 697270.9975000038,
+          "gainPercent": 8.965908723308535,
+          "auto": 424203.6475000004,
+          "skills": 273067.3500000006,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage70/strength18",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 7,
+          "perLevel": 7
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.8,
+          "perLevel": 1.8
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 696385.2100000047,
+          "gainPercent": 8.82748242963045,
+          "auto": 423497.2600000012,
+          "skills": 272887.94999999995,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage80/strength18",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 8,
+          "perLevel": 8
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.8,
+          "perLevel": 1.8
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 702310.2100000047,
+          "gainPercent": 9.753410815438013,
+          "auto": 428222.2600000012,
+          "skills": 274087.94999999995,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage90/strength18",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 9,
+          "perLevel": 9
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.8,
+          "perLevel": 1.8
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 708235.2100000046,
+          "gainPercent": 10.67933920124553,
+          "auto": 432947.2600000012,
+          "skills": 275287.94999999995,
+          "summon": 0
+        }
+      }
+    },
+    {
+      "group": "gladiator",
+      "name": "courage100/strength18",
+      "changes": [
+        {
+          "nr": 160,
+          "stat": "patk",
+          "base": 10,
+          "perLevel": 10
+        },
+        {
+          "nr": 162,
+          "stat": "str",
+          "base": 1.8,
+          "perLevel": 1.8
+        }
+      ],
+      "outcomes": {
+        "gladiator": {
+          "total": 714160.2100000045,
+          "gainPercent": 11.60526758705307,
+          "auto": 437672.26000000106,
+          "skills": 276487.95,
+          "summon": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "generatedAt": "2026-10-19T08:58:58.214Z",
+  "scope": "RAM-only max-level probes. One omitted skill added to the fixed best-found unbuffed single-target policy. Unmodified fields retained, no complete reoptimization. Positive gain means this example beats omitting the skill under this fixed policy. Not a proven minimum threshold, recommendation to persist, or guaranteed gain in other rotations.",
+  "rows": [
+    {
+      "classKey": "butcher",
+      "className": "Butcher",
+      "nr": 98,
+      "name": "Schockwelle der Regeneration",
+      "change": {
+        "cast": 0.3
+      },
+      "gainVersusOmitting": -6174.460000000196,
+      "totalDamage": 613972.0200000014,
+      "applications": 5
+    },
+    {
+      "classKey": "butcher",
+      "className": "Butcher",
+      "nr": 98,
+      "name": "Schockwelle der Regeneration",
+      "change": {
+        "mana": 400
+      },
+      "gainVersusOmitting": -6766.54000000027,
+      "totalDamage": 613379.9400000013,
+      "applications": 8
+    },
+    {
+      "classKey": "butcher",
+      "className": "Butcher",
+      "nr": 98,
+      "name": "Schockwelle der Regeneration",
+      "change": {
+        "cast": 0.3,
+        "mana": 400
+      },
+      "gainVersusOmitting": -3525.8200000001816,
+      "totalDamage": 616620.6600000014,
+      "applications": 8
+    },
+    {
+      "classKey": "butcher",
+      "className": "Butcher",
+      "nr": 98,
+      "name": "Schockwelle der Regeneration",
+      "change": {
+        "cast": 0.3,
+        "mana": 250
+      },
+      "gainVersusOmitting": -682.1800000000512,
+      "totalDamage": 619464.3000000016,
+      "applications": 9
+    },
+    {
+      "classKey": "gladiator",
+      "className": "Gladiator",
+      "nr": 96,
+      "name": "Schmetterschlag",
+      "change": {
+        "cast": 0.2
+      },
+      "gainVersusOmitting": 1276.6000000000931,
+      "totalDamage": 642506.6300000008,
+      "applications": 14
+    },
+    {
+      "classKey": "herbalist",
+      "className": "Kräuterkundler",
+      "nr": 221,
+      "name": "Windschlitzer",
+      "change": {
+        "cast": 0.2
+      },
+      "gainVersusOmitting": 542.0731999996351,
+      "totalDamage": 666722.328,
+      "applications": 20
+    },
+    {
+      "classKey": "herbalist",
+      "className": "Kräuterkundler",
+      "nr": 221,
+      "name": "Windschlitzer",
+      "change": {
+        "mana": 170
+      },
+      "gainVersusOmitting": 6914.544599999441,
+      "totalDamage": 673094.7993999998,
+      "applications": 20
+    },
+    {
+      "classKey": "herbalist",
+      "className": "Kräuterkundler",
+      "nr": 221,
+      "name": "Windschlitzer",
+      "change": {
+        "cast": 0.2,
+        "mana": 170
+      },
+      "gainVersusOmitting": 6724.526599999634,
+      "totalDamage": 672904.7814,
+      "applications": 20
+    },
+    {
+      "classKey": "herbalist",
+      "className": "Kräuterkundler",
+      "nr": 69,
+      "name": "Kugelblitz",
+      "change": {
+        "cast": 0.2
+      },
+      "gainVersusOmitting": -1068.5208000000566,
+      "totalDamage": 665111.7340000003,
+      "applications": 21
+    },
+    {
+      "classKey": "herbalist",
+      "className": "Kräuterkundler",
+      "nr": 69,
+      "name": "Kugelblitz",
+      "change": {
+        "mana": 340
+      },
+      "gainVersusOmitting": 2798.932800000184,
+      "totalDamage": 668979.1876000005,
+      "applications": 21
+    },
+    {
+      "classKey": "herbalist",
+      "className": "Kräuterkundler",
+      "nr": 69,
+      "name": "Kugelblitz",
+      "change": {
+        "cast": 0.2,
+        "mana": 340
+      },
+      "gainVersusOmitting": 6559.034799999907,
+      "totalDamage": 672739.2896000003,
+      "applications": 21
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 72,
+      "name": "Lebenssauger",
+      "change": {
+        "mana": 250
+      },
+      "gainVersusOmitting": -27631.311533334432,
+      "totalDamage": 995260.1834333253,
+      "applications": 14
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 72,
+      "name": "Lebenssauger",
+      "change": {
+        "mana": 180
+      },
+      "gainVersusOmitting": -23744.03073333425,
+      "totalDamage": 999147.4642333254,
+      "applications": 14
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 72,
+      "name": "Lebenssauger",
+      "change": {
+        "mana": 75
+      },
+      "gainVersusOmitting": -3391.241200001212,
+      "totalDamage": 1019500.2537666585,
+      "applications": 14
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 10
+      },
+      "gainVersusOmitting": -47328.645999986795,
+      "totalDamage": 975562.8489666729,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 5
+      },
+      "gainVersusOmitting": -21107.631199997268,
+      "totalDamage": 1001783.8637666624,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 1
+      },
+      "gainVersusOmitting": -4234.187600005302,
+      "totalDamage": 1018657.3073666544,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 10,
+        "base": 1400
+      },
+      "gainVersusOmitting": -41616.08599998674,
+      "totalDamage": 981275.408966673,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 5,
+        "base": 1400
+      },
+      "gainVersusOmitting": -15395.071199997328,
+      "totalDamage": 1007496.4237666624,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 3,
+        "base": 1500
+      },
+      "gainVersusOmitting": -4334.983200000017,
+      "totalDamage": 1018556.5117666597,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 180,
+      "name": "Seelenplage",
+      "change": {
+        "souls": 1,
+        "base": 1400
+      },
+      "gainVersusOmitting": 1478.3723999948706,
+      "totalDamage": 1024369.8673666546,
+      "applications": 8
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "change": {
+        "mana": 1900
+      },
+      "gainVersusOmitting": -19274.725000001024,
+      "totalDamage": 1003616.7699666587,
+      "applications": 1
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "change": {
+        "mana": 1500
+      },
+      "gainVersusOmitting": -14952.946333334432,
+      "totalDamage": 1007938.5486333253,
+      "applications": 1
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "change": {
+        "cast": 0.4,
+        "mana": 1500
+      },
+      "gainVersusOmitting": -12519.44960000075,
+      "totalDamage": 1010372.045366659,
+      "applications": 1
+    },
+    {
+      "classKey": "ritualist",
+      "className": "Ritualist",
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "change": {
+        "mana": 800
+      },
+      "gainVersusOmitting": -13818.278066666448,
+      "totalDamage": 1009073.2168999932,
+      "applications": 3
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 202,
+      "name": "Verbrennen",
+      "change": {
+        "dot": 120
+      },
+      "gainVersusOmitting": -10798.919500003336,
+      "totalDamage": 590807.8223999968,
+      "applications": 27
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 202,
+      "name": "Verbrennen",
+      "change": {
+        "dot": 144
+      },
+      "gainVersusOmitting": -4124.519500000868,
+      "totalDamage": 597482.2223999993,
+      "applications": 27
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 202,
+      "name": "Verbrennen",
+      "change": {
+        "mana": 160
+      },
+      "gainVersusOmitting": -17473.31949999882,
+      "totalDamage": 584133.4224000013,
+      "applications": 27
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 202,
+      "name": "Verbrennen",
+      "change": {
+        "dot": 120,
+        "mana": 180
+      },
+      "gainVersusOmitting": -7858.1076000033645,
+      "totalDamage": 593748.6342999968,
+      "applications": 27
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 202,
+      "name": "Verbrennen",
+      "change": {
+        "dot": 192
+      },
+      "gainVersusOmitting": 9224.280500001274,
+      "totalDamage": 610831.0224000014,
+      "applications": 27
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 202,
+      "name": "Verbrennen",
+      "change": {
+        "dot": 144,
+        "mana": 120
+      },
+      "gainVersusOmitting": 11961.975249999436,
+      "totalDamage": 613568.7171499996,
+      "applications": 27
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 50,
+      "name": "Feuerlanze",
+      "change": {
+        "cast": 0.1
+      },
+      "gainVersusOmitting": -3952.2747500005644,
+      "totalDamage": 597654.4671499996,
+      "applications": 15
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 50,
+      "name": "Feuerlanze",
+      "change": {
+        "base": 750
+      },
+      "gainVersusOmitting": -4661.374750000425,
+      "totalDamage": 596945.3671499997,
+      "applications": 15
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 50,
+      "name": "Feuerlanze",
+      "change": {
+        "mana": 125
+      },
+      "gainVersusOmitting": -6237.59475000028,
+      "totalDamage": 595369.1471499999,
+      "applications": 15
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 50,
+      "name": "Feuerlanze",
+      "change": {
+        "cast": 0.1,
+        "base": 950,
+        "mana": 125
+      },
+      "gainVersusOmitting": 142.61524999921676,
+      "totalDamage": 601749.3571499994,
+      "applications": 15
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 255,
+      "name": "Felszähne",
+      "change": {
+        "base": 1137
+      },
+      "gainVersusOmitting": 3958.8137499997392,
+      "totalDamage": 605565.5556499999,
+      "applications": 40
+    },
+    {
+      "classKey": "shaman",
+      "className": "Schamane",
+      "nr": 255,
+      "name": "Felszähne",
+      "change": {
+        "mana": 190
+      },
+      "gainVersusOmitting": -2612.526250000228,
+      "totalDamage": 598994.2156499999,
+      "applications": 40
+    },
+    {
+      "classKey": "summoner",
+      "className": "Seelenjäger",
+      "nr": 66,
+      "name": "Kopfschuss",
+      "change": {
+        "cast": 0.1
+      },
+      "gainVersusOmitting": -10505.79000000062,
+      "totalDamage": 628596.2100000004,
+      "applications": 9
+    },
+    {
+      "classKey": "summoner",
+      "className": "Seelenjäger",
+      "nr": 66,
+      "name": "Kopfschuss",
+      "change": {
+        "mana": 430
+      },
+      "gainVersusOmitting": 3128.6100000001024,
+      "totalDamage": 642230.6100000012,
+      "applications": 9
+    },
+    {
+      "classKey": "summoner",
+      "className": "Seelenjäger",
+      "nr": 66,
+      "name": "Kopfschuss",
+      "change": {
+        "cast": 0.1,
+        "mana": 430
+      },
+      "gainVersusOmitting": 2218.610000000219,
+      "totalDamage": 641320.6100000013,
+      "applications": 9
+    },
+    {
+      "classKey": "summoner",
+      "className": "Seelenjäger",
+      "nr": 47,
+      "name": "Explosionspfeil",
+      "change": {
+        "mana": 400
+      },
+      "gainVersusOmitting": 5676.900000000256,
+      "totalDamage": 644778.9000000013,
+      "applications": 18
+    },
+    {
+      "classKey": "summoner",
+      "className": "Seelenjäger",
+      "nr": 47,
+      "name": "Explosionspfeil",
+      "change": {
+        "mana": 300
+      },
+      "gainVersusOmitting": 21480.850000001257,
+      "totalDamage": 660582.8500000023,
+      "applications": 19
+    },
+    {
+      "classKey": "villian",
+      "className": "Schurke",
+      "nr": 17,
+      "name": "Blutklinge",
+      "change": {
+        "mana": 250
+      },
+      "gainVersusOmitting": -12827.199999999837,
+      "totalDamage": 580289.0800000076,
+      "applications": 9
+    },
+    {
+      "classKey": "villian",
+      "className": "Schurke",
+      "nr": 17,
+      "name": "Blutklinge",
+      "change": {
+        "mana": 180
+      },
+      "gainVersusOmitting": -4214.199999999721,
+      "totalDamage": 588902.0800000078,
+      "applications": 9
+    },
+    {
+      "classKey": "villian",
+      "className": "Schurke",
+      "nr": 17,
+      "name": "Blutklinge",
+      "change": {
+        "mana": 100
+      },
+      "gainVersusOmitting": 1432.8000000002794,
+      "totalDamage": 594549.0800000078,
+      "applications": 9
+    },
+    {
+      "classKey": "villian",
+      "className": "Schurke",
+      "nr": 115,
+      "name": "Überschallklinge",
+      "change": {
+        "cast": 0.4
+      },
+      "gainVersusOmitting": -10169.71999999974,
+      "totalDamage": 582946.5600000077,
+      "applications": 6
+    },
+    {
+      "classKey": "villian",
+      "className": "Schurke",
+      "nr": 115,
+      "name": "Überschallklinge",
+      "change": {
+        "cast": 0.2
+      },
+      "gainVersusOmitting": -9632.319999999832,
+      "totalDamage": 583483.9600000076,
+      "applications": 6
+    },
+    {
+      "classKey": "villian",
+      "className": "Schurke",
+      "nr": 115,
+      "name": "Überschallklinge",
+      "change": {
+        "cast": 0.2,
+        "mana": 200,
+        "base": 2000
+      },
+      "gainVersusOmitting": 1767.4000000003725,
+      "totalDamage": 594883.6800000079,
+      "applications": 6
+    }
+  ]
+}

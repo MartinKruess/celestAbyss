@@ -1,0 +1,156 @@
+{
+  "classKey": "luminet",
+  "level": 60,
+  "status": "reviewedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 1,
+      "name": "Erleuchtung",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "manaRegen": 20
+      }
+    },
+    {
+      "nr": 44,
+      "name": "Erweiterung des Geistes",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "dex": 20
+      }
+    },
+    {
+      "nr": 60,
+      "name": "Hoffnungsschimmer",
+      "stats": {
+        "faith": 3,
+        "int": 7,
+        "wis": 6,
+        "manaRegen": 40
+      }
+    },
+    {
+      "nr": 116,
+      "name": "Unerschöpfliche Hoffnung",
+      "stats": {
+        "matk": 20,
+        "luck": 3,
+        "faith": 3
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    },
+    {
+      "nr": 208,
+      "name": "Das ewige Wissen",
+      "stats": {
+        "wis": 2,
+        "faith": 11,
+        "int": 14
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Magiewaffe",
+      "equipped": {
+        "maxHealth": 3541,
+        "maxMana": 3827,
+        "physicalAttack": 4,
+        "magicalAttack": 708.02,
+        "physicalDefense": 548,
+        "magicalDefense": 796,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 428,
+        "manaRegen": 376,
+        "criticalDamageBonus": 0.8
+      },
+      "passiveBonuses": {
+        "int": 61,
+        "wis": 68,
+        "manaRegen": 60,
+        "dex": 20,
+        "faith": 17,
+        "matk": 120,
+        "luck": 3,
+        "vita": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        1,
+        44,
+        60,
+        116,
+        139,
+        144,
+        201,
+        208
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4141,
+        "maxMana": 5867,
+        "physicalAttack": 104,
+        "magicalAttack": 948.8,
+        "physicalDefense": 728,
+        "magicalDefense": 1072,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 32,
+        "dodge": 0,
+        "critChanceRating": 4.800000000000001,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 508,
+        "manaRegen": 640,
+        "criticalDamageBonus": 0.8
+      }
+    }
+  ],
+  "directPassiveAttackSpeedBonus": 0.2,
+  "excluded": [
+    "Active buffs",
+    "Pet stats",
+    "Jewelry and stones",
+    "Agility speed conversion",
+    "Weapon speed calculation"
+  ],
+  "equipmentProposalApplied": false
+}

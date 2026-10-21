@@ -1,0 +1,69 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c47",
+    "skillName_eng": "Sanctifierd Barrier",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft für 9 Sekunden eine schützende Barriere mit 4 Metern Radius um dich. Du und Verbündete innerhalb der Barriere erleiden 20 % weniger magischen Schaden. Wer den Bereich verlässt, verliert den Schutz.",
+    "description_eng": "Creates a protective barrier with a 4-meter radius around you for 9 seconds. You and allies inside the barrier take 20% less magical damage. Leaving the area removes the protection.",
+    "dmgType": "spell",
+    "dur": 9,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 228,
+    "skillName_de": "Geheiligte Barriere",
+    "skillpoints": 1,
+    "activation": "manual",
+    "effects": [
+      {
+        "type": "damageReduction",
+        "target": "alliesInArea",
+        "allowedRaces": [],
+        "value": 0.2,
+        "unit": "fraction",
+        "damageTypes": [
+          "magical"
+        ],
+        "durationSeconds": 9,
+        "key": "sanctified-magic-protection"
+      }
+    ],
+    "effectsVersion": 1,
+    "areaSettings": {
+      "center": "caster",
+      "movesWithCaster": true,
+      "membership": "whileInside",
+      "includeCaster": true,
+      "radiusMeters": 4
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4a",
+    "skillName_eng": "Luminus",
+    "__v": 0,
+    "category": "active",
+    "cd": 21,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudere einen schwach leuchtenden Energieball auf deinen Gegner, dieser kann ebenfalls als Lichtquelle dienen.",
+    "description_eng": "Create a light ball that you can throw at your enemies, it can also serve as a light source.",
+    "dmgType": "spell",
+    "matk": 17,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 231,
+    "skillName_de": "Luminus",
+    "skillpoints": 1
+  }
+]

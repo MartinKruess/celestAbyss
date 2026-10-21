@@ -1,0 +1,141 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bd6",
+    "skillName_eng": "Supersonic Blade",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lädt die Klinge 1 Sekunde auf und führt einen einzelnen physischen Treffer aus. Der getroffene Gegner wird für 0,5 Sekunden kurz paralysiert. Der physische Grundangriffswert steigt von 636 um 230 je weiterer Stufe auf 1556. Die Mana-Kosten 159 auf Stufe 1, +58 je weiterer Stufe, maximal 391 auf Stufe 5. Der Cooldown sinkt von 120 um 3 Sekunden je weiterer Stufe auf 108 Sekunden. Die Paralyse dauert auf allen Stufen gleich lang; ihre genaue Einschränkung von Aktionen ist noch festzulegen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Charges the blade for 1 second and performs one physical hit. The affected enemy is briefly paralyzed for 0.5 seconds. Physical base attack increases from 636 by 230 per additional level to 1556. Mana cost 159 at level 1, maximum 391 at level 5. Cooldown decreases from 120 by 3 seconds per additional level to 108 seconds. Paralysis duration is unchanged across levels; exact action restrictions are still to be defined.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 115,
+    "patk": 636,
+    "skillName_de": "Überschallklinge",
+    "skillpoints": 1,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "key": "supersonicParalysis",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "paralysis",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 0.5,
+        "durationStatus": "defined",
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 159,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 159,
+          "perLevel": 58
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 636,
+        "perLevel": 230
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6ad415ab43253f7922ed6edf",
+    "charClass": [
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "skillpoints": 1,
+    "nr": 248,
+    "skillName_de": "Kreuzhieb",
+    "skillName_eng": "Cross Strike",
+    "category": "active",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "castTimeSeconds": 0.1,
+    "castTimeStatus": "defined",
+    "animationDurationSeconds": 1.2,
+    "animationTimingStatus": "provisional",
+    "patk": 135,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 135,
+        "perLevel": 112
+      }
+    },
+    "mana": 34,
+    "description_de": "Zwei aufeinanderfolgende physische Hiebe. Erster Hieb: 27 Grundschaden, +56 je weiterer Stufe bis 531. Zweiter Hieb: 108 Grundschaden, +56 je weiterer Stufe bis 612. Jeder Hieb addiert den aktuellen P-Angriff. Mana für die gesamte Anwendung: 34 +28 je weiterer Stufe bis 286 (25 % des gesamten Skill-Grundschadens, gerundet). Castzeit 0,1 Sekunden, anschließende Animation vorläufig etwa 1,2 Sekunden. Cooldown und genaue Trefferzeitpunkte noch offen.",
+    "description_eng": "Two consecutive physical hits: first base 27 +56 per additional level to 531, second 108 +56 to 612. Each adds current physical attack. Total mana 34 +28 to 286. Cast 0.1 seconds, subsequent animation approximately 1.2 seconds. Cooldown and precise hit times pending.",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perApplication",
+      "hitTimingStatus": "pending",
+      "physicalHitBaseScaling": [
+        {
+          "base": 27,
+          "perLevel": 56
+        },
+        {
+          "base": 108,
+          "perLevel": 56
+        }
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 34,
+          "perLevel": 28
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  }
+]

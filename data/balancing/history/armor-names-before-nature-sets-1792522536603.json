@@ -1,0 +1,448 @@
+{
+  "slotOrder": [
+    "chest",
+    "pants",
+    "helmet",
+    "gloves",
+    "boots"
+  ],
+  "rankStatus": {
+    "1": "Materialnamen",
+    "2": "Materialnamen",
+    "3": "Materialnamen",
+    "4": "Übernommene Namensvorschläge",
+    "5": "Arbeitsnamen, noch offen",
+    "6": "Arbeitsnamen, noch offen"
+  },
+  "cloaks": {
+    "firstRank": 3,
+    "earlyNames": {
+      "cloth": {
+        "3": "Gefütterter Stoffumhang",
+        "4": "Feingewebter Reisemantel"
+      },
+      "leather": {
+        "3": "Wetterfester Lederumhang",
+        "4": "Geschmeidiger Lederumhang"
+      }
+    },
+    "flowerNames": {
+      "Dawn Petal": {
+        "name": "Blütenblauer Mantel der Morgenblüte",
+        "description_de": "Ein blütenblauer Mantel mit hellem Innenfutter. Silberne Fäden zeichnen am Saum die geöffneten Blätter der Morgenblüte nach."
+      },
+      "Duskbloom": {
+        "name": "Blutroter Mantel der Dämmerblüte",
+        "description_de": "Ein blutroter Mantel mit dunklem Innenfutter. An seinem Saum verlaufen violette Stickereien in Form halb geschlossener Dämmerblüten."
+      }
+    }
+  },
+  "rank6Sets": {
+    "Lightmage": {
+      "id": "morningbloom-luminet-r6",
+      "name": "Morgenblüte – Zuflucht",
+      "themeItem": "Dawn Petal",
+      "themeItemName": "Morgenblüte",
+      "description": "Helle, fein gewebte Kleidung mit silbernen Nähten und dem Motiv einer sich öffnenden Morgenblüte. Ihr Stil steht für Ruhe, Schutz und Erneuerung, ohne religiöse Insignien.",
+      "parts": [
+        "Feine Robe der Morgenblüte",
+        "Beinkleid der Morgenblüte",
+        "Silberweberhaube der Morgenblüte",
+        "Bewahrerhandschuhe der Morgenblüte",
+        "Sanfte Schritte der Morgenblüte"
+      ],
+      "partDescriptions": [
+        "Eine feine, elfenbeinfarbene Robe. Silberne Nähte zeichnen entlang des Saums die geöffneten Blätter einer Morgenblüte nach.",
+        "Ein weich fallendes Beinkleid aus dichtem, hellem Gewebe. Die aufwendigen Nähte liegen verborgen auf der Innenseite.",
+        "Eine leichte Haube mit einem Netz aus feinen Silberfäden. Über der Stirn liegt eine kleine Stickerei in Form einer Morgenblüte.",
+        "Geschmeidige Handschuhe mit sorgsam verstärkten Handflächen. Blasse Blütenmuster zieren die langen Manschetten.",
+        "Weiche Schuhe mit hellen Stoffschäften und silbergesäumten Laschen. Ihre Form ist auf lange Wege und sicheren Stand ausgelegt."
+      ]
+    },
+    "Bloodmage": {
+      "id": "duskbloom-ritualist-r6",
+      "name": "Dämmerblüte – Letzte Anrufung",
+      "themeItem": "Duskbloom",
+      "themeItemName": "Dämmerblüte",
+      "description": "Rauchgraue und dunkelviolette Stoffe mit verschlungenen Nähten. Das Motiv der geschlossenen Dämmerblüte verbindet die Teile, ohne ihnen eine gemeinsame Rüstungsform aufzuzwingen.",
+      "parts": [
+        "Nachtweberrobe der Dämmerblüte",
+        "Aschenseidenhose der Dämmerblüte",
+        "Aschenhaube der Dämmerblüte",
+        "Schattenfadengreifer der Dämmerblüte",
+        "Ritualschuhe der Dämmerblüte"
+      ],
+      "partDescriptions": [
+        "Eine dunkelviolette Robe mit rauchgrauem Futter. Verschlungene Stickereien führen am Saum zu einer halb geschlossenen Dämmerblüte.",
+        "Eine aschgraue Seidenhose mit dunklen Seitenbahnen. Ihre feinen Muster werden erst aus der Nähe sichtbar.",
+        "Eine tief geschnittene Haube aus mattem, grauem Stoff. Violette Fäden bilden am Rand die schmalen Blätter einer Dämmerblüte.",
+        "Lange, eng anliegende Handschuhe mit dunklen Fadenwicklungen über den Fingern. Kleine Blütenzeichen sind in die Handrücken gestickt.",
+        "Dunkle Schuhe mit flachen Schnallen und sorgfältig vernähten Stoffeinsätzen. Ihre violetten Ziernähte wiederholen die Linien alter Ritualkreise."
+      ]
+    },
+    "Villain": {
+      "id": "duskbloom-rogue-r6",
+      "name": "Dämmerblüte – Lautlose Jagd",
+      "themeItem": "Duskbloom",
+      "themeItemName": "Dämmerblüte",
+      "description": "Dunkles Leder, matte Schuppen und unauffällige violette Nähte. Die Linie verbindet die leichte Kleidung des Schurken mit dem gepanzerten Erscheinungsbild des Schattenkriegers.",
+      "parts": [
+        "Nachtschuppenweste der Dämmerblüte",
+        "Nachtlederhose der Dämmerblüte",
+        "Schattenkapuze der Dämmerblüte",
+        "Schwarzschuppenhandschuhe der Dämmerblüte",
+        "Lautlose Stiefel der Dämmerblüte"
+      ],
+      "partDescriptions": [
+        "Eine körpernah geschnittene Lederweste mit kleinen, mattschwarzen Schuppen. Unter dem Kragen verbirgt sich das Zeichen einer Dämmerblüte.",
+        "Eine dunkle Lederhose mit verstärkten Knien und verdeckten Nähten. Schmale violette Einfassungen unterbrechen das Schwarz.",
+        "Eine weit vorgezogene Kapuze mit einem weichen Innenfutter. Die Dämmerblüte ist nur auf der Innenseite des Saums zu sehen.",
+        "Bewegliche Lederhandschuhe mit schwarzen Schuppen auf Handrücken und Knöcheln. Die Finger bleiben von den Plättchen frei.",
+        "Dunkle Stiefel mit weichen Schäften, flachen Verschlüssen und mehrlagigen Sohlen. Ein kleines Blütenzeichen liegt unter jeder Schnalle."
+      ]
+    },
+    "Butcher": {
+      "id": "blacksteel-butcher-r6",
+      "name": "Schwarzstahl – Brecher",
+      "themeMaterial": "Schwarzstahl",
+      "description": "Bewegliche Lederteile mit einzelnen Schwarzstahlplatten. Schultern und Gelenke bleiben frei; der Schutz wirkt robust, ohne eine geschlossene Plattenrüstung zu bilden.",
+      "parts": [
+        "Schwarzstahlbeschlagene Lederweste",
+        "Lederhose mit Schwarzstahlschienen",
+        "Offene Schwarzstahlmaske",
+        "Schwarzstahlwickel",
+        "Schwarzstahlbesetzte Stiefel"
+      ],
+      "partDescriptions": [
+        "Eine feste Lederweste mit schmalen Schwarzstahlplatten vor Brust und Rippen. Die Arme bleiben frei.",
+        "Eine robuste Lederhose mit einzeln befestigten Schwarzstahlschienen vor Schienbeinen und Oberschenkeln.",
+        "Eine offene Maske aus mattem Schwarzstahl, die Stirn und Wangen einfasst.",
+        "Kräftige Lederwickel mit kleinen Schwarzstahlplatten über Knöcheln und Handrücken.",
+        "Feste Lederstiefel mit Schwarzstahlkappen und beweglichen Verstärkungen an den Schäften."
+      ],
+      "cloak": {
+        "name": "Rauchgrauer Kriegsmantel",
+        "description_de": "Ein schwerer, rauchgrauer Stoffmantel mit dunklen Lederbesätzen und einer schlichten Schwarzstahlschließe."
+      }
+    },
+    "Gladiator": {
+      "id": "blacksteel-gladiator-r6",
+      "name": "Schwarzstahl – Arenabrecher",
+      "themeMaterial": "Schwarzstahl",
+      "description": "Schwere Schwarzstahlteile mit offenem, kampfbetontem Schnitt. Breite Platten und sichtbare Nieten prägen das Erscheinungsbild.",
+      "parts": [
+        "Schwarzstahlpanzer",
+        "Gehärtete Schwarzstahlbeinplatten",
+        "Schwarzstahl-Eisenbrecherhelm",
+        "Schwarzstahlfaustschützer",
+        "Schwarzstahlkampfstiefel"
+      ],
+      "partDescriptions": [
+        "Ein schwerer Brustpanzer aus überlappenden Schwarzstahlplatten mit breiten, vernieteten Schulterstücken.",
+        "Gehärtete Beinplatten aus Schwarzstahl, die über kräftigen Lederriemen getragen werden.",
+        "Ein massiver Schwarzstahlhelm mit markantem Stirngrat und breiten Sichtschlitzen.",
+        "Schwere Faustschützer mit schwarzen Metallplatten auf Handrücken und Manschetten.",
+        "Hohe Kampfstiefel mit kräftigen Schwarzstahlschienen und breiten Metallkappen."
+      ],
+      "cloak": {
+        "name": "Rauchgrauer Kriegsmantel",
+        "description_de": "Ein schwerer, rauchgrauer Stoffmantel mit dunklen Lederbesätzen und einer schlichten Schwarzstahlschließe."
+      }
+    },
+    "Tank": {
+      "id": "blacksteel-knight-r6",
+      "name": "Schwarzstahl – Bollwerk",
+      "themeMaterial": "Schwarzstahl",
+      "description": "Eine geschlossene Plattenrüstung aus Schwarzstahl. Überlappende Platten, hohe Kragen und breite Schienen betonen die Rolle des Ritters.",
+      "parts": [
+        "Schwarzstahl-Plattenharnisch",
+        "Geschlossener Schwarzstahlbeinschutz",
+        "Schwarzstahl-Visierhelm",
+        "Schwarzstahl-Panzerhandschuhe",
+        "Schwarzstahl-Panzerschuhe"
+      ],
+      "partDescriptions": [
+        "Ein geschlossener Schwarzstahlharnisch mit hohem Kragen und breiten Schulterplatten.",
+        "Ein vollständiger Beinschutz aus überlappenden Schwarzstahlplatten, der Hüfte, Knie und Schienbeine einfasst.",
+        "Ein geschlossener Helm aus Schwarzstahl mit beweglichem Visier und schmalem Sehschlitz.",
+        "Gegliederte Panzerhandschuhe aus Schwarzstahl mit langen, schützenden Manschetten.",
+        "Geschlossene Panzerschuhe aus gegliederten Schwarzstahlplatten mit verstärkten Fersen."
+      ],
+      "cloak": {
+        "name": "Rauchgrauer Kriegsmantel",
+        "description_de": "Ein schwerer, rauchgrauer Stoffmantel mit dunklen Lederbesätzen und einer schlichten Schwarzstahlschließe."
+      }
+    }
+  },
+  "classProfiles": {
+    "Butcher": "brawler",
+    "Gladiator": "fighter",
+    "Tank": "knight",
+    "Villain": "scout",
+    "Bloodmage": "mage",
+    "Healer": "mage",
+    "Lightmage": "mage",
+    "Kräuterkundler": "wanderer",
+    "Archer": "scout",
+    "Shamane": "nature",
+    "Druid": "nature",
+    "Seelenjäger": "scout",
+    "Adventure": "wanderer"
+  },
+  "earlyProfiles": {
+    "brawler": {
+      "1": [
+        "Grobe Lederweste",
+        "Leinenhose",
+        "Lederkappe",
+        "Wickelhandschuhe",
+        "Abgetragene Stiefel"
+      ],
+      "2": [
+        "Verstärktes Lederwams",
+        "Robuste Fellhose",
+        "Offene Lederhaube",
+        "Nietenhandschuhe",
+        "Schwere Lederstiefel"
+      ],
+      "3": [
+        "Beschlagener Lederharnisch",
+        "Beinschutz aus Hartleder",
+        "Eisenbeschlagene Kappe",
+        "Panzerlederhandschuhe",
+        "Stiefel mit Eisenkappen"
+      ]
+    },
+    "fighter": {
+      "1": [
+        "Gefüttertes Lederwams",
+        "Grobe Stoffhose",
+        "Lederkappe",
+        "Leichte Lederhandschuhe",
+        "Feste Lederschuhe"
+      ],
+      "2": [
+        "Ringpanzerweste",
+        "Verstärkte Lederhose",
+        "Offener Eisenhelm",
+        "Nietenhandschuhe",
+        "Beschlagene Lederstiefel"
+      ],
+      "3": [
+        "Eiserne Brustplatte",
+        "Beinschienen aus Eisen",
+        "Eiserner Nasalhelm",
+        "Eisenhandschuhe",
+        "Schienenstiefel"
+      ]
+    },
+    "knight": {
+      "1": [
+        "Gesteppte Stoffrüstung",
+        "Gefütterte Leinenhose",
+        "Gepolsterte Kappe",
+        "Dicke Lederhandschuhe",
+        "Feste Lederstiefel"
+      ],
+      "2": [
+        "Einfaches Kettenhemd",
+        "Verstärkte Lederhose",
+        "Eiserne Hirnhaube",
+        "Kettenhandschuhe",
+        "Beschlagene Stiefel"
+      ],
+      "3": [
+        "Eiserner Plattenharnisch",
+        "Eiserner Beinschutz",
+        "Geschlossener Eisenhelm",
+        "Plattenhandschuhe",
+        "Eiserne Panzerschuhe"
+      ]
+    },
+    "scout": {
+      "1": [
+        "Leichtes Lederwams",
+        "Einfache Stoffhose",
+        "Stoffkapuze",
+        "Dünne Lederhandschuhe",
+        "Weiche Lederschuhe"
+      ],
+      "2": [
+        "Geschmeidige Lederjacke",
+        "Wildlederhose",
+        "Lederkapuze",
+        "Verstärkte Lederhandschuhe",
+        "Leichte Wanderstiefel"
+      ],
+      "3": [
+        "Genieteter Lederharnisch",
+        "Doppelt genähte Lederhose",
+        "Gefütterte Jagdkapuze",
+        "Flinkfingerhandschuhe",
+        "Weichsohlige Jagdstiefel"
+      ]
+    },
+    "mage": {
+      "1": [
+        "Einfache Stofftunika",
+        "Leinenhose",
+        "Stoffhaube",
+        "Leinenhandschuhe",
+        "Stoffschuhe"
+      ],
+      "2": [
+        "Schlichte Wollrobe",
+        "Weiche Stoffhose",
+        "Wollkapuze",
+        "Feingewebte Handschuhe",
+        "Gefütterte Stoffschuhe"
+      ],
+      "3": [
+        "Bestickte Seidenrobe",
+        "Seidenhose",
+        "Bestickte Kapuze",
+        "Seidenhandschuhe",
+        "Schuhe aus Samt"
+      ]
+    },
+    "nature": {
+      "1": [
+        "Grobe Stofftunika",
+        "Leinenhose",
+        "Weiche Stoffkappe",
+        "Einfache Lederhandschuhe",
+        "Ledersandalen"
+      ],
+      "2": [
+        "Naturgefärbte Robe",
+        "Gewebte Wollhose",
+        "Fellbesetzte Kapuze",
+        "Wildlederhandschuhe",
+        "Gefütterte Mokassins"
+      ],
+      "3": [
+        "Robe aus Rindenfasern",
+        "Hose aus Nesseltuch",
+        "Federbesetzte Kapuze",
+        "Wurzelfaserhandschuhe",
+        "Geschmeidige Fellstiefel"
+      ]
+    },
+    "wanderer": {
+      "1": [
+        "Einfache Lederjacke",
+        "Grobe Leinenhose",
+        "Stoffkappe",
+        "Arbeitshandschuhe",
+        "Abgetragene Lederschuhe"
+      ],
+      "2": [
+        "Robustes Reisewams",
+        "Gefütterte Lederhose",
+        "Wetterfeste Kapuze",
+        "Feste Lederhandschuhe",
+        "Wanderstiefel"
+      ],
+      "3": [
+        "Wachslederjacke",
+        "Dornenfeste Lederhose",
+        "Breitrandiger Lederhut",
+        "Verstärkte Arbeitshandschuhe",
+        "Wetterfeste Reisestiefel"
+      ]
+    }
+  },
+  "rank4": {
+    "Butcher": [
+      "Panzer des Schlachtmeisters",
+      "Blutvernähte Beinschienen",
+      "Gebrochene Eisenmaske",
+      "Kettenwickel",
+      "Knochenbrecherstiefel"
+    ],
+    "Gladiator": [
+      "Kürass des Herausforderers",
+      "Sandnarben-Beinschutz",
+      "Helm der letzten Runde",
+      "Siegergriff",
+      "Stiefel des Sandrings"
+    ],
+    "Tank": [
+      "Eidwacht",
+      "Beinschutz des Bollwerks",
+      "Visier der Morgenwache",
+      "Handschuhe des Hüters",
+      "Stand des Unbeugsamen"
+    ],
+    "Villain": [
+      "Wams der falschen Fährte",
+      "Verborgene Taschen",
+      "Maske ohne Namen",
+      "Schlossknackerhandschuhe",
+      "Lautlose Sohlen"
+    ],
+    "Bloodmage": [
+      "Gewand der letzten Anrufung",
+      "Ascheverwebte Hose",
+      "Schleier der Namenlosen",
+      "Opferhände",
+      "Schritte ins Jenseits"
+    ],
+    "Healer": [
+      "Robe der stillen Zuflucht",
+      "Leinen der Genesung",
+      "Haube des Morgenlichts",
+      "Hände der Barmherzigkeit",
+      "Pilgerschuhe"
+    ],
+    "Lightmage": [
+      "Mantel der Lichtbrechung",
+      "Sonnenseidenhose",
+      "Diadem des ersten Strahls",
+      "Prismenhandschuhe",
+      "Schritte der Dämmerung"
+    ],
+    "Kräuterkundler": [
+      "Schürze des Giftmischers",
+      "Dornenfeste Hose",
+      "Kapuze des Sammlers",
+      "Wurzelgreifer",
+      "Moorstiefel"
+    ],
+    "Archer": [
+      "Wams des langen Ansitzes",
+      "Farnläuferhose",
+      "Kapuze der Fährte",
+      "Sehnenschoner",
+      "Schuhe des Wildwechsels"
+    ],
+    "Shamane": [
+      "Gewand der Ahnenstimmen",
+      "Hose des Regentanzes",
+      "Maske der vier Winde",
+      "Glutbewahrer",
+      "Erdenwandler"
+    ],
+    "Druid": [
+      "Rinde des alten Hains",
+      "Moosverwobene Hose",
+      "Krone des Jahreskreises",
+      "Hände des Wildwuchses",
+      "Wurzelpfad"
+    ],
+    "Seelenjäger": [
+      "Harnisch der verlorenen Spur",
+      "Nachtlederhose",
+      "Blick hinter den Schleier",
+      "Griff des Seelenfängers",
+      "Schritte des Verfolgten"
+    ],
+    "Adventure": [
+      "Vielgeflickte Reisejacke",
+      "Hose der tausend Wege",
+      "Wetterkappe",
+      "Handschuhe des Finders",
+      "Weitläuferstiefel"
+    ]
+  }
+}

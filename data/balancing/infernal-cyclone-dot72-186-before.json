@@ -1,0 +1,54 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba1",
+  "skillName_eng": "Infernal Cyclone",
+  "__v": 0,
+  "category": "active",
+  "cd": 150,
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erzeugt einen Zyklon aus Höllenfeuer im betroffenen Gebiet. Der bisherige magische Grundschadenswert steigt von 368 um 142 je weiterer Stufe auf 936 auf Stufe 5. Mana-Kosten steigen von 172 um 91 je weiterer Stufe auf 536. Die Dauer steigt von 6 um 1 Sekunde je weiterer Stufe auf 10 Sekunden. Der Cooldown sinkt von 150 um 2 Sekunden je weiterer Stufe auf 142 Sekunden. Castzeit 1 Sekunde. Der zusätzliche Schaden über Zeit, sein Tickintervall, der Trefferbereich und das Verhalten bei Bewegung des Ziels werden gesondert festgelegt. Besonders Kombinationen mit Fesseln und Stuns sind in der Balancingrunde zu prüfen; der DoT ist im genannten Grundschaden noch nicht eingerechnet.",
+  "description_eng": "Creates a cyclone of hellfire in the affected area. Existing magical base damage increases from 368 by 142 per additional level to 936 at level 5. Mana cost increases from 172 by 91 per additional level to 536. Duration increases from 6 by 1 second per additional level to 10 seconds. Cooldown decreases from 150 by 2 seconds per additional level to 142 seconds. Cast time is 1 second. Additional damage over time, tick interval, hit area and behavior when the target moves will be defined separately. Combinations with roots and stuns require particular balancing review; DoT is not included in the stated base damage.",
+  "dmgType": "spell",
+  "dur": 6,
+  "matk": 368,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 62,
+  "skillName_de": "Infernal Zyklon",
+  "skillpoints": 1,
+  "durationScaling": {
+    "type": "linear",
+    "base": 6,
+    "perLevel": 1
+  },
+  "castTimeSeconds": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 150,
+    "perLevel": -2
+  },
+  "mana": 172,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 172,
+        "perLevel": 91
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 368,
+      "perLevel": 142
+    }
+  }
+}

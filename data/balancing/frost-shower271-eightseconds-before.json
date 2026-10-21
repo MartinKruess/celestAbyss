@@ -1,0 +1,318 @@
+[
+  {
+    "_id": "6ad16c307a9be0e8beddf80f",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 32,
+        "perLevel": 21
+      }
+    },
+    "castTimeSeconds": 0.4,
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "attackArea": {
+      "centerTracking": "pending",
+      "maxTargets": 3,
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 5,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "evaluation": "perHit"
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 0.6666666666666666,
+      "values": []
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 56,
+          "perLevel": 34,
+          "values": []
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "targetCreatureTypes": [],
+        "damageSchool": "ice",
+        "requiredActiveSkillNumbers": [],
+        "firstTickAfterSeconds": 1,
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "linear",
+          "base": 32,
+          "perLevel": 21,
+          "values": []
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 0.6666666666666666,
+          "values": []
+        },
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "allowedRaces": [],
+        "value": 32,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1,
+        "durationSeconds": 4,
+        "key": "ice-rain-periodic-damage"
+      },
+      {
+        "key": "frost-shower-movement-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.01,
+        "unit": "fraction",
+        "valueAtMaxLevel": -0.1,
+        "progressionStatus": "defined",
+        "durationSeconds": 3,
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 239,
+        "maxStacksPerTarget": 1,
+        "reapplicationPolicy": "refreshDuration",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.01,
+          "perLevel": -0.01
+        }
+      }
+    ],
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 239,
+    "skillName_eng": "Frost Shower",
+    "skillName_de": "Frostschauer",
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Creates an icy rain around the selected target, hitting up to three enemies each second within a 5-meter radius. First tick after 1 second, no extra initial hit. Duration starts at 4 seconds and increases linearly to 10 seconds at level 10. Magical skill base damage per tick per hit enemy starts at 32 and increases by 21 per additional level to 221. At level 10 full duration yields ten ticks, 2210 skill base damage per target or 6630 across three continuously hit enemies. Mana 56 plus 34 per additional level, reaching 362 per activation. Cast time 0.4 seconds. Cooldown, selection of up to three targets per tick, field tracking and character magical attack contribution per tick remain pending. Interaction with Frostburn will be reviewed later. Each successful Frost Shower hit reduces movement speed by 1 percent at level 1, increasing by one percentage point per additional level to 10 percent at level 10. Duration is 3 seconds at every level. Each subsequent hit refreshes the duration to 3 seconds without stacking magnitude. The debuff persists up to 3 seconds after the last hit and does not automatically end with the field.",
+    "description_de": "Erzeugt einen eisigen Regen um das anvisierte Ziel, der jede Sekunde bis zu drei Gegner innerhalb eines Radius von 5 Metern trifft. Erster Tick nach 1 Sekunde, kein zusätzlicher Initialtreffer. Feldlaufzeit 4 Sekunden auf Stufe 1, gleichmäßig steigend auf 10 Sekunden auf Stufe 10. Magischer Skill-Grundschaden je Tick und getroffenem Gegner 32 auf Stufe 1, +21 je weiterer Stufe, auf Stufe 10 221. Bei vollständigem Aufenthalt auf Stufe 10 zehn Ticks mit insgesamt 2210 Skill-Grundschaden je Ziel beziehungsweise 6630 über drei durchgehend getroffene Gegner. Mana 56 auf Stufe 1, +34 je weiterer Stufe, auf Stufe 10 362 pro Anwendung. Castzeit 0,4 Sekunden. Cooldown, Auswahl der bis zu drei Gegner je Tick, Mitbewegung des Feldes und Charakter-M-Angriffsbeitrag je Tick sind noch nicht festgelegt. Wechselwirkung mit Gefrierbrand wird später geprüft. Jeder erfolgreiche Frostschauer-Treffer senkt die Bewegungsgeschwindigkeit auf Stufe 1 um 1 Prozent und je weiterer Stufe um einen zusätzlichen Prozentpunkt, auf Stufe 10 insgesamt um 10 Prozent. Dauer jeweils 3 Sekunden. Jeder weitere Treffer erneuert die Dauer auf 3 Sekunden; die Stärke stapelt sich nicht. Der Debuff bleibt bis zu 3 Sekunden nach dem letzten Treffer bestehen und endet nicht automatisch mit dem Feld.",
+    "dmgType": "spell",
+    "skillpoints": 1,
+    "matk": 32,
+    "dur": 4,
+    "__v": 0
+  },
+  {
+    "_id": "6ad16dcf22dc4aad4f9a76fd",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "castTimeSeconds": 0,
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "values": []
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "resourceCosts": [],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "targetCreatureTypes": [],
+        "damageSchool": "ice",
+        "requiredActiveSkillNumbers": [],
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 2,
+          "values": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "type": "cooldownReduction",
+        "target": "self",
+        "allowedRaces": [],
+        "value": 2,
+        "unit": "flat",
+        "appliesTo": "allSkills",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "permafrost-ice-cooldown"
+      },
+      {
+        "targetCreatureTypes": [],
+        "damageSchool": "ice",
+        "requiredActiveSkillNumbers": [],
+        "disablesEffects": [],
+        "valueScaling": {
+          "values": []
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "type": "procChanceBonus",
+        "controlKind": "freeze",
+        "target": "self",
+        "allowedRaces": [],
+        "value": 0.01,
+        "unit": "fraction",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "permafrost-freeze-chance"
+      },
+      {
+        "targetCreatureTypes": [],
+        "requiredActiveSkillNumbers": [],
+        "intervalSource": "manaRegenerationTick",
+        "disablesEffects": [],
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            13,
+            21,
+            29
+          ]
+        },
+        "durationScaling": {
+          "values": []
+        },
+        "type": "resourceDrain",
+        "target": "self",
+        "allowedRaces": [],
+        "value": 13,
+        "unit": "flat",
+        "resource": "mana",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "permafrost-mana-drain"
+      }
+    ],
+    "activation": "toggle",
+    "toggleSettings": {
+      "durationMode": "whileEnabled",
+      "onInsufficientResource": "deactivate"
+    },
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 240,
+    "skillName_eng": "Permafrost",
+    "skillName_de": "Permafrost",
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 3,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Instant-toggle self buff with three levels and no fixed duration. Remains enabled until manually switched off or Mana is insufficient for the next drain tick. Costs 13/21/29 Mana per Mana regeneration tick at levels 1/2/3, with no additional upfront cost. Reduces ice spell cooldowns by 2/4/6 seconds while enabled. Adds one percentage point to ice-attack freeze chance at every level, raising maximum Frostburn chance from 10 to 11 percent. No separate freeze rolls or independent freeze duration. Cast time zero. Benefits and drain end on deactivation. Toggle cooldown, minimum ice-spell cooldown and handling of already running cooldowns remain pending.",
+    "description_de": "Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt aktiv, bis er manuell ausgeschaltet wird oder das Mana für den nächsten Verbrauchstick nicht reicht. Bei jedem Mana-Regenerationstick kostet er auf Stufe 1/2/3 jeweils 13/21/29 Mana; kein zusätzlicher einmaliger Aktivierungspreis. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit 0 Sekunden. Beim Abschalten enden die Boni und der laufende Verbrauch. Umschalt-Cooldown, Mindest-Cooldown von Eiszaubern sowie Einfluss auf bereits laufende Cooldowns werden noch festgelegt.",
+    "dmgType": "selfbuff",
+    "skillpoints": 1,
+    "__v": 0
+  }
+]

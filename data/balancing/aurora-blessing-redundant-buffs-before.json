@@ -1,0 +1,137 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c26",
+    "skillName_eng": "Light Weapon",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe den physischen Angriff aller Waffen.",
+    "description_eng": "Increase the physical attack of all weapons.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 195,
+    "patk": 18,
+    "skillName_de": "Lichtwaffe",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c27",
+    "skillName_eng": "Radiant Armor",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe die Verteidigung aller Rüstungen.",
+    "description_eng": "Increase the defense of all armors.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 196,
+    "pdef": 18,
+    "skillName_de": "Strahlende Rüstung",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c28",
+    "skillName_eng": "Aurora's Blessing",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Vereint die bisherigen Segen des Angriffes, der Mentalität und der Verteidigung in einem langfristigen Gruppenbuff. Je gelerntem Skilllevel erhalten alle Mitglieder der eigenen Gruppe +2 Stärke, +2 Vitalität, +2 Intelligenz, +2 Wisdom, +18 P-Angriff, +18 M-Angriff, +18 P-Defense, +18 M-Defense und +18 direkte MP-Regeneration je Regenerationstick. Auf Stufe 10 jeweils +20 Attribute und +180 der direkten Kampf- und Regenerationswerte. Dauer 1800 Sekunden, Cooldown 60 Sekunden. Zehn lernbare Stufen, ein SP je Stufe. Mana-Kosten und Castzeit sind noch festzulegen. Die bisherigen separaten Mentalitäts- und Verteidigungssegen sind dem Heiler nicht mehr zugeordnet und werden nicht zusätzlich gestapelt.",
+    "description_eng": "Combines the former Blessings of Attack, Mentality and Defense into one long-duration group buff. Each learned skill level grants own group members +2 Strength, Vitality, Intelligence and Wisdom, plus +18 physical attack, magical attack, physical defense, magical defense and direct Mana regeneration per regeneration tick. At level 10: +20 to each listed attribute and +180 to each direct combat/regeneration value. Duration 1800 seconds, cooldown 60 seconds. Ten learnable levels, one SP per level. Mana costs and cast time remain undefined. Former separate Mentality and Defense blessings are no longer assigned to the Healer and do not stack in addition.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "matk": 18,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 197,
+    "patk": 18,
+    "skillName_de": "Aurora-Segen",
+    "skillpoints": 1,
+    "str": 2,
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat",
+      "int": "flat",
+      "wis": "flat",
+      "patk": "flat",
+      "matk": "flat",
+      "pdef": "flat",
+      "mdef": "flat",
+      "manaRegen": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "patk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "matk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      }
+    },
+    "int": 2,
+    "manaRegen": 18,
+    "mdef": 18,
+    "pdef": 18,
+    "vita": 2,
+    "wis": 2
+  }
+]

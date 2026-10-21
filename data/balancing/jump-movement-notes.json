@@ -1,0 +1,19 @@
+{
+  "normalJump": {
+    "allClasses": true,
+    "approximateHeightMeters": 1,
+    "status": "provisionalGameplayNote"
+  },
+  "doubleJump": {
+    "classes": [
+      "Hunter",
+      "Archer",
+      "Abenteuer"
+    ],
+    "heightAtMaxLevelMeters": 2,
+    "alternativeHeightMeters": 2.2,
+    "status": "heightAndDurationRequireInGameVerification",
+    "heightInterpretation": "Target overall jump height; exact vertical trajectory pending"
+  },
+  "levelInterpolation": "Linear provisional distribution across nine improvements"
+}

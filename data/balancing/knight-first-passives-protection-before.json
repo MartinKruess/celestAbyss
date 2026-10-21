@@ -1,0 +1,117 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b7f",
+    "skillName_eng": "Iron Shield",
+    "__v": 0,
+    "block": 5,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Verteidigung leicht.",
+    "description_eng": "Slightly increases your defense.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 28,
+    "skillName_de": "Eiserner Schild",
+    "skillpoints": 1,
+    "vita": 2,
+    "wis": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9e",
+    "skillName_eng": "Divine Protection",
+    "__v": 0,
+    "category": "active",
+    "cd": 77,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du rammst deinen Schild in den Boden und erschaffst vor dir ein schützendes Abbild des Schildes. Verbündete hinter dem Schild erleiden durch abgefangene Angriffe weniger Schaden. Auf Skilllevel 1 reduziert der Schutz den Schaden für 5 Sekunden um 30 %. Auf Skilllevel 2 hält er 7 Sekunden und reduziert den Schaden um 35 %.",
+    "description_eng": "Plant your shield in the ground to create a protective image of it in front of you. Allies behind the shield take reduced damage from intercepted attacks. At skill level 1, the protection reduces damage by 30% for 5 seconds. At skill level 2, it reduces damage by 35% for 7 seconds.",
+    "dmgType": "spell",
+    "dur": 5,
+    "maxSkillLv": 2,
+    "maxUpgradeLv": 10,
+    "nr": 59,
+    "skillName_de": "Göttlicher Schutz",
+    "skillpoints": 1,
+    "activation": "manual",
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.3,
+          "perLevel": 0.05
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 2
+        },
+        "type": "damageReduction",
+        "target": "alliesBehindCaster",
+        "area": "projectedShield",
+        "value": 0.3,
+        "unit": "fraction",
+        "damageTypes": [],
+        "durationSeconds": 5,
+        "key": "projected-shield-protection"
+      }
+    ],
+    "effectsVersion": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb5",
+    "skillName_eng": "Protection Aura",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Überlebe heikle Situationen, in dem du die schützende Aura aktivierst.",
+    "description_eng": "Survive tricky situations by activating the protective aura.",
+    "dmgType": "spell",
+    "dur": 15,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 500,
+    "nr": 82,
+    "pdef": 500,
+    "skillName_de": "Schutz Aura",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc0",
+    "skillName_eng": "Shield Attack Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert deine Fertigkeiten im Kampf mit dem Schild. +2 Vitalität und +1 Stärke pro Skilllevel.",
+    "description_eng": "Improves your skills in combat with a shield. +2 Vitality and +1 Strength per skill level.",
+    "dmgType": "passive",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 93,
+    "skillName_de": "Schildangriffstraining",
+    "skillpoints": 1,
+    "vita": 2,
+    "str": 1
+  }
+]

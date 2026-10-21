@@ -1,0 +1,258 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bae",
+    "skillName_eng": "Body Reinforcement",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Butcher",
+      "Destroyer",
+      "Berserker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt dich selbst, deine Gruppenmitglieder und Begleiter für 300 Sekunden. Erhöht Stärke und Vitalität jeweils um 2 je gelerntem Skilllevel, bis zu jeweils 20. Die Cast Time beträgt 0,3 Sekunden. Die Mana-Kosten steigen von 47 um 23 je weiterer Stufe auf 254. Der Cooldown beträgt 60 Sekunden.",
+    "description_eng": "Strengthens you, your group members and companions for 300 seconds. Increases Strength and Vitality by 2 each per learned skill level, up to 20 each. Cast time is 0.3 seconds. Mana cost increases from 47 by 23 per additional level to 254. Cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 75,
+    "skillName_de": "Verstärkung des Körpers",
+    "skillpoints": 1,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "activation": "manual",
+    "statBonusTargets": {
+      "str": "selfGroupAndCompanions",
+      "vita": "selfGroupAndCompanions"
+    },
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat"
+    },
+    "str": 2,
+    "vita": 2,
+    "castTimeSeconds": 0.3,
+    "mana": 47,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 47,
+          "perLevel": 23
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": 23
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c10",
+    "skillName_eng": "Spirit of the Warrior",
+    "__v": 0,
+    "category": "active",
+    "cd": 600,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht deine Stärke auf Skilllevel 1 um 4 und deine Vitalität um 1. Pro weiterem Skilllevel steigen beide Boni um 1. Die Dauer steigt von 180 auf 270 Sekunden und der Cooldown sinkt von 600 auf 420 Sekunden bis Skilllevel 10. Mana 32, je weiterer Stufe +15 bis 167. Castzeit fest 0,1 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "At skill level 1, increases your Strength by 4 and Vitality by 1. Each additional skill level increases both bonuses by 1. By skill level 10, the duration increases from 180 to 270 seconds and the cooldown decreases from 600 to 420 seconds. Mana 32 plus 15 per additional level to 167. Fixed cast time 0.1 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 180,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 173,
+    "skillName_de": "Geist des Kriegers",
+    "skillpoints": 1,
+    "str": 4,
+    "vita": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 600,
+      "perLevel": -20
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 180,
+      "perLevel": 10
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 1
+      },
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 600,
+              "perLevel": -20
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 180,
+            "perLevel": 10
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  }
+]

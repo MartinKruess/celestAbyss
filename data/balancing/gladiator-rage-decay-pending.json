@@ -1,0 +1,19 @@
+{
+  "classKey": "gladiator",
+  "status": "proposalForLaterReview",
+  "resource": "rage",
+  "maximumPoints": 100,
+  "outOfCombatDecay": {
+    "amountPoints": 5,
+    "intervalSeconds": 1.5,
+    "minimumPoints": 0,
+    "onlyOutsideCombat": true
+  },
+  "reviewNotes": [
+    "Determine when the server considers combat ended and how resuming combat affects the decay timer.",
+    "Short travel between farming targets should allow retaining most accumulated rage.",
+    "Review rage generation against decay for weak enemies killed with one hit.",
+    "No additional combat grace period has been specified."
+  ],
+  "runtimeImplementation": "pending"
+}

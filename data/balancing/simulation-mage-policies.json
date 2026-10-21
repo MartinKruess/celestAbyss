@@ -1,0 +1,275 @@
+{
+  "version": 1,
+  "status": "simulationOnlyDoesNotChangeGameData",
+  "classes": {
+    "druid": {
+      "damageSkills": [
+        202,
+        220,
+        36,
+        29,
+        221,
+        15,
+        219,
+        38,
+        106,
+        9
+      ],
+      "nonFillerPriority": [
+        9,
+        106,
+        38,
+        15,
+        221,
+        29,
+        220,
+        202
+      ],
+      "fillerPriority": [
+        36
+      ],
+      "setupSkills": [
+        244
+      ],
+      "setupBefore": [],
+      "specialRules": [
+        "244 Nature Spirit: live 30% Int/Vita/Wis, Int gives 1.8 magical wind attack per inherited point; 1.5 attacks/s, duration360,CD360,132mana,cast0.4.",
+        "219 mana explosion consumes current mana and adds30%; place after normal ready attacks, not automatically first because burst value is high. Rescore live currentMana.",
+        "200 is mana recovery rather than damage; excluded unless a separate resource-maintenance mode is explicitly enabled."
+      ]
+    },
+    "shaman": {
+      "damageSkills": [
+        36,
+        68,
+        125,
+        50,
+        30,
+        87,
+        15,
+        57,
+        38,
+        62,
+        76,
+        118,
+        212
+      ],
+      "nonFillerPriority": [
+        212,
+        118,
+        76,
+        62,
+        38,
+        57,
+        15,
+        87,
+        30,
+        50,
+        125,
+        68
+      ],
+      "fillerPriority": [
+        36
+      ],
+      "setupSkills": [],
+      "setupBefore": [],
+      "specialRules": [
+        "118 impact is7 seconds after cast completion on max level (duration4+4*0.75), no channel lock.",
+        "212 hits at0 and2.5seconds, multipliers1 and0.8.",
+        "76 has2 hits but exact timings pending; current provisional both at cast completion."
+      ]
+    },
+    "herbalist": {
+      "damageSkills": [
+        16,
+        29,
+        31,
+        46,
+        221,
+        56,
+        57,
+        69,
+        112
+      ],
+      "nonFillerPriority": [
+        112,
+        69,
+        57,
+        56,
+        221,
+        46,
+        31,
+        29,
+        16
+      ],
+      "fillerPriority": [],
+      "setupSkills": [],
+      "setupBefore": [
+        {
+          "skill": 56,
+          "before": [
+            112,
+            69,
+            57,
+            31
+          ]
+        }
+      ],
+      "specialRules": [
+        "56 mist electric vulnerability+2% for18seconds, apply only named electrical31,57,69,112.",
+        "112 no initial hit;9 ticks at1,3,5,7,9,11,13,15,17, each545+M.",
+        "31 initial542+M, periodic37+currentM at2,4,6,8: repeated field attacks use currentM, confirmed new areaAttack rule.",
+        "46 freeze/protection conditional on random50% proc: excluded under no-random scenario.",
+        "169 random attack bonus is an optional buff and excluded."
+      ]
+    },
+    "luminet": {
+      "damageSkills": [
+        231,
+        36,
+        218,
+        210,
+        29,
+        101,
+        215,
+        213,
+        217,
+        8,
+        211,
+        117,
+        216,
+        9
+      ],
+      "nonFillerPriority": [
+        9,
+        216,
+        117,
+        211,
+        8,
+        217,
+        213,
+        215,
+        101,
+        29,
+        218
+      ],
+      "fillerPriority": [
+        36,
+        210,
+        231
+      ],
+      "setupSkills": [],
+      "setupBefore": [
+        {
+          "skill": 218,
+          "before": [
+            9,
+            216,
+            117,
+            211
+          ]
+        }
+      ],
+      "specialRules": [
+        "218 light vulnerability+3% for4seconds; only light spells, not ice/energy.",
+        "117 impacts0 and2 seconds, multiplier1 and0.5.",
+        "216 three spears, each skillbase+M, exact spacing unspecified.",
+        "217 nova impact2seconds after creation.",
+        "8 astral visual4seconds does not block further casts.",
+        "211 remains provisional single center hit; do not manufacture12second channel or repeated hits."
+      ]
+    },
+    "ritualist": {
+      "damageSkills": [
+        232,
+        103,
+        72,
+        49,
+        110,
+        180,
+        105,
+        99,
+        48,
+        235,
+        104
+      ],
+      "nonFillerPriority": [
+        235,
+        48,
+        99,
+        180,
+        110,
+        72,
+        103
+      ],
+      "fillerPriority": [
+        49,
+        232
+      ],
+      "setupSkills": [
+        237
+      ],
+      "setupBefore": [],
+      "specialRules": [
+        "Initial souls100. Virtual monster is not literal training dummy:48 grants1 unique-target soul per cast;105 grants up to2. Literal dummy mode must disable these gains.",
+        "103 costs1 soul,CD90; opens3second window for104.",
+        "104 cast0,CD0.19, plan15 hits (not16 theoretical), windows override filler selection; must reserve enough mana before starting whole planned sequence.",
+        "105 CD180,manual finisher within1.5seconds after shackle expires;0..4hits=0souls,5..11=1,12+=2; heals750.",
+        "When105 not ready, still allow103+10415 hits, no new souls.",
+        "180 costs30souls,CD76; do not spend last soul if it prevents the higher-priority planned shackle combo.",
+        "Soul count dynamically adds1M each via241;209 adds120flat to103104105180;214adds80M and drains72HP every1.5s.",
+        "83 Opfergabe attackSacrificeSettings: final skilldamage1.01, maxHPcost0.005 once per attack activation, never per tick; basic attacks excluded.",
+        "72 heals350+2% actual damage.",
+        "99 health cost25% current maximum HP,damage666+125% sacrificedHP+M; impact during third second, use3s after completion as provisional.",
+        "110 single impact0.5s after completion; visual3.5s is not repeated damage.",
+        "235 three40/60pairs at1/1.5/3/3.5/5/5.5;3 total weight, not36 hits.",
+        "237 is passive upgrade but includes allowed separate quest summon action:cast0.4,lifetime300,CD360,zeroMana,minus500MaxHP and+5Wis/Vic while active,liveM/3. No regular pet included."
+      ]
+    },
+    "healer": {
+      "damageSkills": [
+        36,
+        68,
+        239,
+        29,
+        101,
+        217
+      ],
+      "nonFillerPriority": [
+        217,
+        101,
+        29,
+        239,
+        68
+      ],
+      "fillerPriority": [
+        36
+      ],
+      "setupSkills": [],
+      "setupBefore": [],
+      "specialRules": [
+        "239 Frostschauer confirmed current max271 damage per tick+M, interval1.5, first1.5,duration8,5ticks,CD43,cast0.4.",
+        "54 ice damage+2% is nonrandom passive; freeze chance and its conditioned DoT excluded.",
+        "240 Permafrost optional toggle excluded like all optional self-buffs.",
+        "Healing-only spells excluded against non-attacking monster; no fallback into pure heal casts."
+      ]
+    }
+  },
+  "common": {
+    "optionalBuffs": false,
+    "healOnlySkills": false,
+    "regularPets": false,
+    "allowedSummonSkills": [
+      226,
+      237
+    ],
+    "selection": "Finish current cast; evaluate setup/combos, then ready non-filler damaging abilities by descending damage per activation, then filler, then auto-attack. Do not choose zero-CD filler before ready stronger abilities.",
+    "timing": "Effect offsets start at cast completion. Only cast time blocks; visuals and persistent fields do not. Unknown exact offsets use completion, clearly provisional.",
+    "randomEffects": "No random crit, misses, control procs or chance-based bonus damage. Guaranteed crit only.",
+    "resourceGates": "Do not cast unaffordable skills or health-sacrifice skills whose health condition fails.",
+    "timeHorizon": "Count impacts at t < 600 only, not future damage already launched.",
+    "target": "Non-attacking virtual monster with2000000HP, not literal training dummy; resource generation enabled.",
+    "baseAttacksPerSecond": 1.5,
+    "regenerationTickSeconds": 2
+  }
+}

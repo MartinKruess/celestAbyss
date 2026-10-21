@@ -1,0 +1,163 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c28",
+    "skillName_eng": "Aurora's Blessing",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Aurora-Segen vereint die bisherigen Angriffs-, Mentalitäts- und Verteidigungssegen. Je Stufe +2 Stärke, Vitalität, Intelligenz und Willenskraft sowie +18 direkte MP-Regeneration je Tick. Auf Stufe 10 jeweils +20 der vier Attribute und +180 MP-Regeneration je Tick. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr. Die bisherigen separaten Segen werden nicht zusätzlich gestapelt. Dauer 30 Minuten, Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Mana-Kosten: 35 + 21 je weiterer Stufe.",
+    "description_eng": "Combines the former Attack, Mentality and Defense blessings. Each level grants +2 Strength, Vitality, Intelligence and Wisdom and +18 direct Mana regeneration per tick. Level 10 grants +20 of each of those four attributes and +180 Mana regeneration per tick. No direct physical/magical attack or defense bonuses. Former separate blessings do not stack in addition. Duration 30 minutes, cooldown 60 seconds, cast time 0.3 seconds. Mana cost: 35 + 21 per additional level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 197,
+    "skillName_de": "Aurora-Segen",
+    "skillpoints": 1,
+    "str": 2,
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat",
+      "int": "flat",
+      "wis": "flat",
+      "manaRegen": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      }
+    },
+    "int": 2,
+    "manaRegen": 18,
+    "vita": 2,
+    "wis": 2,
+    "castTimeSeconds": 0.3,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 35,
+          "perLevel": 21
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 35,
+              "perLevel": 21
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff",
+    "castTimeStatus": "defined"
+  }
+]

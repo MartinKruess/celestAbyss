@@ -1,0 +1,2781 @@
+{
+  "generatedAt": "2026-10-20T08:41:30.895Z",
+  "durationSeconds": 600,
+  "status": "diagnosisOnlyNoBalanceChanges",
+  "inputHashes": {
+    "data/skills.json": "b46b3589a8106dc29bdbb34de7265145ffb08d388efa43b86c116fa926484083",
+    "data/balancing/class-comparison-level60.json": "e021930cb4e15bdc489f70f14edc18017dc617050b887fb236a44a1f0845ed31",
+    "services/timedDamageSimulation.js": "4f39117a884aedeb06e8a7ff421fda0e8526daed34602a1518e040fdafddac40",
+    "services/attackSpeed.js": "9f8ff6396a55e810f2715819390eaa91cdfe1dc89789e02af45769e36cc55352"
+  },
+  "notes": [
+    "Fixed current attack policy, identical equipment. Group buffs prepared and permanent. Current Aurora +20 MP/tick; historical +180 counterfactual reproduces published totals.",
+    "Isolated removals measure conditional marginal effects and are not additive. Dexterity changes also affect attack, accuracy and inherited companion attributes; no accuracy misses in this dummy."
+  ],
+  "rows": [
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "none",
+      "total": 610331.8800000058,
+      "skill": 318196.560000001,
+      "auto": 226152.00000000134,
+      "summon": 65983.3199999992,
+      "manaSpent": 35024,
+      "manaRegenerated": 32019.999999999884,
+      "initialMana": 4431,
+      "finalMana": 1426.9999999999818,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 360,
+          "damage": 226152.00000000134,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 91944,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 69709.19999999992,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 65983.3199999992,
+          "manaSpent": 264
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 60136.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 29291.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 28952.00000000002,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 16382.600000000004,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 13286.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 8494.199999999999,
+          "manaSpent": 407
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "self",
+      "total": 655736.9199999964,
+      "skill": 343097.560000001,
+      "auto": 239472.00000000148,
+      "summon": 73167.36000000167,
+      "manaSpent": 36280,
+      "manaRegenerated": 32019.999999999884,
+      "initialMana": 4431,
+      "finalMana": 170.9999999999893,
+      "manaBlockedSeconds": 14.280000000000086,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 360,
+          "damage": 239472.00000000148,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 96384,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 73167.36000000167,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 65,
+          "damage": 71057.99999999991,
+          "manaSpent": 7280
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 60869.15999999998,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 29772.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 34,
+          "damage": 29382.800000000017,
+          "manaSpent": 1836
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 17280,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 16863.600000000002,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 11,
+          "damage": 12586.200000000003,
+          "manaSpent": 1485
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 8901.199999999999,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "full",
+      "total": 873942.9200000112,
+      "skill": 407179.5600000012,
+      "auto": 356501.6000000027,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 36071.79999999991,
+      "initialMana": 5331,
+      "finalMana": 4821.800000000002,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 356501.6000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "oldAurora180",
+      "total": 873942.9200000112,
+      "skill": 407179.5600000012,
+      "auto": 356501.6000000027,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 36580.99999999996,
+      "initialMana": 5331,
+      "finalMana": 5331,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 356501.6000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutDirectAttackBonuses",
+      "total": 747438.9200000092,
+      "skill": 355015.5600000011,
+      "auto": 282161.6000000022,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 36071.79999999991,
+      "initialMana": 5331,
+      "finalMana": 4821.800000000002,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 282161.6000000022,
+          "manaSpent": 0
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 98544,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 73339.19999999991,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 61225.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 30877.00000000002,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 30006.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 17097.600000000002,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 13946.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 9099.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutDirectManaRegeneration",
+      "total": 873942.9200000112,
+      "skill": 407179.5600000012,
+      "auto": 356501.6000000027,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 35431.799999999836,
+      "initialMana": 5331,
+      "finalMana": 4181.800000000001,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 356501.6000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutGroupAttackSpeed",
+      "total": 826679.7200000108,
+      "skill": 403939.5600000012,
+      "auto": 312478.4000000021,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 36071.79999999991,
+      "initialMana": 5331,
+      "finalMana": 4821.800000000002,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 362,
+          "damage": 312478.4000000021,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 17640,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutGroupDexterity",
+      "total": 824198.1199999979,
+      "skill": 401963.16000000114,
+      "auto": 349067.60000000265,
+      "summon": 73167.36000000167,
+      "manaSpent": 36581,
+      "manaRegenerated": 36071.79999999991,
+      "initialMana": 5331,
+      "finalMana": 4821.800000000002,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 349067.60000000265,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 117984,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 84031.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 73167.36000000167,
+          "manaSpent": 264
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64433.15999999998,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 36547.00000000001,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32112.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19203.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 15890.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10881.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutPowerOfFire",
+      "total": 747438.9200000092,
+      "skill": 355015.5600000011,
+      "auto": 282161.6000000022,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 36071.79999999991,
+      "initialMana": 5331,
+      "finalMana": 4821.800000000002,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 282161.6000000022,
+          "manaSpent": 0
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 98544,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 73339.19999999991,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 61225.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 30877.00000000002,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 30006.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 17097.600000000002,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 13946.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 9099.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutPowerOfWater",
+      "total": 873942.9200000112,
+      "skill": 407179.5600000012,
+      "auto": 356501.6000000027,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 35591.79999999986,
+      "initialMana": 5331,
+      "finalMana": 4341.800000000001,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 356501.6000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutAurora",
+      "total": 873942.9200000112,
+      "skill": 407179.5600000012,
+      "auto": 356501.6000000027,
+      "summon": 110261.75999999869,
+      "manaSpent": 36581,
+      "manaRegenerated": 35767.799999999894,
+      "initialMana": 4731,
+      "finalMana": 3917.7999999999993,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 356501.6000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 110261.75999999869,
+          "manaSpent": 264
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "variant": "withoutCompanionBuff",
+      "total": 841686.9200000108,
+      "skill": 407179.5600000012,
+      "auto": 356501.6000000027,
+      "summon": 78005.759999999,
+      "manaSpent": 36581,
+      "manaRegenerated": 36071.79999999991,
+      "initialMana": 5331,
+      "finalMana": 4821.800000000002,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 413,
+          "damage": 356501.6000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "applications": 10,
+          "damage": 120144,
+          "manaSpent": 4140
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 66,
+          "damage": 85219.1999999999,
+          "manaSpent": 7392
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "applications": 2,
+          "damage": 78005.759999999,
+          "manaSpent": 264
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "applications": 11,
+          "damage": 64789.56,
+          "manaSpent": 11979
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "applications": 35,
+          "damage": 37177,
+          "manaSpent": 1890
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "applications": 13,
+          "damage": 32346.600000000006,
+          "manaSpent": 5278
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "applications": 7,
+          "damage": 20880,
+          "manaSpent": 1169
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "applications": 13,
+          "damage": 19437.600000000006,
+          "manaSpent": 2054
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "applications": 12,
+          "damage": 16106.400000000003,
+          "manaSpent": 1620
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 11079.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 54
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "none",
+      "total": 515498.8700000059,
+      "skill": 235602.47000000055,
+      "auto": 279896.4000000027,
+      "summon": 0,
+      "manaSpent": 30140,
+      "manaRegenerated": 26619.99999999992,
+      "initialMana": 3722.5,
+      "finalMana": 202.50000000000318,
+      "manaBlockedSeconds": 283.8400000000005,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 522,
+          "damage": 279896.4000000027,
+          "manaSpent": 0
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 61708.79999999993,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 15,
+          "damage": 56168.999999999956,
+          "manaSpent": 8010
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 21,
+          "damage": 46712.400000000016,
+          "manaSpent": 6153
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 7,
+          "damage": 21913.920000000002,
+          "manaSpent": 3787
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 14,
+          "damage": 19952.800000000007,
+          "manaSpent": 3108
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 25,
+          "damage": 16430.000000000007,
+          "manaSpent": 0
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 7482.199999999999,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 3601.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 1,
+          "damage": 1632.1499999999999,
+          "manaSpent": 439
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 960
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "self",
+      "total": 570771.5500000028,
+      "skill": 244214.75000000055,
+      "auto": 326556.8000000032,
+      "summon": 0,
+      "manaSpent": 30194,
+      "manaRegenerated": 26619.99999999992,
+      "initialMana": 3722.5,
+      "finalMana": 148.50000000000432,
+      "manaBlockedSeconds": 287.139999999998,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 524,
+          "damage": 326556.8000000032,
+          "manaSpent": 0
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 67276.79999999993,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 14,
+          "damage": 56078.39999999996,
+          "manaSpent": 7476
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 21,
+          "damage": 50366.400000000016,
+          "manaSpent": 6153
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 14,
+          "damage": 21170.800000000007,
+          "manaSpent": 3108
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 25,
+          "damage": 18605.000000000007,
+          "manaSpent": 0
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 5,
+          "damage": 16435.800000000003,
+          "manaSpent": 2705
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 8439.199999999999,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 4123.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 1,
+          "damage": 1719.1499999999999,
+          "manaSpent": 439
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 960
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "full",
+      "total": 974115.3599999852,
+      "skill": 525740.1600000032,
+      "auto": 448375.20000000414,
+      "summon": 0,
+      "manaSpent": 47538,
+      "manaRegenerated": 47537.99999999984,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 546,
+          "damage": 448375.20000000414,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 188440.0000000004,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 91991.9999999999,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 79948.7999999999,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 67065.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 40079.159999999996,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 15,
+          "damage": 25653.000000000007,
+          "manaSpent": 3330
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 16633.199999999997,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "oldAurora180",
+      "total": 974115.3599999852,
+      "skill": 525740.1600000032,
+      "auto": 448375.20000000414,
+      "summon": 0,
+      "manaSpent": 47538,
+      "manaRegenerated": 47537.99999999991,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 546,
+          "damage": 448375.20000000414,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 188440.0000000004,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 91991.9999999999,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 79948.7999999999,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 67065.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 40079.159999999996,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 15,
+          "damage": 25653.000000000007,
+          "manaSpent": 3330
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 16633.199999999997,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutDirectAttackBonuses",
+      "total": 796815.3599999911,
+      "skill": 446720.16000000277,
+      "auto": 350095.20000000356,
+      "summon": 0,
+      "manaSpent": 47538,
+      "manaRegenerated": 47537.99999999984,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 546,
+          "damage": 350095.20000000356,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 152439.99999999997,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 81191.99999999991,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 68428.79999999992,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 58425.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 36515.16,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 15,
+          "damage": 22953.000000000007,
+          "manaSpent": 3330
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 13897.199999999999,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 8637.199999999999,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 4231.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutDirectManaRegeneration",
+      "total": 824213.8999999915,
+      "skill": 348739.10000000114,
+      "auto": 475474.8000000045,
+      "summon": 0,
+      "manaSpent": 36374,
+      "manaRegenerated": 32019.999999999884,
+      "initialMana": 4667.5,
+      "finalMana": 313.5000000000017,
+      "manaBlockedSeconds": 231.25999999999996,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 579,
+          "damage": 475474.8000000045,
+          "manaSpent": 0
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 63,
+          "damage": 78699.5999999999,
+          "manaSpent": 7056
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 17,
+          "damage": 78193.19999999992,
+          "manaSpent": 9078
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 23,
+          "damage": 64271.200000000026,
+          "manaSpent": 6739
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 50,
+          "damage": 47109.99999999997,
+          "manaSpent": 0
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 10,
+          "damage": 36435.6,
+          "manaSpent": 5410
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 14,
+          "damage": 23942.800000000007,
+          "manaSpent": 3108
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 2,
+          "damage": 4158.299999999999,
+          "manaSpent": 878
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 1920
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutGroupAttackSpeed",
+      "total": 927239.1599999876,
+      "skill": 524029.9600000032,
+      "auto": 403209.2000000035,
+      "summon": 0,
+      "manaSpent": 47316,
+      "manaRegenerated": 47315.99999999984,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 491,
+          "damage": 403209.2000000035,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 188440.0000000004,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 91991.9999999999,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 79948.7999999999,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 67065.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 40079.159999999996,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 14,
+          "damage": 23942.800000000007,
+          "manaSpent": 3108
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 16633.199999999997,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutGroupDexterity",
+      "total": 956514.9599999855,
+      "skill": 517967.7600000031,
+      "auto": 438547.2000000041,
+      "summon": 0,
+      "manaSpent": 47538,
+      "manaRegenerated": 47537.99999999984,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 546,
+          "damage": 438547.2000000041,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 184840.0000000004,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 90911.9999999999,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 78796.7999999999,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 66201.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 39722.76000000001,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 15,
+          "damage": 25383.000000000007,
+          "manaSpent": 3330
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 16489.199999999997,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10419.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5203.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutPowerOfFire",
+      "total": 797463.3599999911,
+      "skill": 447368.16000000277,
+      "auto": 350095.20000000356,
+      "summon": 0,
+      "manaSpent": 47538,
+      "manaRegenerated": 47537.99999999984,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 546,
+          "damage": 350095.20000000356,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 152439.99999999997,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 81191.99999999991,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 68428.79999999992,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 58425.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 36515.16,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 15,
+          "damage": 22953.000000000007,
+          "manaSpent": 3330
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 14545.199999999999,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 8637.199999999999,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 4231.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutPowerOfWater",
+      "total": 893695.289999988,
+      "skill": 437108.09000000235,
+      "auto": 456587.20000000426,
+      "summon": 0,
+      "manaSpent": 39707,
+      "manaRegenerated": 36019.99999999987,
+      "initialMana": 4667.5,
+      "finalMana": 980.5000000000014,
+      "manaBlockedSeconds": 161.36999999999966,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 556,
+          "damage": 456587.20000000426,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 150,
+          "damage": 141329.99999999983,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 17,
+          "damage": 78193.19999999992,
+          "manaSpent": 9078
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 62,
+          "damage": 77450.3999999999,
+          "manaSpent": 6944
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 22,
+          "damage": 61476.800000000025,
+          "manaSpent": 6446
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 9,
+          "damage": 32792.04,
+          "manaSpent": 4869
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 14,
+          "damage": 23942.800000000007,
+          "manaSpent": 3108
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 3,
+          "damage": 5994.45,
+          "manaSpent": 1317
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 5760
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutAurora",
+      "total": 941842.4499999863,
+      "skill": 499215.65000000305,
+      "auto": 442626.80000000406,
+      "summon": 0,
+      "manaSpent": 44217,
+      "manaRegenerated": 40419.99999999985,
+      "initialMana": 4037.5,
+      "finalMana": 240.50000000000136,
+      "manaBlockedSeconds": 103.12999999999928,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 539,
+          "damage": 442626.80000000406,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 188440.0000000004,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 17,
+          "damage": 78193.19999999992,
+          "manaSpent": 9078
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 62,
+          "damage": 77450.3999999999,
+          "manaSpent": 6944
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 23,
+          "damage": 64271.200000000026,
+          "manaSpent": 6739
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 10,
+          "damage": 36435.6,
+          "manaSpent": 5410
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 14,
+          "damage": 23942.800000000007,
+          "manaSpent": 3108
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 7,
+          "damage": 14554.049999999997,
+          "manaSpent": 3073
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "variant": "withoutCompanionBuff",
+      "total": 974115.3599999852,
+      "skill": 525740.1600000032,
+      "auto": 448375.20000000414,
+      "summon": 0,
+      "manaSpent": 47538,
+      "manaRegenerated": 47537.99999999984,
+      "initialMana": 4667.5,
+      "finalMana": 4667.5,
+      "manaBlockedSeconds": 0,
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 546,
+          "damage": 448375.20000000414,
+          "manaSpent": 0
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "applications": 200,
+          "damage": 188440.0000000004,
+          "manaSpent": 0
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "applications": 20,
+          "damage": 91991.9999999999,
+          "manaSpent": 10680
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "applications": 64,
+          "damage": 79948.7999999999,
+          "manaSpent": 7168
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "applications": 24,
+          "damage": 67065.60000000002,
+          "manaSpent": 7032
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "applications": 11,
+          "damage": 40079.159999999996,
+          "manaSpent": 5951
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "applications": 15,
+          "damage": 25653.000000000007,
+          "manaSpent": 3330
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "applications": 8,
+          "damage": 16633.199999999997,
+          "manaSpent": 3512
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "applications": 11,
+          "damage": 10617.2,
+          "manaSpent": 407
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "applications": 6,
+          "damage": 5311.2,
+          "manaSpent": 108
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "applications": 6,
+          "damage": 0,
+          "manaSpent": 1002
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "applications": 2,
+          "damage": 0,
+          "manaSpent": 334
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "applications": 8,
+          "damage": 0,
+          "manaSpent": 7680
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "applications": 1,
+          "damage": 0,
+          "manaSpent": 167
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "skillNumber": 158,
+  "status": "toggleAndScalingDiscussedClassCapAndTickIntervalPending",
+  "activation": "toggle",
+  "duration": "whileEnabled",
+  "threatFormula": {
+    "basis": "damageDealt",
+    "baseMultiplier": 1,
+    "addedMultiplierPerLearnedLevel": 0.15
+  },
+  "ongoingManaCost": {
+    "base": 7,
+    "perAdditionalLevel": 2,
+    "tickIntervalSeconds": null
+  },
+  "proposedClassCaps": {
+    "Gladiator": 10,
+    "Berserker": 10,
+    "Ritter": 20,
+    "Tempelritter": 20
+  },
+  "classCapStatus": "compareWithKnightBeforeFinalizing",
+  "existingCooldownSeconds": 120,
+  "toggleCooldownStatus": "pending",
+  "knightAdditionalThreatSkill": {
+    "nr": 40,
+    "name": "Erlösendes Feld der Schwäche",
+    "threatAmountStatus": "pending"
+  },
+  "knightPassiveThreatMultiplierFound": false
+}

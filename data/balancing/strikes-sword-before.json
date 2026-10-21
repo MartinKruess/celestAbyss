@@ -1,0 +1,75 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bba",
+    "skillName_eng": "Rotating Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 31,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Mit großen Schwung schlägst du auf deinen Gegner ein und verursachst dabei Schaden.",
+    "description_eng": "You hit your opponent with a rotating strike and cause damage.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 87,
+    "patk": 36,
+    "skillName_de": "Rotier Schlag",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc9",
+    "skillName_eng": "Sword Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert deine Fertigkeiten mit dem Schwert. +2 Stärke und +1 Weisheit pro Skilllevel.",
+    "description_eng": "Improves your sword skills. +2 Strength and +1 Wisdom per skill level.",
+    "dmgType": "passive",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 102,
+    "skillName_de": "Schwerttraining",
+    "skillpoints": 1,
+    "str": 2,
+    "wis": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcd",
+    "skillName_eng": "Leap Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Druide",
+      "Alchemist",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Springe auf deinen Gegner zu und verursache dabei Schaden.",
+    "description_eng": "Jump on your opponent and deal damage.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 106,
+    "patk": 391,
+    "skillName_de": "Sprungschlag",
+    "skillpoints": 1
+  }
+]

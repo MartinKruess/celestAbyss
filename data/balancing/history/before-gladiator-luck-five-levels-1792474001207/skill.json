@@ -1,0 +1,67 @@
+{
+  "_id": "6acc1c7e4826525c70d04b97",
+  "skillName_eng": "Fool of Luck",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanente Passive mit zehn Stufen. Erhöht Glück um 2 auf Stufe 1 und um 1 je weiterer Stufe, bis zu 11 auf Stufe 10. Gewährt zusätzlich 5 kritische Trefferpunkte je Skillstufe, bis zu 50 auf Stufe 10. Kritische Trefferpunkte sind keine direkten Prozentwerte und garantieren keine kritischen Treffer. Enthält den bisherigen Bonus von Lucky Strike. Keine Aktivierungskosten.",
+  "description_eng": "Permanent passive with ten levels. Grants 2 Luck at level 1 plus 1 per additional level, reaching 11 at level 10. Also grants 5 critical chance rating per skill level, reaching 50 at level 10. Rating points are not direct percentages and do not guarantee critical hits. Includes the former Lucky Strike bonus. No activation costs.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 52,
+  "skillName_de": "Glück des Narrens",
+  "skillpoints": 1,
+  "luck": 2,
+  "resourceCosts": [],
+  "statScaling": {
+    "luck": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 1
+    },
+    "critChanceRating": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 5
+    }
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "statScaling",
+          "luck"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 2,
+          "perLevel": 1
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "critChanceRating"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 5,
+          "perLevel": 5
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "critChanceRating": 5,
+  "classificationVersion": 1,
+  "type": "passive"
+}

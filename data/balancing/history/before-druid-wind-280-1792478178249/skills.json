@@ -1,0 +1,314 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04be0",
+    "skillName_eng": "Wind Shackles",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Trifft den Gegner einmalig mit Windmagie und verlangsamt sein Angriffstempo. Der magische Grundschaden steigt von 223 um 34 je weiterer Stufe auf 529 auf Stufe 10. Die Angriffstempo-Senkung beträgt 1 Prozent je gelerntem Skilllevel, bis zu 10 Prozent. Die Debuffdauer steigt gleichmäßig von 1 auf 5 Sekunden. Mana-Kosten 56 auf Stufe 1, +9 je weiterer Stufe, maximal 137 auf Stufe 10. Castzeit 0,2 Sekunden, bisheriger Cooldown 37 Sekunden. Keine zusätzliche Bewegungsfessel und kein Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Hits the enemy once with wind magic and slows their attack speed. Base magical damage increases from 223 by 34 per additional level to 529 at level 10. Attack speed reduction is 1 percent per learned skill level, reaching 10 percent. Debuff duration increases evenly from 1 to 5 seconds. Mana cost 56 at level 1, maximum 137 at level 10. Cast time is 0.2 seconds; existing cooldown is 37 seconds. No additional movement root or damage over time.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 223,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 125,
+    "skillName_de": "Windfesseln",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "durationScaling": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.4444444444444444
+    },
+    "effects": [
+      {
+        "key": "wind-shackles-attack-speed",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "atkSpeed",
+        "reference": "targetStat",
+        "unit": "fraction",
+        "value": -0.01,
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.01,
+          "perLevel": -0.01
+        },
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.4444444444444444
+        }
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 56,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 56,
+          "perLevel": 9
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 223,
+        "perLevel": 34
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.4444444444444444
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": -0.01,
+            "perLevel": -0.01
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.4444444444444444
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 56,
+              "perLevel": 9
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 223,
+            "perLevel": 34
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c40",
+    "skillName_eng": "Wind Slasher",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schneidet deine Feinde mit Klingen aus Wind. Der magische Grundschaden des Skills beträgt 211 auf Skilllevel 1 und steigt um 71 je weiterer Stufe auf 850 auf Stufe 10. Dieser Wert erhöht nicht dauerhaft deinen magischen Angriff. Die Mana-Kosten 53 auf Stufe 1, +18 je weiterer Stufe, maximal 215 auf Stufe 10. Der Cooldown sinkt von 54 um 1 Sekunde je weiterer Stufe auf 45 Sekunden. Castzeit 0,2 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Cuts your enemies with blades of wind. The skill base magical damage starts at 211 at level 1 and increases by 71 per additional level to 850 at level 10. This value does not permanently increase your magical attack. Mana cost 53 at level 1, maximum 215 at level 10. Cooldown decreases from 54 by 1 second per additional level to 45 seconds. Cast time is 0.2 seconds.",
+    "dmgType": "spell",
+    "matk": 211,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 221,
+    "skillName_de": "Windschlitzer",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "cd": 54,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 54,
+      "perLevel": -1
+    },
+    "mana": 53,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 53,
+          "perLevel": 18
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 211,
+        "perLevel": 71
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 54,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 53,
+              "perLevel": 18
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 211,
+            "perLevel": 71
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c41",
+    "skillName_eng": "Forgotten Spell",
+    "__v": 0,
+    "agi": -20,
+    "category": "passive",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verzichtet permanent auf jeweils 20 Stärke, Vitalität, Intelligenz, Willenskraft, Agilität und Geschick, um einen Skill deiner Wahl um eine Stufe zu erhöhen. Glück, Ambush, Faith und Victim werden nicht verringert. Vergessener Zauber hat eine Skillstufe und keine Levelskalierung. Permanenter passiver Skill ohne Mana-Kosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer. Erhöht genau einen ausgewählten, bereits gelernten eigenen Skill um eine effektive Stufe, auch über dessen normale Lerngrenze hinaus. Vergessener Zauber kann sich nicht selbst erhöhen. Die gelernte Stufe des Zielskills bleibt unverändert.",
+    "description_eng": "Permanently sacrifices 20 Strength, Vitality, Intelligence, Wisdom, Agility and Dexterity each to increase one chosen skill by one level. Luck, Ambush, Faith and Victim are not reduced. Forgotten Spell has one skill level and no level scaling. Permanent passive skill with no Mana cost, cast time, cooldown or limited duration. Grants one effective level to one selected, already learned own skill, including above its normal learning cap. Cannot target Forgotten Spell itself. The target skill learned level remains unchanged.",
+    "dex": -20,
+    "dmgType": "passive",
+    "int": -20,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 222,
+    "skillName_de": "Vergessener Zauber",
+    "skillpoints": 1,
+    "str": -20,
+    "vita": -20,
+    "wis": -20,
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "skillLevelGrant": {
+      "levels": 1,
+      "targetCount": 1,
+      "allowAboveLearnableMax": true,
+      "excludesSelf": true,
+      "attributeCost": {
+        "str": 20,
+        "vita": 20,
+        "int": 20,
+        "wis": 20,
+        "agi": 20,
+        "dex": 20
+      }
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

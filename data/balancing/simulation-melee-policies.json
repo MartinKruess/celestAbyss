@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "scope": [
+    "adventurer",
+    "butcher",
+    "gladiator",
+    "knight"
+  ],
+  "scenario": {
+    "durationSeconds": 600,
+    "targetMaxHealth": 2000000,
+    "armor": false,
+    "misses": false,
+    "randomCriticals": false,
+    "automaticAttacksPerSecondAt100Percent": 1.5,
+    "regenIntervalSeconds": 2,
+    "onlyCastBlocksActions": true,
+    "optionalSelfBuffs": false,
+    "normalPets": false
+  },
+  "selection": {
+    "decision": "At every actor action opportunity select the highest-priority legal ready skill; auto-attacks are filler and cannot starve ready skills.",
+    "priorityMode": "setup then descending raw damage; ties by skill number",
+    "cooldownStart": "activation",
+    "autoAttackDualWeapons": "One combined action using already combined character physicalAttack; never count offhand as a second attack."
+  },
+  "classes": {
+    "adventurer": {
+      "setup": [],
+      "priority": [
+        126,
+        76,
+        106,
+        115,
+        15,
+        87
+      ],
+      "manaCostMultiplier": 0.97,
+      "ordinaryPets": false,
+      "notes": [
+        "Both canonical weapon variants remain separate output rows.",
+        "Shared Body Control applies 3 percent mana reduction."
+      ]
+    },
+    "butcher": {
+      "setup": [],
+      "priority": [
+        234,
+        89,
+        35,
+        96,
+        227,
+        39,
+        38,
+        98,
+        11,
+        77,
+        87,
+        3
+      ],
+      "healthCosts": {
+        "35": {
+          "maxHealthFraction": 0.21,
+          "minimumRemainingHealth": 0.000001
+        }
+      },
+      "healOnDamage": {
+        "98": {
+          "fraction": 0.024,
+          "target": "self",
+          "capAtMaxHealth": true
+        }
+      },
+      "notes": [
+        "Energy Discharge uses legacy dmgType Physicas but is a valid attack.",
+        "Zorn des Henkers +100 critical rating is ignored because rating-to-chance is undefined and random criticals are excluded.",
+        "No optional self buffs Kampfinstinkt, Geist des Kriegers, Blutrausch or Bis in den Tod.",
+        "No low-health trigger passives expected on a harmless target unless self health costs actually meet their thresholds; random triggers excluded."
+      ]
+    },
+    "gladiator": {
+      "setup": [
+        161
+      ],
+      "priority": [
+        13,
+        127,
+        106,
+        233,
+        128,
+        96,
+        109,
+        230,
+        61,
+        77
+      ],
+      "rage": {
+        "initial": 100,
+        "maximum": 100,
+        "basicAttackGainOutsideEnergyBuff": 0,
+        "basicAttackGainInsideEnergyBuff": 1,
+        "energySkill": 161,
+        "energyDurationSeconds": 50,
+        "energyCooldownSeconds": 61,
+        "energyManaCost": 455,
+        "costBySkill": {
+          "13": 55,
+          "109": 5,
+          "127": 35,
+          "128": 5
+        },
+        "refundBySkill": {
+          "109": 0
+        },
+        "dependentSkills": [
+          109,
+          127,
+          128
+        ],
+        "requiredBuffSkill": 13,
+        "requiredBuffDurationSeconds": 64
+      },
+      "automaticModifiers": {
+        "13": {
+          "strength": 15,
+          "physicalAttackFromStrength": 28.35,
+          "durationSeconds": 64,
+          "starts": "after hit"
+        },
+        "161": {
+          "physicalAttack": 50,
+          "durationSeconds": 50
+        },
+        "233": {
+          "attackSpeedFraction": 0.2,
+          "durationSeconds": 2.8,
+          "starts": "after hit"
+        }
+      },
+      "notes": [
+        "Energy of Anger is a necessary setup exception, refresh only when absent and ready.",
+        "Starting with 100 rage is not permission to refill rage whenever Outburst cooldown expires.",
+        "At each dependent cast require the actual Outburst strength buff and sufficient remaining rage.",
+        "The complete rage quartet spends 100 total, but a cooldown-ready repeat may be legal during the 64-second buff if rage was rebuilt.",
+        "No outgoing refund on Sturm der Wut; older catalog previously granted 5 rage and must not be reused.",
+        "Optional Provoke is excluded; if threat shown label damage-only or separate hypothetical multiplier."
+      ]
+    },
+    "knight": {
+      "setup": [],
+      "priority": [
+        23,
+        95,
+        94,
+        40,
+        77,
+        19,
+        55
+      ],
+      "automaticModifiers": {
+        "40": {
+          "magicalAttack": 37.5,
+          "durationSeconds": 30,
+          "target": "ownGroupIncludingCaster"
+        }
+      },
+      "timingFallbacks": {
+        "23": {
+          "castSeconds": 0.1,
+          "status": "provisional close-range charge minimum; separate fixed cast remains unspecified"
+        }
+      },
+      "notes": [
+        "Brecher des Geistes 14-second cooldown and Brecher der Deckung 26 seconds are ordinary nonspam skills; never let them starve stronger ready attacks.",
+        "Flat threat: 40 gives5000,19 and55 each500, after any damage multiplier.",
+        "Defense debuffs have no damage benefit against a target with no armor.",
+        "Redeeming Field is physical even though legacy dmgType remains spell; use positive patk component.",
+        "Provoke toggle is optional and excluded; do not imply x4 threat was active without mana tick upkeep."
+      ]
+    }
+  },
+  "unresolved": [
+    {
+      "topic": "Auto-attack school",
+      "recommendation": "Physical auto-attack for all four; already combined dual-weapon P attack counted once."
+    },
+    {
+      "topic": "Action interleaving",
+      "recommendation": "Ignore animation locks by explicit scenario agreement, but finish current cast before choosing a stronger ready skill; do not interrupt an already started nonspam cast."
+    },
+    {
+      "topic": "Continuous regeneration",
+      "recommendation": "Apply capped HP/MP regeneration on exact multiples of2 seconds, after costs; retain exact fractional internal values."
+    },
+    {
+      "topic": "Death from selfcost",
+      "recommendation": "Reject health-cost casts if cost would leave zero or negative HP; do not borrow future regeneration."
+    },
+    {
+      "topic": "Forced target death",
+      "recommendation": "Stop at target death when using finite2mHP; also retain fixed600-second uncapped total as a separate metric if needed for equal duration comparisons."
+    }
+  ]
+}

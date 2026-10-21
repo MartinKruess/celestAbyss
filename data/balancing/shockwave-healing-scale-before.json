@@ -1,0 +1,64 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc5",
+  "skillName_eng": "Shockwave of Regeneration",
+  "__v": 0,
+  "category": "active",
+  "cd": 77,
+  "charClass": [
+    "Butcher",
+    "Destroyer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erzeugt nach 1 Sekunde Cast Time eine Schockwelle, die Gegner im Umkreis physisch schädigt und dich um 1,5 Prozent des tatsächlich verursachten Schadens heilt. Der physische Grundangriffswert steigt von 337 um 67 je weiterer Skillstufe auf 940 auf Level 10. Die Mana-Kosten steigen von 183 um 92 je weiterer Stufe auf 1011. Der Cooldown sinkt von 77 um 1 Sekunde je weiterer Stufe auf 68 Sekunden. Die gespeicherte Ausführungsdauer beträgt 1 Sekunde; es gibt keinen anhaltenden Schaden über Zeit. Der Flächenradius und der genaue Trefferzeitpunkt sind noch festzulegen.",
+  "description_eng": "After a 1 second cast time, creates a shockwave that deals physical damage to nearby enemies and heals you for 1.5 percent of actual damage dealt. Physical base attack increases from 337 by 67 per additional skill level to 940 at level 10. Mana cost increases from 183 by 92 per additional level to 1011. Cooldown decreases from 77 by 1 second per additional level to 68 seconds. Stored execution duration is 1 second; there is no lingering damage over time. Area radius and exact hit timing remain to be defined.",
+  "dmgType": "physical",
+  "dur": 1,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 98,
+  "patk": 337,
+  "skillName_de": "Schockwelle der Regeneration",
+  "skillpoints": 1,
+  "castTimeSeconds": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 77,
+    "perLevel": -1
+  },
+  "effects": [
+    {
+      "key": "shockwaveSelfHeal",
+      "type": "heal",
+      "target": "self",
+      "value": 0.015,
+      "unit": "fraction",
+      "reference": "damageDealt",
+      "damageBasis": "actualHealthDamage",
+      "durationSeconds": 0,
+      "progressionStatus": "defined"
+    }
+  ],
+  "effectsVersion": 1,
+  "hasLingeringDamage": false,
+  "mana": 183,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 183,
+        "perLevel": 92
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 337,
+      "perLevel": 67
+    }
+  }
+}

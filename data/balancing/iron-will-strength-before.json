@@ -1,0 +1,45 @@
+{
+  "_id": "6acc1c7e4826525c70d04bf0",
+  "skillName_eng": "Iron Will",
+  "__v": 0,
+  "block": 2,
+  "category": "passive",
+  "charClass": [
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht dauerhaft Vita, Willenskraft und den Blockwert mit Schilden jeweils um 2 je gelerntem Skilllevel. Auf Stufe 1 jeweils +2; auf Stufe 10 insgesamt +20 Vita, +20 Willenskraft und +20 Schildblock. Block ist ein Punktewert, keine Prozentangabe. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+  "description_eng": "Permanently grants 2 Vitality, 2 Wisdom and 2 shield Block rating per learned level, reaching 20 of each at level 10. Block is a rating, not a percentage. No activation costs, cast time or cooldown.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 141,
+  "skillName_de": "Eiserner Wille",
+  "skillpoints": 1,
+  "vita": 2,
+  "statBonusUnits": {
+    "vita": "flat",
+    "block": "flat",
+    "wis": "flat"
+  },
+  "statScaling": {
+    "vita": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "block": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "wis": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    }
+  },
+  "wis": 2
+}

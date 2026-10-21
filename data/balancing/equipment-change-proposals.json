@@ -1,0 +1,28 @@
+{
+  "status": "notedOnlyNotApplied",
+  "databaseUpdated": false,
+  "comparisonUpdated": false,
+  "source": "User screenshots and discussion, 2026-10-14",
+  "ranks": [1, 2, 3, 4, 5, 6],
+  "shield": {
+    "vitality": [3, 6, 10, 14, 19, 21],
+    "physicalDefense": [9, 17, 31, 64, 115, 186]
+  },
+  "gladiatorArmor": {
+    "physicalDefense": [56, 93, 201, 298, 386, 524]
+  },
+  "knightArmor": {
+    "physicalDefense": [64, 111, 237, 323, 437, 602]
+  },
+  "butcherTwoHandedAxe": {
+    "strength": [5, 10, 17, 25, 35, 45],
+    "physicalAttackUnchanged": [27, 64, 131, 182, 233, 515]
+  },
+  "level60Comparison": {
+    "attackPerAttribute": 1.8,
+    "butcher": { "previousPhysicalAttack": 706.2, "proposedPhysicalAttack": 715.2 },
+    "gladiator": { "physicalAttack": 711, "proposedPhysicalDefense": 811 },
+    "knight": { "proposedHealth": 6031, "proposedPhysicalDefense": 1159 },
+    "butcherAttackAdvantage": 4.2
+  }
+}

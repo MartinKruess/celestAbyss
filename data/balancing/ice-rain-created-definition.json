@@ -1,0 +1,141 @@
+{
+  "activationRequirements": {
+    "targetHealthBelowFractionScaling": {
+      "values": []
+    }
+  },
+  "tetherSettings": {
+    "worldAnchorKinds": []
+  },
+  "collectedPointScaling": {
+    "thresholds": [],
+    "durationSecondsByTier": [],
+    "baseDamageBonusFractionByTier": []
+  },
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 32,
+      "perLevel": 21
+    }
+  },
+  "castTimeSeconds": 0.4,
+  "attackExecution": {
+    "hitCountScaling": {
+      "values": []
+    },
+    "damageMultiplierScaling": {
+      "values": []
+    },
+    "armorIgnoreFractionByLevel": []
+  },
+  "attackArea": {
+    "centerTracking": "pending",
+    "maxTargets": 3,
+    "shape": "circle",
+    "center": "selectedTarget",
+    "radiusMeters": 5,
+    "geometryStatus": "defined",
+    "target": "enemiesInArea",
+    "evaluation": "perHit"
+  },
+  "movement": {
+    "distanceScaling": {
+      "values": []
+    },
+    "hopDirections": []
+  },
+  "durationScaling": {
+    "type": "linear",
+    "base": 4,
+    "perLevel": 0.6666666666666666,
+    "values": []
+  },
+  "cooldownScaling": {
+    "values": []
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 56,
+        "perLevel": 34,
+        "values": []
+      }
+    }
+  ],
+  "effectsVersion": 1,
+  "effects": [
+    {
+      "targetCreatureTypes": [],
+      "damageSchool": "ice",
+      "requiredActiveSkillNumbers": [],
+      "firstTickAfterSeconds": 1,
+      "disablesEffects": [],
+      "valueScaling": {
+        "type": "linear",
+        "base": 32,
+        "perLevel": 21,
+        "values": []
+      },
+      "durationScaling": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 0.6666666666666666,
+        "values": []
+      },
+      "type": "periodicDamage",
+      "target": "enemiesInArea",
+      "allowedRaces": [],
+      "value": 32,
+      "unit": "flat",
+      "damageTypes": [
+        "magical"
+      ],
+      "intervalSeconds": 1,
+      "durationSeconds": 4,
+      "key": "ice-rain-periodic-damage"
+    }
+  ],
+  "burstUsage": {
+    "usesPerBurstScaling": {
+      "values": []
+    },
+    "afterBurstCooldownScaling": {
+      "values": []
+    },
+    "belowTargetHealthFractionByLevel": [],
+    "usesBelowThresholdByLevel": []
+  },
+  "triggerCondition": {
+    "chancePerCheckScaling": {
+      "values": []
+    },
+    "chancePerCheck": null,
+    "healthThresholds": []
+  },
+  "allowedRaces": [],
+  "isClassCore": false,
+  "nr": 239,
+  "skillName_eng": "Ice Rain",
+  "skillName_de": "Eisregen",
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "maxSkillLv": 10,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "category": "active",
+  "description_eng": "Working title Ice Rain. Creates an ice-rain field with a 5-meter radius around the selected target. Each second hits up to three enemies within the area. First tick after 1 second, no extra initial hit. Duration starts at 4 seconds and increases linearly to 10 seconds at level 10. Magical skill base damage per tick per hit enemy starts at 32 and increases by 21 per additional level to 221. At level 10 full duration yields ten ticks, 2210 skill base damage per target or 6630 across three continuously hit enemies. Mana 56 plus 34 per additional level, reaching 362 per activation. Cast time 0.4 seconds. Cooldown, selection of up to three targets per tick, field tracking and character magical attack contribution per tick remain pending. Interaction with Frostburn will be reviewed later.",
+  "description_de": "Arbeitstitel Eisregen. Erzeugt um das anvisierte Ziel ein Eisregenfeld mit 5 Metern Radius. Jede Sekunde werden bis zu drei Gegner innerhalb der Fläche getroffen. Erster Tick nach 1 Sekunde, kein zusätzlicher Initialtreffer. Feldlaufzeit 4 Sekunden auf Stufe 1, gleichmäßig steigend auf 10 Sekunden auf Stufe 10. Magischer Skill-Grundschaden je Tick und getroffenem Gegner 32 auf Stufe 1, +21 je weiterer Stufe, auf Stufe 10 221. Bei vollständigem Aufenthalt auf Stufe 10 zehn Ticks mit insgesamt 2210 Skill-Grundschaden je Ziel beziehungsweise 6630 über drei durchgehend getroffene Gegner. Mana 56 auf Stufe 1, +34 je weiterer Stufe, auf Stufe 10 362 pro Anwendung. Castzeit 0,4 Sekunden. Cooldown, Auswahl der bis zu drei Gegner je Tick, Mitbewegung des Feldes und Charakter-M-Angriffsbeitrag je Tick sind noch nicht festgelegt. Wechselwirkung mit Gefrierbrand wird später geprüft.",
+  "dmgType": "spell",
+  "skillpoints": 1,
+  "matk": 32,
+  "dur": 4,
+  "_id": "6ad16c307a9be0e8beddf80f"
+}

@@ -1,0 +1,231 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b9e",
+    "skillName_eng": "Divine Protection",
+    "__v": 0,
+    "category": "active",
+    "cd": 77,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du rammst deinen Schild in den Boden und erschaffst vor dir ein schützendes Abbild des Schildes. Verbündete hinter dem Schild erleiden durch abgefangene Angriffe weniger Schaden. Auf Skilllevel 1 reduziert der Schutz den Schaden für 5 Sekunden um 30 %. Auf Skilllevel 2 hält er 7 Sekunden und reduziert den Schaden um 35 %. Castzeit 0,5 Sekunden. Mana-Kosten 215 je gelerntem Skilllevel, bis zu 430 auf Stufe 2.",
+    "description_eng": "Plant your shield in the ground to create a protective image of it in front of you. Allies behind the shield take reduced damage from intercepted attacks. At skill level 1, the protection reduces damage by 30% for 5 seconds. At skill level 2, it reduces damage by 35% for 7 seconds. Cast time is 0.5 seconds. Mana cost is 215 per learned skill level, reaching 430 at level 2.",
+    "dmgType": "spell",
+    "dur": 5,
+    "maxSkillLv": 2,
+    "maxUpgradeLv": 10,
+    "nr": 59,
+    "skillName_de": "Göttlicher Schutz",
+    "skillpoints": 1,
+    "activation": "manual",
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.3,
+          "perLevel": 0.05
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 2
+        },
+        "type": "damageReduction",
+        "target": "alliesBehindCaster",
+        "area": "projectedShield",
+        "value": 0.3,
+        "unit": "fraction",
+        "damageTypes": [],
+        "durationSeconds": 5,
+        "key": "projected-shield-protection"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.5,
+    "mana": 215,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 215,
+          "perLevel": 215
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.3,
+            "perLevel": 0.05
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 215,
+              "perLevel": 215
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc2",
+    "skillName_eng": "Shield Storm",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Stürmt mit dem Schild auf den Gegner zu und verursacht einmalig physischen Schaden. Physischer Skill-Grundschaden 272 auf Stufe 1, +65 je weiterer Stufe, maximal 1182 auf Stufe 15. Macht das Ziel zunächst 1 Sekunde benommen; die Effektdauer steigt gleichmäßig auf 3 Sekunden auf Stufe 15. Mana-Kosten 68 auf Stufe 1, +16 je weiterer Stufe, maximal 292 auf Stufe 15. Castzeit 0,1 Sekunden, Cooldown 37 Sekunden. Keine anhaltende Schadenswirkung. Ansturmdistanz und genaue Einschränkungen durch Benommenheit werden später geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": " Dazes the target for 1 second initially, increasing evenly to 3 seconds at level 15.  Cast time is 0.1 seconds, cooldown is 37 seconds. No ongoing damage. Charge distance and exact daze restrictions remain to be reviewed. Physical skill base damage 272 at level 1, +65 per additional level, maximum 1182 at level 15. Mana cost 68 +16 per additional level, maximum 292. Current physical attack is added once per target hit. Other effects and cast time are unchanged.",
+    "dmgType": "physical",
+    "dur": 1,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 95,
+    "patk": 272,
+    "skillName_de": "Schildsturm",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "shield-storm-daze",
+        "type": "control",
+        "controlKind": "dazed",
+        "target": "enemy",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.14285714285714285
+        }
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 68,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 68,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 272,
+        "perLevel": 65
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.14285714285714285
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 68,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 272,
+            "perLevel": 65
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "_id": "6acc1c7e4826525c70d04c4c",
+  "skillName_eng": "Warrior's Charge",
+  "__v": 0,
+  "atkSpeed": 10,
+  "category": "active",
+  "cd": 71,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Stürme auf den Gegner zu und stoße ihn zurück.",
+  "description_eng": "Charge at the enemy and push him back.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 233,
+  "patk": 84,
+  "skillName_de": "Kriegerischer Ansturm",
+  "skillpoints": 1,
+  "mana": 44,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 44,
+        "perLevel": 29
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 84,
+      "perLevel": 36
+    }
+  }
+}

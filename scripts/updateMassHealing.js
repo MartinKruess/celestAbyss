@@ -1,0 +1,18 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import { SkillDataModel } from '../models/skillSchema.js';
+try {
+ if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Wrong database');
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+ const before=await SkillDataModel.collection.findOne({nr:78});
+ if(before?.maxSkillLv!==10||before.health!==162)throw Error('Unexpected skill');
+ const effect=(key,factor,delay)=>({key,type:'heal',target:'alliesInArea',recipientGroup:'ownGroup',distribution:'fullAmountToEachRecipient',value:162*factor,unit:'flat',valueScaling:{type:'linear',base:162*factor,perLevel:97*factor},applicationDelaySeconds:delay,durationSeconds:0});
+ const set={statScaling:{health:{type:'linear',base:162,perLevel:97}},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:92,perLevel:69}}],cd:64,cooldownScaling:{type:'linear',base:64,perLevel:-6/9},castTimeSeconds:0.2,dur:2,animationDurationSeconds:2,animationTimingStatus:'provisional',effectsVersion:1,effects:[effect('mass-healing-full',1,0),effect('mass-healing-followup',0.5,1)],areaSettings:{center:'caster',includeCaster:true,radiusMeters:12},description_de:'Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Metern Radius um den Heiler. Nach der Castzeit erfolgt die erste Heilung mit dem vollen Skill-Heilwert; 1 Sekunde später folgt eine zweite Heilung mit 50 Prozent dieses Werts. Grundheilwert 162 HP auf Stufe 1, +97 je weiterer Stufe, auf Stufe 10 1035 HP. Je Gruppenmitglied insgesamt 243 HP auf Stufe 1 beziehungsweise 1552,5 HP auf Stufe 10 vor Begrenzung durch fehlende HP. Mana 92 auf Stufe 1, +69 je weiterer Stufe, auf Stufe 10 713 pro Anwendung für beide Heilungen zusammen. Cooldown gleichmäßig von 64 auf 58 Sekunden über zehn Stufen. Castzeit 0,2 Sekunden. Gesamter visueller Ablauf ungefähr 2 Sekunden; genau zwei Heilungen, kein fortlaufender Heil-Tick. Ob Empfänger beim ersten Heal festgehalten oder beim zweiten erneut im Radius geprüft werden, ist noch offen.',description_eng:'Heals the entire own group including the healer within a 12-meter radius of the healer. The first heal applies full skill healing after casting; 1 second later a second heal applies 50 percent of that value. Base healing 162 HP plus 97 per additional level, reaching 1035 at level 10. Total per group member 243 HP at level 1 or 1552.5 at level 10 before missing-health limits. Mana 92 plus 69 per additional level, reaching 713 per activation for both heals combined. Cooldown decreases linearly from 64 to 58 seconds across ten levels. Cast time 0.2 seconds. Approximate total visual sequence 2 seconds; exactly two heals, no ongoing healing ticks. Whether recipients are fixed at the first heal or checked again within the radius for the second remains pending.'};
+ await new SkillDataModel({...before,...set}).validate();
+ await fs.writeFile('data/balancing/mass-healing-before.json',JSON.stringify(before,null,2)+'\n');
+ await SkillDataModel.collection.updateOne({nr:78},{$set:set});
+ const after=await SkillDataModel.collection.findOne({nr:78});
+ for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');
+ console.log('Mass Healing verified: 1035 +517.5 HP per group member, 713 Mana, 58s cooldown at level 10.');
+}catch(e){console.error('Update failed ('+e.name+'); credentials omitted.');process.exitCode=1;}finally{await mongoose.disconnect();}

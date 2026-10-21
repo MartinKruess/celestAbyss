@@ -1,0 +1,148 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b64",
+    "skillName_eng": "Enlightenment",
+    "__v": 0,
+    "category": "Aurora",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Aurora-Grundskill. Gewährt 1 Intelligenz und 1 Wisdom je gelerntem Skilllevel, bis zu jeweils 20 auf Stufe 20. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive Aurora core skill. Grants 1 Intelligence and 1 Wisdom per learned skill level, reaching 20 each at level 20. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 1,
+    "skillName_de": "Erleuchtung",
+    "skillpoints": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Aurora"
+    ],
+    "unlockPhase": "race",
+    "isClassCore": true,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b65",
+    "skillName_eng": "Survive",
+    "__v": 1,
+    "agi": 0.5,
+    "category": "Umbra",
+    "charClass": [
+      "Butcher",
+      "Destroyer",
+      "Summoner",
+      "Soulseeker",
+      "Ritualist",
+      "Bloodmage",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Umbra-Grundskill. Je gelerntem Skilllevel erhältst du 1 Stärke, 0,5 Agilität und 0,5 Geschicklichkeit. Auf Stufe 20 sind das 20 Stärke, 10 Agilität und 10 Geschicklichkeit. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanent passive Umbra core skill. Each learned skill level grants 1 Strength, 0.5 Agility and 0.5 Dexterity. At level 20 this grants 20 Strength, 10 Agility and 10 Dexterity. No activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 2,
+    "skillName_de": "Überleben",
+    "skillpoints": 1,
+    "str": 1,
+    "allowedRaces": [
+      "Umbra"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race",
+    "resourceCosts": [],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "agi": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "dex": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "dex": 0.5
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b68",
+    "skillName_eng": "Adaptation",
+    "__v": 1,
+    "category": "Human",
+    "charClass": [
+      "Witcher",
+      "Herbalist",
+      "Knife",
+      "Templar",
+      "Archer",
+      "Hunter",
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft deine Vitalität und Willenskraft jeweils um 1 je gelerntem Skilllevel, bis zu jeweils 20.",
+    "description_eng": "Permanently increases Vitality and Wisdom by 1 each per learned skill level, up to 20 each.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 5,
+    "skillName_de": "Adaption",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Human"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race",
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    }
+  }
+]

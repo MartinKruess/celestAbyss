@@ -1,0 +1,86 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba9",
+  "skillName_eng": "Kunai Deathblow",
+  "__v": 0,
+  "category": "active",
+  "cd": 16,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Kunai-Angriff mit vier Skillstufen und physischem Grundschaden von 17, 28, 39 und 50. Außerhalb der Lebensschwelle ist eine normale Anwendung ohne Schadensmultiplikator oder Rüstungsignorierung möglich. Auf Stufe 1 sind gegen Ziele unter 5 Prozent Leben zwei Anwendungen möglich. Ab Stufe 2 liegt die Schwelle unter 6 Prozent und nur unter dieser Schwelle verursacht jede Anwendung 1,5-fachen Schaden. Ab Stufe 3 sind unter dieser Schwelle drei Anwendungen möglich. Auf Stufe 4 wird im PvE unter derselben 6-Prozent-Schwelle zusätzlich die gegnerische Rüstung vollständig ignoriert. Kein doppelter Schadensmultiplikator. Zwischen Anwendungen liegen 0,5 Sekunden, nach der Folge 16 Sekunden Cooldown. Keine Mana-Kosten, Castzeit 0 Sekunden, vorläufige Animation 1 Sekunde. Bisher nicht gegen Bosse oder im PvP anwendbar; gesonderte PvP-Verrechnung ist für später offen. Verhalten bei Heilung des Ziels über die Schwelle, Unterbrechung und unvollständigen Folgen wird später geprüft.",
+  "description_eng": "Kunai attack with four skill levels and base physical damage of 17, 28, 39 and 50. Outside the target Health threshold, one normal use is possible without a damage multiplier or armor ignore. Level 1 allows two uses against targets below 5 percent Health. From level 2, the threshold is below 6 percent and each use deals 1.5 times damage only below that threshold. From level 3, three uses are allowed below it. At level 4, PvE attacks additionally ignore all enemy armor only below the same 6 percent threshold. No double-damage multiplier. Uses are separated by 0.5 seconds, followed by a 16 second cooldown. No Mana cost, cast time is 0 seconds, provisional animation is 1 second. Existing boss and PvP exclusions remain; separate PvP calculation is pending for later. Target healing above threshold, interruption and partial-sequence behavior remain to be reviewed.",
+  "dmgType": "physical",
+  "maxSkillLv": 4,
+  "maxUpgradeLv": 10,
+  "nr": 70,
+  "patk": 17,
+  "skillName_de": "Kunai Todesstoß",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0,
+  "hasLingeringDamage": false,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "fixed",
+        "base": 0
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 17,
+      "perLevel": 11
+    }
+  },
+  "burstUsage": {
+    "usesPerBurst": 1,
+    "belowTargetHealthFractionByLevel": [
+      0.05,
+      0.06,
+      0.06,
+      0.06
+    ],
+    "usesBelowThresholdByLevel": [
+      2,
+      2,
+      3,
+      3
+    ],
+    "betweenUsesCooldownSeconds": 0.5,
+    "afterBurstCooldownSeconds": 16,
+    "partialBurstResetStatus": "pending"
+  },
+  "attackExecution": {
+    "targetMode": "singleEnemy",
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending",
+    "damageMultiplierScaling": {
+      "type": "table",
+      "values": [
+        1,
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "damageMultiplierCondition": "targetBelowBurstHealthThreshold",
+    "armorIgnoreFractionByLevel": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "armorIgnoreCondition": "targetBelowBurstHealthThreshold",
+    "armorIgnoreMode": "pveOnly"
+  }
+}

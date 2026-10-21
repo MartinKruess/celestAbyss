@@ -1,0 +1,46 @@
+{
+  "_id": "6acc1c7e4826525c70d04bd4",
+  "skillName_eng": "Deadly Dance",
+  "__v": 0,
+  "category": "active",
+  "cd": 68,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Setzt eine besondere Technik der Assassinen ein, bewegt dich zwischen mehreren Gegnern und fügt ihnen Schaden zu. Der bisherige physische Grundschadenswert steigt von 138 um 37 je weiterer Stufe auf 471 auf Stufe 10. Anzahl der Treffer und Ziele sowie die Verteilung dieses Schadenswerts sind noch nicht festgelegt. Mana-Kosten steigen von 45 um 31 je weiterer Stufe auf 324. Cooldown 68 Sekunden, Castzeit 0,1 Sekunden, vorläufige Animations- beziehungsweise Ausführungsdauer 0,3 Sekunden. Keine zusätzliche Schadenswirkung über Zeit.",
+  "description_eng": "Uses a special assassin technique to move between multiple enemies and damage them. Existing base physical damage value increases from 138 by 37 per additional level to 471 at level 10. Hit count, target count and distribution of this damage value are not yet defined. Mana cost increases from 45 by 31 per additional level to 324. Cooldown is 68 seconds, cast time is 0.1 seconds, provisional animation or execution duration is 0.3 seconds. No additional damage over time.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 113,
+  "patk": 138,
+  "skillName_de": "Tödlicher Tanz",
+  "skillpoints": 1,
+  "animationDurationSeconds": 0.3,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.1,
+  "hasLingeringDamage": false,
+  "mana": 45,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 45,
+        "perLevel": 31
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 138,
+      "perLevel": 37
+    }
+  }
+}

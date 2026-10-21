@@ -1,0 +1,56 @@
+{
+  "_id": "6acc1c7e4826525c70d04c4d",
+  "skillName_eng": "Executioner's Wrath",
+  "__v": 0,
+  "category": "active",
+  "cd": 440,
+  "charClass": [
+    "Butcher",
+    "Destroyer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Führe einen tödlichen Hieb aus, der schweren Schaden verursacht und eine hohe Kritchance hat. Physischer Grundangriff 600 auf Stufe 1, je weiterer Stufe +555 bis 2820 auf Stufe 5. Mana 217, je weiterer Stufe +123 bis 709. Castzeit 0,2 Sekunden, Cooldown 440 Sekunden. Nur für diesen Angriff wird der aktuelle Krit-Wert um 100 Punkte erhöht. Kein Bonus von 100 Prozent und kein garantierter Krit; andere Angriffe erhalten diesen Bonus nicht.",
+  "description_eng": "Execute a lethal blow that deals heavy damage and has a high critical chance. Physical base attack 600 at level 1 plus 555 per additional level to 2820 at level 5. Mana 217 plus 123 per additional level to 709. Cast time 0.2 seconds, cooldown 440 seconds. Only this attack adds 100 points to current critical rating. This is not 100 percent or a guaranteed critical hit; other attacks receive no bonus.",
+  "dmgType": "physical",
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 234,
+  "patk": 600,
+  "skillName_de": "Zorn des Henkers",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.2,
+  "mana": 217,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 217,
+        "perLevel": 123
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 600,
+      "perLevel": 555
+    }
+  },
+  "effects": [
+    {
+      "key": "executioner-crit-rating",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "critChanceRating",
+      "value": 100,
+      "unit": "flat",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 234,
+      "durationSeconds": 0
+    }
+  ]
+}

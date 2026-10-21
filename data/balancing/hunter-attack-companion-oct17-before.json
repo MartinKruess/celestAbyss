@@ -1,0 +1,342 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b88",
+    "skillName_eng": "Draining Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 57,
+    "charClass": [
+      "Hunter",
+      "Archer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verursacht einmalig physischen Schaden und heilt dich um einen festen Lebensbetrag. Auf Stufe 1: 101 physischer Grundschaden und 48 Heilung. Je weiterer Stufe kommen 37 Grundschaden und 12 Heilung hinzu, bis zu 434 Grundschaden und 156 Heilung auf Stufe 10. Mana-Kosten 27, plus 12 je weiterer Stufe, bis zu 135. Castzeit 0,1 Sekunden, vorläufige Animation 0,3 Sekunden. Keine anhaltende Wirkungsdauer und kein Bonus auf maximales Leben.",
+    "description_eng": "Deals physical damage once and heals you for a fixed amount. Level 1 has 101 physical base damage and 48 healing. Each additional level adds 37 base damage and 12 healing, reaching 434 base damage and 156 healing at level 10. Mana cost starts at 27 and increases by 12 per additional level to 135. Cast time is 0.1 seconds; provisional animation is 0.3 seconds. No lingering duration or maximum Health bonus.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 37,
+    "patk": 101,
+    "skillName_de": "Entzugspfeil",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.3,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "draining-arrow-self-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 48,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 48,
+          "perLevel": 12
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 27,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 27,
+          "perLevel": 12
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 101,
+        "perLevel": 37
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b98",
+    "skillName_eng": "Bound Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 17,
+    "charClass": [
+      "Hunter",
+      "Archer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Dein Charakter hüpft zunächst nach links und schießt einen Seilpfeil über den Gegner, danach nach rechts für einen zweiten Seilpfeil. Die gekreuzten Seile fesseln das Ziel. Die Fesselungsdauer steigt gleichmäßig von 1 Sekunde auf Stufe 1 auf 3 Sekunden auf Stufe 10. Physischer Skill-Grundschaden 37, plus 11 je weiterer Stufe, bis zu 136 insgesamt pro Anwendung; zwei Seilpfeile bedeuten keinen doppelten Schadenswert. Mana-Kosten 21, plus 9 je weiterer Stufe, bis zu 102. Castzeit 0,4 Sekunden für den beschriebenen Ablauf. Cooldown weiterhin 17 Sekunden. Keine Zugwirkung wie beim Kettenschuss. Sprungweiten, genaue Trefferzeitpunkte und die durch Fesselung gesperrten Aktionen werden im Spiel abgestimmt.",
+    "description_eng": "Your character hops left and fires a tether arrow over the enemy, then hops right and fires a second tether arrow. The crossed ropes root the target. Root duration increases evenly from 1 second at level 1 to 3 seconds at level 10. Physical skill base damage starts at 37 and increases by 11 per additional level to 136 total per activation; two tether arrows do not double this damage value. Mana cost starts at 21 and increases by 9 per additional level to 102. Cast time is 0.4 seconds for the described sequence. Cooldown remains 17 seconds. Does not pull targets like Chain Shot. Hop distances, exact hit timing and actions prevented by the root will be tuned in game.",
+    "dmgType": "physical",
+    "dur": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 53,
+    "patk": 37,
+    "skillName_de": "Gebundener Schuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "durationScaling": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.2222222222222222
+    },
+    "effects": [
+      {
+        "key": "bound-shot-root",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "root",
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.2222222222222222
+        },
+        "actionRestrictionsStatus": "pending"
+      }
+    ],
+    "mana": 21,
+    "movement": {
+      "type": "alternatingSideHops",
+      "hopDirections": [
+        "left",
+        "right"
+      ],
+      "firesTetherArrowPerHop": true
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 9
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 37,
+        "perLevel": 11
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba2",
+    "skillName_eng": "Chain Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Hunter",
+      "Archer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein Pfeil verbindet dich über ein Seil oder Energieband mit dem Ziel. Auf Stufe 1 ziehst du dich nach der genannten Verzögerung von 0,2 Sekunden ungefähr 1 Meter zum Gegner und hüpfst dabei leicht. Ab Stufe 2 können leichtere normale Gegner stattdessen ungefähr 1 Meter zu dir gezogen werden, nicht direkt an deine Position. Wie zwischen Eigenzug und Gegnerzug gewählt wird, ist noch offen. Ab Stufe 3 kannst du über den Gegner springen, aus der Luft schießen und auf der gegenüberliegenden Seite in etwa dem ursprünglichen Abstand landen, beispielsweise 3 bis 5 Meter entfernt. Auf Stufe 5 ermöglicht ein Bossziel einen hohen Flugpunkt und Bogen, mit einer an Größe und Form des Bosses angepassten Flughöhe innerhalb des 8 Sekunden langen Skillfensters. Während dieses skillbedingten Flugs sind Angriffe und Skillkombinationen möglich. Bodenangriffe unter dir erreichen dich räumlich nicht; Angriffe in die Luft können dich treffen. Keine pauschale Unverwundbarkeit. Du landest hinter dem Boss ohne Fallschaden aus diesem Skillflug. Im PvP und gegen gleich schwere Gegner ist der Bogen kleiner und kürzer. Die Sondererlaubnis zum Schießen im Flug gilt für diesen Skill. Physischer Grundschaden 52, plus 13 je weiterer Stufe, bis zu 104. Mana vorläufig 5 bis 30, Cooldown 60 bis 56 Sekunden, Castzeit 0,2 Sekunden. Vorläufige Dauern je Stufe: 1 / 2,5 / 4 / 6 / 8 Sekunden. Ob die genannte Zugverzögerung zusätzlich zur Castzeit gilt, Stufe 4, genaue Flugbahn, Zugauswahl und mögliche 10 Sekunden Enddauer sind noch offen. Auch Jäger und Archer können Kettenschuss erlernen. Der Skill ist ohne Gegner an geeigneten Weltankern nutzbar, um dich auf Dächer, an Felsen und eingeschränkt an Bäume zu ziehen. Zulässige Anker, Reichweite und genaue Weltbewegung werden noch festgelegt. Es gibt keine feste Flughöhe von 30 Metern. Die Flugbahn muss das jeweilige Bossmodell überqueren können. Die normale Angriffsreichweite gilt auch in der Luft; zu große Entfernung verhindert weitere Treffer. Erhöhte Weltpositionen sollen über andere passende Bewegungsfähigkeiten wie den Doppelsprung des Abenteurers erreichbar und damit konterbar sein. Eine entsprechende spätere Fähigkeit des Schurken ist nur eine Überlegung.",
+    "description_eng": "A tethered arrow connects you to the target. Level 1 pulls you approximately 1 metre toward the enemy after the stated 0.2 second delay, with a small hop. From level 2, lighter normal enemies can instead be pulled approximately 1 metre toward you rather than directly to your position; selection between self pull and enemy pull is pending. From level 3, vault over the enemy, shoot while airborne and land on the opposite side at approximately the original distance, for example 3 to 5 metres. Level 5 allows a high boss-targeted arc, with height adapted to boss size and shape within the 8 second skill window. Attacks and skill combinations are allowed during this skill flight. Ground attacks underneath spatially miss you, but aerial attacks can hit; no blanket invulnerability. Land behind the boss without fall damage from this skill flight. PvP and equal-weight targets use a shorter, lower arc. Airborne shooting permission is limited to this skill. Physical base damage is 52 plus 13 per additional level to 104. Provisional Mana costs are 5 to 30, cooldown is 60 to 56 seconds and cast time is 0.2 seconds. Provisional duration by level: 1 / 2.5 / 4 / 6 / 8 seconds. Whether pull delay is additional to cast time, level 4 behavior, precise trajectory, pull selection and a possible 10 second maximum duration remain pending. Hunter and Archer can also learn Chain Shot. It can be used without an enemy on suitable world anchors to pull yourself onto roofs, toward rocks and, within limits, trees. Anchor eligibility, range and exact world traversal are pending. There is no fixed 30 metre height. The trajectory must clear the individual boss model. Normal attack range still applies in the air; excessive distance prevents further hits. Elevated world positions should be accessible through suitable counter-mobility such as the Adventurer double jump. Similar future Rogue mobility is only a consideration.",
+    "dmgType": "physical",
+    "dur": 1,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 63,
+    "patk": 52,
+    "skillName_de": "Kettenschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 60,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        1,
+        2.5,
+        4,
+        6,
+        8
+      ]
+    },
+    "mana": 5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 5,
+          "perLevel": 6.25
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 52,
+        "perLevel": 13
+      }
+    },
+    "tetherSettings": {
+      "selfPullUnlockLevel": 1,
+      "lightEnemyPullUnlockLevel": 2,
+      "vaultUnlockLevel": 3,
+      "highBossArcUnlockLevel": 5,
+      "initialPullDistanceMeters": 1,
+      "enemyPullDistanceMeters": 1,
+      "statedPullDelaySeconds": 0.2,
+      "delayRelationToCastTimeStatus": "pending",
+      "enemyPullEligibility": "lighterNormalEnemies",
+      "vaultLandingSide": "oppositeStartingSide",
+      "vaultLandingDistanceMatchesStartingDistance": true,
+      "highBossArcHeightStatus": "provisional",
+      "allowsAttacksDuringSkillFlight": true,
+      "grantsBlanketInvulnerability": false,
+      "groundAttackAvoidance": "spatial",
+      "aerialAttacksCanHit": true,
+      "preventsFallDamageFromSkillFlight": true,
+      "pvpArc": "shortLowArc",
+      "equalWeightArc": "shortLowArc",
+      "enemyPullSelectionStatus": "pending",
+      "levelFourBehaviorStatus": "pending",
+      "implementationStatus": "definitionOnly",
+      "usableWithoutEnemy": true,
+      "worldAnchorKinds": [
+        "roof",
+        "rock",
+        "tree"
+      ],
+      "worldAnchorEligibilityStatus": "pending",
+      "worldAnchorRangeStatus": "pending",
+      "highBossArcHeightMode": "targetSizeDependent",
+      "respectsAttackRangeDuringFlight": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bdc",
+    "skillName_eng": "Enhanced Arrow",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärke deinen Pfeil und füge einem Gegner einmalig physischen Schaden zu. Skill-Grundschaden 111 auf Stufe 1, plus 72 je weiterer Stufe, bis zu 1479 auf Stufe 20. Mana-Kosten 67, plus 35 je weiterer Stufe, bis zu 732. Castzeit 0,4 Sekunden. Kein zusätzlicher Schadensbonus durch Entfernung und keine anhaltende Wirkung. Cooldown 67 Sekunden, minus 1 je weiterer Stufe, bis zu 48 Sekunden auf Stufe 20.",
+    "description_eng": "Empower an arrow to deal physical damage once to an enemy. Skill base damage starts at 111 at level 1 and increases by 72 per additional level to 1479 at level 20. Mana cost starts at 67 and increases by 35 per additional level to 732. Cast time is 0.4 seconds. No additional distance-based damage bonus or lingering effect. Cooldown starts at 67 seconds and decreases by 1 per additional level to 48 seconds at level 20.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 121,
+    "patk": 111,
+    "skillName_de": "Verstärkter Pfeil",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "hasLingeringDamage": false,
+    "mana": 67,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 35
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 111,
+        "perLevel": 72
+      }
+    },
+    "cd": 67,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 67,
+      "perLevel": -1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c45",
+    "skillName_eng": "Spirit Animal",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört zunächst für 9 Sekunden deinen Seelenbegleiter, der deine Feinde angreift. Je weiterer Stufe hält die Beschwörung 1 Sekunde länger, bis zu 18 Sekunden auf Stufe 10. Der gespeicherte physische und magische Angriffswert beträgt jeweils 120 auf Skilllevel 1 und steigt um 75 je weiterer Stufe auf jeweils 795 auf Stufe 10. Die Werte gehören zur Beschwörungswirkung und erhöhen nicht als Eigenbuff deinen Angriff. Mana-Kosten steigen von 53 um 22 je weiterer Stufe auf 251. Castzeit 0,4 Sekunden. Der bisherige Cooldown beträgt 300 Sekunden. Angriffsfrequenz, Schadensberechnung und genaue Umsetzung des Begleiters werden noch festgelegt. Diese zeitlich begrenzte Skill-Beschwörung belegt keinen regulären dauerhaften Pet-Platz und darf gleichzeitig mit dem normalen Pet aktiv sein. Zwei dauerhafte Pets bleiben dem Abenteurer vorbehalten.",
+    "description_eng": "Summons your spirit companion to attack your enemies, starting at 9 seconds. Each additional level adds 1 second, reaching 18 seconds at level 10. Stored physical and magical attack values each start at 120 at skill level 1 and increase by 75 per additional level to 795 each at level 10. These values belong to the summon effect and do not buff your own attack. Mana cost increases from 53 by 22 per additional level to 251. Cast time is 0.4 seconds. Existing cooldown is 300 seconds. Attack frequency, damage calculation and exact companion implementation remain to be defined. This temporary skill summon does not occupy a regular permanent-pet slot and can coexist with the normal pet. Two permanent pets remain exclusive to the Adventurer.",
+    "dmgType": "spell",
+    "dur": 9,
+    "matk": 120,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 226,
+    "patk": 120,
+    "skillName_de": "Seelenbegleiter",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 53,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 53,
+          "perLevel": 22
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 75
+      },
+      "matk": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 75
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 9,
+      "perLevel": 1
+    },
+    "summonedCreatureSettings": {
+      "occupiesPermanentPetSlot": false,
+      "canCoexistWithPermanentPet": true
+    }
+  }
+]

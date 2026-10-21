@@ -1,0 +1,1633 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bae",
+    "skillName_eng": "Body Reinforcement",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Berserker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt dich selbst, deine Gruppenmitglieder und Begleiter für 600 Sekunden. Erhöht Stärke und Vitalität jeweils um 2 je gelerntem Skilllevel, bis zu jeweils 20. Die Cast Time beträgt 0,3 Sekunden. Die Mana-Kosten steigen von 47 um 23 je weiterer Stufe auf 254. Der Cooldown beträgt 60 Sekunden.",
+    "description_eng": "Strengthens you, your group members and companions for 600 seconds. Increases Strength and Vitality by 2 each per learned skill level, up to 20 each. Cast time is 0.3 seconds. Mana cost increases from 47 by 23 per additional level to 254. Cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 75,
+    "skillName_de": "Verstärkung des Körpers",
+    "skillpoints": 1,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "activation": "manual",
+    "statBonusTargets": {
+      "str": "selfGroupAndCompanions",
+      "vita": "selfGroupAndCompanions"
+    },
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat"
+    },
+    "str": 2,
+    "vita": 2,
+    "castTimeSeconds": 0.3,
+    "mana": 47,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 47,
+          "perLevel": 23
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": 23
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bce",
+    "skillName_eng": "Steel Armor",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Templar",
+      "Knife"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt die physische Verteidigung verbündeter Spieler in der Nähe um 400 und die magische Verteidigung um 250. Der Buff hält 30 Minuten. Einmalige Mana-Kosten 92, Castzeit 0,6 Sekunden, bisheriger Cooldown 45 Sekunden. Eine Skillstufe, keine Levelskalierung.",
+    "description_eng": "Increases nearby allied players physical defense by 400 and magical defense by 250. The buff lasts 30 minutes. One-time Mana cost is 92, cast time is 0.6 seconds, existing cooldown is 45 seconds. One skill level, no level scaling.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "mdef": 250,
+    "nr": 107,
+    "pdef": 400,
+    "skillName_de": "Stählerne Rüstung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "mana": 92,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 92
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 92
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf6",
+    "skillName_eng": "Passion Awakening",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erweckt die Leidenschaft und erhöht deine Geschicklichkeit und Agilität sowie die deiner Verbündeten jeweils um 2 je gelerntem Skilllevel, bis zu jeweils 10 auf Level 5. Der Buff hält 600 Sekunden und hat 60 Sekunden Cooldown. Die Mana-Kosten steigen von 75 um 25 je weiterer Stufe auf 175. Die Cast Time beträgt vorläufig 0,3 Sekunden.",
+    "description_eng": "Awakens passion, increasing your Dexterity and Agility and those of your allies by 2 each per learned skill level, up to 10 each at level 5. The buff lasts 600 seconds and has a 60 second cooldown. Mana cost increases from 75 by 25 per additional level to 175. Cast time is provisionally 0.3 seconds.",
+    "dex": 2,
+    "dmgType": "buff",
+    "dur": 600,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 147,
+    "skillName_de": "Erweckung der Leidenschaft",
+    "skillpoints": 1,
+    "agi": 2,
+    "activation": "manual",
+    "statBonusTargets": {
+      "dex": "selfAndAllies",
+      "agi": "selfAndAllies"
+    },
+    "statBonusUnits": {
+      "dex": "flat",
+      "agi": "flat"
+    },
+    "statScaling": {
+      "dex": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "agi": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "castTimeSeconds": 0.3,
+    "castTimeStatus": "provisional",
+    "mana": 75,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 75,
+          "perLevel": 25
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 75,
+              "perLevel": 25
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf9",
+    "skillName_eng": "Power of the Pet",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Hunter",
+      "Archer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt ausschließlich Begleiter der Gruppe, keine Spieler. Je gelerntem Skilllevel +5 Geschick, +5 Vitalität und +5 Wisdom, auf Stufe 10 jeweils +50. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr mehr; die Attribute werden nach den Regeln des jeweiligen Begleiters verwertet. Gilt für reguläre Pets einschließlich der regulären Pets des Ritualisten und für den Seelenbegleiter, jedoch nicht direkt für Morrak. Der Seelenbegleiter erhält diese Attributboni zusätzlich zu seinen live übernommenen Meisterattributen. Mana-Kosten 231, je weiterer Stufe +46 bis 645. Castzeit 1 Sekunde, Dauer 600 Sekunden, Cooldown 60 Sekunden. Geschick verbessert die Genauigkeit der Begleiter; beim Seelenbegleiter erhöht es zusätzlich den physischen Fernkampfangriff mit 1,8 P-Angriff je Punkt. Die normale Stärke-Verwertung regulärer Pets wird dadurch nicht geändert.",
+    "description_eng": "Buffs only group companions, not players. Each learned level grants +5 dexterity, +5 vitality and +5 wisdom, reaching +50 each at level 10. No direct physical or magical attack or defense bonuses; attributes use the respective companion conversion rules. Applies to regular pets including regular Ritualist pets and to the spirit companion, but not directly to Morrak. The spirit companion gains these attribute bonuses in addition to its live inherited master attributes. Mana cost 231 plus 46 per additional level to 645. Cast time 1 second, duration 600 seconds, cooldown 60 seconds. Dexterity improves companion accuracy; for the spirit companion it also grants 1.8 physical ranged attack per point. Normal strength conversion for regular pets is unchanged.",
+    "dmgType": "buff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 150,
+    "skillName_de": "Macht des Begleiters",
+    "skillpoints": 1,
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "wis": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "dex": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "castTimeSeconds": 1,
+    "mana": 231,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 231,
+          "perLevel": 46
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "vita": "groupCompanions",
+      "wis": "groupCompanions",
+      "dex": "groupCompanions"
+    },
+    "vita": 5,
+    "wis": 5,
+    "dex": 5,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 231,
+              "perLevel": 46
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "companions",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c09",
+    "skillName_eng": "Everything Flows",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Gruppenbuff für 1800 Sekunden. Auf Stufe 1 erhältst du mit deinen Verbündeten 3 Intelligenz und 17 magischen Angriff. Je weiterer Stufe kommen 1 Intelligenz und 7 magischer Angriff hinzu, bis zu 12 Intelligenz und 80 magischer Angriff auf Stufe 10. Mana-Kosten 53, plus 28 je weiterer Stufe, bis zu 305. Cooldown 60 Sekunden. Castzeit 0,4 Sekunden.",
+    "description_eng": "Group buff lasting 1800 seconds. At level 1 grants you and your allies 3 Intelligence and 17 magical attack. Each additional level adds 1 Intelligence and 7 magical attack, reaching 12 Intelligence and 80 magical attack at level 10. Mana cost starts at 53 and increases by 28 per additional level to 305. Cooldown is 60 seconds. Cast time is 0.4 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "int": 3,
+    "matk": 17,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 166,
+    "skillName_de": "Alles im Fluss",
+    "skillpoints": 1,
+    "mana": 53,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 53,
+          "perLevel": 28
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "int": "selfAndAllies",
+      "matk": "selfAndAllies"
+    },
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      },
+      "matk": {
+        "type": "linear",
+        "base": 17,
+        "perLevel": 7
+      }
+    },
+    "castTimeSeconds": 0.4,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 53,
+              "perLevel": 28
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 17,
+            "perLevel": 7
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c16",
+    "skillName_eng": "Dark Power",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe den magischen Angriff um 20 per Level.",
+    "description_eng": "Increase your magical attack by 20 per level.",
+    "dmgType": "buff",
+    "dur": 600,
+    "matk": 20,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 179,
+    "skillName_de": "Dunkle Macht",
+    "skillpoints": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c22",
+    "skillName_eng": "Quick Feet",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht für 600 Sekunden die Bewegungsgeschwindigkeit deiner Gruppe. Stufe 1 gewährt 1 Prozent, Stufe 2 5,5 Prozent und Stufe 3 10 Prozent. Mana-Kosten 47, plus 19 je weiterer Stufe, bis zu 85. Castzeit 0,3 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases group movement speed for 600 seconds. Grants 1 percent at level 1, 5.5 percent at level 2 and 10 percent at level 3. Mana cost starts at 47 and increases by 19 per additional level to 85. Cast time is 0.3 seconds and cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 600,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.01,
+    "nr": 191,
+    "skillName_de": "Flinke Füße",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "mana": 47,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 47,
+          "perLevel": 19
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "movementSpeed": "selfAndAllies"
+    },
+    "statBonusUnits": {
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.045
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": 19
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "movementSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.045
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c23",
+    "skillName_eng": "Power of the Rock",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die physische Verteidigung deiner Gruppe einschließlich dir selbst um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 10 kommen zusätzlich 5 Vitalität hinzu. Die Mana-Kosten steigen von 54 um 16 je weiterer Stufe auf 198. Castzeit 0,6 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases physical defense for your group, including yourself, by 18 per learned skill level, reaching 180 at level 10. Level 10 additionally grants 5 Vitality. Mana cost increases from 54 by 16 per additional level to 198. Cast time is 0.6 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 192,
+    "pdef": 18,
+    "skillName_de": "Macht des Felsens",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "mana": 54,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 54,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0,
+            "changes": [
+              {
+                "level": 10,
+                "value": 5
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c24",
+    "skillName_eng": "Power of the Water",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht auf Skilllevel 1 die Mana-Regeneration deiner Gruppe um 15. Pro weiterem Skilllevel steigt der Bonus um 5 und es kommen 9 magischer Angriff hinzu. Auf Skilllevel 10 erhält die Gruppe +60 Mana-Regeneration und +81 magischen Angriff. Die Mana-Kosten steigen von 54 um 16 je weiterer Stufe auf 198. Castzeit 0,6 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "At skill level 1, increases your group mana regeneration by 15. Each additional level adds 5 mana regeneration and 9 magical attack, reaching 60 mana regeneration and 81 magical attack at level 10. Mana cost increases from 54 by 16 per additional level to 198. Cast time is 0.6 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 193,
+    "skillName_de": "Macht des Wassers",
+    "skillpoints": 1,
+    "manaRegen": 15,
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 0,
+        "perLevel": 9
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 5
+      }
+    },
+    "castTimeSeconds": 0.6,
+    "mana": 54,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": 16
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 9
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 15,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 54,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c26",
+    "skillName_eng": "Light Weapon",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe den physischen Angriff aller Waffen.",
+    "description_eng": "Increase the physical attack of all weapons.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 195,
+    "patk": 18,
+    "skillName_de": "Lichtwaffe",
+    "skillpoints": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c27",
+    "skillName_eng": "Radiant Armor",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe die Verteidigung aller Rüstungen.",
+    "description_eng": "Increase the defense of all armors.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 196,
+    "pdef": 18,
+    "skillName_de": "Strahlende Rüstung",
+    "skillpoints": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c28",
+    "skillName_eng": "Aurora's Blessing",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Vereint die bisherigen Segen des Angriffes, der Mentalität und der Verteidigung in einem langfristigen Gruppenbuff. Je gelerntem Skilllevel erhalten alle Mitglieder der eigenen Gruppe +2 Stärke, +2 Vitalität, +2 Intelligenz, +2 Wisdom, +18 P-Angriff, +18 M-Angriff, +18 P-Defense, +18 M-Defense und +18 direkte MP-Regeneration je Regenerationstick. Auf Stufe 10 jeweils +20 Attribute und +180 der direkten Kampf- und Regenerationswerte. Dauer 1800 Sekunden, Cooldown 60 Sekunden. Zehn lernbare Stufen, ein SP je Stufe. Mana-Kosten 35 auf Stufe 1 und +21 je weiterer Stufe, auf Stufe 10 224. Castzeit 0,5 Sekunden. Die bisherigen separaten Mentalitäts- und Verteidigungssegen sind dem Heiler nicht mehr zugeordnet und werden nicht zusätzlich gestapelt.",
+    "description_eng": "Combines the former Blessings of Attack, Mentality and Defense into one long-duration group buff. Each learned skill level grants own group members +2 Strength, Vitality, Intelligence and Wisdom, plus +18 physical attack, magical attack, physical defense, magical defense and direct Mana regeneration per regeneration tick. At level 10: +20 to each listed attribute and +180 to each direct combat/regeneration value. Duration 1800 seconds, cooldown 60 seconds. Ten learnable levels, one SP per level. Mana cost 35 at level 1 and +21 per additional level, reaching 224 at level 10. Cast time 0.5 seconds. Former separate Mentality and Defense blessings are no longer assigned to the Healer and do not stack in addition.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "matk": 18,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 197,
+    "patk": 18,
+    "skillName_de": "Aurora-Segen",
+    "skillpoints": 1,
+    "str": 2,
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat",
+      "int": "flat",
+      "wis": "flat",
+      "patk": "flat",
+      "matk": "flat",
+      "pdef": "flat",
+      "mdef": "flat",
+      "manaRegen": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "patk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "matk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      }
+    },
+    "int": 2,
+    "manaRegen": 18,
+    "mdef": 18,
+    "pdef": 18,
+    "vita": 2,
+    "wis": 2,
+    "castTimeSeconds": 0.5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 35,
+          "perLevel": 21
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 35,
+              "perLevel": 21
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c29",
+    "skillName_eng": "Blessing of Mentality",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die Mana-Regeneration aller Gruppenmitglieder um 18 sowie ihre Intelligenz und Weisheit um jeweils 2 pro Skilllevel.",
+    "description_eng": "Increases all group members' mana regeneration by 18 and their Intelligence and Wisdom by 2 each per skill level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 198,
+    "skillName_de": "Segen der Mentalität",
+    "skillpoints": 1,
+    "wis": 2,
+    "manaRegen": 18,
+    "statBonusUnits": {
+      "manaRegen": "flat",
+      "int": "flat",
+      "wis": "flat"
+    },
+    "statScaling": {
+      "manaRegen": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2a",
+    "skillName_eng": "Blessing of Defense",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die physische und magische Verteidigung aller Gruppenmitglieder um jeweils 18 sowie ihre Vitalität um 2 pro Skilllevel.",
+    "description_eng": "Increases all group members' physical and magical defense by 18 each and their Vitality by 2 per skill level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 18,
+    "nr": 199,
+    "pdef": 18,
+    "skillName_de": "Segen der Verteidigung",
+    "skillpoints": 1,
+    "vita": 2,
+    "statBonusUnits": {
+      "pdef": "flat",
+      "mdef": "flat",
+      "vita": "flat"
+    },
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c42",
+    "skillName_eng": "Speed of the Dox",
+    "__v": 0,
+    "atkSpeed": 0.1,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Gruppenbuff für 1800 Sekunden. Gewährt 10 bis 15 Punkte Angriffsgeschwindigkeit über 3 Stufen und 10 bis 15 Prozent Laufgeschwindigkeit. Mana-Kosten steigen von 63 um 23 je weiterer Stufe auf 109. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Group buff lasting 1800 seconds. Grants 10 to 15 attack speed rating points and 10 to 15 percent movement speed across 3 levels. Mana cost 63 plus 23 per additional level, reaching 109. Cast time 0.4 seconds; cooldown 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.1,
+    "nr": 223,
+    "skillName_de": "Geschwindigkeit der Dox",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 23
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.1,
+        "perLevel": 0.024999999999999994
+      },
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.1,
+        "perLevel": 0.025
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 63,
+              "perLevel": 23
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.024999999999999994
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "movementSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.025
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c43",
+    "skillName_eng": "Power of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht den physischen Angriff deiner Gruppe um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 1 gibt es keinen zusätzlichen magischen Angriff; je weiterer Stufe kommen 9 hinzu, bis zu 81 magischer Angriff auf Stufe 10. Mana-Kosten beginnen bei 63 und steigen um 24 je weiterer Stufe auf 279. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases group physical attack by 18 per learned skill level, reaching 180 at level 10. Level 1 grants no additional magical attack; each additional level adds 9, reaching 81 magical attack at level 10. Mana cost starts at 63 and increases by 24 per additional level to 279. Cast time is 0.4 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 224,
+    "patk": 18,
+    "skillName_de": "Macht des Feuers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 24
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "matk": {
+        "type": "linear",
+        "base": 0,
+        "perLevel": 9
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 63,
+              "perLevel": 24
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 9
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c44",
+    "skillName_eng": "Power of Mind",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die magische Verteidigung deiner Gruppe um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 10 kommen zusätzlich 5 Wisdom hinzu. Mana-Kosten beginnen bei 63 und steigen um 25 je weiterer Stufe auf 288. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases group magical defense by 18 per learned skill level, reaching 180 at level 10. Level 10 additionally grants 5 Wisdom. Mana cost starts at 63 and increases by 25 per additional level to 288. Cast time is 0.4 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 18,
+    "nr": 225,
+    "skillName_de": "Macht des Geistes",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 25
+        }
+      }
+    ],
+    "statScaling": {
+      "mdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 63,
+              "perLevel": 25
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0,
+            "changes": [
+              {
+                "level": 10,
+                "value": 5
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  }
+]

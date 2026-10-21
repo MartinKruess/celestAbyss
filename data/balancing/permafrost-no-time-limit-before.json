@@ -1,0 +1,156 @@
+{
+  "_id": "6ad16dcf22dc4aad4f9a76fd",
+  "activationRequirements": {
+    "targetHealthBelowFractionScaling": {
+      "values": []
+    }
+  },
+  "tetherSettings": {
+    "worldAnchorKinds": []
+  },
+  "collectedPointScaling": {
+    "thresholds": [],
+    "durationSecondsByTier": [],
+    "baseDamageBonusFractionByTier": []
+  },
+  "castTimeSeconds": 0,
+  "attackExecution": {
+    "hitCountScaling": {
+      "values": []
+    },
+    "damageMultiplierScaling": {
+      "values": []
+    },
+    "armorIgnoreFractionByLevel": []
+  },
+  "movement": {
+    "distanceScaling": {
+      "values": []
+    },
+    "hopDirections": []
+  },
+  "durationScaling": {
+    "values": []
+  },
+  "cooldownScaling": {
+    "values": []
+  },
+  "resourceCosts": [],
+  "effectsVersion": 1,
+  "effects": [
+    {
+      "targetCreatureTypes": [],
+      "damageSchool": "ice",
+      "requiredActiveSkillNumbers": [],
+      "disablesEffects": [],
+      "valueScaling": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2,
+        "values": []
+      },
+      "durationScaling": {
+        "values": []
+      },
+      "type": "cooldownReduction",
+      "target": "self",
+      "allowedRaces": [],
+      "value": 2,
+      "unit": "flat",
+      "appliesTo": "allSkills",
+      "damageTypes": [],
+      "durationSeconds": 300,
+      "key": "permafrost-ice-cooldown"
+    },
+    {
+      "targetCreatureTypes": [],
+      "damageSchool": "ice",
+      "requiredActiveSkillNumbers": [],
+      "disablesEffects": [],
+      "valueScaling": {
+        "values": []
+      },
+      "durationScaling": {
+        "values": []
+      },
+      "type": "procChanceBonus",
+      "controlKind": "freeze",
+      "target": "self",
+      "allowedRaces": [],
+      "value": 0.01,
+      "unit": "fraction",
+      "damageTypes": [],
+      "durationSeconds": 300,
+      "key": "permafrost-freeze-chance"
+    },
+    {
+      "targetCreatureTypes": [],
+      "requiredActiveSkillNumbers": [],
+      "intervalSource": "manaRegenerationTick",
+      "disablesEffects": [],
+      "valueScaling": {
+        "type": "table",
+        "values": [
+          3,
+          9,
+          27
+        ]
+      },
+      "durationScaling": {
+        "values": []
+      },
+      "type": "resourceDrain",
+      "target": "self",
+      "allowedRaces": [],
+      "value": 3,
+      "unit": "flat",
+      "resource": "mana",
+      "damageTypes": [],
+      "durationSeconds": 300,
+      "key": "permafrost-mana-drain"
+    }
+  ],
+  "activation": "toggle",
+  "toggleSettings": {
+    "durationMode": "whileEnabledWithTimeLimit",
+    "maxDurationSeconds": 300,
+    "onInsufficientResource": "deactivate"
+  },
+  "burstUsage": {
+    "usesPerBurstScaling": {
+      "values": []
+    },
+    "afterBurstCooldownScaling": {
+      "values": []
+    },
+    "belowTargetHealthFractionByLevel": [],
+    "usesBelowThresholdByLevel": []
+  },
+  "triggerCondition": {
+    "chancePerCheckScaling": {
+      "values": []
+    },
+    "chancePerCheck": null,
+    "healthThresholds": []
+  },
+  "allowedRaces": [],
+  "isClassCore": false,
+  "nr": 240,
+  "skillName_eng": "Permafrost",
+  "skillName_de": "Permafrost",
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "maxSkillLv": 3,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "category": "active",
+  "description_eng": "Instant-toggle self buff with three levels. While active, for at most 300 seconds per activation, drains 3/9/27 Mana per Mana regeneration tick at levels 1/2/3; no additional upfront activation cost. Reduces ice spell cooldowns by 2/4/6 seconds while enabled. Additionally adds one percentage point to ice-attack freeze chance at all three levels; maximum Frostburn chance becomes 11 rather than 10 percent. Does not add separate freeze rolls or an independent freeze duration. Cast time zero. Provisionally deactivates on insufficient Mana, like Provoke. Benefits and drain end on deactivation or expiry. Toggle cooldown, minimum ice-spell cooldown and handling of already running cooldowns remain pending.",
+  "description_de": "Sofort umschaltbarer Eigenbuff mit drei Stufen. Solange aktiv, höchstens 300 Sekunden pro Aktivierung, kosten die Mana-Regenerationsticks auf Stufe 1/2/3 jeweils 3/9/27 Mana; kein zusätzlicher einmaliger Aktivierungspreis. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit 0 Sekunden. Wie bei Provozieren vorläufig Abschalten bei unzureichendem Mana. Beim Abschalten oder Ablauf enden die Boni und der laufende Verbrauch. Umschalt-Cooldown, Mindest-Cooldown von Eiszaubern sowie Einfluss auf bereits laufende Cooldowns werden noch festgelegt.",
+  "dmgType": "selfbuff",
+  "skillpoints": 1,
+  "dur": 300,
+  "__v": 0
+}

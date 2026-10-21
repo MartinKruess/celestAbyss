@@ -1,0 +1,46 @@
+{
+  "_id": "6acc1c7e4826525c70d04bc3",
+  "skillName_eng": "Smash",
+  "__v": 0,
+  "category": "active",
+  "cd": 43,
+  "charClass": [
+    "Butcher",
+    "Destroyer",
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Mit roher Gewalt schlägst du auf deinen Gegner ein und verursachst dabei großen Schaden. Der physische Grundangriffswert steigt von 111 um 73 je weiterer Stufe auf 768 auf Level 10. Die Mana-Kosten steigen von 54 um 43 je weiterer Stufe auf 441. Die Cast Time beträgt 0,4 Sekunden. Keine anhaltende Schadensdauer. Genaue Zielwahl und Trefferfläche sind noch zu prüfen.",
+  "description_eng": "You hit your opponent with brute force and deal great damage. Physical base attack increases from 111 by 73 per additional level to 768 at level 10. Mana cost increases from 54 by 43 per additional level to 441. Cast time is 0.4 seconds. No lingering damage duration. Exact targeting and hit area remain to be reviewed.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 96,
+  "patk": 111,
+  "skillName_de": "Schmetterschlag",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.4,
+  "hasLingeringDamage": false,
+  "mana": 54,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 54,
+        "perLevel": 43
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 111,
+      "perLevel": 73
+    }
+  }
+}

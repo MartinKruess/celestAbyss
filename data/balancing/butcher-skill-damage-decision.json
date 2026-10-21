@@ -1,0 +1,455 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T15:58:22.828Z",
+  "backup": "data/balancing/history/before-butcher-skill-damage-1792511902741",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c0f",
+        "skillName_eng": "Combat Instinct",
+        "category": "active",
+        "cd": 60,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Aktiver Eigenbuff mit zehn Stufen für 600 Sekunden. Gewährt +4 P-Angriff je Skillstufe, maximal +40. Kein Stärkebonus. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Mana 50 auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten.",
+        "description_eng": "Active self buff with ten levels for 600 seconds. Grants 4 physical attack per level, up to 40. No Strength bonus. Cooldown 60 seconds; fixed 0.1-second cast unaffected by speed. Mana starts at 50 plus 13 per additional level, up to 167 before discounts.",
+        "dmgType": "selfbuff",
+        "dur": 600,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 172,
+        "skillName_de": "Kampfinstinkt",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "mana": 50,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 4,
+            "perLevel": 4
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 50,
+                  "perLevel": 13
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 4,
+                "perLevel": 4
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "castTimeStatus": "defined",
+        "timingModifiers": {
+          "castTimeIsFixed": true,
+          "affectedByAttackSpeed": false,
+          "affectedByCastSpeed": false
+        },
+        "manaPricing": {
+          "category": "selfbuff",
+          "basis": "skillLevel",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "classificationVersion": 1,
+        "target": "self",
+        "type": "selfBuff",
+        "patk": 4,
+        "statBonusTargets": {
+          "patk": "self"
+        },
+        "statBonusUnits": {
+          "patk": "flat"
+        }
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04c0f",
+        "skillName_eng": "Combat Instinct",
+        "category": "active",
+        "cd": 60,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Aktiver Eigenbuff mit zehn Stufen für 600 Sekunden. Erhöht physischen Skillschaden um 8 je Skillstufe, maximal +80. Der Bonus wird je passendem Skilltreffer mit physischem Angriffsanteil angewendet, auch bei Mehrfachtreffern. Kein allgemeiner P-Angriff, kein Bonus für normale Auto-Attacks, Begleiter oder rein feste Rest-DoTs. Kein Stärkebonus. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Mana 50 auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten.",
+        "description_eng": "Active self buff with ten levels for 600 seconds. Adds 8 physical skill damage per level, up to 80, to each matching skill hit with a physical attack component, including multi-hit attacks. Does not increase general physical attack, normal basic attacks, companions or purely fixed residual DoTs. No Strength bonus. Cooldown 60 seconds; fixed 0.1-second cast unaffected by speed. Mana starts at 50 plus 13 per additional level, up to 167 before discounts.",
+        "dmgType": "selfbuff",
+        "dur": 600,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 172,
+        "skillName_de": "Kampfinstinkt",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "mana": 50,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          }
+        ],
+        "statScaling": {},
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 50,
+                  "perLevel": 13
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "0",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 8,
+                "perLevel": 8
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "castTimeStatus": "defined",
+        "timingModifiers": {
+          "castTimeIsFixed": true,
+          "affectedByAttackSpeed": false,
+          "affectedByCastSpeed": false
+        },
+        "manaPricing": {
+          "category": "selfbuff",
+          "basis": "skillLevel",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "classificationVersion": 1,
+        "target": "self",
+        "type": "selfBuff",
+        "statBonusTargets": {},
+        "statBonusUnits": {},
+        "effects": [
+          {
+            "key": "combat-instinct-physical-skill-damage",
+            "type": "damageBonus",
+            "target": "self",
+            "appliesTo": "allSkills",
+            "unit": "flat",
+            "damageTypes": [
+              "physical"
+            ],
+            "value": 8,
+            "valueScaling": {
+              "type": "linear",
+              "base": 8,
+              "perLevel": 8
+            },
+            "durationSeconds": 600
+          }
+        ],
+        "effectsVersion": 1
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c11",
+        "skillName_eng": "Bloodlust",
+        "atkSpeed": 0.05,
+        "category": "active",
+        "cd": 300,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Aktiver Eigenbuff mit zehn Stufen für 60 Sekunden. Gewährt +4 P-Angriff je Skillstufe, maximal +40, statt des bisherigen Stärkebonus. Angriffsgeschwindigkeit steigt gleichmäßig von +5 auf +10 Rohpunkte über die bestehende Tempokurve. Cooldown 300 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Mana 50 auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten.",
+        "description_eng": "Active self buff with ten levels for 60 seconds. Grants 4 physical attack per level, up to 40, replacing the former Strength bonus. Attack speed increases evenly from 5 to 10 raw rating points through the existing speed curve. Cooldown 300 seconds; fixed 0.1-second cast unaffected by speed. Mana starts at 50 plus 13 per additional level, up to 167 before discounts.",
+        "dmgType": "selfbuff",
+        "dur": 60,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 174,
+        "skillName_de": "Blutrausch",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "mana": 50,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          }
+        ],
+        "statBonusUnits": {
+          "atkSpeed": "fraction",
+          "patk": "flat"
+        },
+        "statScaling": {
+          "atkSpeed": {
+            "type": "linear",
+            "base": 0.05,
+            "perLevel": 0.005555555555555556
+          },
+          "patk": {
+            "type": "linear",
+            "base": 4,
+            "perLevel": 4
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 50,
+                  "perLevel": 13
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.05,
+                "perLevel": 0.005555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 4,
+                "perLevel": 4
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "castTimeStatus": "defined",
+        "timingModifiers": {
+          "castTimeIsFixed": true,
+          "affectedByAttackSpeed": false,
+          "affectedByCastSpeed": false
+        },
+        "manaPricing": {
+          "category": "selfbuff",
+          "basis": "skillLevel",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "classificationVersion": 1,
+        "target": "self",
+        "type": "selfBuff",
+        "patk": 4,
+        "statBonusTargets": {
+          "patk": "self"
+        }
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04c11",
+        "skillName_eng": "Bloodlust",
+        "atkSpeed": 0.05,
+        "category": "active",
+        "cd": 300,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Aktiver Eigenbuff mit zehn Stufen für 60 Sekunden. Gewährt +2 P-Angriff je Skillstufe, maximal +20, statt des bisherigen Stärkebonus. Angriffsgeschwindigkeit steigt gleichmäßig von +5 auf +10 Rohpunkte über die bestehende Tempokurve. Cooldown 300 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Mana 50 auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten.",
+        "description_eng": "Active self buff with ten levels for 60 seconds. Grants 2 physical attack per level, up to 20, replacing the former Strength bonus. Attack speed increases evenly from 5 to 10 raw rating points through the existing speed curve. Cooldown 300 seconds; fixed 0.1-second cast unaffected by speed. Mana starts at 50 plus 13 per additional level, up to 167 before discounts.",
+        "dmgType": "selfbuff",
+        "dur": 60,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 174,
+        "skillName_de": "Blutrausch",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "mana": 50,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          }
+        ],
+        "statBonusUnits": {
+          "atkSpeed": "fraction",
+          "patk": "flat"
+        },
+        "statScaling": {
+          "atkSpeed": {
+            "type": "linear",
+            "base": 0.05,
+            "perLevel": 0.005555555555555556
+          },
+          "patk": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 50,
+                  "perLevel": 13
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.05,
+                "perLevel": 0.005555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 2
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "castTimeStatus": "defined",
+        "timingModifiers": {
+          "castTimeIsFixed": true,
+          "affectedByAttackSpeed": false,
+          "affectedByCastSpeed": false
+        },
+        "manaPricing": {
+          "category": "selfbuff",
+          "basis": "skillLevel",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "classificationVersion": 1,
+        "target": "self",
+        "type": "selfBuff",
+        "patk": 2,
+        "statBonusTargets": {
+          "patk": "self"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "6acc1c7e4826525c70d04bab",
+  "skillName_eng": "Life Drainer",
+  "__v": 0,
+  "category": "active",
+  "cd": 45,
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Greift einen Gegner einmalig magisch an und heilt den Anwender. Magischer Skill-Grundschaden 112 auf Stufe 1 und +43 je weiterer Stufe, auf Stufe 10 499. Mana 67 und +43 je weiterer Stufe, auf Stufe 10 454. Cooldown gleichmäßig von 45 auf 40 Sekunden über zehn Stufen. Castzeit 0,1 Sekunden, vorläufige Animation 0,5 Sekunden, kein Schaden über Zeit. Heilformel noch in Auswahl: Variante A startet bei 1 Prozent des verursachten Schadens und steigt um 0,5 Prozentpunkte je weiterer Stufe auf 5,5 Prozent. Variante B heilt 85 HP je gelerntem Skilllevel und erst auf Stufe 10 zusätzlich 1 Prozent des verursachten Schadens. Noch keine Variante bestätigt; der alte 10-Prozent-Heilwert gilt nicht mehr.",
+  "description_eng": "Attacks one enemy once with magic and heals the caster. Magical skill base damage 112 plus 43 per additional level, reaching 499 at level 10. Mana 67 plus 43 per additional level, reaching 454. Cooldown decreases linearly from 45 to 40 seconds across ten levels. Cast time 0.1 seconds, provisional animation 0.5 seconds, no damage over time. Healing formula pending selection: option A starts at 1 percent of damage dealt and adds 0.5 percentage points per additional level, reaching 5.5 percent. Option B heals 85 HP per learned skill level and at level 10 adds 1 percent of damage dealt. Neither option is confirmed yet; old 10-percent healing is superseded.",
+  "dmgType": "spell",
+  "matk": 112,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 72,
+  "skillName_de": "Lebenssauger",
+  "skillpoints": 1,
+  "animationDurationSeconds": 0.5,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 45,
+    "perLevel": -0.5555555555555556
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 67,
+        "perLevel": 43
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 112,
+      "perLevel": 43
+    }
+  }
+}

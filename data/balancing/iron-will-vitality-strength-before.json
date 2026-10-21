@@ -1,0 +1,81 @@
+{
+  "_id": "6acc1c7e4826525c70d04bf0",
+  "skillName_eng": "Iron Will",
+  "__v": 0,
+  "block": 2,
+  "category": "passive",
+  "charClass": [
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanenter passiver Skill mit 10 Stufen. Stufe 1 gewährt jeweils +2 Stärke, Vita, Willenskraft und Schildblock. Auf Stufe 2 steigt ausschließlich Stärke auf +4 und bleibt danach konstant. Vita und Willenskraft bleiben auf Stufe 2 bei +2, steigen von Stufe 3 bis 9 jeweils um +2 auf +16 und bleiben auf Stufe 10 bei +16. Der Schildblock steigt unverändert um +2 je gelerntem Skilllevel bis +20 auf Stufe 10. Endboni: +4 Stärke, +16 Vita, +16 Willenskraft, +20 Schildblock. Block ist ein Punktewert, keine Prozentangabe. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+  "description_eng": "Permanent passive with 10 levels. Level 1 grants 2 Strength, Vitality, Wisdom and shield Block rating. Level 2 raises Strength alone to 4, remaining constant afterwards. Vitality and Wisdom stay at 2 on level 2, increase by 2 on each level from 3 through 9 to 16, and remain at 16 on level 10. Shield Block continues to increase by 2 per learned level, reaching 20. Final bonuses: 4 Strength, 16 Vitality, 16 Wisdom and 20 shield Block. No activation costs, cast time or cooldown.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 141,
+  "skillName_de": "Eiserner Wille",
+  "skillpoints": 1,
+  "vita": 2,
+  "statBonusUnits": {
+    "vita": "flat",
+    "block": "flat",
+    "wis": "flat"
+  },
+  "statScaling": {
+    "vita": {
+      "type": "table",
+      "values": [
+        2,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        16
+      ]
+    },
+    "block": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "wis": {
+      "type": "table",
+      "values": [
+        2,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        16
+      ]
+    },
+    "str": {
+      "type": "table",
+      "values": [
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  },
+  "wis": 2,
+  "str": 2
+}

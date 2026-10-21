@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-10-19T12:02:08.005Z",
+  "status": "simulationOnly",
+  "assumptions": "Aura +1 INT per level, +10 at level 10; all existing durations, Mana costs and effects retained. Third run isolates current protection Wisdom effect.",
+  "results": [
+    {
+      "mode": "current",
+      "damage": 682060.5210000054,
+      "gainPercent": 2.2147867673023125,
+      "manaWaitSeconds": 269.39000000000044,
+      "manaSpent": 51723,
+      "manaRegenerated": 46239.9999999999,
+      "finalMana": 1060.0000000000034
+    },
+    {
+      "mode": "auraPlusTenInt",
+      "damage": 679632.6269999979,
+      "gainPercent": 1.8509383112436995,
+      "manaWaitSeconds": 269.39000000000044,
+      "manaSpent": 51723,
+      "manaRegenerated": 46239.9999999999,
+      "finalMana": 1060.0000000000034
+    },
+    {
+      "mode": "withoutProtectionWisdom",
+      "damage": 669541.5732000053,
+      "gainPercent": 0.3386752778821611,
+      "manaWaitSeconds": 272.86999999999955,
+      "manaSpent": 50381,
+      "manaRegenerated": 44080.00000000016,
+      "finalMana": 242.0000000000014
+    }
+  ]
+}

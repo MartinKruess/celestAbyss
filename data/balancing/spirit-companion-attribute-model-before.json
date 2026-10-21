@@ -1,0 +1,150 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bf9",
+    "skillName_eng": "Power of the Pet",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Hunter",
+      "Archer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verstärkt ausschließlich die Begleiter deiner Gruppe, nicht die Spieler. Erhöht ihren physischen und magischen Angriff sowie ihre physische und magische Verteidigung jeweils um 5 je gelerntem Skilllevel, bis zu jeweils 50 auf Level 10. Die Mana-Kosten steigen von 231 um 46 je weiterer Stufe auf 645. Die Cast Time beträgt 1 Sekunde. Der Buff hält 600 Sekunden und hat 60 Sekunden Cooldown.",
+    "description_eng": "Strengthens only your group companions, not players. Increases their physical and magical attack and physical and magical defense by 5 each per learned skill level, up to 50 each at level 10. Mana cost increases from 231 by 46 per additional level to 645. Cast time is 1 second. The buff lasts 600 seconds and has a 60 second cooldown.",
+    "dmgType": "buff",
+    "dur": 600,
+    "matk": 5,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 5,
+    "nr": 150,
+    "patk": 5,
+    "pdef": 5,
+    "skillName_de": "Macht des Begleiters",
+    "skillpoints": 1,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "matk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "castTimeSeconds": 1,
+    "mana": 231,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 231,
+          "perLevel": 46
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "patk": "groupCompanions",
+      "matk": "groupCompanions",
+      "pdef": "groupCompanions",
+      "mdef": "groupCompanions"
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c45",
+    "skillName_eng": "Spirit Animal",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört zunächst für 9 Sekunden deinen Seelenbegleiter, der deine Feinde angreift. Je weiterer Stufe hält die Beschwörung 1 Sekunde länger, bis zu 18 Sekunden auf Stufe 10. Der gespeicherte physische und magische Angriffswert beträgt jeweils 120 auf Skilllevel 1 und steigt um 75 je weiterer Stufe auf jeweils 795 auf Stufe 10. Die Werte gehören zur Beschwörungswirkung und erhöhen nicht als Eigenbuff deinen Angriff. Mana-Kosten steigen von 53 um 22 je weiterer Stufe auf 251. Castzeit 0,4 Sekunden. Der bisherige Cooldown beträgt 300 Sekunden. Angriffsfrequenz, Schadensberechnung und genaue Umsetzung des Begleiters werden noch festgelegt. Diese zeitlich begrenzte Skill-Beschwörung belegt keinen regulären dauerhaften Pet-Platz und darf gleichzeitig mit dem normalen Pet aktiv sein. Zwei dauerhafte Pets bleiben dem Abenteurer vorbehalten. Zusätzlich besitzt der Begleiter 120 feste P-Abwehr und 120 feste M-Abwehr. Zusätzlich zu seinen eigenen Angriffswerten erhält er live 2 % des aktuellen P-Angriffs und 2 % der aktuellen P-Abwehr seines Meisters sowie 1 % des aktuellen M-Angriffs und 1 % der aktuellen M-Abwehr seines Meisters. Buffs und Debuffs des Meisters verändern diese Anteile unmittelbar.",
+    "description_eng": "Summons your spirit companion to attack your enemies, starting at 9 seconds. Each additional level adds 1 second, reaching 18 seconds at level 10. Stored physical and magical attack values each start at 120 at skill level 1 and increase by 75 per additional level to 795 each at level 10. These values belong to the summon effect and do not buff your own attack. Mana cost increases from 53 by 22 per additional level to 251. Cast time is 0.4 seconds. Existing cooldown is 300 seconds. Attack frequency, damage calculation and exact companion implementation remain to be defined. This temporary skill summon does not occupy a regular permanent-pet slot and can coexist with the normal pet. Two permanent pets remain exclusive to the Adventurer. The companion additionally has 120 flat physical defense and 120 flat magical defense. In addition to its own attack values, it inherits live 2% of its master's current physical attack and physical defense, and 1% of current magical attack and magical defense. Master buffs and debuffs immediately affect these contributions.",
+    "dmgType": "spell",
+    "dur": 9,
+    "matk": 120,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 226,
+    "patk": 120,
+    "skillName_de": "Seelenbegleiter",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 53,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 53,
+          "perLevel": 22
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 75
+      },
+      "matk": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 75
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 0
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 0
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 9,
+      "perLevel": 1
+    },
+    "summonedCreatureSettings": {
+      "occupiesPermanentPetSlot": false,
+      "canCoexistWithPermanentPet": true,
+      "physicalAttackFractionOfCaster": 0.02,
+      "physicalDefenseFractionOfCasterPhysicalDefense": 0.02,
+      "magicalAttackFractionOfCaster": 0.01,
+      "magicalDefenseFractionOfCasterMagicalDefense": 0.01,
+      "statSampling": "liveBeforeSummonHealthPenalty",
+      "defenseScalingStatus": "defined"
+    },
+    "mdef": 120,
+    "pdef": 120
+  }
+]

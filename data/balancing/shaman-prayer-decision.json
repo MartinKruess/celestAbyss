@@ -1,0 +1,146 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-19T19:42:36.611Z",
+  "backup": "data/balancing/history/before-shaman-prayer-1792438956557",
+  "skill": {
+    "nr": 263,
+    "skillName_de": "Stoßgebet",
+    "skillName_eng": "Fervent Prayer",
+    "category": "active",
+    "type": "skill",
+    "damageType": "magical",
+    "classificationVersion": 1,
+    "dmgType": "spell",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "matk": 143,
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 143,
+        "perLevel": 76
+      }
+    },
+    "cd": 54,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 54,
+      "perLevel": -5
+    },
+    "castTimeSeconds": 0.1,
+    "castTimeStatus": "defined",
+    "mana": 36,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 36,
+          "values": [
+            36,
+            55,
+            74
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "timingStatus": "pending"
+    },
+    "effects": [
+      {
+        "key": "prayer-caster-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 240,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "requiresSuccessfulHit": true,
+        "delivery": "returningOrb"
+      },
+      {
+        "key": "prayer-allied-heal",
+        "type": "heal",
+        "target": "alliesInArea",
+        "value": 240,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "requiresSuccessfulHit": true,
+        "delivery": "returningOrb",
+        "areaCenter": "caster",
+        "radiusMeters": 2.5,
+        "maximumRecipients": 2,
+        "excludesCaster": true
+      }
+    ],
+    "description_de": "Trifft ein gegnerisches Ziel einmal mit magischem Schaden: 143/219/295 Skill-Grundschaden auf den drei Stufen, jeweils zuzüglich des aktuellen M-Angriffs. Nach einem erfolgreichen Treffer fliegt eine grüne Kugel vom Ziel zum Schamanen zurück und teilt sich zu höchstens zwei weiteren Verbündeten innerhalb von 2,5 Metern um den Schamanen auf. Der Schamane und diese Verbündeten werden jeweils um feste 240 Leben geheilt, maximal 720 insgesamt. Fehlende Empfänger erhöhen die Heilung anderer Empfänger nicht. Die Heilung skaliert weder mit dem Schaden noch mit M-Angriff oder kritischen Treffern und setzt einen erfolgreichen Treffer voraus. Keine eigene Heilerrolle; kleine situative Unterstützung. Mana 36/55/74 nach der 25-Prozent-Regel aus dem Skill-Grundschaden ohne Charakterangriff und ohne zusätzlichen Heilaufschlag. Castzeit 0,1 Sekunden, Cooldown 54/49/44 Sekunden. Keine anhaltende Wirkung. Orb-Flugzeit und Auswahl zwischen mehr als zwei geeigneten Verbündeten bleiben für die Umsetzung offen.",
+    "description_eng": "Hits one enemy for 143/219/295 magical base skill damage across three levels, plus current magical attack. After a successful hit, a green orb returns from the target to the Shaman and splits toward up to two additional allies within 2.5 meters of the caster. The caster and those allies each recover a fixed 240 Health, up to 720 total. Missing recipients do not increase healing received by others. Healing does not scale with damage, magical attack or critical hits and requires a successful hit. Small situational support. Mana 36/55/74 follows the 25% base-damage rule, excluding character attack and without an additional healing surcharge. Cast time 0.1 seconds; cooldown 54/49/44 seconds. No ongoing effect. Orb travel time and selection among more than two eligible allies remain pending.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 143,
+            "perLevel": 76
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 54,
+              "perLevel": -5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+}

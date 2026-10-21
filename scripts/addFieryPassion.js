@@ -1,0 +1,25 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+try{
+ if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Development database required');
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000,connectTimeoutMS:10000});
+ const col=SkillDataModel.collection;assert.equal(await col.countDocuments({skillName_eng:'Fiery Passion'}),0);
+ const nr=(await col.find({}).sort({nr:-1}).limit(1).next()).nr+1;
+ const skill={_id:new mongoose.Types.ObjectId(),nr,skillName_de:'Feurige Leidenschaft',skillName_eng:'Fiery Passion',category:'passive',dmgType:'passive',charClass:['Shamane','High Elves'],maxSkillLv:10,maxUpgradeLv:10,currentSkillLv:0,currentUpgradeLv:0,skillpoints:1,resourceCosts:[],cd:90,cooldownScaling:{type:'linear',base:90,perLevel:-1},dur:10,triggerConditionStatus:'defined',triggerCondition:{type:'ownAttack',chancePerCheck:0.05,requiresCooldownReady:true,manaBelowFraction:0.5,oncePerAttackAction:true,includesBasicAttacks:true,includesAttackSkills:true,excludeCompanionAttacks:true,excludesPeriodicDamage:true},effectsVersion:1,effects:[
+ {key:'passion-fire-auto',type:'damageBonus',target:'self',appliesTo:'basicAttack',damageTypes:['magical'],damageSchool:'fire',value:2,unit:'flat',durationSeconds:10,valueScaling:{type:'linear',base:2,perLevel:2}},
+ {key:'passion-auto-mana',type:'resourceGain',resource:'mana',target:'self',gainTrigger:'ownBasicAttack',oncePerAttackAction:true,value:5,unit:'flat',durationSeconds:10},
+ ],description_de:'Bei weniger als 50 Prozent deines maximalen Manas können erfolgreiche eigene Auto-Attacks oder direkte Angriffsskills mit 5 Prozent Wahrscheinlichkeit Feurige Leidenschaft entfesseln, sofern der Skill bereit ist. Jede Angriffsaktion prüft die Chance nur einmal: zwei Waffen, Mehrfachtreffer oder mehrere getroffene Ziele geben keine zusätzlichen Würfe; periodischer Schaden und Begleiter lösen nicht aus. Die Wirkung hält auf allen zehn Stufen 10 Sekunden. Währenddessen verursacht jede erfolgreiche eigene Auto-Attack-Aktion zusätzlich 2 magischen Feuerschaden je Skillstufe, maximal 20 auf Stufe 10, und stellt einmalig 5 Mana wieder her. Kein Zusatz des M-Angriffs zu diesem festen Bonusschaden. Angriffsskills können die Passive auslösen, erhalten aber weder deren Zusatzschaden noch Mana-Rückgewinnung. Keine Aktivierungskosten. Interner Cooldown beginnt mit Auslösung: 90 Sekunden, −1 je weiterer Stufe bis 81 auf Stufe 10. Die Wirkung stapelt nicht und wird nicht durch neue Auslösungen verlängert. Ein Anstieg auf mindestens 50 Prozent Mana beendet eine bereits laufende Wirkung nicht vorzeitig.',
+ description_eng:'While below50 percent maximum Mana, successful own basic attacks or direct attack skills have a5 percent chance per attack action to trigger Fiery Passion when ready. Dual weapons, multi-hit skills and multiple targets do not grant extra rolls; periodic and companion damage cannot trigger it. Duration10 seconds at all ten levels. Each successful own basic-attack action during the effect deals2 additional flat magical fire damage per skill level, up to20, and restores5 Mana once. No magical-attack contribution to this flat bonus. Attack skills can trigger the passive but do not receive its bonus damage or Mana return. No activation cost. Internal cooldown starts on trigger:90 seconds minus1 per additional level to81. No stacking or refreshing. Recovering to50 percent Mana or above does not end an already active effect.'};
+ await new SkillDataModel(skill).validate();
+ const dir='data/balancing/history/before-fiery-passion-'+Date.now();await fs.mkdir(dir,{recursive:true});
+ const path='data/reports/class-skill-counts.json',report=JSON.parse(await fs.readFile(path,'utf8'));await fs.copyFile(path,dir+'/class-skill-counts.json');
+ const row=report.counts.find(c=>c.name==='Schamane / Hochelfe');assert.equal(row.total,29);
+ await col.insertOne(skill);assert.deepEqual(await col.findOne({nr}),skill);
+ row.skillNumbers.push(nr);row.skillNumbers.sort((a,b)=>a-b);row.total++;row.passive++;report.catalogCount=await col.countDocuments({});report.classified.push({nr,id:String(skill._id),name:skill.skillName_de,classes:skill.charClass,category:'passive',activeDefensive:false});await fs.writeFile(path,JSON.stringify(report,null,2)+'\n');
+ await fs.writeFile('data/balancing/fiery-passion-decision.json',JSON.stringify({status:'appliedAndVerified',backup:dir,skill,simulationStatus:'Random procs remain excluded from deterministic 600-second comparison'},null,2)+'\n');
+ console.log('Verified Fiery Passion:10 levels,5% own attack proc below50% Mana,duration10s,cooldown90–81,+2–20 fire damage/+5 Mana per successful basic action. Shaman30 skills.');
+}catch(error){console.error('Fiery Passion creation failed ('+error.name+'); credentials omitted.');process.exitCode=1;}
+finally{await mongoose.disconnect();}

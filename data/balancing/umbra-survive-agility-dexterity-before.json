@@ -1,0 +1,46 @@
+{
+  "_id": "6acc1c7e4826525c70d04b65",
+  "skillName_eng": "Survive",
+  "__v": 1,
+  "agi": 1,
+  "category": "Umbra",
+  "charClass": [
+    "Butcher",
+    "Destroyer",
+    "Summoner",
+    "Soulseeker",
+    "Ritualist",
+    "Bloodmage",
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanenter passiver Umbra-Grundskill. Stärke steigt um 1 je gelerntem Skilllevel, bis zu 20 auf Stufe 20. Agilität steigt gleichmäßig von 1 auf Stufe 1 auf 15 auf Stufe 20. Keine Aktivierungskosten oder Cooldown.",
+  "description_eng": "Permanent passive Umbra core skill. Strength increases by 1 per learned skill level to 20 at level 20. Agility increases evenly from 1 at level 1 to 15 at level 20. No activation costs or cooldown.",
+  "dmgType": "passive",
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 2,
+  "skillName_de": "Überleben",
+  "skillpoints": 1,
+  "str": 1,
+  "allowedRaces": [
+    "Umbra"
+  ],
+  "isClassCore": true,
+  "unlockPhase": "race",
+  "resourceCosts": [],
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    },
+    "agi": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.7368421052631579
+    }
+  }
+}

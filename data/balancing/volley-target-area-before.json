@@ -1,0 +1,62 @@
+{
+  "_id": "6acc1c7e4826525c70d04bbb",
+  "skillName_eng": "Salve",
+  "__v": 0,
+  "category": "active",
+  "charClass": [
+    "Archer",
+    "Hunter"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Schießt mehrere Wellen aus jeweils gleichzeitig abgefeuerten Pfeilen. Stufe 1: eine Welle mit 3 Pfeilen. Stufe 2: zwei Wellen mit je 3 Pfeilen. Stufe 3: 4 und 3 Pfeile. Stufe 4: 4 und 4 Pfeile. Stufe 5: drei Wellen mit 5, 4 und 3 Pfeilen. Jeder Pfeil hat 138 physischen Skill-Grundschaden; eine zusätzliche Schadensskalierung wurde noch nicht festgelegt. Castzeit 0,2 Sekunden, vorläufige Ausführungsanimation insgesamt 1 Sekunde. Keine anhaltende Wirkung nach den Einschlägen. Genaue Wellenabstände, Zielverteilung und mögliche Mehrfachtreffer auf dasselbe Ziel sowie Mana-Kosten sind noch offen.",
+  "description_eng": "Fires waves of simultaneously released arrows. Level 1: one wave of 3 arrows. Level 2: two waves of 3 arrows each. Level 3: 4 and 3 arrows. Level 4: 4 and 4 arrows. Level 5: three waves of 5, 4 and 3 arrows. Each arrow has 138 physical skill base damage; no additional damage scaling has been defined yet. Cast time is 0.2 seconds; provisional total execution animation is 1 second. No lingering effect after impacts. Exact wave timing, target distribution, repeated hits on one target and Mana costs remain pending.",
+  "dmgType": "physical",
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 88,
+  "patk": 138,
+  "skillName_de": "Salve",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "attackExecution": {
+    "projectileWavesByLevel": [
+      {
+        "counts": [
+          3
+        ]
+      },
+      {
+        "counts": [
+          3,
+          3
+        ]
+      },
+      {
+        "counts": [
+          4,
+          3
+        ]
+      },
+      {
+        "counts": [
+          4,
+          4
+        ]
+      },
+      {
+        "counts": [
+          5,
+          4,
+          3
+        ]
+      }
+    ],
+    "damageValueScope": "perHit",
+    "timingStatus": "pending",
+    "projectileTargetDistributionStatus": "pending"
+  },
+  "castTimeSeconds": 0.2,
+  "hasLingeringDamage": false
+}

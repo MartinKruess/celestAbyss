@@ -1,0 +1,227 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c36",
+    "skillName_eng": "Aurora Waves",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört eine Welle aus Licht, die durch eine größere Fläche fliegt. In der Mitte voller Schaden, an den äußeren Rändern halber Schaden. Genaue Flächengröße und Breite der Randzonen (besprochen: äußere 20 oder 30 Prozent) sind noch offen. M-Angriff 384 auf Stufe 1, +124 je weiterer Stufe, auf Stufe 10 insgesamt 1500. Mana 270, +57 je weiterer Stufe, auf Stufe 10 insgesamt 783. Cooldown 300 Sekunden, -7 je weiterer Stufe, auf Stufe 10 237 Sekunden. Castzeit 0,8 Sekunden. Die bisherigen 12 Sekunden sind keine bestätigte Wirkungsdauer: Animationsdauer (beispielsweise 4 Sekunden statt 12), Trefferzahl und mögliche anhaltende Wirkung müssen noch geklärt werden. Ablauf: Zunächst etwa 1,5 Sekunden visuelles Spektakel am Himmel ohne Schaden; anschließend entlädt es sich als schadensverursachende Lichtwelle über die Fläche. Diese Vorphase ist keine zusätzliche Castzeit und legt die Gesamtlänge der Animation nicht fest. Die genaue zeitliche Einordnung zur Castzeit bleibt zu prüfen.",
+    "description_eng": "Summons a wave of light traveling through a large area. Full damage in the center, half damage at the outer edges. Area dimensions and edge widths (20 or 30 percent were discussed) remain pending. Magical attack 384 plus 124 per additional level, totaling 1500 at level 10. Mana 270 plus 57 per additional level, totaling 783. Cooldown 300 minus 7 per additional level, totaling 237 seconds. Cast time 0.8 seconds. The old 12-second duration is unconfirmed: animation duration (possibly 4 rather than 12 seconds), hit count and any lingering effect remain pending. Sequence: approximately 1.5 seconds of visual spectacle in the sky without damage, followed by discharge as a damaging light wave across the area. This visual prelude is not an additional cast time and does not define total animation length. Its exact timing relative to the cast remains to be reviewed.",
+    "dmgType": "spell",
+    "matk": 384,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 211,
+    "skillName_de": "Aurora Wellen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 300,
+      "perLevel": -7
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 270,
+          "perLevel": 57
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 384,
+        "perLevel": 124
+      }
+    },
+    "waveDamageProfile": {
+      "centerDamageMultiplier": 1,
+      "edgeDamageMultiplier": 0.5,
+      "edgeWidthStatus": "pending",
+      "areaDimensionsStatus": "pending",
+      "hitFrequencyStatus": "pending",
+      "visualPreludeSeconds": 1.5,
+      "damageStartsAfterVisualPrelude": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c3c",
+    "skillName_eng": "Divine Nova",
+    "__v": 0,
+    "category": "active",
+    "cd": 175,
+    "charClass": [
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Im Zielgebiet um den anvisierten Gegner entsteht eine Lichtkugel. Nach 2 Sekunden explodiert sie und verursacht einmalig magischen Flächenschaden an bis zu fünf Gegnern; kein wiederholter Schaden. Radius und Mitbewegung des Zielgebiets bleiben offen. Grundschaden 473 auf Stufe 1, je weiterer Stufe bis einschließlich Stufe 9 +93 auf 1217; der letzte Schritt auf Stufe 10 gibt stattdessen +198, insgesamt 1415. Mana 137, +75 je weiterer Stufe, auf Stufe 10 812. Bestehender Cooldown 175 Sekunden, je weiterer Stufe -2, auf Stufe 10 157 Sekunden. Castzeit 0,4 Sekunden. Gesamtdauer der visuellen Wirkung vorläufig 2,5 Sekunden; Explosion nach 2 Sekunden.",
+    "description_eng": "A sphere of light forms in the target area around the selected enemy. After 2 seconds it explodes, dealing magical area damage once to up to five enemies; no repeated damage. Radius and target-area tracking remain pending. Base damage 473 at level 1, +93 per additional level through level 9 (1217); the final step to level 10 instead adds 198, totaling 1415. Mana 137 plus 75 per additional level, totaling 812. Existing cooldown 175 seconds minus 2 per additional level, reaching 157 seconds. Cast time 0.4 seconds. Provisional total visual effect duration 2.5 seconds; explosion after 2 seconds.",
+    "dmgType": "spell",
+    "matk": 473,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 217,
+    "skillName_de": "Göttliche Nova",
+    "skillpoints": 1,
+    "animationDurationSeconds": 2.5,
+    "animationTimingStatus": "provisional",
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "geometryStatus": "pending",
+      "maxTargets": 5
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "explosionDelayAfterCreationSeconds": 2
+    },
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 175,
+      "perLevel": -2
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 137,
+          "perLevel": 75
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "table",
+        "values": [
+          473,
+          566,
+          659,
+          752,
+          845,
+          938,
+          1031,
+          1124,
+          1217,
+          1415
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c3d",
+    "skillName_eng": "Light Crystal Prison",
+    "__v": 0,
+    "category": "active",
+    "cd": 130,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft ein kristallenes Gefängnis aus Licht. Der Gegner kann sich darin nicht bewegen und das Gefängnis nicht verlassen. Dauer auf Stufe 1/2/3: 1/2/4 Sekunden. Magische Angriffe werden blockiert; ob dies eingehende, ausgehende oder beide Richtungen betrifft, ist noch zu klären. Verhalten physischer Angriffe und Sonderregeln für große Gegner oder Bosse sind noch offen. Magischer Grundschaden 291 auf Stufe 1, +109 je weiterer Stufe, insgesamt 509 auf Stufe 3. Kein wiederholter Schaden festgelegt. Mana 115, +47 je weiterer Stufe, insgesamt 209. Cooldown 130 Sekunden, -5 je weiterer Stufe, auf Stufe 3 120 Sekunden. Castzeit 0,5 Sekunden.",
+    "description_eng": "Creates a crystalline prison of light. The enemy cannot move inside or leave it. Duration at levels 1/2/3: 1/2/4 seconds. Magical attacks are blocked; whether this applies to incoming attacks, outgoing attacks or both remains pending. Physical attack interactions and special rules for large enemies or bosses remain pending. Magical base damage 291 plus 109 per additional level, totaling 509 at level 3. No repeated damage defined. Mana 115 plus 47 per additional level, totaling 209. Cooldown 130 minus 5 per additional level, reaching 120 seconds at level 3. Cast time 0.5 seconds.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 291,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 218,
+    "skillName_de": "Licht kristallenes Gefängnis",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.5,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 130,
+      "perLevel": -5
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        1,
+        2,
+        4
+      ]
+    },
+    "effects": [
+      {
+        "key": "light-crystal-prison-root",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "root",
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            1,
+            2,
+            4
+          ]
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "prisonSettings": {
+      "preventsMovement": true,
+      "preventsLeaving": true,
+      "blocksMagicalAttacks": true,
+      "magicalAttackBlockingScopeStatus": "pending",
+      "physicalAttackInteractionStatus": "pending",
+      "bossInteractionStatus": "pending"
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 115,
+          "perLevel": 47
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 291,
+        "perLevel": 109
+      }
+    }
+  }
+]

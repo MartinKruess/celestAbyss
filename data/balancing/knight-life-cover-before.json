@@ -1,0 +1,51 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c0d",
+    "skillName_eng": "Energy of Health",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Lebenspunkte stark.",
+    "description_eng": "Increase your health points significantly.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "health": 500,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 170,
+    "skillName_de": "Energie des Lebens",
+    "skillpoints": 1,
+    "vita": 3
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c0e",
+    "skillName_eng": "Active Cover",
+    "__v": 0,
+    "block": 3,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deine Verteidigung um 6 und deine Blockchance um 3.",
+    "description_eng": "Increase your defense by 6 and your block chance by 3.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 6,
+    "nr": 171,
+    "pdef": 6,
+    "skillName_de": "Aktive Deckung",
+    "skillpoints": 1
+  }
+]

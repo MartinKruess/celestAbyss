@@ -1,0 +1,138 @@
+{
+  "confirmed": [
+    {
+      "sourceID": 16,
+      "nrs": [
+        16
+      ],
+      "reason": "Historical rename: Water Bond -> Water Chains"
+    },
+    {
+      "sourceID": 62,
+      "nrs": [
+        62
+      ],
+      "reason": "Infernal spelling restored; same reviewed cyclone skill"
+    },
+    {
+      "sourceID": 138,
+      "nrs": [
+        136
+      ],
+      "reason": "Summon spelling errors; existing common creature summon"
+    },
+    {
+      "sourceID": 185,
+      "nrs": [
+        214
+      ],
+      "reason": "User identifies life-sacrificing blood-magic enhancement: Burn Out, not active Burn spell"
+    },
+    {
+      "sourceID": 190,
+      "nrs": [
+        183
+      ],
+      "reason": "Good Reflex -> Good Reflexes; self Agility buff confirmed, amount pending"
+    },
+    {
+      "sourceID": 223,
+      "nrs": [
+        204,
+        205
+      ],
+      "reason": "Original Catalyst replaced by reviewed Pure/Impure field skills"
+    },
+    {
+      "sourceID": 131,
+      "nrs": [
+        241
+      ],
+      "reason": "User confirmed +1 direct magical attack per current stored soul, cap100; level progression pending."
+    }
+  ],
+  "notes": {
+    "63": {
+      "class": "Gladiator/Berserker",
+      "effect": "Rage-related skill; numeric values need separate review"
+    },
+    "131": {
+      "class": "Ritualist/Bloodmage",
+      "effect": "Passive victim counter strengthens blood mage; counter rules and scaling pending"
+    },
+    "148": {
+      "class": "Adventurer",
+      "effect": "Self buff; old source Strength +5 needs review against comparable skills"
+    },
+    "174": {
+      "effect": "Possible overlap with Protected Friends or Divine Protection; do not add until clarified"
+    },
+    "175": {
+      "effect": "User concept: increases Block; successful blocks reflect damage. Exact Block bonus, reflection amount, scope and timing remain pending."
+    },
+    "176": {
+      "effect": "Possible overlap with Bodyguard or Divine Protection; do not add until clarified"
+    },
+    "189": {
+      "effect": "Unknown"
+    },
+    "192": {
+      "class": "Soulseeker",
+      "effect": "Likely an attack with guaranteed critical hit; tentative, compare archer counterpart"
+    },
+    "193": {
+      "class": "Soulseeker",
+      "effect": "Self buff increases Dexterity; values pending"
+    },
+    "195": {
+      "class": "Rogue",
+      "effect": "Attack versus self buff still uncertain"
+    },
+    "199": {
+      "class": "Rogue",
+      "effect": "Tentative timed double basic attacks; doubling attack speed is not assumed equivalent"
+    },
+    "213": {
+      "effect": "Light-magic buff, possible name Geheimer Glaube; exact name/effect uncertain"
+    },
+    "214": {
+      "effect": "Light-magic buff, possible name Güte der Gerechtigkeit; details uncertain"
+    },
+    "217": {
+      "class": "Shaman",
+      "effect": "Placed totem temporarily doubles HP and mana regeneration in area; extra heal uncertain"
+    },
+    "218": {
+      "class": "Shaman",
+      "effect": "Unknown; possible Herbalist relevance unconfirmed"
+    }
+  },
+  "additionalClassBoardNames": [
+    "Ritter des Glücks",
+    "Auf der Jagd",
+    "Natürliche Verbundenheit",
+    "Ritterlichkeit"
+  ],
+  "discarded": [
+    {
+      "sourceID": 204,
+      "name": "Druide_buff01",
+      "reason": "User removed empty placeholder permanently; not the MongoDB Catalyst Pure skill nr 204."
+    },
+    {
+      "sourceID": 206,
+      "name": "Geist des Kommenden",
+      "reason": "User explicitly removed this reserve entry; source ID is not a MongoDB skill number."
+    },
+    {
+      "sourceID": 219,
+      "name": "Geist des Vergangenen",
+      "reason": "User explicitly removed this reserve entry; source ID is not a MongoDB skill number."
+    },
+    {
+      "sourceID": 237,
+      "name": "Große Regeneration",
+      "reason": "User explicitly removed this reserve entry; source ID is not a MongoDB skill number."
+    }
+  ]
+}

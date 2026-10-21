@@ -1,0 +1,215 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b73",
+    "skillName_eng": "Water Chains",
+    "__v": 0,
+    "category": "active",
+    "cd": 38,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft Wasserfesseln, die ein Ziel festhalten. Auf Skilllevel 1 beträgt die Fesseldauer 1 Sekunde. Auf den Skillleveln 5, 10, 15 und 20 steigt sie jeweils um 0,5 Sekunden, bis auf 3 Sekunden. Der Cooldown startet bei 38 Sekunden und sinkt pro weiterem Skilllevel um 0,5 Sekunden auf 28,5 Sekunden. Mana-Kosten 12 auf Stufe 1, konstant, maximal 12 auf Stufe 20. Castzeit 0,2 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates water chains that immobilize a target. At skill level 1, the duration is 1 second. At skill levels 5, 10, 15 and 20, it increases by 0.5 seconds each, reaching 3 seconds. The cooldown starts at 38 seconds and decreases by 0.5 seconds per additional skill level, reaching 28.5 seconds. Mana cost 12 at level 1, maximum 12 at level 20. Cast time is 0.2 seconds.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 47,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 16,
+    "skillName_de": "Wasserfesseln",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 38,
+      "perLevel": -0.5
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        1.5,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        2.5,
+        3
+      ]
+    },
+    "mana": 12,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 12
+        }
+      }
+    ],
+    "castTimeSeconds": 0.2,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 38,
+              "perLevel": -0.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              0,
+              0,
+              0,
+              0.5,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb4",
+    "skillName_eng": "Force of Nature",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Naturmagie. Auf Stufe 1 erhältst du 10 Intelligenz, 1 Wisdom und 1 Vitalität. Je weiterer Stufe kommen jeweils 2 Intelligenz, Wisdom und Vitalität hinzu. Auf Stufe 3 sind das 14 Intelligenz, 5 Wisdom und 5 Vitalität. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanently improves your nature magic. Level 1 grants 10 Intelligence, 1 Wisdom and 1 Vitality. Each additional level adds 2 Intelligence, Wisdom and Vitality each. Level 3 grants 14 Intelligence, 5 Wisdom and 5 Vitality. Permanent passive skill without activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 10,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 81,
+    "skillName_de": "Naturgewalt",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 2
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

@@ -1,0 +1,138 @@
+{
+  "_id": "6acc1c7e4826525c70d04c2d",
+  "skillName_eng": "Burn",
+  "__v": 0,
+  "category": "active",
+  "cd": 22,
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Lässt einen Gegner für 10 Sekunden brennen: zehn magische Schadensticks, einer je Sekunde, erster Tick nach einer Sekunde, kein Initialtreffer. Grundschaden je Tick: 16 auf Stufe 1, +10 je weiterer Stufe bis 156 auf Stufe 15. Gesamter Grundschaden 160 bis 1560. Kein zusätzlicher Charakterangriff je Tick. Mana: gerundet 15 Prozent des gesamten Grundschadens, 24 auf Stufe 1 bis 234 auf Stufe 15, vor passiven Rabatten. Weisheit des Salamanders verstärkt Feuerschaden und reduziert Mana-Kosten. Castzeit 0,2 Sekunden, Cooldown 22 Sekunden. Zielanzahl und Trefferbereich werden später geprüft.",
+  "description_eng": "Burns an enemy for 10 seconds: ten magical damage ticks, one per second, first tick after one second, no initial hit. Base damage per tick starts at 16 and increases by 10 per additional level to 156 at level 15. Total base damage is 160 to 1560. No additional character attack per tick. Mana costs rounded 15 percent of total base damage, from 24 to 234 before passive discounts. Wisdom of the Salamander boosts fire damage and reduces Mana costs. Cast time 0.2 seconds, cooldown 22 seconds. Target count and area remain subject to later review.",
+  "dmgType": "spell",
+  "dur": 10,
+  "matk": 12,
+  "maxSkillLv": 15,
+  "maxUpgradeLv": 10,
+  "nr": 202,
+  "skillName_de": "Verbrennen",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.2,
+  "effects": [
+    {
+      "key": "burn-dot",
+      "type": "periodicDamage",
+      "target": "enemy",
+      "value": 16,
+      "unit": "flat",
+      "damageTypes": [
+        "magical"
+      ],
+      "intervalSeconds": 1,
+      "firstTickAfterSeconds": 1,
+      "durationSeconds": 10,
+      "valueScaling": {
+        "type": "linear",
+        "base": 16,
+        "perLevel": 10
+      },
+      "periodicDamageKind": "residualDot",
+      "addsCasterMagicalAttack": false
+    }
+  ],
+  "hasLingeringDamage": true,
+  "mana": 24,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "table",
+        "base": 24,
+        "values": [
+          24,
+          39,
+          54,
+          69,
+          84,
+          99,
+          114,
+          129,
+          144,
+          159,
+          174,
+          189,
+          204,
+          219,
+          234
+        ]
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 12,
+      "perLevel": 6
+    }
+  },
+  "manaPricing": {
+    "category": "dot",
+    "factor": 0.15,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "effects",
+          "0",
+          "valueScaling"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 16,
+          "perLevel": 10
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "outputCost",
+          "factor": 0.15,
+          "basis": "damage",
+          "minimum": 0
+        },
+        "source": "verifiedManaPricing"
+      },
+      {
+        "path": [
+          "statScaling",
+          "matk"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 12,
+          "perLevel": 6
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "damageType": "magical",
+  "type": "skill"
+}

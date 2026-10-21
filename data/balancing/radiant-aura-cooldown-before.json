@@ -1,0 +1,93 @@
+{
+  "_id": "6acc1c7e4826525c70d04bcf",
+  "skillName_eng": "Radiant Aura Field",
+  "__v": 0,
+  "category": "active",
+  "cd": 72,
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld mit 4 Metern Radius. Der Heiler erhält Selbstheilung bei Sekunde 1, 3, 5, 7, 9 und 11. Verbündete im Feld erhalten jeweils 30 Prozent des Selbstheilungswerts bei Sekunde 2, 4, 6, 8, 10 und 12; der Heiler erhält diese zusätzlichen Verbündeten-Ticks nicht. Selbstheilung je Tick 10 HP je gelerntem Skilllevel, auf Stufe 10 100 HP. Verbündetenheilung je Tick 3 HP je gelerntem Skilllevel, auf Stufe 10 30 HP je Empfänger. Über die volle Laufzeit insgesamt 60 bis 600 HP für den Heiler und 18 bis 180 HP je durchgehend anwesendem Verbündeten. Mana 15 auf Stufe 1 und +4 je weiterer Stufe, auf Stufe 10 51. Cooldown 72 Sekunden. Castzeit 0 Sekunden. Bewegung ist erlaubt; ein eigener Angriff oder eine andere aktive Heilung bricht das gesamte Feld und alle verbleibenden Ticks ab. Die eigenen Aura-Heilticks lösen keinen Abbruch aus. Regeln für andere Aktionen, erlittenen Schaden und Unterbrechungseffekte werden später geprüft. Kein zusätzlicher Faith-Bonus. Eine Skalierung mit Waffen- oder Charakter-M-Angriff ist noch nicht festgelegt.",
+  "description_eng": "Instantly activates a 12-second aura field with a 4-meter radius that moves with the healer. Self-healing occurs at seconds 1, 3, 5, 7, 9 and 11. Allies within the field receive 30 percent of the self-healing value at seconds 2, 4, 6, 8, 10 and 12; the caster does not receive these additional allied ticks. Self-healing per tick is 10 HP per learned skill level, reaching 100 at level 10. Allied healing per tick is 3 HP per learned skill level, reaching 30 per recipient at level 10. Full-duration totals: 60–600 HP for the healer and 18–180 per continuously present ally. Mana 15 plus 4 per additional level, reaching 51. Cooldown 72 seconds; cast time zero. Movement is allowed; an own attack or another active healing action cancels the whole field and all remaining ticks. The aura’s own healing ticks do not cancel it. Other actions, incoming damage and interruption effects remain to be reviewed. No additional Faith bonus. Weapon/character magical-attack scaling remains undefined.",
+  "dmgType": "spell",
+  "dur": 12,
+  "health": 10,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 108,
+  "skillName_de": "Strahlendes Aurafeld",
+  "skillpoints": 1,
+  "areaSettings": {
+    "center": "caster",
+    "movesWithCaster": true,
+    "membership": "whileInside",
+    "includeCaster": false,
+    "radiusMeters": 4
+  },
+  "castTimeSeconds": 0,
+  "effects": [
+    {
+      "key": "radiant-aura-self-heal",
+      "type": "heal",
+      "target": "self",
+      "value": 10,
+      "unit": "flat",
+      "valueScaling": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 10
+      },
+      "intervalSeconds": 2,
+      "firstTickAfterSeconds": 1,
+      "durationSeconds": 12
+    },
+    {
+      "key": "radiant-aura-allied-heal",
+      "type": "heal",
+      "target": "alliesInArea",
+      "excludesCaster": true,
+      "onlyWhileTargetInsideArea": true,
+      "value": 3,
+      "unit": "flat",
+      "valueScaling": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "intervalSeconds": 2,
+      "firstTickAfterSeconds": 2,
+      "durationSeconds": 12
+    }
+  ],
+  "effectsVersion": 1,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 4
+      }
+    }
+  ],
+  "statScaling": {
+    "health": {
+      "type": "linear",
+      "base": 10,
+      "perLevel": 10
+    }
+  },
+  "sustainedActionSettings": {
+    "allowsMovement": true,
+    "cancelsOnOwnAttack": true,
+    "cancelsOnOtherHealingAction": true,
+    "ignoresOwnHealingTicksForCancellation": true,
+    "otherActionCancellationStatus": "pending",
+    "incomingDamageCancellationStatus": "pending"
+  }
+}

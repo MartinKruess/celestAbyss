@@ -1,0 +1,60 @@
+{
+  "_id": "6acc1c7e4826525c70d04c1b",
+  "skillName_eng": "Sneaky Trap",
+  "__v": 0,
+  "category": "active",
+  "cd": 120,
+  "charClass": [
+    "Summoner",
+    "Soulseeker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Ein Trickschuss markiert bei einem Treffer den Gegner. Auf Skilllevel 1 beträgt die Trefferchance 50 %. Während der nächsten 20 Sekunden wird der Schaden gesammelt, den du selbst diesem Gegner zufügst. Anschließend werden 80 % dieses Schadens erneut auf ihn angewendet. Auf Skilllevel 10 beträgt die Trefferchance 60 %, das Sammelfenster 30 Sekunden und der erneut angewendete Anteil 90 %. Der Cooldown startet bei 120 Sekunden und sinkt pro weiterem Skilllevel um 2 Sekunden auf 102 Sekunden. Der erneut angewendete Schaden wird nicht nochmals gesammelt.",
+  "description_eng": "A trick shot marks the enemy on a successful hit. At skill level 1, the hit chance is 50%. Damage you personally deal to that enemy is collected for the next 20 seconds, then 80% of it is applied again. At skill level 10, the hit chance is 60%, the collection window is 30 seconds and the repeated share is 90%. The cooldown starts at 120 seconds and decreases by 2 seconds per additional skill level to 102 seconds. Repeated damage is not collected again.",
+  "dmgType": "physical",
+  "dur": 20,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 184,
+  "skillName_de": "Hinterhältige Falle",
+  "skillpoints": 1,
+  "activation": "manual",
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 120,
+    "perLevel": -2
+  },
+  "effects": [
+    {
+      "damageBasis": "actualHealthDamage",
+      "applyMitigationAgain": false,
+      "cancelOnCasterDeath": true,
+      "cancelOnTargetDeath": true,
+      "disablesEffects": [],
+      "hitChance": 0.5,
+      "hitChanceAtMaxLevel": 0.6,
+      "valueAtMaxLevel": 0.9,
+      "durationAtMaxLevelSeconds": 30,
+      "progressionStatus": "pending",
+      "damageSource": "caster",
+      "excludeReplayDamage": true,
+      "valueScaling": {
+        "values": []
+      },
+      "durationScaling": {
+        "values": []
+      },
+      "type": "damageReplay",
+      "target": "enemy",
+      "allowedRaces": [],
+      "value": 0.8,
+      "unit": "fraction",
+      "damageTypes": [],
+      "durationSeconds": 20,
+      "key": "collected-damage-replay"
+    }
+  ],
+  "effectsVersion": 1,
+  "castTimeSeconds": 0
+}

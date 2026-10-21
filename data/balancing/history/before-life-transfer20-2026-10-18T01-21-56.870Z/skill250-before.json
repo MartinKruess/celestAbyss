@@ -1,0 +1,45 @@
+{
+  "_id": "6ad41b704e67141870eba8bc",
+  "charClass": [
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "skillpoints": 1,
+  "category": "active",
+  "nr": 250,
+  "skillName_de": "Lebenstransfer",
+  "skillName_eng": "Life Transfer",
+  "dmgType": "heal",
+  "maxSkillLv": 10,
+  "castTimeSeconds": 1.2,
+  "castTimeStatus": "defined",
+  "animationDurationSeconds": 2,
+  "animationTimingStatus": "defined",
+  "cd": 60,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 60,
+    "perLevel": -2
+  },
+  "description_de": "Heilt einen ausgewählten eigenen Begleiter unter Opferung eigener HP und Mana. Zehn Lernstufen bestätigt. Castzeit 1,2 Sekunden, feste anschließende Animation 2 Sekunden; Heilung kann unterbrochen oder durch Bewegung abgebrochen werden, nur erfolgte Impulse heilen. Cooldown 60 Sekunden, -2 je weiterer Stufe bis 42. Der frühere Fünf-Stufen-Entwurf hatte vier Impulse alle 0,5 Sekunden mit je 10/30/60/120/160 HP sowie insgesamt 100 HP und vorgeschlagenen 50 Mana je Skillstufe. Neue Zehn-Stufen-Heilkurve (ungefähr 2000 Gesamtheilung am Ende), Impulszahl (zuletzt drei statt ursprünglich vier genannt) und endgültige Kosten noch offen; alte Heilkurve wird nicht automatisch auf zehn Stufen erweitert.",
+  "description_eng": "Transfer own health and mana to heal a selected own companion. Ten levels, cast 1.2 seconds, fixed subsequent animation 2 seconds; interruptible. Cooldown 60 -2 per additional level to 42 seconds. Ten-level healing progression, final impulse count and costs pending; original five-level draft retained as reference only.",
+  "lifeTransferSettings": {
+    "target": "selectedOwnCompanion",
+    "interruptible": true,
+    "healingProgressionStatus": "pending",
+    "impulseCountStatus": "pending",
+    "healingAtMaxLevelApproximate": 2000,
+    "confirmedFiveLevelHealingPerImpulse": [
+      10,
+      30,
+      60,
+      120,
+      160
+    ],
+    "originalImpulseIntervalSeconds": 0.5,
+    "originalImpulseCount": 4,
+    "costProgressionStatus": "pending"
+  }
+}

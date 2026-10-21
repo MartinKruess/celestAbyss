@@ -1,0 +1,67 @@
+{
+  "_id": "6acc1c7e4826525c70d04bd6",
+  "skillName_eng": "Supersonic Blade",
+  "__v": 0,
+  "category": "active",
+  "cd": 120,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Lädt die Klinge 1 Sekunde auf und führt einen einzelnen physischen Treffer aus. Der getroffene Gegner wird für 0,5 Sekunden kurz paralysiert. Der physische Grundangriffswert steigt von 636 um 93 je weiterer Stufe auf 1008. Die Mana-Kosten steigen von 231 um 37 je weiterer Stufe auf 379. Der Cooldown sinkt von 120 um 3 Sekunden je weiterer Stufe auf 108 Sekunden. Die Paralyse dauert auf allen Stufen gleich lang; ihre genaue Einschränkung von Aktionen ist noch festzulegen.",
+  "description_eng": "Charges the blade for 1 second and performs one physical hit. The affected enemy is briefly paralyzed for 0.5 seconds. Physical base attack increases from 636 by 93 per additional level to 1008. Mana cost increases from 231 by 37 per additional level to 379. Cooldown decreases from 120 by 3 seconds per additional level to 108 seconds. Paralysis duration is unchanged across levels; exact action restrictions are still to be defined.",
+  "dmgType": "physical",
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 115,
+  "patk": 636,
+  "skillName_de": "Überschallklinge",
+  "skillpoints": 1,
+  "attackExecution": {
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending"
+  },
+  "castTimeSeconds": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 120,
+    "perLevel": -3
+  },
+  "effects": [
+    {
+      "key": "supersonicParalysis",
+      "type": "control",
+      "target": "enemy",
+      "controlKind": "paralysis",
+      "actionRestrictionsStatus": "pending",
+      "durationSeconds": 0.5,
+      "durationStatus": "defined",
+      "progressionStatus": "defined"
+    }
+  ],
+  "effectsVersion": 1,
+  "mana": 231,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 231,
+        "perLevel": 37
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 636,
+      "perLevel": 93
+    }
+  }
+}

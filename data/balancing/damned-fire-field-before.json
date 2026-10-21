@@ -1,0 +1,49 @@
+{
+  "_id": "6acc1c7e4826525c70d04b93",
+  "skillName_eng": "Fire of the Damned",
+  "__v": 0,
+  "category": "active",
+  "cd": 57,
+  "charClass": [
+    "Ritualist",
+    "Bloodmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört eine Säule aus schwarzem Feuer, die alles auf ihrem Weg verbrennt. Die bisherige Beschreibung nennt einen Schadensbonus von 1 Prozent je zehn Opfer. Zählweise, Begrenzung und genaue Bonusbasis sind noch offen; dieser historische Bonus ist nicht als fertige Laufzeitregel implementiert. Magischer Skill-Grundschaden 273 auf Stufe 1 und +112 je weiterer Stufe, auf Stufe 5 721. Mana 167 und +83 je weiterer Stufe, auf Stufe 5 499. Cooldown 57 Sekunden und -1,5 je weiterer Stufe, auf Stufe 5 51 Sekunden. Castzeit 0,4 Sekunden. Vorläufiger visueller Ablauf 2 Sekunden. Trefferbereich, Trefferzahl und mögliche anhaltende Feuerfeld-/Verbrennungswirkung sind noch zu klären; keine wiederholten Schadensticks festgelegt.",
+  "description_eng": "Summons a pillar of black fire that burns everything in its path. The historical description specifies +1 percent damage per ten victims. Counter rules, caps and the precise damage basis remain pending; this historical bonus is not implemented as a complete runtime rule. Magical skill base damage 273 plus 112 per additional level, reaching 721 at level 5. Mana 167 plus 83 per additional level, reaching 499. Cooldown 57 minus 1.5 per additional level, reaching 51 seconds. Cast time 0.4 seconds. Provisional visual sequence 2 seconds. Hit area, hit count and any lingering fire-field/burning effect remain pending; no repeated damage ticks defined.",
+  "dmgType": "spell",
+  "matk": 273,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 48,
+  "skillName_de": "Feuer der Verdammten",
+  "skillpoints": 1,
+  "animationDurationSeconds": 2,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.4,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 57,
+    "perLevel": -1.5
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 167,
+        "perLevel": 83
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 273,
+      "perLevel": 112
+    }
+  }
+}

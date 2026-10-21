@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bca",
+    "skillName_eng": "Soul Shackle",
+    "__v": 0,
+    "category": "active",
+    "cd": 70,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbraucht 1 Seelenfragment und lässt zwei seelenhafte Hände aus dem Boden den Gegner festhalten. Kein Lebensopfer. Die Fessel betäubt das Ziel und senkt seine M-Defense währenddessen um 10 Prozent. Dauer gleichmäßig von 2 Sekunden auf Stufe 1 bis 3 Sekunden auf Stufe 15. Magischer Initial-Grundschaden 97, +34 je weiterer Stufe, auf Stufe 15 573. Mana 25, +12 je weiterer Stufe, auf Stufe 15 193. Cooldown 70 Sekunden, -1,5 je weiterer Stufe, auf Stufe 15 49 Sekunden. Castzeit vorläufig 0,1 Sekunden innerhalb des genannten Bereichs 0,1–0,2 Sekunden. Während der Fessel ist Seelenqual nutzbar. Definition, Kapazität und Wiederauffüllen des permanenten Seelenvorrats werden separat ausgearbeitet.",
+    "description_eng": "Consumes 1 soul fragment and summons two spectral hands from the ground to hold the enemy. No health cost. Stuns the target and reduces magical defense by 10 percent for the same duration. Duration increases linearly from 2 seconds at level 1 to 3 at level 15. Initial magical base damage 97 plus 34 per additional level, reaching 573. Mana 25 plus 12 per additional level, reaching 193. Cooldown 70 minus 1.5 per additional level, reaching 49 seconds. Provisional cast time 0.1 seconds within the stated 0.1–0.2 range. Soul Torment can be used during the shackle. Permanent soul storage capacity and replenishment are defined separately.",
+    "dmgType": "spell",
+    "dur": 2,
+    "matk": 97,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 103,
+    "skillName_de": "Seelenfessel",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 70,
+      "perLevel": -1.5
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 0.07142857142857142
+    },
+    "effects": [
+      {
+        "key": "soul-shackle-control",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "stun",
+        "durationSeconds": 2,
+        "durationScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 0.07142857142857142
+        }
+      },
+      {
+        "key": "soul-shackle-magical-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "mdef",
+        "value": -0.1,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 2,
+        "durationScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 0.07142857142857142
+        },
+        "endWith": "soul-shackle-control"
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 25,
+          "perLevel": 12
+        }
+      },
+      {
+        "resource": "soulFragments",
+        "reference": "currentSoulFragments",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 1
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 97,
+        "perLevel": 34
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcc",
+    "skillName_eng": "Soul Harvest",
+    "__v": 0,
+    "category": "active",
+    "cd": 160,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Manueller Abschluss der Kombination Seelenfessel → Seelenqual → Seelenernte. Verursacht einmalig magischen Schaden und heilt den Anwender. Magischer Grundschaden 481 auf Stufe 1, +183 je weiterer Stufe, auf Stufe 5 1213. Bestehende feste Selbstheilung 150 je gelerntem Skilllevel, von 150 bis 750 HP; bisher keine bestätigte zusätzliche Abhängigkeit der Heilmenge von der Trefferzahl. Die Zahl erfolgreicher Seelenqual-Treffer auf dem gefesselten Ziel bestimmt die Ernte: 0–4 ergibt 0 Seelenfragmente, 5–11 ergibt 1, ab 12 ergibt 2. Maximal 2 Seelenfragmente pro Abschluss. Seelenfessel kostet zuvor 1 Fragment. Seelenernte ist bis 1,5 Sekunden nach Auflösung der Seelenfessel abfeuerbar; genaue serverseitige Ablaufprüfung und Verhalten bei vorzeitigem Tod des Ziels noch offen. Cooldown 160 Sekunden, je weiterer Stufe 5 Sekunden weniger, auf Stufe 5 140 Sekunden. Castzeit 0,3 Sekunden, einmalige Wirkung. Mana-Kosten 178 auf Stufe 1, gleichmäßig steigend auf 490 auf Stufe 5. Speicherregeln sind durch Reaper definiert. Eine zusätzliche Schadens-/Heilskalierung nach Trefferzahl ist bisher nicht festgelegt. Übungspuppen geben keine Seelenfragmente; die konkrete Erkennung von Übungszielen wird später serverseitig umgesetzt.",
+    "description_eng": "Manual finisher for Soul Shackle → Soul Torment → Soul Harvest. Deals magical damage once and heals the caster. Base damage 481 plus 183 per additional level, reaching 1213 at level 5. Existing fixed self-healing remains 150 per learned skill level, from 150 to 750 HP; no extra hit-count-based healing amount is confirmed. Successful Torment hits on the shackled target determine the harvest: 0–4 yields 0 soul fragments, 5–11 yields 1, at least 12 yields 2. Maximum 2 fragments per finisher. Shackle costs 1 fragment first. Finisher can be fired up to 1.5 seconds after Shackle ends; precise server timing and target death behavior remain pending. Cooldown starts at 160 seconds, decreases by 5 per additional level, reaching 140 at level 5. Cast time 0.3 seconds; one-time effect. Mana cost 178 at level 1, increasing linearly to 490 at level 5. Storage rules are defined by Reaper. No additional hit-count damage/healing scaling is currently confirmed. Training dummies grant no soul fragments; exact training-target detection will be implemented server-side later.",
+    "dmgType": "spell",
+    "matk": 481,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 105,
+    "skillName_de": "Seelenernte",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 160,
+      "perLevel": -5
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 150,
+          "perLevel": 150
+        },
+        "type": "heal",
+        "target": "self",
+        "value": 150,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "self-heal"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "soulHarvestSettings": {
+      "sourceSkillNumber": 104,
+      "shackleSkillNumber": 103,
+      "minimumHitsForOneFragment": 5,
+      "minimumHitsForTwoFragments": 12,
+      "maximumFragments": 2,
+      "manualFinisher": true,
+      "postShackleWindowSeconds": 1.5,
+      "damageAndHealingScalingByHitCountStatus": "pending",
+      "excludesTrainingDummies": true
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 481,
+        "perLevel": 183
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 178,
+          "perLevel": 78
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+const changes={activation:'automatic',triggerConditionStatus:'defined',triggerCondition:{type:'ownAttack',oncePerAttackAction:true,excludeCompanionAttacks:true,requiresCooldownReady:true,healthThresholds:[{belowFraction:0.1,chancePerCheck:0.3},{belowFraction:0.2,chancePerCheck:0.1},{belowFraction:0.3,chancePerCheck:0.05}],thresholdSelection:'lowestMatchingThreshold'},str:3,pdef:30,mdef:30,cd:30,dur:12,resourceCosts:[],statBonusUnits:{str:'flat',pdef:'flat',mdef:'flat'},statScaling:{str:{type:'linear',base:3,perLevel:1},pdef:{type:'linear',base:30,perLevel:6},mdef:{type:'linear',base:30,perLevel:6}},description_de:'Eigene Angriffe können Überlebenswille auslösen, wenn der Skill bereit ist: unter 30 Prozent Leben mit 5 Prozent Chance, unter 20 Prozent mit 10 Prozent und unter 10 Prozent mit 30 Prozent. Es gilt nur die niedrigste passende Lebensschwelle. Der Buff erhöht für 12 Sekunden Stärke um 3 sowie physische und magische Verteidigung jeweils um 30. Je weiterer Skillstufe kommen 1 Stärke und jeweils 6 Verteidigung hinzu, bis zu 7 Stärke und jeweils 54 Verteidigung auf Level 5. Der Cooldown beträgt 30 Sekunden. Der Skill verändert weder Vitalität noch maximales Leben.',description_eng:'Your own attacks can trigger Survival Will when ready: a 5 percent chance below 30 percent Health, 10 percent below 20 percent, and 30 percent below 10 percent. Only the lowest matching Health threshold applies. For 12 seconds, the buff increases Strength by 3 and physical and magical defense by 30 each. Each additional skill level adds 1 Strength and 6 to each defense, reaching 7 Strength and 54 to each defense at level 5. Cooldown is 30 seconds. The skill does not change Vitality or maximum Health.'};
+try{
+if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Requires development database');
+await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+const before=await SkillDataModel.collection.findOne({nr:114});if(!before)throw Error('Missing skill');
+const candidate={...before,...changes};delete candidate.vita;await new SkillDataModel(candidate).validate();
+await fs.writeFile('data/balancing/survival-will-before.json',JSON.stringify(before,null,2)+'\n');
+await SkillDataModel.collection.updateOne({_id:before._id},{$set:changes,$unset:{vita:''}});
+const after=await SkillDataModel.collection.findOne({_id:before._id});for(const[k,v]of Object.entries(changes))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');if(after.vita!==undefined)throw Error('Legacy Vitality');
+console.log('Survival Will verified: HP-threshold proc on own attacks; Strength 3 to 7; both defenses 30 to 54. No Vitality; cooldown 30 s and duration 12 s unchanged.');
+}catch(e){console.error(`Survival Will update failed (${e.name}); credentials omitted.`);process.exitCode=1;}finally{await mongoose.disconnect();}

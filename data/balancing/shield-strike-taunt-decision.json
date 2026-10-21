@@ -1,0 +1,23 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-19T15:30:32.787Z",
+  "backup": "data/balancing/history/before-shield-strike-taunt-1792423832737",
+  "nr": 94,
+  "effect": {
+    "key": "shield-strike-taunt",
+    "type": "control",
+    "controlKind": "taunt",
+    "target": "enemy",
+    "minimumSkillLevel": 20,
+    "durationSeconds": 2,
+    "durationStatus": "defined",
+    "actionRestrictionsStatus": "defined",
+    "forcedTarget": "caster",
+    "forcedAction": "basicAttack",
+    "preventsSkillUse": true,
+    "overridesCurrentTarget": true,
+    "appliesInPvp": true,
+    "requiresSuccessfulHit": true
+  },
+  "scope": "Control definition added; damage, Mana, cooldown and animation unchanged. Incoming-combat simulation is not implemented by this data change."
+}

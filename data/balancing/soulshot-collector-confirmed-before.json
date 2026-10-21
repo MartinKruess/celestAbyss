@@ -1,0 +1,111 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c1c",
+    "skillName_eng": "Soulshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du schießt einen Seelenpfeil auf den Gegner. ",
+    "description_eng": "You shoot a soul arrow at the opponent.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 185,
+    "patk": 127,
+    "skillName_de": "Seelenschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1d",
+    "skillName_eng": "Soul Collector",
+    "__v": 0,
+    "category": "active",
+    "cd": 240,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entreiße deinen Gegnern ihre Seelen und füge ihnen Schaden zu. Der Gegner muss mit einem Seelenpfeil markiert sein.",
+    "description_eng": "Steal the souls of your opponents and deal damage to them. The opponent must be marked with a soul arrow.",
+    "dmgType": "phyical",
+    "dur": 10,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 186,
+    "patk": 478,
+    "skillName_de": "Seelensammler",
+    "skillpoints": 1,
+    "castTimeSeconds": 0
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c48",
+    "skillName_eng": "Spectral Chains",
+    "__v": 0,
+    "category": "active",
+    "cd": 240,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Triff ein markiertes Ziel und entfessle die Macht der mit Seelensammler gesammelten Punkte, um es in Ketten zu legen. Bei 0 bis 13 Punkten beträgt die Fesselungsdauer 1 Sekunde ohne Grundschadensbonus. Bei 14 bis 22 Punkten: 2 Sekunden und 1 Prozent mehr Skill-Grundschaden. Bei 23 bis 31 Punkten: 3 Sekunden und 2 Prozent mehr Skill-Grundschaden. Ab 32 Punkten: 4 Sekunden und 3 Prozent mehr Skill-Grundschaden. Die Prozentboni gelten ausschließlich für den Skill-Grundschaden, nicht für Charakterangriff oder Waffenbeiträge. Jeder erfolgreiche Seelensammler-Treffer gibt genau einen Punkt, auch ein geblockter oder kritischer Treffer. Verfehlte oder ausgewichene Angriffe geben keinen Punkt. Die Anwendung kostet kein Mana und hat eine Castzeit von 0,3 Sekunden. Sie verbraucht alle gesammelten Punkte, setzt den Punktestand auf null und beendet die Sammelphase. Die Fesselungsdauer beträgt abhängig vom erreichten Punktebereich 1 bis 4 Sekunden.",
+    "description_eng": "Hit a marked target and unleash points collected with Soul Collector to bind it in chains. At 0 to 13 points, binding lasts 1 second with no base damage bonus. At 14 to 22 points: 2 seconds and 1 percent additional skill base damage. At 23 to 31 points: 3 seconds and 2 percent additional skill base damage. At 32 or more points: 4 seconds and 3 percent additional skill base damage. Percentage bonuses apply only to skill base damage, excluding character and weapon attack contributions. Each successful Soul Collector hit grants exactly one point, including blocked and critical hits. Missed or dodged attacks grant no points. Costs no Mana and has a cast time of 0.3 seconds. Using this skill consumes all collected points, resets the point total to zero and ends the collection phase. Binding lasts 1 to 4 seconds according to the reached point tier.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 203,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 229,
+    "patk": 73,
+    "skillName_de": "Spektralketten",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "collectedPointScaling": {
+      "sourceSkillNumber": 186,
+      "thresholds": [
+        14,
+        23,
+        32
+      ],
+      "durationSecondsByTier": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "baseDamageBonusFractionByTier": [
+        0,
+        0.01,
+        0.02,
+        0.03
+      ],
+      "countsBlockedHits": true,
+      "countsMissedOrDodgedHits": false,
+      "pointsPerSuccessfulHit": 1,
+      "consumesAllPointsOnUse": true,
+      "resetsPointsTo": 0,
+      "endsCollectionPhaseOnUse": true
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 0
+        }
+      }
+    ]
+  }
+]

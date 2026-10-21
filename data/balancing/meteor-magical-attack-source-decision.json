@@ -1,0 +1,162 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-meteor-magic-scaling-1792401177016",
+  "skill": {
+    "_id": "6acc1c7e4826525c70d04c4e",
+    "skillName_eng": "Meteor Shower",
+    "__v": 0,
+    "category": "active",
+    "cd": 280,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Vorläufig beibehaltener Flächenangriff: Meteoritenschauer über einer Fläche mit 12 Metern Durchmesser (6 Meter Radius). Drei Skillstufen. Der bisher gespeicherte physische Skill-Grundschaden 543 verdoppelt sich je weiterer Stufe: 543/1086/2172. Der Schaden bleibt physisch, sein zusätzlicher Charakterangriffsanteil skaliert jedoch mit dem aktuellen M-Angriff des Anwenders statt mit dessen P-Angriff. Physische Schadensboni und gegnerische physische Abwehr gehören weiterhin zum physischen Schadenskanal. Mana-Kosten 652 auf Stufe 1, Stufenwerte 652, 1304, 2608, maximal 2608 auf Stufe 3. Cooldown 280/240/200 Sekunden, auf Stufe 3 also 3 Minuten 20 Sekunden. Castzeit 0,8 Sekunden. Letztgenannte Gesamtlaufzeit 6 Sekunden. Meteoriteneinschläge erfolgen versetzt in kleinen und etwas größeren Wellen mit je sechs Meteoriten; erste Teilwelle 40 Prozent, zweite 60 Prozent, Abstand innerhalb eines Paars 0,5 Sekunden. Bestätigter Rhythmus: bei Sekunde 1/3/5 jeweils eine 40-Prozent-Welle, bei Sekunde 1,5/3,5/5,5 jeweils eine 60-Prozent-Welle. Sechs Wellen mit jeweils sechs Meteoriten, insgesamt 36 Meteoriten. Die genaue Schadensverteilung des Wellenanteils auf die einzelnen Einschläge bleibt offen; daraus wird noch kein garantierter Gesamtschaden je Gegner abgeleitet. Einschlagspositionen und lokale Trefferflächen müssen später definiert werden; nicht jeder Meteorit trifft jeden Gegner. Entscheidung über langfristigen Verbleib des Skills noch offen. Pro Anwendung können insgesamt höchstens 6 unterschiedliche Gegner getroffen werden; spätere Wellen dürfen dieses Gesamtlimit nicht durch neue Ziele überschreiten. Auswahl bei mehr als 6 möglichen Zielen bleibt offen. Die Anzahl sichtbarer Meteoriten ist kein zusätzlicher Schadensmultiplikator. Aktuelle Mana-Gruppe: finisher (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Provisionally retained area attack: meteor shower over a 12-meter-diameter area (6-meter radius). Three skill levels. Existing physical skill base damage 543 doubles per additional level: 543/1086/2172. Damage remains physical, but its additional caster-attack contribution uses the caster’s current magical attack instead of physical attack. Physical damage modifiers and enemy physical defense still belong to the physical damage channel. Mana cost 652 at level 1, maximum 2608 at level 3. Cooldown 280/240/200 seconds, reaching 3 minutes 20 seconds at level 3. Cast time 0.8 seconds. Latest stated duration 6 seconds. Staggered waves of six smaller then six slightly larger meteors, with 40 percent then 60 percent portions separated by 0.5 seconds. Confirmed timing: 40-percent waves at seconds 1/3/5, 60-percent waves at 1.5/3.5/5.5. Six waves of six meteors each, totaling 36 meteors. Exact distribution of wave damage across individual impacts remains pending; no guaranteed total per enemy is derived yet. Impact positions and local hit areas remain undefined; not every meteor hits every enemy. Long-term inclusion remains open. At most 6 distinct enemies may be hit per activation; later waves cannot exceed this overall limit by hitting new enemies. Selection among more than 6 eligible targets remains pending. Visual meteor count is not an additional damage multiplier.",
+    "dmgType": "spell",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 235,
+    "patk": 543,
+    "skillName_de": "Meteoritenschauer",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 6,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "maxTargets": 6,
+      "maxUniqueTargetsPerActivation": 6
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 280,
+      "perLevel": -40
+    },
+    "dur": 6,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            652,
+            1304,
+            2608
+          ],
+          "base": 652
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          543,
+          1086,
+          2172
+        ]
+      }
+    },
+    "attackExecution": {
+      "meteorWaveSequence": [
+        {
+          "offsetSeconds": 1,
+          "damageFraction": 0.4,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 1.5,
+          "damageFraction": 0.6,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 3,
+          "damageFraction": 0.4,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 3.5,
+          "damageFraction": 0.6,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 5,
+          "damageFraction": 0.4,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 5.5,
+          "damageFraction": 0.6,
+          "meteorCount": 6
+        }
+      ],
+      "meteorDamageDistributionStatus": "pending",
+      "physicalDamageAttackSource": "magicalAttack"
+    },
+    "manaPricing": {
+      "category": "finisher",
+      "factor": 0.4,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 280,
+              "perLevel": -40
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "exponential",
+              "base": 652,
+              "factor": 2
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "exponential",
+            "base": 543,
+            "factor": 2
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  "scope": "Only Meteor Shower caster attack source changed from physicalAttack to magicalAttack. Physical damage channel retained; no changes to skill base damage, Mana, cooldown, cast time or waves. Burn remains unchanged pending definition of its scaling."
+}

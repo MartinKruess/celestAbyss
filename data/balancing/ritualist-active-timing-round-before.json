@@ -1,0 +1,240 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bab",
+    "skillName_eng": "Life Drainer",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Greift einen Gegner einmalig magisch an und heilt den Anwender. Magischer Skill-Grundschaden 112 auf Stufe 1 und +43 je weiterer Stufe, auf Stufe 10 499. Mana 67 auf Stufe 1, gleichmäßig steigend auf 354 auf Stufe 10. Cooldown gleichmäßig von 45 auf 40 Sekunden über zehn Stufen. Castzeit 0,1 Sekunden, vorläufige Animation 0,5 Sekunden, kein Schaden über Zeit. Einmalige Selbstheilung: 35 HP je gelerntem Skilllevel, insgesamt 350 HP auf Stufe 10. Erst auf Stufe 10 zusätzlich 2 Prozent des tatsächlich durch diese Anwendung verursachten Lebensschadens. Beide Komponenten gehören zu derselben Heilung. Beispiele auf Stufe 10: 6000 Schaden heilt 470 HP; 10000 heilt 550 HP; 20000 heilt 750 HP; 100000 heilt 2350 HP. Kein höherer prozentualer Lebensraub und keine automatische prozentuale Steigerung über die Skillstufen. Heil-Auslösung bei verfehltem oder vollständig abgewehrtem Angriff wird noch geklärt.",
+    "description_eng": "Attacks one enemy once with magic and heals the caster. Magical skill base damage 112 plus 43 per additional level, reaching 499 at level 10. Mana 67 at level 1, increasing linearly to 354 at level 10. Cooldown decreases linearly from 45 to 40 seconds across ten levels. Cast time 0.1 seconds, provisional animation 0.5 seconds, no damage over time. One self-heal: 35 HP per learned skill level, totaling 350 at level 10. Only at level 10 additionally restores 2 percent of actual health damage dealt by this activation. Both components form the same heal. Level-10 examples: 6000 damage heals 470 HP; 10000 heals 550; 20000 heals 750; 100000 heals 2350. No higher percentage lifesteal or automatic percentage growth across skill levels. Healing on missed or fully blocked attacks remains pending.",
+    "dmgType": "spell",
+    "matk": 112,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 72,
+    "skillName_de": "Lebenssauger",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": -0.5555555555555556
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 31.88888888888889
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 112,
+        "perLevel": 43
+      }
+    },
+    "effects": [
+      {
+        "key": "life-drainer-flat-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 35,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 35,
+          "perLevel": 35
+        },
+        "durationSeconds": 0
+      },
+      {
+        "key": "life-drainer-damage-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 0,
+        "unit": "fraction",
+        "reference": "damageDealt",
+        "damageBasis": "actualHealthDamage",
+        "damageSource": "caster",
+        "targetSkillNumber": 72,
+        "appliesTo": "specificSkill",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.02
+          ]
+        },
+        "minimumSkillLevel": 10,
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcb",
+    "skillName_eng": "Soul Torment",
+    "__v": 0,
+    "category": "active",
+    "cd": 0.19,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 47 auf Stufe 1, gleichmäßig steigend auf 168 auf Stufe 10. Zwischenwerte werden für die Anzeige gerundet. Mana 23 je Anwendung auf Stufe 1, plus 6 je weiterer Stufe, auf Stufe 10 77 je Anwendung. Castzeit 0 Sekunden, Cooldown 0,19 Sekunden. Bei sofortiger erster Anwendung passen theoretisch bis zu 16 Anwendungen in ein volles 3-Sekunden-Fenster (Zeitpunkte 0 bis 2,85 Sekunden); Reaktionszeit und Serverablauf können das reduzieren. 15 Anwendungen kosten auf Stufe 10 1155 Mana; 16 Anwendungen kosten 1232 Mana. Für Seelenernte vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, ab 12 ergeben 2; höhere Trefferzahlen durch das geänderte Timing erhöhen die Ernte nicht über 2. Manueller Abschluss bevorzugt, genaue Umsetzung noch offen. Seelenfessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.",
+    "description_eng": "Deals one magical hit only while Soul Shackle affects the target. Base damage starts at 47 at level 1 and increases evenly to 168 at level 10. Intermediate values are rounded for display. Mana cost starts at 23 and increases by 6 per additional level to 77. Fifteen uses cost 1155 Mana; sixteen cost 1232. No health sacrifice, no damage over time, zero cast time, cooldown 0.19 seconds. Up to 16 immediate uses theoretically fit into a full 3-second shackle; the comparison uses 15. Harvest yields 0 fragments for 0–4 hits, 1 for 5–11 and 2 for 12 or more, capped at 2. Each shackle costs 1 fragment. Exact server timing and manual finisher implementation remain pending.",
+    "dmgType": "spell",
+    "matk": 47,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 104,
+    "skillName_de": "Seelenqual",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 103
+    },
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "castTimeSeconds": 0,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 23,
+          "perLevel": 6
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 47,
+        "perLevel": 13.444444444444445
+      }
+    },
+    "mana": 23
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4b",
+    "skillName_eng": "Dark Pulse",
+    "__v": 0,
+    "category": "active",
+    "cd": 13,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Sendet einen Impuls der Dunkelheit aus und verursacht einmalig magischen Schaden. Skill-Grundschaden 42 auf Stufe 1 und +23 je weiterer Stufe, auf Stufe 10 249. Mana 18 auf Stufe 1 und +10 je weiterer Stufe, auf Stufe 10 108. Cooldown 13 Sekunden und -1 je weiterer Stufe, auf Stufe 10 4 Sekunden. Castzeit 0 Sekunden, Wirkungsdauer 0 Sekunden, kein Schaden über Zeit. Genaue Zielwahl beziehungsweise Trefferfläche bleibt noch zu definieren.",
+    "description_eng": "Sends out a dark pulse, dealing magical damage once. Skill base damage 42 plus 23 per additional level, reaching 249 at level 10. Mana 18 plus 10 per additional level, reaching 108. Cooldown 13 minus 1 per additional level, reaching 4 seconds. Cast time zero, effect duration zero, no damage over time. Exact targeting or hit area remains pending.",
+    "dmgType": "spell",
+    "matk": 42,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 232,
+    "skillName_de": "Dunkler Impuls",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 13,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "hasLingeringDamage": false,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 18,
+          "perLevel": 10
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 42,
+        "perLevel": 23
+      }
+    }
+  }
+]

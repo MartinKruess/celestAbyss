@@ -1,0 +1,166 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c3f",
+    "skillName_eng": "Magic Ban",
+    "__v": 0,
+    "category": "active",
+    "cd": 540,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Belegt den Gegner mit einem Bann, der das Wirken von Spells für 3 Sekunden unterdrückt. Wirkt auch auf Bosse. Auf Skilllevel 10 steigt die Banndauer auf 4 Sekunden. Verursacht zusätzlich einmalig magischen Grundschaden von 37 auf Stufe 1, plus 13 je weiterer Stufe, bis zu 154. Mana-Kosten 9 auf Stufe 1, +3 je weiterer Stufe, maximal 36 auf Stufe 10. Vorläufige Castzeit 0,2 Sekunden. Der bisherige Cooldown beträgt 540 Sekunden. Verhalten bei bereits laufenden Casts wird noch geklärt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Applies a ban that suppresses the target spellcasting for 3 seconds. Also affects bosses. At skill level 10, suppression lasts 4 seconds. Additionally deals magical base damage once, starting at 37 and increasing by 13 per additional level to 154. Mana cost 9 at level 1, maximum 36 at level 10. Provisional cast time is 0.2 seconds. Existing cooldown is 540 seconds. Interaction with casts already in progress remains to be clarified.",
+    "dmgType": "spell",
+    "matk": 37,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 220,
+    "skillName_de": "Bannmagie",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "castTimeStatus": "provisional",
+    "dur": 3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ]
+    },
+    "effects": [
+      {
+        "key": "magic-ban-suppression",
+        "type": "control",
+        "controlKind": "spellSuppression",
+        "target": "enemy",
+        "affectsBosses": true,
+        "actionRestrictionsStatus": "defined",
+        "durationSeconds": 3,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4
+          ]
+        }
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 9,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 9,
+          "perLevel": 3
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 37,
+        "perLevel": 13
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "round",
+            "rule": {
+              "kind": "linear",
+              "base": 2.5,
+              "perLevel": 0.1111111111111111
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "round",
+            "rule": {
+              "kind": "linear",
+              "base": 2.5,
+              "perLevel": 0.1111111111111111
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 9,
+              "perLevel": 3
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 37,
+            "perLevel": 13
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  }
+]

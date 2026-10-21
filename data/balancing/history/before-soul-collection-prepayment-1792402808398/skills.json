@@ -1,0 +1,326 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c1c",
+    "skillName_eng": "Soulshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Markiert einen Gegner auffällig für 5 Sekunden. Verursacht keinen Schaden und kostet kein Mana. Castzeit 0 Sekunden, vorläufige Animation 0,1 Sekunden. Seelensammler ist nur während der Markierung einsetzbar. Spektralketten darf als Abschluss zusätzlich bis 1,5 Sekunden nach Ende der Markierung gegen dasselbe Ziel eingesetzt werden. Der Cooldown sinkt gleichmäßig von 90 Sekunden auf Stufe 1 auf 75 Sekunden auf Stufe 10.",
+    "description_eng": "Prominently marks one enemy for 5 seconds. Deals no damage and costs no Mana. Cast time is 0 seconds; provisional animation is 0.1 seconds. Soul Collector requires the active mark. Spectral Chains may additionally finish against the same target for up to 1.5 seconds after mark expiry. Cooldown decreases evenly from 90 seconds at level 1 to 75 seconds at level 10.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 185,
+    "skillName_de": "Seelenschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "animationDurationSeconds": 0.1,
+    "animationTimingStatus": "provisional",
+    "dur": 5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 0
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "targetMarkSettings": {
+      "durationSeconds": 5,
+      "visuallyProminent": true
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 90,
+      "perLevel": -1.6666666666666667
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 0
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "constant",
+            "value": 0
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 90,
+              "perLevel": -1.6666666666666667
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1d",
+    "skillName_eng": "Soul Collector",
+    "__v": 0,
+    "category": "active",
+    "cd": 0,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nur gegen ein mit Seelenschuss markiertes Ziel einsetzbar. Verursacht einmalig physischen Schaden aus dem regulären Charakter-P-Angriff plus zusätzlichem Skill-Grundschaden. Dieser Zusatz beträgt auf Stufe 1 genau 4 und steigt je weiterer Stufe um 13 bis auf 121 auf Stufe 10. Es wird kein separater Auto-Attack zusätzlich ausgelöst. Jeder erfolgreiche Treffer gibt 1 Sammelpunkt. Geblockte und kritische Treffer geben ebenfalls genau 1 Punkt, verfehlte und ausgewichene Angriffe keinen. Feste Castzeit 0,2 Sekunden, kein zusätzlicher Cooldown. Die vorläufige Animation von 0,3 Sekunden blockiert keine weiteren Aktionen. Die fünf Sekunden lange Markierung begrenzt das Sammelfenster.  Eine neue Anwendung beginnt frühestens nach Abschluss der vorherigen 0,2 Sekunden Castzeit. Angriffstempo, Cast-Speed-Boni und Cooldown-Reduktion verkürzen diese Zeit nicht. Im fünfsekündigen Sammelfenster sind daher höchstens 25 vollständige Anwendungen möglich. Mana-Kosten 2 auf Stufe 1, Stufenwerte 2, 7, 12, 17, 22, 28, 33, 38, 43, 48, maximal 48 auf Stufe 10. Aktuelle Mana-Gruppe: combo (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Requires a target marked by Soulshot. Deals physical damage from normal character physical attack plus additional skill base damage. The extra damage is 4 at level 1 and increases by 13 per additional level, reaching 121 at level 10. No separate basic attack is added. Each successful hit grants one collected point; blocked and critical hits also grant one, while misses and dodges grant none. Fixed cast time 0.2 seconds, no additional cooldown. The provisional 0.3-second animation does not block other actions. The 5-second target mark limits the collection window. No Mana cost. A new application starts only after the previous 0.2-second cast completes. Attack speed, cast-speed bonuses and cooldown reduction cannot shorten this timing. The five-second collection window therefore permits at most 25 completed applications. Mana cost 2 at level 1, maximum 48 at level 10.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 186,
+    "skillName_de": "Seelensammler",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 185
+    },
+    "animationDurationSeconds": 0.3,
+    "animationTimingStatus": "provisional",
+    "blocksOtherSkillsDuringAnimation": false,
+    "hasLingeringDamage": false,
+    "pointGeneration": {
+      "requiresTargetMarkSkillNumber": 185,
+      "pointsPerSuccessfulHit": 1,
+      "countsBlockedHits": true,
+      "countsMissedOrDodgedHits": false,
+      "criticalHitPoints": 1
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 13
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            2,
+            7,
+            12,
+            17,
+            22,
+            28,
+            33,
+            38,
+            43,
+            48
+          ],
+          "base": 2
+        }
+      }
+    ],
+    "patk": 4,
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false,
+      "affectedByCooldownReduction": false
+    },
+    "manaPricing": {
+      "category": "combo",
+      "factor": 0.4,
+      "basis": "sharedComboBudget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 13
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "rounded",
+              "mode": "round",
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 5.111111111111111
+              }
+            }
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c48",
+    "skillName_eng": "Spectral Chains",
+    "__v": 0,
+    "category": "active",
+    "cd": 69,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Triff ein markiertes Ziel und entfessle die Macht der mit Seelensammler gesammelten Punkte, um es in Ketten zu legen. Bei 0 bis 5 Punkten beträgt die Fesselungsdauer 1 Sekunde ohne Grundschadensbonus. Bei 6 bis 15 Punkten: 2 Sekunden und 4 Prozent mehr Skill-Grundschaden. Bei 16 bis 21 Punkten: 3 Sekunden und 9 Prozent mehr Skill-Grundschaden. Ab 22 Punkten: 4 Sekunden und 15 Prozent mehr Skill-Grundschaden; im fünfsekündigen Sammelfenster sind theoretisch höchstens 25 Treffer möglich. Die Prozentboni gelten ausschließlich für den Skill-Grundschaden, nicht für Charakterangriff oder Waffenbeiträge. Jeder erfolgreiche Seelensammler-Treffer gibt genau einen Punkt, auch ein geblockter oder kritischer Treffer. Verfehlte oder ausgewichene Angriffe geben keinen Punkt. Die Castzeit beträgt 0,3 Sekunden. Sie verbraucht alle gesammelten Punkte, setzt den Punktestand auf null und beendet die Sammelphase. Die Fesselungsdauer beträgt abhängig vom erreichten Punktebereich 1 bis 4 Sekunden. Der einmalig erlernbare Skill hat 730 physischen und 203 magischen Grundschaden. Cooldown 69 Sekunden. Die nach Sammelpunkten vergebenen Prozentboni wirken auf diese Skill-Grundschäden, nicht auf Charakter- oder Waffenangriff. Der Abschluss darf gegen dasselbe zuvor markierte Ziel noch bis 1,5 Sekunden nach Ablauf der fünfsekündigen Markierung eingesetzt werden. Nach Ablauf der Markierung können keine weiteren Sammelpunkte aufgebaut werden. Mana-Kosten 439 auf Stufe 1, konstant, maximal 439 auf Stufe 1. Aktuelle Mana-Gruppe: combo (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Hits a marked target and consumes all collected Soul Collector points. At 0–5 points: 1-second root with no skill-base damage bonus. At 6–15 points: 2-second root and 4 percent skill-base damage bonus. At 16–21 points: 3-second root and 9 percent skill-base damage bonus. At 22 or more points: 4-second root and 15 percent skill-base damage bonus; the five-second collection window theoretically permits at most 25 hits. Bonuses affect skill base damage only, not character or weapon attack. One point per successful hit, including blocked and critical hits; misses and dodges grant none. Consumes all points, resets the total to zero and ends collection. No Mana cost, cast time 0.3 seconds. One skill level, 730 physical and 203 magical base damage, cooldown 69 seconds. Spectral Chains can finish against the same previously marked target for up to 1.5 seconds after the five-second mark expires. No additional collection is possible after mark expiry. Mana cost 439 at level 1, maximum 439 at level 1.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 203,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 229,
+    "patk": 730,
+    "skillName_de": "Spektralketten",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "collectedPointScaling": {
+      "sourceSkillNumber": 186,
+      "thresholds": [
+        6,
+        16,
+        22
+      ],
+      "durationSecondsByTier": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "baseDamageBonusFractionByTier": [
+        0,
+        0.04,
+        0.09,
+        0.15
+      ],
+      "countsBlockedHits": true,
+      "countsMissedOrDodgedHits": false,
+      "pointsPerSuccessfulHit": 1,
+      "consumesAllPointsOnUse": true,
+      "resetsPointsTo": 0,
+      "endsCollectionPhaseOnUse": true
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 439
+        }
+      }
+    ],
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 185,
+      "postTargetMarkWindowSeconds": 1.5
+    },
+    "manaPricing": {
+      "category": "combo",
+      "factor": 0.4,
+      "basis": "sharedComboBudget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 439
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

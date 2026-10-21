@@ -1,0 +1,324 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bcc",
+    "skillName_eng": "Soul Harvest",
+    "__v": 0,
+    "category": "active",
+    "cd": 160,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Manueller Abschluss der Kombination Seelenfessel → Seelenqual → Seelenernte. Verursacht einmalig magischen Schaden und heilt den Anwender. Magischer Grundschaden 481 auf Stufe 1, +183 je weiterer Stufe, auf Stufe 5 1213. Bestehende feste Selbstheilung 150 je gelerntem Skilllevel, von 150 bis 750 HP; bisher keine bestätigte zusätzliche Abhängigkeit der Heilmenge von der Trefferzahl. Die Zahl erfolgreicher Seelenqual-Treffer auf dem gefesselten Ziel bestimmt die Ernte: 0–4 ergibt 0 Seelenfragmente, 5–11 ergibt 1, ab 12 ergibt 2. Maximal 2 Seelenfragmente pro Abschluss. Seelenfessel kostet zuvor 1 Fragment. Seelenernte ist bis 1,5 Sekunden nach Auflösung der Seelenfessel abfeuerbar; genaue serverseitige Ablaufprüfung und Verhalten bei vorzeitigem Tod des Ziels noch offen. Cooldown 160 Sekunden, je weiterer Stufe 5 Sekunden weniger, auf Stufe 5 140 Sekunden. Castzeit 0,3 Sekunden, einmalige Wirkung. Aktivierungskosten, Speicherregeln sowie mögliche zusätzliche Schadens-/Heilskalierung nach Trefferzahl sind noch festzulegen. Übungspuppen geben keine Seelenfragmente; die konkrete Erkennung von Übungszielen wird später serverseitig umgesetzt.",
+    "description_eng": "Manual finisher for Soul Shackle → Soul Torment → Soul Harvest. Deals magical damage once and heals the caster. Base damage 481 plus 183 per additional level, reaching 1213 at level 5. Existing fixed self-healing remains 150 per learned skill level, from 150 to 750 HP; no extra hit-count-based healing amount is confirmed. Successful Torment hits on the shackled target determine the harvest: 0–4 yields 0 soul fragments, 5–11 yields 1, at least 12 yields 2. Maximum 2 fragments per finisher. Shackle costs 1 fragment first. Finisher can be fired up to 1.5 seconds after Shackle ends; precise server timing and target death behavior remain pending. Cooldown starts at 160 seconds, decreases by 5 per additional level, reaching 140 at level 5. Cast time 0.3 seconds; one-time effect. Activation costs, storage rules and any additional damage/healing scaling with hit count remain pending. Training dummies grant no soul fragments; exact training-target detection will be implemented server-side later.",
+    "dmgType": "spell",
+    "matk": 481,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 105,
+    "skillName_de": "Seelenernte",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 160,
+      "perLevel": -5
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 150,
+          "perLevel": 150
+        },
+        "type": "heal",
+        "target": "self",
+        "value": 150,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "self-heal"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "soulHarvestSettings": {
+      "sourceSkillNumber": 104,
+      "shackleSkillNumber": 103,
+      "minimumHitsForOneFragment": 5,
+      "minimumHitsForTwoFragments": 12,
+      "maximumFragments": 2,
+      "manualFinisher": true,
+      "postShackleWindowSeconds": 1.5,
+      "damageAndHealingScalingByHitCountStatus": "pending",
+      "excludesTrainingDummies": true
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 481,
+        "perLevel": 183
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd1",
+    "skillName_eng": "Storm of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt um das anvisierte Ziel eine anfangs unauffällige kreisförmige brennende Fläche mit 5 Metern Radius. Während der ersten 0,5 Sekunden entsteht kein Schaden. Danach erhebt beziehungsweise verdichtet sich das Feuer zur Mitte hin zu einer Feuersäule oder einem Feuersturm; diese visuelle Feuerphase dauert 3 Sekunden. Gesamte Feldlaufzeit 3,5 Sekunden. Ob der genannte Schaden einmalig oder wiederholt während der Feuerphase trifft, ebenso Trefferfrequenz und Mitbewegung des Feldes, ist noch offen. Magischer Skill-Grundschaden 113 auf Stufe 1 und +69 je weiterer Stufe, auf Stufe 10 734. Mana 42 und +37 je weiterer Stufe, auf Stufe 10 375. Cooldown 120 Sekunden und -2 je weiterer Stufe, auf Stufe 10 102 Sekunden. Castzeit 0,2 Sekunden. Endgültige optische Darstellung später im Spiel prüfen.",
+    "description_eng": "Creates an initially subtle circular burning area around the selected target with a 5-meter radius. No damage during the first 0.5 seconds. Fire then rises/converges toward the center as a pillar or storm for a 3-second visual fire phase. Total field duration 3.5 seconds. Whether listed damage applies once or repeatedly, hit frequency and area tracking remain pending. Magical skill base damage 113 plus 69 per additional level, reaching 734 at level 10. Mana 42 plus 37 per additional level, reaching 375. Cooldown 120 minus 2 per additional level, reaching 102 seconds. Cast time 0.2 seconds. Final visual presentation will be reviewed in game.",
+    "dmgType": "spell",
+    "dur": 3.5,
+    "matk": 113,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 110,
+    "skillName_de": "Sturm des Feuers",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 5,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "centerTracking": "pending"
+    },
+    "attackExecution": {
+      "damageStartsAfterSeconds": 0.5,
+      "damagingVisualPhaseSeconds": 3,
+      "hitFrequencyStatus": "pending"
+    },
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -2
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 42,
+          "perLevel": 37
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 113,
+        "perLevel": 69
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c50",
+    "skillName_eng": "Morrak's Master",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Einstufige passive Verbesserung der questgebundenen Morrak-Beschwörung. Der Ritualist bezwingt Morrak in einer Quest und erhält dadurch zunächst die zusätzliche Möglichkeit, ihn als Nahkampf-Dämon zu beschwören; die erzählerische Meister-Wahl ist keine echte Auswahl. Sobald Morraks Meister auf Stufe 1 gelernt wird, ersetzt Morrak seine Nahkampf-Krallenangriffe durch magische Fernkampf-Auto-Attacks. Keine eigenen Casts oder Spells des Dämons; Attack-Speed-Wert bleibt 1, genaue Reichweite noch offen. Die separate Grundbeschwörung und Questfreischaltung müssen später in Quest- und Aktionsdaten angebunden werden; diese Passive selbst beschwört ihn nicht und hat keine aktive Castzeit. Bestehende Beschwörungsregeln bleiben: Castzeit 0,4 Sekunden, maximal 300 Sekunden Laufzeit bis Ablauf oder Tod. Die ursprüngliche questgebundene Nahkampf-Version gibt dem Anwender keine Attributboni. Erst mit gelernter Verbesserung Morraks Meister erhält der Anwender +5 Victim und +5 Wisdom, und nur solange der verbesserte Fernkampf-Morrak beschworen ist. Lernen allein gewährt keine dauerhaften Attributboni. Der Beschwörungspreis von -500 Max-HP gilt während der Beschwörung weiterhin auch für die Grundversion. Morrak erhält vorläufig beim Beschwören vor dem HP-Abzug ein Drittel des Max-Lebens und M-Angriffs des Anwenders. Er ist angreifbar und nimmt Flächenschaden; kein Mana oder Cast-Spells. Jeder Auto-Attack hat 1,5 Prozent Chance auf 50 Prozent Bewegungstempo-Senkung für 1,5 Sekunden. Verteidigungsskalierung, Beschwörungs-Cooldown, weitere Beschwörungskosten und Aggroregeln bleiben offen. Diese zeitlich begrenzte Skill-Beschwörung belegt keinen regulären dauerhaften Pet-Platz und darf gleichzeitig mit dem normalen Pet aktiv sein. Zwei dauerhafte Pets bleiben dem Abenteurer vorbehalten.",
+    "description_eng": "One-level passive upgrade to the quest-granted Morrak summon. The Ritualist defeats Morrak in a quest and initially gains a separate ability to summon him as a melee demon; the narrative master choice is not an actual option. Learning Morrak’s Master at level 1 replaces his melee claw attacks with magical ranged basic attacks. The demon still has no casts or spells; attack-speed rating remains 1, exact range pending. The separate base summon and quest unlock require later quest/action integration; this passive itself does not summon him and has no active cast time. Existing summon rules remain: cast 0.4 seconds, lifetime at most 300 seconds or until death. The original quest-granted melee version grants no caster attribute buffs. Only after learning Morrak’s Master does the caster gain +5 Victim and +5 Wisdom while the upgraded ranged Morrak is summoned; merely learning the passive grants no permanent attribute bonuses. The -500 max-HP summon penalty continues to apply while summoned, including the base version. Provisionally snapshots one third of caster max HP and magical attack before the health penalty. Targetable and affected by area damage, no Mana or casts. Each basic attack has 1.5 percent chance to slow movement by 50 percent for 1.5 seconds. Defense scaling, summon cooldown, further summon costs and aggro rules remain pending. This temporary skill summon does not occupy a regular permanent-pet slot and can coexist with the normal pet. Two permanent pets remain exclusive to the Adventurer.",
+    "dmgType": "passive",
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 237,
+    "skillName_de": "Morrak´s Meister",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "morrak-caster-vic",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "vic",
+        "value": 5,
+        "unit": "flat",
+        "durationSeconds": 300,
+        "endWith": "morrak-summon"
+      },
+      {
+        "key": "morrak-caster-wis",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "wis",
+        "value": 5,
+        "unit": "flat",
+        "durationSeconds": 300,
+        "endWith": "morrak-summon"
+      },
+      {
+        "key": "morrak-caster-maxHealth",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "maxHealth",
+        "value": -500,
+        "unit": "flat",
+        "durationSeconds": 300,
+        "endWith": "morrak-summon"
+      }
+    ],
+    "effectsVersion": 1,
+    "summonedCreatureSettings": {
+      "name": "Morrak",
+      "healthFractionOfCaster": 0.3333333333333333,
+      "magicalAttackFractionOfCaster": 0.3333333333333333,
+      "statSampling": "onSummonBeforeHealthPenalty",
+      "defenseScalingStatus": "pending",
+      "attackStyle": "rangedBasicAttack",
+      "damageType": "magical",
+      "attackSpeed": 1,
+      "usesMana": false,
+      "hasCastSpells": false,
+      "targetable": true,
+      "affectedByAreaAttacks": true,
+      "lifetimeSeconds": 300,
+      "endsOnCreatureDeath": true,
+      "casterBuffsEndWithCreature": true,
+      "slowProcChancePerBasicAttack": 0.015,
+      "slowDurationSeconds": 1.5,
+      "movementSlowFraction": 0.5,
+      "threatAndAggroStatus": "pending",
+      "currentHealthAdjustmentStatus": "pending",
+      "baseSummonGrantedByQuest": true,
+      "questRequiresDefeatingCreature": true,
+      "skillIsRangedUpgrade": true,
+      "baseAttackStyle": "meleeClaws",
+      "summonCastTimeSeconds": 0.4,
+      "rangedAttackRangeStatus": "pending",
+      "baseSummonGrantsAttributeBuffs": false,
+      "attributeBuffsRequireLearnedUpgrade": true,
+      "occupiesPermanentPetSlot": false,
+      "canCoexistWithPermanentPet": true
+    },
+    "resourceCosts": []
+  },
+  {
+    "_id": "6ad207c878d209a368038d26",
+    "soulReserveBonusSettings": {
+      "stat": "matk",
+      "bonusPerStoredFragment": 1,
+      "maximumBonus": 100,
+      "usesCurrentStoredAmount": true,
+      "levelProgressionStatus": "pending"
+    },
+    "soulGenerationSettings": {
+      "maximumUniqueEnemiesScaling": {
+        "values": []
+      }
+    },
+    "soulStorageSettings": {
+      "capacityScaling": {
+        "values": []
+      }
+    },
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "attackExecution": {
+      "additionalDamageFromSacrificedHealth": {
+        "values": []
+      },
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "attackArea": {
+      "radiusScaling": {
+        "values": []
+      },
+      "maxTargetsScaling": {
+        "values": []
+      }
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "values": []
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "resourceCosts": [],
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 241,
+    "skillName_eng": "Number of Victims",
+    "skillName_de": "Zahl der Opfer",
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "passive",
+    "description_eng": "Permanent passive reserve bonus. Each currently stored soul in the Reaper-managed soul reserve grants +1 direct magical attack, capped at +100 with 100 stored souls. Collecting increases and spending decreases the bonus. Explicitly additional to Reaper’s Victim bonus. Generates no souls and uses neither historical kill counts nor morality. No activation cost, cast time or limited duration. Ten source learning levels are provisionally retained; their exact function/progression remains pending.",
+    "description_de": "Permanenter passiver Vorratsbonus. Jede aktuell gespeicherte Seele im durch Reaper verwalteten Seelenspeicher gewährt +1 direkten M-Angriff, maximal +100 bei 100 gespeicherten Seelen. Beim Sammeln steigt und beim Ausgeben sinkt der Bonus entsprechend. Gilt ausdrücklich zusätzlich zum Victim-Bonus von Reaper. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Die zehn Lernstufen aus der Quelle sind vorläufig beibehalten; ihre konkrete Funktion beziehungsweise Skalierung ist noch festzulegen.",
+    "dmgType": "passive",
+    "skillpoints": 1,
+    "__v": 0
+  }
+]

@@ -1,0 +1,127 @@
+{
+  "classKey": "shaman",
+  "level": 60,
+  "rank": 6,
+  "status": "confirmedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 1,
+      "name": "Erleuchtung",
+      "stats": {
+        "int": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 33,
+      "name": "Energie Umwandler",
+      "stats": {
+        "patk": 30,
+        "matk": 20
+      }
+    },
+    {
+      "nr": 44,
+      "name": "Erweiterung des Geistes",
+      "stats": {
+        "int": 20,
+        "wis": 20,
+        "faith": 10,
+        "vic": 10
+      }
+    },
+    {
+      "nr": 132,
+      "name": "Zweihändiges Streitkolbentraining",
+      "stats": {
+        "str": 11,
+        "int": 5.5
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Streitkolben",
+      "equipped": {
+        "maxHealth": 4037,
+        "maxMana": 3873,
+        "physicalAttack": 399.2,
+        "magicalAttack": 271.2,
+        "physicalDefense": 676,
+        "magicalDefense": 628,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "int": 45.5,
+        "wis": 60,
+        "patk": 130,
+        "matk": 120,
+        "faith": 10,
+        "vic": 10,
+        "str": 11,
+        "vita": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        1,
+        33,
+        44,
+        132,
+        139,
+        144,
+        201,
+        254
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4637,
+        "maxMana": 5673,
+        "physicalAttack": 549,
+        "magicalAttack": 473.1,
+        "physicalDefense": 856,
+        "magicalDefense": 888,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "excluded": [
+    "Adrenalin: combat proc",
+    "Active buffs",
+    "Pets",
+    "Jewelry/stones",
+    "Infernal Cyclone DoT pending; irrelevant to permanent stats"
+  ],
+  "equipmentProposalApplied": false
+}

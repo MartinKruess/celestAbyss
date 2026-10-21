@@ -1,0 +1,120 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-fire-spirit-and-soul-bonus-definition-1792585629135",
+  "updates": [
+    {
+      "nr": 178,
+      "before": {
+        "description_de": "Aktiver Eigenbuff mit zehn Stufen für 300 Sekunden. Gewährt +0,5 Intelligenz und +1 flachen Feuerangriffsbonus je Skillstufe, maximal +5 Intelligenz und +10 Feuerbonus auf Stufe 10. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Aktivierung kostet 50 Mana auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten. Kein Bonus für normale Auto-Attacks. Einheitliche Element-Zuordnung und genaue Anwendung bei Mehrfachtreffern und DoTs bleiben abzustimmen.",
+        "description_eng": "Active self buff with ten levels for 300 seconds. Grants 0.5 Intelligence and 1 flat fire attack bonus per level, up to 5 Intelligence and 10 fire bonus. Cooldown 60 seconds; fixed 0.1-second cast unaffected by speed. Mana starts at 50 plus 13 per additional level, up to 167 before discounts. No normal basic attack bonus. Unified element tags and exact multi-hit/DoT application remain pending."
+      },
+      "set": {
+        "effects": [
+          {
+            "key": "fire-spirit-fire-attack",
+            "type": "damageBonus",
+            "target": "self",
+            "appliesTo": "allSkills",
+            "damageSchool": "fire",
+            "value": 15,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 15,
+              "perLevel": 5.555555555555555
+            },
+            "durationSeconds": 300,
+            "eligibleSkillNumbers": [
+              48,
+              49,
+              110
+            ],
+            "appliesToBasicAttacks": false,
+            "appliesToPeriodicDamage": true,
+            "bonusApplicationScope": "eachSkillHit"
+          }
+        ],
+        "statScaling": {},
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 5.555555555555555
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 50,
+                  "perLevel": 13
+                }
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "description_de": "Aktiver Eigenbuff des Ritualisten mit zehn Stufen für 300 Sekunden. Gewährt einen flachen Feuer-Skillschadensbonus von 15 auf Stufe 1, gleichmäßig steigend bis 65 auf Stufe 10. Kein Intelligenzbonus. Wirkt ausschließlich auf Feuer der Verdammten, Feuerball und Sturm des Feuers. Der Bonus gilt je direktem magischen Skilltreffer und bei Feuer der Verdammten auch je Folgetick. Sturm des Feuers verursacht aktuell nur einen Schadenstreffer nach der Vorwarnung; seine anschließende Feuerphase ist rein optisch und erzeugt keine zusätzlichen Ticks. Keine Wirkung auf normale Auto-Attacks, Begleiter oder andere Skills. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Aktivierung kostet 50 Mana auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten.",
+        "description_eng": "Active Ritualist self buff with ten levels, lasting 300 seconds. Grants flat fire skill damage from 15 at level 1, increasing evenly to 65 at level 10. No Intelligence bonus. Applies only to Fire of the Damned, Fireball and Fire Storm. The bonus applies per direct magical skill hit and also per follow-up damage tick of Fire of the Damned. Fire Storm currently deals one damage hit after its warning; its following visual fire phase adds no damage ticks. No effect on normal basic attacks, companions or other skills. Cooldown 60 seconds; fixed 0.1-second cast unaffected by speed. Activation costs 50 Mana plus 13 per additional level, up to 167 before discounts."
+      },
+      "unset": {
+        "int": ""
+      }
+    },
+    {
+      "nr": 209,
+      "before": {
+        "description_de": "Permanenter passiver Skill. Erhöht den Schaden von Seelenangriffen um 12 je gelerntem Skilllevel, auf Maximalstufe 120. Kein prozentualer Bonus. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Der Name ist vorläufig; eine bessere Bezeichnung wird später festgelegt. Einheitliche Seelen-Skillzuordnung und Anwendung auf Mehrfachtreffer beziehungsweise DoTs bleiben für die gemeinsame Gruppenprüfung offen.",
+        "description_eng": "Permanent passive. Grants soul attacks +12 flat damage per learned skill level, reaching 120 at maximum level. Not a percentage bonus. No activation costs, cast time or limited duration. Name is provisional. Unified soul-skill tags and application to multi-hits/DoTs remain pending."
+      },
+      "set": {
+        "effects": [
+          {
+            "key": "darkness-soul-damage",
+            "type": "damageBonus",
+            "target": "self",
+            "appliesTo": "allSkills",
+            "damageSchool": "soul",
+            "value": 12,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 12,
+              "perLevel": 12
+            },
+            "durationSeconds": 0,
+            "eligibleSkillNumbers": [
+              103,
+              104,
+              105,
+              180
+            ],
+            "appliesToBasicAttacks": false,
+            "appliesToPeriodicDamage": false,
+            "bonusApplicationScope": "eachSkillHit"
+          }
+        ],
+        "description_de": "Permanenter passiver Skill mit zehn Stufen. Erhöht den direkten magischen Skillschaden von Seelenfessel, Seelenqual, Seelenernte und Seelenplage um 12 je gelerntem Skilllevel, auf Maximalstufe um 120 je passendem Treffer. Jede einzelne Seelenqual-Anwendung ist ein eigener Angriff mit einem direkten Treffer. Keiner dieser vier Skills verursacht derzeit periodischen Schaden; es gibt hier keine DoT-Ticks. Keine Wirkung auf andere Skills, normale Auto-Attacks oder Begleiter. Kein prozentualer Bonus, keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Der Name ist vorläufig; eine bessere Bezeichnung wird später festgelegt.",
+        "description_eng": "Permanent passive with ten levels. Adds 12 flat direct magical skill damage per learned level to Soul Shackle, Soul Torment, Soul Harvest and Soul Plague, up to 120 per eligible hit. Each Soul Torment application is a separate attack with one direct hit. None of these four skills currently deals periodic damage, so there are no damage-over-time ticks here. No effect on other skills, normal basic attacks or companions. Not a percentage bonus; no activation costs, cast time or limited duration. Name remains provisional."
+      },
+      "unset": {}
+    }
+  ]
+}

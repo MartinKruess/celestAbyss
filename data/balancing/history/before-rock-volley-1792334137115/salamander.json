@@ -1,0 +1,267 @@
+{
+  "_id": "6ad4d38a6157f3dde2217aed",
+  "nr": 254,
+  "skillName_de": "Weisheit des Salamanders",
+  "skillName_eng": "Wisdom of the Salamander",
+  "category": "passive",
+  "dmgType": "passive",
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "skillpoints": 1,
+  "resourceCosts": [],
+  "effectsVersion": 1,
+  "effects": [
+    {
+      "key": "salamander-damageBonus-15-physical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 15,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "physical"
+      ]
+    },
+    {
+      "key": "salamander-damageBonus-38-physical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 38,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "physical"
+      ]
+    },
+    {
+      "key": "salamander-damageBonus-76-physical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 76,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "physical"
+      ]
+    },
+    {
+      "key": "salamander-damageBonus-87-physical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 87,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "physical"
+      ]
+    },
+    {
+      "key": "salamander-damageBonus-106-physical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 106,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "physical"
+      ]
+    },
+    {
+      "key": "salamander-damageBonus-50-magical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 50,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "magical"
+      ]
+    },
+    {
+      "key": "salamander-resourceCostReduction-50-mana",
+      "type": "resourceCostReduction",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 50,
+      "value": 0.005,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.005,
+        "perLevel": 0.005
+      },
+      "resource": "mana"
+    },
+    {
+      "key": "salamander-damageBonus-62-magical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 62,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "magical"
+      ]
+    },
+    {
+      "key": "salamander-resourceCostReduction-62-mana",
+      "type": "resourceCostReduction",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 62,
+      "value": 0.005,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.005,
+        "perLevel": 0.005
+      },
+      "resource": "mana"
+    },
+    {
+      "key": "salamander-damageBonus-76-magical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 76,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "magical"
+      ]
+    },
+    {
+      "key": "salamander-resourceCostReduction-76-mana",
+      "type": "resourceCostReduction",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 76,
+      "value": 0.005,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.005,
+        "perLevel": 0.005
+      },
+      "resource": "mana"
+    },
+    {
+      "key": "salamander-damageBonus-202-magical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 202,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      },
+      "damageTypes": [
+        "magical"
+      ]
+    },
+    {
+      "key": "salamander-resourceCostReduction-202-mana",
+      "type": "resourceCostReduction",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 202,
+      "value": 0.005,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.005,
+        "perLevel": 0.005
+      },
+      "resource": "mana"
+    },
+    {
+      "key": "salamander-damageBonus-255-physical",
+      "type": "damageBonus",
+      "target": "self",
+      "appliesTo": "specificSkill",
+      "targetSkillNumber": 255,
+      "value": 0.003,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "damageTypes": [
+        "physical"
+      ],
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.003,
+        "perLevel": 0.003
+      }
+    }
+  ],
+  "description_de": "Verbessert deinen Umgang mit körperlichen Angriffen und Feuer. Je Skillstufe steigt der physische Schaden von Beben, Erdbeben, Infernalem Kreuzschlag, Rotierschlag, Sprungschlag und Felszähne um 0,3 Prozent. Der magische Feuerschaden von Feuerlanze, Infernal Zyklon, Infernalem Kreuzschlag und Verbrennen steigt ebenfalls um 0,3 Prozent je Stufe; deren Mana-Kosten sinken um 0,5 Prozent je Stufe. Auf Stufe 5: +1,5 Prozent auf die jeweilige Schadenskomponente und −2,5 Prozent Mana-Kosten der vier Feuerangriffe. Schadensboni umfassen den passenden Charakterangriff. Beim Kreuzschlag werden die beiden Schadenskomponenten jeweils um 1,5 Prozent erhöht, nicht der Gesamtschaden zweimal. Vorhandene Feuer-DoTs profitieren ebenfalls; keine zusätzliche Brandchance oder neuen DoTs. Keine Wirkung auf Auto-Attacks, Cooldowns, Castzeiten oder den magischen Erdschaden von Erdbeben. Permanenter passiver Skill ohne Aktivierungskosten.",
+  "description_eng": "Improves physical attacks and fire magic. Each level adds 0.3 percent physical damage to Tremor, Earthquake, Infernal Cross Strike, Rotating Strike, Jump Strike and Rock Fangs. Each level adds 0.3 percent magical fire damage and reduces Mana costs by 0.5 percent for Fire Lance, Infernal Cyclone, Infernal Cross Strike and Burn. At level 5: +1.5 percent to each eligible damage component and -2.5 percent Mana cost for the four fire attacks. Includes the matching character attack. Cross Strike components are each increased once, without applying the bonus twice to the combined total. Existing fire damage over time benefits; no new burning proc or DoT. No effect on basic attacks, cooldowns, cast times or Earthquake magical earth damage. Permanent passive without activation costs."
+}

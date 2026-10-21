@@ -1,0 +1,133 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bee",
+    "skillName_eng": "Endurance Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Zähigkeit. Je gelerntem Skilllevel erhältst du 1 Vitalität, 1 Willenskraft sowie jeweils 4 physische und magische Verteidigung. Auf Level 20 sind das 20 Vitalität, 20 Willenskraft und jeweils 80 Verteidigung. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently improves resilience. Each learned skill level grants 1 Vitality, 1 Wisdom, and 4 physical and magical defense each. At level 20, this grants 20 Vitality, 20 Wisdom, and 80 of each defense. No activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "mdef": 4,
+    "nr": 139,
+    "pdef": 4,
+    "skillName_de": "Ausdauertraining",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 4
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 4
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 2,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

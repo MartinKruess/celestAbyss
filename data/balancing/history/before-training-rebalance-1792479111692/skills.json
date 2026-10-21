@@ -1,0 +1,524 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6a",
+    "skillName_eng": "Crossbow Training",
+    "__v": 0,
+    "agi": 2,
+    "category": "passive",
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deinen Umgang mit der Armbrust. Auf Stufe 1 erhältst du 2 Agilität und 1 Geschicklichkeit. Wie beim Dolchtraining steigt jeder der beiden Boni um 1 je weiterer Stufe. Auf Stufe 10 erhältst du 11 Agilität und 10 Geschicklichkeit. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanently improves crossbow proficiency. Level 1 grants 2 Agility and 1 Dexterity. As with Dagger Training, each bonus increases by 1 per additional level. Level 10 grants 11 Agility and 10 Dexterity. Permanent passive skill without activation cost, cast time or cooldown.",
+    "dex": 1,
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 7,
+    "skillName_de": "Armbrusttraining",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "agi": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b75",
+    "skillName_eng": "Bow Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deinen Umgang mit dem Bogen. Auf Stufe 1 erhältst du 2 Geschicklichkeit und 2 physischen Angriff. Je weiterer Stufe kommen 1 Geschicklichkeit und 2 physischer Angriff hinzu. Auf Stufe 10 sind das 11 Geschicklichkeit und 20 direkter physischer Angriff. Der frühere Agilitätsbonus entfällt. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanently improves bow proficiency. Level 1 grants 2 Dexterity and 2 physical attack. Each additional level adds 1 Dexterity and 2 physical attack. Level 10 grants 11 Dexterity and 20 direct physical attack. Replaces the former Agility bonus. Permanent passive skill without activation costs, cast time or cooldown.",
+    "dex": 2,
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 18,
+    "skillName_de": "Bogenschießtraining",
+    "skillpoints": 1,
+    "patk": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "dex": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      },
+      "patk": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b79",
+    "skillName_eng": "Dagger Training",
+    "__v": 0,
+    "agi": 1,
+    "category": "passive",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deinen Umgang mit Dolchen. Auf Stufe 1 erhältst du 1 Agilität und 2 Stärke. Je weiterer Stufe kommen jeweils 1 hinzu, bis zu 10 Agilität und 11 Stärke auf Stufe 10. Der bisherige Ambush-Bonus wird durch Stärke ersetzt. Kein Schwerttraining. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanently improves dagger handling. Grants 1 Agility and 2 Strength at level 1, adding 1 to each per additional level, reaching 10 Agility and 11 Strength at level 10. Replaces the previous Ambush bonus with Strength. Does not train swords. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 22,
+    "skillName_de": "Dolchtraining",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "agi": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      }
+    },
+    "str": 2,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc9",
+    "skillName_eng": "Sword Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft dein Schwerttraining. Auf Skilllevel 1 erhältst du 2 Stärke und 1 Geschicklichkeit. Je weiterer Stufe steigt die Stärke um 1. Auf Level 5 kommt zusätzlich 1 Geschicklichkeit hinzu, sodass du insgesamt 6 Stärke und 2 Geschicklichkeit erhältst.",
+    "description_eng": "Permanently improves sword training. At skill level 1, gain 2 Strength and 1 Dexterity. Each additional level adds 1 Strength. Level 5 also adds 1 Dexterity, reaching 6 Strength and 2 Dexterity.",
+    "dmgType": "passive",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 102,
+    "skillName_de": "Schwerttraining",
+    "skillpoints": 1,
+    "str": 2,
+    "dex": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "str": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "dex": {
+        "type": "table",
+        "values": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 1
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "rounded",
+            "mode": "round",
+            "rule": {
+              "kind": "linear",
+              "base": 0.5,
+              "perLevel": 0.25
+            }
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf3",
+    "skillName_eng": "Armor Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Rüstungsbeherrschung. Je gelerntem Skilllevel erhältst du jeweils 6 physische und magische Verteidigung, bis zu jeweils 60 auf Level 10. Keine Vitalitätsboni, Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently improves armor proficiency. Each learned skill level grants 6 physical and magical defense each, up to 60 each at level 10. No Vitality bonus, activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 144,
+    "pdef": 6,
+    "skillName_de": "Rüstungstraining",
+    "skillpoints": 1,
+    "mdef": 6,
+    "resourceCosts": [],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 2,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2c",
+    "skillName_eng": "Weapon Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Waffentraining verbessert dauerhaft deine allgemeinen Waffenfertigkeiten. Gewährt je gelernter Stufe 5 physischen und 5 magischen Angriff, bis zu jeweils 100 auf Stufe 20. Gewährt keine Angriffsgeschwindigkeit.",
+    "description_eng": "Weapon Training permanently improves your general weapon proficiency. Each learned level grants 5 physical attack and 5 magical attack, reaching 100 each at level 20. Does not grant attack speed.",
+    "dmgType": "passive",
+    "matk": 5,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 201,
+    "patk": 5,
+    "skillName_de": "Waffentraining",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "patk": "flat",
+      "matk": "flat"
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "matk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 2,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad410f1fc17bccb4657488b",
+    "skillName_eng": "Broadsword Training",
+    "category": "passive",
+    "charClass": [
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft den Umgang des Abenteurers mit Breitschwertern beziehungsweise seiner zweihändigen Schwertwaffe. Zehn lernbare Stufen: +3 Stärke auf Stufe 1, +0,5 Stärke je weiterer Stufe, maximal +7,5 auf Stufe 10. Kein Geschicklichkeitsbonus. Eigene Skilldefinition als Kopie des bisherigen Schwerttrainings; Ritter/Templer behalten ihr unverändertes Schwerttraining. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+    "description_eng": "Permanently improves the Adventurer’s broadsword/two-handed sword proficiency. Ten learnable levels: +3 Strength at level 1, +0.5 per additional level, maximum +7.5 at level 10. No Dexterity bonus. Separate copy of Sword Training; Knight/Templar keep their unchanged original skill. Permanent passive with no activation cost, cast time, cooldown or limited duration.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 245,
+    "skillName_de": "Breitschwert-Training",
+    "skillpoints": 1,
+    "str": 3,
+    "resourceCosts": [],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 0.5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

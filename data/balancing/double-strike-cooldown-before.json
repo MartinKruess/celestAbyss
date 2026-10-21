@@ -1,0 +1,51 @@
+{
+  "_id": "6acc1c7e4826525c70d04baf",
+  "skillName_eng": "Mighty Double Strike",
+  "__v": 0,
+  "category": "active",
+  "cd": 37,
+  "charClass": [
+    "Shamane",
+    "High Elves",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Führt zwei physische Schläge aus. Jeder Treffer hat auf Skilllevel 1 einen Grundangriffswert von 166, der je weiterer Stufe um 32 auf 614 steigt. Die Mana-Kosten steigen von 83 um 41 je weiterer Stufe auf 657. Der Angriff beginnt ohne Cast Time und hat 37 Sekunden Cooldown. Die Animation dauert vorläufig 0,5 Sekunden; die genauen Trefferzeitpunkte werden im Spiel festgelegt.",
+  "description_eng": "Performs two physical strikes. Each hit has a base attack value of 166 at skill level 1, increasing by 32 per additional level to 614. Mana cost increases from 83 by 41 per additional level to 657. The attack begins with no cast time and has a 37 second cooldown. Animation duration is provisionally 0.5 seconds; exact hit timings will be defined in game.",
+  "dmgType": "physical",
+  "maxSkillLv": 15,
+  "maxUpgradeLv": 10,
+  "nr": 76,
+  "patk": 166,
+  "skillName_de": "Mächtiger Doppelschlag",
+  "skillpoints": 1,
+  "animationDurationSeconds": 0.5,
+  "animationTimingStatus": "provisional",
+  "attackExecution": {
+    "hitCount": 2,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending"
+  },
+  "castTimeSeconds": 0,
+  "mana": 83,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 83,
+        "perLevel": 41
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 166,
+      "perLevel": 32
+    }
+  }
+}

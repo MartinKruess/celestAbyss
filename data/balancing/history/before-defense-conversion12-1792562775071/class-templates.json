@@ -1,0 +1,5318 @@
+[
+  {
+    "key": "gladiator",
+    "displayName": "Gladiator",
+    "advancementName": "Berserker",
+    "raceGroup": "Human",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "damage dealer",
+      "Fury",
+      "Offtank"
+    ],
+    "weaponNotes": "1 handed axe",
+    "attributeNotes": "Physical Attack",
+    "baseStats": {
+      "maxHealth": 212,
+      "maxMana": 137,
+      "physicalAttack": 12,
+      "magicalAttack": 6,
+      "physicalDefense": 9,
+      "magicalDefense": 3,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 2,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 2
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Gladiator",
+    "displayName_eng": "Gladiator",
+    "advancementName_de": "Berserker",
+    "advancementName_eng": "Berserker"
+  },
+  {
+    "key": "herbalist",
+    "displayName": "Herbalist",
+    "advancementName": "Witcher",
+    "raceGroup": "Human",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "damage dealer",
+      "Elemental"
+    ],
+    "weaponNotes": "Staff/Wand",
+    "attributeNotes": "Magical Attack",
+    "baseStats": {
+      "maxHealth": 176,
+      "maxMana": 163,
+      "physicalAttack": 6,
+      "magicalAttack": 12,
+      "physicalDefense": 6,
+      "magicalDefense": 6,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 3,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 3
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Kräuterkundler",
+    "displayName_eng": "Herbalist",
+    "advancementName_de": "Hexer",
+    "advancementName_eng": "Witcher"
+  },
+  {
+    "key": "adventurer",
+    "displayName": "Adventure",
+    "advancementName": "Scout",
+    "raceGroup": "Human",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "Supporter"
+    ],
+    "weaponNotes": "Stock",
+    "attributeNotes": null,
+    "baseStats": {
+      "maxHealth": 172,
+      "maxMana": 131,
+      "physicalAttack": 8,
+      "magicalAttack": 6,
+      "physicalDefense": 7,
+      "magicalDefense": 9,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 4,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 4
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Abenteurer",
+    "displayName_eng": "Adventurer",
+    "advancementName_de": "Späher",
+    "advancementName_eng": "Scout"
+  },
+  {
+    "key": "butcher",
+    "displayName": "Butcher",
+    "advancementName": "Destroyer",
+    "raceGroup": "Umbra",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "damage dealer",
+      "leichter Tank"
+    ],
+    "weaponNotes": "2 handed ax",
+    "attributeNotes": "Physical Attack",
+    "baseStats": {
+      "maxHealth": 221,
+      "maxMana": 121,
+      "physicalAttack": 13,
+      "magicalAttack": 7,
+      "physicalDefense": 4,
+      "magicalDefense": 6,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 5,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 5
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Schlächter",
+    "displayName_eng": "Butcher",
+    "advancementName_de": "Zerstörer",
+    "advancementName_eng": "Destroyer"
+  },
+  {
+    "key": "villian",
+    "displayName": "Villian",
+    "advancementName": "Schattenkrieger",
+    "raceGroup": "Umbra",
+    "raceScope": "fixed",
+    "roleNotes": [],
+    "weaponNotes": "Dolch/Messer",
+    "attributeNotes": "Krieger/Dunkelheit",
+    "baseStats": {
+      "maxHealth": 166,
+      "maxMana": 134,
+      "physicalAttack": 11,
+      "magicalAttack": 6,
+      "physicalDefense": 5,
+      "magicalDefense": 8,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 6,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 6
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Schurke",
+    "displayName_eng": "Rogue",
+    "advancementName_de": "Schattenklinge",
+    "advancementName_eng": "Shadowreaper"
+  },
+  {
+    "key": "summoner",
+    "displayName": "Beschwörer",
+    "advancementName": "Seelenjäger",
+    "raceGroup": "Umbra",
+    "raceScope": "fixed",
+    "roleNotes": [],
+    "weaponNotes": "Stab",
+    "attributeNotes": "Dunkelheit",
+    "baseStats": {
+      "maxHealth": 175,
+      "maxMana": 139,
+      "physicalAttack": 12,
+      "magicalAttack": 3,
+      "physicalDefense": 5,
+      "magicalDefense": 10,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 7,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 7
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Schattenjäger",
+    "displayName_eng": "Shadow Hunter",
+    "advancementName_de": "Seelenjäger",
+    "advancementName_eng": "Soulseeker"
+  },
+  {
+    "key": "ritualist",
+    "displayName": "Ritualist",
+    "advancementName": "Blutmagier",
+    "raceGroup": "Umbra",
+    "raceScope": "fixed",
+    "roleNotes": [],
+    "weaponNotes": "Stab",
+    "attributeNotes": "Magie/Dunkelheit",
+    "baseStats": {
+      "maxHealth": 169,
+      "maxMana": 167,
+      "physicalAttack": 4,
+      "magicalAttack": 14,
+      "physicalDefense": 4,
+      "magicalDefense": 8,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 8,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 8
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Ritualist",
+    "displayName_eng": "Ritualist",
+    "advancementName_de": "Blutmagier",
+    "advancementName_eng": "Blood Mage"
+  },
+  {
+    "key": "druid",
+    "displayName": "Druide",
+    "advancementName": "Alchemist",
+    "raceGroup": "Aurora",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "Buffer",
+      "Potions"
+    ],
+    "weaponNotes": "Kolben/Stock",
+    "attributeNotes": "Magie/Licht",
+    "baseStats": {
+      "maxHealth": 183,
+      "maxMana": 151,
+      "physicalAttack": 9,
+      "magicalAttack": 11,
+      "physicalDefense": 5,
+      "magicalDefense": 5,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 9,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 9
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Druide",
+    "displayName_eng": "Druid",
+    "advancementName_de": "Erzdruide",
+    "advancementName_eng": "Archdruid"
+  },
+  {
+    "key": "healer",
+    "displayName": "Heiler Adept",
+    "advancementName": "Erzbischof",
+    "raceGroup": "Aurora",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "Heiler",
+      "Magier"
+    ],
+    "weaponNotes": "Stab",
+    "attributeNotes": "Magie/Licht",
+    "baseStats": {
+      "maxHealth": 153,
+      "maxMana": 182,
+      "physicalAttack": 2,
+      "magicalAttack": 12,
+      "physicalDefense": 3,
+      "magicalDefense": 13,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 10,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 10
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Heiler-Adept",
+    "displayName_eng": "Healer Adept",
+    "advancementName_de": "Erzbischof",
+    "advancementName_eng": "Archbishop"
+  },
+  {
+    "key": "shaman",
+    "displayName": "Schamane",
+    "advancementName": "Hochelfe",
+    "raceGroup": "Aurora",
+    "raceScope": "fixed",
+    "roleNotes": [
+      "Kämpfer",
+      "Buffer"
+    ],
+    "weaponNotes": "Kolben/Stock",
+    "attributeNotes": "Magie/Licht",
+    "baseStats": {
+      "maxHealth": 192,
+      "maxMana": 153,
+      "physicalAttack": 10,
+      "magicalAttack": 10,
+      "physicalDefense": 6,
+      "magicalDefense": 4,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 11,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 11
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Schamane",
+    "displayName_eng": "Shaman",
+    "advancementName_de": "Hochelfe",
+    "advancementName_eng": "High Elf"
+  },
+  {
+    "key": "luminet",
+    "displayName": "Luminet",
+    "advancementName": "Lichtmagier",
+    "raceGroup": "Aurora",
+    "raceScope": "fixed",
+    "roleNotes": [],
+    "weaponNotes": "Stab",
+    "attributeNotes": "Magie/Licht",
+    "baseStats": {
+      "maxHealth": 171,
+      "maxMana": 167,
+      "physicalAttack": 4,
+      "magicalAttack": 14,
+      "physicalDefense": 4,
+      "magicalDefense": 8,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 12,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 12
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Luminet",
+    "displayName_eng": "Luminet",
+    "advancementName_de": "Lichtmagier",
+    "advancementName_eng": "Light Mage"
+  },
+  {
+    "key": "knight",
+    "displayName": "Ritter",
+    "advancementName": "Tempelritter",
+    "raceGroup": null,
+    "raceScope": "crossRace",
+    "roleNotes": [
+      "Tank"
+    ],
+    "weaponNotes": "Kolben/Schild",
+    "attributeNotes": "Krieger",
+    "baseStats": {
+      "maxHealth": 231,
+      "maxMana": 133,
+      "physicalAttack": 5,
+      "magicalAttack": 4,
+      "physicalDefense": 11,
+      "magicalDefense": 10,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 13,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 13
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Ritter",
+    "displayName_eng": "Knight",
+    "advancementName_de": "Tempelritter",
+    "advancementName_eng": "Templar"
+  },
+  {
+    "key": "hunter",
+    "displayName": "Jäger",
+    "advancementName": "Schütze",
+    "raceGroup": null,
+    "raceScope": "crossRace",
+    "roleNotes": [
+      "starker dd"
+    ],
+    "weaponNotes": null,
+    "attributeNotes": "Dunkelheit",
+    "baseStats": {
+      "maxHealth": 184,
+      "maxMana": 111,
+      "physicalAttack": 13,
+      "magicalAttack": 3,
+      "physicalDefense": 6,
+      "magicalDefense": 8,
+      "attackSpeed": 1,
+      "movementSpeed": 1,
+      "maxStamina": 1
+    },
+    "statConversions": {
+      "defaults": {
+        "version": 14,
+        "wisdomClassModifiers": {
+          "attribute": "wisdom",
+          "classTargetMultipliers": {
+            "herbalist": {
+              "magicalDefense": 1.05
+            },
+            "hunter": {
+              "magicalDefense": 1.1
+            },
+            "knight": {
+              "magicalDefense": 1.05
+            },
+            "summoner": {
+              "maxMana": 1.05,
+              "magicalDefense": 1.05
+            },
+            "villian": {
+              "maxMana": 1.05
+            }
+          },
+          "defaultMultiplier": 1,
+          "scope": "Multiply only the named Wisdom conversion, not flat gear/skill bonuses. Healer uses standard Wisdom conversion; other classes only specified targets.",
+          "status": "confirmed"
+        },
+        "intelligenceAttackClassModifiers": {
+          "target": "magicalAttack",
+          "attribute": "intelligence",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "druid": 1.05,
+            "herbalist": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only magical attack contributed by Intelligence. Druid/Herbalist +5%; all other classes standard, including Luminet/Ritualist/Healer.",
+          "status": "confirmed"
+        },
+        "vitalityClassModifiers": {
+          "attribute": "vitality",
+          "targets": [
+            "maxHealth",
+            "physicalDefense",
+            "healthRegen"
+          ],
+          "classMultipliers": {
+            "knight": 1.1,
+            "gladiator": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "All three Vitality conversions; does not multiply flat HP, defense or regeneration bonuses.",
+          "status": "confirmed",
+          "classTargetMultipliers": {
+            "knight": {
+              "physicalDefense": 1.05
+            }
+          }
+        },
+        "strengthAttackClassModifiers": {
+          "target": "physicalAttack",
+          "attribute": "strength",
+          "baseFactor": 1.8,
+          "classMultipliers": {
+            "butcher": 1.1,
+            "gladiator": 1.05,
+            "shaman": 1.05
+          },
+          "defaultMultiplier": 1,
+          "scope": "Only the physical attack conversion of Strength; Penetration is unchanged. Classes not eligible for Strength attack still receive zero attack.",
+          "status": "confirmed"
+        },
+        "specialAttributeProgression": {
+          "attributes": [
+            "ambush",
+            "faith",
+            "victim"
+          ],
+          "directAttackConversion": false,
+          "status": "futureProgressionDesignPending",
+          "source": "Existing skill grants retained; socket sources and progression not implemented.",
+          "futureBonuses": {
+            "learningLevels": 1,
+            "status": "proposedNotCreated",
+            "thresholds": null,
+            "rewards": null
+          },
+          "balanceNote": "Compare attainable attribute totals and opportunity costs; identical thresholds or factors do not imply equal benefit."
+        },
+        "weaponCalculationRules": {
+          "offHandDirectAttackFactor": 0.9,
+          "attributeBonusFactor": 1,
+          "attackSpeedPenaltyFactor": 1,
+          "attackSpeedStacking": "additivePercentagePointsForEveryEquippedWeapon",
+          "twoHandedWeaponRule": "Use the stored two-handed weapon stats once; no off-hand reduction."
+        },
+        "conversions": [
+          {
+            "attribute": "vitality",
+            "target": "maxHealth",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "physicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "vitality",
+            "target": "healthRegen",
+            "amountPerPoint": 4,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "maxMana",
+            "amountPerPoint": 30,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "magicalDefense",
+            "amountPerPoint": 2,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "wisdom",
+            "target": "manaRegen",
+            "amountPerPoint": 0.9,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "strength",
+            "target": "penetration",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Penetration rating counters Block rating. Neither is a direct percentage; no fixed 100 percent Block stat. Exact counter-formula remains pending."
+          },
+          {
+            "attribute": "dexterity",
+            "target": "physicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "dexterity",
+            "target": "accuracy",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "agility",
+            "target": "attackSpeed",
+            "amountPerPoint": 0.06,
+            "status": "confirmedFactor",
+            "unit": "percentagePoints",
+            "fractionPerPoint": 0.0006,
+            "note": "Adds 0.06 percentage points per Agility, equivalent to 0.0006 of base attack speed."
+          },
+          {
+            "attribute": "agility",
+            "target": "dodge",
+            "amountPerPoint": 1.5,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints"
+          },
+          {
+            "attribute": "intelligence",
+            "target": "magicalAttack",
+            "amountPerPoint": 1.8,
+            "status": "confirmedFactor"
+          },
+          {
+            "attribute": "luck",
+            "target": "critChanceRating",
+            "amountPerPoint": 1.6,
+            "status": "confirmedFactor",
+            "unit": "ratingPoints",
+            "note": "Increases critical hit probability through the still pending rating formula; not a direct percentage bonus."
+          },
+          {
+            "attribute": "intelligence",
+            "target": "maxMana",
+            "status": "notConfirmed",
+            "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+          },
+          {
+            "attribute": "agility",
+            "target": "movementSpeed",
+            "status": "pendingSmallContribution"
+          }
+        ],
+        "criticalHitRules": {
+          "ratingStat": "critChanceRating",
+          "ratingUnit": "ratingPoints",
+          "probabilityFormulaStatus": "pending",
+          "damageBonusStat": "criticalDamageBonus",
+          "baseDamageBonus": 0.8,
+          "baseDamageMultiplier": 1.8,
+          "scope": "All characters start with an 80 percent additional damage bonus on a critical hit.",
+          "example": {
+            "normalDamage": 1000,
+            "criticalDamage": 1800
+          },
+          "stackingRulesStatus": "pending",
+          "damageMitigationOrderStatus": "pending"
+        },
+        "operativeDisplayNames": {
+          "critChanceRating": "Kritische Treffer",
+          "criticalDamageBonus": "Kritischer Schaden"
+        },
+        "offensiveAttributeEligibility": {
+          "attributes": [
+            "strength",
+            "dexterity",
+            "ambush",
+            "intelligence",
+            "faith",
+            "victim"
+          ],
+          "matchingAttributeFactor": 1.8,
+          "nonMatchingAttributeFactor": 0,
+          "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
+          "confirmedMatchingAttributes": {
+            "hunter": [
+              "dexterity"
+            ],
+            "summoner": [
+              "dexterity"
+            ],
+            "villian": [
+              "strength"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "luminet": [
+              "intelligence"
+            ]
+          },
+          "classAttackOverrides": {
+            "luminet": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            },
+            "ritualist": {
+              "attribute": "intelligence",
+              "target": "magicalAttack",
+              "amountPerPoint": 1.6
+            }
+          },
+          "globallyRestrictedAttackAttributes": {
+            "dexterity": [
+              "hunter",
+              "summoner"
+            ]
+          },
+          "pendingClassComparisonAttributes": {
+            "adventurer": [
+              "strength",
+              "intelligence"
+            ],
+            "butcher": [
+              "strength"
+            ],
+            "druid": [
+              "strength",
+              "intelligence"
+            ],
+            "gladiator": [
+              "strength"
+            ],
+            "healer": [
+              "intelligence"
+            ],
+            "herbalist": [
+              "intelligence"
+            ],
+            "knight": [
+              "strength"
+            ],
+            "luminet": [
+              "intelligence"
+            ],
+            "ritualist": [
+              "intelligence"
+            ],
+            "shaman": [
+              "strength",
+              "intelligence"
+            ],
+            "villian": [
+              "strength"
+            ]
+          },
+          "unassignedClasses": "pendingClassReview",
+          "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
+          "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
+          "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+        },
+        "attributeDisplayNames": {
+          "vitality": "Vita",
+          "wisdom": "Willenskraft",
+          "strength": "Stärke",
+          "dexterity": "Geschick",
+          "intelligence": "Intelligenz",
+          "agility": "Agilität",
+          "luck": "Glück",
+          "ambush": "Ambush",
+          "faith": "Faith",
+          "victim": "Victim"
+        },
+        "overrideRule": {
+          "mode": "replaceAttributeConversion",
+          "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
+          "classIndividualizationStatus": "pending"
+        },
+        "regenerationUnits": "HP or Mana per server regeneration tick; interval not yet defined",
+        "plannedSpecialAttributeUnlock": {
+          "status": "lockedUntilFutureSkill",
+          "activeInCurrentCalculation": false,
+          "amountPerPoint": 1.9,
+          "target": "magicalAttack",
+          "classAttributes": {
+            "luminet": "faith",
+            "ritualist": "victim",
+            "villian": "ambush"
+          },
+          "stacking": "After class-specific unlock: Faith/Victim add magical attack to Intelligence; Rogue Ambush adds physical attack to Strength. R6 comparisons assume unlock. Global pre-unlock base conversions remain unchanged.",
+          "unlockSkill": "notYetDefined",
+          "classAmountsPerPoint": {
+            "luminet": 1.8,
+            "ritualist": 1.9,
+            "villian": 1.8
+          },
+          "classTargets": {
+            "luminet": "magicalAttack",
+            "ritualist": "magicalAttack",
+            "villian": "physicalAttack"
+          },
+          "minimumComparisonRank": 4
+        },
+        "regenerationTiming": {
+          "manaTickIntervalSeconds": 3,
+          "healthTickIntervalStatus": "unchangedPending",
+          "simulationHealthTickIntervalSeconds": 2
+        }
+      }
+    },
+    "status": "draft",
+    "selectable": false,
+    "source": {
+      "file": "Questsystem.ods",
+      "sha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+      "sheet": "Klassen",
+      "column": 14,
+      "primaryRow": 6,
+      "advancementRow": 8
+    },
+    "baseStatsSource": {
+      "file": "class-base-stats-2026-10-12.png",
+      "sha256": "e0b793617a81eb2cf4bb32245bdb4ec3915cae70769ccebaad413f5e77294799",
+      "column": 14
+    },
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending",
+      "manaTickIntervalSeconds": 3
+    },
+    "displayName_de": "Jäger",
+    "displayName_eng": "Hunter",
+    "advancementName_de": "Schütze",
+    "advancementName_eng": "Archer"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c15",
+    "skillName_eng": "Spirit of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe die Intelligenz um 2 per Level.",
+    "description_eng": "Increase your intelligence by 2 per level.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 178,
+    "skillName_de": "Geist des Feuers",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c18",
+    "skillName_eng": "Arcane Charge",
+    "__v": 0,
+    "category": "passive",
+    "cd": 60,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe den magischen Angriff um 20 per Level, wenn du über 500 Victim Punkte hast.",
+    "description_eng": "Increase your magical attack by 20 per level if you have more than 500 victim points.",
+    "dmgType": "passive",
+    "dur": 600,
+    "matk": 20,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 181,
+    "skillName_de": "Arkane Aufladung",
+    "skillpoints": 1
+  }
+]

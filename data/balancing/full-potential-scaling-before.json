@@ -1,0 +1,38 @@
+{
+  "_id": "6acc1c7e4826525c70d04c06",
+  "skillName_eng": "Full Potential",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöhe deine Maxleben um 500 und deinen Angriff um 25 Punkte. Castzeit 0,6 Sekunden. Mana-Kosten starten bei 133 und steigen um 62 je weiterer Stufe auf 257.",
+  "description_eng": "Power up your Health by 500 and Attack by 25 points. Cast time is 0.6 seconds. Mana cost starts at 133 and increases by 62 per additional level to 257.",
+  "dmgType": "selfbuff",
+  "dur": 600,
+  "health": 500,
+  "maxSkillLv": 3,
+  "maxUpgradeLv": 10,
+  "nr": 163,
+  "patk": 25,
+  "skillName_de": "Volles Potential",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.6,
+  "mana": 133,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 133,
+        "perLevel": 62
+      }
+    }
+  ]
+}

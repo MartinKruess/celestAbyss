@@ -1,0 +1,40 @@
+{
+  "status": "simulationOnly",
+  "generatedAt": "2026-10-19T19:28:29.939Z",
+  "skillLevel": 10,
+  "results": [
+    {
+      "mode": "unbuffed",
+      "beforeDamage": 597263.8957499999,
+      "afterDamage": 599142.4626999999,
+      "change": 1878.5669500000076,
+      "beforeApplications": 27,
+      "afterApplications": 27,
+      "beforeBurnDamage": 41937.48000000006,
+      "afterBurnDamage": 29151.060000000063,
+      "manaWait": 317.86000000000047
+    },
+    {
+      "mode": "selfOnly",
+      "beforeDamage": 639569.010400008,
+      "afterDamage": 639642.4076000077,
+      "change": 73.39719999977387,
+      "beforeApplications": 26,
+      "afterApplications": 27,
+      "beforeBurnDamage": 41776.80000000006,
+      "afterBurnDamage": 29478.600000000064,
+      "manaWait": 317.37000000000086
+    },
+    {
+      "mode": "selfAndGroups",
+      "beforeDamage": 1290654.8665999912,
+      "afterDamage": 1276749.8665999922,
+      "change": -13904.999999999069,
+      "beforeApplications": 27,
+      "afterApplications": 27,
+      "beforeBurnDamage": 43383.600000000064,
+      "afterBurnDamage": 29478.600000000064,
+      "manaWait": 0
+    }
+  ]
+}

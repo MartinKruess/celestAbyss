@@ -1,0 +1,101 @@
+{
+  "_id": "6ad23ba7a21c2357f9e61cdd",
+  "attributeConversionBonus": {
+    "sourceStat": "dex",
+    "targetStat": "maxMana",
+    "amountPerPoint": 2,
+    "usesCurrentAttributeValue": true
+  },
+  "soulGenerationSettings": {
+    "maximumUniqueEnemiesScaling": {
+      "values": []
+    }
+  },
+  "soulStorageSettings": {
+    "capacityScaling": {
+      "values": []
+    }
+  },
+  "activationRequirements": {
+    "targetHealthBelowFractionScaling": {
+      "values": []
+    }
+  },
+  "tetherSettings": {
+    "worldAnchorKinds": []
+  },
+  "collectedPointScaling": {
+    "thresholds": [],
+    "durationSecondsByTier": [],
+    "baseDamageBonusFractionByTier": []
+  },
+  "attackExecution": {
+    "additionalDamageFromSacrificedHealth": {
+      "values": []
+    },
+    "hitCountScaling": {
+      "values": []
+    },
+    "damageMultiplierScaling": {
+      "values": []
+    },
+    "armorIgnoreFractionByLevel": []
+  },
+  "attackArea": {
+    "radiusScaling": {
+      "values": []
+    },
+    "maxTargetsScaling": {
+      "values": []
+    }
+  },
+  "movement": {
+    "distanceScaling": {
+      "values": []
+    },
+    "hopDirections": []
+  },
+  "durationScaling": {
+    "values": []
+  },
+  "cooldownScaling": {
+    "values": []
+  },
+  "resourceCosts": [],
+  "burstUsage": {
+    "usesPerBurstScaling": {
+      "values": []
+    },
+    "afterBurstCooldownScaling": {
+      "values": []
+    },
+    "belowTargetHealthFractionByLevel": [],
+    "usesBelowThresholdByLevel": []
+  },
+  "triggerCondition": {
+    "chancePerCheckScaling": {
+      "values": []
+    },
+    "chancePerCheck": null,
+    "healthThresholds": []
+  },
+  "allowedRaces": [],
+  "isClassCore": false,
+  "nr": 243,
+  "skillName_eng": "Technical Perfection",
+  "skillName_de": "Technische Perfektion",
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "maxSkillLv": 1,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "category": "passive",
+  "description_eng": "One-level permanent passive. Each current Dexterity point grants +2 maximum Mana. Uses current total Dexterity including equipment, permanent passives and active attribute bonuses; later changes affect the bonus. Currently known 55 Dexterity without active buffs grants +110 maximum Mana, plus any starting Dexterity still undefined. No instant Mana restoration, extra regeneration or further cost reduction. No activation costs, cast time, cooldown or limited duration. Current-Mana handling on maximum changes follows a central rule still pending.",
+  "description_de": "Einstufiger permanenter passiver Skill. Jeder aktuelle Geschickpunkt gewährt zusätzlich 2 Max-Mana. Verwendet den aktuellen Gesamtwert einschließlich Geschick aus Ausrüstung, permanenten Passiven und aktiven Attributboni; spätere Änderungen wirken auf den Bonus. Mit derzeit 55 bekannten Geschickpunkten ohne aktive Buffs +110 Max-Mana, zuzüglich eines noch nicht festgelegten Geschick-Startwerts. Keine direkte Mana-Wiederherstellung, zusätzliche Regeneration oder weitere Manakostenreduktion. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer. Aktuelles Mana bei Änderungen des Maximums wird nach der noch zentral festzulegenden Regel behandelt.",
+  "dmgType": "passive",
+  "skillpoints": 1,
+  "__v": 0
+}

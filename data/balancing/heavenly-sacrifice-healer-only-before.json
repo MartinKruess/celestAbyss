@@ -1,0 +1,46 @@
+{
+  "_id": "6acc1c7e4826525c70d04c32",
+  "skillName_eng": "Heavenly Sacrifice",
+  "__v": 0,
+  "category": "active",
+  "cd": 99,
+  "charClass": [
+    "Healer",
+    "Priest",
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Opfert 90 Prozent der maximalen Lebenspunkte, um die anderen Gruppenmitglieder zu heilen. Je mehr Lebenspunkte tatsächlich geopfert werden, desto höher ist die Heilung; Umrechnungsfaktor und Verteilung sind noch festzulegen. Keine garantierte vollständige Heilung. Kostet zusätzlich 10 Prozent des Maximal-Manas; dieses Mana muss zur Aktivierung vorhanden sein. Cooldown 99 Sekunden, Castzeit 1,2 Sekunden, vorläufige Animationsdauer ungefähr 2 Sekunden, keine fortlaufende Heilwirkung festgelegt. Verhalten bei unzureichenden aktuellen Lebenspunkten ist noch zu klären. Einordnung als reiner Heiler-Skill ist vorgemerkt; bisherige Klassenzuordnungen bleiben bis zur Entscheidung erhalten.",
+  "description_eng": "Sacrifices 90 percent of maximum health to heal the other group members. Healing increases with the health actually sacrificed; conversion factor and distribution remain to be defined. Does not guarantee a full heal. Also costs 10 percent of maximum Mana, which must be available to activate the skill. Cooldown 99 seconds, cast time 1.2 seconds, provisional animation approximately 2 seconds. No ongoing healing effect defined. Behavior with insufficient current health remains unresolved. A healer-only assignment is under consideration; existing class assignments remain until decided.",
+  "dmgType": "spell",
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 207,
+  "skillName_de": "Himmlische Aufopferung",
+  "skillpoints": 1,
+  "animationDurationSeconds": 2,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 1.2,
+  "resourceCosts": [
+    {
+      "resource": "health",
+      "reference": "maxHealth",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.9
+      }
+    },
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.1
+      }
+    }
+  ]
+}

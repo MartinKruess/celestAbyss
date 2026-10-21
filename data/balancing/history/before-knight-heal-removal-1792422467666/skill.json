@@ -1,0 +1,214 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba3",
+  "skillName_eng": "Healing",
+  "__v": 0,
+  "category": "active",
+  "cd": 19,
+  "charClass": [
+    "Knife",
+    "Templar",
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 20, 26, 32, 38 und so weiter: Jeder nächste Zuwachs ist um 6 höher. Heilwerte von Stufe 1 bis 20: 20, 46, 78, 116, 160, 210, 266, 328, 396, 470, 550, 636, 728, 826, 930, 1040, 1156, 1278, 1406, 1540. Formel für Stufe L: 20 × L + 3 × L × (L - 1). Auf Stufe 20 beträgt der Heilwert 1540 HP. Castzeit 0,1 Sekunden. Cooldown 19 Sekunden auf Stufe 1 und 19 Sekunden auf Stufe 20. Mana-Kosten 7 auf Stufe 1, Stufenwerte 7, 16, 27, 41, 56, 74, 93, 115, 139, 165, 193, 223, 255, 289, 326, 364, 405, 447, 492, 539, maximal 539 auf Stufe 20. Einmalige Heilung nach der Castzeit, Wirkungsdauer 0 Sekunden, keine Heilticks. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+  "description_eng": "Heals an allied target. Healing grows cumulatively with increments of 20, 26, 32, 38 and so on, increasing each successive increment by 6. Healing values at levels 1–20: 20, 46, 78, 116, 160, 210, 266, 328, 396, 470, 550, 636, 728, 826, 930, 1040, 1156, 1278, 1406, 1540. Formula for level L: 20 × L + 3 × L × (L - 1). Level 20 healing is 1540 HP. Cast time 0.1 seconds. Cooldown 19 seconds at level 1 and 19 seconds at level 20. Mana cost 7 at level 1, maximum 539 at level 20. Heals once after casting, effect duration 0 seconds, no healing ticks.",
+  "dmgType": "spell",
+  "health": 20,
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 64,
+  "skillName_de": "Heilung",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.1,
+  "statScaling": {
+    "health": {
+      "type": "table",
+      "values": [
+        20,
+        46,
+        78,
+        116,
+        160,
+        210,
+        266,
+        328,
+        396,
+        470,
+        550,
+        636,
+        728,
+        826,
+        930,
+        1040,
+        1156,
+        1278,
+        1406,
+        1540
+      ]
+    }
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "effects": [
+    {
+      "key": "small-healing-single-target",
+      "type": "heal",
+      "target": "allyOrCompanion",
+      "value": 20,
+      "unit": "flat",
+      "valueScaling": {
+        "type": "table",
+        "values": [
+          20,
+          46,
+          78,
+          116,
+          160,
+          210,
+          266,
+          328,
+          396,
+          470,
+          550,
+          636,
+          728,
+          826,
+          930,
+          1040,
+          1156,
+          1278,
+          1406,
+          1540
+        ]
+      },
+      "durationSeconds": 0
+    }
+  ],
+  "effectsVersion": 1,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "table",
+        "values": [
+          7,
+          16,
+          27,
+          41,
+          56,
+          74,
+          93,
+          115,
+          139,
+          165,
+          193,
+          223,
+          255,
+          289,
+          326,
+          364,
+          405,
+          447,
+          492,
+          539
+        ],
+        "base": 7
+      }
+    }
+  ],
+  "manaPricing": {
+    "category": "heal",
+    "factor": 0.35,
+    "basis": "healingPerRecipient",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "statScaling",
+          "health"
+        ],
+        "rule": {
+          "kind": "polynomial",
+          "coefficients": [
+            20,
+            23,
+            3
+          ]
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "durationScaling"
+        ],
+        "rule": {
+          "kind": "constant",
+          "value": 0
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "effects",
+          "0",
+          "valueScaling"
+        ],
+        "rule": {
+          "kind": "polynomial",
+          "coefficients": [
+            20,
+            23,
+            3
+          ]
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "outputCost",
+          "factor": 0.35,
+          "basis": "healing",
+          "minimum": 0
+        },
+        "source": "verifiedManaPricing"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  }
+}

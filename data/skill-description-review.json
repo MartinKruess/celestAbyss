@@ -1,0 +1,2021 @@
+{
+  "patches": [
+    {
+      "skillID": "6acc1c7e4826525c70d04b64",
+      "nr": 1,
+      "germanName": "Erleuchtung",
+      "before": {
+        "de": "Erleuchtung erhöht deine Intelligenz und Weisheit. +1 Intelligenz +1 Weisheit pro Level",
+        "en": "Enlightment will increase your Intelligence and Wisdom. +1 Intelligence +1 Wisdom per Level"
+      },
+      "after": {
+        "de": "Erleuchtung erhöht deine Intelligenz und Weisheit. +1 Intelligenz +1 Weisheit pro Level",
+        "en": "Enlightenment increases your Intelligence and Wisdom by 1 each per skill level."
+      },
+      "reason": "Correct confirmed English name and grammar.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b66",
+      "nr": 3,
+      "germanName": "Abräumer",
+      "before": {
+        "de": "Abräumer wird 2 oder 3 Feinde neben dir treffen.",
+        "en": "Clearer will hit 2 or 3 enemys next to you."
+      },
+      "after": {
+        "de": "Trifft zwei bis drei Gegner in deiner Nähe.",
+        "en": "Hits two to three nearby enemies."
+      },
+      "reason": "Preserve attack and target count.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b6b",
+      "nr": 8,
+      "germanName": "Astalkörper",
+      "before": {
+        "de": "Du erschaffst einen Astralkörper, der auf deine Gegner zufliegt und bis zu 7 Feinde trifft.",
+        "en": "You create an astral body that flies towards your opponents and hits up to 7 enemies."
+      },
+      "after": {
+        "de": "Erschafft einen Astralkörper, der auf deine Gegner zufliegt und bis zu sieben Feinde trifft.",
+        "en": "Creates an astral body that flies toward your opponents and hits up to seven enemies."
+      },
+      "reason": "Preserve existing effect.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b72",
+      "nr": 15,
+      "germanName": "Beben",
+      "before": {
+        "de": "Schlage mir deiner Waffe auf den Boden um ein Beben zu erzeugen, dass nahe Gegner kurz verlangsamt.",
+        "en": "Hit the ground with your weapon to create an Tremor that briefly slows down nearby enemies."
+      },
+      "after": {
+        "de": "Schlägt mit deiner Waffe auf den Boden und erzeugt ein Beben, das nahe Gegner kurz verlangsamt.",
+        "en": "Strikes the ground with your weapon, creating a tremor that briefly slows nearby enemies."
+      },
+      "reason": "Correct grammar without replacing the action.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b75",
+      "nr": 18,
+      "germanName": "Bogenschießtraining",
+      "before": {
+        "de": "Du verbesserst deine Armbrustfähigkeiten im Training. +3 Geschicklichkeit pro Level",
+        "en": "You improve your arm Bow skills in training. +3 Dexterity per level"
+      },
+      "after": {
+        "de": "Verbessert deine Fertigkeiten mit dem Bogen. +2 Geschicklichkeit und +1 Agilität pro Skilllevel.",
+        "en": "Improves your bow skills. +2 Dexterity and +1 Agility per skill level."
+      },
+      "reason": "Bow name, English text and Dexterity field agree. Additional Agility field remains for separate effect review.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b77",
+      "nr": 20,
+      "germanName": "Brecher des Lichts",
+      "before": {
+        "de": "Mache zwei schnelle und gezielte Stiche mit einem Dolch. Der zweite Stich hat eine herhöte Chance kritisch zu Treffen.",
+        "en": "Make two quick and targeted stabs with a dagger. The second stab has an increased chance of hitting critically."
+      },
+      "after": {
+        "de": "Führt zwei schnelle Dolchstiche aus. Der zweite Stich hat eine erhöhte Chance auf einen kritischen Treffer.",
+        "en": "Performs two quick dagger strikes. The second strike has an increased chance to critically hit."
+      },
+      "reason": "Preserve established special effect.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b7b",
+      "nr": 24,
+      "germanName": "Doppelschuss",
+      "before": {
+        "de": "Schieße zwei pfeile schnell hintereinander.",
+        "en": "Shoot two arrows quickly one after the other."
+      },
+      "after": {
+        "de": "Schießt zwei Pfeile schnell hintereinander auf dein Ziel.",
+        "en": "Shoots two arrows at your target in quick succession."
+      },
+      "reason": "Preserve double shot.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b87",
+      "nr": 36,
+      "germanName": "Energieschlag",
+      "before": {
+        "de": "Du wirfst einen Ball aus purem Licht auf dein Ziel.",
+        "en": "You throw a ball of pure light at your target."
+      },
+      "after": {
+        "de": "Wirft einen Ball aus purem Licht auf dein Ziel.",
+        "en": "Throws a ball of pure light at your target."
+      },
+      "reason": "Preserve existing action.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b8a",
+      "nr": 39,
+      "germanName": "Erdbrecher",
+      "before": {
+        "de": "Der Boden bricht auf, nahe Gegner werden zurückgeschleudert und entfernte Gegner.",
+        "en": "The ground breaks up, knocking back nearby enemies and distant enemies."
+      },
+      "after": {
+        "de": "Bricht den Boden auf und schleudert nahe Gegner zurück.",
+        "en": "Breaks open the ground and knocks nearby enemies back."
+      },
+      "reason": "Remove unfinished fragment about distant enemies, do not invent its effect.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b94",
+      "nr": 49,
+      "germanName": "Feuerball",
+      "before": {
+        "de": "Ein einfacher Feuerzauber, in Perfektion jedoch, eine Mächtige Waffe.",
+        "en": "You throw a fireball at your target."
+      },
+      "after": {
+        "de": "Schleudert einen Feuerball auf dein Ziel.",
+        "en": "Hurls a fireball at your target."
+      },
+      "reason": "Use the clear existing English action in both languages.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b95",
+      "nr": 50,
+      "germanName": "Feuerlanze",
+      "before": {
+        "de": "Du erzeugst eine Feuerlanze, die einen Gegner durchbohrt ",
+        "en": "You summon a firelance that pierces an enemy."
+      },
+      "after": {
+        "de": "Erschafft eine Feuerlanze, die einen Gegner durchbohrt.",
+        "en": "Creates a lance of fire that pierces an enemy."
+      },
+      "reason": "Preserve fire lance.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b96",
+      "nr": 51,
+      "germanName": "Feuerpfeil",
+      "before": {
+        "de": "Schieße einen brenneden Pfeil auf dein Ziel.",
+        "en": "You shoot a fire arrow at your target."
+      },
+      "after": {
+        "de": "Schießt einen brennenden Pfeil auf dein Ziel.",
+        "en": "Shoots a burning arrow at your target."
+      },
+      "reason": "Correct spelling.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04b9d",
+      "nr": 58,
+      "germanName": "Göttliche Heilung",
+      "before": {
+        "de": "Nutze die Macht von Aurora um eine große menge Leben eines verbündeten wiederherzustellen.",
+        "en": "Use the power of Aurora to restore a large amount of life to an ally."
+      },
+      "after": {
+        "de": "Nutzt die Macht Auroras, um einem Verbündeten eine große Menge Leben wiederherzustellen.",
+        "en": "Uses the power of Aurora to restore a large amount of health to an ally."
+      },
+      "reason": "Preserve healing target, invent no scaling.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04ba7",
+      "nr": 68,
+      "germanName": "Kristallisierte Wasserspähre",
+      "before": {
+        "de": "Schleudere eine Kugel aus Eis auf deinen Gegner, diese zerspringt und kann einen Gegner kurzzeitig außer Gefecht setzen.",
+        "en": "You throw an Ice sphere at your target, which can freezes on impact."
+      },
+      "after": {
+        "de": "Schleudert eine Eiskugel auf dein Ziel. Sie zerspringt beim Aufprall und kann den Gegner kurzzeitig außer Gefecht setzen.",
+        "en": "Hurls a sphere of ice at your target. It shatters on impact and can briefly incapacitate the enemy."
+      },
+      "reason": "Align languages to the more complete German effect.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04ba8",
+      "nr": 69,
+      "germanName": "Kugelblitz",
+      "before": {
+        "de": "Elektrische Fähigkeiten richten 15% mehr Schaden an, wenn das Ziel zuvor von einem Wasserspruch getroffen wurde.",
+        "en": "Electric skills do 15% more things if the target was previously hit by a water spell."
+      },
+      "after": {
+        "de": "Elektrische Fähigkeiten richten 15% mehr Schaden an, wenn das Ziel zuvor von einem Wasserspruch getroffen wurde.",
+        "en": "Electric skills deal 15% more damage if the target was previously hit by a water spell."
+      },
+      "reason": "German description supplies damage, not things.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bac",
+      "nr": 73,
+      "germanName": "Lucky Strike",
+      "before": {
+        "de": "Lucky Strike erhöht leicht deine Kritische Chance. +1 pro Level",
+        "en": "Lucky Strike is slightly increases your crit chance. +1 per Level"
+      },
+      "after": {
+        "de": "Lucky Strike erhöht leicht deine Kritische Chance. +1 pro Level",
+        "en": "Lucky Strike slightly increases your critical chance by 1 per skill level."
+      },
+      "reason": "Correct English grammar, preserve stated scaling.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bb2",
+      "nr": 79,
+      "germanName": "Mentale Erweiterung",
+      "before": {
+        "de": "Steigere deinen Magischen Agriff um 60 für 5 Minuten.",
+        "en": "Increase your magical attack by 60 for 5 minutes."
+      },
+      "after": {
+        "de": "Erhöht deinen magischen Angriff um 60 für 5 Minuten.",
+        "en": "Increases your magical attack by 60 for 5 minutes."
+      },
+      "reason": "Existing fields and English text agree.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bbb",
+      "nr": 88,
+      "germanName": "Salve",
+      "before": {
+        "de": "Schieße eine Salve aus Pfilen, die einen größeren Bereich treffen.",
+        "en": "Shoot a salve of arrows that hit a larger area."
+      },
+      "after": {
+        "de": "Schießt eine Salve aus Pfeilen auf einen größeren Bereich.",
+        "en": "Fires a volley of arrows over a larger area."
+      },
+      "reason": "Preserve area attack.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bc0",
+      "nr": 93,
+      "germanName": "Schildangriffstraining",
+      "before": {
+        "de": "Du versteckst dich nicht nur hinter dem Schild, du kämpfst mit ihm. + 2 Vitalität +1 Stärke",
+        "en": "You don't just hide behind the shield, you struggle with it. + 2 Vitality +1 Stenght"
+      },
+      "after": {
+        "de": "Verbessert deine Fertigkeiten im Kampf mit dem Schild. +2 Vitalität und +1 Stärke pro Skilllevel.",
+        "en": "Improves your skills in combat with a shield. +2 Vitality and +1 Strength per skill level."
+      },
+      "reason": "Correct English wording; numbers agree with German and fields.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bcb",
+      "nr": 104,
+      "germanName": "Seelenqual",
+      "before": {
+        "de": "Wenn Seelenfessel wirkt kannst du mit Seelenqual enormer Schaden am Ziel angerichtet werden.",
+        "en": "When Soul Shackle is active, you can deal enormous damage to the target with Soul Torment."
+      },
+      "after": {
+        "de": "Verursacht hohen Schaden am Ziel, solange Seelenfessel wirkt.",
+        "en": "Deals heavy damage to the target while Soul Shackle is active."
+      },
+      "reason": "Both descriptions agree on prerequisite; actual prerequisite configuration remains separate.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bd4",
+      "nr": 113,
+      "germanName": "Tödlicher Tanz",
+      "before": {
+        "de": "Ein spezielle Technik der Assassinen. Mit dieser Technik bewegst du dich zwischen mehreren Gegnern hin und her und fügst ihnen Schaden zu.",
+        "en": "A special technique of the assassins. With this technique you move back and forth between multiple opponents and deal damage to them."
+      },
+      "after": {
+        "de": "Setzt eine besondere Technik der Assassinen ein, bewegt dich zwischen mehreren Gegnern und fügt ihnen Schaden zu.",
+        "en": "Uses a special assassin technique to move between multiple enemies and deal damage to them."
+      },
+      "reason": "Preserve multi target action.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bd6",
+      "nr": 115,
+      "germanName": "Überschallklinge",
+      "before": {
+        "de": "Mit der Überschallklingt schneidest du die Luft und erzeugst einen Schallstoß, der Gegnern im Umkreis Schaden zufügt.",
+        "en": "With the supersonic blade you cut through the air and create a shock wave that damages enemies in the area."
+      },
+      "after": {
+        "de": "Schneidet die Luft mit einer Überschallklinge und erzeugt einen Schallstoß, der Gegnern im Umkreis Schaden zufügt.",
+        "en": "Cuts through the air with a supersonic blade, creating a shock wave that damages nearby enemies."
+      },
+      "reason": "Correct typo, preserve action.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bd7",
+      "nr": 116,
+      "germanName": "Unerschöpfliche Hoffnung",
+      "before": {
+        "de": "Dein Glaube ist so stark, dass deine Hoffnung unerschöpflich ist. Erhalte 2 Mangieangriff für jeden Glaubenspunkt.",
+        "en": "Your faith is so strong that your hope is inexhaustible. Gain 2.5 Mangie attack for every faith point."
+      },
+      "after": {
+        "de": "Dein Glaube gibt dir unerschöpfliche Hoffnung. Du erhältst 2 Punkte magischen Angriff für jeden Glaubenspunkt.",
+        "en": "Your faith gives you inexhaustible hope. Gain 2 points of magical attack for each point of Faith."
+      },
+      "reason": "German text and matk2 agree; English 2.5 corrected.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bda",
+      "nr": 119,
+      "germanName": "Verbessertes Nachladen",
+      "before": {
+        "de": "Deine Fähigkeit in einem Hiterhalt ist unübertroffen. Erhalte für jeden Hinterhaltspunkt 2 Angriffspunkte.",
+        "en": "Your ability in a hit-and-run is unmatched. Gain 2 attack points for each ambush point."
+      },
+      "after": {
+        "de": "Deine Fähigkeiten im Hinterhalt sind unübertroffen. Du erhältst 2 Angriffspunkte für jeden Ambush Punkt.",
+        "en": "Your skill in an ambush is unmatched. Gain 2 attack points for each point of Ambush."
+      },
+      "reason": "Preserve existing conversion text and coefficient.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bef",
+      "nr": 140,
+      "germanName": "Standhaft",
+      "before": {
+        "de": "Erhöhe deine deine Standhaftigkeit physisch um 4 Vitalität und magisch um 2 Willenskraft.",
+        "en": "Increase your physical stamina by 4 and your magical stamina by 2."
+      },
+      "after": {
+        "de": "Erhöht deine Vitalität um 4 und deine Weisheit um 2.",
+        "en": "Increases your Vitality by 4 and Wisdom by 2."
+      },
+      "reason": "Clarify attributes using matching vita4/wis2 fields.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bf2",
+      "nr": 143,
+      "germanName": "Immunität",
+      "before": {
+        "de": "Erhöhe deine Willenskraft um 3 und deine magische Abwehr um 6.",
+        "en": "Increase your resistance to magic by 6 and your resistance to physical attacks by 3."
+      },
+      "after": {
+        "de": "Erhöht deine Weisheit um 3 und deine magische Verteidigung um 6.",
+        "en": "Increases your Wisdom by 3 and magical defense by 6."
+      },
+      "reason": "Correct English physical-defense mistranslation; German intent and fields agree.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bf3",
+      "nr": 144,
+      "germanName": "Rüstungstraining",
+      "before": {
+        "de": "Erhöhe deine Abwehr um 6 und deine Vitalität um 2.",
+        "en": "Increase your defense by 6 and your vitality by 2."
+      },
+      "after": {
+        "de": "Verbessert deine Rüstungsbeherrschung und erhöht deine physische Verteidigung um 6 und deine Vitalität um 2.",
+        "en": "Improves your armor proficiency, increasing physical defense by 6 and Vitality by 2."
+      },
+      "reason": "Preserve training identity and existing modifiers.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04bff",
+      "nr": 156,
+      "germanName": "Waldläufer",
+      "before": {
+        "de": "Erhöhe die Geschicklichkeit um 2 und die Agilität um 1.",
+        "en": "Increase the Dexterity and Agility by 1."
+      },
+      "after": {
+        "de": "Erhöhe die Geschicklichkeit um 2 und die Agilität um 1.",
+        "en": "Increases Dexterity by 2 and Agility by 1."
+      },
+      "reason": "German text and dex2/agi1 agree. Other numeric fields remain for separate review.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c04",
+      "nr": 161,
+      "germanName": "Energie der Wut",
+      "before": {
+        "de": "Erhöhe deinen Angriff kurzzeitig.",
+        "en": "Increase your attack by 50 points for a short time."
+      },
+      "after": {
+        "de": "Erhöht deinen physischen Angriff um 50 für 45 Sekunden.",
+        "en": "Increases your physical attack by 50 for 45 seconds."
+      },
+      "reason": "Existing English text and patk50/dur45 agree.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c0a",
+      "nr": 167,
+      "germanName": "Entgiftung",
+      "before": {
+        "de": "Du bist Imun gegen Vergiftungseffekte jeglicher Art.",
+        "en": "You are immune to poisoning effects of any kind."
+      },
+      "after": {
+        "de": "Macht dich für 60 Sekunden immun gegen Vergiftungseffekte.",
+        "en": "Makes you immune to poison effects for 60 seconds."
+      },
+      "reason": "Preserve poison immunity and existing duration.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c20",
+      "nr": 189,
+      "germanName": "Herz des Verräters",
+      "before": {
+        "de": "Halte deine Freunde nah und deine Feinde noch näher. Erhöhe deine Geschwindigkeit und deine Angriffsgeschwindigkeit.",
+        "en": "The heart of the traitor beats in you and increases your attack speed."
+      },
+      "after": {
+        "de": "Halte deine Freunde nah und deine Feinde noch näher. Erhöhe deine Geschwindigkeit und deine Angriffsgeschwindigkeit.",
+        "en": "Keep your friends close and your enemies closer. Increases your movement speed and attack speed."
+      },
+      "reason": "German text and movementSpeed/atkSpeed fields agree; add omitted movement effect.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c25",
+      "nr": 194,
+      "germanName": "Herr der Elemente",
+      "before": {
+        "de": "Steigere die Werte deiner Gruppe",
+        "en": "Increase the magical attack of your group."
+      },
+      "after": {
+        "de": "Steigere die Werte deiner Gruppe",
+        "en": "Increases the attributes of your group."
+      },
+      "reason": "German group attribute description agrees with primary-stat fields, not a direct magical attack buff.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c31",
+      "nr": 206,
+      "germanName": "Lunare Inkanation",
+      "before": {
+        "de": "Lasse den Körper eines Verbündeten im Mondlicht baden um ihn zu erneruen.",
+        "en": "Let the body of an ally bathe in moonlight to renew it."
+      },
+      "after": {
+        "de": "Badet einen Verbündeten im Mondlicht und erneuert seinen Körper.",
+        "en": "Bathes an ally in moonlight to renew their body."
+      },
+      "reason": "Preserve action; restore resource values require separate interpretation.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c33",
+      "nr": 208,
+      "germanName": "Das ewige Wissen",
+      "before": {
+        "de": "Der Ausbau deines Wissens über die Magie steigert verleiht dir mehr Macht.",
+        "en": "The expansion of your knowledge about magic gives you more power."
+      },
+      "after": {
+        "de": "Erweitert dein Wissen über Magie und verleiht dir mehr Macht.",
+        "en": "Expands your knowledge of magic and grants you greater power."
+      },
+      "reason": "Correct grammar, preserve passive theme.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c35",
+      "nr": 210,
+      "germanName": "Lichtblitz",
+      "before": {
+        "de": "Schleudere einen grillen Lichtblitz auf deine Feinde.",
+        "en": "Hurl a grillen light flash at your enemies."
+      },
+      "after": {
+        "de": "Schleudert einen grellen Lichtblitz auf deine Feinde.",
+        "en": "Hurls a brilliant flash of light at your enemies."
+      },
+      "reason": "Correct mistaken adjective and translation.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c3b",
+      "nr": 216,
+      "germanName": "Heilige Vernichtung",
+      "before": {
+        "de": "Ein Salve aus Lichtwellen trifft deine Feinde und vernichtet sie.",
+        "en": "A salvo of light waves hits your enemies and destroys them."
+      },
+      "after": {
+        "de": "Entfesselt eine Salve aus Lichtwellen, die deine Feinde trifft.",
+        "en": "Unleashes a volley of light waves that strikes your enemies."
+      },
+      "reason": "Preserve attack; missing numeric definition remains open.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c3d",
+      "nr": 218,
+      "germanName": "Licht kristallenes Gefängnis",
+      "before": {
+        "de": "Erschaffe ein Licht kristallenes Gefängnis, dass sogar einen hochrangigen Gegner, einzusperren Vermag.",
+        "en": "Create a light crystal prison that can even imprison a high-ranking opponent."
+      },
+      "after": {
+        "de": "Erschafft ein kristallenes Gefängnis aus Licht, das auch mächtige Gegner einschließen kann.",
+        "en": "Creates a crystalline prison of light that can imprison even powerful enemies."
+      },
+      "reason": "Preserve imprisonment; no unsupported target guarantee.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c3e",
+      "nr": 219,
+      "germanName": "Manaexplosion",
+      "before": {
+        "de": "Opfere dein gesmates Mana für eine gewaltige Explosion, je mehr Mana du hast, desto stärker wird der Angriff.",
+        "en": "Sacrifice all your mana for a massive explosion, the more mana you have, the stronger the attack."
+      },
+      "after": {
+        "de": "Opfert dein gesamtes Mana für eine gewaltige Explosion. Je mehr Mana du opferst, desto stärker wird der Angriff.",
+        "en": "Sacrifices all your mana for a massive explosion. The more mana you sacrifice, the stronger the attack."
+      },
+      "reason": "Preserve existing resource-dependent mechanic; formula not invented.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c44",
+      "nr": 225,
+      "germanName": "Macht des Geistes",
+      "before": {
+        "de": "Steigere die magische Verteidigung deiner Gruppe.",
+        "en": "Increase the magical attacks of your group."
+      },
+      "after": {
+        "de": "Erhöht die magische Verteidigung deiner Gruppe um 18 für 30 Minuten.",
+        "en": "Increases your group’s magical defense by 18 for 30 minutes."
+      },
+      "reason": "User confirmed group defense mdef18 and1800s.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c45",
+      "nr": 226,
+      "germanName": "Seelenbegleiter",
+      "before": {
+        "de": "Beschwöre deinen Seelenbegleiter, um deine Feinde anzugreifen..",
+        "en": "Sommon your Spirit Animal, to attack your enemies."
+      },
+      "after": {
+        "de": "Beschwört deinen Seelenbegleiter, der deine Feinde angreift.",
+        "en": "Summons your spirit animal to attack your enemies."
+      },
+      "reason": "Correct spelling and punctuation.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c46",
+      "nr": 227,
+      "germanName": "Dämonische Schockwelle",
+      "before": {
+        "de": "Du schlägst auf den Boden vor dir und verursachst gelaten schaden der Kegelförmig vor dir alle Gegner trifft.",
+        "en": "You hit the ground in front of you and cause damage in a cone shape in front of you that hits all enemies."
+      },
+      "after": {
+        "de": "Schlägt auf den Boden vor dir und erzeugt eine Schockwelle, die Gegner in einem kegelförmigen Bereich trifft.",
+        "en": "Strikes the ground in front of you, creating a shock wave that hits enemies in a cone."
+      },
+      "reason": "Preserve established cone action.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c4e",
+      "nr": 235,
+      "germanName": "Meteoritenschauer",
+      "before": {
+        "de": "Begrabe deinen Feinde unter einem mächtigen Meteoritenschauer.",
+        "en": "Bury your enemies under a powerful meteor shower."
+      },
+      "after": {
+        "de": "Begräbt deine Feinde unter einem mächtigen Meteoritenschauer.",
+        "en": "Buries your enemies beneath a powerful meteor shower."
+      },
+      "reason": "Correct spelling.",
+      "status": "applied",
+      "onlyDescriptions": true
+    },
+    {
+      "skillID": "6acc1c7e4826525c70d04c4f",
+      "nr": 236,
+      "germanName": "Teufelspackt",
+      "before": {
+        "de": "Führe Teuelspackt aus um einen zufälligen Buff zu erhalten, aber vorsicht...",
+        "en": "Cast Devil's Pact to receive a random buff, but be careful..."
+      },
+      "after": {
+        "de": "Schließt einen Teufelspakt und erhält einen zufälligen Buff. Der Pakt birgt ein Risiko.",
+        "en": "Makes a devil’s pact and grants a random buff. The pact carries a risk."
+      },
+      "reason": "Preserve random buff and warning; no penalty invented.",
+      "status": "applied",
+      "onlyDescriptions": true
+    }
+  ],
+  "majorIssues": [
+    {
+      "nr": 4,
+      "name": "Abschöpfen",
+      "issue": "Text nennt Intelligence +2 und Wisdom +1. Daten enthalten Intelligence +2 und Victim +1.",
+      "status": "resolved",
+      "decision": {
+        "str": 2,
+        "vita": 1,
+        "int": 0,
+        "vic": 0,
+        "scaling": "perSkillLevel",
+        "classAssignment": "unchanged"
+      }
+    },
+    {
+      "nr": 6,
+      "name": "Adrenalin",
+      "issue": "Werte, Dauer, Cooldown und Levelskalierung gespeichert. Kampfbedingung über 15 Sekunden gespeichert; Proc-Chance und Auswertungstakt offen.",
+      "status": "partiallyResolved",
+      "decision": {
+        "str": 0.01,
+        "int": 0.01,
+        "statBonusUnits": {
+          "str": "fraction",
+          "int": "fraction"
+        },
+        "scaling": "defined",
+        "balancingReview": true,
+        "category": "passive",
+        "dmgType": "passive",
+        "activation": "automatic",
+        "maxSkillLv": 5,
+        "cd": 120,
+        "dur": 30,
+        "statScaling": {
+          "str": {
+            "type": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          },
+          "int": {
+            "type": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          }
+        },
+        "triggerConditionStatus": "pending",
+        "triggerCondition": {
+          "type": "sustainedCombat",
+          "combatDurationSeconds": 15,
+          "comparison": "greaterThan",
+          "chancePerCheck": null
+        },
+        "description_de": "Nach mehr als 15 Sekunden im Kampf kann Adrenalin ausgelöst werden. Es erhöht deine Stärke und Intelligenz für 30 Sekunden um 1 Prozent je Skillstufe, bis zu 5 Prozent. Der Cooldown beträgt 120 Sekunden. Die Auslösewahrscheinlichkeit ist noch festzulegen.",
+        "description_eng": "After more than 15 seconds in combat, Adrenaline can trigger. It increases Strength and Intelligence for 30 seconds by 1 percent per skill level, up to 5 percent. The cooldown is 120 seconds. The trigger probability is still to be defined."
+      }
+    },
+    {
+      "nr": 7,
+      "name": "Armbursttraining",
+      "issue": "Text nennt Dexterity +2 und Agility +1 je Level; Daten enthalten jeweils +5.",
+      "status": "resolved",
+      "decision": {
+        "dex": 1,
+        "agi": 2,
+        "scaling": "perSkillLevel"
+      }
+    },
+    {
+      "nr": 16,
+      "name": "Wasserfesseln",
+      "issue": "Startdauer 1 Sekunde bestätigt. Dauer soll mit Level steigen, Cooldown sinken; genaue Schritte noch nicht bestätigt. 19 Steigerungen zwischen Level 1 und 20.",
+      "status": "resolved",
+      "decision": {
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            1,
+            1,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            3
+          ]
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 38,
+          "perLevel": -0.5
+        },
+        "durationAtLevel20": 3,
+        "cooldownAtLevel20": 28.5,
+        "damageScaling": "pending balancing",
+        "pvpReview": "Review control chains in final balancing round"
+      }
+    },
+    {
+      "nr": 28,
+      "name": "Eiserner Schild",
+      "issue": "Deutsch beschreibt passive Verteidigung; Englisch das Blockieren des nächsten Angriffs. Daten enthalten block5/vita2/wis1.",
+      "status": "resolved",
+      "decision": {
+        "effect": "passiveStatBonus",
+        "descriptionSource": "German",
+        "numericValues": "unchanged",
+        "blockUnit": "pending"
+      }
+    },
+    {
+      "nr": 32,
+      "name": "Elementarenergie",
+      "issue": "Automatischer Proc bestätigt: Level 1 +2 Intelligence für den Anwender und -10 % Magical Defense beim Gegner, 30 Sekunden, 120 Sekunden Cooldown. Triggerbedingung und weitere Skalierung offen.",
+      "status": "partiallyResolved",
+      "decision": {
+        "int": 2,
+        "mdef": -0.1,
+        "dur": 30,
+        "cd": 120,
+        "dmgType": "passive",
+        "category": "passive",
+        "activation": "automatic",
+        "triggerConditionStatus": "pending",
+        "statBonusUnits": {
+          "int": "flat",
+          "mdef": "fraction"
+        },
+        "statBonusTargets": {
+          "int": "self",
+          "mdef": "enemy"
+        },
+        "description_de": "Löst automatisch einen vorübergehenden Effekt aus. Auf Skilllevel 1 erhältst du für 30 Sekunden +2 Intelligenz und die magische Verteidigung des betroffenen Gegners sinkt um 10 %. Der Effekt kann frühestens nach 120 Sekunden erneut ausgelöst werden.",
+        "description_eng": "Automatically triggers a temporary effect. At skill level 1, you gain +2 Intelligence for 30 seconds and the affected enemy loses 10% of their magical defense for the same duration. The effect cannot trigger again for 120 seconds.",
+        "scaling": "pending",
+        "durationReference": "skillLevel1",
+        "cooldownReference": "skillLevel1",
+        "runtimeTrigger": "notImplemented"
+      },
+      "effectsDecision": {
+        "effectsVersion": 1,
+        "effects": [
+          {
+            "key": "self-intelligence",
+            "type": "statModifier",
+            "target": "self",
+            "stat": "int",
+            "value": 2,
+            "unit": "flat",
+            "durationSeconds": 30
+          },
+          {
+            "key": "enemy-magic-defense",
+            "type": "statModifier",
+            "target": "enemy",
+            "stat": "mdef",
+            "value": -0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "durationSeconds": 30
+          }
+        ],
+        "pending": [
+          "levelScaling",
+          "triggerCondition"
+        ]
+      }
+    },
+    {
+      "nr": 34,
+      "name": "Energieausbruch",
+      "issue": "Text verspricht Schild10%HP,1% Manaverbrauch,10% Schaden und15s. Daten health0.04/mana0.04; getrennte Effekte/Einheiten fehlen.",
+      "status": "resolved",
+      "effectsDecision": {
+        "effectsVersion": 1,
+        "effects": [
+          {
+            "key": "shield",
+            "type": "shield",
+            "target": "self",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "maxHealth",
+            "damageTypes": [
+              "physical",
+              "magical"
+            ],
+            "durationSeconds": 15
+          },
+          {
+            "key": "basic-attack-bonus",
+            "type": "damageBonus",
+            "target": "self",
+            "value": 0.1,
+            "unit": "fraction",
+            "appliesTo": "basicAttack",
+            "durationSeconds": 15,
+            "endWith": "shield"
+          },
+          {
+            "key": "mana-drain",
+            "type": "resourceDrain",
+            "target": "self",
+            "value": 0.01,
+            "unit": "fraction",
+            "resource": "mana",
+            "reference": "maxMana",
+            "intervalSeconds": 1,
+            "durationSeconds": 15,
+            "endWith": "shield"
+          }
+        ],
+        "pending": [
+          "levelScaling",
+          "cooldown"
+        ]
+      },
+      "decision": {
+        "effects": [
+          {
+            "key": "shield",
+            "type": "shield",
+            "target": "self",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "maxHealth",
+            "valueScaling": {
+              "type": "table",
+              "values": [
+                0.1,
+                0.1,
+                0.1,
+                0.1,
+                0.12,
+                0.12,
+                0.12,
+                0.12,
+                0.12,
+                0.15
+              ]
+            },
+            "damageTypes": [
+              "physical",
+              "magical"
+            ],
+            "durationSeconds": 15,
+            "durationScaling": {
+              "type": "table",
+              "values": [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                18
+              ]
+            }
+          },
+          {
+            "key": "basic-attack-bonus",
+            "type": "damageBonus",
+            "target": "self",
+            "value": 0.1,
+            "unit": "fraction",
+            "appliesTo": "basicAttack",
+            "durationSeconds": 15,
+            "durationScaling": {
+              "type": "table",
+              "values": [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                18
+              ]
+            },
+            "endWith": "shield"
+          },
+          {
+            "key": "mana-drain",
+            "type": "resourceDrain",
+            "target": "self",
+            "value": 0.01,
+            "unit": "fraction",
+            "reference": "maxMana",
+            "resource": "mana",
+            "intervalSeconds": 1,
+            "durationSeconds": 15,
+            "durationScaling": {
+              "type": "table",
+              "values": [
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                15,
+                18
+              ]
+            },
+            "endWith": "shield",
+            "onInsufficientResource": "disableEffects",
+            "disablesEffects": [
+              "basic-attack-bonus",
+              "mana-drain"
+            ]
+          }
+        ],
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            15,
+            18
+          ]
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 120,
+          "perLevel": -3.3333333333333335
+        },
+        "cooldownAtLevel10": 90,
+        "intermediateCooldown": "Linear interpolation between confirmed endpoints",
+        "manaDepletion": "Disable attack bonus and drain only; shield remains",
+        "manaReactivation": "pending whether bonus can restart after mana recovery"
+      }
+    },
+    {
+      "nr": 35,
+      "name": "Energieentladung",
+      "issue": "Text nennt30% Lebensopfer, health ist-0.05. Levelskalierung und Bedeutung dieses Felds klären.",
+      "status": "partiallyResolved",
+      "decision": {
+        "resourceCosts": [
+          {
+            "resource": "health",
+            "reference": "maxHealth",
+            "unit": "fraction",
+            "scaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": -0.01
+            }
+          }
+        ],
+        "costAtLevel10": 0.21,
+        "damageScaling": "pending",
+        "baseDamage": 787,
+        "cooldown": "unchanged",
+        "insufficientHealth": "Cannot activate; applies to all skills with health costs"
+      }
+    },
+    {
+      "nr": 43,
+      "name": "Erweiterung der Sinne",
+      "issue": "Zuordnung und Werte bestätigt: Jäger, Nachtjäger/Seelenjäger, Schurke/Schattenkrieger; Dexterity +3 und Agility +4. Levelskalierung noch offen.",
+      "status": "partiallyResolved",
+      "expansionDecision": {
+        "charClass": [
+          "Archer",
+          "Hunter",
+          "Summoner",
+          "Soulseeker",
+          "Villian",
+          "Shadowwarrior"
+        ],
+        "stats": {
+          "Dex": 3,
+          "Agi": 4,
+          "Str": 0,
+          "Amb": 0
+        },
+        "levelScaling": "pending"
+      },
+      "activationDecision": {
+        "type": "permanentPassive",
+        "duration": "none",
+        "cooldown": "none",
+        "supersedes": "Earlier tentative active/group buff and duration proposals",
+        "numericScaling": "pending balancing round"
+      }
+    },
+    {
+      "nr": 44,
+      "name": "Erweiterung des Geistes",
+      "issue": "Bestätigt sind vier Attribute+3 und300s aktiv. Alter Text nennt nur Intelligence+3 je Level. Skalierung je Level offen.",
+      "status": "needsDecision",
+      "expansionDecision": {
+        "charClass": [
+          "Herbalist",
+          "Witcher",
+          "Ritualist",
+          "Bloodmage",
+          "Druide",
+          "Alchemist",
+          "Healer",
+          "Priest",
+          "Shamane",
+          "High Elves",
+          "Luminet",
+          "Lightmage"
+        ],
+        "stats": {},
+        "levelScaling": "pending"
+      },
+      "activationDecision": {
+        "type": "permanentPassive",
+        "duration": "none",
+        "cooldown": "none",
+        "supersedes": "Earlier tentative active/group buff and duration proposals",
+        "numericScaling": "pending balancing round"
+      }
+    },
+    {
+      "nr": 45,
+      "name": "Erweiterung des Körpers",
+      "issue": "Permanente Grundwirkung und passende Beschreibung gespeichert; endgültige Levelskalierung bleibt offen.",
+      "status": "partiallyResolved",
+      "expansionDecision": {
+        "charClass": [
+          "Knife",
+          "Templar",
+          "Gladiator",
+          "Berserker",
+          "Abenteuer",
+          "Butcher",
+          "Destroyer"
+        ],
+        "stats": {},
+        "levelScaling": "pending"
+      },
+      "activationDecision": {
+        "type": "permanentPassive",
+        "duration": "none",
+        "cooldown": "none",
+        "supersedes": "Earlier tentative active/group buff and duration proposals",
+        "numericScaling": "pending balancing round"
+      }
+    },
+    {
+      "nr": 55,
+      "name": "Brecher des Geistes",
+      "issue": "Text nennt magische Verteidigung-10% für30s; dur5 und kein entsprechender mdef-Wert.",
+      "status": "resolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "enemy-magic-defense",
+            "type": "statModifier",
+            "target": "enemy",
+            "stat": "mdef",
+            "value": -0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "durationSeconds": 21,
+            "durationScaling": {
+              "type": "linear",
+              "base": 21,
+              "perLevel": 1
+            }
+          }
+        ],
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 43,
+          "perLevel": -1
+        },
+        "scalingFormula": "base + (skillLevel - 1) * perLevel",
+        "durationAtLevel10": 30,
+        "cooldownAtLevel10": 34,
+        "physicalAttack": "unchanged",
+        "damageScaling": "pending balancing round"
+      }
+    },
+    {
+      "nr": 59,
+      "name": "Göttlicher Schutz",
+      "issue": "Deutsch:30% Schadensreduktion für5s. Englisch:+10% physische Verteidigung für30s. Daten dur12,health500,vita25,pdef55,mdef55.",
+      "status": "resolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "projected-shield-protection",
+            "type": "damageReduction",
+            "target": "alliesBehindCaster",
+            "area": "projectedShield",
+            "value": 0.3,
+            "unit": "fraction",
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": 0.05
+            },
+            "durationSeconds": 5,
+            "durationScaling": {
+              "type": "linear",
+              "base": 5,
+              "perLevel": 2
+            }
+          }
+        ],
+        "removedLegacyBonuses": [
+          "health",
+          "vita",
+          "pdef",
+          "mdef"
+        ],
+        "cooldown": "unchanged: 77 seconds",
+        "spatialRules": "pending range, angle, caster inclusion and attack eligibility",
+        "formula": "base + (skillLevel - 1) * perLevel"
+      }
+    },
+    {
+      "nr": 62,
+      "name": "Internal Zyklon",
+      "issue": "Beide Texte8s; dur5. Angriffs-/Effektdauer trennen.",
+      "status": "resolved",
+      "decision": {
+        "durationScaling": {
+          "type": "linear",
+          "base": 6,
+          "perLevel": 1
+        },
+        "durationAtLevel5": 10,
+        "formula": "base + (skillLevel - 1) * perLevel",
+        "damageScaling": "pending",
+        "castTime": "pending",
+        "cooldown": "unchanged"
+      },
+      "balancingNotes": {
+        "initialHitAndDamageOverTime": true,
+        "tickIntervalSeconds": 1,
+        "tickDamage": "pending; 50 is an example only",
+        "combinedDamageBudget": "Review initial hit plus all ticks together",
+        "crowdControl": "Review roots, stuns and chained crowd control keeping targets in the area",
+        "movement": "Following target versus remaining in an area pending",
+        "reminder": "Explicitly raise these issues when reviewing this skill in the final balancing round"
+      }
+    },
+    {
+      "nr": 71,
+      "name": "Lebensessenz",
+      "issue": "Text heilt3% des maximalen Lebens; health113 ohne Modus oder Formel. Nicht ungeprüft113HP daraus machen.",
+      "status": "resolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "life-essence-heal",
+            "type": "heal",
+            "target": "allyOrCompanion",
+            "reference": "targetMaxHealth",
+            "value": 0.03,
+            "unit": "fraction",
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.03,
+              "perLevel": 0.005
+            },
+            "durationSeconds": 0
+          }
+        ],
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 55,
+          "perLevel": -3
+        },
+        "healingAtLevel5": 0.05,
+        "cooldownAtLevel5": 43,
+        "formula": "base + (skillLevel - 1) * perLevel"
+      }
+    },
+    {
+      "nr": 75,
+      "name": "Verstärkung des Körpers",
+      "issue": "Text Physical Attack+35; patk20. Physical Defense60 und300s stimmen.",
+      "status": "partiallyResolved",
+      "decision": {
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 35,
+            "perLevel": 5
+          },
+          "pdef": {
+            "type": "linear",
+            "base": 60,
+            "perLevel": 5
+          }
+        },
+        "attackAtLevel10": 80,
+        "defenseAtLevel10": 105,
+        "cooldown": 60,
+        "durationAtLevel1": 300,
+        "durationAtLevel10": 600,
+        "durationProgression": "pending",
+        "manaCosts": "pending",
+        "buffTarget": "pending self versus group",
+        "classAssignment": "unchanged; missing Berserker still pending",
+        "formula": "base + (skillLevel - 1) * perLevel"
+      },
+      "supportBuffDecision": {
+        "name": "Verstärkung des Körpers",
+        "attributes": [
+          "str",
+          "vita"
+        ],
+        "perSkillLevel": 2,
+        "duration": 300,
+        "maxSkillLv": 10,
+        "classAssignment": [
+          "Knife",
+          "Templar",
+          "Gladiator",
+          "Butcher",
+          "Destroyer",
+          "Berserker"
+        ]
+      }
+    },
+    {
+      "nr": 80,
+      "name": "Beweglichkeit",
+      "issue": "Text nennt Lauftempo; Daten agi3, keine movementSpeed. Agility wurde vom Nutzer mit Attack Speed verbunden.",
+      "status": "resolved",
+      "decision": {
+        "statScaling": {
+          "agi": {
+            "type": "linear",
+            "base": 2.5,
+            "perLevel": 0.5
+          },
+          "movementSpeed": {
+            "type": "linear",
+            "base": 0.1,
+            "perLevel": 0.01
+          }
+        },
+        "statBonusUnits": {
+          "agi": "flat",
+          "movementSpeed": "fraction"
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 0.5
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 120,
+          "perLevel": -2
+        },
+        "endValues": {
+          "agi": 7,
+          "movementSpeed": 0.19,
+          "duration": 24.5,
+          "cooldown": 102
+        },
+        "agilityConversion": "Attack speed and a minor contribution to movement speed; conversion formula pending",
+        "stacking": "Equipment and Agility movement contributions require later balancing review"
+      }
+    },
+    {
+      "nr": 105,
+      "name": "Seelentrennung",
+      "issue": "Deutsch erfordert Seelenqual; Englisch erfordert Seelenfessel. Richtigen Vorgängerskill festlegen.",
+      "status": "resolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "self-heal",
+            "type": "heal",
+            "target": "self",
+            "value": 150,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 150,
+              "perLevel": 150
+            },
+            "durationSeconds": 0
+          }
+        ],
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 180,
+          "perLevel": -5
+        },
+        "prerequisite": "Soul Torment must have been applied; sequence Soul Shackle -> Soul Torment -> Soul Separation",
+        "damageScaling": "pending",
+        "descriptionSource": "German confirmed; English corrected"
+      }
+    },
+    {
+      "nr": 123,
+      "name": "Wiederaufladung",
+      "issue": "Text verkürzt Cooldowns5 bis15s; dur-5. Eine Cooldownreduktionsformel fehlt.",
+      "status": "partiallyResolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "all-skills-cooldown-reduction",
+            "type": "cooldownReduction",
+            "target": "self",
+            "appliesTo": "allSkills",
+            "value": 5,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 5,
+              "perLevel": 5
+            },
+            "durationSeconds": 0
+          }
+        ],
+        "minimumCooldown": "pending",
+        "balancing": "Compare complete Witcher skill set, then compare with other mage classes",
+        "scopeReview": "Determine eligible skills and exceptions only during full class review"
+      }
+    },
+    {
+      "nr": 141,
+      "name": "Eiserner Wille",
+      "issue": "Deutsch Vita+3 und unvollständiger Block-Prozentwert. Englisch Willenskraft+3/Vita+1. Daten vita3/block2. Block-Einheit klären.",
+      "status": "resolved",
+      "decision": {
+        "statScaling": {
+          "vita": {
+            "type": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "block": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "wis": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        },
+        "blockUnit": "flat rating",
+        "blockFormula": "pending versus penetration, chance caps and unblockable attacks",
+        "passive": "permanent while learned"
+      }
+    },
+    {
+      "nr": 147,
+      "name": "Erweckung der Leidenschaft",
+      "issue": "DB-Text Dexterity+3/Agility+2, Daten nur dex3; Tabelle hat Strength+6.",
+      "status": "partiallyResolved",
+      "decision": {
+        "dex": 3,
+        "agi": 2,
+        "duration": 1800,
+        "durationDecision": "pending comparison with other expansions",
+        "levelScaling": "pending"
+      },
+      "supportBuffDecision": {
+        "name": "Erweckung der Leidenschaft",
+        "attributes": [
+          "dex",
+          "agi"
+        ],
+        "perSkillLevel": 2,
+        "duration": 300,
+        "maxSkillLv": 5,
+        "classAssignment": "unchanged, pending review"
+      }
+    },
+    {
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "issue": "Text Strength+3/Intelligence+2; zusätzlich patk120 gespeichert. Buff gegenüber Schaden klären.",
+      "status": "resolved",
+      "decision": {
+        "str": 3,
+        "int": 2,
+        "patk": 120,
+        "levelScaling": "pending",
+        "reason": "Physical attack was added later for class balance"
+      }
+    },
+    {
+      "nr": 150,
+      "name": "Macht des Begleiters",
+      "issue": "Text stärkt Pet-Strength/Vitality+2; Daten enthalten stattdessen beide Angriffe/Verteidigungen jeweils5. Ziel/Bonusmodell klären.",
+      "status": "resolved",
+      "decision": {
+        "stats": [
+          "patk",
+          "matk",
+          "pdef",
+          "mdef"
+        ],
+        "perSkillLevel": 5,
+        "endValueEach": 50,
+        "classAssignment": "Hunter/Archer retained; possible Adventurer reassignment pending class review"
+      }
+    },
+    {
+      "nr": 173,
+      "name": "Geist des Kriegers",
+      "issue": "Deutsch Strength/Vitality jeweils3; Daten str4/vita1.",
+      "status": "resolved",
+      "decision": {
+        "statScaling": {
+          "str": {
+            "type": "linear",
+            "base": 4,
+            "perLevel": 1
+          },
+          "vita": {
+            "type": "linear",
+            "base": 1,
+            "perLevel": 1
+          }
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 180,
+          "perLevel": 10
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 600,
+          "perLevel": -20
+        },
+        "formula": "base + (skillLevel - 1) * perLevel"
+      }
+    },
+    {
+      "nr": 177,
+      "name": "Ungebrochen",
+      "issue": "Text Wiederaufstehen und40s weiterkämpfen; dur30. Weitere Daten Tempo/Angriffstempo, Wiederbelebungsmechanik fehlt strukturiert.",
+      "status": "resolved",
+      "decision": {
+        "effects": [
+          {
+            "restoredHealthFraction": 0.8,
+            "healingAllowed": true,
+            "endsOnDeath": true,
+            "disablesEffects": [],
+            "trigger": "lethalDamage",
+            "diesAtEnd": true,
+            "valueScaling": {
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "deathReprieve",
+            "target": "self",
+            "allowedRaces": [],
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "key": "last-stand"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.1,
+              "perLevel": 0.011111111111111112,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "atkSpeed",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-attack-speed"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": 0.016666666666666666,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "movementSpeed",
+            "value": 0.3,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-movement-speed"
+          }
+        ],
+        "cooldown": 300,
+        "duration": 30,
+        "pveHealingVariant": "not selected",
+        "levelScaling": "pending; earlier 40-second endpoint not applied",
+        "runtimeRules": "80% max health at phase start; healing allowed, death ends phase, mandatory death at end, revival only after death",
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 600,
+          "perLevel": -33.333333333333336
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112
+        },
+        "intermediateValues": "Linear interpolation of confirmed endpoints"
+      }
+    },
+    {
+      "nr": 184,
+      "name": "Hinterhältige Falle",
+      "issue": "Text speichert Schaden30s und wiederholt ihn; dur600. Trigger und Zeitfenster nicht strukturiert.",
+      "status": "partiallyResolved",
+      "decision": {
+        "effects": [
+          {
+            "damageBasis": "actualHealthDamage",
+            "applyMitigationAgain": false,
+            "cancelOnCasterDeath": true,
+            "cancelOnTargetDeath": true,
+            "disablesEffects": [],
+            "hitChance": 0.5,
+            "hitChanceAtMaxLevel": 0.6,
+            "valueAtMaxLevel": 0.9,
+            "durationAtMaxLevelSeconds": 30,
+            "progressionStatus": "pending",
+            "damageSource": "caster",
+            "excludeReplayDamage": true,
+            "valueScaling": {
+              "values": []
+            },
+            "durationScaling": {
+              "values": []
+            },
+            "type": "damageReplay",
+            "target": "enemy",
+            "allowedRaces": [],
+            "value": 0.8,
+            "unit": "fraction",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "key": "collected-damage-replay"
+          }
+        ],
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 120,
+          "perLevel": -2
+        },
+        "formulaCooldown": "base + (skillLevel - 1) * perLevel",
+        "intermediateEffectValues": "pending balancing",
+        "runtime": "Dedicated server damage tracking pending",
+        "damageAccounting": "Actual damage after mitigation/shields; do not mitigate replay again; replay share still applies",
+        "cancelOnDeath": "Caster or target death cancels effect"
+      }
+    },
+    {
+      "nr": 193,
+      "name": "Macht des Wassers",
+      "issue": "Deutsch Manaregeneration; Englisch magischer Angriff. Daten matk18.",
+      "status": "resolved",
+      "decision": {
+        "statScaling": {
+          "matk": {
+            "type": "linear",
+            "base": 0,
+            "perLevel": 9
+          },
+          "manaRegen": {
+            "type": "linear",
+            "base": 15,
+            "perLevel": 5
+          }
+        },
+        "formula": "base + (skillLevel - 1) * perLevel",
+        "manaRegenInterval": "pending",
+        "interpretation": "Magical attack is zero at level 1; +9 per additional level"
+      }
+    },
+    {
+      "nr": 197,
+      "name": "Segen des Angriffes",
+      "issue": "Text nur physischer Angriff; Daten auch matk18 und str2. Ziel-/Bonusumfang klären.",
+      "status": "resolved",
+      "decision": {
+        "stats": {
+          "patk": 18,
+          "matk": 18,
+          "str": 2
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "matk": {
+            "type": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "str": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        },
+        "description": "Includes physical attack, magical attack and Strength"
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "issue": "Text Angriff+4; Daten patk5/matk5/atkSpeed1. Umfang und Attack-Speed-Einheit klären.",
+      "status": "resolved",
+      "decision": {
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "matk": {
+            "type": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "atkSpeed": {
+            "type": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          }
+        },
+        "description": "General narrative; numeric bonuses stored separately",
+        "maxSkillLv": 20
+      }
+    },
+    {
+      "nr": 204,
+      "name": "Katalysator Rein",
+      "issue": "Text nur magische Gruppenverstärkung, Daten zusätzlich patk45. Effektkategorien und Ziele fehlen.",
+      "status": "partiallyResolved",
+      "decision": {
+        "maxSkillLv": 5,
+        "effects": [
+          {
+            "key": "field-patk",
+            "type": "statModifier",
+            "target": "alliesInArea",
+            "allowedRaces": [
+              "Aurora"
+            ],
+            "stat": "patk",
+            "value": 45,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 45,
+              "perLevel": 45
+            },
+            "durationSeconds": 21,
+            "durationScaling": {
+              "type": "linear",
+              "base": 21,
+              "perLevel": 2
+            }
+          },
+          {
+            "key": "field-matk",
+            "type": "statModifier",
+            "target": "alliesInArea",
+            "allowedRaces": [
+              "Aurora"
+            ],
+            "stat": "matk",
+            "value": 120,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 120,
+              "perLevel": 120
+            },
+            "durationSeconds": 21,
+            "durationScaling": {
+              "type": "linear",
+              "base": 21,
+              "perLevel": 2
+            }
+          }
+        ],
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 2
+        },
+        "areaSettings": {
+          "exclusiveGroup": "catalystField",
+          "overlapPolicy": "rejectPlacement"
+        },
+        "cooldown": 600,
+        "spatialRules": "Radius, placement geometry, leave/re-enter behavior and eligible attack types pending",
+        "visual": "Portal, circle or obelisk pending",
+        "runtime": "Dedicated server overlap check across all casters pending"
+      }
+    },
+    {
+      "nr": 205,
+      "name": "Katalysator Unrein",
+      "issue": "Text nur magische Gruppenverstärkung, Daten zusätzlich patk45. Effektkategorien und Ziele fehlen.",
+      "status": "partiallyResolved",
+      "decision": {
+        "maxSkillLv": 5,
+        "effects": [
+          {
+            "key": "field-patk",
+            "type": "statModifier",
+            "target": "alliesInArea",
+            "allowedRaces": [
+              "Human",
+              "Umbra"
+            ],
+            "stat": "patk",
+            "value": 45,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 45,
+              "perLevel": 45
+            },
+            "durationSeconds": 21,
+            "durationScaling": {
+              "type": "linear",
+              "base": 21,
+              "perLevel": 2
+            }
+          },
+          {
+            "key": "field-matk",
+            "type": "statModifier",
+            "target": "alliesInArea",
+            "allowedRaces": [
+              "Human",
+              "Umbra"
+            ],
+            "stat": "matk",
+            "value": 120,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 120,
+              "perLevel": 120
+            },
+            "durationSeconds": 21,
+            "durationScaling": {
+              "type": "linear",
+              "base": 21,
+              "perLevel": 2
+            }
+          }
+        ],
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 2
+        },
+        "areaSettings": {
+          "exclusiveGroup": "catalystField",
+          "overlapPolicy": "rejectPlacement"
+        },
+        "cooldown": 600,
+        "spatialRules": "Radius, placement geometry, leave/re-enter behavior and eligible attack types pending",
+        "visual": "Portal, circle or obelisk pending",
+        "runtime": "Dedicated server overlap check across all casters pending"
+      }
+    },
+    {
+      "nr": 214,
+      "name": "Ausbrennen",
+      "issue": "Deutsch Blutmagieverstärkung durch Lebensopfer; Englisch Schaden über Zeit gegen Gegner. Daten health-18/matk3.",
+      "status": "partiallyResolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "blood-magic-strength",
+            "type": "statModifier",
+            "target": "self",
+            "stat": "matk",
+            "value": 8,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 8,
+              "perLevel": 8
+            },
+            "durationSeconds": 0
+          },
+          {
+            "key": "blood-magic-health-drain",
+            "type": "resourceDrain",
+            "target": "self",
+            "resource": "health",
+            "value": 18,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 18,
+              "perLevel": 6
+            },
+            "intervalSeconds": 1.5,
+            "durationSeconds": 0
+          }
+        ],
+        "magicAttackAtLevel10": 80,
+        "healthDrainAtLevel10": 72,
+        "intervalSeconds": 1.5,
+        "healthDrainOver30SecondsAtLevel10": 1440,
+        "masteryProposal": {
+          "damageBonusUnchanged": true,
+          "healthCostMultiplier": 0.5,
+          "healthDrainOver30SecondsAtLevel10": 720,
+          "implementation": "future"
+        },
+        "activation": "Toggle or always-on still pending confirmation",
+        "lowHealthRules": "pending; no automatic lethal self damage assumption",
+        "duration": "No fixed timer defined; effects last while enhancement is enabled",
+        "runtime": "Dedicated server execution pending"
+      }
+    },
+    {
+      "nr": 228,
+      "name": "Geheiligte Barriere",
+      "issue": "Text Schildabsorption; gespeichert matk370. Schildstärke versus Angriffsfeld klären.",
+      "status": "partiallyResolved",
+      "decision": {
+        "effects": [
+          {
+            "key": "sanctified-magic-protection",
+            "type": "damageReduction",
+            "target": "alliesInArea",
+            "value": 0.2,
+            "unit": "fraction",
+            "damageTypes": [
+              "magical"
+            ],
+            "durationSeconds": 9
+          }
+        ],
+        "stacking": "Sequential multiplicative reduction",
+        "withMaxDivineProtection": {
+          "remainingFraction": 0.52,
+          "totalReduction": 0.48
+        },
+        "spatialRules": "Caster-centered moving bubble, provisional radius 4 meters; caster and allies protected only while inside. Detailed geometry/runtime pending.",
+        "balance": "Review lowest group health and boss damage; not intended to replace tank protection",
+        "oldMagicAttack370": "removed; no direct damage or capacity",
+        "classAssignment": "Luminet/Lightmage unchanged",
+        "areaSettings": {
+          "center": "caster",
+          "movesWithCaster": true,
+          "membership": "whileInside",
+          "includeCaster": true,
+          "radiusMeters": 4
+        }
+      }
+    }
+  ],
+  "notes": [
+    "Descriptions only. Names, classes and numeric values unchanged.",
+    "No new percent or per-level semantics inferred.",
+    "No em dashes in replacement descriptions.",
+    "A missing numeric field does not prove a special effect is absent from the design."
+  ]
+}

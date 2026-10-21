@@ -1,0 +1,49 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c33",
+    "skillName_eng": "The Eternal Knowledge",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erweitert dein Wissen über Magie und verleiht dir mehr Macht.",
+    "description_eng": "Expands your knowledge of magic and grants you greater power.",
+    "dmgType": "passive",
+    "faith": 2,
+    "int": 5,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 208,
+    "skillName_de": "Das ewige Wissen",
+    "skillpoints": 1,
+    "wis": 2
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c35",
+    "skillName_eng": "Lightning Flash",
+    "__v": 0,
+    "category": "active",
+    "cd": 12,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen grellen Lichtblitz auf deine Feinde.",
+    "description_eng": "Hurls a brilliant flash of light at your enemies.",
+    "dmgType": "spell",
+    "matk": 62,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 210,
+    "skillName_de": "Lichtblitz",
+    "skillpoints": 1
+  }
+]

@@ -1,0 +1,16 @@
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {simulateClass} from '../services/timedDamageSimulation.js';
+import {buildSkillProgression} from '../services/inferSkillProgression.js';
+import {renderBuffComparisonSections} from '../services/buffComparisonSections.js';
+const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
+const [skills,c,model,rot,base,report]=await Promise.all(['data/skills.json','data/balancing/class-comparison-level60.json','data/balancing/attribute-model.json','data/balancing/all-class-damage-rotations.json','data/balancing/all-class-timed-damage.json','data/balancing/all-class-buff-scenarios.json'].map(read));
+const s=skills.find(s=>s.nr===74);s.skillName_de='Festigung des Glaubens';s.dmgType='selfbuff';s.charClass=['Luminet','Lightmage'];s.int=3;s.wis=-1.5;s.statScaling={int:{type:'linear',base:3,perLevel:3},wis:{type:'linear',base:-1.5,perLevel:-1.5}};s.statBonusTargets={int:'self',wis:'self'};s.castTimeSeconds=.1;s.timingModifiers={castTimeIsFixed:true,affectedByAttackSpeed:false,affectedByCastSpeed:false};s.mana=50;s.resourceCosts=[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:50,perLevel:13}}];s.manaPricing={category:'selfbuff',basis:'skillLevel',usesCharacterAttack:false,version:1};delete s.levelProgression;s.levelProgression=buildSkillProgression(s);
+const stored=base.results.find(r=>r.key==='luminet'),old=report.scenarios.selfOnly.results.find(r=>r.key==='luminet');
+const pre=c.passiveRows.find(r=>r.key==='luminet');
+const r=simulateClass({pre,skills,model,attackNumbers:rot.classes.find(r=>r.key==='luminet').rows.map(r=>r.nr),config:{...stored.config,cacheCombatStats:true,enableOwnBuffs:true,prebuffOwnBuffs:false,permanentPrebuffs:false,ownBuffNumbers:[...new Set([...old.availableOwnBuffNumbers,74])],preparedBuffNumbers:[],permanentBuffNumbers:[],externalBuffSkills:[],recordActionTimeline:true}});
+assert.equal(r.durationSeconds,600);assert(!r.deathAt);assert(r.skills.some(x=>x.nr===74&&x.applications));
+r.name='Luminet **(Simulation)**';r.activeSkillDamage=r.skillDamage;r.autoRelatedDamage=r.autoDamage;r.damageShares={autoAttacksPercent:100*r.autoDamage/r.totalDamage,skillsPercent:100*r.skillDamage/r.totalDamage,summonsPercent:100*r.summonDamage/r.totalDamage};
+const probe={generatedAt:new Date().toISOString(),status:'simulationOnly',assumptions:'Max level 10: +30 INT, -15 WIS, .1 second cast, 167 Mana before discounts, original duration 300 seconds and cooldown 60 seconds. Linear provisional level scaling. No database/catalog changes.',skill:s,baselineDamage:stored.totalDamage,gainPercent:100*(r.totalDamage/stored.totalDamage-1),result:r};
+await fs.writeFile('data/balancing/luminet-faith-fortification-thirty-probe.json',JSON.stringify(probe,null,2)+'\n');
+console.log(JSON.stringify({damage:r.totalDamage,gainPercent:probe.gainPercent,finalMana:r.finalMana,manaBlocked:r.manaBlockedSeconds,skill:r.skillDamage,auto:r.autoDamage}));

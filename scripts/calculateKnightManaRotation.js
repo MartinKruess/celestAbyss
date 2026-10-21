@@ -1,0 +1,17 @@
+import {retiredBalancingReportPath} from '../services/retiredBalancingReports.js';
+import fs from 'node:fs/promises';
+const catalog=JSON.parse(await fs.readFile('data/skills.json','utf8'));
+const review=JSON.parse(await fs.readFile('data/balancing/knight-skill-review.json','utf8'));
+const pre=JSON.parse(await fs.readFile('data/balancing/knight-precombat.json','utf8'));
+const end=(c,l)=>c.type==='table'?c.values[l-1]:c.base+(c.type==='fixed'?0:(l-1)*c.perLevel);
+const groups={attacks:[19,23,55,77,94,95],selfBuffs:[82,170,171],toggle:[158],groupAndProtection:[40,59,75,107],healing:[64],creatureActive:[133,136,137],passives:review.skills.filter(s=>s.dmgType==='passive').map(s=>s.nr)};
+const ids=Object.values(groups).flat();if(ids.length!==33||new Set(ids).size!==33)throw Error('Category overlap or missing skill');
+const attacks=groups.attacks.map(n=>{const s=catalog.find(s=>s.nr===n);return {nr:n,name:s.skillName_de,level:s.maxSkillLv,mana:end(s.resourceCosts.find(c=>c.resource==='mana').scaling,s.maxSkillLv)}});
+const one=attacks.reduce((v,s)=>v+s.mana,0),pool=pre.variants[0].knownPassiveSubtotal.maxMana;
+const report={classKey:'knight',level:60,rank:6,groups,counts:Object.fromEntries(Object.entries(groups).map(([k,v])=>[k,v.length])),attacks,oneRotation:one,twoRotations:one*2,manaPool:pool,manaRemainingWithoutRegeneration:pool-one*2,regeneration:{manaPerTickWithProvisionalWisdomFactor:219.5,provokeDrainPerTick:45,netWithProvokePerTick:174.5,intervalSeconds:null},excluded:['active buffs and protective fields','heals','creature actions','regeneration','cooldown waits'],missingCosts:[40,64]};
+await fs.writeFile('data/balancing/knight-mana-rotation.json',JSON.stringify(report,null,2)+'\n');
+let md='# Ritter: Skillaufteilung und Mana für zwei Angriffsrotationen\n\n33 Skills: 6 Angriffe, 3 Eigenbuffs, 1 Toggle, 4 Gruppen-/Schutzbuffs, 1 Heilung, 3 aktive Kreaturenskills und 15 passive Skills einschließlich Kreaturenpassiven und Kampf-Procs.\n\nLevel 60, ursprüngliches R6-Schwert und Schild sowie R6-Rüstung, maximal gelernte permanente Passive. Keine aktiven Buffs, Schmuck oder Steine.\n\n| Angriff | Mana einmal | Mana zweimal |\n| --- | ---: | ---: |\n';
+for(const s of attacks)md+=`| ${s.name} | ${s.mana} | ${s.mana*2} |\n`;
+md+=`| Gesamt | ${one} | ${one*2} |\n\nManapool ${pool}, verbleibend nach zwei Rotationen ohne Regeneration ${pool-one*2}. Cooldowns bewusst ignoriert. Der Anteil der tatsächlichen Regeneration kann ohne Zeitintervall nicht bestimmt werden. Vorläufige Wisdom-Umrechnung ergibt 219,5 Mana je Tick, mit Provozieren netto 174,5. Unabhängig unbekannter Start-Wisdom-Beitrag nicht zusätzlich angesetzt.\n\nZusätzliche Anwendungen wie Schutzaura, Göttlicher Schutz, Gruppenbuffs und Heilung sind nicht Teil dieser Angriffsrechnung. Kosten von Erlösendem Feld und Kleiner Heilung sind im Katalog weiterhin unvollständig.\n`;
+await fs.writeFile(await retiredBalancingReportPath('docs/balancing/classes/knight-mana-rotation.md'),md);
+console.log(JSON.stringify({counts:report.counts,attacks,one,two:one*2,pool,remaining:pool-one*2}));

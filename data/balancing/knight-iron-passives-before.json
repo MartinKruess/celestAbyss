@@ -1,0 +1,83 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b7f",
+    "skillName_eng": "Iron Shield",
+    "__v": 0,
+    "block": 5,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft auf Stufe 1 deine Vitalität um 2, Wisdom um 1 und den Blockwert um 5. Je weiterer Stufe kommen 1 Vitalität und 0,5 Wisdom hinzu, bis zu 11 Vitalität und 5,5 Wisdom auf Stufe 10. Der bisherige Blockbonus von 5 bleibt unverändert. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer.",
+    "description_eng": "Permanently grants 2 Vitality, 1 Wisdom and 5 Block rating at level 1. Each additional level adds 1 Vitality and 0.5 Wisdom, reaching 11 Vitality and 5.5 Wisdom at level 10. Existing Block bonus remains fixed at 5. No activation costs, cast time, cooldown or limited duration.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 28,
+    "skillName_de": "Eiserner Schild",
+    "skillpoints": 1,
+    "vita": 2,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 0.5
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf0",
+    "skillName_eng": "Iron Will",
+    "__v": 0,
+    "block": 2,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eiserner Wille erhöht dauerhaft deine Vitalität um 3, deinen Blockwert mit Schilden um 2 und deine Weisheit um 2 pro gelerntem Skilllevel. Auf Skilllevel 10 erhältst du +30 Vitalität, +20 Blockwert und +20 Weisheit. Der Blockwert ist ein fixer Wert und keine direkte Prozentangabe.",
+    "description_eng": "Iron Will permanently increases your Vitality by 3, your shield Block rating by 2 and your Wisdom by 2 per learned skill level. At skill level 10, gain +30 Vitality, +20 Block rating and +20 Wisdom. Block rating is a flat value, not a direct percentage.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 141,
+    "skillName_de": "Eiserner Wille",
+    "skillpoints": 1,
+    "vita": 3,
+    "statBonusUnits": {
+      "vita": "flat",
+      "block": "flat",
+      "wis": "flat"
+    },
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "block": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "wis": 2
+  }
+]

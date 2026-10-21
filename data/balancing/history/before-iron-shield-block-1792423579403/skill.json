@@ -1,0 +1,85 @@
+{
+  "_id": "6acc1c7e4826525c70d04b7f",
+  "skillName_eng": "Iron Shield",
+  "__v": 0,
+  "block": 0.5,
+  "category": "passive",
+  "charClass": [
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanenter passiver Skill mit 10 Stufen. Je gelerntem Skilllevel +1 Vita, +0,5 Willenskraft und +0,5 Blockpunkte. Auf Stufe 1 sind das +1 Vita, +0,5 Willenskraft und +0,5 Block; auf Stufe 10 insgesamt +10 Vita, +5 Willenskraft und +5 Block. Block ist ein Punktewert, keine Prozentangabe. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer.",
+  "description_eng": "Permanent passive with 10 levels. Each learned level grants 1 Vitality, 0.5 Wisdom and 0.5 Block rating, reaching 10 Vitality, 5 Wisdom and 5 Block at level 10. Block is a rating, not a percentage. No activation costs, cast time, cooldown or limited duration.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 28,
+  "skillName_de": "Eiserner Schild",
+  "skillpoints": 1,
+  "vita": 1,
+  "wis": 0.5,
+  "resourceCosts": [],
+  "statScaling": {
+    "vita": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    },
+    "wis": {
+      "type": "linear",
+      "base": 0.5,
+      "perLevel": 0.5
+    },
+    "block": {
+      "type": "linear",
+      "base": 0.5,
+      "perLevel": 0.5
+    }
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "statScaling",
+          "vita"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 1,
+          "perLevel": 1
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "wis"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 0.5,
+          "perLevel": 0.5
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "block"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 0.5,
+          "perLevel": 0.5
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "type": "passive"
+}

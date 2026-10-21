@@ -1,0 +1,130 @@
+{
+  "_id": "6acc1c7e4826525c70d04c31",
+  "skillName_eng": "Lunar Incantation",
+  "__v": 0,
+  "category": "active",
+  "cd": 100,
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Belebt einen verstorbenen Verbündeten wieder. Vier Skillstufen: Das Ziel wird mit 80/160/320/640 HP wiederbelebt; das Wiederbelebungsleben verdoppelt sich je weiterer Stufe. Das vorhandene Mana des Ziels bleibt erhalten; kein zusätzlicher Mana-Wiederherstellungsbonus. Aktivierungskosten für den Heiler: 120 Mana auf Stufe 1, +60 je weiterer Stufe, also 120/180/240/300 Mana. Castzeit 1 Sekunde, Animation ungefähr 1 Sekunde. Einmalige Wiederbelebung ohne anschließende Wirkungsdauer. Cooldown unverändert 100 Sekunden auf allen Stufen.",
+  "description_eng": "Resurrects a dead ally. Four skill levels restore the target with 80/160/320/640 HP, doubling per additional level. The target retains its existing Mana; no additional Mana restoration bonus. Healer activation cost is 120 Mana at level 1 plus 60 per additional level: 120/180/240/300 Mana. Cast time 1 second, animation approximately 1 second. One resurrection with no lingering effect duration. Cooldown remains 100 seconds at every level.",
+  "dmgType": "spell",
+  "health": 80,
+  "maxSkillLv": 4,
+  "maxUpgradeLv": 10,
+  "nr": 206,
+  "skillName_de": "Lunare Inkanation",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 1,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0
+    ]
+  },
+  "resurrectionSettings": {
+    "requiresDeadAlly": true,
+    "restoredHealth": 80,
+    "preservesTargetMana": true,
+    "restoredHealthScaling": {
+      "type": "table",
+      "base": 80,
+      "values": [
+        80,
+        160,
+        320,
+        640
+      ]
+    }
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "durationScaling"
+        ],
+        "rule": {
+          "kind": "constant",
+          "value": 0
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "resurrectionSettings",
+          "restoredHealthScaling"
+        ],
+        "rule": {
+          "kind": "exponential",
+          "base": 80,
+          "factor": 2
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "statScaling",
+          "health"
+        ],
+        "rule": {
+          "kind": "exponential",
+          "base": 80,
+          "factor": 2
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 120,
+            "perLevel": 60
+          }
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "type": "skill",
+  "mana": 120,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 120,
+        "perLevel": 60
+      }
+    }
+  ],
+  "statScaling": {
+    "health": {
+      "type": "table",
+      "base": 80,
+      "values": [
+        80,
+        160,
+        320,
+        640
+      ]
+    }
+  }
+}

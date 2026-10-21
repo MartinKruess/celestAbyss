@@ -1,0 +1,53 @@
+{
+  "verifiedAt": "2026-10-17T13:28:43.796Z",
+  "status": "verifiedAgainstMongoDB",
+  "weapons": 78,
+  "combatValues": 72,
+  "rates": [
+    0.77,
+    0.75,
+    0.73,
+    0.71,
+    0.69
+  ],
+  "starts": {
+    "Axe": {
+      "pang": 13
+    },
+    "Axe2H": {
+      "pang": 27
+    },
+    "Bow": {
+      "pang": 31
+    },
+    "Crossbow": {
+      "pang": 26
+    },
+    "Dagger": {
+      "pang": 8
+    },
+    "Mace": {
+      "pang": 12,
+      "mang": 6
+    },
+    "Shield": {
+      "pdeff": 8
+    },
+    "Sword": {
+      "pang": 12
+    },
+    "Wand2HFaith": {
+      "mang": 25
+    },
+    "Wand2HInt": {
+      "mang": 25
+    },
+    "Wand2HVictim": {
+      "mang": 25
+    }
+  },
+  "pendingAfterNextTest": {
+    "CrossbowStart25": "notApplied"
+  },
+  "simulationRecalculated": false
+}

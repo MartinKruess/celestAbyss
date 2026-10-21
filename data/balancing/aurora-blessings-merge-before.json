@@ -1,0 +1,143 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c28",
+    "skillName_eng": "Blessing of Attack",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht den physischen und magischen Angriff aller Gruppenmitglieder um jeweils 18 sowie ihre Stärke um 2 pro Skilllevel.",
+    "description_eng": "Increases all group members' physical and magical attack by 18 each and their Strength by 2 per skill level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "matk": 18,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 197,
+    "patk": 18,
+    "skillName_de": "Segen des Angriffes",
+    "skillpoints": 1,
+    "str": 2,
+    "statBonusUnits": {
+      "patk": "flat",
+      "matk": "flat",
+      "str": "flat"
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "matk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c29",
+    "skillName_eng": "Blessing of Mentality",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die Mana-Regeneration aller Gruppenmitglieder um 18 sowie ihre Intelligenz und Weisheit um jeweils 2 pro Skilllevel.",
+    "description_eng": "Increases all group members' mana regeneration by 18 and their Intelligence and Wisdom by 2 each per skill level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 198,
+    "skillName_de": "Segen der Mentalität",
+    "skillpoints": 1,
+    "wis": 2,
+    "manaRegen": 18,
+    "statBonusUnits": {
+      "manaRegen": "flat",
+      "int": "flat",
+      "wis": "flat"
+    },
+    "statScaling": {
+      "manaRegen": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "wis": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2a",
+    "skillName_eng": "Blessing of Defense",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die physische und magische Verteidigung aller Gruppenmitglieder um jeweils 18 sowie ihre Vitalität um 2 pro Skilllevel.",
+    "description_eng": "Increases all group members' physical and magical defense by 18 each and their Vitality by 2 per skill level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 18,
+    "nr": 199,
+    "pdef": 18,
+    "skillName_de": "Segen der Verteidigung",
+    "skillpoints": 1,
+    "vita": 2,
+    "statBonusUnits": {
+      "pdef": "flat",
+      "mdef": "flat",
+      "vita": "flat"
+    },
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    }
+  }
+]

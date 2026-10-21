@@ -1,0 +1,177 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04be5",
+    "skillName_eng": "Aimed Shot",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Dieser gezielte Schuss kann nicht daneben gehen. Verursacht einmalig physischen Skill-Grundschaden von 337 auf Stufe 1, plus 71 je weiterer Stufe, bis zu 1331 auf Stufe 15. Belegt den Gegner mit Schwäche: physische und magische Angriffskraft sinken für 10 Sekunden um 2 Prozent. Mana-Kosten 207, plus 58 je weiterer Stufe, bis zu 1019. Cooldown startet bei 75 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 61 Sekunden. Castzeit 0,2 Sekunden. Die zehn Sekunden sind die Dauer des Schwäche-Effekts, kein anhaltender Schaden. Kein Blutungseffekt festgelegt.",
+    "description_eng": "This aimed shot cannot miss. Deals physical skill base damage once, starting at 337 and increasing by 71 per additional level to 1331 at level 15. Applies Weakness, reducing enemy physical and magical attack by 2 percent for 10 seconds. Mana cost starts at 207 and increases by 58 per additional level to 1019. Cooldown starts at 75 seconds and decreases by 1 second per additional level to 61 seconds. Cast time is 0.2 seconds. The ten seconds refer to Weakness duration, not damage over time. No bleeding effect is defined.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 130,
+    "patk": 337,
+    "skillName_de": "Zielschuss",
+    "skillpoints": 1,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "guaranteedHit": true,
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.2,
+    "cd": 75,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 75,
+      "perLevel": -1
+    },
+    "dur": 10,
+    "effects": [
+      {
+        "key": "aimed-shot-weakness-patk",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "patk",
+        "value": -0.02,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 10
+      },
+      {
+        "key": "aimed-shot-weakness-matk",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "matk",
+        "value": -0.02,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 10
+      }
+    ],
+    "mana": 207,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 207,
+          "perLevel": 58
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 337,
+        "perLevel": 71
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb9",
+    "skillName_eng": "Precision Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 75,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein gezielter Schuss, der garantiert kritisch trifft. Physischer Skill-Grundschaden 491 auf Stufe 1, plus 137 je weiterer Stufe, bis zu 2409 auf Stufe 15 vor Krit-Multiplikator, Charakterangriff und Verteidigung. Mana-Kosten 173, plus 64 je weiterer Stufe, bis zu 1069. Castzeit 0,5 Sekunden zum Zielen. Cooldown 75 Sekunden. Senkt beim getroffenen Gegner Angriffsgeschwindigkeit und Bewegungsgeschwindigkeit. Beide Senkungen beginnen auf Stufe 1 bei 0 und steigen gleichmäßig bis auf 7,5 Prozent Angriffsgeschwindigkeit und 5 Prozent Bewegungsgeschwindigkeit auf Stufe 15. Die Effektdauer beginnt bei 15 Sekunden und steigt um 1 Sekunde je weiterer Stufe auf 29 Sekunden. Die frühere Ausweichsenkung entfällt.",
+    "description_eng": "An aimed shot guaranteed to be critical. Physical skill base damage starts at 491 and increases by 137 per additional level to 2409 at level 15 before critical multiplier, character attack and defence. Mana cost starts at 173 and increases by 64 per additional level to 1069. Aiming cast time is 0.5 seconds. Cooldown is 75 seconds. Reduces the hit enemy attack and movement speed. Both reductions start at 0 at level 1 and increase evenly to 7.5 percent attack speed and 5 percent movement speed reduction at level 15. Effect duration starts at 15 seconds and increases by 1 second per additional level to 29 seconds. Replaces the former dodge reduction.",
+    "dmgType": "physical",
+    "dur": 15,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 86,
+    "patk": 491,
+    "skillName_de": "Präzisionsschuss",
+    "skillpoints": 1,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "guaranteedCriticalHit": true,
+      "criticalImmunityStatus": "pending",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.5,
+    "mana": 173,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 173,
+          "perLevel": 64
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 491,
+        "perLevel": 137
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 15,
+      "perLevel": 1
+    },
+    "effects": [
+      {
+        "key": "precision-shot-attack-speed",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "atkSpeed",
+        "value": 0,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0,
+          "perLevel": -0.005357142857142857
+        },
+        "durationSeconds": 15,
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        }
+      },
+      {
+        "key": "precision-shot-movement-speed",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": 0,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0,
+          "perLevel": -0.0035714285714285718
+        },
+        "durationSeconds": 15,
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        }
+      }
+    ]
+  }
+]

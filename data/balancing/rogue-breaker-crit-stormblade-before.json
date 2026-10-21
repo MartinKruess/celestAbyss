@@ -1,0 +1,80 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b77",
+    "skillName_eng": "Breaker of Light",
+    "__v": 0,
+    "category": "active",
+    "cd": 52,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt zwei schnelle physische Angriffe aus. Der Grundschaden je Treffer steigt von 234 um 37 je weiterer Stufe auf 567 auf Stufe 10. Zwei Treffer ergeben insgesamt 468 bis 1134 Skill-Grundschaden vor Charakterangriff und Verteidigung. Mana-Kosten steigen von 127 um 63 je weiterer Stufe auf 694. Der Cooldown sinkt von 52 um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0 Sekunden, vorläufige Animation 0,5 Sekunden. Keine Unsichtbarkeit und keine anhaltende Wirkungsdauer. Die bisher beschriebene erhöhte Crit-Chance des zweiten Treffers wird separat noch beziffert.",
+    "description_eng": "Performs two quick physical attacks. Base damage per hit increases from 234 by 37 per additional level to 567 at level 10. Both hits total 468 to 1134 skill base damage before character attack and defense. Mana cost increases from 127 by 63 per additional level to 694. Cooldown decreases from 52 by 1 second per additional level to 43 seconds. Cast time is 0 seconds; provisional animation is 0.5 seconds. No invisibility or lasting effect. The previously described increased critical chance of the second hit remains to be quantified separately.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 20,
+    "patk": 234,
+    "skillName_de": "Brecher des Lichts",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 127,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 127,
+          "perLevel": 63
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 234,
+        "perLevel": 37
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd2",
+    "skillName_eng": "Storm Blade",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schneide deinen Gegner mit einem Sturm aus Klingen.",
+    "description_eng": "Cut your opponent with a storm of blades.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 111,
+    "patk": 333,
+    "skillName_de": "Sturmklinge",
+    "skillpoints": 1
+  }
+]

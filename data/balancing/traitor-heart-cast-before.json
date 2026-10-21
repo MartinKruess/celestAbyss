@@ -1,0 +1,72 @@
+{
+  "_id": "6acc1c7e4826525c70d04c20",
+  "skillName_eng": "Heart of the Traitor",
+  "__v": 0,
+  "atkSpeed": 0.07,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht als Eigenbuff für 600 Sekunden deine Angriffsgeschwindigkeit und Bewegungsgeschwindigkeit. Auf Stufe 1 erhältst du 7 Prozent Angriffsgeschwindigkeit und 2 Prozent Bewegungsgeschwindigkeit. Jede weitere Stufe erhöht beide Boni um 0,75 Prozentpunkte, bis zu 10 Prozent Angriffsgeschwindigkeit und 5 Prozent Bewegungsgeschwindigkeit auf Stufe 5. Cooldown 60 Sekunden. Zusatzeffekt auf Stufe 5: Solange dieser Buff und Attentäter gleichzeitig aktiv sind, stellt jeder eigene Auto-Attack 12 Mana wieder her. Begleiterangriffe zählen nicht. Mana-Kosten 43 auf Stufe 1, plus 16 je weiterer Stufe, bis zu 107 auf Stufe 5.",
+  "description_eng": "A self buff that increases attack speed and movement speed for 600 seconds. Level 1 grants 7 percent attack speed and 2 percent movement speed. Each additional level adds 0.75 percentage points to both bonuses, reaching 10 percent attack speed and 5 percent movement speed at level 5. Cooldown is 60 seconds. Additional level 5 effect: while this buff and Assassin are both active, each own basic attack restores 12 Mana. Companion attacks do not count. Mana cost starts at 43 and increases by 16 per additional level to 107 at level 5.",
+  "dmgType": "selfbuff",
+  "dur": 600,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "movementSpeed": 0.02,
+  "nr": 189,
+  "skillName_de": "Herz des Verräters",
+  "skillpoints": 1,
+  "statBonusUnits": {
+    "atkSpeed": "fraction",
+    "movementSpeed": "fraction"
+  },
+  "statScaling": {
+    "atkSpeed": {
+      "type": "linear",
+      "base": 0.07,
+      "perLevel": 0.0075
+    },
+    "movementSpeed": {
+      "type": "linear",
+      "base": 0.02,
+      "perLevel": 0.0075
+    }
+  },
+  "effects": [
+    {
+      "key": "traitor-assassin-mana",
+      "type": "resourceGain",
+      "target": "self",
+      "resource": "mana",
+      "value": 12,
+      "unit": "flat",
+      "durationSeconds": 600,
+      "minimumSkillLevel": 5,
+      "requiredActiveSkillNumbers": [
+        189,
+        238
+      ],
+      "gainTrigger": "ownBasicAttack",
+      "oncePerAttackAction": true,
+      "excludeCompanionAttacks": true
+    }
+  ],
+  "mana": 43,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 43,
+        "perLevel": 16
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "_id": "6acc1c7e4826525c70d04b8b",
+  "skillName_eng": "Redeeming Field of Weakness",
+  "__v": 0,
+  "category": "active",
+  "cd": 84,
+  "charClass": [
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erschafft ein heiliges Feld, das deine Aggro auf Gegner erhöht. Die genaue Aggro-Menge wird noch festgelegt. Gruppenmitglieder im Feld erhalten 15 zusätzlichen magischen Angriff auf Stufe 1, plus 2,5 je weiterer Stufe bis zu 37,5 auf Stufe 10. Dieser Wert ist ein Buff und kein eigener Schadensimpuls des Feldes. Gegner im Feld verlieren auf Stufe 1 2 Prozent physische und 1 Prozent magische Verteidigung. Beide Reduktionen steigen um 1 Prozentpunkt je weiterer Stufe auf 11 Prozent physische und 10 Prozent magische Verteidigung. Die Dauer steigt gleichmäßig von 25 auf 30 Sekunden. Der Cooldown sinkt von 84 um 1 Sekunde je weiterer Stufe auf 75 Sekunden. Radius, Mana-Kosten und Castzeit werden noch festgelegt.",
+  "description_eng": "Creates a sacred field that increases your threat toward enemies; the exact threat amount remains pending. Group members within the field gain 15 magical attack at level 1, increasing by 2.5 per additional level to 37.5 at level 10. This is a buff, not a direct damage pulse from the field. Enemies within the field lose 2 percent physical and 1 percent magical defense at level 1. Both reductions increase by 1 percentage point per additional level to 11 percent physical and 10 percent magical defense reduction. Duration increases evenly from 25 to 30 seconds. Cooldown decreases from 84 by 1 second per additional level to 75 seconds. Radius, Mana cost and cast time remain pending.",
+  "dmgType": "spell",
+  "dur": 25,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 40,
+  "skillName_de": "Erlösendes Feld der Schwäche",
+  "skillpoints": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 84,
+    "perLevel": -1
+  },
+  "durationScaling": {
+    "type": "linear",
+    "base": 25,
+    "perLevel": 0.5555555555555556
+  },
+  "effects": [
+    {
+      "key": "redeeming-field-magic",
+      "type": "statModifier",
+      "target": "alliesInArea",
+      "recipientGroup": "ownGroup",
+      "stat": "matk",
+      "value": 15,
+      "unit": "flat",
+      "valueScaling": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 2.5
+      },
+      "durationSeconds": 25,
+      "durationScaling": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 0.5555555555555556
+      }
+    },
+    {
+      "key": "redeeming-field-physical-defense",
+      "type": "statModifier",
+      "target": "enemiesInArea",
+      "stat": "pdef",
+      "reference": "targetStat",
+      "value": -0.02,
+      "unit": "fraction",
+      "valueScaling": {
+        "type": "linear",
+        "base": -0.02,
+        "perLevel": -0.01
+      },
+      "durationSeconds": 25,
+      "durationScaling": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 0.5555555555555556
+      }
+    },
+    {
+      "key": "redeeming-field-magical-defense",
+      "type": "statModifier",
+      "target": "enemiesInArea",
+      "stat": "mdef",
+      "reference": "targetStat",
+      "value": -0.01,
+      "unit": "fraction",
+      "valueScaling": {
+        "type": "linear",
+        "base": -0.01,
+        "perLevel": -0.01
+      },
+      "durationSeconds": 25,
+      "durationScaling": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 0.5555555555555556
+      }
+    }
+  ]
+}

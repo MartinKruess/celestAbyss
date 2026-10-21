@@ -1,0 +1,54 @@
+{
+  "_id": "6acc1c7e4826525c70d04c31",
+  "skillName_eng": "Lunar Incantation",
+  "__v": 0,
+  "category": "active",
+  "cd": 100,
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Belebt einen verstorbenen Verbündeten mit 2500 HP wieder. Das vorhandene Mana des Ziels bleibt erhalten; kein zusätzlicher Mana-Wiederherstellungsbonus. Castzeit 1 Sekunde, Animation ungefähr 1 Sekunde; dies ist kein zusätzlicher Wirkungszeitraum. Die Wiederbelebung erfolgt einmalig ohne anschließende Wirkungsdauer. Bestehender Cooldown 100 Sekunden. Aktivierungs-Manakosten des Heilers sind noch nicht festgelegt.",
+  "description_eng": "Resurrects a dead ally with 2500 HP. The target retains its existing Mana; no additional Mana restoration bonus. Cast time 1 second, animation approximately 1 second; this is not an additional effect duration. Resurrection occurs once with no lingering duration. Existing cooldown 100 seconds. The healer’s activation Mana cost remains undefined.",
+  "dmgType": "spell",
+  "health": 2500,
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 206,
+  "skillName_de": "Lunare Inkanation",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 1,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0
+    ]
+  },
+  "resurrectionSettings": {
+    "requiresDeadAlly": true,
+    "restoredHealth": 2500,
+    "preservesTargetMana": true
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "durationScaling"
+        ],
+        "rule": {
+          "kind": "constant",
+          "value": 0
+        },
+        "source": "verifiedExistingLevels"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "type": "skill"
+}

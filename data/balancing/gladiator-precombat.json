@@ -1,0 +1,136 @@
+{
+  "classKey": "gladiator",
+  "level": 60,
+  "rank": 6,
+  "status": "confirmedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 5,
+      "name": "Adaption",
+      "stats": {
+        "vita": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 26,
+      "name": "Dual Axttraining",
+      "stats": {
+        "str": 7,
+        "agi": 5
+      }
+    },
+    {
+      "nr": 45,
+      "name": "Erweiterung des Körpers",
+      "stats": {
+        "health": 1100,
+        "vita": 22,
+        "wis": 20,
+        "agi": 20
+      }
+    },
+    {
+      "nr": 52,
+      "name": "Glück des Narrens",
+      "stats": {
+        "luck": 11,
+        "critChanceRating": 50
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 140,
+      "name": "Standhaft",
+      "stats": {
+        "vita": 20,
+        "wis": 10
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "2 × Einhandaxt",
+      "equipped": {
+        "maxHealth": 4732,
+        "maxMana": 2957,
+        "physicalAttack": 711,
+        "magicalAttack": 112.2,
+        "physicalDefense": 841,
+        "magicalDefense": 530,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "vita": 82,
+        "wis": 70,
+        "str": 7,
+        "agi": 25,
+        "health": 1100,
+        "luck": 11,
+        "critChanceRating": 50,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        5,
+        26,
+        45,
+        52,
+        139,
+        140,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 8292,
+        "maxMana": 5057,
+        "physicalAttack": 823.6,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1145,
+        "magicalDefense": 810,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "excluded": [
+    "Active buffs",
+    "Überlebenswille: combat proc",
+    "Durchhalten: proposed combat proc, not a permanent stat bonus",
+    "Pets",
+    "Jewelry/stones"
+  ],
+  "equipmentProposalApplied": false
+}

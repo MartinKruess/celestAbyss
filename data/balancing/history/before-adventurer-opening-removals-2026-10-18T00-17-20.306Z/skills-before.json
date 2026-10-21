@@ -1,0 +1,249 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b69",
+    "skillName_eng": "Adrenaline",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigene Angriffe können Adrenalin mit 5 Prozent Wahrscheinlichkeit auslösen, wenn der Skill bereit ist. Es erhöht Stärke und Intelligenz um 1 Prozent je Skillstufe, bis zu 5 Prozent. Die Dauer steigt von 20 auf 30 Sekunden und der Cooldown sinkt von 120 auf 102 Sekunden.",
+    "description_eng": "Your own attacks have a 5 percent chance to trigger Adrenaline when ready. It increases Strength and Intelligence by 1 percent per skill level, up to 5 percent. Duration increases from 20 to 30 seconds and cooldown decreases from 120 to 102 seconds.",
+    "dmgType": "passive",
+    "int": 0.01,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 6,
+    "skillName_de": "Adrenalin",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "str": "fraction",
+      "int": "fraction"
+    },
+    "str": 0.01,
+    "activation": "automatic",
+    "cd": 120,
+    "dur": 20,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      },
+      "int": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      }
+    },
+    "triggerCondition": {
+      "type": "ownAttack",
+      "chancePerCheck": 0.05,
+      "oncePerAttackAction": true,
+      "excludeCompanionAttacks": true,
+      "requiresCooldownReady": true
+    },
+    "triggerConditionStatus": "defined",
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -4.5
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 20,
+      "perLevel": 2.5
+    },
+    "resourceCosts": []
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b72",
+    "skillName_eng": "Tremor",
+    "__v": 0,
+    "category": "active",
+    "cd": 40,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Shamane",
+      "High Elves",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schmettert deine Waffe auf den Boden und erzeugt ein Beben, das getroffene Gegner schädigt und verlangsamt. Der physische Grundangriffswert steigt von 81 um 39 je weiterer Skillstufe auf 822. Die Mana-Kosten 20 auf Stufe 1, +10 je weiterer Stufe, maximal 210 auf Stufe 20. Der Cooldown sinkt von 40 auf 30 Sekunden. Die Verlangsamung beginnt bei 5 Prozent für 1 Sekunde. Auf Skilllevel 5, 10, 15 und 20 steigt sie jeweils um 1 Prozentpunkt und ihre Dauer um 0,5 Sekunden, bis zu 9 Prozent für 3 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Slams your weapon into the ground, causing a tremor that damages and slows affected enemies. Physical base attack increases from 81 by 39 per additional skill level to 822. Mana cost 20 at level 1, maximum 210 at level 20. Cooldown decreases from 40 to 30 seconds. The slow starts at 5 percent for 1 second. At skill levels 5, 10, 15 and 20, it increases by 1 percentage point and lasts 0.5 seconds longer, reaching 9 percent for 3 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 15,
+    "patk": 81,
+    "skillName_de": "Beben",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 40,
+      "perLevel": -0.5263157894736842
+    },
+    "effects": [
+      {
+        "key": "tremorSlow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationStatus": "defined",
+        "progressionStatus": "defined",
+        "durationSeconds": 1,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.09
+          ]
+        },
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            1,
+            1,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            3
+          ]
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 20,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 10
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 81,
+        "perLevel": 39
+      }
+    },
+    "castTimeSeconds": 0.2,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bba",
+    "skillName_eng": "Rotating Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen rotierenden physischen Hieb aus. Der Grundangriffswert steigt von 36 um 62 je weiterer Stufe auf 594. Die Mana-Kosten 9 auf Stufe 1, +16 je weiterer Stufe, maximal 153 auf Stufe 10. Der Cooldown sinkt von 37 um 1 Sekunde je weiterer Stufe auf 28 Sekunden. Der Angriff beginnt ohne Cast Time; die Animation dauert vorläufig 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Performs a rotating physical strike. Base attack increases from 36 by 62 per additional level to 594. Mana cost 9 at level 1, maximum 153 at level 10. Cooldown decreases from 37 by 1 second per additional level to 28 seconds. The attack starts without cast time; provisional animation duration is 0.7 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 87,
+    "patk": 36,
+    "skillName_de": "Rotier Schlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.7,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 37,
+      "perLevel": -1
+    },
+    "mana": 9,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 9,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 36,
+        "perLevel": 62
+      }
+    },
+    "hasLingeringDamage": false,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  }
+]

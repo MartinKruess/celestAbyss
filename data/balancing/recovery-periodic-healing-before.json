@@ -1,0 +1,45 @@
+{
+  "_id": "6acc1c7e4826525c70d04bdf",
+  "skillName_eng": "Recovery",
+  "__v": 0,
+  "category": "active",
+  "cd": 29,
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Heilt Verbündete über Zeit. Der Heilwert steigt kumulativ: Stufe 1 hat 11; jede weitere Stufe addiert den nächsten um 2 erhöhten Zuwachs, also +13, +15, +17 und so weiter bis +39 auf Stufe 15. Heilwerte je Stufe: 11, 24, 39, 56, 75, 96, 119, 144, 171, 200, 231, 264, 299, 336, 375. Formel für Skillstufe L: L × (L + 10). Die bisherige Laufzeit beträgt 10 Sekunden. Noch festzulegen sind Tickintervall und ob der Heilwert je Tick oder insgesamt über die Laufzeit gilt. Mana-Kosten und Castzeit sind noch nicht festgelegt. Bestehender Cooldown 29 Sekunden.",
+  "description_eng": "Heals allies over time. Healing value grows cumulatively: level 1 starts at 11; each additional level adds the next increment increased by 2, namely +13, +15, +17 and so on to +39 at level 15. Healing values by level: 11, 24, 39, 56, 75, 96, 119, 144, 171, 200, 231, 264, 299, 336, 375. Formula for skill level L: L × (L + 10). Existing duration is 10 seconds. Tick interval and whether the value applies per tick or over the full duration remain pending. Mana costs and cast time remain undefined. Existing cooldown 29 seconds.",
+  "dmgType": "spell",
+  "dur": 10,
+  "health": 11,
+  "maxSkillLv": 15,
+  "maxUpgradeLv": 10,
+  "nr": 124,
+  "skillName_de": "Wiederherstellung",
+  "skillpoints": 1,
+  "statScaling": {
+    "health": {
+      "type": "table",
+      "values": [
+        11,
+        24,
+        39,
+        56,
+        75,
+        96,
+        119,
+        144,
+        171,
+        200,
+        231,
+        264,
+        299,
+        336,
+        375
+      ]
+    }
+  }
+}

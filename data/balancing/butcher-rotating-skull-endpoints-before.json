@@ -1,0 +1,180 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bba",
+    "skillName_eng": "Rotating Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen rotierenden physischen Hieb aus. Der Grundangriffswert steigt von 36 um 18 je weiterer Stufe auf 198. Die Mana-Kosten steigen von 24 um 12 je weiterer Stufe auf 132. Der Cooldown sinkt von 37 um 1 Sekunde je weiterer Stufe auf 28 Sekunden. Der Angriff beginnt ohne Cast Time; die Animation dauert vorläufig 0,7 Sekunden.",
+    "description_eng": "Performs a rotating physical strike. Base attack increases from 36 by 18 per additional level to 198. Mana cost increases from 24 by 12 per additional level to 132. Cooldown decreases from 37 by 1 second per additional level to 28 seconds. The attack starts without cast time; provisional animation duration is 0.7 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 87,
+    "patk": 36,
+    "skillName_de": "Rotier Schlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.7,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 37,
+      "perLevel": -1
+    },
+    "mana": 24,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 24,
+          "perLevel": 12
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 36,
+        "perLevel": 18
+      }
+    },
+    "hasLingeringDamage": false
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bbc",
+    "skillName_eng": "Skull Splitter",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Trifft einen einzelnen Gegner physisch und macht ihn kurz benommen. Der Grundangriffswert steigt von 387 um 163 je weiterer Skillstufe auf 1854 auf Level 10. Die Mana-Kosten steigen von 210 um 87 je weiterer Stufe auf 993. Die Cast Time beträgt 0,3 Sekunden, der Cooldown bleibt zunächst bei 60 Sekunden. Die Benommenheit dauert auf Level 1 bis 4 1 Sekunde, auf Level 5 bis 9 2 Sekunden und auf Level 10 3 Sekunden. Der Schaden hat keine anhaltende Dauer; die genaue Einschränkung durch Benommenheit ist noch festzulegen.",
+    "description_eng": "Hits a single enemy physically and briefly dazes it. Base attack increases from 387 by 163 per additional skill level to 1854 at level 10. Mana cost increases from 210 by 87 per additional level to 993. Cast time is 0.3 seconds and cooldown remains provisionally 60 seconds. Daze lasts 1 second at levels 1 to 4, 2 seconds at levels 5 to 9, and 3 seconds at level 10. Damage has no lingering duration; exact action restrictions from daze remain to be defined.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 89,
+    "patk": 387,
+    "skillName_de": "Schädelspalter",
+    "skillpoints": 1,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "targetMode": "singleEnemy",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0.3,
+    "effects": [
+      {
+        "key": "skullsplitterDaze",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "dazed",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 1,
+        "durationStatus": "defined",
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            3
+          ]
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "hasLingeringDamage": false,
+    "mana": 210,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 210,
+          "perLevel": 87
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 387,
+        "perLevel": 163
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c46",
+    "skillName_eng": "Demonic Blast",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schlägt auf den Boden vor dir und erzeugt eine Schockwelle, die Gegner in einem kegelförmigen Bereich trifft.",
+    "description_eng": "Strikes the ground in front of you, creating a shock wave that hits enemies in a cone.",
+    "dmgType": "physical",
+    "dur": 2,
+    "matk": 109,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 227,
+    "patk": 172,
+    "skillName_de": "Dämonische Schockwelle",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4d",
+    "skillName_eng": "Executioner's Wrath",
+    "__v": 0,
+    "category": "active",
+    "cd": 440,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führe einen tödlichen Hieb aus, der schweren Schaden verursacht und eine hohe Kritchance hat.",
+    "description_eng": "Execute a lethal blow that deals heavy damage and has a high critical chance.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 234,
+    "patk": 600,
+    "skillName_de": "Zorn des Henkers",
+    "skillpoints": 1
+  }
+]

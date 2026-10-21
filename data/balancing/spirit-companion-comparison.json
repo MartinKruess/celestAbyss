@@ -1,0 +1,50 @@
+{
+  "assumptions": [
+    "Level 60, R6, bekannte Attribute mit permanenten Passiven; keine Eigenbuffs des Meisters.",
+    "Seelenbegleiter: nur 30 % der Meisterattribute, Standardumrechnung, keine Startwerte/keine Waffe erfunden. Attribute ungerundet verrechnet; Hauptkampfwerte in der Anzeige ganzzahlig.",
+    "Morrak: Ritualist mit 100 Seelen, ohne zusätzliche Kampf-Procs oder Eigenbuffs. Werte vor dem eigenen 500-Max-HP-Preis, wie definiert.",
+    "Beide Beschwörungen haben Grund-Angriffstempo 100 Prozent; die absolute Grundfrequenz ist noch nicht festgelegt. Die folgende Zeitrechnung setzt ausschließlich zum Vergleich einen erfolgreichen Angriff pro Sekunde voraus; keine Verteidigung, Krits, Wege oder Ausweichereignisse.",
+    "Kein M-Angriffsbeitrag zu den physischen Auto-Attacks. Macht des Begleiters gibt Geschick, Vita und Wisdom statt fertiger Kampfwerte. Geschick erhöht beim Seelenbegleiter P-Angriff um 1,8 und Genauigkeit um 1,6 je Punkt. Die Stärke-Verwertung regulärer Pets bleibt unverändert."
+  ],
+  "masterKnownAttributes": {
+    "vitality": 160,
+    "wisdom": 144,
+    "strength": 59,
+    "intelligence": 59,
+    "dexterity": 89,
+    "agility": 39,
+    "luck": 3
+  },
+  "inheritedAttributes": {
+    "dexterity": 26.7,
+    "vitality": 48,
+    "wisdom": 43.199999999999996
+  },
+  "plain": {
+    "maxHealth": 1440,
+    "physicalAttack": 48.06,
+    "physicalDefense": 96,
+    "magicalDefense": 86.39999999999999,
+    "accuracy": 42.72,
+    "maxMana": 1295.9999999999998,
+    "healthRegen": 192,
+    "manaRegen": 129.6
+  },
+  "buffed": {
+    "maxHealth": 2940,
+    "physicalAttack": 138.06,
+    "physicalDefense": 196,
+    "magicalDefense": 186.39999999999998,
+    "accuracy": 122.72,
+    "maxMana": 2796,
+    "healthRegen": 392,
+    "manaRegen": 279.6
+  },
+  "morrak": {
+    "maxHealth": 1463,
+    "magicalAttack": 315.87333333333333,
+    "physicalDefense": 315,
+    "magicalDefense": 315
+  },
+  "assumedSuccessfulAttacksPerSecond": 1
+}

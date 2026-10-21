@@ -1,0 +1,68 @@
+{
+  "_id": "6acc1c7e4826525c70d04be1",
+  "skillName_eng": "Bladestorm",
+  "__v": 0,
+  "category": "active",
+  "cd": 75,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Führt fünf physische Treffer im Bereich bis 3 Meter vor dir aus, ohne nach vorne zu stürmen. Jeder Treffer hat auf Skilllevel 1 einen Grundangriffswert von 277, der je weiterer Stufe um 35 auf 592 steigt. Die Mana-Kosten steigen von 123 um 74 je weiterer Stufe auf 789. Der Cooldown sinkt von 75 um 2 Sekunden je weiterer Stufe auf 57 Sekunden. Die Ausführung dauert vorläufig 0,8 bis 1 Sekunde. Genaue Breite des Trefferbereichs und Trefferzeitpunkte werden im Spiel festgelegt. Castzeit 0,1 Sekunden.",
+  "description_eng": "Performs five physical hits in the area up to 3 meters in front of you, without charging forward. Each hit has a base attack value of 277 at skill level 1, increasing by 35 per additional level to 592. Mana cost increases from 123 by 74 per additional level to 789. Cooldown decreases from 75 by 2 seconds per additional level to 57 seconds. Execution provisionally lasts 0.8 to 1 second. Exact area width and hit timings will be defined in game. Cast time is 0.1 seconds.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 126,
+  "patk": 277,
+  "skillName_de": "Wirbelnde Klinge",
+  "skillpoints": 1,
+  "animationDurationRangeSeconds": {
+    "min": 0.8,
+    "max": 1
+  },
+  "animationTimingStatus": "provisional",
+  "attackArea": {
+    "shape": "frontal",
+    "center": "caster",
+    "rangeMeters": 3,
+    "geometryStatus": "pending",
+    "target": "enemiesInArea",
+    "evaluation": "perHit",
+    "timingStatus": "pending"
+  },
+  "attackExecution": {
+    "hitCount": 5,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending"
+  },
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 75,
+    "perLevel": -2
+  },
+  "mana": 123,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 123,
+        "perLevel": 74
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 277,
+      "perLevel": 35
+    }
+  },
+  "castTimeSeconds": 0.1
+}

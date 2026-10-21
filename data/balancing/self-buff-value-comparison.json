@@ -1,0 +1,1358 @@
+{
+  "generatedAt": "2026-10-19T10:56:10.280Z",
+  "sourceGeneratedAt": "2026-10-19T10:19:13.684Z",
+  "scope": "Own buffs only. Uptime and Mana per minute measured in the current 600-second standard self-buff run. Attack equivalents include direct stats and eligible attribute conversion. Average attack ratings are time averages, not DPS gains; conditional damage, cooldown effects and dynamic exchanges are listed separately. No definitions or Markdown files changed. Sustained theoretical means exclude the initial ready-at-start advantage: uptime = duration / (max(duration,cooldown) + cast time), assuming instant renewal without competing actions. These are separately labeled from measured 600s means.",
+  "rows": [
+    {
+      "key": "adventurer",
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "level": 10,
+      "values": {
+        "amb": 11,
+        "atkSpeed": 0.1
+      },
+      "durationSeconds": 300,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.96600000000001,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.1
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 9.994333333333335
+      },
+      "manaPerMinute": 49.664,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 60,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 10
+      }
+    },
+    {
+      "key": "adventurer",
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "level": 3,
+      "values": {
+        "str": 5,
+        "patk": 120
+      },
+      "durationSeconds": 1200,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 60,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 129,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 129,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 29.1,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 60,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 129,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "butcher",
+      "nr": 12,
+      "name": "Aufladung",
+      "level": 5,
+      "values": {
+        "str": 28,
+        "health": 240,
+        "patk": 320
+      },
+      "durationSeconds": 15,
+      "cooldownSeconds": 122,
+      "activeSecondsPerMinute": 7.5,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 375.44,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 46.93,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 193.5,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 7.328990228013029,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 45.85993485342019,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "butcher",
+      "nr": 172,
+      "name": "Kampfinstinkt",
+      "level": 10,
+      "values": {
+        "str": 22
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 43.56,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 43.53822,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 20.9,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 43.53823088455773,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "butcher",
+      "nr": 173,
+      "name": "Geist des Kriegers",
+      "level": 10,
+      "values": {
+        "str": 13,
+        "vita": 10
+      },
+      "durationSeconds": 270,
+      "cooldownSeconds": 420,
+      "activeSecondsPerMinute": 44.67,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 25.740000000000002,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 19.163429999999998,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 33.4,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 38.54389721627409,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 16.535331905781586,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "butcher",
+      "nr": 174,
+      "name": "Blutrausch",
+      "level": 10,
+      "values": {
+        "str": 7.5,
+        "atkSpeed": 0.1
+      },
+      "durationSeconds": 60,
+      "cooldownSeconds": 300,
+      "activeSecondsPerMinute": 12,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 14.850000000000001,
+        "magicalAttack": 0,
+        "attackSpeed": 0.1
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 2.9700000000000006,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 2
+      },
+      "manaPerMinute": 88.4,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 11.988011988011987,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 2.967032967032967,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 1.9980019980019978
+      }
+    },
+    {
+      "key": "butcher",
+      "nr": 175,
+      "name": "Bis in den Tot",
+      "level": 10,
+      "values": {},
+      "durationSeconds": 15,
+      "cooldownSeconds": 141,
+      "activeSecondsPerMinute": 7.5,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.15
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 1.875
+      },
+      "manaPerMinute": 91.5,
+      "conditionalMechanics": [
+        {
+          "key": "until-death-attack-speed",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "atkSpeed",
+          "value": 0.15,
+          "unit": "fraction",
+          "durationSeconds": 15
+        }
+      ],
+      "attributeExchange": {
+        "sourceStat": "vita",
+        "destinationStat": "str",
+        "sourceFractionScaling": {
+          "type": "linear",
+          "base": 0.01,
+          "perLevel": 0.01
+        },
+        "destinationPointsPerSourcePoint": 1,
+        "sampling": "onActivationBeforeOwnEffect",
+        "durationSeconds": 15,
+        "currentHealthAdjustmentStatus": "pending"
+      },
+      "theoreticalSustainedActiveSecondsPerMinute": 6.378454996456415,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 1.5946137491141037
+      }
+    },
+    {
+      "key": "druid",
+      "nr": 194,
+      "name": "Herr der Elemente",
+      "level": 10,
+      "values": {
+        "str": 10,
+        "vita": 5,
+        "wis": 5,
+        "int": 20
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.94,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 18,
+        "magicalAttack": 37.800000000000004,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 17.982,
+        "magicalAttack": 37.76220000000001,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 63.1,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.94005994005994,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 17.98201798201798,
+        "magicalAttack": 37.76223776223777,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "gladiator",
+      "nr": 34,
+      "name": "Energieausbruch",
+      "level": 10,
+      "values": {},
+      "durationSeconds": 18,
+      "cooldownSeconds": 90,
+      "activeSecondsPerMinute": 12.600000000000012,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 220.794,
+      "conditionalMechanics": [
+        {
+          "disablesEffects": [],
+          "valueScaling": {
+            "type": "table",
+            "values": [
+              0.1,
+              0.1,
+              0.1,
+              0.1,
+              0.12,
+              0.12,
+              0.12,
+              0.12,
+              0.12,
+              0.15
+            ]
+          },
+          "durationScaling": {
+            "type": "table",
+            "values": [
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              18
+            ]
+          },
+          "type": "shield",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 0.1,
+          "unit": "fraction",
+          "reference": "maxHealth",
+          "damageTypes": [
+            "physical",
+            "magical"
+          ],
+          "durationSeconds": 15,
+          "key": "shield"
+        },
+        {
+          "disablesEffects": [],
+          "valueScaling": {
+            "values": []
+          },
+          "durationScaling": {
+            "type": "table",
+            "values": [
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              18
+            ]
+          },
+          "type": "damageBonus",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 0.1,
+          "unit": "fraction",
+          "appliesTo": "basicAttack",
+          "damageTypes": [],
+          "durationSeconds": 15,
+          "endWith": "shield",
+          "key": "basic-attack-bonus"
+        },
+        {
+          "onInsufficientResource": "disableEffects",
+          "disablesEffects": [
+            "basic-attack-bonus",
+            "mana-drain"
+          ],
+          "valueScaling": {
+            "values": []
+          },
+          "durationScaling": {
+            "type": "table",
+            "values": [
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              15,
+              18
+            ]
+          },
+          "type": "resourceDrain",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 0.01,
+          "unit": "fraction",
+          "reference": "maxMana",
+          "resource": "mana",
+          "damageTypes": [],
+          "durationSeconds": 15,
+          "endWith": "shield",
+          "key": "mana-drain",
+          "intervalSource": "manaRegenerationTick"
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 11.894273127753305,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "gladiator",
+      "nr": 160,
+      "name": "Energie des Mutes",
+      "level": 10,
+      "values": {
+        "patk": 30,
+        "penetration": 20
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.98,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 30,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 29.99,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 30.5,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.98000666444518,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 29.99000333222259,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "gladiator",
+      "nr": 162,
+      "name": "Innere Kraft",
+      "level": 15,
+      "values": {
+        "str": 9,
+        "vita": 10,
+        "penetration": 35
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.95,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 17.01,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 16.995825,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 59.5,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.98000666444518,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 17.00433188937021,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "gladiator",
+      "nr": 163,
+      "name": "Volles Potential",
+      "level": 3,
+      "values": {
+        "health": 750,
+        "luck": 3,
+        "critDamageBonus": 0.01
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 900,
+      "activeSecondsPerMinute": 59.879999999999995,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 25.7,
+      "conditionalMechanics": [
+        {
+          "key": "full-potential-max-mana",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "maxMana",
+          "value": 66,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "linear",
+            "base": 66,
+            "perLevel": 67
+          },
+          "durationSeconds": 600
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 39.973351099267155,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "healer",
+      "nr": 240,
+      "name": "Permafrost",
+      "level": 3,
+      "values": {},
+      "durationSeconds": "toggle",
+      "cooldownSeconds": 0,
+      "activeSecondsPerMinute": 59.96,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 580,
+      "conditionalMechanics": [
+        {
+          "targetCreatureTypes": [],
+          "damageSchool": "ice",
+          "requiredActiveSkillNumbers": [],
+          "disablesEffects": [],
+          "valueScaling": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2,
+            "values": []
+          },
+          "durationScaling": {
+            "values": []
+          },
+          "type": "cooldownReduction",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 2,
+          "unit": "flat",
+          "appliesTo": "allSkills",
+          "damageTypes": [],
+          "durationSeconds": 0,
+          "key": "permafrost-ice-cooldown"
+        },
+        {
+          "targetCreatureTypes": [],
+          "damageSchool": "ice",
+          "requiredActiveSkillNumbers": [],
+          "disablesEffects": [],
+          "valueScaling": {
+            "values": []
+          },
+          "durationScaling": {
+            "values": []
+          },
+          "type": "procChanceBonus",
+          "controlKind": "freeze",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 0.01,
+          "unit": "fraction",
+          "damageTypes": [],
+          "durationSeconds": 0,
+          "key": "permafrost-freeze-chance"
+        },
+        {
+          "targetCreatureTypes": [],
+          "requiredActiveSkillNumbers": [],
+          "intervalSource": "manaRegenerationTick",
+          "disablesEffects": [],
+          "valueScaling": {
+            "type": "table",
+            "values": [
+              13,
+              21,
+              29
+            ]
+          },
+          "durationScaling": {
+            "values": []
+          },
+          "type": "resourceDrain",
+          "target": "self",
+          "allowedRaces": [],
+          "value": 13,
+          "unit": "flat",
+          "resource": "mana",
+          "damageTypes": [],
+          "durationSeconds": 0,
+          "key": "permafrost-mana-drain"
+        }
+      ],
+      "attributeExchange": null
+    },
+    {
+      "key": "healer",
+      "nr": 242,
+      "name": "Assimilation",
+      "level": 5,
+      "values": {
+        "mana": 300,
+        "manaRegen": 25
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 5.9,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "herbalist",
+      "nr": 164,
+      "name": "Natürlicher Schutz",
+      "level": 10,
+      "values": {
+        "pdef": 42,
+        "mdef": 42,
+        "wis": 12
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 26.4,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "herbalist",
+      "nr": 165,
+      "name": "Aura Unterdrückung",
+      "level": 10,
+      "values": {},
+      "durationSeconds": 180,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.839999999999996,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 58.8,
+      "conditionalMechanics": [
+        {
+          "key": "aura-suppression-threat",
+          "type": "threatMultiplier",
+          "target": "self",
+          "value": 0.99,
+          "unit": "fraction",
+          "threatBasis": "damageDealt",
+          "valueScaling": {
+            "type": "linear",
+            "base": 0.99,
+            "perLevel": -0.01
+          },
+          "durationSeconds": 180
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.90016638935108,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "hunter",
+      "nr": 153,
+      "name": "Treffsicherheit",
+      "level": 10,
+      "values": {
+        "dex": 20,
+        "luck": 5
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 36,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 35.982,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 16.4,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 35.982008995502255,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "hunter",
+      "nr": 154,
+      "name": "Auge des Falken",
+      "level": 10,
+      "values": {
+        "patk": 60,
+        "accuracy": 24,
+        "luck": 5,
+        "dodge": 20
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.92999999999999,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 60,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 59.92999999999999,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 19.2,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 59.970014992503756,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "hunter",
+      "nr": 156,
+      "name": "Waldläufer",
+      "level": 3,
+      "values": {
+        "agi": 3,
+        "dex": 6,
+        "patk": 109
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.89,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 119.8,
+        "magicalAttack": 0,
+        "attackSpeed": 0.0018
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 119.58036666666666,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.17967
+      },
+      "manaPerMinute": 16.5,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 119.7401299350325,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.17991004497751126
+      }
+    },
+    {
+      "key": "hunter",
+      "nr": 157,
+      "name": "Pfeil der Vorfahren",
+      "level": 10,
+      "values": {},
+      "durationSeconds": 12,
+      "cooldownSeconds": 90,
+      "activeSecondsPerMinute": 8.399999999999988,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 132.3,
+      "conditionalMechanics": [
+        {
+          "key": "ancestor-three-arrows",
+          "type": "triggeredAttack",
+          "target": "enemy",
+          "value": 16,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "linear",
+            "base": 16,
+            "perLevel": 16
+          },
+          "durationSeconds": 12,
+          "applicationTrigger": "ownBasicAttackHit",
+          "additionalProjectileCount": 3,
+          "requiresOriginalTarget": true,
+          "affectsOnlyTriggerTarget": true,
+          "excludesTriggeredAttacks": true,
+          "excludeCompanionAttacks": true,
+          "addsCasterPhysicalAttack": false,
+          "damageTypes": [
+            "physical"
+          ],
+          "progressionStatus": "defined"
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 7.9734219269103,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "knight",
+      "nr": 82,
+      "name": "Schutz Aura",
+      "level": 10,
+      "values": {
+        "pdef": 1300,
+        "mdef": 1300
+      },
+      "durationSeconds": 15,
+      "cooldownSeconds": 90,
+      "activeSecondsPerMinute": 10.5,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 291.2,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 9.988901220865705,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "knight",
+      "nr": 171,
+      "name": "Aktive Deckung",
+      "level": 10,
+      "values": {
+        "pdef": 33,
+        "mdef": 33
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.98,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 10.8,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.98000666444518,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 178,
+      "name": "Geist des Feuers",
+      "level": 10,
+      "values": {
+        "int": 20
+      },
+      "durationSeconds": 300,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.92,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 36,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 35.952,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 13.4,
+      "conditionalMechanics": [
+        {
+          "key": "fire-spirit-fire-attack",
+          "type": "damageBonus",
+          "target": "self",
+          "appliesTo": "allSkills",
+          "damageSchool": "fire",
+          "value": 4,
+          "unit": "flat",
+          "valueScaling": {
+            "type": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "durationSeconds": 300
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.96002664890074,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 35.97601598934044,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 236,
+      "name": "Teufelspakt",
+      "level": 3,
+      "values": {
+        "wis": 15,
+        "int": 15,
+        "vita": 15
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 27,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 26.986500000000003,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 11.1,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 26.98650674662669,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "shaman",
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "level": 3,
+      "values": {
+        "str": 5,
+        "patk": 120
+      },
+      "durationSeconds": 1200,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 60,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 129.45,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 129.45,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 30,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 60,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 129.45,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "summoner",
+      "nr": 80,
+      "name": "Beweglichkeit",
+      "level": 10,
+      "values": {
+        "agi": 5,
+        "movementSpeed": 0.09999999999999999
+      },
+      "durationSeconds": 24.5,
+      "cooldownSeconds": 102,
+      "activeSecondsPerMinute": 14.7,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.0029999999999999996
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.0735
+      },
+      "manaPerMinute": 84.6,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 14.383561643835616,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.07191780821917808
+      }
+    },
+    {
+      "key": "summoner",
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "level": 10,
+      "values": {
+        "amb": 11,
+        "atkSpeed": 0.1
+      },
+      "durationSeconds": 300,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.911,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.1
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 9.985166666666668
+      },
+      "manaPerMinute": 51.2,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 60,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 10
+      }
+    },
+    {
+      "key": "summoner",
+      "nr": 183,
+      "name": "Gute Reflexe",
+      "level": 10,
+      "values": {
+        "agi": 10
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.005999999999999999
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.5997
+      },
+      "manaPerMinute": 34.9,
+      "conditionalMechanics": [
+        {
+          "key": "good-reflexes-dash-efficiency",
+          "type": "resourceCostReduction",
+          "target": "self",
+          "resource": "stamina",
+          "appliesTo": "specificSkill",
+          "targetSkillNumber": 21,
+          "value": 0.02,
+          "unit": "flat",
+          "durationSeconds": 600
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.5997001499250375
+      }
+    },
+    {
+      "key": "summoner",
+      "nr": 190,
+      "name": "Keine Gnade",
+      "level": 10,
+      "values": {
+        "dex": 10,
+        "patk": 89
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.94,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 107,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 106.893,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 14.1,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.98000666444518,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 106.96434521826056,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "villian",
+      "nr": 80,
+      "name": "Beweglichkeit",
+      "level": 10,
+      "values": {
+        "agi": 5,
+        "movementSpeed": 0.09999999999999999
+      },
+      "durationSeconds": 24.5,
+      "cooldownSeconds": 102,
+      "activeSecondsPerMinute": 14.699999999999989,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.0029999999999999996
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.07349999999999994
+      },
+      "manaPerMinute": 82.062,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 14.383561643835616,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0.07191780821917808
+      }
+    },
+    {
+      "key": "villian",
+      "nr": 146,
+      "name": "List des Schurken",
+      "level": 10,
+      "values": {
+        "luck": 5.5,
+        "amb": 15
+      },
+      "durationSeconds": 300,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.842000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 27,
+        "magicalAttack": 0,
+        "attackSpeed": 0
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 26.928900000000002,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      },
+      "manaPerMinute": 28.518,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.92010652463383,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 26.964047936085223,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 0
+      }
+    },
+    {
+      "key": "villian",
+      "nr": 189,
+      "name": "Herz des Verräters",
+      "level": 5,
+      "values": {
+        "atkSpeed": 0.05,
+        "movementSpeed": 0.05
+      },
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "activeSecondsPerMinute": 59.970000000000006,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeed": 0.05
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 4.9975000000000005
+      },
+      "manaPerMinute": 10.379,
+      "conditionalMechanics": [
+        {
+          "key": "traitor-assassin-mana",
+          "type": "resourceGain",
+          "target": "self",
+          "resource": "mana",
+          "value": 12,
+          "unit": "flat",
+          "durationSeconds": 600,
+          "minimumSkillLevel": 5,
+          "requiredActiveSkillNumbers": [
+            189,
+            238
+          ],
+          "gainTrigger": "ownBasicAttack",
+          "oncePerAttackAction": true,
+          "excludeCompanionAttacks": true
+        }
+      ],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 59.970014992503756,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 0,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 4.997501249375313
+      }
+    },
+    {
+      "key": "villian",
+      "nr": 238,
+      "name": "Attentäter",
+      "level": 10,
+      "values": {
+        "atkSpeed": 0.2,
+        "amb": 10
+      },
+      "durationSeconds": 20,
+      "cooldownSeconds": 120,
+      "activeSecondsPerMinute": 10,
+      "equivalentAttackWhileActive": {
+        "physicalAttack": 18,
+        "magicalAttack": 0,
+        "attackSpeed": 0.2
+      },
+      "averageEquivalentAttack": {
+        "physicalAttack": 3,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 3.333333333333333
+      },
+      "manaPerMinute": 102.335,
+      "conditionalMechanics": [],
+      "attributeExchange": null,
+      "theoreticalSustainedActiveSecondsPerMinute": 9.991673605328893,
+      "theoreticalSustainedAverageAttack": {
+        "physicalAttack": 2.9975020815986677,
+        "magicalAttack": 0,
+        "attackSpeedPoints": 3.3305578684429644
+      }
+    }
+  ]
+}

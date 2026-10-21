@@ -1,0 +1,166 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c2f",
+    "skillName_eng": "Catalyst Pure",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft ein Verstärkungsfeld für Gruppenmitglieder der Völker Aurora. Im Feld steigen ihr physischer Angriff um 45 und ihr magischer Angriff um 120 pro Skilllevel. Das Feld hält auf Skilllevel 1 21 Sekunden und pro weiterem Level 2 Sekunden länger. Auf Skilllevel 5 gewährt es +225 physischen und +600 magischen Angriff für 29 Sekunden. Der Cooldown beträgt 600 Sekunden. In einem bereits von einem Katalysator belegten Gebiet kann kein weiterer Katalysator platziert werden.",
+    "description_eng": "Creates an enhancement field for Aurora group members. Within the field, their physical attack increases by 45 and magical attack by 120 per skill level. The field lasts 21 seconds at skill level 1 and 2 seconds longer per additional level. At skill level 5, it grants +225 physical and +600 magical attack for 29 seconds. The cooldown is 600 seconds. Another catalyst cannot be placed in an area already occupied by a catalyst.",
+    "dmgType": "spell",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 204,
+    "skillName_de": "Katalysator Rein",
+    "skillpoints": 1,
+    "activation": "manual",
+    "areaSettings": {
+      "exclusiveGroup": "catalystField",
+      "overlapPolicy": "rejectPlacement"
+    },
+    "cd": 600,
+    "dur": 21,
+    "durationScaling": {
+      "type": "linear",
+      "base": 21,
+      "perLevel": 2
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 45
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 2
+        },
+        "type": "statModifier",
+        "target": "alliesInArea",
+        "allowedRaces": [
+          "Aurora"
+        ],
+        "stat": "patk",
+        "value": 45,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 21,
+        "key": "field-patk"
+      },
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 120,
+          "perLevel": 120
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 2
+        },
+        "type": "statModifier",
+        "target": "alliesInArea",
+        "allowedRaces": [
+          "Aurora"
+        ],
+        "stat": "matk",
+        "value": 120,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 21,
+        "key": "field-matk"
+      }
+    ],
+    "effectsVersion": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c30",
+    "skillName_eng": "Catalyst Impure",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft ein Verstärkungsfeld für Gruppenmitglieder der Völker Menschen und Umbra. Im Feld steigen ihr physischer Angriff um 45 und ihr magischer Angriff um 120 pro Skilllevel. Das Feld hält auf Skilllevel 1 21 Sekunden und pro weiterem Level 2 Sekunden länger. Auf Skilllevel 5 gewährt es +225 physischen und +600 magischen Angriff für 29 Sekunden. Der Cooldown beträgt 600 Sekunden. In einem bereits von einem Katalysator belegten Gebiet kann kein weiterer Katalysator platziert werden.",
+    "description_eng": "Creates an enhancement field for Human and Umbra group members. Within the field, their physical attack increases by 45 and magical attack by 120 per skill level. The field lasts 21 seconds at skill level 1 and 2 seconds longer per additional level. At skill level 5, it grants +225 physical and +600 magical attack for 29 seconds. The cooldown is 600 seconds. Another catalyst cannot be placed in an area already occupied by a catalyst.",
+    "dmgType": "spell",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 205,
+    "skillName_de": "Katalysator Unrein",
+    "skillpoints": 1,
+    "activation": "manual",
+    "areaSettings": {
+      "exclusiveGroup": "catalystField",
+      "overlapPolicy": "rejectPlacement"
+    },
+    "cd": 600,
+    "dur": 21,
+    "durationScaling": {
+      "type": "linear",
+      "base": 21,
+      "perLevel": 2
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 45
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 2
+        },
+        "type": "statModifier",
+        "target": "alliesInArea",
+        "allowedRaces": [
+          "Human",
+          "Umbra"
+        ],
+        "stat": "patk",
+        "value": 45,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 21,
+        "key": "field-patk"
+      },
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 120,
+          "perLevel": 120
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 2
+        },
+        "type": "statModifier",
+        "target": "alliesInArea",
+        "allowedRaces": [
+          "Human",
+          "Umbra"
+        ],
+        "stat": "matk",
+        "value": 120,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 21,
+        "key": "field-matk"
+      }
+    ],
+    "effectsVersion": 1
+  }
+]

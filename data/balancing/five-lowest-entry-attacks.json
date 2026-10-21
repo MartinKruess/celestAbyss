@@ -1,0 +1,460 @@
+{
+  "scope": "Skill level 1, summed fixed base damage of one complete activation against one target, no character attack. Includes all defined hits/ticks and guaranteed crit. Excludes resource-variable Mana Explosion, Spectral Chain finisher and Underworld Scream. Conditional attacks are not assumed freely usable.",
+  "classes": [
+    {
+      "name": "Abenteurer",
+      "skills": [
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "baseDamage": 117,
+          "maxLevel": 6
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "baseDamage": 135,
+          "maxLevel": 10
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff",
+          "baseDamage": 273,
+          "maxLevel": 20
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "baseDamage": 391,
+          "maxLevel": 10
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "baseDamage": 1385,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Butcher",
+      "skills": [
+        {
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "baseDamage": 36,
+          "maxLevel": 10
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "baseDamage": 73,
+          "maxLevel": 10
+        },
+        {
+          "nr": 3,
+          "name": "Abräumer",
+          "baseDamage": 75,
+          "maxLevel": 10
+        },
+        {
+          "nr": 11,
+          "name": "Aufgeladener Schlag",
+          "baseDamage": 85,
+          "maxLevel": 15
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "baseDamage": 111,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Druide",
+      "skills": [
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "baseDamage": 25,
+          "maxLevel": 5
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "baseDamage": 37,
+          "maxLevel": 10
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "baseDamage": 131,
+          "maxLevel": 10
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "baseDamage": 187,
+          "maxLevel": 10
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "baseDamage": 211,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Gladiator",
+      "skills": [
+        {
+          "nr": 61,
+          "name": "Holzspalter",
+          "baseDamage": 25,
+          "maxLevel": 20
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "baseDamage": 73,
+          "maxLevel": 10
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "baseDamage": 111,
+          "maxLevel": 10
+        },
+        {
+          "nr": 233,
+          "name": "Kriegerischer Ansturm",
+          "baseDamage": 137,
+          "maxLevel": 10
+        },
+        {
+          "nr": 109,
+          "name": "Sturm der Wut",
+          "baseDamage": 281,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Heiler",
+      "skills": [
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "baseDamage": 25,
+          "maxLevel": 5
+        },
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "baseDamage": 64,
+          "maxLevel": 10
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "baseDamage": 137,
+          "maxLevel": 10
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "baseDamage": 187,
+          "maxLevel": 10
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "baseDamage": 273,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Kräuterkundler",
+      "skills": [
+        {
+          "nr": 16,
+          "name": "Wasserfesseln",
+          "baseDamage": 47,
+          "maxLevel": 20
+        },
+        {
+          "nr": 46,
+          "name": "Ewiges Eis",
+          "baseDamage": 137,
+          "maxLevel": 15
+        },
+        {
+          "nr": 31,
+          "name": "Elektrisches Feld",
+          "baseDamage": 157,
+          "maxLevel": 10
+        },
+        {
+          "nr": 56,
+          "name": "Geladener Nebel",
+          "baseDamage": 177,
+          "maxLevel": 15
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "baseDamage": 187,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Jäger",
+      "skills": [
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "baseDamage": 37,
+          "maxLevel": 10
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "baseDamage": 52,
+          "maxLevel": 5
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "baseDamage": 67,
+          "maxLevel": 20
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "baseDamage": 101,
+          "maxLevel": 10
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "baseDamage": 236,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Ritter",
+      "skills": [
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "baseDamage": 73,
+          "maxLevel": 10
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "baseDamage": 81,
+          "maxLevel": 10
+        },
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "baseDamage": 97,
+          "maxLevel": 10
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "baseDamage": 137,
+          "maxLevel": 20
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "baseDamage": 187,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Luminet",
+      "skills": [
+        {
+          "nr": 231,
+          "name": "Luminus",
+          "baseDamage": 42,
+          "maxLevel": 10
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "baseDamage": 63,
+          "maxLevel": 20
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "baseDamage": 187,
+          "maxLevel": 10
+        },
+        {
+          "nr": 215,
+          "name": "Heiliges Kreuz",
+          "baseDamage": 237,
+          "maxLevel": 10
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "baseDamage": 273,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Ritualist",
+      "skills": [
+        {
+          "nr": 232,
+          "name": "Dunkler Impuls",
+          "baseDamage": 42,
+          "maxLevel": 10
+        },
+        {
+          "nr": 104,
+          "name": "Seelenqual",
+          "baseDamage": 47,
+          "maxLevel": 10
+        },
+        {
+          "nr": 49,
+          "name": "Feuerball",
+          "baseDamage": 63,
+          "maxLevel": 20
+        },
+        {
+          "nr": 103,
+          "name": "Seelenfessel",
+          "baseDamage": 97,
+          "maxLevel": 15
+        },
+        {
+          "nr": 72,
+          "name": "Lebenssauger",
+          "baseDamage": 112,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Schamane",
+      "skills": [
+        {
+          "nr": 255,
+          "name": "Felszähne",
+          "baseDamage": 73,
+          "maxLevel": 20
+        },
+        {
+          "nr": 15,
+          "name": "Beben",
+          "baseDamage": 81,
+          "maxLevel": 20
+        },
+        {
+          "nr": 202,
+          "name": "Verbrennen",
+          "baseDamage": 160,
+          "maxLevel": 15
+        },
+        {
+          "nr": 50,
+          "name": "Feuerlanze",
+          "baseDamage": 197,
+          "maxLevel": 10
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "baseDamage": 202,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Seelenjäger",
+      "skills": [
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "baseDamage": 4,
+          "maxLevel": 10
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "baseDamage": 37,
+          "maxLevel": 10
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "baseDamage": 52,
+          "maxLevel": 5
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "baseDamage": 67,
+          "maxLevel": 20
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "baseDamage": 486,
+          "maxLevel": 10
+        }
+      ]
+    },
+    {
+      "name": "Schurke",
+      "skills": [
+        {
+          "nr": 70,
+          "name": "Kunai Todesstoß",
+          "baseDamage": 17,
+          "maxLevel": 4
+        },
+        {
+          "nr": 27,
+          "name": "Dunkler Schlag",
+          "baseDamage": 41,
+          "maxLevel": 15
+        },
+        {
+          "nr": 90,
+          "name": "Schattendolch",
+          "baseDamage": 94,
+          "maxLevel": 15
+        },
+        {
+          "nr": 17,
+          "name": "Blutklinge",
+          "baseDamage": 100,
+          "maxLevel": 10
+        },
+        {
+          "nr": 91,
+          "name": "Schattenfalle",
+          "baseDamage": 171,
+          "maxLevel": 10
+        }
+      ]
+    }
+  ]
+}

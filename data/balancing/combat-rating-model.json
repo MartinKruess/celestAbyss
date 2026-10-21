@@ -1,0 +1,23 @@
+{
+  "status": "provisionalEquipmentIncomplete",
+  "formula": "r = clamp(rating, 0, capRating); maximum * (r / (scale + r)) / (capRating / (scale + capRating))",
+  "scaleMeaning": "Curvature parameter; curve is normalized to reach maximum at capRating",
+  "capMeaning": "350 rating reaches the configured maximum; additional rating gives no further chance",
+  "ratings": {
+    "critChanceRating": {"scale": 350, "capRating": 350, "maximum": 0.8},
+    "dodge": {"scale": 350, "capRating": 350, "maximum": 0.6},
+    "block": {"scale": 350, "capRating": 350, "maximum": 0.6},
+    "accuracy": {"scale": 350, "capRating": 350, "maximum": 0.8},
+    "penetration": {"scale": 350, "capRating": 350, "maximum": 0.6}
+  },
+  "accuracyMeaning": "Bonus in probability points, not final hit chance",
+  "penetrationMeaning": "Provisional counter-strength only; block interaction not yet defined",
+  "baseHitChance": 0.8333333333333334,
+  "combatRollsEnabled": false,
+  "notes": [
+    "Primary attribute conversion factors remain unchanged.",
+    "Critical damage bonus is not diminished by this model.",
+    "No random critical, block, dodge or hit rolls are added to damage simulations.",
+    "Weapon critical and shield block units remain unresolved and are not silently combined with ratings."
+  ]
+}

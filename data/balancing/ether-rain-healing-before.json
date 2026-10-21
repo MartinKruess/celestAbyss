@@ -1,0 +1,62 @@
+{
+  "_id": "6acc1c7e4826525c70d04b6c",
+  "skillName_eng": "Ether Rain",
+  "__v": 0,
+  "category": "active",
+  "cd": 150,
+  "charClass": [
+    "Druide",
+    "Alchemist",
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört ein Ätherfeld, das alle 2 Sekunden Gegnern magischen Schaden zufügt und jedes eigene Gruppenmitglied im Feld heilt. Der magische Grundangriff je Auslösung steigt von 300 um 73 je weiterer Stufe auf 957. Jeder erhält die volle Heilung von 75 HP plus 0,5 Prozent des insgesamt durch diesen Tick verursachten Schadens je gelerntem Skilllevel, bis zu 5 Prozent auf Level 10. Die Heilung wird nicht unter den Gruppenmitgliedern aufgeteilt. Die Dauer beträgt zunächst 6 Sekunden, ab Stufe 5 7 Sekunden und auf Stufe 10 8 Sekunden. Auslösungen erfolgen nach 2, 4, 6 und gegebenenfalls 8 Sekunden. Mana-Kosten steigen von 210 um 85 je weiterer Stufe auf 975. Castzeit 0,6 Sekunden, Cooldown 150 Sekunden. Startdurchmesser und genaue Schadensbasis werden noch geklärt.",
+  "description_eng": "Summons an ether field that deals magical damage to enemies and heals each member of your own group within the field every 2 seconds. Base magical attack per pulse increases from 300 by 73 per additional level to 957. Each member receives the full healing of 75 HP plus 0.5 percent of the total damage dealt by this pulse per learned skill level, reaching 5 percent at level 10. Healing is not split between group members. Duration starts at 6 seconds, becomes 7 seconds at level 5 and 8 seconds at level 10. Pulses occur at 2, 4, 6 and, where applicable, 8 seconds. Mana cost increases from 210 by 85 per additional level to 975. Cast time is 0.6 seconds and cooldown is 150 seconds. Starting diameter and exact damage basis remain pending.",
+  "dmgType": "spell",
+  "dur": 6,
+  "health": 75,
+  "matk": 300,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 9,
+  "skillName_de": "Ätherregen",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.6,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      6,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7,
+      7,
+      7,
+      8
+    ]
+  },
+  "mana": 210,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 210,
+        "perLevel": 85
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 300,
+      "perLevel": 73
+    }
+  }
+}

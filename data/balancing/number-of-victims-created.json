@@ -1,0 +1,102 @@
+{
+  "_id": "6ad207c878d209a368038d26",
+  "soulReserveBonusSettings": {
+    "stat": "matk",
+    "bonusPerStoredFragment": 1,
+    "maximumBonus": 100,
+    "usesCurrentStoredAmount": true,
+    "levelProgressionStatus": "pending"
+  },
+  "soulGenerationSettings": {
+    "maximumUniqueEnemiesScaling": {
+      "values": []
+    }
+  },
+  "soulStorageSettings": {
+    "capacityScaling": {
+      "values": []
+    }
+  },
+  "activationRequirements": {
+    "targetHealthBelowFractionScaling": {
+      "values": []
+    }
+  },
+  "tetherSettings": {
+    "worldAnchorKinds": []
+  },
+  "collectedPointScaling": {
+    "thresholds": [],
+    "durationSecondsByTier": [],
+    "baseDamageBonusFractionByTier": []
+  },
+  "attackExecution": {
+    "additionalDamageFromSacrificedHealth": {
+      "values": []
+    },
+    "hitCountScaling": {
+      "values": []
+    },
+    "damageMultiplierScaling": {
+      "values": []
+    },
+    "armorIgnoreFractionByLevel": []
+  },
+  "attackArea": {
+    "radiusScaling": {
+      "values": []
+    },
+    "maxTargetsScaling": {
+      "values": []
+    }
+  },
+  "movement": {
+    "distanceScaling": {
+      "values": []
+    },
+    "hopDirections": []
+  },
+  "durationScaling": {
+    "values": []
+  },
+  "cooldownScaling": {
+    "values": []
+  },
+  "resourceCosts": [],
+  "burstUsage": {
+    "usesPerBurstScaling": {
+      "values": []
+    },
+    "afterBurstCooldownScaling": {
+      "values": []
+    },
+    "belowTargetHealthFractionByLevel": [],
+    "usesBelowThresholdByLevel": []
+  },
+  "triggerCondition": {
+    "chancePerCheckScaling": {
+      "values": []
+    },
+    "chancePerCheck": null,
+    "healthThresholds": []
+  },
+  "allowedRaces": [],
+  "isClassCore": false,
+  "nr": 241,
+  "skillName_eng": "Number of Victims",
+  "skillName_de": "Zahl der Opfer",
+  "charClass": [
+    "Bloodmage",
+    "Ritualist"
+  ],
+  "currentSkillLv": 0,
+  "maxSkillLv": 10,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "category": "passive",
+  "description_eng": "Permanent passive reserve bonus. Each currently stored soul in the Reaper-managed soul reserve grants +1 direct magical attack, capped at +100 with 100 stored souls. Collecting increases and spending decreases the bonus. Explicitly additional to Reaper’s Victim bonus. Generates no souls and uses neither historical kill counts nor morality. No activation cost, cast time or limited duration. Ten source learning levels are provisionally retained; their exact function/progression remains pending.",
+  "description_de": "Permanenter passiver Vorratsbonus. Jede aktuell gespeicherte Seele im durch Reaper verwalteten Seelenspeicher gewährt +1 direkten M-Angriff, maximal +100 bei 100 gespeicherten Seelen. Beim Sammeln steigt und beim Ausgeben sinkt der Bonus entsprechend. Gilt ausdrücklich zusätzlich zum Victim-Bonus von Reaper. Keine eigene Seelenerzeugung, kein historischer Tötungszähler und keine Moralvoraussetzung. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Die zehn Lernstufen aus der Quelle sind vorläufig beibehalten; ihre konkrete Funktion beziehungsweise Skalierung ist noch festzulegen.",
+  "dmgType": "passive",
+  "skillpoints": 1,
+  "__v": 0
+}

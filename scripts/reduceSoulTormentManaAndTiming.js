@@ -1,0 +1,17 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+try {
+ if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Wrong database');
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+ const before=await SkillDataModel.collection.findOne({nr:104});
+ if(before?.maxSkillLv!==10)throw Error('Unexpected skill');
+ const set={resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:57,perLevel:29}}],cd:0.19,castTimeSeconds:0,description_de:'Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 127, +22 je weiterer Stufe, auf Stufe 10 325. Mana 57 je Anwendung auf Stufe 1, +29 je weiterer Stufe, auf Stufe 10 318 je Anwendung. Castzeit 0 Sekunden, Cooldown 0,19 Sekunden. Bei sofortiger erster Anwendung passen theoretisch bis zu 16 Anwendungen in ein volles 3-Sekunden-Fenster (Zeitpunkte 0 bis 2,85 Sekunden); Reaktionszeit und Serverablauf können das reduzieren. 15 Anwendungen kosten auf Stufe 10 4770 Mana. Für Seelentrennung vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, ab 12 ergeben 2; höhere Trefferzahlen durch das geänderte Timing erhöhen die Ernte nicht über 2. Manueller Abschluss bevorzugt, genaue Umsetzung noch offen. Seelenfessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.',description_eng:'One magical hit, usable only while Soul Shackle affects the target. No health cost or damage over time. Base damage 127 plus 22 per additional level, reaching 325 at level 10. Mana 57 per activation plus 29 per additional level, reaching 318. Cast time zero, cooldown 0.19 seconds. If the first activation is immediate, up to 16 theoretical activations fit into a full 3-second window (times 0 through 2.85 seconds); reaction time and server timing can reduce this. At level 10, 15 activations cost 4770 Mana. Soul Separation proposal: 0–4 successful Torment hits yield 0 souls, 5–11 yield 1, at least 12 yield 2; additional hits possible under the new timing do not increase the proposed maximum reward above 2. Manual finishing preferred, exact implementation pending. Shackle costs 1 soul first, so harvesting 1 only recovers the initial investment.'};
+ await new SkillDataModel({...before,...set}).validate();
+ await fs.writeFile('data/balancing/soul-torment-mana-timing-before.json',JSON.stringify(before,null,2)+'\n');
+ await SkillDataModel.collection.updateOne({nr:104},{$set:set});
+ const after=await SkillDataModel.collection.findOne({nr:104});
+ for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');
+ console.log('Soul Torment verified: 57–318 Mana, zero cast, cooldown0.19s; 15 casts=4770 Mana.');
+}catch(e){console.error('Update failed ('+e.name+'); credentials omitted.');process.exitCode=1;}finally{await mongoose.disconnect();}

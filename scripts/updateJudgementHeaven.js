@@ -1,0 +1,14 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+const set={dur:2,mana:157,statScaling:{patk:{type:'linear',base:316,perLevel:113}},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:157,perLevel:62}}],attackExecution:{hitCount:2,damageValueScope:'perHit',hitTimingStatus:'defined',hitSequence:[{offsetSeconds:0,damageMultiplier:1},{offsetSeconds:2,damageMultiplier:0.5}]},description_de:'Ruft einen Strahl vom Himmel herab, der Gegner im betroffenen Bereich zuerst mit dem vollen physischen Skill-Schadenswert trifft. Nach 2 Sekunden verursacht der abschließende zweite Treffer 50 Prozent des ursprünglichen Schadenswerts. Der physische Grundschaden des ersten Treffers steigt von 316 um 113 je weiterer Stufe auf 768 auf Stufe 5. Der zweite Treffer entspricht 158 bis 384 Grundschaden; zusammen 474 bis 1152 vor weiteren Schadensberechnungen. Mana-Kosten steigen von 157 um 62 je weiterer Stufe auf 405. Bisheriger Cooldown 42 Sekunden. Castzeit, genauer Trefferbereich und Verrechnung mit gegnerischer Verteidigung werden noch geprüft.',description_eng:'Calls down a beam from heaven that first hits enemies in the affected area for the full physical skill damage value. After 2 seconds, a final second hit deals 50 percent of the original damage value. First-hit base physical damage increases from 316 by 113 per additional level to 768 at level 5. Second-hit base damage is 158 to 384, totaling 474 to 1152 before further damage calculations. Mana cost increases from 157 by 62 per additional level to 405. Existing cooldown is 42 seconds. Cast time, exact area and interaction with enemy defense remain to be reviewed.'};
+try{
+if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Requires development database');
+await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+const before=await SkillDataModel.collection.findOne({nr:117});if(!before)throw Error('Missing skill');
+await new SkillDataModel({...before,...set}).validate();await fs.writeFile('data/balancing/judgement-heaven-before.json',JSON.stringify(before,null,2)+'\n');
+await SkillDataModel.collection.updateOne({_id:before._id},{$set:set});
+const after=await SkillDataModel.collection.findOne({_id:before._id});for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');
+console.log('Judgement of Heaven verified: 2 hits at 100/50 percent across 2 seconds, first-hit damage 316 to 768, mana 157 to 405.');
+}catch(e){console.error(`Eternal Victor update failed (${e.name}); credentials omitted.`);process.exitCode=1;}finally{await mongoose.disconnect();}

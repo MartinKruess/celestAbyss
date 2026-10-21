@@ -1,0 +1,428 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b64",
+    "skillName_eng": "Enlightenment",
+    "__v": 0,
+    "category": "Aurora",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Aurora-Grundskill. Je Stufe +1 Willenskraft und +1 direkte MP-Regeneration. Der Intelligenzbonus steigt auf insgesamt +15; auf jeder vierten Stufe wird stattdessen +1 Geschick gewährt, insgesamt +5 Geschick auf Stufe 20. Endwerte: +15 Intelligenz, +20 Willenskraft, +5 Geschick und +20 MP-Regeneration je Tick. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive Aurora core skill. Each level grants +1 Wisdom and +1 direct MP regeneration per tick. Every fourth level grants Dexterity instead of Intelligence. Level 20 totals: +15 Intelligence, +20 Wisdom, +5 Dexterity, +20 MP regeneration per tick. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 1,
+    "skillName_de": "Erleuchtung",
+    "skillpoints": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Aurora"
+    ],
+    "unlockPhase": "race",
+    "isClassCore": true,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          5,
+          6,
+          6,
+          7,
+          8,
+          9,
+          9,
+          10,
+          11,
+          12,
+          12,
+          13,
+          14,
+          15,
+          15
+        ]
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      }
+    },
+    "manaRegen": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              1,
+              1,
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 0,
+            "steps": [
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 1,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b65",
+    "skillName_eng": "Survive",
+    "__v": 1,
+    "agi": 0.5,
+    "category": "Umbra",
+    "charClass": [
+      "Butcher",
+      "Destroyer",
+      "Summoner",
+      "Soulseeker",
+      "Ritualist",
+      "Bloodmage",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Umbra-Grundskill. Je gelerntem Skilllevel erhältst du 1 Stärke, 0,5 Agilität und 0,5 Geschicklichkeit. Auf Stufe 20 sind das 20 Stärke, 10 Agilität und 10 Geschicklichkeit. Keine Aktivierungskosten oder Cooldown. Zusätzlich je gelerntem Skilllevel +0,5 direkte HP-Regeneration und +0,5 direkte MP-Regeneration, auf Stufe 20 jeweils +10 HP und +10 MP je zugehörigem Regenerationstick. Diese Boni werden zur Grundregeneration und anderen Boni addiert. Tickintervalle werden zentral später festgelegt.",
+    "description_eng": "Permanent passive Umbra core skill. Each learned skill level grants 1 Strength, 0.5 Agility and 0.5 Dexterity. At level 20 this grants 20 Strength, 10 Agility and 10 Dexterity. No activation costs or cooldown. Additionally grants +0.5 direct Health and +0.5 direct Mana regeneration per learned skill level, totaling +10 HP and +10 MP per respective regeneration tick at level 20. These bonuses add to base regeneration and other bonuses. Tick intervals will be configured centrally later.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 2,
+    "skillName_de": "Überleben",
+    "skillpoints": 1,
+    "str": 1,
+    "allowedRaces": [
+      "Umbra"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race",
+    "resourceCosts": [],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "agi": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "dex": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "healthRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "dex": 0.5,
+    "healthRegen": 0.5,
+    "manaRegen": 0.5,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "healthRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 1,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b68",
+    "skillName_eng": "Adaptation",
+    "__v": 1,
+    "category": "Human",
+    "charClass": [
+      "Witcher",
+      "Herbalist",
+      "Knife",
+      "Templar",
+      "Archer",
+      "Hunter",
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft deine Vitalität und Willenskraft jeweils um 1 je gelerntem Skilllevel, bis zu jeweils 20. Zusätzlich je gelerntem Skilllevel +0,5 direkte HP-Regeneration und +0,5 direkte MP-Regeneration, auf Stufe 20 jeweils +10 HP und +10 MP je zugehörigem Regenerationstick. Diese Boni werden zur Grundregeneration und anderen Boni addiert. Tickintervalle werden zentral später festgelegt.",
+    "description_eng": "Permanently increases Vitality and Wisdom by 1 each per learned skill level, up to 20 each. Additionally grants +0.5 direct Health and +0.5 direct Mana regeneration per learned skill level, totaling +10 HP and +10 MP per respective regeneration tick at level 20. These bonuses add to base regeneration and other bonuses. Tick intervals will be configured centrally later.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 5,
+    "skillName_de": "Adaption",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Human"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race",
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "healthRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "healthRegen": 0.5,
+    "manaRegen": 0.5,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "healthRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 1,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

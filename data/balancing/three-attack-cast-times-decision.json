@@ -1,0 +1,619 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-three-attack-casts-1792400672015",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04ba8",
+        "skillName_eng": "Ball Lightning",
+        "__v": 0,
+        "category": "active",
+        "cd": 52,
+        "charClass": [
+          "Herbalist",
+          "Witcher"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verursacht einmalig magischen Skill-Grundschaden von 398 auf Stufe 1, plus 143 je weiterer Stufe, bis zu 1685 auf Stufe 10. Mana-Kosten 100 auf Stufe 1, +36 je weiterer Stufe, maximal 424 auf Stufe 10. Cooldown beginnt unverändert bei 52 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0,5 Sekunden, vorläufige Animation 1 Sekunde. Keine anhaltende Wirkungsdauer. Die alte Beschreibung nennt zusätzlich 15 Prozent mehr Schaden elektrischer Fähigkeiten nach einem vorherigen Wasserspruch auf dem Ziel; genaue Zuordnung und Ausgestaltung dieses alten Zusatzeffekts sind noch zu prüfen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Deals magical skill base damage once, starting at 398 and increasing by 143 per additional level to 1685 at level 10. Mana cost 100 at level 1, maximum 424 at level 10. Cooldown remains 52 seconds initially and decreases by 1 per additional level to 43 seconds. Cast time is 0.5 seconds; provisional animation is 1 second. No lingering duration. The old description also mentions 15 percent additional electric skill damage after a previous water spell hit on the target; exact ownership and behavior of this legacy effect remain to be reviewed.",
+        "dmgType": "spell",
+        "matk": 398,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 69,
+        "skillName_de": "Kugelblitz",
+        "skillpoints": 1,
+        "animationDurationSeconds": 1,
+        "animationTimingStatus": "provisional",
+        "castTimeSeconds": 0.5,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 52,
+          "perLevel": -1
+        },
+        "hasLingeringDamage": false,
+        "mana": 100,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 100,
+              "perLevel": 36
+            }
+          }
+        ],
+        "statScaling": {
+          "matk": {
+            "type": "linear",
+            "base": 398,
+            "perLevel": 143
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 52,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 100,
+                  "perLevel": 36
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "matk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 398,
+                "perLevel": 143
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04ba8",
+        "skillName_eng": "Ball Lightning",
+        "__v": 0,
+        "category": "active",
+        "cd": 52,
+        "charClass": [
+          "Herbalist",
+          "Witcher"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verursacht einmalig magischen Skill-Grundschaden von 398 auf Stufe 1, plus 143 je weiterer Stufe, bis zu 1685 auf Stufe 10. Mana-Kosten 100 auf Stufe 1, +36 je weiterer Stufe, maximal 424 auf Stufe 10. Cooldown beginnt unverändert bei 52 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0,2 Sekunden, vorläufige Animation 1 Sekunde. Keine anhaltende Wirkungsdauer. Die alte Beschreibung nennt zusätzlich 15 Prozent mehr Schaden elektrischer Fähigkeiten nach einem vorherigen Wasserspruch auf dem Ziel; genaue Zuordnung und Ausgestaltung dieses alten Zusatzeffekts sind noch zu prüfen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Deals magical skill base damage once, starting at 398 and increasing by 143 per additional level to 1685 at level 10. Mana cost 100 at level 1, maximum 424 at level 10. Cooldown remains 52 seconds initially and decreases by 1 per additional level to 43 seconds. Cast time is 0.2 seconds; provisional animation is 1 second. No lingering duration. The old description also mentions 15 percent additional electric skill damage after a previous water spell hit on the target; exact ownership and behavior of this legacy effect remain to be reviewed.",
+        "dmgType": "spell",
+        "matk": 398,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 69,
+        "skillName_de": "Kugelblitz",
+        "skillpoints": 1,
+        "animationDurationSeconds": 1,
+        "animationTimingStatus": "provisional",
+        "castTimeSeconds": 0.2,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 52,
+          "perLevel": -1
+        },
+        "hasLingeringDamage": false,
+        "mana": 100,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 100,
+              "perLevel": 36
+            }
+          }
+        ],
+        "statScaling": {
+          "matk": {
+            "type": "linear",
+            "base": 398,
+            "perLevel": 143
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 52,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 100,
+                  "perLevel": 36
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "matk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 398,
+                "perLevel": 143
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bc3",
+        "skillName_eng": "Smash",
+        "__v": 0,
+        "category": "active",
+        "cd": 41,
+        "charClass": [
+          "Butcher",
+          "Destroyer",
+          "Gladiator",
+          "Berserker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Mit roher Gewalt schlägst du auf deinen Gegner ein und verursachst dabei großen Schaden. Der physische Skill-Grundschaden steigt gleichmäßig von 111 auf Stufe 1 auf 1368 auf Stufe 10. Die Mana-Kosten 28 auf Stufe 1, +35 je weiterer Stufe, maximal 343 auf Stufe 10. Die Cast Time beträgt 0,4 Sekunden. Keine anhaltende Schadensdauer. Genaue Zielwahl und Trefferfläche sind noch zu prüfen. Cooldown 41 Sekunden auf Stufe 1 und 41 Sekunden auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "You hit your opponent with brute force and deal great damage. Physical skill base damage increases evenly from 111 at level 1 to 1368 at level 10. Mana cost 28 at level 1, maximum 343 at level 10. Cast time is 0.4 seconds. No lingering damage duration. Exact targeting and hit area remain to be reviewed. Cooldown 41 seconds at level 1 and 41 seconds at level 10.",
+        "dmgType": "physical",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 96,
+        "patk": 111,
+        "skillName_de": "Schmetterschlag",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.4,
+        "hasLingeringDamage": false,
+        "mana": 28,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 28,
+              "perLevel": 35
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 111,
+            "perLevel": 139.66666666666666
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 28,
+                  "perLevel": 35
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 111,
+                "perLevel": 139.66666666666666
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04bc3",
+        "skillName_eng": "Smash",
+        "__v": 0,
+        "category": "active",
+        "cd": 41,
+        "charClass": [
+          "Butcher",
+          "Destroyer",
+          "Gladiator",
+          "Berserker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Mit roher Gewalt schlägst du auf deinen Gegner ein und verursachst dabei großen Schaden. Der physische Skill-Grundschaden steigt gleichmäßig von 111 auf Stufe 1 auf 1368 auf Stufe 10. Die Mana-Kosten 28 auf Stufe 1, +35 je weiterer Stufe, maximal 343 auf Stufe 10. Die Castzeit beträgt 0,2 Sekunden. Keine anhaltende Schadensdauer. Genaue Zielwahl und Trefferfläche sind noch zu prüfen. Cooldown 41 Sekunden auf Stufe 1 und 41 Sekunden auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "You hit your opponent with brute force and deal great damage. Physical skill base damage increases evenly from 111 at level 1 to 1368 at level 10. Mana cost 28 at level 1, maximum 343 at level 10. Cast time is 0.2 seconds. No lingering damage duration. Exact targeting and hit area remain to be reviewed. Cooldown 41 seconds at level 1 and 41 seconds at level 10.",
+        "dmgType": "physical",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 96,
+        "patk": 111,
+        "skillName_de": "Schmetterschlag",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.2,
+        "hasLingeringDamage": false,
+        "mana": 28,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 28,
+              "perLevel": 35
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 111,
+            "perLevel": 139.66666666666666
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 28,
+                  "perLevel": 35
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 111,
+                "perLevel": 139.66666666666666
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c40",
+        "skillName_eng": "Wind Slasher",
+        "__v": 0,
+        "category": "active",
+        "charClass": [
+          "Druide",
+          "Alchemist",
+          "Herbalist",
+          "Witcher"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Schneidet deine Feinde mit Klingen aus Wind. Der magische Grundschaden des Skills beträgt 211 auf Skilllevel 1 und steigt um 71 je weiterer Stufe auf 850 auf Stufe 10. Dieser Wert erhöht nicht dauerhaft deinen magischen Angriff. Die Mana-Kosten 53 auf Stufe 1, +18 je weiterer Stufe, maximal 215 auf Stufe 10. Der Cooldown sinkt von 54 um 1 Sekunde je weiterer Stufe auf 45 Sekunden. Castzeit 0,4 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Cuts your enemies with blades of wind. The skill base magical damage starts at 211 at level 1 and increases by 71 per additional level to 850 at level 10. This value does not permanently increase your magical attack. Mana cost 53 at level 1, maximum 215 at level 10. Cooldown decreases from 54 by 1 second per additional level to 45 seconds. Cast time is 0.4 seconds.",
+        "dmgType": "spell",
+        "matk": 211,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 221,
+        "skillName_de": "Windschlitzer",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.4,
+        "cd": 54,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": -1
+        },
+        "mana": 53,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 53,
+              "perLevel": 18
+            }
+          }
+        ],
+        "statScaling": {
+          "matk": {
+            "type": "linear",
+            "base": 211,
+            "perLevel": 71
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 54,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 53,
+                  "perLevel": 18
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "matk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 211,
+                "perLevel": 71
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04c40",
+        "skillName_eng": "Wind Slasher",
+        "__v": 0,
+        "category": "active",
+        "charClass": [
+          "Druide",
+          "Alchemist",
+          "Herbalist",
+          "Witcher"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Schneidet deine Feinde mit Klingen aus Wind. Der magische Grundschaden des Skills beträgt 211 auf Skilllevel 1 und steigt um 71 je weiterer Stufe auf 850 auf Stufe 10. Dieser Wert erhöht nicht dauerhaft deinen magischen Angriff. Die Mana-Kosten 53 auf Stufe 1, +18 je weiterer Stufe, maximal 215 auf Stufe 10. Der Cooldown sinkt von 54 um 1 Sekunde je weiterer Stufe auf 45 Sekunden. Castzeit 0,2 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Cuts your enemies with blades of wind. The skill base magical damage starts at 211 at level 1 and increases by 71 per additional level to 850 at level 10. This value does not permanently increase your magical attack. Mana cost 53 at level 1, maximum 215 at level 10. Cooldown decreases from 54 by 1 second per additional level to 45 seconds. Cast time is 0.2 seconds.",
+        "dmgType": "spell",
+        "matk": 211,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 221,
+        "skillName_de": "Windschlitzer",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.2,
+        "cd": 54,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": -1
+        },
+        "mana": 53,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 53,
+              "perLevel": 18
+            }
+          }
+        ],
+        "statScaling": {
+          "matk": {
+            "type": "linear",
+            "base": 211,
+            "perLevel": 71
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 54,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 53,
+                  "perLevel": 18
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "matk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 211,
+                "perLevel": 71
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    }
+  ],
+  "scope": "Cast times only: Smash Strike 96, Wind Slasher 221, Ball Lightning 69 now .2 seconds. All existing shared class assignments retained. Damage, Mana, cooldowns, progression and other skills unchanged."
+}

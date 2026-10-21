@@ -1,0 +1,94 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba2",
+  "skillName_eng": "Chain Shot",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Summoner",
+    "Soulseeker",
+    "Hunter",
+    "Archer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Ein Pfeil verbindet dich über ein Seil oder Energieband mit dem Ziel. Auf Stufe 1 ziehst du dich nach der genannten Verzögerung von 0,2 Sekunden ungefähr 1 Meter zum Gegner und hüpfst dabei leicht. Ab Stufe 2 können leichtere normale Gegner stattdessen ungefähr 1 Meter zu dir gezogen werden, nicht direkt an deine Position. Wie zwischen Eigenzug und Gegnerzug gewählt wird, ist noch offen. Ab Stufe 3 kannst du über den Gegner springen, aus der Luft schießen und auf der gegenüberliegenden Seite in etwa dem ursprünglichen Abstand landen, beispielsweise 3 bis 5 Meter entfernt. Auf Stufe 5 ermöglicht ein Bossziel einen hohen Flugpunkt und Bogen, vorläufig ungefähr 30 Meter hoch, innerhalb des 8 Sekunden langen Skillfensters. Während dieses skillbedingten Flugs sind Angriffe und Skillkombinationen möglich. Bodenangriffe unter dir erreichen dich räumlich nicht; Angriffe in die Luft können dich treffen. Keine pauschale Unverwundbarkeit. Du landest hinter dem Boss ohne Fallschaden aus diesem Skillflug. Im PvP und gegen gleich schwere Gegner ist der Bogen kleiner und kürzer. Die Sondererlaubnis zum Schießen im Flug gilt für diesen Skill. Physischer Grundschaden 52, plus 13 je weiterer Stufe, bis zu 104. Mana vorläufig 5 bis 30, Cooldown 60 bis 56 Sekunden, Castzeit 0,2 Sekunden. Vorläufige Dauern je Stufe: 1 / 2,5 / 4 / 6 / 8 Sekunden. Ob die genannte Zugverzögerung zusätzlich zur Castzeit gilt, Stufe 4, genaue Flugbahn, Zugauswahl und mögliche 10 Sekunden Enddauer sind noch offen. Auch Jäger und Archer können Kettenschuss erlernen. Der Skill ist ohne Gegner an geeigneten Weltankern nutzbar, um dich auf Dächer, an Felsen und eingeschränkt an Bäume zu ziehen. Zulässige Anker, Reichweite und genaue Weltbewegung werden noch festgelegt.",
+  "description_eng": "A tethered arrow connects you to the target. Level 1 pulls you approximately 1 metre toward the enemy after the stated 0.2 second delay, with a small hop. From level 2, lighter normal enemies can instead be pulled approximately 1 metre toward you rather than directly to your position; selection between self pull and enemy pull is pending. From level 3, vault over the enemy, shoot while airborne and land on the opposite side at approximately the original distance, for example 3 to 5 metres. Level 5 allows a high boss-targeted arc, provisionally approximately 30 metres high within the 8 second skill window. Attacks and skill combinations are allowed during this skill flight. Ground attacks underneath spatially miss you, but aerial attacks can hit; no blanket invulnerability. Land behind the boss without fall damage from this skill flight. PvP and equal-weight targets use a shorter, lower arc. Airborne shooting permission is limited to this skill. Physical base damage is 52 plus 13 per additional level to 104. Provisional Mana costs are 5 to 30, cooldown is 60 to 56 seconds and cast time is 0.2 seconds. Provisional duration by level: 1 / 2.5 / 4 / 6 / 8 seconds. Whether pull delay is additional to cast time, level 4 behavior, precise trajectory, pull selection and a possible 10 second maximum duration remain pending. Hunter and Archer can also learn Chain Shot. It can be used without an enemy on suitable world anchors to pull yourself onto roofs, toward rocks and, within limits, trees. Anchor eligibility, range and exact world traversal are pending.",
+  "dmgType": "physical",
+  "dur": 1,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 63,
+  "patk": 52,
+  "skillName_de": "Kettenschuss",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.2,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 60,
+    "perLevel": -1
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      1,
+      2.5,
+      4,
+      6,
+      8
+    ]
+  },
+  "mana": 5,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 6.25
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": 13
+    }
+  },
+  "tetherSettings": {
+    "selfPullUnlockLevel": 1,
+    "lightEnemyPullUnlockLevel": 2,
+    "vaultUnlockLevel": 3,
+    "highBossArcUnlockLevel": 5,
+    "initialPullDistanceMeters": 1,
+    "enemyPullDistanceMeters": 1,
+    "statedPullDelaySeconds": 0.2,
+    "delayRelationToCastTimeStatus": "pending",
+    "enemyPullEligibility": "lighterNormalEnemies",
+    "vaultLandingSide": "oppositeStartingSide",
+    "vaultLandingDistanceMatchesStartingDistance": true,
+    "highBossArcHeightMeters": 30,
+    "highBossArcHeightStatus": "provisional",
+    "allowsAttacksDuringSkillFlight": true,
+    "grantsBlanketInvulnerability": false,
+    "groundAttackAvoidance": "spatial",
+    "aerialAttacksCanHit": true,
+    "preventsFallDamageFromSkillFlight": true,
+    "pvpArc": "shortLowArc",
+    "equalWeightArc": "shortLowArc",
+    "enemyPullSelectionStatus": "pending",
+    "levelFourBehaviorStatus": "pending",
+    "implementationStatus": "definitionOnly",
+    "usableWithoutEnemy": true,
+    "worldAnchorKinds": [
+      "roof",
+      "rock",
+      "tree"
+    ],
+    "worldAnchorEligibilityStatus": "pending",
+    "worldAnchorRangeStatus": "pending"
+  }
+}

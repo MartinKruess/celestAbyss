@@ -1,0 +1,44 @@
+{
+  "scope": [
+    "hunter",
+    "summoner",
+    "villian"
+  ],
+  "source": "data/balancing/all-class-timed-damage.json",
+  "findings": [
+    {
+      "severity": "error",
+      "kind": "zeroCastSetupAddsOneSimulationFrame",
+      "classKey": "summoner",
+      "observed": "8 Markierungen, aber nur 192 statt 200 Seelensammler. Die erste Sammlung startet bei 0,01 statt 0 Sekunden; 25. Abschluss bei 5,01 ist außerhalb des Fensters.",
+      "recommendedFix": "Nach einer sofortigen Setupaktion weitere Entscheidung im selben Zeitstempel erlauben, mit begrenzter Anzahl sofortiger Aktionen zur Schleifensicherung.",
+      "status": "resolved",
+      "resolution": "Neu geprüft: 200 Sammlertreffer in acht Fenstern; je Fenster 25 Casts ab 0 bis 4,8 s, letzter Treffer bei 5 s und Kettenstart bei 5 s."
+    },
+    {
+      "severity": "minor",
+      "kind": "intervalQuantizationDrift",
+      "classKey": "hunter",
+      "observed": "Pet bei Grundfrequenz 1,5/s trifft alle aufgerundeten 0,67 s statt durchschnittlich alle 2/3 s; 894 Treffer über die beiden Beschwörungen.",
+      "recommendedFix": "Nächsten Treffer aus dem vorherigen Sollzeitpunkt fortschreiben statt aus dem gerundeten Verarbeitungszeitpunkt. Gilt entsprechend für Auto-Attacks.",
+      "status": "resolved",
+      "resolution": "Neu geprüft: Sollzeiten werden fortgeschrieben; Seelenbegleiter trifft 897-mal über zwei aktive Laufzeiten, jeweils 48,06 Schaden ohne optionalen Buff."
+    }
+  ],
+  "verified": [
+    "Schurken-Tarnfolge tatsächlich 188 bei 0, 91 bei 0,1, 92 bei 0,3, 90 bei 1,4; sieben Durchläufe über 600 Sekunden.",
+    "Schattenfalle und Schattenschlag werden vor dem tarnungsbrechenden Schattendolch verwendet; keine Auto-Attacks während der Wiederaufdeckungspause.",
+    "Explosionspfeil hat 20 Aktivierungen und 60 ausgelöste Explosionen; keine drei Soforttreffer beim Aktivieren.",
+    "Seelenschuss wird achtmal im Abstand von 75 Sekunden eingesetzt; Spektralketten achtmal verfügbar.",
+    "Seelenbegleiter verursacht 48,06 Schaden je physischem Treffer ohne optionalen Begleiterbuff, zweimal beschworen und Grundfrequenz 1,5/s.",
+    "Keine optionalen Selbstbuffs oder zufälligen Gift-/Replay-Effekte im ausgewiesenen Grundlauf."
+  ],
+  "finalVerification": {
+    "collectorApplications": 200,
+    "collectionWindows": 8,
+    "spectralFinishers": 8,
+    "spiritHits": 897,
+    "spiritDamagePerHit": 48.06,
+    "rogueStealthSequences": 7
+  }
+}

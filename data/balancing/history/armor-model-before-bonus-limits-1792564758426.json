@@ -1,0 +1,29 @@
+{
+  "status": "approved",
+  "scope": "All 13 classes, ranks 1 through 6, direct armor physical and magical defense only",
+  "source": "data/balancing/armor-source-audit.json",
+  "anchor": {
+    "sourceClass": "Gladiator",
+    "rank": 6,
+    "field": "physicalDefense",
+    "original": 554,
+    "target": 354
+  },
+  "scaleNumerator": 354,
+  "scaleDenominator": 554,
+  "rounding": "Round scaled aggregate to nearest integer, then allocate integer parts by largest remainder",
+  "cloakDefense": "Unassigned; additional to the five-part defense allocation",
+  "rank6Targets": {
+    "Gladiator": {
+      "magicalDefense": 123
+    },
+    "Butcher": {
+      "magicalDefense": 149
+    },
+    "Adventure": {
+      "physicalDefense": 302,
+      "magicalDefense": 186
+    }
+  },
+  "classTargetRule": "For each targeted field, scale the already rounded common-baseline rank totals by target R6 / common-baseline R6, round aggregate to integer, then allocate parts. Other fields/classes unchanged."
+}

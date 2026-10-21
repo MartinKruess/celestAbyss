@@ -1,0 +1,899 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6e",
+    "skillName_eng": "Charged Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 25,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen aufgeladenen physischen Schlag aus. Der Grundangriffswert steigt von 85 um 55 je weiterer Stufe auf 855 auf Level 15. Die Mana-Kosten steigen von 65 um 38 je weiterer Stufe auf 597. Die gesamte Animation dauert vorläufig 0,8 Sekunden. Keine zusätzliche Cast Time vor der Animation. Der genaue Trefferzeitpunkt innerhalb der Animation wird im Spiel festgelegt. Der Cooldown bleibt zunächst bei 25 Sekunden.",
+    "description_eng": "Performs a charged physical strike. Base attack increases from 85 by 55 per additional level to 855 at level 15. Mana cost increases from 65 by 38 per additional level to 597. Total animation duration is provisionally 0.8 seconds. No additional cast time before the animation. Exact hit timing within the animation will be defined in game. Cooldown remains provisionally 25 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 11,
+    "patk": 85,
+    "skillName_de": "Aufgeladener Schlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.8,
+    "animationTimingStatus": "provisional",
+    "mana": 65,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 65,
+          "perLevel": 38
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 85,
+        "perLevel": 55
+      }
+    },
+    "castTimeSeconds": 0,
+    "hasLingeringDamage": false
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b91",
+    "skillName_eng": "Eternal Ice",
+    "__v": 0,
+    "category": "active",
+    "cd": 54,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eis fliegt aus mehreren Richtungen auf einen Gegner zu und verfolgt dessen Bewegung. Weglaufen oder Wegrollen allein schüttelt die Projektile nicht ab; die normale Treffer-/Ausweichberechnung kann den Angriff dennoch verfehlen lassen. Verursacht einmalig 137 magischen Skill-Grundschaden, plus 43 je weiterer Stufe, bis zu 739 auf Stufe 15. Bei einem Treffer wird das Ziel mit 50 Prozent Wahrscheinlichkeit eingefroren. Die Einfrierdauer steigt gleichmäßig von 0,5 auf 2,5 Sekunden. Während des Einfrierens bleibt der Gegner angreifbar, nimmt aber nur 80 Prozent des sonst ankommenden Schadens. Dieser Schutz endet zusammen mit dem Einfrieren und gilt nur, wenn Einfrieren tatsächlich ausgelöst wurde. Mana-Kosten 67, plus 32 je weiterer Stufe, bis zu 515. Castzeit 0,6 Sekunden, Cooldown sinkt gleichmäßig von 54 Sekunden auf Stufe 1 auf 39 Sekunden auf Stufe 15. Ein vorheriger Treffer durch einen Wasserspruch erhöht die Einfrierchance über die Grundchance von 50 Prozent hinaus. Die Höhe dieses Bonus und das Zeitfenster nach dem Wasserspruch werden später festgelegt. Der Wasserspruch ist keine Voraussetzung für Aktivierung oder Einfrieren.",
+    "description_eng": "Ice approaches an enemy from several directions and tracks its movement. Running or rolling alone does not shake off the projectiles; normal hit/dodge resolution may still make the attack miss. Deals 137 magical skill base damage once, increasing by 43 per additional level to 739 at level 15. A hit has a 50 percent chance to freeze the target. Freeze duration increases evenly from 0.5 to 2.5 seconds. While frozen, the enemy remains attackable but takes only 80 percent of otherwise incoming damage. This protection ends with the freeze and applies only if freezing actually triggers. Mana cost starts at 67 and increases by 32 per additional level to 515. Cast time is 0.6 seconds; cooldown decreases evenly from 54 seconds at level 1 to 39 seconds at level 15. A previous water-spell hit increases freeze chance above the 50 percent base chance. The bonus amount and qualifying time window will be defined later. A water-spell hit is not required to activate the skill or freeze the target.",
+    "dmgType": "spell",
+    "dur": 0.5,
+    "matk": 137,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 46,
+    "skillName_de": "Ewiges Eis",
+    "skillpoints": 1,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "tracksTargetMovement": true,
+      "canMissFromHitCalculation": true,
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.6,
+    "durationScaling": {
+      "type": "linear",
+      "base": 0.5,
+      "perLevel": 0.14285714285714285
+    },
+    "effects": [
+      {
+        "key": "eternal-ice-freeze",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "freeze",
+        "hitChance": 0.5,
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 0.5,
+        "durationScaling": {
+          "type": "linear",
+          "base": 0.5,
+          "perLevel": 0.14285714285714285
+        },
+        "actionRestrictionsStatus": "pending"
+      },
+      {
+        "key": "eternal-ice-protection",
+        "type": "damageReduction",
+        "target": "enemy",
+        "value": 0.2,
+        "unit": "fraction",
+        "durationSeconds": 0.5,
+        "durationScaling": {
+          "type": "linear",
+          "base": 0.5,
+          "perLevel": 0.14285714285714285
+        },
+        "endWith": "eternal-ice-freeze",
+        "damageTypes": [
+          "physical",
+          "magical"
+        ]
+      }
+    ],
+    "mana": 67,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 32
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 43
+      }
+    },
+    "conditionalProcBonus": {
+      "condition": "targetPreviouslyHitByWaterSpell",
+      "effectKey": "eternal-ice-freeze",
+      "increasesChance": true,
+      "bonusAmountStatus": "pending",
+      "conditionDurationStatus": "pending",
+      "isActivationRequirement": false
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 54,
+      "perLevel": -1.0714285714285714
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b94",
+    "skillName_eng": "Fireball",
+    "__v": 0,
+    "category": "active",
+    "cd": 12,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen Feuerball auf dein Ziel und verursacht einmalig magischen Schaden. Grundschaden 63 auf Stufe 1, +29 je weiterer Stufe, auf Stufe 20 614. Mana 31 auf Stufe 1, gleichmäßig steigend auf 266 auf Stufe 20. Cooldown Stufen 1–4: 12 Sekunden; 5–9: 10 Sekunden; 10–14: 8 Sekunden; 15–19: 6 Sekunden; Stufe 20: 4 Sekunden. Castzeit 0,1 Sekunden. Vorläufige Flug-/Animationszeit 0,5 Sekunden, keine anhaltende Wirkung oder zusätzlicher Verbrennungs-DoT.",
+    "description_eng": "Hurls a fireball at one target, dealing magical damage once. Base damage 63 plus 29 per additional level, reaching 614 at level 20. Mana 31 at level 1, increasing linearly to 266 at level 20. Cooldown levels 1–4: 12 seconds; 5–9: 10; 10–14: 8; 15–19: 6; level 20: 4. Cast time 0.1 seconds. Provisional flight/animation time 0.5 seconds; no lingering effect or additional burning DoT.",
+    "dmgType": "spell",
+    "matk": 63,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 49,
+    "skillName_de": "Feuerball",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        12,
+        12,
+        12,
+        12,
+        10,
+        10,
+        10,
+        10,
+        10,
+        8,
+        8,
+        8,
+        8,
+        8,
+        6,
+        6,
+        6,
+        6,
+        6,
+        4
+      ]
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "hasLingeringDamage": false,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 31,
+          "perLevel": 12.368421052631579
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 63,
+        "perLevel": 29
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b95",
+    "skillName_eng": "Firelance",
+    "__v": 0,
+    "category": "active",
+    "cd": 48,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft eine Feuerlanze, die einen Gegner einmalig durchbohrt. Der magische Grundschaden steigt von 197 um 46 je weiterer Stufe auf 611 auf Stufe 10. Mana-Kosten steigen von 94 um 42 je weiterer Stufe auf 472. Der Cooldown sinkt von 48 um 1 Sekunde je weiterer Stufe auf 39 Sekunden. Castzeit 0,6 Sekunden. Keine anhaltende Schadenswirkung; der Rüstungseffekt der Eislanze wird nicht übernommen.",
+    "description_eng": "Creates a lance of fire that pierces an enemy once. Base magical damage increases from 197 by 46 per additional level to 611 at level 10. Mana cost increases from 94 by 42 per additional level to 472. Cooldown decreases from 48 by 1 second per additional level to 39 seconds. Cast time is 0.6 seconds. No ongoing damage; the Ice Lance armor effect is not copied.",
+    "dmgType": "spell",
+    "matk": 197,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 50,
+    "skillName_de": "Feuerlanze",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 48,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 94,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 94,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 197,
+        "perLevel": 46
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9b",
+    "skillName_eng": "Charged Mist",
+    "__v": 0,
+    "category": "active",
+    "cd": 62,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt geladenen Nebel. Magischer Skill-Grundschaden 177 auf Stufe 1, plus 63 je weiterer Stufe, bis zu 1059 auf Stufe 15. Der Schaden erfolgt einmalig beim Erzeugen des Nebels, nicht wiederholt. Gegner im Nebel verlieren direkt 10 Genauigkeit auf Stufe 1, gleichmäßig steigend auf 25 Genauigkeit auf Stufe 15. Elektroangriffe gegen Ziele im Nebel verursachen 2 Prozent mehr Schaden. Beide Flächeneffekte gelten nur, solange der Gegner im Nebel steht. Die Nebeldauer startet bei 4 Sekunden und steigt um 1 Sekunde je weiterer Stufe auf 18 Sekunden. Mana-Kosten 95, plus 42 je weiterer Stufe, bis zu 683. Castzeit 0,4 Sekunden. Cooldown vorläufig gleichmäßig von 62 auf 37 Sekunden. Der kreisförmige Nebel hat 8 Meter Durchmesser beziehungsweise 4 Meter Radius. Die genaue Platzierung ist noch offen.",
+    "description_eng": "Creates charged mist. Magical skill base damage starts at 177 and increases by 63 per additional level to 1059 at level 15. Damage is applied once when the mist is created, not repeatedly. Enemies inside lose 10 direct Accuracy at level 1, increasing evenly to a reduction of 25 at level 15. Electric attacks against targets inside deal 2 percent more damage. Both area effects apply only while the target stays in the mist. Mist duration starts at 4 seconds and increases by 1 second per additional level to 18 seconds. Mana cost starts at 95 and increases by 42 per additional level to 683. Cast time is 0.4 seconds. Provisional cooldown decreases evenly from 62 to 37 seconds. The circular mist has an 8 metre diameter, or 4 metre radius. Exact placement remains pending.",
+    "dmgType": "spell",
+    "matk": 177,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 56,
+    "skillName_de": "Geladener Nebel",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 62,
+      "perLevel": -1.7857142857142858
+    },
+    "dur": 4,
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 1
+    },
+    "effects": [
+      {
+        "key": "charged-mist-accuracy",
+        "type": "statModifier",
+        "target": "enemiesInArea",
+        "stat": "accuracy",
+        "value": -10,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": -10,
+          "perLevel": -1.0714285714285714
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1
+        },
+        "onlyWhileTargetInsideArea": true
+      },
+      {
+        "key": "charged-mist-electric-bonus",
+        "type": "damageTakenBonus",
+        "target": "enemiesInArea",
+        "damageSchool": "electric",
+        "value": 0.02,
+        "unit": "fraction",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1
+        },
+        "onlyWhileTargetInsideArea": true
+      }
+    ],
+    "mana": 95,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 95,
+          "perLevel": 42
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 177,
+        "perLevel": 63
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 4,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "timingStatus": "pending"
+    },
+    "attackExecution": {
+      "damageValueScope": "perHit",
+      "timingStatus": "defined",
+      "hitCount": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9c",
+    "skillName_eng": "Targeted Lightning",
+    "__v": 0,
+    "category": "active",
+    "cd": 42,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen gezielten Blitzschlag auf einen Gegner und verursacht einmalig magischen Grundschaden von 293 auf Stufe 1, plus 105 je weiterer Stufe, bis zu 1238 auf Stufe 10. Mana-Kosten steigen von 121 um 53 je weiterer Stufe auf 598. Der Cooldown sinkt von 42 um 1 Sekunde je weiterer Stufe auf 33 Sekunden. Castzeit 0,2 Sekunden. Die Animation dauert vorläufig 1 Sekunde; keine anhaltende Wirkungsdauer oder Schaden über Zeit.",
+    "description_eng": "Hurls a targeted lightning strike at an enemy, dealing magical base damage once, starting at 293 at level 1 and increasing by 105 per additional level to 1238 at level 10. Mana cost increases from 121 by 53 per additional level to 598. Cooldown decreases from 42 by 1 second per additional level to 33 seconds. Cast time is 0.2 seconds. Provisional animation duration is 1 second, with no lasting effect or damage over time.",
+    "dmgType": "spell",
+    "matk": 293,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 57,
+    "skillName_de": "Gezielter Blitz",
+    "skillpoints": 1,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 42,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 121,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 121,
+          "perLevel": 53
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 293,
+        "perLevel": 105
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba8",
+    "skillName_eng": "Ball Lightning",
+    "__v": 0,
+    "category": "active",
+    "cd": 52,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verursacht einmalig magischen Skill-Grundschaden von 398 auf Stufe 1, plus 143 je weiterer Stufe, bis zu 1685 auf Stufe 10. Mana-Kosten 221, plus 73 je weiterer Stufe, bis zu 878. Cooldown beginnt unverändert bei 52 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0,5 Sekunden, vorläufige Animation 1 Sekunde. Keine anhaltende Wirkungsdauer. Die alte Beschreibung nennt zusätzlich 15 Prozent mehr Schaden elektrischer Fähigkeiten nach einem vorherigen Wasserspruch auf dem Ziel; genaue Zuordnung und Ausgestaltung dieses alten Zusatzeffekts sind noch zu prüfen.",
+    "description_eng": "Deals magical skill base damage once, starting at 398 and increasing by 143 per additional level to 1685 at level 10. Mana cost starts at 221 and increases by 73 per additional level to 878. Cooldown remains 52 seconds initially and decreases by 1 per additional level to 43 seconds. Cast time is 0.5 seconds; provisional animation is 1 second. No lingering duration. The old description also mentions 15 percent additional electric skill damage after a previous water spell hit on the target; exact ownership and behavior of this legacy effect remain to be reviewed.",
+    "dmgType": "spell",
+    "matk": 398,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 69,
+    "skillName_de": "Kugelblitz",
+    "skillpoints": 1,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.5,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 221,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 221,
+          "perLevel": 73
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 398,
+        "perLevel": 143
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04baf",
+    "skillName_eng": "Mighty Double Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt zwei physische Schläge aus. Jeder Treffer hat auf Skilllevel 1 einen Grundangriffswert von 166, der je weiterer Stufe um 32 auf 614 steigt. Die Mana-Kosten steigen von 83 um 41 je weiterer Stufe auf 657. Der Angriff beginnt ohne Cast Time und hat auf Level 1 47 Sekunden Cooldown. Je weiterer Skillstufe sinkt der Cooldown um 1 Sekunde auf 33 Sekunden auf Level 15. Die Animation dauert vorläufig 0,5 Sekunden; die genauen Trefferzeitpunkte werden im Spiel festgelegt.",
+    "description_eng": "Performs two physical strikes. Each hit has a base attack value of 166 at skill level 1, increasing by 32 per additional level to 614. Mana cost increases from 83 by 41 per additional level to 657. The attack begins with no cast time and has a 47 second cooldown at level 1. Each additional skill level reduces cooldown by 1 second, reaching 33 seconds at level 15. Animation duration is provisionally 0.5 seconds; exact hit timings will be defined in game.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 76,
+    "patk": 166,
+    "skillName_de": "Mächtiger Doppelschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0,
+    "mana": 83,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 83,
+          "perLevel": 41
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 166,
+        "perLevel": 32
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc5",
+    "skillName_eng": "Shockwave of Regeneration",
+    "__v": 0,
+    "category": "active",
+    "cd": 77,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt nach 1 Sekunde Cast Time eine Schockwelle, die Gegner im Umkreis physisch schädigt und dich um 1,5 Prozent des tatsächlich verursachten Schadens auf Level 1 heilt. Der Heilanteil steigt je weiterer Skillstufe um 0,1 Prozentpunkte auf 2,4 Prozent auf Level 10. Der physische Grundangriffswert steigt von 337 um 67 je weiterer Skillstufe auf 940 auf Level 10. Die Mana-Kosten steigen von 183 um 92 je weiterer Stufe auf 1011. Der Cooldown sinkt von 77 um 1 Sekunde je weiterer Stufe auf 68 Sekunden. Die gespeicherte Ausführungsdauer beträgt 1 Sekunde; es gibt keinen anhaltenden Schaden über Zeit. Der Flächenradius und der genaue Trefferzeitpunkt sind noch festzulegen.",
+    "description_eng": "After a 1 second cast time, creates a shockwave that deals physical damage to nearby enemies and heals you for 1.5 percent of actual damage dealt at level 1. The healing share increases by 0.1 percentage points per additional skill level to 2.4 percent at level 10. Physical base attack increases from 337 by 67 per additional skill level to 940 at level 10. Mana cost increases from 183 by 92 per additional level to 1011. Cooldown decreases from 77 by 1 second per additional level to 68 seconds. Stored execution duration is 1 second; there is no lingering damage over time. Area radius and exact hit timing remain to be defined.",
+    "dmgType": "physical",
+    "dur": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 98,
+    "patk": 337,
+    "skillName_de": "Schockwelle der Regeneration",
+    "skillpoints": 1,
+    "castTimeSeconds": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 77,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "key": "shockwaveSelfHeal",
+        "type": "heal",
+        "target": "self",
+        "value": 0.015,
+        "unit": "fraction",
+        "reference": "damageDealt",
+        "damageBasis": "actualHealthDamage",
+        "durationSeconds": 0,
+        "progressionStatus": "defined",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.015,
+          "perLevel": 0.001
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "hasLingeringDamage": false,
+    "mana": 183,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 183,
+          "perLevel": 92
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 337,
+        "perLevel": 67
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcb",
+    "skillName_eng": "Soul Torment",
+    "__v": 0,
+    "category": "active",
+    "cd": 0.2,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 47 auf Stufe 1, gleichmäßig steigend auf 168 auf Stufe 10. Zwischenwerte werden für die Anzeige gerundet. Mana 23 je Anwendung auf Stufe 1, plus 6 je weiterer Stufe, auf Stufe 10 77 je Anwendung. Castzeit 0 Sekunden, Cooldown 0,2 Sekunden. Bei sofortiger erster Anwendung passen maximal 15 Anwendungen in das 3-Sekunden-Fenster (Zeitpunkte 0 bis 2,8 Sekunden); Reaktionszeit und Serverablauf können das reduzieren. 15 Anwendungen kosten auf Stufe 10 1155 Mana. Für Seelenernte vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, ab 12 ergeben 2; höhere Trefferzahlen durch das geänderte Timing erhöhen die Ernte nicht über 2. Manueller Abschluss bevorzugt, genaue Umsetzung noch offen. Seelenfessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.",
+    "description_eng": "Deals one magical hit only while Soul Shackle affects the target. Base damage starts at 47 at level 1 and increases evenly to 168 at level 10. Intermediate values are rounded for display. Mana cost starts at 23 and increases by 6 per additional level to 77. Fifteen uses cost 1155 Mana. No health sacrifice, no damage over time, zero cast time, cooldown 0.2 seconds. Up to 15 immediate uses fit into a full 3-second shackle; the comparison uses 15. Harvest yields 0 fragments for 0–4 hits, 1 for 5–11 and 2 for 12 or more, capped at 2. Each shackle costs 1 fragment. Exact server timing and manual finisher implementation remain pending.",
+    "dmgType": "spell",
+    "matk": 47,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 104,
+    "skillName_de": "Seelenqual",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 103
+    },
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "castTimeSeconds": 0,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 23,
+          "perLevel": 6
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 47,
+        "perLevel": 13.444444444444445
+      }
+    },
+    "mana": 23
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcd",
+    "skillName_eng": "Leap Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Druide",
+      "Alchemist",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Springt senkrecht hoch und schlägt mit der Waffe auf den Boden. Trifft Gegner in einem kreisförmigen Bereich mit 2 Metern Radius um dich, ohne Vorwärtsbewegung oder zusätzlichen Debuff. Der physische Skill-Grundschaden steigt gleichmäßig von 391 auf Stufe 1 auf 1606 auf Stufe 10. Die Mana-Kosten steigen von 174 um 92 je weiterer Stufe auf 1002. Der Cooldown 45 Sekunden auf Stufe 1 und 36 Sekunden auf Stufe 10. Die Aktion beginnt ohne zusätzliche Cast Time; die Animation dauert vorläufig 0,5 Sekunden. Sprunghöhe und genauer Trefferzeitpunkt werden im Spiel geprüft.",
+    "description_eng": "Jumps vertically and slams the weapon into the ground. Hits enemies within a circular 2 meter radius around you, with no forward movement or additional debuff. Physical skill base damage increases evenly from 391 at level 1 to 1606 at level 10. Mana cost increases from 174 by 92 per additional level to 1002. Cooldown 45 seconds at level 1 and 36 seconds at level 10. The action begins without additional cast time; provisional animation duration is 0.5 seconds. Jump height and exact impact timing will be verified in game.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 106,
+    "patk": 391,
+    "skillName_de": "Sprungschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "mana": 174,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 174,
+          "perLevel": 92
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 391,
+        "perLevel": 135
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 2,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": -1
+    },
+    "effects": [],
+    "movement": {
+      "type": "verticalJump",
+      "forwardDistanceMeters": 0,
+      "heightStatus": "provisional"
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c35",
+    "skillName_eng": "Lightning Flash",
+    "__v": 0,
+    "category": "active",
+    "cd": 12.5,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen grellen Lichtblitz auf den Gegner. Einmaliger magischer Angriff: 62 auf Stufe 1, +28 je weiterer Stufe, insgesamt 594 auf Stufe 20. Manakosten 32, +18 je weiterer Stufe, insgesamt 374. Cooldown 12,5 Sekunden auf Stufe 1, 3 Sekunden auf Stufe 20; bisheriger Stufenverlauf um 0,5 Sekunden erhöht. Castzeit 0,1 Sekunde. Wirkungsdauer 0 Sekunden; nur eine Angriffsanimation, keine anhaltende Wirkung. Animationslänge noch nicht festgelegt.",
+    "description_eng": "Hurls a brilliant flash of light at the enemy. One magical hit: 62 at level 1, +28 per additional level, totaling 594 at level 20. Mana cost 32, +18 per additional level, totaling 374. Cooldown 12.5 seconds at level 1 and 3 seconds at level 20; previous progression increased by 0.5 seconds throughout. Cast time 0.1 seconds. Effect duration 0 seconds; attack animation only, no ongoing effect. Animation length remains undefined.",
+    "dmgType": "spell",
+    "matk": 62,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 210,
+    "skillName_de": "Lichtblitz",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 12.5,
+      "perLevel": -0.5
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 32,
+          "perLevel": 18
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 62,
+        "perLevel": 28
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4b",
+    "skillName_eng": "Dark Pulse",
+    "__v": 0,
+    "category": "active",
+    "cd": 14,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Sendet einen Impuls der Dunkelheit aus und verursacht einmalig magischen Schaden. Skill-Grundschaden 42 auf Stufe 1 und +23 je weiterer Stufe, auf Stufe 10 249. Mana 18 auf Stufe 1 und +10 je weiterer Stufe, auf Stufe 10 108. Cooldown 14 Sekunden und -1 je weiterer Stufe, auf Stufe 10 5 Sekunden. Castzeit 0,1 Sekunden, Wirkungsdauer 0 Sekunden, kein Schaden über Zeit. Genaue Zielwahl beziehungsweise Trefferfläche bleibt noch zu definieren.",
+    "description_eng": "Sends out a dark pulse, dealing magical damage once. Skill base damage 42 plus 23 per additional level, reaching 249 at level 10. Mana 18 plus 10 per additional level, reaching 108. Cooldown 14 minus 1 per additional level, reaching 5 seconds. Cast time 0.1 seconds, effect duration zero, no damage over time. Exact targeting or hit area remains pending.",
+    "dmgType": "spell",
+    "matk": 42,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 232,
+    "skillName_de": "Dunkler Impuls",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 14,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "hasLingeringDamage": false,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 18,
+          "perLevel": 10
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 42,
+        "perLevel": 23
+      }
+    }
+  }
+]

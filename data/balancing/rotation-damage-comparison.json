@@ -1,0 +1,375 @@
+{
+  "assumptions": [
+    "one target",
+    "Level 60 original R6 equipment and confirmed maximum permanent passives",
+    "skill base plus matching character attack per hit; provisional combat formula",
+    "DoT ticks include magical attack per tick provisionally, including Burn whose caster-attack scaling needs confirmation",
+    "all scheduled ticks and hits land",
+    "no defense, critical hits, auto-attacks, pets, consumables or external buffs",
+    "normal rotation uses each listed attack once; cooldowns and execution times not simulated",
+    "Mana Explosion excluded due to remaining-Mana dependence",
+    "normal Gladiator table excludes Rage skills and active buffs",
+    "mixed Earthquake adds both physical and magical components"
+  ],
+  "classes": [
+    {
+      "classKey": "gladiator",
+      "weapon": "2 × Einhandaxt",
+      "stats": {
+        "maxHealth": 8292,
+        "maxMana": 5057,
+        "physicalAttack": 823.6,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1145,
+        "magicalDefense": 810,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "rows": [
+        {
+          "nr": 61,
+          "name": "Holzspalter",
+          "total": 1551.6,
+          "hitWeight": 1,
+          "formula": "1551.6 × 1"
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "total": 1202.6,
+          "hitWeight": 1,
+          "formula": "1202.6 × 1"
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "total": 1891.6,
+          "hitWeight": 1,
+          "formula": "1891.6 × 1"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "total": 2393.6,
+          "hitWeight": 1,
+          "formula": "2393.6 × 1"
+        },
+        {
+          "nr": 230,
+          "name": "Wirbelsturm",
+          "total": 1435.6,
+          "hitWeight": 1,
+          "formula": "1435.6 × 1"
+        },
+        {
+          "nr": 233,
+          "name": "Kriegerischer Ansturm",
+          "total": 1231.6,
+          "hitWeight": 1,
+          "formula": "1231.6 × 1"
+        }
+      ],
+      "total": 9706.6,
+      "damageThreat": 24266.5,
+      "threatMultiplier": 2.5
+    },
+    {
+      "classKey": "knight",
+      "weapon": "Schwert + Schild",
+      "stats": {
+        "maxHealth": 10821,
+        "maxMana": 6118,
+        "physicalAttack": 504.4,
+        "magicalAttack": 246.2,
+        "physicalDefense": 1662,
+        "magicalDefense": 990,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "rows": [
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "total": 889.4,
+          "hitWeight": 1,
+          "formula": "889.4 × 1"
+        },
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "total": 1224.4,
+          "hitWeight": 1,
+          "formula": "1224.4 × 1"
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "total": 873.4,
+          "hitWeight": 1,
+          "formula": "873.4 × 1"
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "total": 883.4,
+          "hitWeight": 1,
+          "formula": "883.4 × 1"
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "total": 1534.4,
+          "hitWeight": 1,
+          "formula": "1534.4 × 1"
+        },
+        {
+          "nr": 95,
+          "name": "Schildsturm",
+          "total": 1524.4,
+          "hitWeight": 1,
+          "formula": "1524.4 × 1"
+        }
+      ],
+      "total": 6929.4,
+      "damageThreat": 27717.6,
+      "threatMultiplier": 4
+    },
+    {
+      "classKey": "adventurer",
+      "weapon": "Mace",
+      "stats": {
+        "maxHealth": 7852,
+        "maxMana": 5951,
+        "physicalAttack": 497.2,
+        "magicalAttack": 367.2,
+        "physicalDefense": 1081,
+        "magicalDefense": 857,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "rows": [
+        {
+          "nr": 15,
+          "name": "Beben",
+          "total": 1319.2,
+          "hitWeight": 1,
+          "formula": "1319.2 × 1"
+        },
+        {
+          "nr": 76,
+          "name": "Mächtiger Doppelschlag",
+          "total": 2222.4,
+          "hitWeight": 2,
+          "formula": "1111.2 × 2"
+        },
+        {
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "total": 695.2,
+          "hitWeight": 1,
+          "formula": "695.2 × 1"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "total": 2067.2,
+          "hitWeight": 1,
+          "formula": "2067.2 × 1"
+        },
+        {
+          "nr": 115,
+          "name": "Überschallklinge",
+          "total": 2053.2,
+          "hitWeight": 1,
+          "formula": "2053.2 × 1"
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "total": 5446,
+          "hitWeight": 5,
+          "formula": "1089.2 × 5"
+        }
+      ],
+      "total": 13803.2,
+      "damageThreat": 13803.2,
+      "threatMultiplier": 1
+    },
+    {
+      "classKey": "adventurer",
+      "weapon": "Sword",
+      "stats": {
+        "maxHealth": 7852,
+        "maxMana": 5951,
+        "physicalAttack": 502,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1081,
+        "magicalDefense": 857,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "rows": [
+        {
+          "nr": 15,
+          "name": "Beben",
+          "total": 1324,
+          "hitWeight": 1,
+          "formula": "1324 × 1"
+        },
+        {
+          "nr": 76,
+          "name": "Mächtiger Doppelschlag",
+          "total": 2232,
+          "hitWeight": 2,
+          "formula": "1116 × 2"
+        },
+        {
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "total": 700,
+          "hitWeight": 1,
+          "formula": "700 × 1"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "total": 2072,
+          "hitWeight": 1,
+          "formula": "2072 × 1"
+        },
+        {
+          "nr": 115,
+          "name": "Überschallklinge",
+          "total": 2058,
+          "hitWeight": 1,
+          "formula": "2058 × 1"
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "total": 5470,
+          "hitWeight": 5,
+          "formula": "1094 × 5"
+        }
+      ],
+      "total": 13856,
+      "damageThreat": 13856,
+      "threatMultiplier": 1
+    },
+    {
+      "classKey": "druid",
+      "weapon": "Streitkolben",
+      "stats": {
+        "maxHealth": 4278,
+        "maxMana": 6536,
+        "physicalAttack": 518,
+        "magicalAttack": 454.1,
+        "physicalDefense": 859,
+        "magicalDefense": 871,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "rows": [
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "total": 5644.4,
+          "hitWeight": 4,
+          "formula": "(957 + 454.1) × 4"
+        },
+        {
+          "nr": 15,
+          "name": "Beben",
+          "total": 1340,
+          "hitWeight": 1,
+          "formula": "1340 × 1"
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "total": 1055.1,
+          "hitWeight": 1,
+          "formula": "1055.1 × 1"
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "total": 659.1,
+          "hitWeight": 1,
+          "formula": "659.1 × 1"
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "total": 1876.1,
+          "hitWeight": 1,
+          "formula": "1876.1 × 1"
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "total": 2088,
+          "hitWeight": 1,
+          "formula": "2088 × 1"
+        },
+        {
+          "nr": 202,
+          "name": "Verbrennen",
+          "total": 2750.5,
+          "hitWeight": 5,
+          "formula": "(96 + 454.1) × 5"
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "total": 608.1,
+          "hitWeight": 1,
+          "formula": "608.1 × 1"
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "total": 1268.1,
+          "hitWeight": 1,
+          "formula": "1268.1 × 1"
+        }
+      ],
+      "total": 17289.4,
+      "damageThreat": 17289.4,
+      "threatMultiplier": 1
+    }
+  ],
+  "gladiatorWithRage": {
+    "rows": [
+      {
+        "nr": 13,
+        "name": "Ausbruch der Wut",
+        "total": 1866.6
+      },
+      {
+        "nr": 109,
+        "name": "Sturm der Wut",
+        "total": 1698.6
+      },
+      {
+        "nr": 127,
+        "name": "Wutexplosion",
+        "total": 2662.6
+      },
+      {
+        "nr": 128,
+        "name": "Wutklinge",
+        "total": 1726.6
+      }
+    ],
+    "total": 17823,
+    "includesStrengthBonus": 15,
+    "damageThreat": 44557.5
+  },
+  "tankFieldAdditionalThreat": 5000
+}

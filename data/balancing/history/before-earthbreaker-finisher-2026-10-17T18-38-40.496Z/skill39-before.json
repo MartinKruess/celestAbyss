@@ -1,0 +1,56 @@
+{
+  "_id": "6acc1c7e4826525c70d04b8a",
+  "skillName_eng": "Earthbreaker",
+  "__v": 0,
+  "category": "active",
+  "cd": 70,
+  "charClass": [
+    "Butcher",
+    "Destroyer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Bricht den Boden auf und schleudert nahe Gegner zurück. Der physische Grundangriffswert steigt von 284 um 81 je weiterer Stufe auf 1013 auf Level 10. Die Mana-Kosten 71 auf Stufe 1, +20 je weiterer Stufe, maximal 251 auf Stufe 10. Der Cooldown sinkt von 70 um 1 Sekunde je weiterer Stufe auf 61 Sekunden. Die Cast Time beträgt 0,3 Sekunden, die Wirkungsdauer 5 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+  "description_eng": "Breaks open the ground and knocks nearby enemies back. Physical base attack increases from 284 by 81 per additional level to 1013 at level 10. Mana cost 71 at level 1, maximum 251 at level 10. Cooldown decreases from 70 by 1 second per additional level to 61 seconds. Cast time is 0.3 seconds and effect duration is 5 seconds.",
+  "dmgType": "physical",
+  "dur": 5,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 39,
+  "patk": 284,
+  "skillName_de": "Erdbrecher",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.3,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 70,
+    "perLevel": -1
+  },
+  "mana": 71,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 71,
+        "perLevel": 20
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 284,
+      "perLevel": 81
+    }
+  },
+  "manaPricing": {
+    "category": "normal",
+    "factor": 0.25,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  }
+}

@@ -1,0 +1,18 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+const patches=[
+{nr:149,set:{mana:250,castTimeSeconds:0,animationTimingStatus:'provisional',statScaling:{str:{type:'linear',base:3,perLevel:1},patk:{type:'linear',base:120,perLevel:60}},statBonusTargets:{str:'self',patk:'self',int:'self'},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:250,perLevel:25}}],description_de:'Verstärkt dich selbst für 600 Sekunden. Erhöht auf Skilllevel 1 deine Stärke um 3, deinen physischen Angriff um 120 und deine Intelligenz um 2. Je weiterer Stufe kommen 1 Stärke und 60 physischer Angriff hinzu, bis zu 5 Stärke und 240 physischem Angriff auf Level 3. Der Intelligenzbonus bleibt bei 2. Die Mana-Kosten steigen von 250 um 25 je weiterer Stufe auf 300. Der Cooldown beträgt 60 Sekunden. Sofortige Aktivierung mit kurzer, noch festzulegender Animation.',description_eng:'Strengthens you for 600 seconds. At skill level 1, increases Strength by 3, physical attack by 120 and Intelligence by 2. Each additional level adds 1 Strength and 60 physical attack, reaching 5 Strength and 240 physical attack at level 3. The Intelligence bonus remains 2. Mana cost increases from 250 by 25 per additional level to 300. Cooldown is 60 seconds. Activates instantly with a brief animation still to be defined.'}},
+{nr:150,set:{mana:231,castTimeSeconds:1,statBonusTargets:{patk:'groupCompanions',matk:'groupCompanions',pdef:'groupCompanions',mdef:'groupCompanions'},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:231,perLevel:46}}],description_de:'Verstärkt ausschließlich die Begleiter deiner Gruppe, nicht die Spieler. Erhöht ihren physischen und magischen Angriff sowie ihre physische und magische Verteidigung jeweils um 5 je gelerntem Skilllevel, bis zu jeweils 50 auf Level 10. Die Mana-Kosten steigen von 231 um 46 je weiterer Stufe auf 645. Die Cast Time beträgt 1 Sekunde. Der Buff hält 600 Sekunden und hat 60 Sekunden Cooldown.',description_eng:'Strengthens only your group companions, not players. Increases their physical and magical attack and physical and magical defense by 5 each per learned skill level, up to 50 each at level 10. Mana cost increases from 231 by 46 per additional level to 645. Cast time is 1 second. The buff lasts 600 seconds and has a 60 second cooldown.'}},
+];
+try{
+if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Requires development database');
+await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+const before=await SkillDataModel.collection.find({nr:{$in:[149,150]}}).toArray();if(before.length!==2)throw Error('Missing skill');
+for(const p of patches)await new SkillDataModel({...before.find(x=>x.nr===p.nr),...p.set}).validate();
+await fs.writeFile('data/balancing/wild-companion-power-before.json',JSON.stringify(before,null,2)+'\n');
+for(const p of patches)await SkillDataModel.collection.updateOne({_id:before.find(x=>x.nr===p.nr)._id},{$set:p.set});
+for(const p of patches){const after=await SkillDataModel.collection.findOne({nr:p.nr});for(const[k,v]of Object.entries(p.set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');}
+console.log('Wild Power verified: 120 to 240 attack, 3 to 5 Strength, Mana 250 to 300. Existing Intelligence +2 retained. Companion Power targets group companions only; Mana 231 to 645, cast 1 s.');
+}catch(e){console.error(`Wild/companion update failed (${e.name}); credentials omitted.`);process.exitCode=1;}finally{await mongoose.disconnect();}

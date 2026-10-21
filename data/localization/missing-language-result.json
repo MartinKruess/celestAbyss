@@ -1,0 +1,2476 @@
+{
+  "status": "appliedAndVerified",
+  "appliedAt": "2026-10-18T15:13:46.794Z",
+  "backup": "data/localization/history/before-missing-language-fill-1792336416329",
+  "itemsUpdated": 208,
+  "classesUpdated": 13,
+  "fieldsAdded": 876,
+  "skillsCheckedUnchanged": 257,
+  "pending": [
+    {
+      "kind": "item",
+      "name": "Oak Wood",
+      "fields": [
+        "description_de",
+        "description_eng"
+      ],
+      "reason": "Keine Ausgangsbeschreibung vorhanden; keine neuen Eigenschaften oder Hintergrundgeschichte erfunden."
+    },
+    {
+      "kind": "item",
+      "name": "Darkwood",
+      "fields": [
+        "description_de",
+        "description_eng"
+      ],
+      "reason": "Keine Ausgangsbeschreibung vorhanden; keine neuen Eigenschaften oder Hintergrundgeschichte erfunden."
+    },
+    {
+      "kind": "item",
+      "name": "Weidenbaum",
+      "fields": [
+        "description_de",
+        "description_eng"
+      ],
+      "reason": "Keine Ausgangsbeschreibung vorhanden; keine neuen Eigenschaften oder Hintergrundgeschichte erfunden."
+    },
+    {
+      "kind": "item",
+      "name": "Skeleton Guard",
+      "fields": [
+        "description_de",
+        "description_eng"
+      ],
+      "reason": "Kartenname Skelettwache, Beschreibung nennt Cernunos."
+    }
+  ],
+  "changes": [
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a94",
+      "key": "Small Battleax",
+      "set": {
+        "name_eng": "Small Battleaxe",
+        "name_de": "Kleine Streitaxt",
+        "description_eng": "A lightweight battleax suitable for swift strikes.",
+        "description_de": "Eine leichte Streitaxt für schnelle Schläge."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a95",
+      "key": "Battleaxe",
+      "set": {
+        "name_eng": "Battleaxe",
+        "name_de": "Streitaxt",
+        "description_eng": "A versatile and sturdy battleaxe for powerful attacks.",
+        "description_de": "Eine vielseitige, robuste Streitaxt für kraftvolle Angriffe."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a96",
+      "key": "Small Wooden Bow",
+      "set": {
+        "name_eng": "Small Wooden Bow",
+        "name_de": "Kleiner Holzbogen",
+        "description_eng": "A basic wooden bow, ideal for beginners.",
+        "description_de": "Ein einfacher Holzbogen, ideal für Anfänger."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a97",
+      "key": "Light Crossbow",
+      "set": {
+        "name_eng": "Light Crossbow",
+        "name_de": "Leichte Armbrust",
+        "description_eng": "A compact crossbow designed for quick aiming and firing.",
+        "description_de": "Eine kompakte Armbrust, die schnelles Zielen und Schießen ermöglicht."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a98",
+      "key": "Shark Tooth Dagger",
+      "set": {
+        "name_eng": "Shark Tooth Dagger",
+        "name_de": "Haifangdolch",
+        "description_eng": "A dagger crafted from a shark's tooth, offering swift and precise stabs.",
+        "description_de": "Ein aus einem Haifischzahn gefertigter Dolch für schnelle, präzise Stiche."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a99",
+      "key": "Little Mace",
+      "set": {
+        "name_eng": "Little Mace",
+        "name_de": "Kleiner Streitkolben",
+        "description_eng": "A small mace that packs a surprising punch despite its size.",
+        "description_de": "Ein kleiner Streitkolben, dessen Schläge trotz seiner Größe überraschend wuchtig sind."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a9a",
+      "key": "Big Mace",
+      "set": {
+        "name_eng": "Big Mace",
+        "name_de": "Großer Streitkolben",
+        "description_eng": "A large and heavy mace capable of devastating blows.",
+        "description_de": "Ein großer, schwerer Streitkolben für verheerende Hiebe."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a9b",
+      "key": "Wooden Shield",
+      "set": {
+        "name_eng": "Wooden Shield",
+        "name_de": "Holzschild",
+        "description_eng": "A basic shield made from wood, offering moderate protection.",
+        "description_de": "Ein einfacher Schild aus Holz, der mäßigen Schutz bietet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a9c",
+      "key": "Iron Sword",
+      "set": {
+        "name_eng": "Iron Sword",
+        "name_de": "Eisenschwert",
+        "description_eng": "A standard sword forged from iron, balanced for both offense and defense.",
+        "description_de": "Ein gewöhnliches Schwert aus Eisen, ausgewogen für Angriff und Verteidigung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a9d",
+      "key": "Longsword",
+      "set": {
+        "name_eng": "Longsword",
+        "name_de": "Langschwert",
+        "description_eng": "A lengthy sword with a sharp blade, suitable for slashing and thrusting.",
+        "description_de": "Ein langes Schwert mit scharfer Klinge, geeignet für Hiebe und Stiche."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a9e",
+      "key": "Staff of the Brightness",
+      "set": {
+        "name_eng": "Staff of Radiance",
+        "name_de": "Stab des Glanzes",
+        "description_eng": "A staff imbued with radiant energy, capable of illuminating dark places.",
+        "description_de": "Ein von strahlender Energie erfüllter Stab, der dunkle Orte erhellen kann."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04a9f",
+      "key": "Simple Wand",
+      "set": {
+        "name_eng": "Simple Wand",
+        "name_de": "Einfacher Zauberstab",
+        "description_eng": "A basic wand used by novice spellcasters for practicing simple spells.",
+        "description_de": "Ein einfacher Zauberstab, mit dem angehende Magier grundlegende Zauber üben."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa0",
+      "key": "Staff of Obsession",
+      "set": {
+        "name_eng": "Staff of Obsession",
+        "name_de": "Stab der Besessenheit",
+        "description_eng": "A staff that enhances the user's focus and determination in battle.",
+        "description_de": "Ein Stab, der im Kampf die Konzentration und Entschlossenheit seines Trägers stärkt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa1",
+      "key": "Thunder Axe",
+      "set": {
+        "name_eng": "Thunder Axe",
+        "name_de": "Donneraxt",
+        "description_eng": "An axe that crackles with electrical energy, delivering shocking blows to enemies.",
+        "description_de": "Eine Axt, die vor elektrischer Energie knistert und Gegnern elektrisierende Schläge versetzt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa2",
+      "key": "Great Battleaxe",
+      "set": {
+        "name_eng": "Great Battleaxe",
+        "name_de": "Große Streitaxt",
+        "description_eng": "A massive battleaxe wielded by seasoned warriors for devastating attacks.",
+        "description_de": "Eine gewaltige Streitaxt, mit der erfahrene Krieger verheerende Angriffe ausführen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa3",
+      "key": "Nobler Wooden Bow",
+      "set": {
+        "name_eng": "Nobler Wooden Bow",
+        "name_de": "Edler Holzbogen",
+        "description_eng": "A refined wooden bow crafted with precision and elegance.",
+        "description_de": "Ein hochwertiger Holzbogen, mit Präzision und Eleganz gefertigt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa4",
+      "key": "Heaviness Crossbow",
+      "set": {
+        "name_eng": "Heavy Crossbow",
+        "name_de": "Schwere Armbrust",
+        "description_eng": "A heavy crossbow designed for maximum impact, capable of piercing armor.",
+        "description_de": "Eine schwere Armbrust für höchste Durchschlagskraft, deren Bolzen Rüstungen durchdringen können."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa5",
+      "key": "Balanced Dagger",
+      "set": {
+        "name_eng": "Balanced Dagger",
+        "name_de": "Ausbalancierter Dolch",
+        "description_eng": "A dagger with a well-balanced design, ideal for both offense and defense.",
+        "description_de": "Ein ausgewogen gefertigter Dolch, gleichermaßen für Angriff und Verteidigung geeignet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa6",
+      "key": "Morningstar",
+      "set": {
+        "name_eng": "Morningstar",
+        "name_de": "Morgenstern",
+        "description_eng": "A spiked mace that inflicts brutal damage with each swing.",
+        "description_de": "Ein mit Stacheln besetzter Streitkolben, der mit jedem Schwung brutalen Schaden anrichtet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa7",
+      "key": "Blazing Mace",
+      "set": {
+        "name_eng": "Blazing Mace",
+        "name_de": "Lodernder Streitkolben",
+        "description_eng": "A mace that burns with intense flames, scorching enemies upon impact.",
+        "description_de": "Ein Streitkolben, der in heftigen Flammen brennt und Gegner beim Aufprall versengt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa8",
+      "key": "Iron Shield",
+      "set": {
+        "name_eng": "Iron Shield",
+        "name_de": "Eisenschild",
+        "description_eng": "A robust shield forged from iron, providing dependable defense against foes. Its weight offers reassurance to warriors, while its iron construction ensures durability in combat.",
+        "description_de": "Ein robuster Schild aus Eisen, der zuverlässigen Schutz vor Gegnern bietet. Sein Gewicht gibt Kriegern Sicherheit, während seine eiserne Bauweise im Kampf für Haltbarkeit sorgt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aa9",
+      "key": "Blade of Doom",
+      "set": {
+        "name_eng": "Blade of Doom",
+        "name_de": "Klinge des Verderbens",
+        "description_eng": "A sinister blade shrouded in darkness, its edge whispers of impending doom. Crafted by dark sorcerers, it instills fear in the hearts of its enemies and leaves a trail of despair in its wake.",
+        "description_de": "Eine finstere, von Dunkelheit umhüllte Klinge, deren Schneide nahendes Unheil verheißt. Von dunklen Zauberern geschmiedet, erfüllt sie ihre Feinde mit Furcht und hinterlässt eine Spur der Verzweiflung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aaa",
+      "key": "Great Sword",
+      "set": {
+        "name_eng": "Great Sword",
+        "name_de": "Großschwert",
+        "description_eng": "A massive sword of legendary proportions, capable of cleaving through foes with ease. Wielded by only the mightiest warriors, it commands respect on the battlefield and strikes fear into the hearts of adversaries.",
+        "description_de": "Ein gewaltiges Schwert von sagenhaften Ausmaßen, das Gegner mühelos spalten kann. Nur die mächtigsten Krieger führen es; auf dem Schlachtfeld gebietet es Respekt und erfüllt Widersacher mit Furcht."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aab",
+      "key": "Radiant Staff",
+      "set": {
+        "name_eng": "Radiant Staff",
+        "name_de": "Strahlender Stab",
+        "description_eng": "A staff aglow with radiant energy, emanating a warm and comforting light. Wielded by healers and defenders of the light, it serves as a beacon of hope in the darkest of times, casting out shadows and banishing evil.",
+        "description_de": "Ein von strahlender Energie leuchtender Stab, der warmes, tröstliches Licht ausstrahlt. Heilern und Verteidigern des Lichts dient er in finstersten Zeiten als Zeichen der Hoffnung, das Schatten vertreibt und das Böse verbannt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aac",
+      "key": "Wand of Knowledge",
+      "set": {
+        "name_eng": "Wand of Knowledge",
+        "name_de": "Zauberstab des Wissens",
+        "description_eng": "A wand adorned with intricate symbols of wisdom and enlightenment. Held by scholars and seekers of truth, it unlocks the mysteries of the universe and empowers its wielder with boundless knowledge and insight.",
+        "description_de": "Ein Zauberstab, verziert mit kunstvollen Zeichen der Weisheit und Erleuchtung. Gelehrten und Wahrheitssuchenden erschließt er die Geheimnisse des Universums und verleiht seinem Träger grenzenloses Wissen und tiefe Einsicht."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aad",
+      "key": "Staff of Devoured Souls",
+      "set": {
+        "name_eng": "Staff of Devoured Souls",
+        "name_de": "Stab der verschlungenen Seelen",
+        "description_eng": "A staff infused with the essence of lost souls, hungry for power and vengeance. Wielded by necromancers and dark sorcerers, it consumes the life force of its victims and bends them to its master's will, leaving only desolation in its wake.",
+        "description_de": "Ein mit der Essenz verlorener Seelen erfüllter Stab, der nach Macht und Vergeltung hungert. In den Händen von Nekromanten und dunklen Zauberern verzehrt er die Lebenskraft seiner Opfer und unterwirft sie seinem Meister. Zurück bleibt nur Verwüstung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aae",
+      "key": "Jagged Broadaxe",
+      "set": {
+        "name_eng": "Jagged Broadaxe",
+        "name_de": "Gezackte Breitaxt",
+        "description_eng": "A fearsome broadaxe with jagged edges, designed to inflict devastating wounds upon its foes. Wielded by berserkers and barbarians, it strikes fear into the hearts of enemies and leaves behind a trail of destruction.",
+        "description_de": "Eine furchterregende Breitaxt mit gezackter Schneide, geschaffen, um ihren Gegnern verheerende Wunden zuzufügen. Berserker und Barbaren verbreiten mit ihr Angst und hinterlassen eine Spur der Zerstörung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aaf",
+      "key": "War Axe",
+      "set": {
+        "name_eng": "War Axe",
+        "name_de": "Kriegsaxt",
+        "description_eng": "A formidable axe forged for battle, its razor-sharp blade capable of cleaving through armor and bone alike. Wielded by seasoned warriors, it embodies the fury and chaos of war.",
+        "description_de": "Eine mächtige, für die Schlacht geschmiedete Axt, deren rasiermesserscharfe Schneide Rüstung und Knochen spalten kann. In den Händen erfahrener Krieger verkörpert sie die Wut und das Chaos des Krieges."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab0",
+      "key": "Balanced Crossbow",
+      "set": {
+        "name_eng": "Balanced Bow",
+        "name_de": "Ausbalancierter Bogen",
+        "description_de": "Ein fein gearbeiteter Bogen, perfekt ausbalanciert für Genauigkeit und Durchschlagskraft. Bei erfahrenen Schützen beliebt, trifft er aus der Ferne mit tödlicher Präzision und streckt Feinde mit höchster Effizienz nieder.",
+        "description_eng": "A finely crafted bow, perfectly balanced for accuracy and power. Favored by skilled marksmen, it delivers deadly precision from a distance, striking down enemies with lethal efficiency."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab1",
+      "key": "Crossbow of target Shot",
+      "set": {
+        "name_eng": "Crossbow of the Precise Shot",
+        "name_de": "Armbrust des gezielten Schusses",
+        "description_eng": "An enchanted crossbow blessed with the ability to unfailingly strike its intended target. Wielded by hunters and assassins, it never misses its mark, ensuring swift and silent elimination of foes.",
+        "description_de": "Eine verzauberte Armbrust, die mit der Gabe gesegnet ist, ihr gewähltes Ziel unfehlbar zu treffen. In den Händen von Jägern und Assassinen verfehlt sie nie ihr Ziel und ermöglicht die schnelle, lautlose Ausschaltung ihrer Gegner."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab2",
+      "key": "Perfect Balanced Dagger",
+      "set": {
+        "name_eng": "Perfect Balanced Dagger",
+        "name_de": "Vollkommen ausbalancierter Dolch",
+        "description_eng": "A dagger meticulously crafted for flawless balance and precision. Wielded by assassins and rogues, it slices through defenses with surgical precision, delivering swift and lethal strikes to unsuspecting foes.",
+        "description_de": "Ein mit größter Sorgfalt gefertigter Dolch von vollendeter Balance und Präzision. Assassinen und Schurken durchdringen mit ihm gegnerische Verteidigung mit chirurgischer Genauigkeit und treffen ahnungslose Gegner schnell und tödlich."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab3",
+      "key": "The Silencer",
+      "set": {
+        "name_eng": "The Silencer",
+        "name_de": "Der Verstummer",
+        "description_eng": "A legendary weapon whispered of in shadows, capable of silencing magic and rendering its wielder invisible to detection. Wielded by spies and infiltrators, it strikes from the darkness with deadly efficiency.",
+        "description_de": "Eine legendäre Waffe, von der man im Verborgenen flüstert. Sie kann Magie zum Schweigen bringen und ihren Träger jeder Entdeckung entziehen. Spione und Eindringlinge schlagen mit ihr aus der Dunkelheit mit tödlicher Präzision zu."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab4",
+      "key": "Bessing of the Light Mace",
+      "set": {
+        "name_eng": "Mace of Light's Blessing",
+        "name_de": "Streitkolben des Lichtsegens",
+        "description_eng": "A mace imbued with the divine blessings of light, radiating purity and holiness. Wielded by clerics and paladins, it banishes darkness and smites the unholy with righteous fury.",
+        "description_de": "Ein von göttlichem Licht gesegneter Streitkolben, der Reinheit und Heiligkeit ausstrahlt. Kleriker und Paladine vertreiben mit ihm die Dunkelheit und zerschmettern das Unheilige mit gerechtem Zorn."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab5",
+      "key": "Mighty Wall",
+      "set": {
+        "name_eng": "Mighty Wall",
+        "name_de": "Mächtiger Wall",
+        "description_eng": "A towering shield of unyielding strength and resilience, capable of withstanding the mightiest of blows. Wielded by defenders and guardians, it forms an impenetrable barrier against enemy attacks.",
+        "description_de": "Ein gewaltiger Schild von unbeugsamer Stärke und Widerstandskraft, der selbst den heftigsten Schlägen standhält. In den Händen von Verteidigern und Wächtern bildet er eine undurchdringliche Barriere gegen feindliche Angriffe."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab6",
+      "key": "Oathkeeper Sword",
+      "set": {
+        "name_eng": "Oathkeeper Sword",
+        "name_de": "Schwert des Eidhüters",
+        "description_eng": "A sword bound by sacred oaths, sworn to defend the innocent and uphold justice. Wielded by knights and champions, it cleaves through evil with unwavering resolve and unwavering loyalty.",
+        "description_de": "Ein durch heilige Eide gebundenes Schwert, das dem Schutz der Unschuldigen und der Wahrung der Gerechtigkeit geweiht ist. Ritter und Streiter durchtrennen mit ihm das Böse mit unerschütterlicher Entschlossenheit und Treue."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab7",
+      "key": "Sword of Victory",
+      "set": {
+        "name_eng": "Sword of Victory",
+        "name_de": "Schwert des Sieges",
+        "description_eng": "A sword destined for triumph on the battlefield, its blade gleaming with the promise of victory. Wielded by commanders and generals, it inspires courage in allies and strikes fear into the hearts of enemies.",
+        "description_de": "Ein zum Triumph auf dem Schlachtfeld bestimmtes Schwert, dessen Klinge im Versprechen des Sieges glänzt. In den Händen von Befehlshabern und Generälen stärkt es den Mut der Verbündeten und schürt die Furcht ihrer Feinde."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab8",
+      "key": "Staff of Holyness",
+      "set": {
+        "name_eng": "Staff of Holiness",
+        "name_de": "Stab der Heiligkeit",
+        "description_eng": "A staff infused with divine light, channeling the power of righteousness and purity. Wielded by holy men and healers, it banishes darkness and brings solace to the suffering.",
+        "description_de": "Ein von göttlichem Licht erfüllter Stab, der die Kraft von Rechtschaffenheit und Reinheit bündelt. Heilige und Heiler verbannen mit ihm die Dunkelheit und spenden Leidenden Trost."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ab9",
+      "key": "Survivors Staff",
+      "set": {
+        "name_eng": "Survivors Staff",
+        "name_de": "Stab der Überlebenden",
+        "description_eng": "A staff borne by those who have endured great trials and emerged stronger for it. Wielded by survivors and outcasts, it symbolizes resilience and perseverance in the face of adversity.",
+        "description_de": "Ein Stab jener, die schwere Prüfungen überstanden haben und gestärkt daraus hervorgegangen sind. Überlebenden und Ausgestoßenen dient er als Sinnbild für Widerstandskraft und Beharrlichkeit angesichts jeder Widrigkeit."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aba",
+      "key": "Staff of Abyss",
+      "set": {
+        "name_eng": "Staff of Abyss",
+        "name_de": "Stab des Abgrunds",
+        "description_eng": "A staff forged from the darkest depths of the abyss, its power drawn from the void itself. Wielded by sorcerers and dark mages, it unleashes destruction and chaos upon the world.",
+        "description_de": "Ein in den finstersten Tiefen des Abgrunds geschmiedeter Stab, der seine Kraft aus der Leere selbst schöpft. In den Händen von Zauberern und dunklen Magiern entfesselt er Zerstörung und Chaos über die Welt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04abb",
+      "key": "Gale of Axe",
+      "set": {
+        "name_eng": "Storm Axe",
+        "name_de": "Sturmaxt",
+        "description_eng": "An axe infused with the fury of the tempest, its swings unleashing howling winds that tear through ranks of enemies. Wielded by stormlords and windcallers, it brings the wrath of the storm to the battlefield.",
+        "description_de": "Eine vom Zorn des Unwetters erfüllte Axt, deren Schwünge heulende Winde entfesseln, die feindliche Reihen zerreißen. Sturmfürsten und Windrufer tragen mit ihr den Zorn des Sturms auf das Schlachtfeld."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04abc",
+      "key": "Big Crusher",
+      "set": {
+        "name_eng": "Skullsplitter",
+        "name_de": "Schädelspalter",
+        "description_de": "Eine gewaltige Zweihandaxt von enormem Gewicht und großer Kraft, deren Hiebe selbst die stärksten Gegner niederstrecken. Von Riesen und Titanen geführt, hinterlässt sie nichts als Verwüstung.",
+        "description_eng": "A massive two-handed axe of immense weight and power, its blows capable of felling even the mightiest foes. Wielded by giants and titans, it leaves nothing but devastation in its wake."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04abd",
+      "key": "Valkyrie Tendon",
+      "set": {
+        "name_eng": "Valkyrie Tendon",
+        "name_de": "Sehne der Walküre",
+        "description_eng": "A mystical cord woven by the valkyries themselves, imbued with the strength and resilience of divine warriors. Wielded by champions and heroes, it grants unmatched agility and endurance in battle.",
+        "description_de": "Eine mystische, von den Walküren selbst gewobene Sehne, erfüllt von der Stärke und Widerstandskraft göttlicher Krieger. Streitern und Helden verleiht sie unübertroffene Beweglichkeit und Ausdauer im Kampf."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04abe",
+      "key": "The Huntress of the Shaddow",
+      "set": {
+        "name_eng": "The Huntress of the Shadow",
+        "name_de": "Die Schattenjägerin",
+        "description_de": "Eine legendäre Armbrust, geführt von einer schwer zu fassenden, tödlichen Jägerin, die durch die Schatten streift. Aus feinstem Ebenholz gefertigt und mit dunkler Magie durchdrungen, versetzt sie ihre Beute in Angst und Schrecken.",
+        "description_eng": "A legendary crossbow wielded by the elusive and deadly huntress who stalks the shadows. Crafted from the finest ebony wood and imbued with dark magic, it strikes fear into the hearts of her prey."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04abf",
+      "key": "Lightbreaker",
+      "set": {
+        "name_eng": "Lightbreaker",
+        "name_de": "Lichtbrecher",
+        "description_de": "Ein geheimnisvoller Dolch, dessen dunkle Klinge das Licht um sich herum verschlingt. Einst von lautlosen Assassinen geführt, hüllt er seinen Träger in tiefe Schatten und lässt ihn nahezu unbemerkt an seine Opfer heranschleichen.",
+        "description_eng": "A mysterious dagger whose dark blade devours the light around it. Once wielded by silent assassins, it shrouds its bearer in deep shadows, allowing them to stalk their victims almost unnoticed."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac0",
+      "key": "Anguish of Peaceful Mind",
+      "set": {
+        "name_eng": "Anguish of a Peaceful Mind",
+        "name_de": "Qual des friedvollen Geistes",
+        "description_de": "Ein düsterer Streitkolben, dessen Schläge von einer unheimlichen Stille begleitet werden. Einst von einem Krieger geführt, der vergeblich nach innerem Frieden suchte, trägt er dessen rastlosen Zorn in sich. In der Hand liegt er ruhig, doch jeder Hieb erzählt von einem Geist, der niemals Ruhe fand.",
+        "description_eng": "A grim mace whose blows are accompanied by an eerie silence. Once wielded by a warrior who sought inner peace in vain, it carries his restless fury within. It rests calmly in the hand, yet every strike tells of a soul that never found peace."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac1",
+      "key": "Meteroic Mace",
+      "set": {
+        "name_eng": "Meteoric Mace",
+        "name_de": "Meteoritenstreitkolben",
+        "description_eng": "A mace forged from the heart of a falling star, its celestial metal imbued with the fury of the cosmos. Wielded by celestial champions and starborn warriors, it smites foes with celestial might.",
+        "description_de": "Ein aus dem Herzen einer Sternschnuppe geschmiedeter Streitkolben, dessen Himmelsmetall vom Zorn des Kosmos erfüllt ist. Himmlische Streiter und sternengeborene Krieger schlagen mit ihm ihre Feinde mit der Macht der Gestirne nieder."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac2",
+      "key": "Antique shield",
+      "set": {
+        "name_eng": "Antique shield",
+        "name_de": "Antiker Schild",
+        "description_eng": "A shield of ancient design, adorned with intricate patterns and symbols of forgotten civilizations. Wielded by historians and relic hunters, it offers protection steeped in the mysteries of the past.",
+        "description_de": "Ein Schild uralten Entwurfs, verziert mit kunstvollen Mustern und Zeichen vergessener Zivilisationen. Geschichtskundigen und Reliquienjägern bietet er Schutz, der von den Geheimnissen der Vergangenheit durchdrungen ist."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac3",
+      "key": "Dusk Blade",
+      "set": {
+        "name_eng": "Dusk Blade",
+        "name_de": "Dämmerungsklinge",
+        "description_eng": "A blade forged in the twilight hours, its edge honed to cut through the veil between light and shadow. Wielded by duskblade assassins and shadowdancers, it strikes with deadly precision under cover of darkness.",
+        "description_de": "Eine im Zwielicht geschmiedete Klinge, deren Schneide den Schleier zwischen Licht und Schatten durchtrennt. Assassinen der Dämmerung und Schattentänzer führen mit ihr unter dem Schutz der Dunkelheit tödlich präzise Angriffe aus."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac4",
+      "key": "Claymore",
+      "set": {
+        "name_eng": "Claymore",
+        "name_de": "Claymore",
+        "description_eng": "A massive two-handed sword wielded with both hands for devastating slashes and thrusts. Wielded by highland warriors and knights, it strikes fear into the hearts of enemies on the battlefield.",
+        "description_de": "Ein gewaltiges Zweihandschwert, das mit beiden Händen für verheerende Hiebe und Stiche geführt wird. Hochlandkrieger und Ritter erfüllen damit ihre Feinde auf dem Schlachtfeld mit Furcht."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac5",
+      "key": "Clearness of sins",
+      "set": {
+        "name_eng": "Purification of Sins",
+        "name_de": "Läuterung der Sünden",
+        "description_eng": "A holy relic imbued with the power to cleanse the soul of its bearer, purging them of guilt and remorse. Wielded by repentant sinners and penitent pilgrims, it offers redemption and absolution.",
+        "description_de": "Eine heilige Reliquie mit der Kraft, die Seele ihres Trägers zu reinigen und sie von Schuld und Reue zu befreien. Reuigen Sündern und büßenden Pilgern bietet sie Erlösung und Vergebung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac6",
+      "key": "Wand of Rejuvenation",
+      "set": {
+        "name_eng": "Wand of Rejuvenation",
+        "name_de": "Zauberstab der Erneuerung",
+        "description_eng": "A wand infused with the essence of vitality and renewal, capable of restoring health and vigor to the weary. Wielded by healers and druids, it brings new life to those in need.",
+        "description_de": "Ein mit der Essenz von Lebenskraft und Erneuerung erfüllter Zauberstab, der Erschöpften Gesundheit und Kraft zurückgeben kann. Heiler und Druiden schenken damit Bedürftigen neues Leben."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac7",
+      "key": "Scepter of Lunar Eclipse",
+      "set": {
+        "name_eng": "Scepter of Lunar Eclipse",
+        "name_de": "Zepter der Mondfinsternis",
+        "description_de": "Ein finsteres Zepter, dessen Kern selbst im hellsten Mondlicht schwarz bleibt. Einst von Ritualisten für verbotene Opferzeremonien geführt, trägt es das Echo unzähliger Seelen in sich. Wer seine Macht entfesselt, spürt, dass die Dunkelheit jede Gabe annimmt und stets nach mehr verlangt.",
+        "description_eng": "A sinister scepter whose core remains black even in the brightest moonlight. Once wielded by ritualists in forbidden sacrificial rites, it holds the echoes of countless souls. Those who unleash its power sense that the darkness accepts every offering and always hungers for more."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac8",
+      "key": "Dragons Breath",
+      "set": {
+        "name_eng": "Dragons Breath",
+        "name_de": "Drachenatem",
+        "description_eng": "An axe imbued with the fiery essence of dragons, its blade crackles with flames that scorch enemies upon impact. Wielded by dragon hunters and fire warriors, it leaves a trail of devastation in its wake.",
+        "description_de": "Eine von der feurigen Essenz der Drachen erfüllte Axt, deren Klinge vor Flammen knistert und Gegner beim Aufprall versengt. Drachenjäger und Feuerkrieger hinterlassen mit ihr eine Spur der Verwüstung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ac9",
+      "key": "Great Destroyer",
+      "set": {
+        "name_eng": "The Great Destroyer",
+        "name_de": "Großer Zerstörer",
+        "description_eng": "A colossal axe of destruction, its massive blade capable of cleaving through armies with unstoppable force. Wielded by berserkers and champions of chaos, it lays waste to all in its path.",
+        "description_de": "Eine kolossale Axt der Vernichtung, deren gewaltige Klinge ganze Heere mit unaufhaltsamer Kraft durchtrennen kann. Berserker und Streiter des Chaos verwüsten mit ihr alles auf ihrem Weg."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aca",
+      "key": "Bow of Dragon Roar",
+      "set": {
+        "name_eng": "Bow of Dragon Roar",
+        "name_de": "Bogen des Drachengebrülls",
+        "description_eng": "A bow crafted from dragonbone and sinew, its arrows sing with the roar of dragons as they soar through the air. Wielded by dragon hunters and archers, it strikes fear into the hearts of its targets with each shot.",
+        "description_de": "Ein aus Drachenknochen und Sehnen gefertigter Bogen, dessen Pfeile im Flug wie Drachen brüllen. Drachenjäger und Bogenschützen erfüllen ihre Ziele mit jedem Schuss mit Furcht."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04acb",
+      "key": "Hunters Arbalist",
+      "set": {
+        "name_eng": "Hunter's Crossbow",
+        "name_de": "Jägerarmbrust",
+        "description_eng": "An arbalest designed for precision and power, favored by skilled hunters and marksmen. Wielded by those who stalk their prey from the shadows, it delivers swift and lethal bolts with deadly accuracy.",
+        "description_de": "Eine auf Präzision und Kraft ausgelegte Armbrust, die geschickte Jäger und Schützen bevorzugen. Wer seine Beute aus den Schatten verfolgt, verschießt mit ihr schnelle, tödliche Bolzen mit höchster Genauigkeit."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04acc",
+      "key": "Shaddowbreaker",
+      "set": {
+        "name_eng": "Shadowbreaker",
+        "name_de": "Schattenbrecher",
+        "description_eng": "A dagger honed to perfection for slicing through shadows, enabling silent and stealthy attacks. Crafted by shadow assassins and nightstalkers, it strikes with deadly precision without making a sound, allowing its wielder to move undetected through the darkness.",
+        "description_de": "Ein vollkommen geschärfter Dolch, der Schatten durchschneidet und lautlose, heimliche Angriffe ermöglicht. Von Schattenassassinen und Nachtjägern gefertigt, trifft er tödlich präzise, ohne einen Laut zu verursachen, sodass sein Träger unentdeckt durch die Dunkelheit ziehen kann."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04acd",
+      "key": "Mongingstar of the fallen Angel",
+      "set": {
+        "name_eng": "Morningstar of the Fallen Angel",
+        "name_de": "Morgenstern des gefallenen Engels",
+        "description_eng": "A morningstar forged from fallen stars and imbued with celestial power, its spiked head radiates with divine light. Wielded by fallen angels and celestial warriors, it metes out justice to the wicked and the damned.",
+        "description_de": "Ein aus gefallenen Sternen geschmiedeter und mit himmlischer Kraft erfüllter Morgenstern, dessen Stachelkopf göttliches Licht ausstrahlt. Gefallene Engel und himmlische Krieger üben mit ihm Gerechtigkeit an Frevlern und Verdammten."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ace",
+      "key": "Rage of the Minotaur",
+      "set": {
+        "name_eng": "Rage of the Minotaur",
+        "name_de": "Zorn des Minotaurus",
+        "description_de": "Ein gewaltiger Zweihandstreitkolben, in dem der unbändige Zorn des Minotaurus fortlebt. Seine Schläge fallen mit der Wucht einer Bestie und zerschmettern selbst standhafte Gegner. Man sagt, wer ihn führt, spüre vor jedem Hieb das ferne Beben donnernder Hufe – und einen Zorn, der sich niemals bezwingen lässt.",
+        "description_eng": "A mighty two-handed mace in which the untamed rage of the minotaur lives on. Its blows strike with the force of a rampaging beast, shattering even the most steadfast foes. It is said that those who wield it feel the distant tremor of thundering hooves before every strike—and a fury that can never be tamed."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04acf",
+      "key": "Shield of Divine Protection",
+      "set": {
+        "name_eng": "Shield of Divine Protection",
+        "name_de": "Schild des göttlichen Schutzes",
+        "description_eng": "A shield blessed by the gods themselves, its surface gleams with divine light and holy sigils. Wielded by paladins and defenders of the faith, it offers unparalleled protection against evil and corruption.",
+        "description_de": "Ein von den Göttern selbst gesegneter Schild, dessen Oberfläche von göttlichem Licht und heiligen Siegeln erstrahlt. Paladinen und Verteidigern des Glaubens bietet er unvergleichlichen Schutz vor dem Bösen und vor Verderbnis."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad0",
+      "key": "Redeem of Pain",
+      "set": {
+        "name_eng": "Redeem of Pain",
+        "name_de": "Erlösung vom Schmerz",
+        "description_eng": "A weapon of redemption forged from the fires of torment, its blade sears the flesh and purges the soul of sin. Wielded by penitent warriors and avengers of justice, it delivers swift and righteous retribution to the wicked.",
+        "description_de": "Eine in den Feuern der Qual geschmiedete Waffe der Erlösung, deren Klinge das Fleisch versengt und die Seele von Sünde reinigt. Büßende Krieger und Rächer der Gerechtigkeit üben mit ihr schnelle, gerechte Vergeltung an den Frevlern."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad1",
+      "key": "Executioner Sword of Baldur",
+      "set": {
+        "name_eng": "Baldur's Executioner's Sword",
+        "name_de": "Henkerschwert Baldurs",
+        "description_eng": "A massive sword wielded by the executioners of Baldur, its blade is stained with the blood of the guilty. Wielded by those who serve as judge, jury, and executioner, it delivers swift and merciless justice to those deemed unworthy of life.",
+        "description_de": "Ein gewaltiges Schwert der Henker Baldurs, dessen Klinge vom Blut der Schuldigen gezeichnet ist. Wer Richter, Geschworener und Henker zugleich ist, vollstreckt mit ihm schnelle, unerbittliche Urteile an jenen, die des Lebens für unwürdig befunden wurden."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad2",
+      "key": "Glimmer of Hope",
+      "set": {
+        "name_eng": "Glimmer of Hope",
+        "name_de": "Hoffnungsschimmer",
+        "description_de": "Ein Zeichen der Hoffnung in den dunkelsten Zeiten. Sein Licht durchdringt die Verzweiflung und geleitet verlorene Seelen in Sicherheit. Von Heilern und Hütern des Lichts getragen, spendet er Bedürftigen Trost und Schutz.",
+        "description_eng": "A symbol of hope in the darkest of times. Its light pierces through despair and guides lost souls to safety. Carried by healers and guardians of the light, it offers comfort and protection to those in need."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad3",
+      "key": "Wand of Oracle",
+      "set": {
+        "name_eng": "Wand of Oracle",
+        "name_de": "Zauberstab des Orakels",
+        "description_eng": "A wand attuned to the ancient mysteries of the oracle, its magic reveals glimpses of the future and unlocks hidden truths. Wielded by seers and diviners, it offers guidance and foresight to those who seek its wisdom.",
+        "description_de": "Ein auf die uralten Geheimnisse des Orakels eingestimmter Zauberstab. Seine Magie gewährt Blicke in die Zukunft und enthüllt verborgene Wahrheiten. Sehern und Wahrsagern bietet er Führung und Voraussicht auf ihrer Suche nach Weisheit."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad4",
+      "key": "Soulstealer",
+      "set": {
+        "name_eng": "Soulreaver",
+        "name_de": "Seelenräuber",
+        "description_de": "Eine verfluchte Waffe, die sich von den Seelen ihrer Opfer nährt. Sein dunkler Kern dürstet nach Lebenskraft. Von Nekromanten und dunklen Zauberern geführt, versklavt sie die Seelen der Verdammten und entzieht ihnen ihre Essenz.",
+        "description_eng": "A cursed weapon that feeds on the souls of its victims. Its dark core thirsts for life force. Wielded by necromancers and dark sorcerers, it enslaves the souls of the damned and drains them of their essence."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad5",
+      "key": "Skybreaker",
+      "set": {
+        "name_eng": "Skybreaker",
+        "name_de": "Himmelsbrecher",
+        "description_eng": "A legendary one-handed axe rumored to have been wielded by an ancient sky warrior. Its razor-sharp blade is said to part the heavens themselves, summoning thunderstorms and lightning bolts to smite foes.",
+        "description_de": "Eine legendäre Einhandaxt, die angeblich einst ein uralter Himmelskrieger führte. Ihre rasiermesserscharfe Schneide soll den Himmel selbst spalten und Gewitter und Blitze herbeirufen können, um Feinde niederzustrecken."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad6",
+      "key": "Dimension",
+      "set": {
+        "name_eng": "Dimension",
+        "name_de": "Dimension",
+        "description_eng": "A mythical two-handed axe believed to have the power to tear open dimensional rifts. It was said to have been used by ancient heroes to traverse between worlds and confront otherworldly threats.",
+        "description_de": "Eine sagenhafte Zweihandaxt, der die Macht nachgesagt wird, Risse zwischen den Dimensionen zu öffnen. Uralte Helden sollen sie genutzt haben, um zwischen Welten zu reisen und sich außerweltlichen Bedrohungen zu stellen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad7",
+      "key": "Rayans Deracles",
+      "set": {
+        "name_eng": "Rayan´s Deracles",
+        "description_eng": "A bow named after the legendary hero Rayan, known for its unparalleled accuracy and range. It was said to have been wielded by Rayan himself to strike down enemies from afar with pinpoint precision.",
+        "description_de": "Ein nach dem legendären Helden Rayan benannter Bogen, bekannt für seine unvergleichliche Genauigkeit und Reichweite. Rayan selbst soll ihn geführt haben, um Feinde aus großer Entfernung mit höchster Präzision niederzustrecken.",
+        "name_de": "Rayans Deracles"
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad8",
+      "key": "Crossbow of the Shddowhunter",
+      "set": {
+        "name_eng": "Crossbow of the Shadow Hunter",
+        "name_de": "Armbrust des Schattenjägers",
+        "description_eng": "A crossbow crafted by shadowhunters, skilled assassins who stalked their prey from the shadows. It was designed for silent and deadly strikes, its bolts infused with shadow magic to pierce through defenses unnoticed.",
+        "description_de": "Eine von Schattenjägern gefertigte Armbrust. Diese geschickten Assassinen verfolgten ihre Beute aus den Schatten. Die Waffe wurde für lautlose, tödliche Angriffe entwickelt; ihre von Schattenmagie erfüllten Bolzen durchdringen Verteidigungen unbemerkt."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ad9",
+      "key": "Blade of Damnation",
+      "set": {
+        "name_eng": "Blade of Damnation",
+        "name_de": "Klinge der Verdammnis",
+        "description_eng": "A cursed dagger forged in the depths of the underworld, its wicked blade thirsting for the souls of the living. It was said to have been used by dark sorcerers to harvest souls and unleash damnation upon the world.",
+        "description_de": "Ein in den Tiefen der Unterwelt geschmiedeter, verfluchter Dolch, dessen boshafte Klinge nach den Seelen der Lebenden dürstet. Dunkle Zauberer sollen ihn genutzt haben, um Seelen zu ernten und Verdammnis über die Welt zu bringen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ada",
+      "key": "Guardien of the Light",
+      "set": {
+        "name_eng": "Guardian of the Light",
+        "name_de": "Wächter des Lichts",
+        "description_eng": "A sacred one-handed mace entrusted to the guardians of the light, defenders of the innocent and champions of righteousness. Its radiant energy was believed to purify evil and protect the faithful from harm.",
+        "description_de": "Ein heiliger Einhandstreitkolben, der den Wächtern des Lichts anvertraut wurde, den Beschützern der Unschuldigen und Streitern der Rechtschaffenheit. Seine strahlende Energie soll das Böse läutern und die Gläubigen vor Schaden bewahren."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04adb",
+      "key": "Hammer of Justice",
+      "set": {
+        "name_eng": "Hammer of Justice",
+        "name_de": "Hammer der Gerechtigkeit",
+        "description_eng": "A mighty two-handed mace wielded by champions of justice and defenders of the law. Its crushing blows were said to deliver swift and righteous justice to those who dared to defy the principles of truth and honor.",
+        "description_de": "Ein mächtiger Zweihandstreitkolben der Streiter der Gerechtigkeit und Hüter des Gesetzes. Seine zerschmetternden Hiebe sollen schnelle, gerechte Urteile an jenen vollstrecken, die Wahrheit und Ehre missachten."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04adc",
+      "key": "Aspis",
+      "set": {
+        "name_eng": "Aspis",
+        "name_de": "Aspis",
+        "description_eng": "A legendary shield said to have been forged from the remnants of a fallen star. It was believed to offer unparalleled protection against both mundane and magical threats, its surface shimmering with celestial energy.",
+        "description_de": "Ein legendärer Schild, der aus den Überresten eines gefallenen Sterns geschmiedet worden sein soll. Man sagte ihm unvergleichlichen Schutz vor gewöhnlichen und magischen Bedrohungen nach; seine Oberfläche schimmert von himmlischer Energie."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04add",
+      "key": "Infernal Blade",
+      "set": {
+        "name_eng": "Infernal Blade",
+        "name_de": "Infernale Klinge",
+        "description_eng": "A cursed sword infused with the essence of the abyss, its blackened blade dripping with the blood of demons. It was feared for its corrupting influence and its ability to spread chaos and destruction wherever it went.",
+        "description_de": "Ein von der Essenz des Abgrunds erfülltes, verfluchtes Schwert, dessen geschwärzte Klinge vom Blut der Dämonen tropft. Es wurde für seinen verderblichen Einfluss und seine Fähigkeit gefürchtet, überall Chaos und Zerstörung zu verbreiten."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ade",
+      "key": "Souls Torment Blade",
+      "set": {
+        "name_eng": "Blade of Soul Torment",
+        "name_de": "Klinge der Seelenqual",
+        "description_eng": "A massive two-handed sword said to trap the souls of its victims within its blade, tormenting them for eternity. It was wielded by dark warriors and soul reapers who sought to feed on the suffering of the damned.",
+        "description_de": "Ein gewaltiges Zweihandschwert, das die Seelen seiner Opfer in seiner Klinge fangen und auf ewig quälen soll. Dunkle Krieger und Seelenschnitter führten es, um sich vom Leid der Verdammten zu nähren."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04adf",
+      "key": "Rod of Divine Light",
+      "set": {
+        "name_eng": "Rod of Divine Light",
+        "name_de": "Stab des göttlichen Lichts",
+        "description_de": "Ein heiliger Stab, durchdrungen von Auroras Licht. Einst ein Zeichen für Hoffnung und Erlösung gegen die Mächte der Dunkelheit.",
+        "description_eng": "A sacred staff imbued with Aurora’s light. Once a symbol of hope and salvation against the forces of darkness."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae0",
+      "key": "Rod of Ethernal Life",
+      "set": {
+        "name_eng": "Rod of Eternal Life",
+        "name_de": "Stab des ewigen Lebens",
+        "description_eng": "A mystical staff said to grant eternal life to its wielder, its ancient power sustaining life beyond the bounds of mortal flesh. It was sought by those who sought to defy death itself and to ascend to immortality.",
+        "description_de": "Ein mystischer Stab, der seinem Träger ewiges Leben verleihen soll. Seine uralte Macht erhält das Leben über die Grenzen des sterblichen Fleisches hinaus. Begehrt war er bei jenen, die dem Tod selbst trotzen und zur Unsterblichkeit aufsteigen wollten."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae1",
+      "key": "Soul Eater",
+      "set": {
+        "name_eng": "Soul Eater",
+        "name_de": "Seelenverschlinger",
+        "description_eng": "A staff of dark magic that consumed the life force of its victims, granting its wielder untold power. It was feared for its ability to drain the souls of the living and to fuel the dark ambitions of its master.",
+        "description_de": "Ein Stab dunkler Magie, der die Lebenskraft seiner Opfer verzehrte und seinem Träger unermessliche Macht verlieh. Gefürchtet war er dafür, die Seelen der Lebenden auszusaugen und die finsteren Ziele seines Meisters zu nähren."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae2",
+      "key": "Splinter Granat",
+      "set": {
+        "name_eng": "Splinter Garnet",
+        "name_de": "Granatsplitter",
+        "description_eng": "Increases vitality by +2.",
+        "description_de": "Erhöht Vitalität um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae3",
+      "key": "Splinter Saphir",
+      "set": {
+        "name_eng": "Splinter Sapphire",
+        "name_de": "Saphirsplitter",
+        "description_eng": "Increases intelligence by +2.",
+        "description_de": "Erhöht Intelligenz um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae4",
+      "key": "Splinter Amethyst",
+      "set": {
+        "name_eng": "Splinter Amethyst",
+        "name_de": "Amethystsplitter",
+        "description_eng": "Increases Wisdom by +2.",
+        "description_de": "Erhöht Willenskraft um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae5",
+      "key": "Splinter Jade",
+      "set": {
+        "name_eng": "Splinter Jade",
+        "name_de": "Jadesplitter",
+        "description_eng": "Increases Faith by +2.",
+        "description_de": "Erhöht Faith um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae6",
+      "key": "Splinter Achat",
+      "set": {
+        "name_eng": "Splinter Agate",
+        "name_de": "Achatsplitter",
+        "description_eng": "Increases Luck by +2.",
+        "description_de": "Erhöht Glück um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae7",
+      "key": "Splinter Onyx",
+      "set": {
+        "name_eng": "Splinter Onyx",
+        "name_de": "Onyxsplitter",
+        "description_eng": "Increases Victim by +2.",
+        "description_de": "Erhöht Victim um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae8",
+      "key": "Splinter Turmalin",
+      "set": {
+        "name_eng": "Splinter Tourmaline",
+        "name_de": "Turmalinsplitter",
+        "description_eng": "Increases Dexterity by +2.",
+        "description_de": "Erhöht Geschick um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04ae9",
+      "key": "Splinter Opal",
+      "set": {
+        "name_eng": "Splinter Opal",
+        "name_de": "Opalsplitter",
+        "description_de": "Erhöht Agilität um 2.",
+        "description_eng": "Increases Agility by +2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aea",
+      "key": "Splinter Labradorit",
+      "set": {
+        "name_eng": "Splinter Labradorite",
+        "name_de": "Labradoritsplitter",
+        "description_eng": "Increases Ambush by +2.",
+        "description_de": "Erhöht Ambush um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aeb",
+      "key": "Splinter Jaspis",
+      "set": {
+        "name_eng": "Splinter Jasper",
+        "name_de": "Jaspissplitter",
+        "description_eng": "Increases Strength by +2.",
+        "description_de": "Erhöht Stärke um 2."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aec",
+      "key": "Fragment Granat",
+      "set": {
+        "name_eng": "Fragment Garnet",
+        "name_de": "Granatfragment",
+        "description_eng": "Increases vitality by +4.",
+        "description_de": "Erhöht Vitalität um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aed",
+      "key": "Fragment Saphir",
+      "set": {
+        "name_eng": "Fragment Sapphire",
+        "name_de": "Saphirfragment",
+        "description_eng": "Increases intelligence by +4.",
+        "description_de": "Erhöht Intelligenz um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aee",
+      "key": "Fragment Amethyst",
+      "set": {
+        "name_eng": "Fragment Amethyst",
+        "name_de": "Amethystfragment",
+        "description_eng": "Increases Wisdom by +4.",
+        "description_de": "Erhöht Willenskraft um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aef",
+      "key": "Fragment Jade",
+      "set": {
+        "name_eng": "Fragment Jade",
+        "name_de": "Jadefragment",
+        "description_eng": "Increases Faith by +4.",
+        "description_de": "Erhöht Faith um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af0",
+      "key": "Fragment Achat",
+      "set": {
+        "name_eng": "Fragment Agate",
+        "name_de": "Achatfragment",
+        "description_eng": "Increases Luck by +4.",
+        "description_de": "Erhöht Glück um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af1",
+      "key": "Fragment Onyx",
+      "set": {
+        "name_eng": "Fragment Onyx",
+        "name_de": "Onyxfragment",
+        "description_eng": "Increases Victim by +4.",
+        "description_de": "Erhöht Victim um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af2",
+      "key": "Fragment Turmalin",
+      "set": {
+        "name_eng": "Fragment Tourmaline",
+        "name_de": "Turmalinfragment",
+        "description_eng": "Increases Dexterity by +4.",
+        "description_de": "Erhöht Geschick um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af3",
+      "key": "Fragment Opal",
+      "set": {
+        "name_eng": "Fragment Opal",
+        "name_de": "Opalfragment",
+        "description_de": "Erhöht Agilität um 4.",
+        "description_eng": "Increases Agility by +4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af4",
+      "key": "Fragment Labradorit",
+      "set": {
+        "name_eng": "Fragment Labradorite",
+        "name_de": "Labradoritfragment",
+        "description_eng": "Increases Ambush by +4.",
+        "description_de": "Erhöht Ambush um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af5",
+      "key": "Fragment Jaspis",
+      "set": {
+        "name_eng": "Fragment Jasper",
+        "name_de": "Jaspisfragment",
+        "description_eng": "Increases Strength by +4.",
+        "description_de": "Erhöht Stärke um 4."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af6",
+      "key": "Refined Fragment Granat",
+      "set": {
+        "name_eng": "Refined Fragment Garnet",
+        "name_de": "Veredeltes Granatfragment",
+        "description_eng": "Increases vitality by +8.",
+        "description_de": "Erhöht Vitalität um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af7",
+      "key": "Refined Fragment Saphir",
+      "set": {
+        "name_eng": "Refined Fragment Sapphire",
+        "name_de": "Veredeltes Saphirfragment",
+        "description_eng": "Increases intelligence by +8.",
+        "description_de": "Erhöht Intelligenz um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af8",
+      "key": "Refined Fragment Amethyst",
+      "set": {
+        "name_eng": "Refined Fragment Amethyst",
+        "name_de": "Veredeltes Amethystfragment",
+        "description_eng": "Increases Wisdom by +8.",
+        "description_de": "Erhöht Willenskraft um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04af9",
+      "key": "Refined Fragment Jade",
+      "set": {
+        "name_eng": "Refined Fragment Jade",
+        "name_de": "Veredeltes Jadefragment",
+        "description_eng": "Increases Faith by +8.",
+        "description_de": "Erhöht Faith um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04afa",
+      "key": "Refined Fragment Achat",
+      "set": {
+        "name_eng": "Refined Fragment Agate",
+        "name_de": "Veredeltes Achatfragment",
+        "description_eng": "Increases Luck by +6.",
+        "description_de": "Erhöht Glück um 6."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04afb",
+      "key": "Refined Fragment Onyx",
+      "set": {
+        "name_eng": "Refined Fragment Onyx",
+        "name_de": "Veredeltes Onyxfragment",
+        "description_eng": "Increases Victim by +8.",
+        "description_de": "Erhöht Victim um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04afc",
+      "key": "Refined Fragment Turmalin",
+      "set": {
+        "name_eng": "Refined Fragment Tourmaline",
+        "name_de": "Veredeltes Turmalinfragment",
+        "description_eng": "Increases Dexterity by +8.",
+        "description_de": "Erhöht Geschick um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04afd",
+      "key": "Refined Fragment Opal",
+      "set": {
+        "name_eng": "Refined Fragment Opal",
+        "name_de": "Veredeltes Opalfragment",
+        "description_de": "Erhöht Agilität um 8.",
+        "description_eng": "Increases Agility by +8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04afe",
+      "key": "Refined Fragment Labradorit",
+      "set": {
+        "name_eng": "Refined Fragment Labradorite",
+        "name_de": "Veredeltes Labradoritfragment",
+        "description_eng": "Increases Ambush by +8.",
+        "description_de": "Erhöht Ambush um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04aff",
+      "key": "Refined Fragment Jaspis",
+      "set": {
+        "name_eng": "Refined Fragment Jasper",
+        "name_de": "Veredeltes Jaspisfragment",
+        "description_eng": "Increases Strength by +8.",
+        "description_de": "Erhöht Stärke um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b00",
+      "key": "Ignoble Granat",
+      "set": {
+        "name_eng": "Ignoble Garnet",
+        "name_de": "Unedler Granat",
+        "description_eng": "Increases vitality by +10.",
+        "description_de": "Erhöht Vitalität um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b01",
+      "key": "Ignoble Saphir",
+      "set": {
+        "name_eng": "Ignoble Sapphire",
+        "name_de": "Unedler Saphir",
+        "description_eng": "Increases intelligence by +10.",
+        "description_de": "Erhöht Intelligenz um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b02",
+      "key": "Ignoble Amethyst",
+      "set": {
+        "name_eng": "Ignoble Amethyst",
+        "name_de": "Unedler Amethyst",
+        "description_eng": "Increases Wisdom by +10.",
+        "description_de": "Erhöht Willenskraft um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b03",
+      "key": "Ignoble Jade",
+      "set": {
+        "name_eng": "Ignoble Jade",
+        "name_de": "Unedle Jade",
+        "description_eng": "Increases Faith by +10.",
+        "description_de": "Erhöht Faith um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b04",
+      "key": "Ignoble Achat",
+      "set": {
+        "name_eng": "Ignoble Agate",
+        "name_de": "Unedler Achat",
+        "description_eng": "Increases Luck by +8.",
+        "description_de": "Erhöht Glück um 8."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b05",
+      "key": "Ignoble Onyx",
+      "set": {
+        "name_eng": "Ignoble Onyx",
+        "name_de": "Unedler Onyx",
+        "description_eng": "Increases Victim by +10.",
+        "description_de": "Erhöht Victim um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b06",
+      "key": "Ignoble Turmalin",
+      "set": {
+        "name_eng": "Ignoble Tourmaline",
+        "name_de": "Unedler Turmalin",
+        "description_eng": "Increases Dexterity by +10.",
+        "description_de": "Erhöht Geschick um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b07",
+      "key": "Ignoble Opal",
+      "set": {
+        "name_eng": "Ignoble Opal",
+        "name_de": "Unedler Opal",
+        "description_de": "Erhöht Agilität um 10.",
+        "description_eng": "Increases Agility by +10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b08",
+      "key": "Ignoble Labradorit",
+      "set": {
+        "name_eng": "Ignoble Labradorite",
+        "name_de": "Unedler Labradorit",
+        "description_eng": "Increases Ambush by +10.",
+        "description_de": "Erhöht Ambush um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b09",
+      "key": "Ignoble Jaspis",
+      "set": {
+        "name_eng": "Ignoble Jasper",
+        "name_de": "Unedler Jaspis",
+        "description_eng": "Increases Strength by +10.",
+        "description_de": "Erhöht Stärke um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b0a",
+      "key": "Refined Granat",
+      "set": {
+        "name_eng": "Refined Garnet",
+        "name_de": "Veredelter Granat",
+        "description_eng": "Increases vitality by +20.",
+        "description_de": "Erhöht Vitalität um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b0b",
+      "key": "Refined Saphir",
+      "set": {
+        "name_eng": "Refined Sapphire",
+        "name_de": "Veredelter Saphir",
+        "description_eng": "Increases intelligence by +20.",
+        "description_de": "Erhöht Intelligenz um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b0c",
+      "key": "Refined Amethyst",
+      "set": {
+        "name_eng": "Refined Amethyst",
+        "name_de": "Veredelter Amethyst",
+        "description_eng": "Increases Wisdom by +20.",
+        "description_de": "Erhöht Willenskraft um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b0d",
+      "key": "Refined Jade",
+      "set": {
+        "name_eng": "Refined Jade",
+        "name_de": "Veredelte Jade",
+        "description_eng": "Increases Faith by +20.",
+        "description_de": "Erhöht Faith um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b0e",
+      "key": "Refined Achat",
+      "set": {
+        "name_eng": "Refined Agate",
+        "name_de": "Veredelter Achat",
+        "description_eng": "Increases Luck by +10.",
+        "description_de": "Erhöht Glück um 10."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b0f",
+      "key": "Refined Onyx",
+      "set": {
+        "name_eng": "Refined Onyx",
+        "name_de": "Veredelter Onyx",
+        "description_eng": "Increases Victim by +20.",
+        "description_de": "Erhöht Victim um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b10",
+      "key": "Refined Turmalin",
+      "set": {
+        "name_eng": "Refined Tourmaline",
+        "name_de": "Veredelter Turmalin",
+        "description_eng": "Increases Dexterity by +20.",
+        "description_de": "Erhöht Geschick um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b11",
+      "key": "Refined Opal",
+      "set": {
+        "name_eng": "Refined Opal",
+        "name_de": "Veredelter Opal",
+        "description_de": "Erhöht Agilität um 20.",
+        "description_eng": "Increases Agility by +20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b12",
+      "key": "Refined Labradorit",
+      "set": {
+        "name_eng": "Refined Labradorite",
+        "name_de": "Veredelter Labradorit",
+        "description_eng": "Increases Ambush by +20.",
+        "description_de": "Erhöht Ambush um 20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b13",
+      "key": "Refined Jaspis",
+      "set": {
+        "name_eng": "Refined Jasper",
+        "name_de": "Veredelter Jaspis",
+        "description_de": "Erhöht Stärke um 20.",
+        "description_eng": "Increases Strength by +20."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b14",
+      "key": "Blessed Granat",
+      "set": {
+        "name_eng": "Blessed Garnet",
+        "name_de": "Gesegneter Granat",
+        "description_eng": "Increases vitality by +30.",
+        "description_de": "Erhöht Vitalität um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b15",
+      "key": "Blessed Saphir",
+      "set": {
+        "name_eng": "Blessed Sapphire",
+        "name_de": "Gesegneter Saphir",
+        "description_eng": "Increases intelligence by +30.",
+        "description_de": "Erhöht Intelligenz um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b16",
+      "key": "Blessed Amethyst",
+      "set": {
+        "name_eng": "Blessed Amethyst",
+        "name_de": "Gesegneter Amethyst",
+        "description_eng": "Increases Wisdom by +30.",
+        "description_de": "Erhöht Willenskraft um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b17",
+      "key": "Blessed Jade",
+      "set": {
+        "name_eng": "Blessed Jade",
+        "name_de": "Gesegnete Jade",
+        "description_eng": "Increases Faith by +30.",
+        "description_de": "Erhöht Faith um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b18",
+      "key": "Blessed Achat",
+      "set": {
+        "name_eng": "Blessed Agate",
+        "name_de": "Gesegneter Achat",
+        "description_eng": "Increases Luck by +15.",
+        "description_de": "Erhöht Glück um 15."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b19",
+      "key": "Blessed Onyx",
+      "set": {
+        "name_eng": "Blessed Onyx",
+        "name_de": "Gesegneter Onyx",
+        "description_eng": "Increases Victim by +30.",
+        "description_de": "Erhöht Victim um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b1a",
+      "key": "Blessed Turmalin",
+      "set": {
+        "name_eng": "Blessed Tourmaline",
+        "name_de": "Gesegneter Turmalin",
+        "description_eng": "Increases Dexterity by +30.",
+        "description_de": "Erhöht Geschick um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b1b",
+      "key": "Blessed Opal",
+      "set": {
+        "name_eng": "Blessed Opal",
+        "name_de": "Gesegneter Opal",
+        "description_de": "Erhöht Agilität um 30.",
+        "description_eng": "Increases Agility by +30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b1c",
+      "key": "Blessed Labradorit",
+      "set": {
+        "name_eng": "Blessed Labradorite",
+        "name_de": "Gesegneter Labradorit",
+        "description_eng": "Increases Ambush by +30.",
+        "description_de": "Erhöht Ambush um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b1d",
+      "key": "Blessed Jaspis",
+      "set": {
+        "name_eng": "Blessed Jasper",
+        "name_de": "Gesegneter Jaspis",
+        "description_eng": "Increases strength by +30.",
+        "description_de": "Erhöht Stärke um 30."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b1e",
+      "key": "Granat",
+      "set": {
+        "name_eng": "Garnet",
+        "name_de": "Granat",
+        "description_eng": "The strong red color of the garnet symbolizes vitality and energy. Increases vitality by 5%.",
+        "description_de": "Das kräftige Rot des Granats steht für Vitalität und Energie. Erhöht Vitalität um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b1f",
+      "key": "Saphir",
+      "set": {
+        "name_eng": "Sapphire",
+        "name_de": "Saphir",
+        "description_eng": "The deep, clear color of sapphire symbolizes intelligence and knowledge. Increases intelligence by 5%.",
+        "description_de": "Das tiefe, klare Blau des Saphirs steht für Intelligenz und Wissen. Erhöht Intelligenz um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b20",
+      "key": "Amethyst",
+      "set": {
+        "name_eng": "Amethyst",
+        "name_de": "Amethyst",
+        "description_eng": "The violet color of amethyst stands for spiritual wisdom. Increases wisdom by 5%.",
+        "description_de": "Das Violett des Amethysts steht für geistige Weisheit. Erhöht Willenskraft um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b21",
+      "key": "Jade",
+      "set": {
+        "name_eng": "Jade",
+        "name_de": "Jade",
+        "description_eng": "The delicate green color of jade stands for good nature and harmony. Increases faith by 5%.",
+        "description_de": "Das zarte Grün der Jade steht für Gutmütigkeit und Harmonie. Erhöht Faith um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b22",
+      "key": "Achat",
+      "set": {
+        "name_eng": "Agate",
+        "name_de": "Achat",
+        "description_eng": "Agate stands for happiness and balance. Increases luck by 5%.",
+        "description_de": "Achat steht für Glück und Ausgeglichenheit. Erhöht Glück um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b23",
+      "key": "Onyx",
+      "set": {
+        "name_eng": "Onyx",
+        "name_de": "Onyx",
+        "description_eng": "The deep black color of onyx holds mysterious powers and has always been used to strengthen dark magic. Increases Victim by 5%.",
+        "description_de": "Das tiefe Schwarz des Onyx birgt geheimnisvolle Kräfte und wird seit jeher zur Stärkung dunkler Magie genutzt. Erhöht Victim um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b24",
+      "key": "Turmalin",
+      "set": {
+        "name_eng": "Tourmaline",
+        "name_de": "Turmalin",
+        "description_eng": "The variety of colors in tourmaline stands for dexterity. Increases dexterity by 5%.",
+        "description_de": "Die Farbenvielfalt des Turmalins steht für Geschick. Erhöht Geschick um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b25",
+      "key": "Opal",
+      "set": {
+        "name_eng": "Opal",
+        "name_de": "Opal",
+        "description_eng": "The shimmering play of colors in opal represents elegance and agility. Increases agility by 5%.",
+        "description_de": "Das schimmernde Farbenspiel des Opals steht für Eleganz und Beweglichkeit. Erhöht Agilität um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b26",
+      "key": "Labradorit",
+      "set": {
+        "name_eng": "Labradorite",
+        "name_de": "Labradorit",
+        "description_eng": "Labradorite stands for seeing through illusions. Increases ambush by 5%.",
+        "description_de": "Labradorit steht für das Durchschauen von Illusionen. Erhöht Ambush um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b27",
+      "key": "Jaspis",
+      "set": {
+        "name_eng": "Jasper",
+        "name_de": "Jaspis",
+        "description_eng": "Orange red jasper stands for strength, endurance and power. Increases strength by 5%.",
+        "description_de": "Orangeroter Jaspis steht für Stärke, Ausdauer und Kraft. Erhöht Stärke um 5 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b28",
+      "key": "Lifesaver Potion",
+      "set": {
+        "name_eng": "Lifesaver Potion",
+        "name_de": "Lebensrettertrank",
+        "description_eng": "Is increase your current health by 50",
+        "description_de": "Erhöht dein aktuelles Leben um 50."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b29",
+      "key": "Small Heal Potion",
+      "set": {
+        "name_eng": "Small Heal Potion",
+        "name_de": "Kleiner Heiltrank",
+        "description_eng": "Is increase your current health by 100",
+        "description_de": "Erhöht dein aktuelles Leben um 100."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b2a",
+      "key": "Medium Heal Potion",
+      "set": {
+        "name_eng": "Medium Heal Potion",
+        "name_de": "Mittlerer Heiltrank",
+        "description_eng": "Is increase your current health by 200",
+        "description_de": "Erhöht dein aktuelles Leben um 200."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b2b",
+      "key": "Big Heal Potion",
+      "set": {
+        "name_eng": "Big Heal Potion",
+        "name_de": "Großer Heiltrank",
+        "description_eng": "Is increase your current health by 500",
+        "description_de": "Erhöht dein aktuelles Leben um 500."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b2c",
+      "key": "Small Brew of the Shamane",
+      "set": {
+        "name_eng": "Small Shaman's Brew",
+        "name_de": "Kleines Schamanengebräu",
+        "description_eng": "Is increase your current health by 8%",
+        "description_de": "Erhöht dein aktuelles Leben um 8 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b2d",
+      "key": "Medium Brew of the Shamane",
+      "set": {
+        "name_eng": "Medium Brew of the Shamane",
+        "name_de": "Mittleres Schamanengebräu",
+        "description_eng": "Is increase your current health by 12%",
+        "description_de": "Erhöht dein aktuelles Leben um 12 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b2e",
+      "key": "Big Brew of the Shamane",
+      "set": {
+        "name_eng": "Big Brew of the Shamane",
+        "name_de": "Großes Schamanengebräu",
+        "description_eng": "Is increase your current health by 15%",
+        "description_de": "Erhöht dein aktuelles Leben um 15 %."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b2f",
+      "key": "Small Mana Potion",
+      "set": {
+        "name_eng": "Small Mana Potion",
+        "name_de": "Kleiner Manatrank",
+        "description_eng": "Is increase your current mana by 100",
+        "description_de": "Erhöht dein aktuelles Mana um 100."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b30",
+      "key": "Medium Mana Potion",
+      "set": {
+        "name_eng": "Medium Mana Potion",
+        "name_de": "Mittlerer Manatrank",
+        "description_eng": "Is increase your current mana by 200",
+        "description_de": "Erhöht dein aktuelles Mana um 200."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b31",
+      "key": "Big Mana Potion",
+      "set": {
+        "name_eng": "Big Mana Potion",
+        "name_de": "Großer Manatrank",
+        "description_eng": "Is increase your current mana by 500",
+        "description_de": "Erhöht dein aktuelles Mana um 500."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b32",
+      "key": "Rebirth scroll",
+      "set": {
+        "name_eng": "Rebirth scroll",
+        "name_de": "Schriftrolle der Wiedergeburt",
+        "description_eng": "Read the Scroll to res a Teammate with some lifepoints.",
+        "description_de": "Lies die Schriftrolle, um ein Gruppenmitglied mit etwas Leben wiederzubeleben."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b33",
+      "key": "Regenium Flower",
+      "set": {
+        "name_eng": "Regenium Flower",
+        "name_de": "Regeniumblüte",
+        "description_eng": "This magical blossom will help you restore your powers.",
+        "description_de": "Diese magische Blüte hilft dir, deine Kräfte wiederherzustellen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b34",
+      "key": "Resin",
+      "set": {
+        "name_eng": "Resin",
+        "name_de": "Harz",
+        "description_eng": "Resin is a natural glue that is used in many recipes",
+        "description_de": "Harz ist ein natürlicher Klebstoff, der in vielen Rezepten verwendet wird."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b35",
+      "key": "White Crystal",
+      "set": {
+        "name_eng": "White Crystal",
+        "name_de": "Weißer Kristall",
+        "description_eng": "A pristine crystal with purifying properties, often used in spells of light and protection.",
+        "description_de": "Ein makelloser Kristall mit reinigenden Eigenschaften, der häufig für Licht- und Schutzzauber verwendet wird."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b36",
+      "key": "Blue Crystal",
+      "set": {
+        "name_eng": "Blue Crystal",
+        "name_de": "Blauer Kristall",
+        "description_eng": "A shimmering crystal imbued with arcane energy, favored for enchantments related to water and ice magic.",
+        "description_de": "Ein schimmernder, von arkaner Energie erfüllter Kristall, der für Verzauberungen der Wasser- und Eismagie geschätzt wird."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b37",
+      "key": "Quarz",
+      "set": {
+        "name_eng": "Quarz",
+        "name_de": "Quarz",
+        "description_eng": "Quarz is known to increase the magical output.",
+        "description_de": "Quarz ist dafür bekannt, die magische Leistung zu erhöhen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b38",
+      "key": "Basalt Quarz",
+      "set": {
+        "name_eng": "Basalt Quarz",
+        "name_de": "Basaltquarz",
+        "description_eng": "Baslat Quartz is known to store powerful magic. It could be useful for reinforcements.",
+        "description_de": "Basaltquarz ist dafür bekannt, mächtige Magie zu speichern. Er könnte für Verstärkungen nützlich sein."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b39",
+      "key": "Obsidian",
+      "set": {
+        "name_eng": "Obsidian",
+        "name_de": "Obsidian",
+        "description_eng": "It sounds like this would be the ideal building material for weapons and armor.",
+        "description_de": "Dies scheint ein idealer Werkstoff für Waffen und Rüstungen zu sein."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b3a",
+      "key": "Duskbloom",
+      "set": {
+        "name_eng": "Duskbloom",
+        "name_de": "Dämmerblüte",
+        "description_eng": "A rare flower that blooms only at twilight, its petals hold potent magic ideal for dusk-themed spells and potions.",
+        "description_de": "Eine seltene Blume, die nur im Zwielicht blüht. Ihre Blütenblätter bergen mächtige Magie und eignen sich besonders für Zauber und Tränke der Dämmerung."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b3b",
+      "key": "Dawn Petal",
+      "set": {
+        "name_eng": "Dawn Petal",
+        "name_de": "Morgenblüte",
+        "description_eng": "A delicate flower that blossoms at dawn, emitting a soothing aura used in spells of rejuvenation and vitality.",
+        "description_de": "Eine zarte Blume, die im Morgengrauen erblüht und eine beruhigende Aura verströmt. Sie wird für Zauber der Erneuerung und Lebenskraft verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b3c",
+      "key": "Ghost Rose",
+      "set": {
+        "name_eng": "Ghost Rose",
+        "name_de": "Geisterrose",
+        "description_eng": "A hauntingly beautiful flower with ethereal petals, prized for its connection to the spirit realm and necromantic rituals.",
+        "description_de": "Eine unheimlich schöne Blume mit ätherischen Blütenblättern, geschätzt für ihre Verbindung zur Geisterwelt und zu nekromantischen Ritualen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b3d",
+      "key": "Ghost Rose Extract",
+      "set": {
+        "name_eng": "Ghost Rose Extract",
+        "name_de": "Geisterrosenextrakt",
+        "description_eng": "A concentrated essence derived from ghost roses, potent in spells involving spectral energies and communing with the dead.",
+        "description_de": "Eine konzentrierte Essenz aus Geisterrosen, die bei Zaubern mit geisterhaften Energien und beim Kontakt mit den Toten besonders wirksam ist."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b3e",
+      "key": "Copper Ore",
+      "set": {
+        "name_eng": "Copper Ore",
+        "name_de": "Kupfererz",
+        "description_eng": "Raw ore containing copper, essential for crafting tools and conducting elemental magic.",
+        "description_de": "Rohes kupferhaltiges Erz, unerlässlich zur Herstellung von Werkzeugen und zur Leitung elementarer Magie."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b3f",
+      "key": "Copper",
+      "set": {
+        "name_eng": "Copper",
+        "name_de": "Kupfer",
+        "description_eng": "Refined copper metal, malleable and conductive, used in alchemy, enchantments, and creating magical artifacts.",
+        "description_de": "Raffiniertes Kupfer ist formbar und leitfähig. Es wird in Alchemie und Verzauberungen sowie zur Herstellung magischer Artefakte verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b40",
+      "key": "Silver Ore",
+      "set": {
+        "name_eng": "Silver Ore",
+        "name_de": "Silbererz",
+        "description_eng": "Ore rich in silver, highly sought after for its purity and resonance with lunar magic.",
+        "description_de": "Silberreiches Erz, begehrt für seine Reinheit und seinen Einklang mit der Mondmagie."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b41",
+      "key": "Silver",
+      "set": {
+        "name_eng": "Silver",
+        "name_de": "Silber",
+        "description_eng": "Purified silver metal, renowned for its ability to repel evil spirits and enhance spells of divination and lunar magic.",
+        "description_de": "Gereinigtes Silber ist dafür bekannt, böse Geister abzuwehren und Wahrsagezauber sowie Mondmagie zu verstärken."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b42",
+      "key": "Iron Ore",
+      "set": {
+        "name_eng": "Iron Ore",
+        "name_de": "Eisenerz",
+        "description_eng": "Raw ore containing iron, fundamental for forging weapons, armor, and talismans of strength and resilience.",
+        "description_de": "Rohes eisenhaltiges Erz, grundlegend zum Schmieden von Waffen, Rüstungen und Talismanen der Stärke und Widerstandskraft."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b43",
+      "key": "Iron",
+      "set": {
+        "name_eng": "Iron",
+        "name_de": "Eisen",
+        "description_eng": "Strong and durable iron metal, commonly utilized in spells of protection, grounding, and fortification.",
+        "description_de": "Ein festes, haltbares Metall, das häufig für Schutz-, Erdungs- und Festigungszauber verwendet wird."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b44",
+      "key": "Shadow Iron",
+      "set": {
+        "name_eng": "Shadow Iron",
+        "name_de": "Schatteneisen",
+        "description_eng": "Rare and mysterious iron alloy infused with shadow essence, prized for its affinity with dark magic and curses.",
+        "description_de": "Eine seltene, geheimnisvolle Eisenlegierung, erfüllt von Schattenessenz und geschätzt für ihre Verbindung zu dunkler Magie und Flüchen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b45",
+      "key": "Crystallized Shadow Iron",
+      "set": {
+        "name_eng": "Crystallized Shadow Iron",
+        "name_de": "Kristallisiertes Schatteneisen",
+        "description_eng": "An advanced form of Shadow Iron, where shadowy material is fused with magically stabilized crystals. This alloy could offer both the benefits of shadow resistance and additional magical abilities conferred by the crystals.",
+        "description_de": "Eine weiterentwickelte Form des Schatteneisens, bei der Schattenmaterial mit magisch stabilisierten Kristallen verbunden wird. Die Legierung könnte sowohl Schattenresistenz als auch zusätzliche, von den Kristallen verliehene magische Fähigkeiten bieten."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b46",
+      "key": "Elven Stee",
+      "set": {
+        "name_eng": "Elven Steel",
+        "name_de": "Elfenstahl",
+        "description_eng": "An alloy of traditional steel and elven mithril. Elven steel could be used for swift, precise weapons or lightweight armor preferred by elves and other agile classes.",
+        "description_de": "Eine Legierung aus herkömmlichem Stahl und elfischem Mithril. Elfenstahl könnte für schnelle, präzise Waffen oder leichte Rüstungen verwendet werden, wie sie Elfen und andere bewegliche Klassen bevorzugen."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b47",
+      "key": "Darksteel",
+      "set": {
+        "name_eng": "Darksteel",
+        "name_de": "Dunkelstahl",
+        "description_eng": "A metal originating from the depths of the underworld. Darksteel could be used for gloomy yet powerful weapons and armor associated with dark forces.",
+        "description_de": "Ein Metall aus den Tiefen der Unterwelt. Dunkelstahl könnte für düstere, aber mächtige Waffen und Rüstungen verwendet werden, die mit dunklen Kräften verbunden sind."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b48",
+      "key": "Oak Wood",
+      "set": {
+        "name_eng": "Oak Wood",
+        "name_de": "Eichenholz"
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b49",
+      "key": "Darkwood",
+      "set": {
+        "name_eng": "Darkwood",
+        "name_de": "Dunkelholz"
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b4a",
+      "key": "Weidenbaum",
+      "set": {
+        "name_eng": "Willow Tree",
+        "name_de": "Weidenbaum"
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b4b",
+      "key": "Healing Herb",
+      "set": {
+        "name_eng": "Healing Herb",
+        "name_de": "Heilkraut",
+        "description_eng": "A potent herb with soothing and mending qualities, employed in poultices, salves, and elixirs for healing wounds and ailments.",
+        "description_de": "Ein wirksames Kraut mit lindernden und heilenden Eigenschaften, das in Umschlägen, Salben und Elixieren zur Behandlung von Wunden und Beschwerden verwendet wird."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b4c",
+      "key": "Mandrake Root",
+      "set": {
+        "name_eng": "Mandrake Root",
+        "name_de": "Alraunenwurzel",
+        "description_eng": "The twisted root of the mandrake plant, possessing potent magical properties often used in rituals of fertility, protection, and enchantment.",
+        "description_de": "Die gewundene Wurzel der Alraune besitzt starke magische Eigenschaften und wird häufig in Ritualen der Fruchtbarkeit, des Schutzes und der Verzauberung verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b4d",
+      "key": "Blood Thistle",
+      "set": {
+        "name_eng": "Blood Thistle",
+        "name_de": "Blutdistel",
+        "description_eng": "A thorny herb with crimson blooms, its essence is often employed in spells and potions to enhance vitality and vigor.",
+        "description_de": "Ein stacheliges Kraut mit tiefroten Blüten. Seine Essenz wird häufig in Zaubern und Tränken verwendet, um Lebenskraft und Vitalität zu stärken."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b4e",
+      "key": "Shadow Herb",
+      "set": {
+        "name_eng": "Shadow Herb",
+        "name_de": "Schattenkraut",
+        "description_eng": "A rare herb that thrives in the darkest corners of the world, its essence is used in spells of stealth, subterfuge, and shadow manipulation.",
+        "description_de": "Ein seltenes Kraut, das in den dunkelsten Winkeln der Welt gedeiht. Seine Essenz wird in Zaubern der Heimlichkeit, Täuschung und Schattenmanipulation verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b4f",
+      "key": "Shadow Lily",
+      "set": {
+        "name_eng": "Shadow Lily",
+        "name_de": "Schattenlilie",
+        "description_eng": "A black lily that blooms in the depths of night, its petals hold potent magic, often used in rituals of darkness and mystery.",
+        "description_de": "Eine schwarze Lilie, die in tiefster Nacht erblüht. Ihre Blütenblätter bergen mächtige Magie und werden häufig in Ritualen der Dunkelheit und des Geheimnisvollen verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b50",
+      "key": "Snowdrop",
+      "set": {
+        "name_eng": "Snowdrop",
+        "name_de": "Schneeglöckchen",
+        "description_eng": "Delicate white flowers that herald the arrival of spring, their essence is imbued with purity and renewal, used in spells of rebirth and purification.",
+        "description_de": "Zarte weiße Blumen, die den Frühling ankündigen. Ihre von Reinheit und Erneuerung erfüllte Essenz wird in Zaubern der Wiedergeburt und Läuterung verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b51",
+      "key": "Dragon's Tooth",
+      "set": {
+        "name_eng": "Dragon's Tooth",
+        "name_de": "Drachenzahn",
+        "description_eng": "Sharp and formidable, a dragon's tooth is imbued with the essence of fire and strength, often used in forging powerful weapons and artifacts.",
+        "description_de": "Ein scharfer, eindrucksvoller Drachenzahn, erfüllt von der Essenz des Feuers und der Stärke. Er wird häufig beim Schmieden mächtiger Waffen und Artefakte verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b52",
+      "key": "Lizard Scales",
+      "set": {
+        "name_eng": "Lizard Scales",
+        "name_de": "Echsenschuppen",
+        "description_eng": "Scales shed by mystical reptiles, these iridescent scales possess magical properties, sought after for their protective and transformative qualities.",
+        "description_de": "Von mystischen Reptilien abgestreifte, schillernde Schuppen mit magischen Eigenschaften, begehrt für ihre schützenden und verwandelnden Kräfte."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b53",
+      "key": "Phoenix Feath",
+      "set": {
+        "name_eng": "Phoenix Feather",
+        "name_de": "Phönixfeder",
+        "description_eng": "Feathers shed by the legendary phoenix, they carry the essence of rebirth and flame, often used in spells of resurrection and immortality.",
+        "description_de": "Von dem legendären Phönix abgestreifte Federn tragen die Essenz von Wiedergeburt und Flamme in sich. Sie werden häufig für Zauber der Auferstehung und Unsterblichkeit verwendet."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b54",
+      "key": "Wolf",
+      "set": {
+        "name_eng": "Wolf",
+        "name_de": "Wolf",
+        "description_eng": "This is an ordinary blank card, you can use it to tame a Wolf.",
+        "description_de": "Eine gewöhnliche leere Karte, mit der du die Kreatur „Wolf“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b55",
+      "key": "Falcon",
+      "set": {
+        "name_eng": "Falcon",
+        "name_de": "Falke",
+        "description_eng": "This is an ordinary blank card, you can use it to tame a Falcon.",
+        "description_de": "Eine gewöhnliche leere Karte, mit der du die Kreatur „Falke“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b56",
+      "key": "Boarman",
+      "set": {
+        "name_eng": "Boarman",
+        "name_de": "Ebermensch",
+        "description_eng": "This is an ordinary blank card, you can use it to tame a Boarman.",
+        "description_de": "Eine gewöhnliche leere Karte, mit der du die Kreatur „Ebermensch“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b57",
+      "key": "Imp",
+      "set": {
+        "name_eng": "Imp",
+        "name_de": "Imp",
+        "description_eng": "This is an ordinary blank card, you can use it to tame a Imp.",
+        "description_de": "Eine gewöhnliche leere Karte, mit der du die Kreatur „Imp“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b58",
+      "key": "Direwolf",
+      "set": {
+        "name_eng": "Direwolf",
+        "name_de": "Schreckenswolf",
+        "description_eng": "This is an unusual blank card, you can use it to tame a direwolf.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Schreckenswolf“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b59",
+      "key": "Griffin",
+      "set": {
+        "name_eng": "Griffin",
+        "name_de": "Greif",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Griffin.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Greif“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b5a",
+      "key": "Blue Pixi",
+      "set": {
+        "name_eng": "Blue Pixi",
+        "name_de": "Blaue Pixie",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Blue Pixi.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Blaue Pixie“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b5b",
+      "key": "Red Pixi",
+      "set": {
+        "name_eng": "Red Pixi",
+        "name_de": "Rote Pixie",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Red Pixi.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Rote Pixie“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b5c",
+      "key": "Skeleton Guard",
+      "set": {
+        "name_eng": "Skeleton Guard",
+        "name_de": "Skelettwache"
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b5d",
+      "key": "Salamander Ignes",
+      "set": {
+        "name_eng": "Salamander Ignis",
+        "name_de": "Salamander Ignis",
+        "description_de": "Dies ist eine ungewöhnliche leere Karte. Du kannst sie verwenden, um einen Salamander Ignis zu zähmen.",
+        "description_eng": "This is an unusual blank card. You can use it to tame a Salamander Ignis."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b5e",
+      "key": "Salamander Glacialis",
+      "set": {
+        "name_eng": "Salamander Glacialis",
+        "name_de": "Salamander Glacialis",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Salamander Glacialis.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Salamander Glacialis“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b5f",
+      "key": "Joulpix",
+      "set": {
+        "name_eng": "Joulpix",
+        "name_de": "Joulpix",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Joulpix.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Joulpix“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b60",
+      "key": "Orc",
+      "set": {
+        "name_eng": "Orc",
+        "name_de": "Ork",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Orc.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Ork“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b61",
+      "key": "Ogre",
+      "set": {
+        "name_eng": "Ogre",
+        "name_de": "Oger",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Ogre.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Oger“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b62",
+      "key": "Golem",
+      "set": {
+        "name_eng": "Golem",
+        "name_de": "Golem",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Golem.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Golem“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "items",
+      "id": "6acc1c7d4826525c70d04b63",
+      "key": "Yeti",
+      "set": {
+        "name_eng": "Yeti",
+        "name_de": "Yeti",
+        "description_eng": "This is an unusual blank card, you can use it to tame a Yeti.",
+        "description_de": "Eine ungewöhnliche leere Karte, mit der du die Kreatur „Yeti“ zähmen kannst."
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d784",
+      "key": "gladiator",
+      "set": {
+        "displayName_de": "Gladiator",
+        "displayName_eng": "Gladiator",
+        "advancementName_de": "Berserker",
+        "advancementName_eng": "Berserker"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d785",
+      "key": "herbalist",
+      "set": {
+        "displayName_de": "Kräuterkundler",
+        "displayName_eng": "Herbalist",
+        "advancementName_de": "Hexer",
+        "advancementName_eng": "Witcher"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d786",
+      "key": "adventurer",
+      "set": {
+        "displayName_de": "Abenteurer",
+        "displayName_eng": "Adventurer",
+        "advancementName_de": "Späher",
+        "advancementName_eng": "Scout"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d787",
+      "key": "butcher",
+      "set": {
+        "displayName_de": "Schlächter",
+        "displayName_eng": "Butcher",
+        "advancementName_de": "Zerstörer",
+        "advancementName_eng": "Destroyer"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d78a",
+      "key": "ritualist",
+      "set": {
+        "displayName_de": "Ritualist",
+        "displayName_eng": "Ritualist",
+        "advancementName_de": "Blutmagier",
+        "advancementName_eng": "Blood Mage"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d78b",
+      "key": "druid",
+      "set": {
+        "displayName_de": "Druide",
+        "displayName_eng": "Druid",
+        "advancementName_de": "Erzdruide",
+        "advancementName_eng": "Archdruid"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d78c",
+      "key": "healer",
+      "set": {
+        "displayName_de": "Heiler-Adept",
+        "displayName_eng": "Healer Adept",
+        "advancementName_de": "Erzbischof",
+        "advancementName_eng": "Archbishop"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d78d",
+      "key": "shaman",
+      "set": {
+        "displayName_de": "Schamane",
+        "displayName_eng": "Shaman",
+        "advancementName_de": "Hochelfe",
+        "advancementName_eng": "High Elf"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d78e",
+      "key": "luminet",
+      "set": {
+        "displayName_de": "Luminet",
+        "displayName_eng": "Luminet",
+        "advancementName_de": "Lichtmagier",
+        "advancementName_eng": "Light Mage"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d78f",
+      "key": "knight",
+      "set": {
+        "displayName_de": "Ritter",
+        "displayName_eng": "Knight",
+        "advancementName_de": "Tempelritter",
+        "advancementName_eng": "Templar"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d790",
+      "key": "hunter",
+      "set": {
+        "displayName_de": "Jäger",
+        "displayName_eng": "Hunter",
+        "advancementName_de": "Schütze",
+        "advancementName_eng": "Archer"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d788",
+      "key": "villian",
+      "set": {
+        "displayName_de": "Schurke",
+        "displayName_eng": "Rogue",
+        "advancementName_de": "Schattenklinge",
+        "advancementName_eng": "Shadowreaper"
+      }
+    },
+    {
+      "collection": "classTemplates",
+      "id": "6acd3bcd4826525c70d0d789",
+      "key": "summoner",
+      "set": {
+        "displayName_de": "Schattenjäger",
+        "displayName_eng": "Shadow Hunter",
+        "advancementName_de": "Seelenjäger",
+        "advancementName_eng": "Soulseeker"
+      }
+    }
+  ],
+  "confirmedNames": {
+    "appliedAt": "2026-10-18T20:34:14.944Z",
+    "backup": "data/localization/history/confirmed-names-1792355654619.json"
+  }
+}

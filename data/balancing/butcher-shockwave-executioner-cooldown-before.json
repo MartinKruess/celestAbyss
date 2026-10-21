@@ -1,0 +1,123 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c46",
+    "skillName_eng": "Demonic Blast",
+    "__v": 0,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schlägt auf den Boden vor dir und erzeugt eine Schockwelle, die Gegner in einem kegelförmigen Bereich trifft. P-Grundangriff je Stufe 172 / 344 / 688; M-Grundangriff 109 / 218 / 436. Beide Werte verdoppeln sich je weiterer Stufe. Mana je Stufe 55 / 110 / 220. Castzeit 0,2 Sekunden. Cooldown 300 Sekunden und gespeicherte Dauer 2 Sekunden bleiben bestehen; genaue Treffergeometrie und zeitliche Trefferverteilung sind noch nicht festgelegt.",
+    "description_eng": "Strikes the ground in front of you, creating a shock wave that hits enemies in a cone. Physical base attack by level: 172 / 344 / 688; magical base attack: 109 / 218 / 436. Both double each additional level. Mana by level: 55 / 110 / 220. Cast time 0.2 seconds. Existing cooldown 300 seconds and stored duration 2 seconds remain; precise geometry and hit timing remain pending.",
+    "dmgType": "physical",
+    "dur": 2,
+    "matk": 109,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 227,
+    "patk": 172,
+    "skillName_de": "Dämonische Schockwelle",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "mana": 55,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 55,
+          "values": [
+            55,
+            110,
+            220
+          ]
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          172,
+          344,
+          688
+        ]
+      },
+      "matk": {
+        "type": "table",
+        "values": [
+          109,
+          218,
+          436
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4d",
+    "skillName_eng": "Executioner's Wrath",
+    "__v": 0,
+    "category": "active",
+    "cd": 440,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führe einen tödlichen Hieb aus, der schweren Schaden verursacht und eine hohe Kritchance hat. Physischer Grundangriff 600 auf Stufe 1, je weiterer Stufe +555 bis 2820 auf Stufe 5. Mana 217, je weiterer Stufe +123 bis 709. Castzeit 0,2 Sekunden, Cooldown 440 Sekunden. Nur für diesen Angriff wird der aktuelle Krit-Wert um 20 Punkte je gelerntem Skilllevel erhöht: 20 / 40 / 60 / 80 / 100 auf Stufe 1 bis 5. Kein Bonus von 100 Prozent und kein garantierter Krit; andere Angriffe erhalten diesen Bonus nicht.",
+    "description_eng": "Execute a lethal blow that deals heavy damage and has a high critical chance. Physical base attack 600 at level 1 plus 555 per additional level to 2820 at level 5. Mana 217 plus 123 per additional level to 709. Cast time 0.2 seconds, cooldown 440 seconds. Only this attack adds 20 critical rating points per learned level: 20 / 40 / 60 / 80 / 100 at levels 1 through 5. This is not 100 percent or a guaranteed critical hit; other attacks receive no bonus.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 234,
+    "patk": 600,
+    "skillName_de": "Zorn des Henkers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "mana": 217,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 217,
+          "perLevel": 123
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 600,
+        "perLevel": 555
+      }
+    },
+    "effects": [
+      {
+        "key": "executioner-crit-rating",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "critChanceRating",
+        "value": 20,
+        "unit": "flat",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 234,
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 20
+        }
+      }
+    ]
+  }
+]

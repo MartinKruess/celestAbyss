@@ -1,0 +1,61 @@
+{
+  "classKey": "summoner",
+  "level": 60,
+  "rank": 6,
+  "manaPool": 3409,
+  "attacks": [
+    {
+      "nr": 24,
+      "name": "Doppelschuss",
+      "mana": 319
+    },
+    {
+      "nr": 47,
+      "name": "Explosionspfeil",
+      "mana": 381
+    },
+    {
+      "nr": 51,
+      "name": "Feuerpfeil",
+      "mana": 279
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "mana": 30
+    },
+    {
+      "nr": 66,
+      "name": "Kopfschuss",
+      "mana": 784
+    },
+    {
+      "nr": 184,
+      "name": "Hinterhältiger Pfeil",
+      "mana": 93
+    },
+    {
+      "nr": 185,
+      "name": "Seelenschuss",
+      "mana": 0
+    },
+    {
+      "nr": 186,
+      "name": "Seelensammler",
+      "mana": 0
+    },
+    {
+      "nr": 229,
+      "name": "Spektralketten",
+      "mana": 0
+    }
+  ],
+  "oneRotation": 1886,
+  "twoRotations": 3772,
+  "deficitWithoutRegeneration": 363,
+  "notes": [
+    "Three-pfeil empowerment paid once; no multiplying Mana by projectile count",
+    "Soulshot, Soul Collector and Spectral Chains cost zero Mana; repeated Collector casts do not add cost",
+    "No cooldown, duration, regeneration, buff costs or pet simulation"
+  ]
+}

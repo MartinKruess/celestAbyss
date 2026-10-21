@@ -1,0 +1,110 @@
+{
+  "classKey": "herbalist",
+  "level": 60,
+  "rank": 6,
+  "manaPool": 6423,
+  "oneRotation": 4514,
+  "twoRotations": 9028,
+  "deficitWithoutRegeneration": 2605,
+  "rows": [
+    {
+      "nr": 16,
+      "name": "Wasserfesseln",
+      "mana": 232,
+      "initial": 932.4000000000001,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 932.4000000000001
+    },
+    {
+      "nr": 29,
+      "name": "Eislanze",
+      "mana": 462,
+      "initial": 1486.4,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 1486.4
+    },
+    {
+      "nr": 31,
+      "name": "Elektrisches Feld",
+      "mana": 212,
+      "initial": 1409.4,
+      "periodic": 148,
+      "ticks": 4,
+      "rawDamage": 1557.4
+    },
+    {
+      "nr": 46,
+      "name": "Ewiges Eis",
+      "mana": 515,
+      "initial": 1624.4,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 1624.4
+    },
+    {
+      "nr": 56,
+      "name": "Geladener Nebel",
+      "mana": 683,
+      "initial": 1944.4,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 1944.4
+    },
+    {
+      "nr": 57,
+      "name": "Gezielter Blitz",
+      "mana": 598,
+      "initial": 2123.4,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 2123.4
+    },
+    {
+      "nr": 69,
+      "name": "Kugelblitz",
+      "mana": 878,
+      "initial": 2570.4,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 2570.4
+    },
+    {
+      "nr": 112,
+      "name": "Tobender Sturm",
+      "mana": 528,
+      "initial": 0,
+      "periodic": 12873.6,
+      "ticks": 9,
+      "rawDamage": 12873.6
+    },
+    {
+      "nr": 221,
+      "name": "Windschlitzer",
+      "mana": 406,
+      "initial": 1699.4,
+      "periodic": 0,
+      "ticks": 0,
+      "rawDamage": 1699.4
+    }
+  ],
+  "totalRawDamageOneTarget": 26811.800000000003,
+  "secondStrongest": {
+    "nr": 69,
+    "name": "Kugelblitz",
+    "mana": 878,
+    "initial": 2570.4,
+    "periodic": 0,
+    "ticks": 0,
+    "rawDamage": 2570.4
+  },
+  "assumptions": [
+    "Original R6 gear and maximum permanent passives; no active buffs or combat procs",
+    "One enemy remains inside every field for all ticks and is selected on all nine storm waves",
+    "Storm adds character magical attack on each wave; Electric Field periodic damage is fixed without character attack",
+    "All hits land; no enemy defence, critical hits or damage schools mitigation",
+    "No additional synergy from mist, water status or freeze; no cooldown timeline",
+    "Healing, catalysts, self and group buffs and creature actions excluded from attack rotation"
+  ]
+}

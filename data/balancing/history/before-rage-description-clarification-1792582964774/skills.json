@@ -1,0 +1,425 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c04",
+    "skillName_eng": "Energy of Anger",
+    "__v": 0,
+    "category": "active",
+    "cd": 67,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff, der deinen physischen Angriff auf allen Skillstufen um 85 erhöht. Während der Buff aktiv ist, erzeugen ausschließlich deine Auto-Attacks Wut: 0,5 Wutpunkte je Angriff auf Stufe 1 bei einer Leiste von 100 Punkten. Je weiterer Stufe kommen bis Stufe 9 0,05 Punkte hinzu; Stufe 10 erreicht genau 1 Wutpunkt je Auto-Attack. Skills und Begleiter erzeugen durch diesen Effekt keine Wut. Die Dauer steigt gemäß ganzzahliger Stufentabelle von 45 auf 60 Sekunden, der Cooldown 67 Sekunden auf Stufe 1 und 58 Sekunden auf Stufe 10. Wutaufbau im Verhältnis zum Angriffstempo wird später geprüft. Castzeit fest 0,1 Sekunden. Wutaufbau durch Auto-Attacks ist ausschließlich während dieses Buffs möglich; es gibt keinen zusätzlichen Grund-Wutgewinn außerhalb des Buffs. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self-buff granting 85 physical attack at every level. While active, only your basic attacks generate Rage: 0.5 Rage per attack at level 1, rising to 1 at level 10 on a 100-point bar. Skills and companions do not generate Rage through this effect. Duration rises from 45 to 60 seconds; cooldown decreases from 67 to 58 seconds. Fixed cast time 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, before discounts.",
+    "dmgType": "selfbuff",
+    "dur": 45,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 161,
+    "patk": 85,
+    "skillName_de": "Energie der Wut",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 67,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        45,
+        46,
+        48,
+        49,
+        51,
+        52,
+        54,
+        55,
+        57,
+        60
+      ]
+    },
+    "effects": [
+      {
+        "key": "energy-anger-basic-attack-rage",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "rage",
+        "reference": "maxRage",
+        "value": 0.005,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0.005,
+            0.0055,
+            0.006,
+            0.0065,
+            0.007,
+            0.0075,
+            0.008,
+            0.0085,
+            0.009,
+            0.01
+          ]
+        },
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "excludeCompanionAttacks": true,
+        "durationSeconds": 45,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            45,
+            46,
+            48,
+            49,
+            51,
+            52,
+            54,
+            55,
+            57,
+            60
+          ]
+        }
+      }
+    ],
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 85,
+        "perLevel": 0
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 67,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "periodicSteps",
+                "base": 45,
+                "steps": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 0.005,
+                "perLevel": 0.0004999999999999996
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 0.0005000000000000039
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "periodicSteps",
+                "base": 45,
+                "steps": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 85,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c49",
+    "skillName_eng": "Bloody Breakthrough",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Wirft eine Axt auf das Hauptziel, stürmt kurz hinterher und schlägt mit der zweiten Axt frontal zu. Beim Herausziehen der ersten Axt folgt ein kreisförmiger Abschlussschlag. Gesamter P-Skill-Grundschaden: 540 auf Stufe 1, +540 je weiterer Stufe, 5400 auf Stufe 10. Die drei Phasen verteilen diesen Grundschaden im Verhältnis 1:2:3 (maximal 900/1800/2700); jede Phase addiert den vollen aktuellen P-Angriff. Erzeugt einmalig 5 Wut beim ersten erfolgreichen Schadenstreffer, unabhängig von der Anzahl getroffener Gegner. Haupttreffer ein Ziel, Folgehiebe maximal fünf Gegner; Abschlussradius 3 m. Exakte Ansturmreichweite und Frontfläche noch offen. Vorläufige Trefferzeiten 0/1/2 Sekunden nach Castende; Animation 3 Sekunden. Mana 216 +216 je weiterer Stufe, maximal 2160. Castzeit 0,4 Sekunden; Cooldown unverändert 90 bis 81 Sekunden. Keine Tötung erforderlich.",
+    "description_eng": "Throws an axe, follows with a short rush and frontal sweep, then pulls the axe free with a circular finishing sweep. Total physical skill base damage 540 plus 540 per additional level, reaching 5400. Three phases split skill base 1:2:3; each separately adds full current physical attack. Grants 5 rage once on the first successful damaging hit, regardless of target count. Initial target single; later sweeps at most five enemies, final radius 3m. Rush distance and frontal geometry pending. Provisional impacts 0/1/2 seconds after cast completion; animation 3 seconds. Mana 216 plus 216 per additional level, maximum 2160. Cast 0.4 seconds, unchanged cooldown 90 to 81 seconds. No kill required.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 230,
+    "patk": 540,
+    "skillName_de": "Blutiger Durchbruch",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 3,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending",
+      "maxTargets": 5
+    },
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 90,
+      "perLevel": -1
+    },
+    "mana": 216,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 216,
+          "perLevel": 216
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 540,
+        "perLevel": 540
+      }
+    },
+    "animationDurationSeconds": 3,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 3,
+      "damageValueScope": "perApplication",
+      "sequenceScalesSkillBaseOnly": true,
+      "hitTimingStatus": "pending",
+      "hitSequence": [
+        {
+          "offsetSeconds": 0,
+          "damageMultiplier": 0.16666666666666666,
+          "phase": "Axtwurf",
+          "targetMode": "singleEnemy",
+          "maxTargets": 1
+        },
+        {
+          "offsetSeconds": 1,
+          "damageMultiplier": 0.3333333333333333,
+          "phase": "Ansturm und Hieb",
+          "targetMode": "frontalSweep",
+          "maxTargets": 5
+        },
+        {
+          "offsetSeconds": 2,
+          "damageMultiplier": 0.5,
+          "phase": "Abschlussschlag",
+          "targetMode": "circle",
+          "maxTargets": 5,
+          "radius": 3
+        }
+      ]
+    },
+    "blocksOtherSkillsDuringAnimation": true,
+    "hasLingeringDamage": false,
+    "manaPricing": {
+      "category": "finisher",
+      "factor": 0.4,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "effects": [
+      {
+        "key": "breakthroughRage",
+        "type": "resourceGain",
+        "resource": "rage",
+        "target": "self",
+        "value": 5,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "gainTrigger": "ownSkillDamage",
+        "oncePerSkillApplication": true
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 90,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.4,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 540,
+            "perLevel": 540
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  }
+]

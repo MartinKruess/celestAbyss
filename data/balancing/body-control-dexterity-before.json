@@ -1,0 +1,40 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba6",
+  "skillName_eng": "Body Control",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Villian",
+    "Shadowwarrior",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verbessert dauerhaft deine Körperbeherrschung und Beweglichkeit. Erhöht auf Skilllevel 1 deine Stärke um 5 und deine Agilität um 3. Je weiterer Stufe kommen 2 Stärke und 1 Agilität hinzu, bis zu 23 Stärke und 12 Agilität auf Level 10.",
+  "description_eng": "Permanently improves body control and agility. At skill level 1, increases Strength by 5 and Agility by 3. Each additional level adds 2 Strength and 1 Agility, reaching 23 Strength and 12 Agility at level 10.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 67,
+  "skillName_de": "Körperbeherrschung",
+  "skillpoints": 1,
+  "str": 5,
+  "agi": 3,
+  "resourceCosts": [],
+  "statBonusUnits": {
+    "str": "flat",
+    "agi": "flat"
+  },
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 2
+    },
+    "agi": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": 1
+    }
+  }
+}

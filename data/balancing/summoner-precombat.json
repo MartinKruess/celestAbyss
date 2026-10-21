@@ -1,0 +1,142 @@
+{
+  "classKey": "summoner",
+  "level": 60,
+  "status": "reviewedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 2,
+      "name": "Überleben",
+      "stats": {
+        "str": 20,
+        "agi": 10,
+        "dex": 10
+      }
+    },
+    {
+      "nr": 7,
+      "name": "Armbrusttraining",
+      "stats": {
+        "agi": 11,
+        "dex": 10
+      }
+    },
+    {
+      "nr": 43,
+      "name": "Erweiterung der Sinne",
+      "stats": {
+        "dex": 22,
+        "agi": 22
+      }
+    },
+    {
+      "nr": 119,
+      "name": "Verbessertes Nachladen",
+      "stats": {
+        "patk": 20,
+        "atkSpeed": 0.05
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 142,
+      "name": "Ausweichtraining",
+      "stats": {
+        "agi": 10,
+        "dex": 5
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 187,
+      "name": "Hartes Training",
+      "stats": {
+        "atkSpeed": 0.08,
+        "dex": 10
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Armbrust",
+      "equipped": {
+        "maxHealth": 3045,
+        "maxMana": 2809,
+        "physicalAttack": 580.2,
+        "magicalAttack": 109.2,
+        "physicalDefense": 495,
+        "magicalDefense": 476,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "str": 20,
+        "agi": 53,
+        "dex": 57,
+        "patk": 120,
+        "atkSpeed": 0.33,
+        "vita": 20,
+        "wis": 20,
+        "pdef": 140,
+        "mdef": 140,
+        "matk": 100
+      },
+      "includedSkills": [
+        2,
+        7,
+        43,
+        119,
+        139,
+        142,
+        144,
+        187,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 3645,
+        "maxMana": 3409,
+        "physicalAttack": 838.8000000000001,
+        "magicalAttack": 209.2,
+        "physicalDefense": 675,
+        "magicalDefense": 656,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "directPassiveAttackSpeedBonus": 0.33,
+  "excluded": [
+    "Active buffs",
+    "Pet stats",
+    "Jewelry and stones",
+    "Agility speed conversion",
+    "Weapon speed calculation"
+  ],
+  "equipmentProposalApplied": false
+}

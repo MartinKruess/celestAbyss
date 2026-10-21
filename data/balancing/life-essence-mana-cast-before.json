@@ -1,0 +1,45 @@
+{
+  "_id": "6acc1c7e4826525c70d04baa",
+  "skillName_eng": "Life Essence",
+  "__v": 0,
+  "category": "active",
+  "cd": 55,
+  "charClass": [
+    "Herbalist",
+    "Witcher"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erwecke die Lebensessenz eines Verbündeten oder Begleiters und heile ihn auf Skilllevel 1 um 3 % seines maximalen Lebens. Pro weiterem Skilllevel steigt die Heilung um 0,5 Prozentpunkte, bis zu 5 % auf Skilllevel 5. Der Cooldown beträgt anfangs 55 Sekunden und sinkt pro weiterem Skilllevel um 3 Sekunden, bis auf 43 Sekunden.",
+  "description_eng": "Awaken the life essence of an ally or companion, healing them for 3% of their maximum health at skill level 1. Each additional skill level increases the healing by 0.5 percentage points, reaching 5% at skill level 5. The cooldown starts at 55 seconds and decreases by 3 seconds per additional skill level, reaching 43 seconds.",
+  "dmgType": "spell",
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 71,
+  "skillName_de": "Lebensessenz",
+  "skillpoints": 1,
+  "activation": "manual",
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 55,
+    "perLevel": -3
+  },
+  "effects": [
+    {
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.03,
+        "perLevel": 0.005
+      },
+      "type": "heal",
+      "target": "allyOrCompanion",
+      "value": 0.03,
+      "unit": "fraction",
+      "reference": "targetMaxHealth",
+      "damageTypes": [],
+      "durationSeconds": 0,
+      "key": "life-essence-heal"
+    }
+  ],
+  "effectsVersion": 1
+}

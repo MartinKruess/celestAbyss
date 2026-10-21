@@ -1,0 +1,256 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b77",
+    "skillName_eng": "Breaker of Light",
+    "__v": 0,
+    "category": "active",
+    "cd": 52,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt zwei schnelle physische Angriffe aus. Der Grundschaden je Treffer steigt von 234 um 37 je weiterer Stufe auf 567 auf Stufe 10. Zwei Treffer ergeben insgesamt 468 bis 1134 Skill-Grundschaden vor Charakterangriff und Verteidigung. Mana-Kosten steigen von 127 um 63 je weiterer Stufe auf 694. Der Cooldown sinkt von 52 um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0 Sekunden, vorläufige Animation 0,5 Sekunden. Keine Unsichtbarkeit und keine anhaltende Wirkungsdauer. Wenn der erste Treffer nicht kritisch ist, ist der zweite Treffer garantiert kritisch. War der erste Treffer kritisch, wird der zweite normal auf einen kritischen Treffer geprüft. Der Bonus gilt nur innerhalb dieser Zweierfolge; Crit-Immunitäten und das Verhalten bei verfehltem ersten Treffer werden später geprüft.",
+    "description_eng": "Performs two quick physical attacks. Base damage per hit increases from 234 by 37 per additional level to 567 at level 10. Both hits total 468 to 1134 skill base damage before character attack and defense. Mana cost increases from 127 by 63 per additional level to 694. Cooldown decreases from 52 by 1 second per additional level to 43 seconds. Cast time is 0 seconds; provisional animation is 0.5 seconds. No invisibility or lasting effect. If the first hit is not critical, the second hit is guaranteed critical. If the first hit was critical, the second uses a normal critical check. This rule only applies within the two-hit sequence; critical immunities and a missed first hit remain to be reviewed.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 20,
+    "patk": 234,
+    "skillName_de": "Brecher des Lichts",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 127,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 127,
+          "perLevel": 63
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 234,
+        "perLevel": 37
+      }
+    },
+    "effects": [
+      {
+        "key": "breaker-light-second-crit",
+        "type": "conditionalCriticalHit",
+        "target": "enemy",
+        "hitIndex": 2,
+        "referenceHitIndex": 1,
+        "criticalCondition": "previousHitNotCritical",
+        "otherwiseCriticalCheck": "normal",
+        "value": 1,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "criticalImmunityStatus": "pending"
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bbf",
+    "skillName_eng": "Shadow Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 33,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nur während der Tarnung einsetzbar. Verursacht einmalig physischen Grundschaden von 253 auf Stufe 1, plus 72 je weiterer Stufe, bis zu 901 auf Stufe 10. Mana-Kosten 154, plus 51 je weiterer Stufe, bis zu 613. Cooldown 33 Sekunden, Castzeit 0,1 Sekunden. Die Animation dauert vorläufig 0,2 bis 0,3 Sekunden. Nach Ausführung wirst du für 1 Sekunde sichtbar. Anschließend kehrt die Tarnung nur zurück, wenn ihre ursprüngliche Dauer noch nicht abgelaufen ist und sie nicht durch einen Treffer beendet wurde. Die ursprüngliche Tarnzeit läuft während der Sichtbarkeit weiter und wird weder verlängert noch neu gestartet.",
+    "description_eng": "Usable only while stealthed. Deals physical base damage once, starting at 253 and increasing by 72 per additional level to 901 at level 10. Mana cost starts at 154 and increases by 51 per additional level to 613. Cooldown is 33 seconds and cast time is 0.1 seconds. Provisional animation duration is 0.2 to 0.3 seconds. After execution, reveals you for 1 second. Stealth then resumes only if its original duration remains and an incoming hit has not ended it. The original stealth timer continues during the reveal and is neither extended nor restarted.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 92,
+    "patk": 253,
+    "skillName_de": "Schattenschlag",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "requiresStealth": true
+    },
+    "animationDurationRangeSeconds": {
+      "min": 0.2,
+      "max": 0.3
+    },
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "hasLingeringDamage": false,
+    "mana": 154,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 154,
+          "perLevel": 51
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 253,
+        "perLevel": 72
+      }
+    },
+    "stealthInteraction": {
+      "temporaryRevealSeconds": 1,
+      "resumeIfOriginalDurationRemains": true,
+      "originalDurationContinuesDuringReveal": true,
+      "incomingHitCancelsResumption": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be1",
+    "skillName_eng": "Bladestorm",
+    "__v": 0,
+    "category": "active",
+    "cd": 75,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt fünf physische Treffer im Bereich bis 3 Meter vor dir aus, ohne nach vorne zu stürmen. Jeder Treffer hat auf Skilllevel 1 einen Grundangriffswert von 277, der je weiterer Stufe um 35 auf 592 steigt. Die Mana-Kosten steigen von 123 um 78 je weiterer Stufe auf 825. Der Cooldown sinkt von 75 um 2 Sekunden je weiterer Stufe auf 57 Sekunden. Die Ausführung dauert vorläufig 0,8 bis 1 Sekunde. Genaue Breite des Trefferbereichs und Trefferzeitpunkte werden im Spiel festgelegt. Castzeit 0,1 Sekunden.",
+    "description_eng": "Performs five physical hits in the area up to 3 meters in front of you, without charging forward. Each hit has a base attack value of 277 at skill level 1, increasing by 35 per additional level to 592. Mana cost increases from 123 by 78 per additional level to 825. Cooldown decreases from 75 by 2 seconds per additional level to 57 seconds. Execution provisionally lasts 0.8 to 1 second. Exact area width and hit timings will be defined in game. Cast time is 0.1 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 126,
+    "patk": 277,
+    "skillName_de": "Wirbelnde Klinge",
+    "skillpoints": 1,
+    "animationDurationRangeSeconds": {
+      "min": 0.8,
+      "max": 1
+    },
+    "animationTimingStatus": "provisional",
+    "attackArea": {
+      "shape": "frontal",
+      "center": "caster",
+      "rangeMeters": 3,
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "evaluation": "perHit",
+      "timingStatus": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 5,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 75,
+      "perLevel": -2
+    },
+    "mana": 123,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 123,
+          "perLevel": 78
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 277,
+        "perLevel": 35
+      }
+    },
+    "castTimeSeconds": 0.1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd2",
+    "skillName_eng": "Storm Blade",
+    "__v": 0,
+    "category": "active",
+    "cd": 77,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen besonders wuchtigen Angriff mit beiden Dolchen gegen einen einzelnen Gegner aus. Kein Flächenangriff und kein zusätzlicher zweiter Schadenswurf allein aufgrund der beiden Waffen. Der physische Grundschaden steigt von 333 um 111 je weiterer Stufe auf 1332 auf Stufe 10. Mana-Kosten steigen von 217 um 107 je weiterer Stufe auf 1180. Der Cooldown startet bei 77 Sekunden, 30 Sekunden über dem alten Wert, und sinkt um 2 Sekunden je weiterer Stufe auf 59 Sekunden. Castzeit 0,1 Sekunden, vorläufige Animation 0,5 Sekunden. Keine anhaltende Wirkungsdauer.",
+    "description_eng": "Performs one powerful attack with both daggers against a single enemy. Not an area attack; using two weapons does not add a separate second damage hit. Base physical damage increases from 333 by 111 per additional level to 1332 at level 10. Mana cost increases from 217 by 107 per additional level to 1180. Cooldown starts at 77 seconds, 30 seconds above the old value, and decreases by 2 seconds per additional level to 59 seconds. Cast time is 0.1 seconds; provisional animation is 0.5 seconds. No lasting effect.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 111,
+    "patk": 333,
+    "skillName_de": "Sturmklinge",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 77,
+      "perLevel": -2
+    },
+    "hasLingeringDamage": false,
+    "mana": 217,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 217,
+          "perLevel": 107
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 333,
+        "perLevel": 111
+      }
+    }
+  }
+]

@@ -1,0 +1,480 @@
+{
+  "generatedAt": "2026-10-19T07:24:47.771Z",
+  "durationSeconds": 600,
+  "note": "Observed average damage per use from class-specific buffed runs, not identical caster stats. Single target; area and control benefits excluded. Theoretical cooldown use counts are not valid for conditional Seelenqual and are not a rotation guarantee.",
+  "rows": [
+    {
+      "key": "luminet",
+      "nr": 36,
+      "name": "Energieschlag",
+      "level": 5,
+      "cd": 2.2,
+      "cast": 0.15,
+      "uses": 252,
+      "meanDamage": 1398.2999999999934,
+      "total": 352371.59999999835,
+      "manaPerUse": 26,
+      "theoreticalUses": 256
+    },
+    {
+      "key": "luminet",
+      "nr": 216,
+      "name": "Heilige Vernichtung",
+      "level": 10,
+      "cd": 46,
+      "cast": 0.1,
+      "uses": 14,
+      "meanDamage": 5222.981571428571,
+      "total": 73121.742,
+      "manaPerUse": 337,
+      "theoreticalUses": 14,
+      "execution": {
+        "targetMode": "singleEnemy",
+        "hitCount": 3,
+        "damageValueScope": "perHit"
+      }
+    },
+    {
+      "key": "luminet",
+      "nr": 9,
+      "name": "Ätherregen",
+      "level": 10,
+      "cd": 125,
+      "cast": 0.6,
+      "uses": 5,
+      "meanDamage": 8998.704400000002,
+      "total": 44993.52200000001,
+      "manaPerUse": 239,
+      "theoreticalUses": 5
+    },
+    {
+      "key": "luminet",
+      "nr": 117,
+      "name": "Urteil des Himmels",
+      "level": 5,
+      "cd": 44,
+      "cast": 0.5,
+      "uses": 14,
+      "meanDamage": 3091.2000000000016,
+      "total": 43276.800000000025,
+      "manaPerUse": 287,
+      "theoreticalUses": 14,
+      "execution": {
+        "hitCount": 2,
+        "damageValueScope": "perHit",
+        "hitTimingStatus": "defined",
+        "hitSequence": [
+          {
+            "offsetSeconds": 0,
+            "damageMultiplier": 1
+          },
+          {
+            "offsetSeconds": 2,
+            "damageMultiplier": 0.5
+          }
+        ]
+      }
+    },
+    {
+      "key": "luminet",
+      "nr": 215,
+      "name": "Heiliges Kreuz",
+      "level": 10,
+      "cd": 48,
+      "cast": 0.2,
+      "uses": 13,
+      "meanDamage": 2435.915384615384,
+      "total": 31666.899999999994,
+      "manaPerUse": 284,
+      "theoreticalUses": 13
+    },
+    {
+      "key": "luminet",
+      "nr": 29,
+      "name": "Eislanze",
+      "level": 10,
+      "cd": 41,
+      "cast": 0.6,
+      "uses": 15,
+      "meanDamage": 1918.3999999999994,
+      "total": 28775.999999999993,
+      "manaPerUse": 155,
+      "theoreticalUses": 15
+    },
+    {
+      "key": "luminet",
+      "nr": 101,
+      "name": "Schwerter des Lichtes",
+      "level": 10,
+      "cd": 63,
+      "cast": 0.7,
+      "uses": 10,
+      "meanDamage": 2313.7203999999997,
+      "total": 23137.203999999998,
+      "manaPerUse": 257,
+      "theoreticalUses": 10,
+      "area": {
+        "shape": "circle",
+        "center": "skillCenter",
+        "radiusMeters": 7.5,
+        "geometryStatus": "defined",
+        "timingStatus": "defined"
+      },
+      "execution": {
+        "targetMode": "singleEnemy",
+        "hitCount": 1,
+        "damageValueScope": "perHit",
+        "timingStatus": "pending"
+      }
+    },
+    {
+      "key": "luminet",
+      "nr": 213,
+      "name": "Strafendes Licht",
+      "level": 10,
+      "cd": 83,
+      "cast": 0.3,
+      "uses": 8,
+      "meanDamage": 2544.6124999999997,
+      "total": 20356.899999999998,
+      "manaPerUse": 316,
+      "theoreticalUses": 8
+    },
+    {
+      "key": "luminet",
+      "nr": 8,
+      "name": "Astralkörper",
+      "level": 5,
+      "cd": 115,
+      "cast": 0.5,
+      "uses": 6,
+      "meanDamage": 2743.5499999999997,
+      "total": 16461.3,
+      "manaPerUse": 363,
+      "theoreticalUses": 6
+    },
+    {
+      "key": "luminet",
+      "nr": 217,
+      "name": "Göttliche Nova",
+      "level": 10,
+      "cd": 158,
+      "cast": 0.4,
+      "uses": 4,
+      "meanDamage": 2708.55,
+      "total": 10834.2,
+      "manaPerUse": 354,
+      "theoreticalUses": 4,
+      "area": {
+        "shape": "circle",
+        "center": "selectedTarget",
+        "geometryStatus": "defined",
+        "maxTargets": 5,
+        "radiusMeters": 2,
+        "centerTracking": "pending"
+      },
+      "execution": {
+        "hitCount": 1,
+        "damageValueScope": "perHit",
+        "explosionDelayAfterCreationSeconds": 2
+      }
+    },
+    {
+      "key": "luminet",
+      "nr": 218,
+      "name": "Licht kristallenes Gefängnis",
+      "level": 3,
+      "cd": 120,
+      "cast": 0.5,
+      "uses": 5,
+      "meanDamage": 1786.8,
+      "total": 8934,
+      "manaPerUse": 127,
+      "theoreticalUses": 5
+    },
+    {
+      "key": "luminet",
+      "nr": 211,
+      "name": "Aurora Wellen",
+      "level": 10,
+      "cd": 237,
+      "cast": 0.8,
+      "uses": 3,
+      "meanDamage": 2788.3000000000006,
+      "total": 8364.900000000001,
+      "manaPerUse": 375,
+      "theoreticalUses": 3,
+      "area": {
+        "shape": "rectangle",
+        "center": "skillCenter",
+        "lengthMeters": 6,
+        "widthMeters": 4,
+        "geometryStatus": "defined",
+        "target": "enemiesInArea",
+        "centerTracking": "pending"
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 49,
+      "name": "Feuerball",
+      "level": 20,
+      "cd": 4,
+      "cast": 0.1,
+      "uses": 144,
+      "meanDamage": 2160.3072361111135,
+      "total": 311084.2420000004,
+      "manaPerUse": 149,
+      "theoreticalUses": 147
+    },
+    {
+      "key": "ritualist",
+      "nr": 232,
+      "name": "Dunkler Impuls",
+      "level": 10,
+      "cd": 5,
+      "cast": 0.1,
+      "uses": 114,
+      "meanDamage": 1751.1450877192954,
+      "total": 199630.53999999966,
+      "manaPerUse": 65,
+      "theoreticalUses": 118
+    },
+    {
+      "key": "ritualist",
+      "nr": 104,
+      "name": "Seelenqual",
+      "level": 10,
+      "cd": 0.2,
+      "cast": 0,
+      "uses": 105,
+      "meanDamage": 1787.498,
+      "total": 187687.29,
+      "manaPerUse": 67,
+      "theoreticalUses": 3001,
+      "execution": {
+        "targetMode": "singleEnemy",
+        "hitCount": 1,
+        "damageValueScope": "perHit"
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 48,
+      "name": "Feuer der Verdammten",
+      "level": 5,
+      "cd": 51,
+      "cast": 0.4,
+      "uses": 12,
+      "meanDamage": 6351.9775333333355,
+      "total": 76223.73040000003,
+      "manaPerUse": 503,
+      "theoreticalUses": 12,
+      "area": {
+        "shape": "circle",
+        "center": "selectedTarget",
+        "radiusMeters": 1.5,
+        "target": "enemiesInArea",
+        "geometryStatus": "defined",
+        "evaluation": "perHit",
+        "radiusScaling": {
+          "type": "table",
+          "values": [
+            1.5,
+            1.5,
+            2.5,
+            2.5,
+            3.5
+          ]
+        },
+        "maxTargets": 2,
+        "maxTargetsScaling": {
+          "type": "table",
+          "values": [
+            2,
+            2,
+            4,
+            4,
+            6
+          ]
+        },
+        "centerTracking": "pending"
+      },
+      "execution": {
+        "hitCount": 1,
+        "damageValueScope": "perHit"
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 99,
+      "name": "Schrei der Unterwelt",
+      "level": 3,
+      "cd": 80,
+      "cast": 0.1,
+      "uses": 8,
+      "meanDamage": 4063.2741874999997,
+      "total": 32506.193499999998,
+      "manaPerUse": 0,
+      "theoreticalUses": 8,
+      "area": {
+        "shape": "circle",
+        "center": "caster",
+        "radiusMeters": 5,
+        "geometryStatus": "defined",
+        "target": "enemiesInArea",
+        "evaluation": "atImpact"
+      },
+      "execution": {
+        "hitCount": 1,
+        "damageValueScope": "perHit",
+        "additionalDamageFromSacrificedHealth": {
+          "type": "table",
+          "values": [
+            0,
+            0.5,
+            1.25
+          ]
+        },
+        "energyGatherSeconds": 1,
+        "energyHoldSeconds": 1,
+        "explosionPhaseSeconds": 1,
+        "hitTimingStatus": "pending",
+        "continuesThroughStun": true,
+        "continuesThroughDisplacement": true,
+        "cancelsOnCasterDeathBeforeRelease": true,
+        "releasedExplosionPersistsAfterCasterDeath": true,
+        "centersOnCasterAtRelease": true,
+        "ignoresOrdinaryStopCommand": true,
+        "knockbackMeters": 1,
+        "knockbackDirection": "awayFromCaster",
+        "knockbackAppliesOnSuccessfulHit": true,
+        "knockbackResistanceStatus": "pending"
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 72,
+      "name": "Lebenssauger",
+      "level": 10,
+      "cd": 43,
+      "cast": 0.15,
+      "uses": 14,
+      "meanDamage": 2003.2917142857148,
+      "total": 28046.084000000006,
+      "manaPerUse": 354,
+      "theoreticalUses": 14
+    },
+    {
+      "key": "ritualist",
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "level": 3,
+      "cd": 200,
+      "cast": 0.8,
+      "uses": 3,
+      "meanDamage": 8108.279999999998,
+      "total": 24324.839999999993,
+      "manaPerUse": 2608,
+      "theoreticalUses": 3,
+      "area": {
+        "shape": "circle",
+        "center": "skillCenter",
+        "radiusMeters": 6,
+        "geometryStatus": "defined",
+        "target": "enemiesInArea",
+        "maxTargets": 6,
+        "maxUniqueTargetsPerActivation": 6
+      },
+      "execution": {
+        "meteorWaveSequence": [
+          {
+            "offsetSeconds": 1,
+            "damageFraction": 0.4,
+            "meteorCount": 6
+          },
+          {
+            "offsetSeconds": 1.5,
+            "damageFraction": 0.6,
+            "meteorCount": 6
+          },
+          {
+            "offsetSeconds": 3,
+            "damageFraction": 0.4,
+            "meteorCount": 6
+          },
+          {
+            "offsetSeconds": 3.5,
+            "damageFraction": 0.6,
+            "meteorCount": 6
+          },
+          {
+            "offsetSeconds": 5,
+            "damageFraction": 0.4,
+            "meteorCount": 6
+          },
+          {
+            "offsetSeconds": 5.5,
+            "damageFraction": 0.6,
+            "meteorCount": 6
+          }
+        ],
+        "meteorDamageDistributionStatus": "pending"
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 110,
+      "name": "Sturm des Feuers",
+      "level": 10,
+      "cd": 102,
+      "cast": 0.2,
+      "uses": 6,
+      "meanDamage": 2241.089,
+      "total": 13446.534,
+      "manaPerUse": 181,
+      "theoreticalUses": 6,
+      "area": {
+        "shape": "circle",
+        "center": "selectedTarget",
+        "radiusMeters": 5,
+        "target": "enemiesInArea",
+        "geometryStatus": "defined",
+        "centerTracking": "pending"
+      },
+      "execution": {
+        "damageStartsAfterSeconds": 0.5,
+        "damagingVisualPhaseSeconds": 3,
+        "hitFrequencyStatus": "defined",
+        "hitCount": 1,
+        "damageValueScope": "perHit"
+      }
+    },
+    {
+      "key": "ritualist",
+      "nr": 103,
+      "name": "Seelenfessel",
+      "level": 15,
+      "cd": 90,
+      "cast": 0.1,
+      "uses": 7,
+      "meanDamage": 1857.188,
+      "total": 13000.316,
+      "manaPerUse": 95,
+      "theoreticalUses": 7
+    },
+    {
+      "key": "ritualist",
+      "nr": 105,
+      "name": "Seelenernte",
+      "level": 5,
+      "cd": 180,
+      "cast": 0.3,
+      "uses": 4,
+      "meanDamage": 2642.1095000000005,
+      "total": 10568.438000000002,
+      "manaPerUse": 408,
+      "theoreticalUses": 4
+    }
+  ]
+}

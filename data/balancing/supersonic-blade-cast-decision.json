@@ -1,0 +1,136 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-supersonic-cast-1792402020721",
+  "before": {
+    "_id": "6acc1c7e4826525c70d04bd6",
+    "skillName_eng": "Supersonic Blade",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lädt die Klinge 1 Sekunde auf und führt einen einzelnen physischen Treffer aus. Der getroffene Gegner wird für 0,5 Sekunden kurz paralysiert. Der physische Grundangriffswert steigt von 636 um 230 je weiterer Stufe auf 1556. Die  Der Cooldown sinkt von 120 um 3 Sekunden je weiterer Stufe auf 108 Sekunden. Die Paralyse dauert auf allen Stufen gleich lang; ihre genaue Einschränkung von Aktionen ist noch festzulegen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). Mana-Kosten je Stufe: 159/217/274/332/389. Exakt gerundete 25 Prozent des gesamten Skill-Grundschadens ohne Charakterangriff; garantierte Mehrfachtreffer und garantierter kritischer Treffer sind enthalten, Heilung erhält keinen zusätzlichen Kostenaufschlag.",
+    "description_eng": "Charges the blade for 1 second and performs one physical hit. The affected enemy is briefly paralyzed for 0.5 seconds. Physical base attack increases from 636 by 230 per additional level to 1556.  Cooldown decreases from 120 by 3 seconds per additional level to 108 seconds. Paralysis duration is unchanged across levels; exact action restrictions are still to be defined. Mana costs by level: 159/217/274/332/389. Exactly rounded 25 percent of total skill base damage excluding character attack; guaranteed multiple hits and guaranteed critical damage are included, with no additional healing surcharge.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 115,
+    "patk": 636,
+    "skillName_de": "Überschallklinge",
+    "skillpoints": 1,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending"
+    },
+    "castTimeSeconds": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "key": "supersonicParalysis",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "paralysis",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 0.5,
+        "durationStatus": "defined",
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 159,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 159,
+          "values": [
+            159,
+            217,
+            274,
+            332,
+            389
+          ]
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 636,
+        "perLevel": 230
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 120,
+              "perLevel": -3
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 636,
+            "perLevel": 230
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  "changes": {
+    "castTimeSeconds": 0.1,
+    "description_de": "Führt nach 0,1 Sekunden Castzeit einen einzelnen physischen Treffer aus. Die Animationsdauer ist separat noch festzulegen. Der getroffene Gegner wird für 0,5 Sekunden paralysiert; genaue Aktionseinschränkungen bleiben offen. Physischer Skill-Grundschaden: 636 auf Stufe 1, +230 je weiterer Stufe bis 1556 auf Stufe 5. Mana-Kosten je Stufe: 159/217/274/332/389, exakt gerundete 25 Prozent des Skill-Grundschadens ohne Charakterangriff, vor Rabatten. Cooldown: 120 Sekunden auf Stufe 1, -3 je weiterer Stufe bis 108 Sekunden auf Stufe 5.",
+    "description_eng": "Performs a single physical hit after a 0.1-second cast time. Animation duration remains to be defined separately. The target is paralyzed for 0.5 seconds; exact action restrictions remain pending. Physical skill base damage starts at 636 and increases by 230 per additional level to 1556 at level 5. Mana costs by level: 159/217/274/332/389, exactly rounded 25 percent of skill base damage excluding character attack, before discounts. Cooldown starts at 120 seconds and decreases by 3 per additional level to 108 seconds at level 5."
+  },
+  "animationDuration": "Pending: old one-second value was not confirmed as animation duration."
+}

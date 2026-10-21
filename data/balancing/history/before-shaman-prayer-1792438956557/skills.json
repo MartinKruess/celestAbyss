@@ -1,0 +1,4262 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b64",
+    "skillName_eng": "Enlightenment",
+    "__v": 0,
+    "category": "Aurora",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Aurora-Grundskill. Je Stufe +1 Willenskraft und +1 direkte MP-Regeneration. Der Intelligenzbonus steigt auf insgesamt +15; auf jeder vierten Stufe wird stattdessen +1 Geschick gewährt, insgesamt +5 Geschick auf Stufe 20. Endwerte: +15 Intelligenz, +20 Willenskraft, +5 Geschick und +20 MP-Regeneration je Tick. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive Aurora core skill. Each level grants +1 Wisdom and +1 direct MP regeneration per tick. Every fourth level grants Dexterity instead of Intelligence. Level 20 totals: +15 Intelligence, +20 Wisdom, +5 Dexterity, +20 MP regeneration per tick. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 1,
+    "skillName_de": "Erleuchtung",
+    "skillpoints": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Aurora"
+    ],
+    "unlockPhase": "race",
+    "isClassCore": true,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          5,
+          6,
+          6,
+          7,
+          8,
+          9,
+          9,
+          10,
+          11,
+          12,
+          12,
+          13,
+          14,
+          15,
+          15
+        ]
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      }
+    },
+    "manaRegen": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              1,
+              1,
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 0,
+            "steps": [
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 1,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b69",
+    "skillName_eng": "Adrenaline",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigene Angriffe können Adrenalin mit 5 Prozent Wahrscheinlichkeit auslösen, wenn der Skill bereit ist. Es erhöht Stärke und Intelligenz um 1 Prozent je Skillstufe, bis zu 5 Prozent. Die Dauer steigt von 20 auf 30 Sekunden und der Cooldown sinkt von 120 auf 102 Sekunden.",
+    "description_eng": "Your own attacks have a 5 percent chance to trigger Adrenaline when ready. It increases Strength and Intelligence by 1 percent per skill level, up to 5 percent. Duration increases from 20 to 30 seconds and cooldown decreases from 120 to 102 seconds.",
+    "dmgType": "passive",
+    "int": 0.01,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 6,
+    "skillName_de": "Adrenalin",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "str": "fraction",
+      "int": "fraction"
+    },
+    "str": 0.01,
+    "activation": "automatic",
+    "cd": 120,
+    "dur": 20,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      },
+      "int": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      }
+    },
+    "triggerCondition": {
+      "type": "ownAttack",
+      "chancePerCheck": 0.05,
+      "oncePerAttackAction": true,
+      "excludeCompanionAttacks": true,
+      "requiresCooldownReady": true
+    },
+    "triggerConditionStatus": "defined",
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -4.5
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 20,
+      "perLevel": 2.5
+    },
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 120,
+              "perLevel": -4.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 20,
+            "perLevel": 2.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b72",
+    "skillName_eng": "Tremor",
+    "__v": 0,
+    "category": "active",
+    "cd": 39,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schmettert deine Waffe auf den Boden und erzeugt ein Beben, das getroffene Gegner schädigt und verlangsamt. Der physische Grundangriffswert steigt von 81 um 39 je weiterer Skillstufe auf 822. Die Mana-Kosten 20 auf Stufe 1, +10 je weiterer Stufe, maximal 210 auf Stufe 20. Der Cooldown sinkt von 39 auf 29 Sekunden. Die Verlangsamung beginnt bei 5 Prozent für 1 Sekunde. Auf Skilllevel 5, 10, 15 und 20 steigt sie jeweils um 1 Prozentpunkt und ihre Dauer um 0,5 Sekunden, bis zu 9 Prozent für 3 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). Castzeit 0,1 Sekunden.",
+    "description_eng": "Slams your weapon into the ground, causing a tremor that damages and slows affected enemies. Physical base attack increases from 81 by 39 per additional skill level to 822. Mana cost 20 at level 1, maximum 210 at level 20. Cooldown decreases from 39 to 29 seconds. The slow starts at 5 percent for 1 second. At skill levels 5, 10, 15 and 20, it increases by 1 percentage point and lasts 0.5 seconds longer, reaching 9 percent for 3 seconds. Cast time 0.1 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 15,
+    "patk": 81,
+    "skillName_de": "Beben",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 39,
+      "perLevel": -0.5263157894736842
+    },
+    "effects": [
+      {
+        "key": "tremorSlow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationStatus": "defined",
+        "progressionStatus": "defined",
+        "durationSeconds": 1,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.09
+          ]
+        },
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            1,
+            1,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            3
+          ]
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 20,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 10
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 81,
+        "perLevel": 39
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 39,
+              "perLevel": -0.5263157894736842
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": -0.05,
+            "steps": [
+              0,
+              0,
+              0,
+              -0.009999999999999995,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              0,
+              0,
+              0,
+              0.5,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 20,
+              "perLevel": 10
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 81,
+            "perLevel": 39
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b84",
+    "skillName_eng": "Energy Converter",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft deinen physischen Angriff um 3 und deinen magischen Angriff um 2 je gelerntem Skilllevel, bis zu 30 physischem und 20 magischem Angriff auf Stufe 10. Permanenter passiver Skill ohne Trigger, Aktivierungskosten, Castzeit, Cooldown oder begrenzte Wirkungsdauer.",
+    "description_eng": "Permanently increases physical attack by 3 and magical attack by 2 per learned skill level, reaching 30 physical and 20 magical attack at level 10. Permanent passive skill with no trigger, activation costs, cast time, cooldown or limited duration.",
+    "dmgType": "passive",
+    "matk": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 33,
+    "patk": 3,
+    "skillName_de": "Energie Umwandler",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "matk": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b89",
+    "skillName_eng": "Earthquake",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein Erdbeben in einem kreisförmigen Bereich mit 5 Metern Radius um dich und trifft Gegner physisch und magisch. Verlangsamt getroffene Gegner für 3 Sekunden: auf Level 1 um 7 Prozent, je weiterer Stufe um 1 Prozentpunkt mehr, bis zu 16 Prozent auf Level 10. Der physische Grundangriffswert steigt von 167 um 53 je weiterer Stufe auf 644, der magische von 35 um 25 auf 260. Die Mana-Kosten 51 auf Stufe 1, +20 je weiterer Stufe, maximal 231 auf Stufe 10. Die Cast Time beträgt 0,1 Sekunden, der Cooldown bleibt zunächst bei 55 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Causes an earthquake in a circular 5 meter radius around you, dealing physical and magical damage to enemies. Slows affected enemies for 3 seconds: 7 percent at level 1, increasing by 1 percentage point per additional level to 16 percent at level 10. Physical base attack increases from 167 by 53 per additional level to 644; magical base attack increases from 35 by 25 to 260. Mana cost 51 at level 1, maximum 231 at level 10. Cast time is 0.1 seconds and cooldown remains provisionally 55 seconds.",
+    "dmgType": "physical",
+    "dur": 3,
+    "matk": 35,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 38,
+    "patk": 167,
+    "skillName_de": "Erdbeben",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "mana": 51,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 51,
+          "perLevel": 20
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 167,
+        "perLevel": 53
+      },
+      "matk": {
+        "type": "linear",
+        "base": 35,
+        "perLevel": 25
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 5,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "effects": [
+      {
+        "key": "earthquakeSlow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.07,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 3,
+        "durationStatus": "defined",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.07,
+          "perLevel": -0.01
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 51,
+              "perLevel": 20
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 167,
+            "perLevel": 53
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 35,
+            "perLevel": 25
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": -0.07,
+            "perLevel": -0.01
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "mixed",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b8f",
+    "skillName_eng": "Expansion of the Spirit",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher",
+      "Ritualist",
+      "Bloodmage",
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Shamane",
+      "High Elves",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft Intelligenz, Willenskraft und Geschick auf Stufe 1 jeweils um 2. Bis Stufe 9 steigt jeder Bonus je weiterer Stufe um 1 auf jeweils 10. Auf Stufe 10 werden die Boni verdoppelt: jeweils +20. Faith und Victim werden nicht mehr gewährt. Geschick erhöht die Genauigkeit physischer und magischer Angriffe; ein Angriffsbonus daraus gilt nur für Bogen-/Armbrustklassen. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanently grants 2 Intelligence, Wisdom and Dexterity at level 1, adding 1 to each per additional level through level 9 (10 each). Level 10 doubles those bonuses to 20 each. No Faith or Victim bonus. Dexterity improves accuracy for physical and magical attacks; its attack contribution applies only to bow/crossbow classes. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 44,
+    "skillName_de": "Erweiterung des Geistes",
+    "skillpoints": 1,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "dex": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      }
+    },
+    "dex": 2,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 3,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b95",
+    "skillName_eng": "Firelance",
+    "__v": 0,
+    "category": "active",
+    "cd": 49,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft eine Feuerlanze, die einen Gegner einmalig durchbohrt. Der magische Grundschaden steigt von 197 um 46 je weiterer Stufe auf 611 auf Stufe 10.  Der Cooldown sinkt von 49 um 1 Sekunde je weiterer Stufe auf 40 Sekunden. Castzeit 0,2 Sekunden. Keine anhaltende Schadenswirkung; der Rüstungseffekt der Eislanze wird nicht übernommen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). Mana-Kosten je Stufe: 49/61/72/84/95/107/118/130/141/153. Exakt gerundete 25 Prozent des gesamten Skill-Grundschadens ohne Charakterangriff; garantierte Mehrfachtreffer und garantierter kritischer Treffer sind enthalten, Heilung erhält keinen zusätzlichen Kostenaufschlag.",
+    "description_eng": "Creates a lance of fire that pierces an enemy once. Base magical damage increases from 197 by 46 per additional level to 611 at level 10.  Cooldown decreases from 49 by 1 second per additional level to 40 seconds. Cast time is 0.2 seconds. No ongoing damage; the Ice Lance armor effect is not copied. Mana costs by level: 49/61/72/84/95/107/118/130/141/153. Exactly rounded 25 percent of total skill base damage excluding character attack; guaranteed multiple hits and guaranteed critical damage are included, with no additional healing surcharge.",
+    "dmgType": "spell",
+    "matk": 197,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 50,
+    "skillName_de": "Feuerlanze",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 49,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 49,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 49,
+          "values": [
+            49,
+            61,
+            72,
+            84,
+            95,
+            107,
+            118,
+            130,
+            141,
+            153
+          ]
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 197,
+        "perLevel": 46
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 49,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 197,
+            "perLevel": 46
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba1",
+    "skillName_eng": "Infernal Cyclone",
+    "__v": 0,
+    "category": "active",
+    "cd": 119,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt einen Zyklon aus Höllenfeuer im betroffenen Gebiet. Der bisherige magische Grundschadenswert steigt von 368 um 142 je weiterer Stufe auf 936 auf Stufe 5. Mana-Kosten 234 auf Stufe 1, Stufenwerte 234, 325, 467, 570, 746, maximal 746 auf Stufe 5. Die Dauer steigt von 6 um 1 Sekunde je weiterer Stufe auf 10 Sekunden. Der Cooldown sinkt von 119 um 2 Sekunden je weiterer Stufe auf 111 Sekunden. Castzeit 0,4 Sekunden. Der genannte Grundschaden trifft einmal beim Auslösen. Danach verursacht der Zyklon alle 2 Sekunden zusätzlichen magischen Schaden: 72 auf Stufe 1, je weiterer Stufe +28,5 bis 186 auf Stufe 5, zuzüglich des aktuellen Charakter-M-Angriffs bei jedem Tick. Der erste zusätzliche Tick erfolgt nach 2 Sekunden. Bei voller Laufzeit trifft der DoT auf Stufe 1 dreimal (2/4/6 Sekunden) und auf Stufe 5 fünfmal (2/4/6/8/10 Sekunden). Trefferbereich und Verhalten bei Bewegung des Ziels bleiben offen. Aktuelle Mana-Gruppe: finisher (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates a cyclone of hellfire in the affected area. Existing magical base damage increases from 368 by 142 per additional level to 936 at level 5. Mana cost 234 at level 1, maximum 746 at level 5. Duration increases from 6 by 1 second per additional level to 10 seconds. Cooldown decreases from 119 by 2 seconds per additional level to 111 seconds. Cast time is 0.4 seconds. The stated base damage hits once on activation. Additional magical damage ticks every 2 seconds: 72 at level 1 plus 28.5 per additional level to 186 at level 5, adding current caster magical attack to each tick. First tick after 2 seconds. Full duration gives three ticks at level 1 (2/4/6 seconds) and five at level 5 (2/4/6/8/10 seconds). Hit area and behavior when the target moves remain pending.",
+    "dmgType": "spell",
+    "dur": 6,
+    "matk": 368,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 62,
+    "skillName_de": "Infernal Zyklon",
+    "skillpoints": 1,
+    "durationScaling": {
+      "type": "linear",
+      "base": 6,
+      "perLevel": 1
+    },
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 119,
+      "perLevel": -2
+    },
+    "mana": 234,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            234,
+            325,
+            467,
+            570,
+            746
+          ],
+          "base": 234
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 368,
+        "perLevel": 142
+      }
+    },
+    "effects": [
+      {
+        "key": "infernal-cyclone-periodic",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 72,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 72,
+          "perLevel": 28.5
+        },
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "linear",
+          "base": 6,
+          "perLevel": 1
+        },
+        "firstTickAfterSeconds": 2,
+        "intervalSeconds": 2,
+        "addsCasterMagicalAttack": true,
+        "damageTypes": [
+          "magical"
+        ],
+        "periodicDamageKind": "areaAttack"
+      }
+    ],
+    "manaPricing": {
+      "category": "finisher",
+      "factor": 0.4,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 119,
+              "perLevel": -2
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.4,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 368,
+            "perLevel": 142
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 72,
+            "perLevel": 28.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04baf",
+    "skillName_eng": "Infernal Cross Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entzündet Flammen um deine beiden Einhand-Streitkolben und führt zwei aufeinanderfolgende Schläge aus. Jeder Treffer verursacht physischen Grundschaden von 166, +32 je weiterer Stufe bis 614 auf Stufe 15, sowie magischen Feuer-Grundschaden in halber Höhe: 83, +16 je weiterer Stufe bis 307. Je Treffer kommen einmal der volle aktuelle P-Angriff und einmal der volle aktuelle M-Angriff hinzu. Zwei Treffer mit jeweils voller Wirkung, keine zusätzliche Schadensverdopplung und kein DoT. Keine Castzeit. Cooldown 47 Sekunden, −1 je weiterer Stufe bis 33. Vorläufige Animation 0,5 Sekunden; genaue Trefferzeitpunkte und Trefferbereich bleiben offen. Mana-Kosten 125 auf Stufe 1, +24 je weiterer Stufe bis 461 auf Stufe 15. Die Kosten entsprechen gerundet 25 Prozent des gesamten Skill-Grundschadens beider Treffer, ohne Charakterangriff und ohne zusätzliche Gegnerzahl.",
+    "description_eng": "Ignites flames around your two one-handed maces and performs two consecutive strikes. Each hit deals physical base damage 166 plus 32 per additional level to 614 at level 15, plus magical fire base damage equal to half: 83 plus 16 per additional level to 307. Each hit adds full current physical attack and full current magical attack once. Both hits deal full damage, without an extra doubling or damage over time. No cast time. Cooldown 47 seconds minus 1 per additional level to 33. Provisional animation 0.5 seconds; exact hit timing and hit area remain undefined. Mana 125 at level 1 plus 24 per additional level to 461, rounded from 25 percent of both hits total skill base damage, excluding character attack and target count.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 76,
+    "patk": 166,
+    "skillName_de": "Infernaler Kreuzschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending",
+      "magicalDamageElement": "fire"
+    },
+    "castTimeSeconds": 0,
+    "mana": 125,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 125,
+          "perLevel": 24
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 166,
+        "perLevel": 32
+      },
+      "matk": {
+        "type": "linear",
+        "base": 83,
+        "perLevel": 16
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "matk": 83,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 166,
+            "perLevel": 32
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 83,
+            "perLevel": 16
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "mixed",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcd",
+    "skillName_eng": "Leap Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Abenteuer",
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Springt senkrecht hoch und schlägt mit der Waffe auf den Boden. Trifft Gegner in einem kreisförmigen Bereich mit 2 Metern Radius um dich, ohne Vorwärtsbewegung oder zusätzlichen Debuff. Der physische Skill-Grundschaden steigt gleichmäßig von 391 auf Stufe 1 auf 1606 auf Stufe 10. Die Mana-Kosten 98 auf Stufe 1, +34 je weiterer Stufe, maximal 404 auf Stufe 10. Der Cooldown 45 Sekunden auf Stufe 1 und 36 Sekunden auf Stufe 10. Die Aktion beginnt ohne zusätzliche Cast Time; die Animation dauert vorläufig 0,5 Sekunden. Sprunghöhe und genauer Trefferzeitpunkt werden im Spiel geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Jumps vertically and slams the weapon into the ground. Hits enemies within a circular 2 meter radius around you, with no forward movement or additional debuff. Physical skill base damage increases evenly from 391 at level 1 to 1606 at level 10. Mana cost 98 at level 1, maximum 404 at level 10. Cooldown 45 seconds at level 1 and 36 seconds at level 10. The action begins without additional cast time; provisional animation duration is 0.5 seconds. Jump height and exact impact timing will be verified in game.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 106,
+    "patk": 391,
+    "skillName_de": "Sprungschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "mana": 98,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 98,
+          "perLevel": 34
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 391,
+        "perLevel": 135
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 2,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": -1
+    },
+    "effects": [],
+    "movement": {
+      "type": "verticalJump",
+      "forwardDistanceMeters": 0,
+      "heightStatus": "provisional"
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 98,
+              "perLevel": 34
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 391,
+            "perLevel": 135
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 45,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be8",
+    "skillName_eng": "Tame",
+    "__v": 0,
+    "category": "creature",
+    "cd": 60,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen.",
+    "description_eng": "Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined.",
+    "dmgType": "spell",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 133,
+    "skillName_de": "Tamen",
+    "skillpoints": 1,
+    "castTimeScaling": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": -0.5
+    },
+    "castTimeSeconds": 3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 60,
+      "perLevel": -10
+    },
+    "mana": 100,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 100,
+          "perLevel": 25
+        }
+      }
+    ],
+    "taming": {
+      "requiresMatchingItem": true,
+      "itemConsumptionStatus": "pending",
+      "creatureCounterStatus": "pending",
+      "baseSuccessChance": 0.5,
+      "successChanceScaling": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.15
+      }
+    },
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3,
+        "Gladiator": 1,
+        "Berserker": 1
+      },
+      "status": "secondSpecialistPending"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "castTimeScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 3,
+              "perLevel": -0.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 60,
+              "perLevel": -10
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 100,
+              "perLevel": 25
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "taming",
+            "successChanceScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.15
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 4,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be9",
+    "skillName_eng": "Bond",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown.",
+    "description_eng": "The bond permanently strengthens your companion. At skill level 1 it gains 10 Strength, Vitality, Intelligence and Wisdom each. Each additional level adds 5 to each attribute, reaching 20 each at level 3. The player does not receive these bonuses. Standard classes can learn level 1; the Adventurer can learn level 3. The second specialist class is still to be defined. Bond has no activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 134,
+    "skillName_de": "Bindung",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "bond_str",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "str",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      },
+      {
+        "key": "bond_vita",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "vita",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      },
+      {
+        "key": "bond_int",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "int",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      },
+      {
+        "key": "bond_wis",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "wis",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3
+      },
+      "status": "secondSpecialistPending"
+    },
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "3",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 6,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bea",
+    "skillName_eng": "Control",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Je besser du deine Kreaturen kontrollierst, desto effizienter werden sie. Alle Klassen können maximal Stufe 1 lernen, der Abenteurer und seine Weiterentwicklung maximal Stufe 3. Freischaltung ab Charakterlevel 5.",
+    "description_eng": "Improves creature control efficiency. All classes can learn up to level 1; the Adventurer and its advancement can learn up to level 3. Unlocks at character level 5.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 135,
+    "skillName_de": "Kontrolle",
+    "skillpoints": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3,
+        "Adventure": 3,
+        "Adventurer": 3,
+        "Scout": 3
+      },
+      "status": "defined"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 5,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04beb",
+    "skillName_eng": "Summon",
+    "__v": 0,
+    "category": "creature",
+    "cd": 5,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualiost",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer.",
+    "description_eng": "Summons your companion after a 1 second cast time. Costs 5 Mana and has a 5 second cooldown. There is no subsequent effect duration.",
+    "dmgType": "spell",
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 136,
+    "skillName_de": "Beschwören",
+    "skillpoints": 1,
+    "castTimeSeconds": 1,
+    "mana": 5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 5
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 5
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 6,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bec",
+    "skillName_eng": "Recall",
+    "__v": 0,
+    "category": "creature",
+    "cd": 5,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer.",
+    "description_eng": "Recalls your companion instantly. Costs 5 Mana and has a 5 second cooldown. No cast time or subsequent effect duration.",
+    "dmgType": "spell",
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 137,
+    "skillName_de": "Zurückrufen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "mana": 5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 5
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 5
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 6,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bed",
+    "skillName_eng": "Breed",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen.",
+    "description_eng": "Allows your companion to gain experience and level up. It receives the same experience as you, plus 10 percent per learned skill level: 110 percent at level 1, 120 percent at level 2 and 130 percent at level 3. Permanently passive with no costs or cooldown. Standard classes can learn level 1, the Adventurer level 3; the second specialist class is still to be defined.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 138,
+    "skillName_de": "Zucht",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "breedExperience",
+        "type": "experienceBonus",
+        "target": "companion",
+        "experienceSource": "playerExperience",
+        "value": 0.1,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.1,
+          "perLevel": 0.1
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3
+      },
+      "status": "secondSpecialistPending"
+    },
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 7,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bee",
+    "skillName_eng": "Endurance Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Zähigkeit. Je gelerntem Skilllevel erhältst du 1 Vitalität, 1 Willenskraft sowie jeweils 4 physische und magische Verteidigung. Auf Level 20 sind das 20 Vitalität, 20 Willenskraft und jeweils 80 Verteidigung. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently improves resilience. Each learned skill level grants 1 Vitality, 1 Wisdom, and 4 physical and magical defense each. At level 20, this grants 20 Vitality, 20 Wisdom, and 80 of each defense. No activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "mdef": 4,
+    "nr": 139,
+    "pdef": 4,
+    "skillName_de": "Ausdauertraining",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 4
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 4
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 2,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf3",
+    "skillName_eng": "Armor Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Rüstungsbeherrschung. Je gelerntem Skilllevel erhältst du jeweils 6 physische und magische Verteidigung, bis zu jeweils 60 auf Level 10. Keine Vitalitätsboni, Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently improves armor proficiency. Each learned skill level grants 6 physical and magical defense each, up to 60 each at level 10. No Vitality bonus, activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 144,
+    "pdef": 6,
+    "skillName_de": "Rüstungstraining",
+    "skillpoints": 1,
+    "mdef": 6,
+    "resourceCosts": [],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 2,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf8",
+    "skillName_eng": "Power of the Wild",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für Abenteurer und Schamane, Dauer 1200 Sekunden. Stärke 3 +1 je weiterer Stufe bis 5 und P-Angriff 30 +15 je weiterer Stufe bis 60 auf Stufe 3. Kein Intelligenzbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff for Adventurer and Shaman lasting 1200 seconds. Strength starts at 3 and increases by 1 to 5; physical attack starts at 30 and increases by 15 to 60 at level 3. No Intelligence bonus. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 76 at level 3, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 1200,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 149,
+    "patk": 30,
+    "skillName_de": "Macht der Wildnis",
+    "skillpoints": 1,
+    "str": 3,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "str": "self",
+      "patk": "self"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      },
+      "patk": {
+        "type": "linear",
+        "base": 30,
+        "perLevel": 15
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 1200,
+      "perLevel": 0
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 30,
+            "perLevel": 15
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1200,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c23",
+    "skillName_eng": "Power of the Rock",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die physische Verteidigung deiner Gruppe einschließlich dir selbst um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 10 kommen zusätzlich 5 Vitalität hinzu. Die Mana-Kosten steigen von 54 um 16 je weiterer Stufe auf 198. Castzeit 0,6 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases physical defense for your group, including yourself, by 18 per learned skill level, reaching 180 at level 10. Level 10 additionally grants 5 Vitality. Mana cost increases from 54 by 16 per additional level to 198. Cast time is 0.6 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 192,
+    "pdef": 18,
+    "skillName_de": "Macht des Felsens",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "mana": 54,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 54,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0,
+            "changes": [
+              {
+                "level": 10,
+                "value": 5
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2c",
+    "skillName_eng": "Weapon Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Waffentraining verbessert dauerhaft deine allgemeinen Waffenfertigkeiten. Gewährt je gelernter Stufe 5 physischen und 5 magischen Angriff, bis zu jeweils 100 auf Stufe 20. Gewährt keine Angriffsgeschwindigkeit.",
+    "description_eng": "Weapon Training permanently improves your general weapon proficiency. Each learned level grants 5 physical attack and 5 magical attack, reaching 100 each at level 20. Does not grant attack speed.",
+    "dmgType": "passive",
+    "matk": 5,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 201,
+    "patk": 5,
+    "skillName_de": "Waffentraining",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "patk": "flat",
+      "matk": "flat"
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "matk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 2,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2d",
+    "skillName_eng": "Burn",
+    "__v": 0,
+    "category": "active",
+    "cd": 22,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lässt einen Gegner für 10 Sekunden brennen: zehn magische Schadensticks, einer je Sekunde, erster Tick nach einer Sekunde, kein Initialtreffer. Fünf Skillstufen mit 16/39/61/84/106 Grundschaden je Tick, insgesamt 160/390/610/840/1060 Grundschaden. Kein zusätzlicher Charakterangriff je Tick. Mana-Kosten: 24/59/92/126/159, gerundet 15 Prozent des gesamten Grundschadens vor passiven Rabatten. Weisheit des Salamanders verstärkt Feuerschaden und reduziert Mana-Kosten. Castzeit 0,2 Sekunden, Cooldown 22 Sekunden. Die Maximalwerte entsprechen der vorherigen Stufe 10. Zielanzahl und Trefferbereich werden später geprüft.",
+    "description_eng": "Burns an enemy for 10 seconds: ten magical damage ticks, one per second, first tick after one second, no initial hit. Five skill levels deal 16/39/61/84/106 base damage per tick, totaling 160/390/610/840/1060. No additional character attack per tick. Mana costs 24/59/92/126/159, rounded 15% of total base damage before passive discounts. Wisdom of the Salamander boosts fire damage and reduces Mana cost. Cast time 0.2 seconds, cooldown 22 seconds. Maximum values match the previous level 10. Target count and area remain subject to later review.",
+    "dmgType": "spell",
+    "dur": 10,
+    "matk": 12,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 202,
+    "skillName_de": "Verbrennen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "effects": [
+      {
+        "key": "burn-dot",
+        "type": "periodicDamage",
+        "target": "enemy",
+        "value": 16,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 10,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            16,
+            39,
+            61,
+            84,
+            106
+          ]
+        },
+        "periodicDamageKind": "residualDot",
+        "addsCasterMagicalAttack": false
+      }
+    ],
+    "hasLingeringDamage": true,
+    "mana": 24,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 24,
+          "values": [
+            24,
+            59,
+            92,
+            126,
+            159
+          ]
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "table",
+        "values": [
+          12,
+          26,
+          39,
+          53,
+          66
+        ]
+      }
+    },
+    "manaPricing": {
+      "category": "dot",
+      "factor": 0.15,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 16,
+            "steps": [
+              23,
+              22
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.15,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 12,
+            "steps": [
+              14,
+              13
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c42",
+    "skillName_eng": "Speed of the Dox",
+    "__v": 0,
+    "atkSpeed": 0.1,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Gruppenbuff für 1800 Sekunden. Gewährt 10 bis 15 Punkte Angriffsgeschwindigkeit über 3 Stufen und 10 bis 15 Prozent Laufgeschwindigkeit. Mana-Kosten steigen von 63 um 23 je weiterer Stufe auf 109. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Group buff lasting 1800 seconds. Grants 10 to 15 attack speed rating points and 10 to 15 percent movement speed across 3 levels. Mana cost 63 plus 23 per additional level, reaching 109. Cast time 0.4 seconds; cooldown 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.1,
+    "nr": 223,
+    "skillName_de": "Geschwindigkeit der Dox",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 23
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.1,
+        "perLevel": 0.024999999999999994
+      },
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.1,
+        "perLevel": 0.025
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 63,
+              "perLevel": 23
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.024999999999999994
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "movementSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.025
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c43",
+    "skillName_eng": "Power of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht den physischen Angriff deiner Gruppe um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 1 gibt es keinen zusätzlichen magischen Angriff; je weiterer Stufe kommen 9 hinzu, bis zu 81 magischer Angriff auf Stufe 10. Mana-Kosten beginnen bei 63 und steigen um 24 je weiterer Stufe auf 279. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases group physical attack by 18 per learned skill level, reaching 180 at level 10. Level 1 grants no additional magical attack; each additional level adds 9, reaching 81 magical attack at level 10. Mana cost starts at 63 and increases by 24 per additional level to 279. Cast time is 0.4 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 224,
+    "patk": 18,
+    "skillName_de": "Macht des Feuers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 24
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "matk": {
+        "type": "linear",
+        "base": 0,
+        "perLevel": 9
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 63,
+              "perLevel": 24
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 18,
+            "perLevel": 18
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 9
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff"
+  },
+  {
+    "_id": "6ad499d7b7588146a87c6fb5",
+    "skillName_eng": "Dual Mace Training",
+    "category": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ermöglicht das Führen von zwei Einhand-Streitkolben. Permanentes Waffentraining: Auf Skilllevel 1 erhältst du 2 Stärke und 1 Intelligenz. Je weiterer Stufe steigt abwechselnd Stärke oder Intelligenz um 1, beginnend mit Stärke auf Stufe 2. Auf Stufe 10 insgesamt 7 Stärke und 5 Intelligenz. Die Boni gelten einmal für den Charakter, nicht pro Waffe. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Allows wielding two one-handed maces. Permanent weapon training: level 1 grants 2 Strength and 1 Intelligence. Each additional level alternately adds 1 Strength or Intelligence, starting with Strength at level 2. Level 10 grants 7 Strength and 5 Intelligence in total. Bonuses apply once to the character, not per weapon. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 252,
+    "skillName_de": "Streitkolbentraining",
+    "skillpoints": 1,
+    "str": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "str": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7
+        ]
+      },
+      "int": {
+        "type": "table",
+        "values": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 2,
+            "steps": [
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad4d38a6157f3dde2217aed",
+    "nr": 254,
+    "skillName_de": "Weisheit des Salamanders",
+    "skillName_eng": "Wisdom of the Salamander",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "salamander-damageBonus-15-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 15,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-38-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 38,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-76-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 76,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-106-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 106,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-50-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 50,
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-62-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 62,
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-76-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 76,
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-202-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 202,
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-255-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 255,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "damageTypes": [
+          "physical"
+        ],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        }
+      },
+      {
+        "key": "salamander-damageBonus-256-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 256,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "damageTypes": [
+          "physical"
+        ],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        }
+      },
+      {
+        "key": "salamander-damageBonus-258-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 258,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "damageTypes": [
+          "physical"
+        ],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        }
+      },
+      {
+        "key": "salamander-all-skill-mana",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "appliesTo": "allSkills",
+        "resource": "mana",
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        }
+      }
+    ],
+    "description_de": "Permanente Passive mit fünf Stufen. Erhöht den physischen Schaden von Beben, Erdbeben, Infernalem Kreuzschlag, Sprungschlag, Felszähne, Felsensalve und beiden Phasen der Erdsäule um 0,3 Prozent je Stufe, maximal 1,5 Prozent. Erhöht den magischen Feuerschaden von Feuerlanze, Infernal Zyklon, Infernalem Kreuzschlag und Verbrennen um 0,6 Prozent je Stufe, maximal 3 Prozent; bestehende Feuer-DoTs profitieren ebenfalls. Senkt die Manakosten sämtlicher eigener Skills um 0,6 Prozent je Stufe, maximal 3 Prozent, einschließlich Erdangriffen, Buffs und Unterstützungsfähigkeiten. Andere Ressourcenpreise werden nicht reduziert. Schadensboni umfassen den passenden Charakterangriff; beim Kreuzschlag wird jede Komponente nur einmal verstärkt. Keine Wirkung auf Auto-Attack-Schaden, Cooldowns, Castzeiten oder den magischen Erdschaden von Erdbeben. Keine zusätzliche Brandchance, Aktivierungskosten oder begrenzte Dauer.",
+    "description_eng": "Permanent passive with five levels. Increases physical damage of Tremor, Earthquake, Infernal Cross Strike, Jump Strike, Rock Fangs, Rock Volley and both Earth Pillar phases by 0.3 percent per level, up to 1.5 percent. Increases magical fire damage of Fire Lance, Infernal Cyclone, Infernal Cross Strike and Burn by 0.6 percent per level, up to 3 percent, including existing fire damage over time. Reduces Mana costs of all own skills by 0.6 percent per level, up to 3 percent, including earth attacks, buffs and support skills. Other resource costs are unchanged. Damage bonuses include the matching character attack; each cross-strike component is boosted once. Does not affect basic-attack damage, cooldowns, cast times or Earthquake magical earth damage. No additional burn chance, activation cost or limited duration.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "3",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "4",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "5",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "6",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "7",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "8",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "9",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "10",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "11",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad4d5ac4b9572cb1e0ce934",
+    "nr": 255,
+    "skillName_de": "Felszähne",
+    "skillName_eng": "Rock Fangs",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 73,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 73,
+        "perLevel": 46
+      }
+    },
+    "mana": 18,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 18,
+          "values": [
+            18,
+            30,
+            41,
+            53,
+            64,
+            76,
+            87,
+            99,
+            110,
+            122,
+            133,
+            145,
+            156,
+            168,
+            179,
+            191,
+            202,
+            214,
+            225,
+            237
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.1,
+    "cd": 34,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 34,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "defined"
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "evaluation": "atImpact"
+    },
+    "description_de": "Lässt große, überkreuzte Felsspitzen um das anvisierte Ziel aus dem Boden schießen. Verursacht einmalig physischen Schaden an Gegnern in einem kleinen kreisförmigen Bereich um das Ziel; eng beieinanderstehende Gegner können gemeinsam getroffen werden. Grundschaden 73 auf Stufe 1, +46 je weiterer Stufe bis 947 auf Stufe 20, zuzüglich einmal des aktuellen P-Angriffs je getroffenem Gegner. Keine Verlangsamung, kein DoT und kein zusätzlicher Kontroll- oder Mehrfachtreffereffekt. Castzeit 0,1 Sekunden. Cooldown 34 Sekunden auf Stufe 1, −1 je weiterer Stufe bis 15 auf Stufe 20. Mana-Kosten entsprechen je Stufe gerundet 25 Prozent des Skill-Grundschadens, ohne Charakterangriff oder Gegnerzahl: 18 bis 237 Mana. Genauer Flächenradius, Reichweite und Animation noch offen. Weisheit des Salamanders erhöht den physischen Schaden und reduziert als allgemeiner Skillrabatt auch die Mana-Kosten.",
+    "description_eng": "Crossing rock spikes erupt around the selected target, dealing one physical hit to enemies in a small circular area. Closely grouped enemies can be hit together. Base damage 73 at level 1 plus 46 per additional level to 947 at level 20, plus full current physical attack once per target. No slow, damage over time, additional control or multi-hit effect. Cast time 0.1 seconds. Cooldown 34 seconds minus 1 per additional level to 15. Mana per level is rounded from 25 percent of skill base damage, excluding character attack and target count: 18 to 237. Exact area radius, range and animation remain undefined. Wisdom of the Salamander boosts physical damage and its general skill Mana discount applies.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 73,
+            "perLevel": 46
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 34,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  },
+  {
+    "_id": "6ad4d939ec1879104cce1e72",
+    "nr": 256,
+    "skillName_de": "Felsensalve",
+    "skillName_eng": "Rock Volley",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 611,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 611,
+        "perLevel": 150
+      }
+    },
+    "mana": 306,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 306,
+          "values": [
+            306,
+            381,
+            456,
+            531,
+            908,
+            1021,
+            1133,
+            1246,
+            1358,
+            1961,
+            2111,
+            2261,
+            2411,
+            2561,
+            3389
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.6,
+    "cd": 65,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 65,
+      "perLevel": -1
+    },
+    "animationDurationSeconds": 2.5,
+    "animationTimingStatus": "provisional",
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "hitCount": 2,
+      "hitCountScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      "damageValueScope": "perHit",
+      "targetMode": "singleEnemy",
+      "hitTimingStatus": "pending",
+      "secondarySplinters": {
+        "damageFractionOfPrimaryHit": 0.1,
+        "maxTargetsPerProjectile": 4,
+        "reselectEachProjectile": true,
+        "distinctWithinProjectile": true,
+        "excludesPrimaryTarget": true,
+        "unusedSlotsExpire": true,
+        "canCauseFurtherSplinters": false,
+        "region": "behindPrimaryTarget",
+        "geometryStatus": "pending"
+      }
+    },
+    "description_de": "Hebt Felsplatten aus dem Boden und schleudert sie auf ein Hauptziel. Zwei Platten auf Stufe 1–4, drei auf Stufe 5–9, vier auf Stufe 10–14 und fünf auf Stufe 15. Jede Platte verursacht 611 physischen Grundschaden, +150 je weiterer Skillstufe bis 2711, zuzüglich einmal des aktuellen P-Angriffs. Jeder Einschlag erzeugt eine Splitterwelle hinter dem Hauptziel: bis zu vier verschiedene zufällige Nebenziele erhalten jeweils 10 Prozent des Schadens der jeweiligen Platte. Die Auswahl erfolgt je Platte neu aus den dann im Gebiet stehenden Gegnern. Das Hauptziel erhält keinen zusätzlichen Splitterschaden. Fehlende Nebenziele lassen Trefferplätze verfallen; keine Umverteilung auf bereits getroffene Gegner und keine weiteren Splitter aus Splittern. Exakte Fächergeometrie und Reichweite bleiben offen. Castzeit 0,6 Sekunden. Cooldown 65 Sekunden, −1 je weiterer Stufe bis 51 Sekunden. Vorläufige Animationsdauer 2,5 Sekunden; genaue Trefferzeitpunkte bleiben offen. Mana pro gesamter Anwendung: gerundet 25 Prozent des gesamten Grundschadens der Hauptziel-Platten, ohne Charakterangriff oder zusätzliche Gegnerzahl; 306 bis 3389. Kein DoT oder Kontrolleffekt. Weisheit des Salamanders erhöht den physischen Schaden und reduziert als allgemeiner Skillrabatt auch die Mana-Kosten.",
+    "description_eng": "Lifts rock plates and throws them at one primary target. Two plates at levels1–4, three at5–9, four at10–14 and five at15. Each plate deals physical base damage611 plus150 per additional level to2711, plus full current physical attack once. Each impact sends splinters behind the primary target: up to four distinct random secondary enemies each receive10 percent of that plate damage. Targets are reselected independently for every plate from enemies currently inside. Excludes the primary target; unused slots expire, with no redistribution or recursive splinters. Exact fan geometry and range remain undefined. Cast0.6 seconds, cooldown65 minus1 per additional level to51. Provisional animation2.5 seconds, exact hit offsets pending. Mana per full application is rounded25 percent of all primary-projectile base damage, excluding character attack and secondary target count:306–3389. No DoT or control. Wisdom of the Salamander boosts physical damage and its general skill Mana discount applies.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 611,
+            "perLevel": 150
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 65,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "attackExecution",
+            "hitCountScaling"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 2,
+            "steps": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  },
+  {
+    "_id": "6ad4dcc0c50d0cd4e8963c82",
+    "nr": 257,
+    "skillName_de": "Feurige Leidenschaft",
+    "skillName_eng": "Fiery Passion",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "cd": 90,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 90,
+      "perLevel": -1
+    },
+    "dur": 10,
+    "triggerConditionStatus": "defined",
+    "triggerCondition": {
+      "type": "ownAttack",
+      "chancePerCheck": 0.005,
+      "requiresCooldownReady": true,
+      "manaBelowFraction": 0.5,
+      "oncePerAttackAction": true,
+      "includesBasicAttacks": true,
+      "includesAttackSkills": true,
+      "excludeCompanionAttacks": true,
+      "excludesPeriodicDamage": true,
+      "chancePerCheckScaling": {
+        "type": "linear",
+        "base": 0.005,
+        "perLevel": 0.005
+      }
+    },
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "passion-fire-auto",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "basicAttack",
+        "damageTypes": [
+          "magical"
+        ],
+        "damageSchool": "fire",
+        "value": 2,
+        "unit": "flat",
+        "durationSeconds": 10,
+        "valueScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 2
+        }
+      },
+      {
+        "key": "passion-auto-mana",
+        "type": "resourceGain",
+        "resource": "mana",
+        "target": "self",
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "value": 5,
+        "unit": "flat",
+        "durationSeconds": 10
+      }
+    ],
+    "description_de": "Bei weniger als 50 Prozent deines maximalen Manas können erfolgreiche eigene Auto-Attacks oder direkte Angriffsskills mit 0,5 Prozent Wahrscheinlichkeit je gelernter Skillstufe Feurige Leidenschaft entfesseln (0,5 Prozent auf Stufe 1, +0,5 Prozentpunkte je weiterer Stufe, maximal 5 Prozent auf Stufe 10), sofern der Skill bereit ist. Jede Angriffsaktion prüft die Chance nur einmal: zwei Waffen, Mehrfachtreffer oder mehrere getroffene Ziele geben keine zusätzlichen Würfe; periodischer Schaden und Begleiter lösen nicht aus. Die Wirkung hält auf allen zehn Stufen 10 Sekunden. Währenddessen verursacht jede erfolgreiche eigene Auto-Attack-Aktion zusätzlich 2 magischen Feuerschaden je Skillstufe, maximal 20 auf Stufe 10, und stellt einmalig 5 Mana wieder her. Kein Zusatz des M-Angriffs zu diesem festen Bonusschaden. Angriffsskills können die Passive auslösen, erhalten aber weder deren Zusatzschaden noch Mana-Rückgewinnung. Keine Aktivierungskosten. Interner Cooldown beginnt mit Auslösung: 90 Sekunden, −1 je weiterer Stufe bis 81 auf Stufe 10. Die Wirkung stapelt nicht und wird nicht durch neue Auslösungen verlängert. Ein Anstieg auf mindestens 50 Prozent Mana beendet eine bereits laufende Wirkung nicht vorzeitig.",
+    "description_eng": "While below50 percent maximum Mana, successful own basic attacks or direct attack skills have a chance of 0.5 percent per learned skill level per attack action (0.5 percent at level 1, increasing by 0.5 percentage points per additional level to 5 percent at level 10) to trigger Fiery Passion when ready. Dual weapons, multi-hit skills and multiple targets do not grant extra rolls; periodic and companion damage cannot trigger it. Duration10 seconds at all ten levels. Each successful own basic-attack action during the effect deals2 additional flat magical fire damage per skill level, up to20, and restores5 Mana once. No magical-attack contribution to this flat bonus. Attack skills can trigger the passive but do not receive its bonus damage or Mana return. No activation cost. Internal cooldown starts on trigger:90 seconds minus1 per additional level to81. No stacking or refreshing. Recovering to50 percent Mana or above does not end an already active effect.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 90,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "triggerCondition",
+            "chancePerCheckScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  },
+  {
+    "_id": "6ad514a36f8a3e08cd8034d0",
+    "nr": 258,
+    "skillName_de": "Erdsäule",
+    "skillName_eng": "Earth Pillar",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 231,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 231,
+        "perLevel": 109
+      }
+    },
+    "mana": 58,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 58,
+          "values": [
+            58,
+            85,
+            112,
+            140,
+            167,
+            262,
+            290,
+            317,
+            344,
+            371
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.2,
+    "cd": 38,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 38,
+      "perLevel": -1
+    },
+    "dur": 5.85,
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "channelTimeSeconds": 0.1,
+      "hitCount": 1,
+      "damageValueScope": "perApplication",
+      "hitTimingStatus": "defined",
+      "knockbackDirection": "awayFromCaster",
+      "knockbackAppliesOnSuccessfulHit": true,
+      "knockbackResistanceStatus": "pending",
+      "terrainPlatform": {
+        "riseSeconds": 0.85,
+        "standingSeconds": 5,
+        "heightRangeMeters": {
+          "min": 1,
+          "max": 1.5
+        },
+        "liftsCaster": true,
+        "supportsFurtherTerrainSkills": false,
+        "geometryStatus": "pending",
+        "cooldownRunsDuringLifetime": true
+      },
+      "damagePhases": [
+        {
+          "stat": "patk",
+          "timing": "castEnd",
+          "offsetSeconds": 0,
+          "target": "enemiesInArea",
+          "addsCasterAttack": true
+        },
+        {
+          "stat": "patk",
+          "timing": "castEnd",
+          "offsetSeconds": 0.85,
+          "minimumSkillLevel": 6,
+          "baseDamage": 273,
+          "target": "enemiesInArea",
+          "addsCasterAttack": false
+        }
+      ]
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "centerTracking": "casterStartPosition",
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "evaluation": "perHit"
+    },
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "earth-pillar-initial-stun",
+        "type": "control",
+        "controlKind": "stun",
+        "target": "enemiesInArea",
+        "durationSeconds": 0.5,
+        "applicationDelaySeconds": 0
+      }
+    ],
+    "description_de": "Hebt unter dir eine steinerne Säule aus dem Boden und trägt dich mit nach oben. Nach 0,2 Sekunden Castzeit folgen 0,1 Sekunden gebundenes Weiterzaubern für die erste Anhebung. Kleine Felsspitzen verursachen einmalig 231 physischen Grundschaden, +109 je weiterer Stufe bis 1212, zuzüglich einmal deines P-Angriffs. Getroffene Gegner werden nach außen weggeschoben und 0,5 Sekunden betäubt. Die Säule fährt anschließend in vorläufig 0,85 Sekunden auf etwa 1 bis 1,5 Meter hoch und bleibt danach 5 Sekunden stehen. Ab Stufe 6 brechen beim vollständigen Ausfahren größere Spitzen um die Säule hervor: einmalig 273 zusätzlicher physischer Schaden ohne weiteren P-Angriff oder weitere Betäubung. Beide Phasen prüfen die dann anwesenden Gegner; entkommene Gegner werden nicht automatisch erneut getroffen. Cooldown ab Abschluss des gebundenen Zauberns: 38 bis 29 Sekunden, läuft während des Hochfahrens und der Standdauer. Mana je Anwendung: gerundet 25 Prozent des gesamten Grundschadens ohne P-Angriff, 58 bis 371. Weisheit des Salamanders erhöht beide physischen Schadensphasen und reduziert als allgemeiner Skillrabatt auch die Mana-Kosten. Kein DoT. Die Säule ist kein gültiger Boden für weitere Erdsäulen. Genaue Höhe, Radien, Wegschubstrecke und Höheninteraktion mit anderen Skills werden später im Spiel abgestimmt.",
+    "description_eng": "Raises a stone pillar beneath you, carrying you upward. A 0.2-second cast is followed by 0.1 seconds of continued channeling for the initial lift. Small rock spikes deal 231 physical base damage plus 109 per additional level, up to 1212, plus your physical attack once. Enemies hit are pushed outward and stunned for 0.5 seconds. The pillar then rises over a provisional 0.85 seconds to roughly 1 to 1.5 meters and remains standing for 5 seconds. From level 6, larger spikes erupt around the fully raised pillar, dealing an additional 273 physical damage once, without another physical-attack contribution or stun. Each phase checks enemies currently in its area; escaping enemies are not automatically hit again. Cooldown starts when channeling finishes: 38 seconds minus 1 per additional level to 29, running during ascent and standing time. Mana is rounded from 25 percent of total base damage, excluding character attack: 58 to 371. Wisdom of the Salamander boosts both physical phases and its general skill Mana discount applies. No damage over time. The pillar cannot serve as ground for another pillar. Exact height, radii, push distance and interactions with other skills at different elevations remain subject to in-game tuning.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 231,
+            "perLevel": 109
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 38,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "physical",
+    "type": "skill"
+  },
+  {
+    "_id": "6ad52e4bbd7150ab09620cf3",
+    "nr": 259,
+    "skillName_de": "Weisheit des Erdweisen",
+    "skillName_eng": "Wisdom of the Earth Sage",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "str": 3,
+    "int": 3,
+    "wis": 3,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "int": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "wis": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      }
+    },
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "archdruid-mana-regeneration",
+        "type": "statModifier",
+        "target": "self",
+        "stat": "manaRegen",
+        "value": 0.006,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        }
+      }
+    ],
+    "description_de": "Die Lehren des Erdweisen stärken dauerhaft deine Verbindung zwischen Körper, Geist und Natur. Gewährt je gelernter Stufe 3 Stärke, 3 Intelligenz und 3 Willenskraft, bis zu jeweils 15 auf Stufe 5. Erhöht zusätzlich die gesamte Mana-Regeneration um 0,6 Prozent je Stufe, maximal 3 Prozent. Der Prozentbonus wird nach allen flachen Regenerationsboni und der Umrechnung von Willenskraft angewendet. Keine Geschick-, Vitalitäts- oder Angriffstempoboni. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "The teachings of the earth sage permanently strengthen the bond between body, mind and nature. Grants 3 Strength, 3 Intelligence and 3 Wisdom per learned level, reaching 15 each at level 5. Also increases total Mana regeneration by 0.6 percent per level, up to 3 percent. This multiplier applies after flat regeneration bonuses and Wisdom conversion. No Dexterity, Vitality or attack-speed bonus. Permanent passive with no activation cost, cast time or cooldown.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.006,
+            "perLevel": 0.006
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

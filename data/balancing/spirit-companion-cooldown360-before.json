@@ -1,0 +1,59 @@
+{
+  "_id": "6acc1c7e4826525c70d04c45",
+  "skillName_eng": "Spirit Animal",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Druide",
+    "Alchemist",
+    "Archer",
+    "Hunter"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört einen Seelenbegleiter für maximal 360 Sekunden (6 Minuten), sofern er nicht vorher stirbt. Eine lernbare Stufe. Mana-Kosten 132, Cooldown 60 Sekunden, Castzeit 0,4 Sekunden. Er greift ausschließlich mit physischen Fernkampf-Auto-Attacks an und bufft den Meister nicht. Seine Attribute entsprechen live jeweils 30 Prozent des aktuellen Geschicks, der Vitalität und der Wisdom seines Meisters. Standardumrechnung für physische Fernkämpfer: je Geschick 1,8 P-Angriff und 1,6 Genauigkeit; je Vita 30 Max-HP, 2 P-Abwehr und 4 HP-Regeneration pro Tick; je Wisdom 30 Max-Mana, 2 M-Abwehr und 3 MP-Regeneration pro Tick. Keine zusätzlichen festen HP-, Angriffs- oder Abwehrwerte und keine direkte Übernahme von Waffenangriff oder fertigen Kampfwerten des Meisters. Kein eigener M-Angriff. Buffs und Debuffs des Meisters verändern die übernommenen Attribute live. Macht des Begleiters wirkt direkt auf seine Attribute, zusätzlich zu den übernommenen Meisterattributen. Der Begleiter ist angreifbar, wird von Flächeneffekten getroffen und belegt keinen dauerhaften Pet-Platz. Maximal ein Seelenbegleiter dieses Skills gleichzeitig; erneutes Beschwören ersetzt den bisherigen. Angriffsfrequenz, Reichweite und Anpassung aktueller HP bei wechselndem Max-Leben bleiben offen.",
+  "description_eng": "Summons a spirit companion for up to 360 seconds (6 minutes), unless killed earlier. One learnable level. Mana cost 132, cooldown 60 seconds, cast time 0.4 seconds. Uses only physical ranged basic attacks and does not buff the master. Live inherits 30% each of current master dexterity, vitality and wisdom. Standard ranged physical conversions: each dexterity gives 1.8 physical attack and 1.6 accuracy; each vitality gives 30 maximum HP, 2 physical defense and 4 HP regeneration per tick; each wisdom gives 30 maximum Mana, 2 magical defense and 3 Mana regeneration per tick. No additional fixed HP, attack or defense and no direct inheritance of weapon attack or derived master combat stats. No own magical attack. Master buffs and debuffs affect inherited attributes live. Power of the Pet directly buffs its attributes in addition to inherited master attributes. Targetable and affected by area attacks; does not occupy a permanent pet slot. At most one spirit companion from this skill; recasting replaces it. Attack frequency, range and current-HP adjustment when maximum HP changes remain pending.",
+  "dmgType": "spell",
+  "dur": 360,
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 226,
+  "skillName_de": "Seelenbegleiter",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.4,
+  "mana": 132,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 132,
+        "perLevel": 0
+      }
+    }
+  ],
+  "summonedCreatureSettings": {
+    "occupiesPermanentPetSlot": false,
+    "canCoexistWithPermanentPet": true,
+    "inheritedAttributeFractions": {
+      "dexterity": 0.3,
+      "vitality": 0.3,
+      "wisdom": 0.3
+    },
+    "attributeConversionMode": "standardRangedPhysical",
+    "acceptsGroupCompanionBuffs": true,
+    "maximumActiveInstances": 1,
+    "statSampling": "liveBeforeSummonHealthPenalty",
+    "defenseScalingStatus": "defined",
+    "attackStyle": "rangedBasicAttack",
+    "damageType": "physical",
+    "targetable": true,
+    "affectedByAreaAttacks": true,
+    "lifetimeSeconds": 360,
+    "endsOnCreatureDeath": true,
+    "currentHealthAdjustmentStatus": "pending"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "status": "appliedAndVerified",
+  "referenceSkill": 26,
+  "backup": "data/balancing/history/before-mace-training-1792317911917",
+  "skills": [
+    {
+      "_id": "6acc1c7e4826525c70d04be7",
+      "skillName_eng": "Two-handed Mace Training",
+      "category": "passive",
+      "charClass": [
+        "Druide",
+        "Alchemist"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Verbessert dauerhaft deinen Umgang mit zweihändigen Streitkolben. Auf Skilllevel 1 erhältst du 1 Stärke und 2 Intelligenz. Je weiterer Stufe steigt abwechselnd Intelligenz oder Stärke um 1, beginnend mit Intelligenz auf Stufe 2. Auf Stufe 10 insgesamt 5 Stärke und 7 Intelligenz. Die Boni gelten einmal für den Charakter. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Permanently improves proficiency with two-handed maces. Level 1 grants 1 Strength and 2 Intelligence. Each additional level alternately adds 1 Intelligence or Strength, starting with Intelligence at level 2. Level 10 grants 5 Strength and 7 Intelligence in total. Bonuses apply once to the character. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "int": 2,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 132,
+      "skillName_de": "Zweihändiges Streitkolbentraining",
+      "skillpoints": 1,
+      "str": 1,
+      "resourceCosts": [],
+      "statScaling": {
+        "str": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5
+          ]
+        },
+        "int": {
+          "type": "table",
+          "values": [
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6,
+            6,
+            7
+          ]
+        }
+      }
+    },
+    {
+      "_id": "6ad499d7b7588146a87c6fb5",
+      "skillName_eng": "Dual Mace Training",
+      "category": "passive",
+      "charClass": [
+        "Shamane",
+        "High Elves"
+      ],
+      "currentSkillLv": 0,
+      "currentUpgradeLv": 0,
+      "description_de": "Ermöglicht das Führen von zwei Einhand-Streitkolben. Permanentes Waffentraining: Auf Skilllevel 1 erhältst du 2 Stärke und 1 Intelligenz. Je weiterer Stufe steigt abwechselnd Stärke oder Intelligenz um 1, beginnend mit Stärke auf Stufe 2. Auf Stufe 10 insgesamt 7 Stärke und 5 Intelligenz. Die Boni gelten einmal für den Charakter, nicht pro Waffe. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+      "description_eng": "Allows wielding two one-handed maces. Permanent weapon training: level 1 grants 2 Strength and 1 Intelligence. Each additional level alternately adds 1 Strength or Intelligence, starting with Strength at level 2. Level 10 grants 7 Strength and 5 Intelligence in total. Bonuses apply once to the character, not per weapon. No activation cost, cast time or cooldown.",
+      "dmgType": "passive",
+      "int": 1,
+      "maxSkillLv": 10,
+      "maxUpgradeLv": 10,
+      "nr": 252,
+      "skillName_de": "Streitkolbentraining",
+      "skillpoints": 1,
+      "str": 2,
+      "resourceCosts": [],
+      "statScaling": {
+        "str": {
+          "type": "table",
+          "values": [
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5,
+            6,
+            6,
+            7
+          ]
+        },
+        "int": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5,
+            5
+          ]
+        }
+      }
+    }
+  ]
+}

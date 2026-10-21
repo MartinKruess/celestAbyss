@@ -1,0 +1,180 @@
+[
+  {
+    "key": "maxHealth",
+    "label": "Maximum Health",
+    "kind": "capacity",
+    "state": "defined"
+  },
+  {
+    "key": "maxMana",
+    "label": "Maximum Mana",
+    "kind": "capacity",
+    "state": "defined"
+  },
+  {
+    "key": "physicalAttack",
+    "label": "Physical Attack",
+    "kind": "combat",
+    "state": "defined"
+  },
+  {
+    "key": "magicalAttack",
+    "label": "Magical Attack",
+    "kind": "combat",
+    "state": "defined"
+  },
+  {
+    "key": "physicalDefense",
+    "label": "Physical Defense",
+    "kind": "combat",
+    "state": "defined"
+  },
+  {
+    "key": "magicalDefense",
+    "label": "Magical Defense",
+    "kind": "combat",
+    "state": "defined"
+  },
+  {
+    "key": "vitality",
+    "label": "Vitality",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "intelligence",
+    "label": "Intelligence",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "strength",
+    "label": "Strength",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "wisdom",
+    "label": "Wisdom",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "faith",
+    "label": "Faith",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "dexterity",
+    "label": "Dexterity",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "agility",
+    "label": "Agility",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "ambush",
+    "label": "Ambush",
+    "kind": "attribute",
+    "state": "meaningPending"
+  },
+  {
+    "key": "victim",
+    "label": "Victim",
+    "kind": "attribute",
+    "state": "meaningPending"
+  },
+  {
+    "key": "luck",
+    "label": "Luck",
+    "kind": "attribute",
+    "state": "valuePending"
+  },
+  {
+    "key": "accuracy",
+    "label": "Accuracy",
+    "kind": "derived",
+    "state": "formulaPending"
+  },
+  {
+    "key": "evasion",
+    "label": "Evasion",
+    "kind": "derived",
+    "state": "formulaPending"
+  },
+  {
+    "key": "attackSpeed",
+    "label": "Attack Speed",
+    "kind": "combat",
+    "state": "baselineDefinedConversionPending",
+    "unit": "multiplier",
+    "baseValue": 1
+  },
+  {
+    "key": "movementSpeed",
+    "label": "Movement Speed",
+    "kind": "combat",
+    "state": "baselineDefinedConversionPending",
+    "unit": "multiplier",
+    "baseValue": 1
+  },
+  {
+    "key": "criticalChance",
+    "label": "Critical Chance",
+    "kind": "derived",
+    "state": "formulaPending"
+  },
+  {
+    "key": "criticalDamage",
+    "label": "Critical Damage",
+    "kind": "derived",
+    "state": "formulaPending"
+  },
+  {
+    "key": "blockChance",
+    "label": "Block Chance",
+    "kind": "derived",
+    "state": "meaningPending"
+  },
+  {
+    "key": "blockReduction",
+    "label": "Block Reduction",
+    "kind": "derived",
+    "state": "meaningPending"
+  },
+  {
+    "key": "blockPenetration",
+    "label": "Block Penetration",
+    "kind": "future",
+    "state": "deferred"
+  },
+  {
+    "key": "blockRating",
+    "label": "Block Rating",
+    "kind": "combat",
+    "state": "formulaPending"
+  },
+  {
+    "key": "penetration",
+    "label": "Penetration",
+    "kind": "combat",
+    "state": "formulaPending"
+  },
+  {
+    "key": "stamina",
+    "label": "Stamina",
+    "kind": "capacity",
+    "state": "meaningPending"
+  },
+  {
+    "key": "rage",
+    "label": "Rage",
+    "kind": "future",
+    "state": "deferred"
+  }
+]

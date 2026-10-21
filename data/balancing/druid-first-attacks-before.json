@@ -1,0 +1,59 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b80",
+    "skillName_eng": "Ice Lance",
+    "__v": 0,
+    "category": "active",
+    "cd": 34,
+    "charClass": [
+      "Herbalist",
+      "Witcher",
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwöre eine Eislanze, die den Gegner Durchbohrt und dabei kurzfristig die Rüstung des Zieles durchbohrt. -5% Rüstung.",
+    "description_eng": "Summon an Ice Lance that pierces the enemy and briefly pierces the target's armor. -5% armor.",
+    "dmgType": "spell",
+    "dur": 5,
+    "matk": 187,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 29,
+    "skillName_de": "Eislanze",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b87",
+    "skillName_eng": "Energy Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 2,
+    "charClass": [
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Shamane",
+      "Druide",
+      "High Elves",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Wirft einen Ball aus purem Licht auf dein Ziel.",
+    "description_eng": "Throws a ball of pure light at your target.",
+    "dmgType": "spell",
+    "matk": 25,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 36,
+    "skillName_de": "Energieschlag",
+    "skillpoints": 1
+  }
+]

@@ -1,0 +1,21 @@
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {resolveSkillAtLevel} from '../services/skillLevel.js';
+import {skillForClass} from '../services/skillLearningLevel.js';
+import {conversionDelta} from '../services/timedDamageSimulation.js';
+const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
+const path='data/balancing/class-comparison-level60.json';
+const [c,skills,model]=await Promise.all([read(path),read('data/skills.json'),read('data/balancing/attribute-model.json')]);
+const backup='data/balancing/history/before-knight-attribute-comparison-'+Date.now();await fs.mkdir(backup,{recursive:true});await fs.copyFile(path,backup+'/comparison.json');await fs.copyFile('docs/balancing/class-comparison.md',backup+'/comparison.md');
+const row=c.passiveRows.find(r=>r.key==='knight'),equipped=c.rows.find(r=>r.key==='knight');
+const resolved=row.includedSkills.map(n=>{const s=skills.find(s=>s.nr===n),v=skillForClass(s,'knight');return resolveSkillAtLevel(s,v.maxSkillLv,{classKey:'knight'});});
+const amounts={};
+for(const [attr,field]of [['wisdom','wis'],['vitality','vita']]){const target=(equipped.knownAttributes[attr]??0)+resolved.reduce((sum,s)=>sum+(s[field]??0),0);amounts[attr]=target-row.knownAttributes[attr];row.knownAttributes[attr]=target;}
+amounts.strength=amounts.vitality*.1;row.knownAttributes.strength+=amounts.strength;
+for(const [attr,amount]of Object.entries(amounts))for(const[stat,delta]of Object.entries(conversionDelta(model,'knight',attr,amount)))row.stats[stat]+=delta;
+row.stats.magicalDefense=equipped.equipped.magicalDefense+(conversionDelta(model,'knight','wisdom',row.knownAttributes.wisdom-equipped.knownAttributes.wisdom).magicalDefense??0)+resolved.reduce((sum,s)=>sum+(s.mdef??0),0);
+assert.equal(row.knownAttributes.wisdom,179);
+await fs.writeFile(path,JSON.stringify(c,null,2)+'\n');
+const mdPath='docs/balancing/class-comparison.md';let md=await fs.readFile(mdPath,'utf8');const start=md.indexOf('## Vergleich mit permanenten Passiven vor dem Kampf');assert(start>=0);const end=md.indexOf('\n## ',start+1);let section=md.slice(start,end<0?undefined:end);
+section=section.replace(/^\| Ritter \|.*$/m,line=>{const cells=line.split('|');c.fields.forEach(([key],i)=>{const previous=cells[i+2];const marker=previous.match(/[🔴🟡🟢]/u)?.[0];const pct=['criticalDamageBonus','attackSpeed','movementSpeed'].includes(key);const whole=['maxHealth','maxMana','physicalAttack','magicalAttack','physicalDefense','magicalDefense'].includes(key);const n=whole?Math.round(row.stats[key]):Number((row.stats[key]*(pct?100:1)).toFixed(2));cells[i+2]=' '+(marker?marker+' ':'')+n.toLocaleString('de-DE')+(pct?' %':'')+' ';});return cells.join('|');});
+md=md.slice(0,start)+section+(end<0?'':md.slice(end));await fs.writeFile(mdPath,md);console.log(JSON.stringify({attributeDeltas:amounts,stats:row.stats}));

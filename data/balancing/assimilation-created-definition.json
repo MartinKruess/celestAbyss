@@ -1,0 +1,124 @@
+{
+  "_id": "6ad20e33128795dc1b739de2",
+  "soulGenerationSettings": {
+    "maximumUniqueEnemiesScaling": {
+      "values": []
+    }
+  },
+  "soulStorageSettings": {
+    "capacityScaling": {
+      "values": []
+    }
+  },
+  "activationRequirements": {
+    "targetHealthBelowFractionScaling": {
+      "values": []
+    }
+  },
+  "tetherSettings": {
+    "worldAnchorKinds": []
+  },
+  "collectedPointScaling": {
+    "thresholds": [],
+    "durationSecondsByTier": [],
+    "baseDamageBonusFractionByTier": []
+  },
+  "statScaling": {
+    "mana": {
+      "type": "linear",
+      "base": 200,
+      "perLevel": 25
+    },
+    "manaRegen": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 5
+    }
+  },
+  "castTimeSeconds": 0.3,
+  "attackExecution": {
+    "additionalDamageFromSacrificedHealth": {
+      "values": []
+    },
+    "hitCountScaling": {
+      "values": []
+    },
+    "damageMultiplierScaling": {
+      "values": []
+    },
+    "armorIgnoreFractionByLevel": []
+  },
+  "attackArea": {
+    "radiusScaling": {
+      "values": []
+    },
+    "maxTargetsScaling": {
+      "values": []
+    }
+  },
+  "movement": {
+    "distanceScaling": {
+      "values": []
+    },
+    "hopDirections": []
+  },
+  "durationScaling": {
+    "values": []
+  },
+  "cooldownScaling": {
+    "values": []
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 27,
+        "perLevel": 8,
+        "values": []
+      }
+    }
+  ],
+  "burstUsage": {
+    "usesPerBurstScaling": {
+      "values": []
+    },
+    "afterBurstCooldownScaling": {
+      "values": []
+    },
+    "belowTargetHealthFractionByLevel": [],
+    "usesBelowThresholdByLevel": []
+  },
+  "triggerCondition": {
+    "chancePerCheckScaling": {
+      "values": []
+    },
+    "chancePerCheck": null,
+    "healthThresholds": []
+  },
+  "allowedRaces": [],
+  "isClassCore": false,
+  "nr": 242,
+  "skillName_eng": "Assimilation",
+  "skillName_de": "Assimilation",
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "maxSkillLv": 5,
+  "currentUpgradeLv": 0,
+  "maxUpgradeLv": 10,
+  "category": "active",
+  "description_eng": "Self buff lasting 600 seconds (10 minutes). Increases maximum Mana by 200 at level 1 and 25 per additional level, reaching 300 at level 5. Also grants +5 direct Mana regeneration per learned level, reaching +25 per Mana regeneration tick. This increases maximum Mana, not instant Mana restoration. Costs 27 Mana plus 8 per additional level, reaching 59. Cooldown 60 seconds, cast time 0.3 seconds. Reapplying refreshes duration without stacking the bonuses with themselves. Tick interval and current-Mana handling when maximum Mana changes are configured centrally.",
+  "description_de": "Eigenbuff für 600 Sekunden (10 Minuten). Erhöht das maximale Mana auf Stufe 1 um 200 und je weiterer Stufe um 25, auf Stufe 5 insgesamt um 300. Zusätzlich +5 direkte MP-Regeneration je gelerntem Skilllevel, auf Stufe 5 +25 pro Mana-Regenerationstick. Dies ist ein Max-Mana-Bonus, keine sofortige Mana-Wiederherstellung. Kostet 27 Mana auf Stufe 1 und +8 je weiterer Stufe, auf Stufe 5 59. Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Erneute Anwendung erneuert die Laufzeit, ohne die Boni mit sich selbst zu stapeln. Regenerationstick-Intervall und Umgang mit aktuellem Mana bei Max-Mana-Änderungen werden zentral festgelegt.",
+  "dmgType": "selfbuff",
+  "skillpoints": 1,
+  "cd": 60,
+  "dur": 600,
+  "mana": 200,
+  "manaRegen": 5,
+  "__v": 0
+}

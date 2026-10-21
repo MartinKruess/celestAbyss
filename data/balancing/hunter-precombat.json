@@ -1,0 +1,143 @@
+{
+  "classKey": "hunter",
+  "level": 60,
+  "status": "reviewedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 5,
+      "name": "Adaption",
+      "stats": {
+        "vita": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 10,
+      "name": "Auf der Jagd",
+      "stats": {
+        "dex": 16,
+        "agi": 7
+      }
+    },
+    {
+      "nr": 18,
+      "name": "Bogenschießtraining",
+      "stats": {
+        "dex": 11,
+        "patk": 20
+      }
+    },
+    {
+      "nr": 43,
+      "name": "Erweiterung der Sinne",
+      "stats": {
+        "dex": 22,
+        "agi": 22
+      }
+    },
+    {
+      "nr": 122,
+      "name": "Voll Durchziehen",
+      "stats": {
+        "penetration": 30,
+        "dex": 5,
+        "luck": 3
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 142,
+      "name": "Ausweichtraining",
+      "stats": {
+        "agi": 10,
+        "dex": 5
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "Bogen",
+      "equipped": {
+        "maxHealth": 3504,
+        "maxMana": 3381,
+        "physicalAttack": 704.2,
+        "magicalAttack": 109.2,
+        "physicalDefense": 612,
+        "magicalDefense": 546,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "vita": 40,
+        "wis": 40,
+        "dex": 59,
+        "agi": 39,
+        "patk": 120,
+        "penetration": 30,
+        "luck": 3,
+        "pdef": 140,
+        "mdef": 140,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        5,
+        10,
+        18,
+        43,
+        122,
+        139,
+        142,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 4704,
+        "maxMana": 4581,
+        "physicalAttack": 930.4000000000001,
+        "magicalAttack": 209.2,
+        "physicalDefense": 832,
+        "magicalDefense": 766,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "directPassiveAttackSpeedBonus": 0.2,
+  "excluded": [
+    "Active buffs",
+    "Pet stats",
+    "Jewelry and stones",
+    "Agility speed conversion",
+    "Weapon speed calculation"
+  ],
+  "equipmentProposalApplied": false
+}

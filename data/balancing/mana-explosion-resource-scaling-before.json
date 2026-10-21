@@ -1,0 +1,42 @@
+{
+  "_id": "6acc1c7e4826525c70d04c3e",
+  "skillName_eng": "Mana Explosion",
+  "__v": 0,
+  "category": "active",
+  "cd": 360,
+  "charClass": [
+    "Druide",
+    "Alchemist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Opfert dein gesamtes aktuell verfügbares Mana für eine gewaltige einmalige Explosion. Die Kosten betragen 100 Prozent des aktuellen Manas. Der magische Grundangriff beträgt 383 je gelerntem Skilllevel, bis zu 3830 auf Stufe 10. Castzeit 1,2 Sekunden, Cooldown 360 Sekunden. Kein Schaden über Zeit und keine anhaltende Wirkungsdauer. Eine zusätzliche Schadensabhängigkeit von der geopferten Manamenge aus der bisherigen Beschreibung ist noch nicht berechnet. Animationsdauer und Trefferbereich werden später festgelegt.",
+  "description_eng": "Sacrifices all currently available Mana for a powerful single explosion. Costs 100 percent of current Mana. Base magical attack is 383 per learned skill level, reaching 3830 at level 10. Cast time is 1.2 seconds, cooldown is 360 seconds. No damage over time or lasting effect. Additional damage scaling with the sacrificed Mana amount from the previous description has not yet been calculated. Animation duration and hit area will be defined later.",
+  "dmgType": "spell",
+  "matk": 383,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 219,
+  "skillName_de": "Manaexplosion",
+  "skillpoints": 1,
+  "castTimeSeconds": 1.2,
+  "hasLingeringDamage": false,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "currentMana",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 1
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 383,
+      "perLevel": 383
+    }
+  }
+}

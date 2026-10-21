@@ -1,0 +1,62 @@
+{
+  "_id": "6acc1c7e4826525c70d04bf9",
+  "skillName_eng": "Power of the Pet",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Hunter",
+    "Archer",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verstärkt ausschließlich Begleiter der Gruppe, keine Spieler. Je gelerntem Skilllevel +5 Stärke, +5 Vitalität und +5 Wisdom, auf Stufe 10 jeweils +50. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr mehr; die Attribute werden nach den Regeln des jeweiligen Begleiters verwertet. Gilt für reguläre Pets einschließlich der regulären Pets des Ritualisten und für den Seelenbegleiter, jedoch nicht direkt für Morrak. Der Seelenbegleiter erhält diese Attributboni zusätzlich zu seinen live übernommenen Meisterattributen. Mana-Kosten 231, je weiterer Stufe +46 bis 645. Castzeit 1 Sekunde, Dauer 600 Sekunden, Cooldown 60 Sekunden.",
+  "description_eng": "Buffs only group companions, not players. Each learned level grants +5 strength, +5 vitality and +5 wisdom, reaching +50 each at level 10. No direct physical or magical attack or defense bonuses; attributes use the respective companion conversion rules. Applies to regular pets including regular Ritualist pets and to the spirit companion, but not directly to Morrak. The spirit companion gains these attribute bonuses in addition to its live inherited master attributes. Mana cost 231 plus 46 per additional level to 645. Cast time 1 second, duration 600 seconds, cooldown 60 seconds.",
+  "dmgType": "buff",
+  "dur": 600,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 150,
+  "skillName_de": "Macht des Begleiters",
+  "skillpoints": 1,
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 5
+    },
+    "vita": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 5
+    },
+    "wis": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 5
+    }
+  },
+  "castTimeSeconds": 1,
+  "mana": 231,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 231,
+        "perLevel": 46
+      }
+    }
+  ],
+  "statBonusTargets": {
+    "str": "groupCompanions",
+    "vita": "groupCompanions",
+    "wis": "groupCompanions"
+  },
+  "str": 5,
+  "vita": 5,
+  "wis": 5
+}

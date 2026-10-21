@@ -1,0 +1,49 @@
+{
+  "nr": 70,
+  "status": "Conditional PvE finisher defined; PvP and sequence edge rules pending",
+  "maxSkillLevel": 4,
+  "baseDamageByLevel": [
+    17,
+    28,
+    39,
+    50
+  ],
+  "healthThresholds": [
+    0.05,
+    0.06,
+    0.06,
+    0.06
+  ],
+  "usesBelowThreshold": [
+    2,
+    2,
+    3,
+    3
+  ],
+  "damageMultipliersBelowThreshold": [
+    1,
+    1.5,
+    1.5,
+    1.5
+  ],
+  "armorIgnoreFractionPvEBelowThreshold": [
+    0,
+    0,
+    0,
+    1
+  ],
+  "outsideThreshold": {
+    "uses": 1,
+    "damageMultiplier": 1,
+    "armorIgnore": 0
+  },
+  "afterSequenceCooldownSeconds": 16,
+  "bossesExcluded": true,
+  "pvpExcludedUntilReview": false,
+  "pvpAllowed": true,
+  "pvpDamageFactorStatus": "pending",
+  "armorIgnoreAppliesTo": [
+    "PvE",
+    "PvP"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "6acc1c7e4826525c70d04bcd",
+  "skillName_eng": "Leap Strike",
+  "__v": 0,
+  "category": "active",
+  "cd": 47,
+  "charClass": [
+    "Gladiator",
+    "Berserker",
+    "Druide",
+    "Alchemist",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Führt einen mächtigen physischen Sprungschlag aus. Der Grundangriffswert steigt von 391 um 131 je weiterer Stufe auf 1570. Die Mana-Kosten steigen von 174 um 92 je weiterer Stufe auf 1002. Der Cooldown bleibt zunächst bei 47 Sekunden. Die Aktion beginnt ohne zusätzliche Cast Time; die Animation dauert vorläufig 0,5 Sekunden. Der genaue Trefferzeitpunkt wird im Spiel festgelegt.",
+  "description_eng": "Performs a powerful physical leap strike. Base attack increases from 391 by 131 per additional level to 1570. Mana cost increases from 174 by 92 per additional level to 1002. Cooldown remains provisionally 47 seconds. The action begins without additional cast time; provisional animation duration is 0.5 seconds. Exact hit timing will be defined in game.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 106,
+  "patk": 391,
+  "skillName_de": "Sprungschlag",
+  "skillpoints": 1,
+  "animationDurationSeconds": 0.5,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0,
+  "mana": 174,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 174,
+        "perLevel": 92
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 391,
+      "perLevel": 131
+    }
+  }
+}

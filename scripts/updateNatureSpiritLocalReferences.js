@@ -1,0 +1,18 @@
+import fs from 'node:fs/promises';
+const p='services/timedDamageSimulation.js';let s=await fs.readFile(p,'utf8');
+s=s.replaceAll('[226,237]','[226,237,244]').replace('const dur=s.nr===226?360:300','const dur=s.nr===237?300:360').replace('s.nr!==185&&s.nr!==226);','s.nr!==185&&s.nr!==226&&s.nr!==244);').replace("if(['druid','hunter'].includes(key))setupNumbers.push(226);","if(key==='druid')setupNumbers.push(244);if(key==='hunter')setupNumbers.push(226);");
+s=s.replace('else amount=pre.knownAttributes.dexterity*0.3*1.8;','else if(p.nr===244)amount=pre.knownAttributes.intelligence*get(244).summonedCreatureSettings.inheritedAttributeFractions.intelligence*1.8;else amount=pre.knownAttributes.dexterity*0.3*1.8;');
+await fs.writeFile(p,s);
+const q='scripts/calculateAllClassDamageRotations.js';s=await fs.readFile(q,'utf8');s=s.replace('s.nr===226||','[226,244].includes(s.nr)||').replace('if(s.nr===226){','if([226,244].includes(s.nr)){');await fs.writeFile(q,s);
+const path='data/reports/class-skill-counts.json',report=JSON.parse(await fs.readFile(path,'utf8')),catalog=JSON.parse(await fs.readFile('data/skills.json','utf8'));
+report.catalogCount=catalog.length;
+const old=report.classified.find(x=>x.nr===226),spirit=catalog.find(x=>x.nr===244);
+old.classes=catalog.find(x=>x.nr===226).charClass;
+report.counts.find(x=>x.name==='Druide / Alchemist').skillNumbers=report.counts.find(x=>x.name==='Druide / Alchemist').skillNumbers.map(n=>n===226?244:n);
+if(!report.classified.some(x=>x.nr===244))report.classified.push({...old,nr:244,id:spirit._id,name:spirit.skillName_de,classes:spirit.charClass});
+await fs.writeFile(path,JSON.stringify(report,null,2)+'\n');
+const policyPath='data/balancing/simulation-mage-policies.json',policy=JSON.parse(await fs.readFile(policyPath,'utf8'));
+policy.classes.druid.setupSkills=policy.classes.druid.setupSkills.map(n=>n===226?244:n);
+policy.classes.druid.specialRules=policy.classes.druid.specialRules.map(x=>x.startsWith('226 ')?'244 Nature Spirit: live 30% Int/Vita/Wis, Int gives 1.8 magical wind attack per inherited point; 1.5 attacks/s, duration360,CD360,132mana,cast0.4.':x);
+await fs.writeFile(policyPath,JSON.stringify(policy,null,2)+'\n');
+const counter='scripts/reportClassSkillCounts.js';s=await fs.readFile(counter,'utf8');s=s.replace("226:'utility',","226:'utility',244:'utility',");await fs.writeFile(counter,s);

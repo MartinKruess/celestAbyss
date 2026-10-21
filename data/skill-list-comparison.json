@@ -1,0 +1,3008 @@
+{
+  "file": "C:\\Users\\Nitram-PC\\Downloads\\SkillList.ods",
+  "sourceSHA256": "ec095de0e5c9bb9041db7814d25ddd503a2adde907bfa38e15bb93b5c847b13a",
+  "catalog": [
+    {
+      "sourceID": 1,
+      "row": 2,
+      "de": "Erleuchtung",
+      "en": "Enlightenment",
+      "description": "Enlightment will increase your Intelligence and Wisdom +1 per Level.",
+      "maxLevel": "20",
+      "classes": "Lightmage, Priest,, Shamane, Druide",
+      "mongoID": "6acc1c7e4826525c70d04b64",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 2,
+      "row": 3,
+      "de": "Überlebenswille",
+      "en": "Will to Survive",
+      "description": "Survive will increase your Strenght and Agility. +1 per Level",
+      "maxLevel": "20",
+      "classes": "Butcher, Bloodmage, Soulseeker, Villian",
+      "mongoID": "6acc1c7e4826525c70d04bd5",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv",
+        "description"
+      ]
+    },
+    {
+      "sourceID": 3,
+      "row": 4,
+      "de": "Abräumer",
+      "en": "Clearer",
+      "description": "Clearer will attack 2 or 3 enemys next to you.",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04b66",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 4,
+      "row": 5,
+      "de": "Abschöpfen",
+      "en": "Skimming",
+      "description": "You are able to siphon off some of the magical energy that surrounds you. +2 Intelligence +1 Wisdom per Level",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04b67",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 5,
+      "row": 6,
+      "de": "Adaption",
+      "en": "Adaption",
+      "description": "Adaptation will increase your Vita and Wisdom. +1 per Level",
+      "maxLevel": "20",
+      "classes": "Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04b68",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 6,
+      "row": 7,
+      "de": "Adrenalin",
+      "en": "Adrenaline",
+      "description": "Use your adrenaline to benefit from it in heavy battles. +1% Strenght and Intelligence",
+      "maxLevel": "5",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04b69",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 7,
+      "row": 8,
+      "de": "Armbursttraining",
+      "en": "Crossbow Training",
+      "description": "You improve your arm Crossbow skills in training. +2 Dexterity and +1 Agility per level",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04b6a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 8,
+      "row": 9,
+      "de": "Astalkörper",
+      "en": "Astral Body",
+      "description": "You create an astral body that flies towards your opponents and attacks up to 7 enemies.",
+      "maxLevel": "5",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04b6b",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 9,
+      "row": 10,
+      "de": "Ätherregen",
+      "en": "Ether Rain",
+      "description": "You summon a shower of ether that harms enemies and heals allies by 25% of the DMG.",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04b6c",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 10,
+      "row": 11,
+      "de": "Auf der Jagd",
+      "en": "On the Hunt",
+      "description": "You are a successful Archer who has the ability to kill with just one arrow.\n+ 8 dexterity and +3 agility",
+      "maxLevel": "5",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b6d",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 11,
+      "row": 12,
+      "de": "Aufgeladener Schlag",
+      "en": "Charged Strike",
+      "description": "You gather your strength and strike with full force.\n(Ignores weaknesses)",
+      "maxLevel": "15",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04b6e",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 12,
+      "row": 13,
+      "de": "Aufladung",
+      "en": "Charging",
+      "description": "Wenn du Kämpfst sammelst du Abladungen die du bei der Aktivierung freisetzt. Nutze die Aufladungen für 15-20 Sekunden um erheblichen Schaden anzurichten.",
+      "maxLevel": "5",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04b6f",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 13,
+      "row": 14,
+      "de": "Ausbruch der Wut",
+      "en": "Outburst of Rage",
+      "description": "Unleash your anger and draw strength from it. +15 strength per level",
+      "maxLevel": "5",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04b70",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 14,
+      "row": 15,
+      "de": "Ausweichrolle",
+      "en": "Dodge Roll",
+      "description": "Mache ein Ausweichrolle um einem Angriff auszuweichen.",
+      "maxLevel": "2",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b71",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 15,
+      "row": 16,
+      "de": "Beben",
+      "en": "Tremor",
+      "description": "Schlage mir deiner Waffe auf den Boden um ein Beben zu erzeugen, dass nahe Gegner kurz verlangsamt.",
+      "maxLevel": "20",
+      "classes": "Adventure, Shamane",
+      "mongoID": "6acc1c7e4826525c70d04b72",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 16,
+      "row": 17,
+      "de": "Bindung des Wassers",
+      "en": "Water Bond",
+      "description": "You create a water chain that holds a target in place.\nDuration: 1.6-2.5 seconds",
+      "maxLevel": "20",
+      "classes": "Herbalist",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 17,
+      "row": 18,
+      "de": "Blutklinge",
+      "en": "Blood Reaver",
+      "description": "After your attack, you activate Bloodblade and heal yourself for 2% of the damage done.",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04b74",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 18,
+      "row": 19,
+      "de": "Bogenschießtraining",
+      "en": "Archery Training",
+      "description": "You improve your arm Bow skills in training. +3 Dexterity per level",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b75",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 19,
+      "row": 20,
+      "de": "Brecher der Deckung",
+      "en": "Cover Breaker",
+      "description": "Smash your opponent's armor with your shield and inflict more damage to this opponent for the duration of 35-45 seconds.",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b76",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 20,
+      "row": 21,
+      "de": "Brecher des Lichts",
+      "en": "Light Breaker",
+      "description": "Mache zwei schnelle und gezielte Stiche mit einem Dolch. Der zweite Stich hat eine herhöte Chance kritisch zu Treffen.",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04b77",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 21,
+      "row": 22,
+      "de": "Dashen",
+      "en": "Dashing",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b78",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 22,
+      "row": 23,
+      "de": "Dolch- und Schwerttraining",
+      "en": "Dagger and Sword Training",
+      "description": "You have unique dagger and sword fighting skills.\n+2 Ambush and +1 Agility",
+      "maxLevel": "10",
+      "classes": "Villain",
+      "mongoID": "6acc1c7e4826525c70d04b79",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 23,
+      "row": 24,
+      "de": "Donnernde Lanze",
+      "en": "Thundering Lance",
+      "description": "You create an aura around your sword or mace which causes considerable damage to the enemy.",
+      "maxLevel": "15",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b7a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 24,
+      "row": 25,
+      "de": "Doppelschuss",
+      "en": "Double Shot",
+      "description": "Schieße zwei pfeile schnell hintereinander.",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04b7b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 25,
+      "row": 26,
+      "de": "Doppelsprung",
+      "en": "Double Jump",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b7c",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 26,
+      "row": 27,
+      "de": "Dual Axetraining",
+      "en": "Dual Axe Training",
+      "description": "You won't lose a fight with dual axes.\n+3 strength per Level",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04b7d",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 27,
+      "row": 28,
+      "de": "Dunkler Schlag",
+      "en": "Dark Strike",
+      "description": "You attack from the shadows and use the ambush.",
+      "maxLevel": "15",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04b7e",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 28,
+      "row": 29,
+      "de": "Eiserner Schild",
+      "en": "Iron Shield",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b7f",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 29,
+      "row": 30,
+      "de": "Eislanze",
+      "en": "Icelance",
+      "description": "Beschwöre eine Eislanze, die den Gegner Durchbohrt und dabei kurzfristig die Rüstung des Zieles durchbohrt. -5% Rüstung.",
+      "maxLevel": "10",
+      "classes": "Herbalist, Priest, Druide",
+      "mongoID": "6acc1c7e4826525c70d04b80",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 30,
+      "row": 31,
+      "de": "Eisranken",
+      "en": "Ice Vines",
+      "description": "Halte den Gegner kurzfristig fest und füge ihm Frostschaden zu.",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04b81",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 31,
+      "row": 32,
+      "de": "Elektrisches Feld",
+      "en": "Electric Field",
+      "description": "Erzeuge ein starkes elektrisches Feld, das allen Gegnern im Bereich Schaden zufügt und sie leicht verlangsamt.",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04b82",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 32,
+      "row": 33,
+      "de": "Elementarenergie",
+      "en": "Elemental Energy",
+      "description": "Belege einen Gegner mit einem Elementar-Debuff, wodurch Elementare Zauber für 30 Sekunden 10% mehr Schaden machen.",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04b83",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 33,
+      "row": 34,
+      "de": "Energie Umwandler",
+      "en": "Energy Converter",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04b84",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 34,
+      "row": 35,
+      "de": "Energieausbruch",
+      "en": "Engery Outburst",
+      "description": "Du erhältst für maximal 15 Sekunden einen Schild, in der Höhe von 10% deines maximalen Lebens. Solange das Schild besteht verbrauchen normale Angriffe 1% deines Manas und verursachen 10% mehr Schaden.",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04b85",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 35,
+      "row": 36,
+      "de": "Energieentladung",
+      "en": "Energy Discharge",
+      "description": "Du opferst 10% deines Lebens um eine Aura um dich herum zu erzeugen, die deinen Schaden für 10 Sekunden um 30% erhöht.",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04b86",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 36,
+      "row": 37,
+      "de": "Energieschlag",
+      "en": "Energy Strike",
+      "description": "You throw a ball of pure light at your target.",
+      "maxLevel": "10",
+      "classes": "Lightmage, Priest,, Shamane, Druide",
+      "mongoID": "6acc1c7e4826525c70d04b87",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 37,
+      "row": 38,
+      "de": "Entzugspfeil",
+      "en": "Draining Arrow",
+      "description": "You are using a forbidden technique to heal yourself from the suffering of the enemy.",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b88",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 38,
+      "row": 39,
+      "de": "Erdbeben",
+      "en": "Earthquake",
+      "description": "You attack the ground with such force that the ground wobbles, enemies attack are slowed down.",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04b89",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 39,
+      "row": 40,
+      "de": "Erdbrecher",
+      "en": "Earth Breaker",
+      "description": "The ground breaks up, knocking back nearby enemies and distant enemies.",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04b8a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 40,
+      "row": 41,
+      "de": "Erlösendes Feld der Schwäche",
+      "en": "Redemptive Field of Weakness",
+      "description": "This field increases your aggro on the enemies. You and your allies do more damage for a short time.",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b8b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 41,
+      "row": 42,
+      "de": "Erste Hilfe",
+      "en": "First Aid",
+      "description": "You are able to take care of yourself and close minor wounds",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04b8c",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 42,
+      "row": 43,
+      "de": "Erwachen",
+      "en": "Awakening",
+      "description": "When you fall below 30% life, awakening activates. The damage you take is reduced by 1% per level",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b8d",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 43,
+      "row": 44,
+      "de": "Erweiterung der Sinne",
+      "en": "Sensory Expansion",
+      "description": "Expansion of power will power up you. +3 Agility per Level",
+      "maxLevel": "10",
+      "classes": "Butcher, Bloodmage, Soulseeker, Villian",
+      "mongoID": "6acc1c7e4826525c70d04b8e",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 44,
+      "row": 45,
+      "de": "Erweiterung des Geistes",
+      "en": "Mental Expansion",
+      "description": "Expansion of spirit will power up you. +3 Intelligence per Level",
+      "maxLevel": "10",
+      "classes": "Lightmage, Priest,, Shamane, Druide",
+      "mongoID": null,
+      "status": "ambiguous",
+      "differences": []
+    },
+    {
+      "sourceID": 45,
+      "row": 46,
+      "de": "Erweiterung des Körpers",
+      "en": "Physical Expansion",
+      "description": "Expansion of defense will power up you. +150 health +3 Vita and +1 Wisdom",
+      "maxLevel": "10",
+      "classes": "Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04b90",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 46,
+      "row": 47,
+      "de": "Ewiges Eis",
+      "en": "Eternal Ice",
+      "description": "An enemy can be frozen if the enemy was previously attack by a water spell. ",
+      "maxLevel": "15",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04b91",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 47,
+      "row": 48,
+      "de": "Explosionspfeil",
+      "en": "Explosive Arrow",
+      "description": "Deine nächsten 3 Pfeile verursachen 2 Sekunden nach dem treffen des Zieles zusätzlichen Explosionsschaden.",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04b92",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 48,
+      "row": 49,
+      "de": "Feuer der Verdammten",
+      "en": "Fire of the Damned",
+      "description": "Du beschwörst eine Säule aus schwarzem Feuer, dass alles auf seinem Weg verbrennt. Der Schaden skalliert mit der Anzahl deiner Opfer. +1% je 10 Opfer.",
+      "maxLevel": "5",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04b93",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 49,
+      "row": 50,
+      "de": "Feuerball",
+      "en": "Fireball",
+      "description": "Ein einfacher Feuerzauber, in Perfektion jedoch, eine Mächtige Waffe.",
+      "maxLevel": "20",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04b94",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 50,
+      "row": 51,
+      "de": "Feuerlanze",
+      "en": "Firelance",
+      "description": "Du erzeugst eine Feuerlanze, die einen Gegner durchbohrt ",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04b95",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 51,
+      "row": 52,
+      "de": "Feuerpfeil",
+      "en": "Firearrow",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04b96",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 52,
+      "row": 53,
+      "de": "Glück des Narren",
+      "en": "Fool of Luck",
+      "description": "As a fool of luck, you draw your strength from your critical chance.",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04b97",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 53,
+      "row": 54,
+      "de": "Gebundener Schuss",
+      "en": "Bound Shot",
+      "description": "Binde dich an deine Feinde, eine erneute Aktivierung zieht den Gegner zu dir oder dich zu Ihm. In Kombination mit anderen Fähigkeiten einsetzbar.",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04b98",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 54,
+      "row": 55,
+      "de": "Gefrierbrand",
+      "en": "Frostburn",
+      "description": "A target can become freezer burned while frozen or wet ",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04b99",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 55,
+      "row": 56,
+      "de": "Brecher des Geistes",
+      "en": "Mindbreaker",
+      "description": "Setze deine Energie in einen mächtigen Schildstoß und breche den Willen eines Gegners. -10% magische Verteidigung für 30 Sekunden.",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b9a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 56,
+      "row": 57,
+      "de": "Geladener Nebel",
+      "en": "Chagred Mist",
+      "description": "Enemies who are wet should be careful of electric shocks. ",
+      "maxLevel": "15",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04b9b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 57,
+      "row": 58,
+      "de": "Gezielter Blitz",
+      "en": "Targeted Lightning",
+      "description": "Schleudere einen gezielten Blitzschlag auf einen Gegner.",
+      "maxLevel": "10",
+      "classes": "Shamane, Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04b9c",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 58,
+      "row": 59,
+      "de": "Göttliche Heilung",
+      "en": "Divine Healing",
+      "description": "Nutze die Macht von Aurora um eine große menge Leben eines verbündeten wiederherzustellen.",
+      "maxLevel": "5",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04b9d",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 59,
+      "row": 60,
+      "de": "Göttlicher Schutz",
+      "en": "Divine Protection",
+      "description": "Ramme deinen Schild mit voller Wucht in den Boden um mehr Stabilität zu erhalten. Der Göttliche Schild steht für 5 Sekunden und senkt deinen erhaltenen Schaden um 30%.",
+      "maxLevel": "2",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04b9e",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 60,
+      "row": 61,
+      "de": "Hoffnungsschimmer",
+      "en": "Glimmer of Hope",
+      "description": "A special Passive Skill of Aurora",
+      "maxLevel": "10",
+      "classes": "Lightmage, Priest,, Shamane, Druide",
+      "mongoID": "6acc1c7e4826525c70d04b9f",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 61,
+      "row": 62,
+      "de": "Holzspalter",
+      "en": "Wood Splitter",
+      "description": "Du setzt zu einem mächtigen Schlag aus einem Sprung heraus an. Sollte dein Angriff ein kritischer sein, erhälst du 50% der Manakosten zurück.",
+      "maxLevel": "20",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04ba0",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 62,
+      "row": 63,
+      "de": "Infernal Zyklon",
+      "en": "Infernal Cyclone",
+      "description": "Erzeuge einen Zyklon aus Höllenfeuer und lass Feuerregnen. Beim durchlaufen des Feuerregens erleiden alle Gegner schaden. Der Effekt hält 8 Sekunden. ",
+      "maxLevel": "5",
+      "classes": "Shamane",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 63,
+      "row": 64,
+      "de": "Kanalisation der Wut",
+      "en": "Channelling of Rage",
+      "description": "Nutze deine Wut um deinen Angriffswert für 15 Sekunden um 50% zu steigern. Kritische Treffer verletzten dich selbst.",
+      "maxLevel": "3",
+      "classes": "Gladiator",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 64,
+      "row": 65,
+      "de": "Kettenschuss",
+      "en": "Chain Shot",
+      "description": "Binde dich an deine Feinde, eine erneute Aktivierung zieht den Gegner zu dir oder dich zu Ihm. In Kombination mit anderen Fähigkeiten einsetzbar.",
+      "maxLevel": "5",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04ba2",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 65,
+      "row": 66,
+      "de": "Kleine Heilung",
+      "en": "Small Healing",
+      "description": "Heile einen Verbündeten um eine moderate Menge.",
+      "maxLevel": "20",
+      "classes": "Templer, Priest",
+      "mongoID": "6acc1c7e4826525c70d04ba3",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 66,
+      "row": 67,
+      "de": "Klingentornado",
+      "en": "Blade Flurry",
+      "description": "Du springst auf den Gegner zu und drehst dich. Es wirkt als würden aus dem nichts mehrere Angriffe gleichzeitig auf den Gegner Treffen. Gegner, die sich in der Nähe deines Hauptziels befinden, erleiden 50% Schaden.",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04ba4",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 67,
+      "row": 68,
+      "de": "Kopfschuss",
+      "en": "Headshot",
+      "description": "Atme tief durch und verpasse deinem Gegner den Kopfschuss, den er verdient. Dieser Angriff trifft immer kritisch.",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04ba5",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 68,
+      "row": 69,
+      "de": "Körperbeherrschung",
+      "en": "Body Control",
+      "description": "In combat it is important to know your limits. +5 Strength and +5 Vitality",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04ba6",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 69,
+      "row": 70,
+      "de": "Kristallisierte Wasserspähre",
+      "en": "Crystallized Water Sphere",
+      "description": "Schleudere eine Kugel aus Eis auf deinen Gegner, diese zerspringt und kann einen Gegner kurzzeitig außer Gefecht setzen.",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04ba7",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 70,
+      "row": 71,
+      "de": "Kugelblitz",
+      "en": "Thunderball",
+      "description": "Electric skills do 15% more things if the target was previously attack by a water spell.",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04ba8",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 71,
+      "row": 72,
+      "de": "Kunai Todesstoß",
+      "en": "Kunai Deathblow",
+      "description": "Verpasse deinem Gegner einen Todesstoß, wenn dieser unter 5% Leben hat verursacht dieser Angriff das dreifache an Schaden. Ist nicht auf Bosse oder im PVP anwendbar.",
+      "maxLevel": "20",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04ba9",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 72,
+      "row": 73,
+      "de": "Lebensessenz",
+      "en": "Life Essence",
+      "description": "Erwecke die Lebensessenz eines Verbündeten wodurch dieser um 10% seines maximalen Lebens geheilt wird.",
+      "maxLevel": "5",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04baa",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 73,
+      "row": 74,
+      "de": "Lebenssauger",
+      "en": "Lifeleech",
+      "description": "Aus dem Leid anderer schöpfst du Kraft, greife einen Gegner an und erhalte 10% des verursachten Schadens als Leben zurück.",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bab",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 74,
+      "row": 75,
+      "de": "Lucky Strike",
+      "en": "Lucky Strike",
+      "description": "Lucky Strike is slightly increases your crit chance. +1 per Level",
+      "maxLevel": "5",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04bac",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 75,
+      "row": 76,
+      "de": "Macht des Geistes",
+      "en": "Power of the Mind",
+      "description": "",
+      "maxLevel": "10",
+      "classes": null,
+      "mongoID": null,
+      "status": "ambiguous",
+      "differences": []
+    },
+    {
+      "sourceID": 76,
+      "row": 77,
+      "de": "Macht des Körpers",
+      "en": "Power of the Body",
+      "description": "",
+      "maxLevel": "10",
+      "classes": null,
+      "mongoID": "6acc1c7e4826525c70d04bae",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 77,
+      "row": 78,
+      "de": "Mächtiger Doppelschlag",
+      "en": "Mighty Double Strike",
+      "description": "",
+      "maxLevel": "15",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04baf",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 78,
+      "row": 79,
+      "de": "Mächtiger Hieb",
+      "en": "Mighty Blow",
+      "description": "",
+      "maxLevel": "10",
+      "classes": null,
+      "mongoID": "6acc1c7e4826525c70d04bb0",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 79,
+      "row": 80,
+      "de": "Mächtiger Schlag",
+      "en": "Mighty Strike",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04bb0",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 80,
+      "row": 81,
+      "de": "Massen Heilung",
+      "en": "Mass Healing",
+      "description": "Du heilst deine Gruppe in einem bestimmten Gebiet um eine große Menge an Leben.",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04bb1",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 81,
+      "row": 82,
+      "de": "Mentale Erweiterung",
+      "en": "Mental Expansion",
+      "description": "",
+      "maxLevel": "10",
+      "classes": null,
+      "mongoID": "6acc1c7e4826525c70d04bb2",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 82,
+      "row": 83,
+      "de": "Movability",
+      "en": "Movability",
+      "description": "Erhöhe kurzfristig dein Lauftempo rapide.",
+      "maxLevel": "10",
+      "classes": "Villain, Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04bb3",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 83,
+      "row": 84,
+      "de": "Naturgewalt",
+      "en": "Force of Nature",
+      "description": "",
+      "maxLevel": "3",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04bb4",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 84,
+      "row": 85,
+      "de": "Schutz Aura",
+      "en": "Protection Aura",
+      "description": "Versiegle eine Verbündeten mit einem Schutzzauber und erhalte 80% des Schadens, den dein verbündeter erhalten würde.",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bb5",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 85,
+      "row": 86,
+      "de": "Opfergabe",
+      "en": "Sacrifice",
+      "description": "Sammle Opfer durch das Töten von Monstern. Für jedes deiner Opfer erhöht sich der Zähler um +1 bis zu einem maximalen Wert von 200. Die Anzahl deiner Opfer hat Auswirkungen auf meine Skills.",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bb6",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 86,
+      "row": 87,
+      "de": "Paralyse",
+      "en": "Paralysis",
+      "description": "Betäubt mit einer Gewissen Wahrscheinlichkeit einen Gegner zwei mal für je 5 Sekunden, mit einer Pause von 5 Sekunden.",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04bb7",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 87,
+      "row": 88,
+      "de": "Pforte der Verbannung",
+      "en": "Gate of Banishment",
+      "description": "Öffne die Pforte der Verdammten und Beschwöre Morrak. Da Morrak einst von der Erde verbannt wurde, ist seine Zeit um auf Erden zu wandeln und Verwüstung zu hinterlassen auf 5 Minuten begrenzt. Sollte er vor Ablauf der Zeit sterben, so endet seine zeit auf Erden mit seinem Tot.",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bb8",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 88,
+      "row": 89,
+      "de": "Präzisionsschuss",
+      "en": "Precision Shot",
+      "description": "Ramme deinen Schild mit voller Wucht in den Boden um mehr Stabilität zu erhalten. Der Göttliche Schild steht für 5 Sekunden und senkt deinen erhaltenen Schaden um 30%.",
+      "maxLevel": "15",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bb9",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 89,
+      "row": 90,
+      "de": "Rotier Schlag",
+      "en": "Rotating Strike",
+      "description": "",
+      "maxLevel": "10",
+      "classes": null,
+      "mongoID": "6acc1c7e4826525c70d04bba",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 90,
+      "row": 91,
+      "de": "Salve",
+      "en": "Salvo",
+      "description": "Schießt einen Pfeilregen auf ein Ziel, nahe Gegner erhalten Schaden.",
+      "maxLevel": "5",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bbb",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 91,
+      "row": 92,
+      "de": "Schädelspalter",
+      "en": "Skull Splitter",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04bbc",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 92,
+      "row": 93,
+      "de": "Schattendolch",
+      "en": "Shadow Dagger",
+      "description": "",
+      "maxLevel": "15",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04bbd",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 93,
+      "row": 94,
+      "de": "Schattenfalle",
+      "en": "Shadow Trap",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04bbe",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 94,
+      "row": 95,
+      "de": "Schattenschlag",
+      "en": "Shadow Strike",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04bbf",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 95,
+      "row": 96,
+      "de": "Schildangriffstraining",
+      "en": "Shield Attack Training",
+      "description": "You don't just hide behind the shield, you struggle with it. + 2 Vitality +1 Stenght",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bc0",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 96,
+      "row": 97,
+      "de": "Schildstoß",
+      "en": "Shield Thrust",
+      "description": "Du stößt in die hinteren Reihen der Gegner vor wobei jeder Gegner auf deinem Weg schaden nimmt.",
+      "maxLevel": "20",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bc1",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 97,
+      "row": 98,
+      "de": "Schildsturm",
+      "en": "Shield Storm",
+      "description": "Stürme voraus und greifen einen Gegner mit enemmächtigen Schldhieb an. Dieser Angriff sendet eine kleine Schockwelle aus, die dein Hasslevel erhöht.",
+      "maxLevel": "15",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bc2",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 98,
+      "row": 99,
+      "de": "Schmetterschlag",
+      "en": "Smash Strike",
+      "description": "",
+      "maxLevel": "10",
+      "classes": null,
+      "mongoID": "6acc1c7e4826525c70d04bc3",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 99,
+      "row": 100,
+      "de": "Schockschuss",
+      "en": "Shock Shot",
+      "description": "Schicke einen Schockpfeil auf dein Ziel. Dein Ziel wird 3 Sekunden betäubt und anschließend für 3 Sekunden verlangsamt.",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bc4",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 100,
+      "row": 101,
+      "de": "Schockwelle der Regeneration",
+      "en": "Shockwave of Regeneration",
+      "description": "Stoße eine Einergiewelle aus, die nahen Gegnern schaden verursacht. Du erhöhst kurzfristig deine Regeneration für 30 Sekunden um 250%.",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04bc5",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 101,
+      "row": 102,
+      "de": "Schrei der Unterwelt",
+      "en": "Cry of the Underworld",
+      "description": "",
+      "maxLevel": "3",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bc6",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 102,
+      "row": 103,
+      "de": "Schwäche des Fleisches",
+      "en": "Weakness of the Flesh",
+      "description": "Fleisch der Schwäche verringert die gegnerische magische Verteidigung für 30 Sekunden um 25%.",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bc7",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 103,
+      "row": 104,
+      "de": "Schwerter des Lichtes",
+      "en": "Swords of Light",
+      "description": "Beschwöre eine großes Schwert aus purer Energie, das auf einen Gegner herabfällt und im Umkreis des Ziels großen Schaden verursacht.",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04bc8",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 104,
+      "row": 105,
+      "de": "Schwerttraining",
+      "en": "Sword Training",
+      "description": "You can only survive your adventures through daily training. +3 Strenght",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bc9",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 105,
+      "row": 106,
+      "de": "Seelenfessel",
+      "en": "Soul Shackle",
+      "description": "Fessel die Seele deines Feindes und unterdrücke kurzfristig seine Magie.",
+      "maxLevel": "15",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bca",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 106,
+      "row": 107,
+      "de": "Seelenqual",
+      "en": "Soul Agony",
+      "description": "Wenn Seelenfessel wirkt kannst du mit Seelenqual enormer Schaden am Ziel angerichtet werden.",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bcb",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 107,
+      "row": 108,
+      "de": "Seelentrennung",
+      "en": "Soul Separation",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bcc",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 108,
+      "row": 109,
+      "de": "Sprungschlag",
+      "en": "Leap Strike",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bcd",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 109,
+      "row": 110,
+      "de": "Stählerne Rüstung",
+      "en": "Steel Armor",
+      "description": "Verstärke den physischen und magischen Rüstungswert Verbündeter Spieler in der Nähe. Dieser Effekt hält 25 Minuten.",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04bce",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 110,
+      "row": 111,
+      "de": "Strahlendes Aurafeld",
+      "en": "Radiant Aura Field",
+      "description": "Du versprühst Hoffnung und deine Aura reinigt Verbündete in deiner Nähe von negativen Effekten, wie Seelenfessel, …",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04bcf",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 111,
+      "row": 112,
+      "de": "Sturm der Wut",
+      "en": "Storm of Rage",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04bd0",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 112,
+      "row": 113,
+      "de": "Sturm des Feuers",
+      "en": "Storm of Fire",
+      "description": "Entfessle einen mächtigen Feuersturm, der Flächenschaden verursacht.",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bd1",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 113,
+      "row": 114,
+      "de": "Sturmklinge",
+      "en": "Wind Fury",
+      "description": "Schleudere 3 Schockwellen auf dein Ziel, die Schockwellen verursachen Schaden an jedem Gegner, der von ihnen getroffen wird.",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04bd2",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 114,
+      "row": 115,
+      "de": "Tobender Sturm",
+      "en": "Raging Storm",
+      "description": "Electric skills do 15% more things if the target was previously attack by a water spell.",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04bd3",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 115,
+      "row": 116,
+      "de": "Tödlicher Tanz",
+      "en": "Deadly Dance",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04bd4",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 116,
+      "row": 117,
+      "de": "Überlebenswille",
+      "en": "Will to Survive",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bd5",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 117,
+      "row": 118,
+      "de": "Überschallklinge",
+      "en": "Supersonic Strike",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bd6",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 118,
+      "row": 119,
+      "de": "Unerschöpfliche Hoffnung",
+      "en": "Unfailing Hope",
+      "description": "Faith to Mang verbessern",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04bd7",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 119,
+      "row": 120,
+      "de": "Urteil des Himmels",
+      "en": "Judgment of Heaven",
+      "description": "AOE",
+      "maxLevel": "5",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bd8",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 120,
+      "row": 121,
+      "de": "Vakuumimpuls",
+      "en": "Vacuum Impulse",
+      "description": "AOE",
+      "maxLevel": "5",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04bd9",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 121,
+      "row": 122,
+      "de": "Verbessertes Nachladen",
+      "en": "Improved Reload",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04bda",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 122,
+      "row": 123,
+      "de": "Verdorbene Seele",
+      "en": "Corrupted Soul",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04bdb",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 123,
+      "row": 124,
+      "de": "Verstärkter Pfeil",
+      "en": "Reinforced Arrow",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bdc",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 124,
+      "row": 125,
+      "de": "Voll Durchziehen",
+      "en": "Full Draw",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bdd",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 125,
+      "row": 126,
+      "de": "Wiederaufladung",
+      "en": "Recharge",
+      "description": "It is possible to reduce the cooldown of your skills by 5-15 seconds",
+      "maxLevel": "3",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04bde",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 126,
+      "row": 127,
+      "de": "Wiederherstellung",
+      "en": "Restoration",
+      "description": "",
+      "maxLevel": "15",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04bdf",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 127,
+      "row": 128,
+      "de": "Windfesseln",
+      "en": "Wind Shackles",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04be0",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 128,
+      "row": 129,
+      "de": "Wirbelnde Klinge",
+      "en": "Bladestorm",
+      "description": "AOE",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04be1",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 129,
+      "row": 130,
+      "de": "Wutexplosion",
+      "en": "Rage Explosion",
+      "description": "AOE",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04be2",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 130,
+      "row": 131,
+      "de": "Wutklinge",
+      "en": "Berserk Slash",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04be3",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 131,
+      "row": 132,
+      "de": "Zahl der Opfer",
+      "en": "Number of Victims",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 132,
+      "row": 133,
+      "de": "Zielschuss",
+      "en": "Aimed Shot",
+      "description": "",
+      "maxLevel": "15",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04be5",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 133,
+      "row": 134,
+      "de": "Zweihändiges Axttraining",
+      "en": "Two-Handed Axe Training",
+      "description": "Your love for destruction shows in the handling of your weapon. +3 Strenght",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04be6",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 134,
+      "row": 135,
+      "de": "Zweihändiges Streitkolbentraining",
+      "en": "Two-Handed Mace Training",
+      "description": "\nIt's not just training, it's an art. +2 Strenght and +1 Intelligence",
+      "maxLevel": "10",
+      "classes": "Templer, Adventure, Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04be7",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 135,
+      "row": 136,
+      "de": "Tamen",
+      "en": "Taming",
+      "description": "You are able to Tame Creatures. But it can fail very easy.",
+      "maxLevel": "3",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04be8",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 136,
+      "row": 137,
+      "de": "Bindung",
+      "en": "Binding",
+      "description": "The relationship between your Creature and you",
+      "maxLevel": "3",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04be9",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 137,
+      "row": 138,
+      "de": "Kontrolle",
+      "en": "Control",
+      "description": "You are able to controll the creatures more efficient.",
+      "maxLevel": "3",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04bea",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 138,
+      "row": 139,
+      "de": "Beshwören",
+      "en": "Soummon",
+      "description": "Will summon a tamed creature.",
+      "maxLevel": "1",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 139,
+      "row": 140,
+      "de": "Zurückrufen",
+      "en": "recall",
+      "description": "Call the creature back.",
+      "maxLevel": "1",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04bec",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 140,
+      "row": 141,
+      "de": "Zucht",
+      "en": "Breeding",
+      "description": "Will increase the experience of your creature if its fighting with you.",
+      "maxLevel": "3",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04bed",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 141,
+      "row": 142,
+      "de": "Ausdauertraining",
+      "en": "Endurance Training",
+      "description": "This skill will increase your defence stats.",
+      "maxLevel": "20",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04bee",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 142,
+      "row": 143,
+      "de": "Standhaft",
+      "en": "Steadfast",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bef",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 143,
+      "row": 144,
+      "de": "Eiserner Wille",
+      "en": "Iron Will",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bf0",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 144,
+      "row": 145,
+      "de": "Ausweichtraining",
+      "en": "Evasion Training",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bf1",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 145,
+      "row": 146,
+      "de": "Immunität",
+      "en": "Immunity",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage, Bloodmage, Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04bf2",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 146,
+      "row": 147,
+      "de": "Rüstungstraining",
+      "en": "Armortraining",
+      "description": "This skill will increase the used value of your armor.",
+      "maxLevel": "10",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04bf3",
+      "status": "nameMatched",
+      "differences": [
+        "description"
+      ]
+    },
+    {
+      "sourceID": 147,
+      "row": 148,
+      "de": "Durchhalten",
+      "en": "Perseverance",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04bf4",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 148,
+      "row": 149,
+      "de": "Mut des Abenteurers",
+      "en": "Adventurer's Courage",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 149,
+      "row": 150,
+      "de": "Erweiterung der Leidenschaft",
+      "en": "Passion Expansion",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bf6",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 150,
+      "row": 151,
+      "de": "Scharfer Instinkte",
+      "en": "Sharp Instincts",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bf7",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 151,
+      "row": 152,
+      "de": "Macht der Wildnis",
+      "en": "Power of the Wilderness",
+      "description": "",
+      "maxLevel": "3",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bf8",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 152,
+      "row": 153,
+      "de": "Macht des Begleiters",
+      "en": "Power of the Companion",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bf9",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 153,
+      "row": 154,
+      "de": "Für die Ehre",
+      "en": "For Honor",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Adventure",
+      "mongoID": "6acc1c7e4826525c70d04bfa",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 154,
+      "row": 155,
+      "de": "Giftpfeil",
+      "en": "Poisen Arrow",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bfb",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 155,
+      "row": 156,
+      "de": "Treffsicherheit",
+      "en": "Accuracy",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bfc",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 156,
+      "row": 157,
+      "de": "Auge des Falken",
+      "en": "Eye of the Falcon",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bfd",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 157,
+      "row": 158,
+      "de": "Sechster Sinn",
+      "en": "Sixth Sense",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bfe",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 158,
+      "row": 159,
+      "de": "Waldläufer",
+      "en": "Ranger",
+      "description": "",
+      "maxLevel": "3",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04bff",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 159,
+      "row": 160,
+      "de": "Pfeil der Vorfahren",
+      "en": "Ancestors' Arrow",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Archer",
+      "mongoID": "6acc1c7e4826525c70d04c00",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 160,
+      "row": 161,
+      "de": "Provozieren",
+      "en": "provoke",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Gladiator, Templer",
+      "mongoID": "6acc1c7e4826525c70d04c01",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 161,
+      "row": 162,
+      "de": "Kritische Schläge",
+      "en": "Critical Hit",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04c02",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 162,
+      "row": 163,
+      "de": "Energie des Mutes",
+      "en": "Energy of Courage",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04c03",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 163,
+      "row": 164,
+      "de": "Energie der Wut",
+      "en": "Energy of Rage",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04c04",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 164,
+      "row": 165,
+      "de": "Innere Kraft",
+      "en": "Inner Strength",
+      "description": "",
+      "maxLevel": "15",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04c05",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 165,
+      "row": 166,
+      "de": "Volles Potential",
+      "en": "Full Potential",
+      "description": "",
+      "maxLevel": "3",
+      "classes": "Gladiator",
+      "mongoID": "6acc1c7e4826525c70d04c06",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 166,
+      "row": 167,
+      "de": "Natürlicher Schutz",
+      "en": "Natural Protection",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04c07",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 167,
+      "row": 168,
+      "de": "Aura Unterdrückung",
+      "en": "Aura Suppression",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04c08",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 168,
+      "row": 169,
+      "de": "Alles im Fluss",
+      "en": "Everything in Flux",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04c09",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 169,
+      "row": 170,
+      "de": "Entgiftung",
+      "en": "Detoxification",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04c0a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 170,
+      "row": 171,
+      "de": "Widerliches Gebräu",
+      "en": "Disgusting Brew",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04c0b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 171,
+      "row": 172,
+      "de": "Innere Unruhe",
+      "en": "Inner Turmoil",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Herbalist",
+      "mongoID": "6acc1c7e4826525c70d04c0c",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 172,
+      "row": 173,
+      "de": "Energie des Lebens",
+      "en": "Energy of Life",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04c0d",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 173,
+      "row": 174,
+      "de": "Aktive Deckung",
+      "en": "Active Cover",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": "6acc1c7e4826525c70d04c0e",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 174,
+      "row": 175,
+      "de": "Bodyguard",
+      "en": "Bodyguard",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 175,
+      "row": 176,
+      "de": "Perfekter Konter",
+      "en": "Perfect Counter",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 176,
+      "row": 177,
+      "de": "Beschützte Freunde",
+      "en": "Protected Friends",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Templer",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 177,
+      "row": 178,
+      "de": "Kampfinstinkt",
+      "en": "Battle Instinct",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04c0f",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 178,
+      "row": 179,
+      "de": "Geist des Kriegers",
+      "en": "Spirit of the Warrior",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04c10",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 179,
+      "row": 180,
+      "de": "Blutrausch",
+      "en": "Bloodlust",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04c11",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 180,
+      "row": 181,
+      "de": "Bis in den Tot",
+      "en": "Till Death",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04c12",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 181,
+      "row": 182,
+      "de": "Ewiger Sieger",
+      "en": "Eternal Winner",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04c13",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 182,
+      "row": 183,
+      "de": "Ungebrochen",
+      "en": "Unbroken",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Butcher",
+      "mongoID": "6acc1c7e4826525c70d04c14",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 183,
+      "row": 184,
+      "de": "Geist des Feuers",
+      "en": "Spirit of Fire",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c15",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 184,
+      "row": 185,
+      "de": "Dunkle Macht",
+      "en": "Dark Power",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c16",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 185,
+      "row": 186,
+      "de": "Verbrannte Haut",
+      "en": "Burned Skin",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 186,
+      "row": 187,
+      "de": "Seelenplage",
+      "en": "Soul Plague",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c17",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 187,
+      "row": 188,
+      "de": "Arkane Aufladung",
+      "en": "Arcane Charge",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c18",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 188,
+      "row": 189,
+      "de": "Macht der Seelen",
+      "en": "Power of Souls",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c19",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 189,
+      "row": 190,
+      "de": "Vorsprung",
+      "en": "Advantage",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 190,
+      "row": 191,
+      "de": "Gute Reflexe",
+      "en": "Good Reflexes",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 191,
+      "row": 192,
+      "de": "Hinterhältige Falle",
+      "en": "Sneaky Trap",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04c1b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 192,
+      "row": 193,
+      "de": "Tödlicher treffer",
+      "en": "Deadly Hit",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 193,
+      "row": 194,
+      "de": "Zielpunktschaden",
+      "en": "Target Point Damage",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 194,
+      "row": 195,
+      "de": "Hartes training",
+      "en": "Hard Training",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Soulseeker",
+      "mongoID": "6acc1c7e4826525c70d04c1e",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 195,
+      "row": 196,
+      "de": "Flinker Stich",
+      "en": "Quick Stab",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 196,
+      "row": 197,
+      "de": "Dunkler Schleier",
+      "en": "Dark Veil",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04c1f",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 197,
+      "row": 198,
+      "de": "Herz des Verräters",
+      "en": "Heart of the Traitor",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04c20",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 198,
+      "row": 199,
+      "de": "Keine Gnade",
+      "en": "No Mercy",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04c21",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 199,
+      "row": 200,
+      "de": "Attentäter",
+      "en": "Assassin",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 200,
+      "row": 201,
+      "de": "Flinke Füße",
+      "en": "Swift Feet",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Villian",
+      "mongoID": "6acc1c7e4826525c70d04c22",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 201,
+      "row": 202,
+      "de": "Macht des Felsens",
+      "en": "Power of the Rock",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c23",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 202,
+      "row": 203,
+      "de": "Macht des Wassers",
+      "en": "Power of the Water",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c24",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 203,
+      "row": 204,
+      "de": "Vergessener Zauber",
+      "en": "Forgotten Spell",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c41",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 204,
+      "row": 205,
+      "de": "Druide_buff01",
+      "en": "",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 205,
+      "row": 206,
+      "de": "Herr der Elemente",
+      "en": "Lord of the Elements",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c25",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 206,
+      "row": 207,
+      "de": "Geist des Kommenden",
+      "en": "Spirit of the Coming",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 207,
+      "row": 208,
+      "de": "Lichtwaffe",
+      "en": "Light Weapon",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c26",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 208,
+      "row": 209,
+      "de": "Strahlende Rüstung",
+      "en": "Radiant Armor",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c27",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 209,
+      "row": 210,
+      "de": "Segen des Angriffes",
+      "en": "Blessing of Attack",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c28",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 210,
+      "row": 211,
+      "de": "Segen der Mentalität",
+      "en": "Blessing of Mentality",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c29",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 211,
+      "row": 212,
+      "de": "Segen der Verteidigung",
+      "en": "Blessing of Defense",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c2a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 212,
+      "row": 213,
+      "de": "Mana Umwandlung",
+      "en": "Mana Conversion",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c2b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 213,
+      "row": 214,
+      "de": "Geeinter Glaube",
+      "en": "United Faith",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 214,
+      "row": 215,
+      "de": "Güte des Gerechten",
+      "en": "Kindness of the Righteous",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 215,
+      "row": 216,
+      "de": "Geschwindigkeit der Dox",
+      "en": "Speed of the Dox",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04c42",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 216,
+      "row": 217,
+      "de": "Macht des Feuers",
+      "en": "Power of Fire",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": "6acc1c7e4826525c70d04c43",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 217,
+      "row": 218,
+      "de": "Totem der Regeneration",
+      "en": "Totem of Regeneration",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 218,
+      "row": 219,
+      "de": "Kontrolle der Elemente",
+      "en": "Control of the Elements",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 219,
+      "row": 220,
+      "de": "Geist des Vergangenen",
+      "en": "Spirit of the Past",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Shamane",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 220,
+      "row": 221,
+      "de": "Waffentraining",
+      "en": "Weapon Training",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Lightmage, Priest,, Shamane, Druide, Butcher, Bloodmage, Soulseeker, Villian, Adventure, Templer, Gladiator, Herbalist, Archer",
+      "mongoID": "6acc1c7e4826525c70d04c2c",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 221,
+      "row": 222,
+      "de": "Verbrennen",
+      "en": "Burning",
+      "description": "",
+      "maxLevel": "15",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c2d",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 222,
+      "row": 223,
+      "de": "Kanalisation",
+      "en": "Channelling",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c2e",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 223,
+      "row": 224,
+      "de": "Katalysator",
+      "en": "Catalyst",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 224,
+      "row": 225,
+      "de": "Lunare Inkanation",
+      "en": "Lunar Incantation",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c31",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 225,
+      "row": 226,
+      "de": "Himmlische Aufopferung",
+      "en": "Heavenly Sacrifice",
+      "description": "",
+      "maxLevel": "5",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c32",
+      "status": "nameMatched",
+      "differences": [
+        "maxSkillLv"
+      ]
+    },
+    {
+      "sourceID": 226,
+      "row": 227,
+      "de": "Das ewige Wissen",
+      "en": "Eternal Knowledge",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": "6acc1c7e4826525c70d04c33",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 227,
+      "row": 228,
+      "de": "Verloren in der Dunkelheit",
+      "en": "Lost in Darkness",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c34",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 228,
+      "row": 229,
+      "de": "Lichtblitz",
+      "en": "Light Flash",
+      "description": "",
+      "maxLevel": "20",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c35",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 229,
+      "row": 230,
+      "de": "Aurora Wellen",
+      "en": "Aurora Waves",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c36",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 230,
+      "row": 231,
+      "de": "Himmelsbrecher",
+      "en": "Sky Breaker",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Knife, Templar, Shamane, High Elves",
+      "mongoID": "6acc1c7e4826525c70d04c37",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 231,
+      "row": 232,
+      "de": "Strafendes Licht",
+      "en": "Punishing Light",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c38",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 232,
+      "row": 233,
+      "de": "Ausbrennen",
+      "en": "Burnout",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Ritualist, Bloodmage",
+      "mongoID": "6acc1c7e4826525c70d04c39",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 233,
+      "row": 234,
+      "de": "Heiliges Kreuz",
+      "en": "Holy Cross",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c3a",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 234,
+      "row": 235,
+      "de": "Heilige Vernichtung",
+      "en": "Holy Annihilation",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c3b",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 235,
+      "row": 236,
+      "de": "Göttliche Nova",
+      "en": "Divine Nova",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c3c",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 236,
+      "row": 237,
+      "de": "Licht kristallenes Gefängnis",
+      "en": "Light Crystal Prison",
+      "description": "",
+      "maxLevel": "3",
+      "classes": "Lightmage",
+      "mongoID": "6acc1c7e4826525c70d04c3d",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 237,
+      "row": 238,
+      "de": "Große Regeneration",
+      "en": "Great Regeneration",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Priest",
+      "mongoID": null,
+      "status": "missing",
+      "differences": []
+    },
+    {
+      "sourceID": 238,
+      "row": 239,
+      "de": "Manaexplosion",
+      "en": "Mana Explosion",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c3e",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 239,
+      "row": 240,
+      "de": "Bannmagie",
+      "en": "Banish Magic",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c3f",
+      "status": "nameMatched",
+      "differences": []
+    },
+    {
+      "sourceID": 240,
+      "row": 241,
+      "de": "Windschlitzer",
+      "en": "Wind Cutter",
+      "description": "",
+      "maxLevel": "10",
+      "classes": "Druide",
+      "mongoID": "6acc1c7e4826525c70d04c40",
+      "status": "nameMatched",
+      "differences": []
+    }
+  ],
+  "notes": [
+    "Names compared in both languages; no IDs or definitions updated in MongoDB.",
+    "Description differences require review; they do not prove a different skill.",
+    "Rows below 241 excluded."
+  ]
+}

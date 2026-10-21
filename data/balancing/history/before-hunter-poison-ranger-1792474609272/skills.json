@@ -1,0 +1,246 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bfb",
+    "skillName_eng": "Poison Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Während der Buff aktiv ist, hat jeder eigene erfolgreich treffende Pfeil eine Chance von 3 Prozent, das getroffene Ziel für 3 Sekunden zu vergiften. Das Gift verursacht einmal pro Sekunde 3 Schaden je gelerntem Skilllevel, bis zu 60 Schaden je Sekunde auf Stufe 20. Die erste Auslösung erfolgt nach 1 Sekunde; ohne Erneuerung sind es drei Auslösungen und insgesamt 180 Schaden auf Stufe 20. Das Gift stapelt sich pro Ziel nicht und springt nicht auf andere Ziele über. Ein erneuter Proc setzt nur die Restdauer wieder auf 3 Sekunden; der laufende Tick-Timer wird nicht zurückgesetzt. Mana wird einmalig bei Aktivierung bezahlt: 35 auf Stufe 1, plus 14 je weiterer Stufe, bis zu 301 auf Stufe 20. Bisheriger Cooldown 60 Sekunden; Castzeit fest 0,1 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 297 auf Stufe 20, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 600 seconds. While active, each own arrow that successfully hits has a 3 percent chance to poison its target for 3 seconds. Poison deals 3 damage per learned skill level once per second, reaching 60 per second at level 20. The first tick occurs after 1 second; without refresh there are three ticks, totalling 180 damage at level 20. Poison does not stack on a target or spread to other targets. A new proc refreshes only the remaining duration to 3 seconds without resetting the running tick timer. Mana is paid once on activation: 35 at level 1, plus 14 per additional level, reaching 301 at level 20. Existing cooldown is 60 seconds; Fixed cast time 0.1 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 297 at level 20, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 152,
+    "skillName_de": "Giftpfeil",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "poison-arrow-dot",
+        "type": "periodicDamage",
+        "target": "enemy",
+        "damageSchool": "poison",
+        "value": 3,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 3,
+          "perLevel": 3
+        },
+        "durationSeconds": 3,
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "applicationTrigger": "ownArrowHit",
+        "applicationChance": 0.03,
+        "requiredActiveSkillNumbers": [
+          152
+        ],
+        "maxStacksPerTarget": 1,
+        "reapplicationPolicy": "refreshDurationPreserveTickTimer",
+        "spreadsToOtherTargets": false,
+        "addsCasterMagicalAttack": false
+      }
+    ],
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "castTimeSeconds": 0.1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bff",
+    "skillName_eng": "Ranger",
+    "__v": 0,
+    "agi": 1,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Agilität 1 +1 je weiterer Stufe bis 3, Geschicklichkeit 2 +2 bis 6, P-Angriff 12 +4 bis 20 auf Stufe 3. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 600 seconds. Agility starts at 1 and increases by 1 to 3, Dexterity starts at 2 and increases by 2 to 6, physical attack starts at 12 and increases by 4 to 20 at level 3. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 76 at level 3, before discounts. Ongoing Mana drain is calculated separately.",
+    "dex": 2,
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 156,
+    "patk": 12,
+    "skillName_de": "Waldläufer",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "agi": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "patk": {
+        "type": "linear",
+        "base": 12,
+        "perLevel": 4
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 12,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  }
+]

@@ -1,0 +1,739 @@
+{
+  "generatedAt": "2026-10-21T06:23:53.295Z",
+  "assumptions": {
+    "rank1": "R1 armor on Level 1 starting base defense; no learned passives, no weapons. R1 is a rank, not a confirmed single character-level mapping. Later levels within R1 have higher intrinsic defense.",
+    "rank6": "Level 60 current comparison, permanent passives at comparison ranks; no weapons, armor or active buffs in own-defense column. Weapon contribution is removed separately; both ritualist weapon variants have identical defense.",
+    "excluded": "Cloaks (unassigned values), future bonus slots and set bonuses, jewelry, stones, upgrades, self/group buffs.",
+    "meaning": "Ratios compare defense points; they are not damage reduction percentages. No mitigation or incoming-damage simulation is performed."
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "rank1": {
+        "physicalDefense": {
+          "own": 7,
+          "armor": 30,
+          "total": 37,
+          "gainPercent": 428.57142857142856,
+          "armorSharePercent": 81.08108108108108
+        },
+        "magicalDefense": {
+          "own": 9,
+          "armor": 19,
+          "total": 28,
+          "gainPercent": 211.11111111111111,
+          "armorSharePercent": 67.85714285714286
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 161.8,
+          "armor": 302,
+          "total": 463.8,
+          "gainPercent": 186.65018541409145,
+          "armorSharePercent": 65.11427339370418
+        },
+        "magicalDefense": {
+          "own": 187.8,
+          "armor": 186,
+          "total": 373.8,
+          "gainPercent": 99.04153354632587,
+          "armorSharePercent": 49.75922953451043
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 77.8,
+          "armor": 302,
+          "total": 379.8,
+          "gainPercent": 388.17480719794344,
+          "armorSharePercent": 79.51553449183781
+        },
+        "magicalDefense": {
+          "own": 79.8,
+          "armor": 186,
+          "total": 265.8,
+          "gainPercent": 233.0827067669173,
+          "armorSharePercent": 69.97742663656885
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "rank1": {
+        "physicalDefense": {
+          "own": 4,
+          "armor": 31,
+          "total": 35,
+          "gainPercent": 775,
+          "armorSharePercent": 88.57142857142857
+        },
+        "magicalDefense": {
+          "own": 6,
+          "armor": 15,
+          "total": 21,
+          "gainPercent": 250,
+          "armorSharePercent": 71.42857142857143
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 152.8,
+          "armor": 309,
+          "total": 461.8,
+          "gainPercent": 202.22513089005233,
+          "armorSharePercent": 66.91208315288003
+        },
+        "magicalDefense": {
+          "own": 190.8,
+          "armor": 149,
+          "total": 339.8,
+          "gainPercent": 78.0922431865828,
+          "armorSharePercent": 43.849323131253676
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 74.8,
+          "armor": 309,
+          "total": 383.8,
+          "gainPercent": 413.1016042780749,
+          "armorSharePercent": 80.51068264721209
+        },
+        "magicalDefense": {
+          "own": 76.8,
+          "armor": 149,
+          "total": 225.8,
+          "gainPercent": 194.01041666666669,
+          "armorSharePercent": 65.98759964570417
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "rank1": {
+        "physicalDefense": {
+          "own": 5,
+          "armor": 29,
+          "total": 34,
+          "gainPercent": 580,
+          "armorSharePercent": 85.29411764705883
+        },
+        "magicalDefense": {
+          "own": 5,
+          "armor": 23,
+          "total": 28,
+          "gainPercent": 460,
+          "armorSharePercent": 82.14285714285714
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 135.8,
+          "armor": 291,
+          "total": 426.8,
+          "gainPercent": 214.28571428571428,
+          "armorSharePercent": 68.18181818181819
+        },
+        "magicalDefense": {
+          "own": 189.8,
+          "armor": 235,
+          "total": 424.8,
+          "gainPercent": 123.8145416227608,
+          "armorSharePercent": 55.32015065913371
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 75.8,
+          "armor": 291,
+          "total": 366.8,
+          "gainPercent": 383.90501319261216,
+          "armorSharePercent": 79.33478735005453
+        },
+        "magicalDefense": {
+          "own": 75.8,
+          "armor": 235,
+          "total": 310.8,
+          "gainPercent": 310.0263852242744,
+          "armorSharePercent": 75.61132561132561
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "rank1": {
+        "physicalDefense": {
+          "own": 9,
+          "armor": 36,
+          "total": 45,
+          "gainPercent": 400,
+          "armorSharePercent": 80
+        },
+        "magicalDefense": {
+          "own": 3,
+          "armor": 12,
+          "total": 15,
+          "gainPercent": 400,
+          "armorSharePercent": 80
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 182.64,
+          "armor": 354,
+          "total": 536.64,
+          "gainPercent": 193.82391590013142,
+          "armorSharePercent": 65.96601073345259
+        },
+        "magicalDefense": {
+          "own": 187.8,
+          "armor": 123,
+          "total": 310.8,
+          "gainPercent": 65.49520766773162,
+          "armorSharePercent": 39.575289575289574
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 83.34,
+          "armor": 354,
+          "total": 437.34000000000003,
+          "gainPercent": 424.7660187185025,
+          "armorSharePercent": 80.94388805048703
+        },
+        "magicalDefense": {
+          "own": 73.8,
+          "armor": 123,
+          "total": 196.8,
+          "gainPercent": 166.66666666666669,
+          "armorSharePercent": 62.49999999999999
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 1.4210854715202004e-14
+      }
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "rank1": {
+        "physicalDefense": {
+          "own": 3,
+          "armor": 18,
+          "total": 21,
+          "gainPercent": 600,
+          "armorSharePercent": 85.71428571428571
+        },
+        "magicalDefense": {
+          "own": 13,
+          "armor": 44,
+          "total": 57,
+          "gainPercent": 338.46153846153845,
+          "armorSharePercent": 77.19298245614036
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 127.80000000000001,
+          "armor": 180,
+          "total": 307.8,
+          "gainPercent": 140.8450704225352,
+          "armorSharePercent": 58.47953216374269
+        },
+        "magicalDefense": {
+          "own": 251.8,
+          "armor": 443,
+          "total": 694.8,
+          "gainPercent": 175.93328038125495,
+          "armorSharePercent": 63.75935521013242
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 73.8,
+          "armor": 180,
+          "total": 253.8,
+          "gainPercent": 243.90243902439025,
+          "armorSharePercent": 70.92198581560284
+        },
+        "magicalDefense": {
+          "own": 83.8,
+          "armor": 443,
+          "total": 526.8,
+          "gainPercent": 528.6396181384248,
+          "armorSharePercent": 84.09263477600608
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 14.400000000000034
+      }
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "rank1": {
+        "physicalDefense": {
+          "own": 6,
+          "armor": 26,
+          "total": 32,
+          "gainPercent": 433.3333333333333,
+          "armorSharePercent": 81.25
+        },
+        "magicalDefense": {
+          "own": 6,
+          "armor": 21,
+          "total": 27,
+          "gainPercent": 350,
+          "armorSharePercent": 77.77777777777777
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 148.8,
+          "armor": 267,
+          "total": 415.8,
+          "gainPercent": 179.43548387096772,
+          "armorSharePercent": 64.21356421356421
+        },
+        "magicalDefense": {
+          "own": 197.04,
+          "armor": 211,
+          "total": 408.03999999999996,
+          "gainPercent": 107.08485586682907,
+          "armorSharePercent": 51.71061660621508
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 76.8,
+          "armor": 267,
+          "total": 343.8,
+          "gainPercent": 347.65625,
+          "armorSharePercent": 77.66143106457243
+        },
+        "magicalDefense": {
+          "own": 80.34,
+          "armor": 211,
+          "total": 291.34000000000003,
+          "gainPercent": 262.6338063231267,
+          "armorSharePercent": 72.4239719914876
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 15.119999999999976
+      }
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "rank1": {
+        "physicalDefense": {
+          "own": 6,
+          "armor": 25,
+          "total": 31,
+          "gainPercent": 416.6666666666667,
+          "armorSharePercent": 80.64516129032258
+        },
+        "magicalDefense": {
+          "own": 8,
+          "armor": 26,
+          "total": 34,
+          "gainPercent": 325,
+          "armorSharePercent": 76.47058823529412
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 148.8,
+          "armor": 254,
+          "total": 402.8,
+          "gainPercent": 170.69892473118279,
+          "armorSharePercent": 63.058589870903674
+        },
+        "magicalDefense": {
+          "own": 192.08000000000004,
+          "armor": 211,
+          "total": 403.08000000000004,
+          "gainPercent": 109.85006247396916,
+          "armorSharePercent": 52.346928649399615
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 76.8,
+          "armor": 254,
+          "total": 330.8,
+          "gainPercent": 330.7291666666667,
+          "armorSharePercent": 76.78355501813785
+        },
+        "magicalDefense": {
+          "own": 85.88000000000001,
+          "armor": 211,
+          "total": 296.88,
+          "gainPercent": 245.69166278528175,
+          "armorSharePercent": 71.07248720021558
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "rank1": {
+        "physicalDefense": {
+          "own": 11,
+          "armor": 44,
+          "total": 55,
+          "gainPercent": 400,
+          "armorSharePercent": 80
+        },
+        "magicalDefense": {
+          "own": 10,
+          "armor": 29,
+          "total": 39,
+          "gainPercent": 290,
+          "armorSharePercent": 74.35897435897436
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 178.34000000000003,
+          "armor": 443,
+          "total": 621.34,
+          "gainPercent": 248.40192889985417,
+          "armorSharePercent": 71.29751826697138
+        },
+        "magicalDefense": {
+          "own": 211.03999999999996,
+          "armor": 288,
+          "total": 499.03999999999996,
+          "gainPercent": 136.4670204700531,
+          "armorSharePercent": 57.710804745110615
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 85.34,
+          "armor": 443,
+          "total": 528.34,
+          "gainPercent": 519.1000703070073,
+          "armorSharePercent": 83.84752242873907
+        },
+        "magicalDefense": {
+          "own": 84.34,
+          "armor": 288,
+          "total": 372.34000000000003,
+          "gainPercent": 341.47498221484466,
+          "armorSharePercent": 77.3486598270398
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 149.19999999999993,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "rank1": {
+        "physicalDefense": {
+          "own": 4,
+          "armor": 21,
+          "total": 25,
+          "gainPercent": 525,
+          "armorSharePercent": 84
+        },
+        "magicalDefense": {
+          "own": 8,
+          "armor": 36,
+          "total": 44,
+          "gainPercent": 450,
+          "armorSharePercent": 81.81818181818181
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 140.8,
+          "armor": 215,
+          "total": 355.8,
+          "gainPercent": 152.69886363636363,
+          "armorSharePercent": 60.42720629567172
+        },
+        "magicalDefense": {
+          "own": 198.79999999999995,
+          "armor": 354,
+          "total": 552.8,
+          "gainPercent": 178.0684104627767,
+          "armorSharePercent": 64.03762662807526
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 74.8,
+          "armor": 215,
+          "total": 289.8,
+          "gainPercent": 287.4331550802139,
+          "armorSharePercent": 74.18909592822637
+        },
+        "magicalDefense": {
+          "own": 78.8,
+          "armor": 354,
+          "total": 432.8,
+          "gainPercent": 449.23857868020303,
+          "armorSharePercent": 81.79297597042513
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 12
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "rank1": {
+        "physicalDefense": {
+          "own": 4,
+          "armor": 23,
+          "total": 27,
+          "gainPercent": 575,
+          "armorSharePercent": 85.18518518518519
+        },
+        "magicalDefense": {
+          "own": 8,
+          "armor": 31,
+          "total": 39,
+          "gainPercent": 387.5,
+          "armorSharePercent": 79.48717948717949
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 140.8,
+          "armor": 235,
+          "total": 375.8,
+          "gainPercent": 166.90340909090907,
+          "armorSharePercent": 62.53326237360298
+        },
+        "magicalDefense": {
+          "own": 174.8,
+          "armor": 309,
+          "total": 483.8,
+          "gainPercent": 176.77345537757435,
+          "armorSharePercent": 63.869367507234394
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 74.8,
+          "armor": 235,
+          "total": 309.8,
+          "gainPercent": 314.1711229946524,
+          "armorSharePercent": 75.85539057456423
+        },
+        "magicalDefense": {
+          "own": 78.8,
+          "armor": 309,
+          "total": 387.8,
+          "gainPercent": 392.1319796954315,
+          "armorSharePercent": 79.68024755028365
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 9.599999999999966,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "rank1": {
+        "physicalDefense": {
+          "own": 6,
+          "armor": 27,
+          "total": 33,
+          "gainPercent": 450,
+          "armorSharePercent": 81.81818181818181
+        },
+        "magicalDefense": {
+          "own": 4,
+          "armor": 24,
+          "total": 28,
+          "gainPercent": 600,
+          "armorSharePercent": 85.71428571428571
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 140.39999999999998,
+          "armor": 276,
+          "total": 416.4,
+          "gainPercent": 196.58119658119662,
+          "armorSharePercent": 66.28242074927954
+        },
+        "magicalDefense": {
+          "own": 182.8,
+          "armor": 247,
+          "total": 429.8,
+          "gainPercent": 135.12035010940917,
+          "armorSharePercent": 57.46859004187994
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 76.8,
+          "armor": 276,
+          "total": 352.8,
+          "gainPercent": 359.375,
+          "armorSharePercent": 78.2312925170068
+        },
+        "magicalDefense": {
+          "own": 74.8,
+          "armor": 247,
+          "total": 321.8,
+          "gainPercent": 330.21390374331554,
+          "armorSharePercent": 76.75574891236793
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 0
+      }
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "rank1": {
+        "physicalDefense": {
+          "own": 5,
+          "armor": 20,
+          "total": 25,
+          "gainPercent": 400,
+          "armorSharePercent": 80
+        },
+        "magicalDefense": {
+          "own": 10,
+          "armor": 19,
+          "total": 29,
+          "gainPercent": 190,
+          "armorSharePercent": 65.51724137931035
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 135.8,
+          "armor": 199,
+          "total": 334.8,
+          "gainPercent": 146.53902798232693,
+          "armorSharePercent": 59.438470728793305
+        },
+        "magicalDefense": {
+          "own": 175.84,
+          "armor": 190,
+          "total": 365.84000000000003,
+          "gainPercent": 108.05277525022748,
+          "armorSharePercent": 51.935272250164005
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 75.8,
+          "armor": 199,
+          "total": 274.8,
+          "gainPercent": 262.532981530343,
+          "armorSharePercent": 72.41630276564774
+        },
+        "magicalDefense": {
+          "own": 84.34,
+          "armor": 190,
+          "total": 274.34000000000003,
+          "gainPercent": 225.27863410007114,
+          "armorSharePercent": 69.25712619377414
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 2.842170943040401e-14
+      }
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "rank1": {
+        "physicalDefense": {
+          "own": 5,
+          "armor": 27,
+          "total": 32,
+          "gainPercent": 540,
+          "armorSharePercent": 84.375
+        },
+        "magicalDefense": {
+          "own": 8,
+          "armor": 20,
+          "total": 28,
+          "gainPercent": 250,
+          "armorSharePercent": 71.42857142857143
+        }
+      },
+      "rank6": {
+        "physicalDefense": {
+          "own": 135.8,
+          "armor": 269,
+          "total": 404.8,
+          "gainPercent": 198.08541973490426,
+          "armorSharePercent": 66.45256916996047
+        },
+        "magicalDefense": {
+          "own": 168.8,
+          "armor": 199,
+          "total": 367.8,
+          "gainPercent": 117.8909952606635,
+          "armorSharePercent": 54.10549211528004
+        }
+      },
+      "rank6WithoutPassives": {
+        "physicalDefense": {
+          "own": 75.8,
+          "armor": 269,
+          "total": 344.8,
+          "gainPercent": 354.8812664907652,
+          "armorSharePercent": 78.01624129930394
+        },
+        "magicalDefense": {
+          "own": 78.8,
+          "armor": 199,
+          "total": 277.8,
+          "gainPercent": 252.53807106598987,
+          "armorSharePercent": 71.63426925845933
+        }
+      },
+      "rank6WeaponContribution": {
+        "physicalDefense": 0,
+        "magicalDefense": 0
+      }
+    }
+  ]
+}

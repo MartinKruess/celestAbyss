@@ -1,0 +1,35 @@
+{
+  "_id": "6acc1c7e4826525c70d04b79",
+  "skillName_eng": "Dagger Training",
+  "__v": 0,
+  "agi": 1,
+  "amb": 2,
+  "category": "passive",
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verbessert dauerhaft deinen Umgang mit Dolchen. Auf Stufe 1 erhältst du 1 Agility und 2 Ambush. Je weiterer Stufe kommen jeweils 1 hinzu, bis zu 10 Agility und 11 Ambush auf Stufe 10. Kein Schwerttraining. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+  "description_eng": "Permanently improves dagger proficiency. At level 1 grants 1 Agility and 2 Ambush. Each additional level adds 1 to both, reaching 10 Agility and 11 Ambush at level 10. Does not train swords. Permanent passive skill with no activation cost, cast time or cooldown.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 22,
+  "skillName_de": "Dolchtraining",
+  "skillpoints": 1,
+  "resourceCosts": [],
+  "statScaling": {
+    "agi": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    },
+    "amb": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 1
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-19T12:14:47.192Z",
+  "backup": "data/balancing/history/before-faith-fortification-1792412087144",
+  "skill": {
+    "skillName_eng": "Fortification of Faith",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Selbstbuff des Lumineten. Gewährt je Skillstufe 3 Intelligenz und senkt während der Wirkung die Willenskraft um 1,5. Auf Stufe 10: +30 Intelligenz und −15 Willenskraft. Dauer 300 Sekunden, Cooldown 60 Sekunden. Aktivierung fest 0,1 Sekunden. Kostet 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10 vor Vergünstigungen. Wirkt ausschließlich auf dich selbst; nach Ablauf entfallen beide Attributänderungen.",
+    "description_eng": "Luminet self-buff. Each skill level grants 3 Intelligence and reduces Wisdom by 1.5 while active. At level 10: +30 Intelligence and −15 Wisdom. Duration 300 seconds; cooldown 60 seconds; fixed activation time 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, reaching 167 Mana at level 10 before discounts. Affects only the caster; both attribute changes end when the buff expires.",
+    "dmgType": "selfbuff",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 74,
+    "skillName_de": "Festigung des Glaubens",
+    "skillpoints": 1,
+    "activation": "manual",
+    "cd": 60,
+    "dur": 300,
+    "int": 3,
+    "statBonusTargets": {
+      "int": "self",
+      "wis": "self"
+    },
+    "statBonusUnits": {
+      "int": "flat",
+      "wis": "flat"
+    },
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 3
+      },
+      "wis": {
+        "type": "linear",
+        "base": -1.5,
+        "perLevel": -1.5
+      }
+    },
+    "wis": -1.5,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": -1.5,
+            "perLevel": -1.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  "scope": "Public shared buff replaced with Luminet-only self-buff, including removal from Healer/Priest. Purification 260 already saved."
+}

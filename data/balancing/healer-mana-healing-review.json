@@ -1,0 +1,118 @@
+{
+  "classKey": "healer",
+  "level": 60,
+  "rank": 6,
+  "equippedMana": 4242,
+  "passiveWisdom": 80,
+  "buffWisdom": 40,
+  "passiveMana": 6642,
+  "maxMana": 8142,
+  "assimilationMaxMana": 300,
+  "directManaRegenPerTick": 290,
+  "directRegenSources": [
+    {
+      "name": "Grundregeneration",
+      "value": 25
+    },
+    {
+      "nr": 1,
+      "name": "Erleuchtung",
+      "value": 20
+    },
+    {
+      "nr": 60,
+      "name": "Hoffnungsschimmer",
+      "value": 40
+    },
+    {
+      "nr": 197,
+      "name": "Aurora-Segen",
+      "value": 180
+    },
+    {
+      "nr": 242,
+      "name": "Assimilation",
+      "value": 25
+    }
+  ],
+  "knownWisdomWithoutStart": 247,
+  "provisionalRegenIncludingWisdom": 537,
+  "startWisdomUnknown": true,
+  "wisdomManaRegenConversionStatus": "1 MP per Wisdom per tick remains provisional; starting Wisdom not reconstructed",
+  "permafrostDrainAtMaximumPerTick": 27,
+  "netDirectRegenWithPermafrost": 263,
+  "healCosts": [
+    {
+      "nr": 58,
+      "name": "Kuss der Aurora",
+      "maxSkillLevel": 6,
+      "mana": 1208,
+      "costBasis": "flat",
+      "extraHealthCost": null
+    },
+    {
+      "nr": 64,
+      "name": "Heilung",
+      "maxSkillLevel": 20,
+      "mana": 130,
+      "costBasis": "flat",
+      "extraHealthCost": null
+    },
+    {
+      "nr": 78,
+      "name": "Göttliche Heilung",
+      "maxSkillLevel": 10,
+      "mana": 713,
+      "costBasis": "flat",
+      "extraHealthCost": null
+    },
+    {
+      "nr": 108,
+      "name": "Strahlendes Aurafeld",
+      "maxSkillLevel": 10,
+      "mana": 51,
+      "costBasis": "flat",
+      "extraHealthCost": null
+    },
+    {
+      "nr": 124,
+      "name": "Wiederherstellung",
+      "maxSkillLevel": 15,
+      "mana": 134,
+      "costBasis": "flat",
+      "extraHealthCost": null
+    },
+    {
+      "nr": 207,
+      "name": "Himmlische Aufopferung",
+      "maxSkillLevel": 1,
+      "mana": 814.2,
+      "costBasis": "10% max Mana",
+      "extraHealthCost": "90% max HP"
+    }
+  ],
+  "totalOneUseOfEachHeal": 3050.2,
+  "resurrection": {
+    "name": "Lunare Inkanation",
+    "manaCostStatus": "not defined; not interpreted as free"
+  },
+  "assumptions": [
+    "Original R6 Wand/armor, max learned passives and all own/group Mana buffs active on healer",
+    "Festigung des Geistes and Aurora-Segen both count; stacking between distinct skills assumed as before",
+    "No external buffs, jewelry, stones, upgrades, potions or Mana restoration",
+    "Mana regeneration is per tick, not per second; tick interval remains undefined",
+    "Assimilation raises max Mana, does not instantly restore Mana",
+    "No generic healing scaling with magical attack applied"
+  ],
+  "standardComparison": {
+    "equipment": "Level60 R6 original gear",
+    "passives": "maximum permanent",
+    "activeSelfAndGroupBuffsIncluded": false,
+    "manaPool": 6642,
+    "directMPRegenPerTick": 85,
+    "oneUseOfFiveNormalHeals": 2236,
+    "twoUsesOfFiveNormalHeals": 4472,
+    "manaRemainingAfterTwoWithoutRegeneration": 2170
+  },
+  "maximumBuffedScenarioIsSeparate": true
+}

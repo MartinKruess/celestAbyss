@@ -1,0 +1,55 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+import {buildSkillProgression} from '../services/inferSkillProgression.js';
+import {resolveSkillAtLevel} from '../services/skillLevel.js';
+import {curveValue} from '../services/skillProgression.js';
+import {usesFixedSelfBuffCast} from '../services/selfBuffRules.js';
+const explanations={
+ 12:['Verstärkt dich für 15 Sekunden. Stärke 20 +2 je weiterer Stufe bis 28, maximale Lebenspunkte 80 +40 bis 240, P-Angriff 100 +25 bis 200 auf Stufe 5. Der Lebensbonus ist keine direkte Heilung. Cooldown 130 Sekunden, -2 je weiterer Stufe bis 122.','Empowers you for 15 seconds. Strength starts at 20 and increases by 2 to 28, maximum health starts at 80 and increases by 40 to 240, physical attack starts at 100 and increases by 25 to 200 at level 5. Maximum health is not direct healing. Cooldown starts at 130 seconds and decreases by 2 per additional level to 122.'],
+ 148:['Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriffsgeschwindigkeitspunkt über zehn Stufen. Cooldown 60 Sekunden.','Self buff lasting 300 seconds. Grants 2 to 11 Ambush and 0 to 1 flat attack-speed rating point across ten levels. Cooldown 60 seconds.'],
+ 149:['Eigenbuff für Abenteurer und Schamane, Dauer 1200 Sekunden. Stärke 3 +1 je weiterer Stufe bis 5 und P-Angriff 30 +15 je weiterer Stufe bis 60 auf Stufe 3. Kein Intelligenzbonus. Cooldown 60 Sekunden.','Self buff for Adventurer and Shaman lasting 1200 seconds. Strength starts at 3 and increases by 1 to 5; physical attack starts at 30 and increases by 15 to 60 at level 3. No Intelligence bonus. Cooldown 60 seconds.'],
+ 153:['Eigenbuff für 600 Sekunden. Gewährt 1,2 Geschicklichkeit je Skillstufe bis 12 auf Stufe 10. Auf Stufe 10 zusätzlich 5 Glück. Cooldown 60 Sekunden.','Self buff lasting 600 seconds. Grants 1.2 Dexterity per skill level, reaching 12 at level 10. Also grants 5 Luck at level 10. Cooldown 60 seconds.'],
+ 154:['Eigenbuff für 600 Sekunden. Gewährt 1 P-Angriff je Skillstufe, maximal 10. Genauigkeit 15 +1 je weiterer Stufe bis 24. Glück: Stufe 1–4 +1, Stufe 5–9 +2, Stufe 10 +5. Ausweichen je Stufe: 10/11/12/13/14/16/17/18/19/20 feste Punkte. Vereint Auge des Falken und Sechster Sinn, kein zusätzliches Stapeln und keine zusätzliche Erblindungsresistenz. Cooldown 60 Sekunden.','Self buff lasting 600 seconds. Grants 1 physical attack per skill level, reaching 10. Accuracy starts at 15 and increases by 1 to 24. Luck: +1 at levels 1–4, +2 at levels 5–9, +5 at level 10. Dodge rating by level: 10/11/12/13/14/16/17/18/19/20. Merges Eye of the Hawk and Sixth Sense without additional stacking or extra blindness resistance. Cooldown 60 seconds.'],
+ 156:['Eigenbuff für 600 Sekunden. Agilität 1 +1 je weiterer Stufe bis 3, Geschicklichkeit 2 +2 bis 6, P-Angriff 12 +4 bis 20 auf Stufe 3. Cooldown 60 Sekunden.','Self buff lasting 600 seconds. Agility starts at 1 and increases by 1 to 3, Dexterity starts at 2 and increases by 2 to 6, physical attack starts at 12 and increases by 4 to 20 at level 3. Cooldown 60 seconds.'],
+ 157:['Eigenbuff für 12 Sekunden, gebunden an den bei Aktivierung anvisierten Gegner. Jeder erfolgreiche eigene Auto-Attack gegen dieses Ziel löst drei zusätzliche Ahnenpfeile auf dasselbe Ziel aus. Jeder Zusatzpfeil verursacht 12 physischen Grundschaden je Skillstufe bis 120 auf Stufe 10: insgesamt 36 bis 360 Zusatzschaden pro auslösendem Treffer vor gegnerischer Verteidigung. Kein zusätzlicher Charakter- oder Waffenangriff, keine weiteren Gegner. Zusatzpfeile und Begleiter lösen keine Ahnenpfeile aus. Cooldown 90 Sekunden. Eigenständige Treffer-/Krit-Regeln und Verhalten beim Tod des Ziels bleiben zu klären.','Self buff lasting 12 seconds, bound to the enemy targeted on activation. Each successful own basic attack against that enemy triggers three additional ancestral arrows at the same target. Each arrow deals 12 physical base damage per skill level to 120 at level 10, totaling 36 to 360 bonus damage per triggering hit before defense. No additional character or weapon attack and no other targets. Triggered arrows and companion attacks cannot trigger further arrows. Cooldown 90 seconds. Separate hit/critical rules and behavior on target death remain pending.'],
+ 160:['Eigenbuff für 600 Sekunden. Gewährt 7 P-Angriff je Skillstufe bis 70 auf Stufe 10. Ab Stufe 5 +10 Penetration, auf Stufe 10 insgesamt +20 feste Penetrationspunkte. Cooldown 60 Sekunden.','Self buff lasting 600 seconds. Grants 7 physical attack per skill level to 70 at level 10. Grants 10 flat penetration rating from level 5 and 20 total at level 10. Cooldown 60 seconds.'],
+ 162:['Eigenbuff mit 15 Skillstufen für 600 Sekunden. Stärke je Stufe: 2/3/4/5/6/7/8/9/9/10/11/12/13/14/15. Vitalität beginnt bei 3 und steigt auf jeder geraden Stufe um 1 bis 10. Auf ungeraden Stufen ab Stufe 3 kommen jeweils 5 feste Penetrationspunkte hinzu, maximal 35. Cooldown 60 Sekunden.','Self buff with 15 skill levels lasting 600 seconds. Strength by level: 2/3/4/5/6/7/8/9/9/10/11/12/13/14/15. Vitality starts at 3 and increases by 1 at each even level to 10. Each odd level from level 3 adds 5 flat penetration rating, reaching 35. Cooldown 60 seconds.'],
+ 172:['Eigenbuff für 600 Sekunden. Stärke steigt gleichmäßig von 4 auf Stufe 1 bis 12 auf Stufe 10. Cooldown 60 Sekunden.','Self buff lasting 600 seconds. Strength increases evenly from 4 at level 1 to 12 at level 10. Cooldown 60 seconds.'],
+ 190:['Eigenbuff für 600 Sekunden. Gewährt 1 Geschicklichkeit je Skillstufe bis 10. P-Angriff 15 +6 je weiterer Stufe bis 69 auf Stufe 10. Kein direkter Angriffsgeschwindigkeitsbonus. Cooldown 60 Sekunden.','Self buff lasting 600 seconds. Grants 1 Dexterity per skill level to 10. Physical attack starts at 15 and increases by 6 per additional level to 69 at level 10. No direct attack-speed bonus. Cooldown 60 seconds.'],
+};
+try{
+ assert.equal(process.env.MONGODB_DB_NAME,'celestabyss_dev');
+ const proposal=JSON.parse(await fs.readFile('data/balancing/self-buff-alignment-proposal.json','utf8'));
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:'celestabyss_dev',autoIndex:false,serverSelectionTimeoutMS:10000});
+ const col=SkillDataModel.collection,all=await col.find({}).toArray(),numbers=new Set(proposal.packages.second.map(c=>c.nr));
+ const before=all.filter(s=>numbers.has(s.nr)||usesFixedSelfBuffCast(s));
+ const changes=before.map(original=>{
+  const skill=structuredClone({...original,_id:undefined});delete skill._id;delete skill.levelProgression;
+  for(const c of proposal.packages.second.filter(c=>c.nr===skill.nr)){
+   if(c.effectKey){const e=skill.effects.find(e=>e.key===c.effectKey);e.value=c.base;e.valueScaling={type:'linear',base:c.base,perLevel:c.perLevel};}
+   else{skill.statScaling[c.stat]={type:'linear',base:c.base,perLevel:c.perLevel};if(skill[c.stat]!==undefined)skill[c.stat]=c.base;}
+  }
+  // Correct the proposal's ten-level assumption: Inner Strength actually has 15 levels.
+  if(skill.nr===162){assert.equal(skill.maxSkillLv,15);const values=Array.from({length:15},(_,i)=>Math.round(2+13*i/14));skill.statScaling.str={type:'table',base:2,values};skill.str=2;}
+  const text=explanations[skill.nr];if(text){[skill.description_de,skill.description_eng]=text;const cost=skill.resourceCosts?.find(c=>c.resource==='mana'&&c.unit==='flat');if(cost){const values=Array.from({length:skill.maxSkillLv},(_,i)=>Number(curveValue(cost.scaling,i+1).toFixed(6)));skill.description_de+=' Mana-Kosten je Stufe vor Rabatten: '+values.join('/')+'.';skill.description_eng+=' Mana costs by level before discounts: '+values.join('/')+'.';}}
+  if(usesFixedSelfBuffCast(skill)){
+   skill.castTimeSeconds=.1;delete skill.castTimeScaling;skill.castTimeStatus='defined';skill.timingModifiers={...skill.timingModifiers,castTimeIsFixed:true,affectedByAttackSpeed:false,affectedByCastSpeed:false};
+   skill.description_de=skill.description_de.replace(/Castzeit(?: beträgt| von|:)?\s*\d+(?:[.,]\d+)?\s*(?:Sekunden|s)\.?/gi,'Castzeit fest 0,1 Sekunden.').replace(/Sofortige Aktivierung/gi,'Aktivierung mit fester Castzeit von 0,1 Sekunden');
+   skill.description_eng=skill.description_eng.replace(/Cast time(?: is| of|:)?\s*\d+(?:\.\d+)?\s*seconds?\.?/gi,'Fixed cast time 0.1 seconds.');
+   skill.description_de+=' Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt.';
+   skill.description_eng+=' Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate.';
+  }
+  skill.levelProgression=buildSkillProgression(skill);
+  assert.deepEqual(skill.resourceCosts,original.resourceCosts,'Unspecified buff costs must stay unchanged');assert.deepEqual(skill.cooldownScaling,original.cooldownScaling);assert.equal(skill.cd,original.cd);assert.deepEqual(skill.durationScaling,original.durationScaling);assert.equal(skill.dur,original.dur);
+  for(let level=1;level<=skill.maxSkillLv;level++)if(usesFixedSelfBuffCast(skill)){const resolved=resolveSkillAtLevel(skill,level);assert.equal(resolved.castTimeSeconds,.1);assert.equal(resolved.timingModifiers.castTimeIsFixed,true);}
+  return{before:original,skill};
+ });
+ for(const {skill}of changes)await new SkillDataModel(skill).validate();
+ const backup='data/balancing/history/before-self-buff-alignment-'+Date.now();await fs.mkdir(backup,{recursive:true});await fs.writeFile(backup+'/skills.json',JSON.stringify(before,null,2)+'\n');
+ for(const {before:original,skill}of changes){await col.updateOne({_id:original._id},{$set:skill,...(original.castTimeScaling?{$unset:{castTimeScaling:''}}:{})});const actual=await col.findOne({_id:original._id});delete actual._id;const expected={...original,...skill};delete expected._id;delete expected.castTimeScaling;assert.deepEqual(actual,expected);}
+ await fs.writeFile('data/balancing/self-buff-alignment-application.json',JSON.stringify({status:'valuesAndCastAppliedManaRulePending',generatedAt:new Date().toISOString(),backup,changes,package:'second',correction:'Inner Strength has 15 levels; maximum Strength correctly 15, not the 22.5 accidentally used in the proposal simulation.',mana:'Existing buff costs preserved. The stored three-tier formula explicitly excluded pure buffs; new buff-cost basis awaits user clarification.',castScope:'All currently assigned selfbuff definitions and Energy Burst 34; Provoke 158 excluded because the user explicitly treats it as an aggro action, not a buff. No unassigned historical skills or public groups changed.'},null,2)+'\n');
+ console.log('Verified '+changes.length+' updated skill definitions. Approved values applied; self casts fixed .1s; existing Mana unchanged pending rule.');
+}catch(e){console.error('Self-buff update failed ('+e.name+'); credentials omitted.');if(['AssertionError','ValidationError'].includes(e.name))console.error(e.message);process.exitCode=1;}finally{await mongoose.disconnect();}

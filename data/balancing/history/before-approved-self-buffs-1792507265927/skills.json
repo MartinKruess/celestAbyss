@@ -1,0 +1,699 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c4f",
+    "skillName_eng": "Devil's Pact",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schließt einen Teufelspakt und verstärkt sich selbst für 600 Sekunden (10 Minuten). Je gelerntem Skilllevel +5 Wisdom, +5 Intelligenz und +5 Vitalität, auf Stufe 3 jeweils +15. Kein zufälliger Buff und kein zusätzlicher Risikoeffekt im aktuellen Entwurf. Mana 61 auf Stufe 1, +25 je weiterer Stufe, auf Stufe 3 111. Cooldown 60 Sekunden, Castzeit fest 0,1 Sekunden. Erneute Anwendung erneuert den Eigenbuff, ohne seine Stärke mit sich selbst zu stapeln. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Makes a devil’s pact to enhance the caster for 600 seconds (10 minutes). Each learned skill level grants +5 Wisdom, +5 Intelligence and +5 Vitality, reaching +15 each at level 3. No random buff or extra risk effect in the current design. Mana 61 plus 25 per additional level, reaching 111 at level 3. Cooldown 60 seconds, Fixed cast time 0.1 seconds. Reapplying refreshes the self buff without stacking its magnitude with itself. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 76 at level 3, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "int": 5,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 236,
+    "skillName_de": "Teufelspakt",
+    "skillpoints": 1,
+    "vita": 5,
+    "wis": 5,
+    "castTimeSeconds": 0.1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "wis": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "int": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "vita": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "mana": 50,
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c15",
+    "skillName_eng": "Spirit of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 300 Sekunden mit zehn Stufen. Gewährt +1 Intelligenz je gelerntem Skilllevel, maximal +10 auf Stufe 10. Feuerangriffe erhalten zusätzlich +2 direkten Angriff je Skillstufe, maximal +20. Beide Boni sind gegenüber der bisherigen Definition halbiert. Aktivierungskosten 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana vor Rabatten. Feste Castzeit 0,1 Sekunden unabhängig von Angriffs- oder Castgeschwindigkeit; Cooldown 60 Sekunden. Einheitliche Element-Zuordnung und genaue Anwendung des flachen Feuerbonus bei Mehrfachtreffern und DoTs werden noch abgestimmt. Animationsdauer ist von der Castzeit getrennt.",
+    "description_eng": "Self buff lasting 300 seconds with ten levels. Grants +1 Intelligence per learned level, up to +10. Fire attacks gain +2 flat attack per learned level, up to +20. Both bonuses are half their former values. Activation costs 50 Mana plus 13 per additional level, up to 167 before discounts. Fixed cast time 0.1 seconds, unaffected by attack or cast speed; cooldown 60 seconds. Unified element tags and exact application of the flat fire bonus to multi-hits and DoTs remain pending. Animation duration is separate.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "int": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 178,
+    "skillName_de": "Geist des Feuers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "fire-spirit-fire-attack",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "allSkills",
+        "damageSchool": "fire",
+        "value": 2,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 2
+        },
+        "durationSeconds": 300
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "mana": 50,
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c21",
+    "skillName_eng": "No Mercy",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Gewährt 1 Geschicklichkeit je Skillstufe bis 10. P-Angriff 15 +6 je weiterer Stufe bis 69 auf Stufe 10. Kein direkter Angriffsgeschwindigkeitsbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 600 seconds. Grants 1 Dexterity per skill level to 10. Physical attack starts at 15 and increases by 6 per additional level to 69 at level 10. No direct attack-speed bonus. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 190,
+    "patk": 15,
+    "skillName_de": "Keine Gnade",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "dex": 1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "dex": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "patk": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 6
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 15,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c25",
+    "skillName_eng": "Master of the Elements",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff mit zehn Stufen für 600 Sekunden. Stärke, Vitalität und Willenskraft steigen jeweils gemäß Stufentabelle 1/1/2/2/3/3/4/4/5/5. Intelligenz steigt um 1 je Skillstufe von 1 auf 10. Wirkt ausschließlich auf dich selbst; keine Faith- oder Victim-Boni. Aktivierungskosten unverändert: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana vor Rabatten. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist von der Castzeit getrennt. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff with ten levels lasting 600 seconds. Strength, Vitality and Wisdom each follow the level table 1/1/2/2/3/3/4/4/5/5. Intelligence increases by one per skill level from 1 to 10. Affects only the caster; no Faith or Victim bonuses. Activation costs unchanged: 50 Mana at level 1 plus 13 per additional level, up to 167 Mana before discounts. Cooldown 60 seconds; fixed cast time 0.1 seconds at all levels, unaffected by attack or cast speed. Animation duration is separate. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "int": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 194,
+    "skillName_de": "Herr der Elemente",
+    "skillpoints": 1,
+    "str": 1,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "str": {
+        "type": "table",
+        "base": 1,
+        "values": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      },
+      "vita": {
+        "type": "table",
+        "base": 1,
+        "values": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "base": 1,
+        "values": [
+          1,
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      },
+      "int": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "statBonusTargets": {
+      "str": "self",
+      "vita": "self",
+      "wis": "self",
+      "int": "self"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff",
+    "vita": 1,
+    "wis": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf8",
+    "skillName_eng": "Power of the Wild",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für Abenteurer und Schamane, Dauer 1200 Sekunden. Stärke 3 +1 je weiterer Stufe bis 5 und P-Angriff 30 +15 je weiterer Stufe bis 60 auf Stufe 3. Kein Intelligenzbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff for Adventurer and Shaman lasting 1200 seconds. Strength starts at 3 and increases by 1 to 5; physical attack starts at 30 and increases by 15 to 60 at level 3. No Intelligence bonus. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 76 at level 3, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 1200,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 149,
+    "patk": 30,
+    "skillName_de": "Macht der Wildnis",
+    "skillpoints": 1,
+    "str": 3,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "str": "self",
+      "patk": "self"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      },
+      "patk": {
+        "type": "linear",
+        "base": 30,
+        "perLevel": 15
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 1200,
+      "perLevel": 0
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 30,
+            "perLevel": 15
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1200,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  }
+]

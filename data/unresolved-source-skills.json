@@ -1,0 +1,346 @@
+{
+  "sourceFile": "C:\\Users\\Nitram-PC\\Downloads\\SkillList.ods",
+  "sourceSHA256": "ec095de0e5c9bb9041db7814d25ddd503a2adde907bfa38e15bb93b5c847b13a",
+  "status": "Unresolved source entries, excluded from seed until reviewed",
+  "count": 13,
+  "entries": [
+    {
+      "sourceID": 63,
+      "sourceRow": 64,
+      "germanName": "Kanalisation der Wut",
+      "englishName": "Channelling of Rage",
+      "status": "pending",
+      "source": {
+        "Nr": "63",
+        "S_Name_ENG": "Channelling of Rage ",
+        "S_Name_DE": "Kanalisation der Wut",
+        "CharClass": "Gladiator",
+        "S_Description": "Nutze deine Wut um deinen Angriffswert für 15 Sekunden um 50% zu steigern. Kritische Treffer verletzten dich selbst.",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "3",
+        "S_DMG_Type": "Spell",
+        "S_PAttack": "0",
+        "S_MAttack": "0.05",
+        "S_CD": "180",
+        "S_Duration": "60",
+        "S_Luck": "0.05",
+        "S_Str": "0.05"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Gladiator/Berserker",
+        "effect": "Rage-related skill; numeric values need separate review"
+      }
+    },
+    {
+      "sourceID": 148,
+      "sourceRow": 149,
+      "germanName": "Mut des Abenteurers",
+      "englishName": "Adventurer's Courage",
+      "status": "pending",
+      "source": {
+        "Nr": "148",
+        "S_Name_ENG": "Adventurer's Courage ",
+        "S_Name_DE": "Mut des Abenteurers",
+        "CharClass": "Adventure",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Selfbuff",
+        "S_CD": "60",
+        "S_Duration": "600",
+        "S_Str": "5"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Adventurer",
+        "effect": "Self buff; old source Strength +5 needs review against comparable skills"
+      }
+    },
+    {
+      "sourceID": 174,
+      "sourceRow": 175,
+      "germanName": "Bodyguard",
+      "englishName": "Bodyguard",
+      "status": "pending",
+      "source": {
+        "Nr": "174",
+        "S_Name_ENG": "Bodyguard ",
+        "S_Name_DE": "Bodyguard",
+        "CharClass": "Templer",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Selfbuff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "effect": "Possible overlap with Protected Friends or Divine Protection; do not add until clarified"
+      }
+    },
+    {
+      "sourceID": 175,
+      "sourceRow": 176,
+      "germanName": "Perfekter Konter",
+      "englishName": "Perfect Counter",
+      "status": "pending",
+      "source": {
+        "Nr": "175",
+        "S_Name_ENG": "Perfect Counter ",
+        "S_Name_DE": "Perfekter Konter",
+        "CharClass": "Templer",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Selfbuff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "effect": "User concept: increases Block; successful blocks reflect damage. Exact Block bonus, reflection amount, scope and timing remain pending."
+      }
+    },
+    {
+      "sourceID": 176,
+      "sourceRow": 177,
+      "germanName": "Beschützte Freunde",
+      "englishName": "Protected Friends",
+      "status": "pending",
+      "source": {
+        "Nr": "176",
+        "S_Name_ENG": "Protected Friends ",
+        "S_Name_DE": "Beschützte Freunde",
+        "CharClass": "Templer",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Selfbuff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "effect": "Possible overlap with Bodyguard or Divine Protection; do not add until clarified"
+      }
+    },
+    {
+      "sourceID": 189,
+      "sourceRow": 190,
+      "germanName": "Vorsprung",
+      "englishName": "Advantage",
+      "status": "pending",
+      "source": {
+        "Nr": "189",
+        "S_Name_ENG": "Advantage ",
+        "S_Name_DE": "Vorsprung",
+        "CharClass": "Soulseeker",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "effect": "Unknown"
+      }
+    },
+    {
+      "sourceID": 192,
+      "sourceRow": 193,
+      "germanName": "Tödlicher treffer",
+      "englishName": "Deadly Hit",
+      "status": "pending",
+      "source": {
+        "Nr": "192",
+        "S_Name_ENG": "Deadly Hit ",
+        "S_Name_DE": "Tödlicher treffer",
+        "CharClass": "Soulseeker",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Soulseeker",
+        "effect": "Likely an attack with guaranteed critical hit; tentative, compare archer counterpart"
+      }
+    },
+    {
+      "sourceID": 193,
+      "sourceRow": 194,
+      "germanName": "Zielpunktschaden",
+      "englishName": "Target Point Damage",
+      "status": "pending",
+      "source": {
+        "Nr": "193",
+        "S_Name_ENG": "Target Point Damage ",
+        "S_Name_DE": "Zielpunktschaden",
+        "CharClass": "Soulseeker",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Soulseeker",
+        "effect": "Self buff increases Dexterity; values pending"
+      }
+    },
+    {
+      "sourceID": 195,
+      "sourceRow": 196,
+      "germanName": "Flinker Stich",
+      "englishName": "Quick Stab",
+      "status": "pending",
+      "source": {
+        "Nr": "195",
+        "S_Name_ENG": "Quick Stab ",
+        "S_Name_DE": "Flinker Stich",
+        "CharClass": "Villian",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Rogue",
+        "effect": "Attack versus self buff still uncertain"
+      }
+    },
+    {
+      "sourceID": 213,
+      "sourceRow": 214,
+      "germanName": "Geeinter Glaube",
+      "englishName": "United Faith",
+      "status": "pending",
+      "source": {
+        "Nr": "213",
+        "S_Name_ENG": "United Faith ",
+        "S_Name_DE": "Geeinter Glaube",
+        "CharClass": "Lightmage",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "effect": "Light-magic buff, possible name Geheimer Glaube; exact name/effect uncertain"
+      }
+    },
+    {
+      "sourceID": 214,
+      "sourceRow": 215,
+      "germanName": "Güte des Gerechten",
+      "englishName": "Kindness of the Righteous",
+      "status": "pending",
+      "source": {
+        "Nr": "214",
+        "S_Name_ENG": "Kindness of the Righteous",
+        "S_Name_DE": "Güte des Gerechten",
+        "CharClass": "Lightmage",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "effect": "Light-magic buff, possible name Güte der Gerechtigkeit; details uncertain"
+      }
+    },
+    {
+      "sourceID": 217,
+      "sourceRow": 218,
+      "germanName": "Totem der Regeneration",
+      "englishName": "Totem of Regeneration",
+      "status": "pending",
+      "source": {
+        "Nr": "217",
+        "S_Name_ENG": "Totem of Regeneration ",
+        "S_Name_DE": "Totem der Regeneration",
+        "CharClass": "Shamane",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Shaman",
+        "effect": "Placed totem temporarily doubles HP and mana regeneration in area; extra heal uncertain"
+      }
+    },
+    {
+      "sourceID": 218,
+      "sourceRow": 219,
+      "germanName": "Kontrolle der Elemente",
+      "englishName": "Control of the Elements",
+      "status": "pending",
+      "source": {
+        "Nr": "218",
+        "S_Name_ENG": "Control of the Elements ",
+        "S_Name_DE": "Kontrolle der Elemente",
+        "CharClass": "Shamane",
+        "Skill_Lv": "0",
+        "S_Max_Lv": "10",
+        "S_DMG_Type": "Buff",
+        "S_CD": "60",
+        "S_Duration": "600"
+      },
+      "candidateIDs": [],
+      "differences": [],
+      "decision": null,
+      "match": "noNameCandidate",
+      "userNotes": {
+        "class": "Shaman",
+        "effect": "Unknown; possible Herbalist relevance unconfirmed"
+      }
+    }
+  ]
+}

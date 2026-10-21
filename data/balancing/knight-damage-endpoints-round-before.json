@@ -1,0 +1,277 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b76",
+    "skillName_eng": "Breaker of the Shield",
+    "__v": 0,
+    "category": "active",
+    "cd": 33,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Trifft den Gegner mit einem Schildangriff und senkt seine physische Verteidigung für zunächst 15 Sekunden um 1 Prozent. Der physische Grundschaden startet bei 97 und steigt um 32 je weiterer Stufe auf 385 auf Stufe 10. Mana-Kosten steigen von 45 um 27 je weiterer Stufe auf 288. Castzeit 0,1 Sekunden, Cooldown 33 Sekunden auf Stufe 1 und 24 Sekunden auf Stufe 10. Die Dauer der Verteidigungssenkung steigt um 1 Sekunde je weiterer Stufe auf 24 Sekunden; ihre Stärke bleibt bei 1 Prozent. Bei Anwendung werden zusätzlich einmalig 500 feste Aggropunkte gegen das Ziel erzeugt, nach dem schadensbezogenen Aggro-Multiplikator; dieser feste Bonus wird nicht erneut multipliziert.",
+    "description_eng": "Hits the enemy with a shield attack and reduces physical defense by 1 percent for initially 15 seconds. Physical base damage starts at 97 and increases by 32 per additional level to 385 at level 10. Mana cost increases from 45 by 27 per additional level to 288. Cast time is 0.1 seconds; Cooldown 33 seconds at level 1 and 24 seconds at level 10. Defense reduction duration increases by 1 second per additional level to 24 seconds; reduction strength remains at 1 percent. On activation adds 500 flat threat toward the target once, after damage-based threat multiplication; this fixed bonus is not multiplied again.",
+    "dmgType": "physical",
+    "dur": 15,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 19,
+    "skillName_de": "Brecher der Deckung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "shield-breaker-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "pdef",
+        "reference": "targetStat",
+        "value": -0.01,
+        "unit": "fraction",
+        "durationSeconds": 15,
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        }
+      },
+      {
+        "key": "breaker-flat-threat",
+        "type": "threatGain",
+        "target": "enemy",
+        "value": 500,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "applicationTiming": "onActivation",
+        "affectedByThreatMultiplier": false
+      }
+    ],
+    "mana": 45,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 45,
+          "perLevel": 27
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 97,
+        "perLevel": 32
+      }
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 33,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 15,
+      "perLevel": 1
+    },
+    "patk": 97
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b7a",
+    "skillName_eng": "Thundering Lance",
+    "__v": 0,
+    "category": "active",
+    "cd": 39,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft eine Aura um dein Schwert oder deinen Streitkolben und stürmt zum Gegner vor, um ihn einmalig zu treffen. Der physische Grundschaden steigt gleichmäßig von 280 auf Stufe 1 auf 1240 auf Stufe 15. Mana-Kosten steigen von 64 um 25 je weiterer Stufe auf 414. Die Ansturmzeit hängt vom Abstand zum Gegner ab und liegt vorläufig zwischen 0,1 und 3 Sekunden. Keine anhaltende Schadenswirkung. Cooldown 39 Sekunden auf Stufe 1 und 39 Sekunden auf Stufe 15. Eine zusätzliche feste Castzeit sowie Reichweite und genaue Distanz-Zeit-Berechnung sind noch nicht festgelegt.",
+    "description_eng": "Creates an aura around your sword or mace and charges toward the enemy to hit once. Base physical damage increases evenly from 280 at level 1 to 1240 at level 15. Mana cost increases from 64 by 25 per additional level to 414. Provisional charge time depends on distance to the target and ranges from 0.1 to 3 seconds. No ongoing damage. Cooldown 39 seconds at level 1 and 39 seconds at level 15. Additional fixed cast time, range and exact distance-to-time calculation remain unspecified.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 23,
+    "patk": 280,
+    "skillName_de": "Donnernde Lanze",
+    "skillpoints": 1,
+    "hasLingeringDamage": false,
+    "mana": 64,
+    "movement": {
+      "type": "chargeToEnemy",
+      "durationBasis": "targetDistance",
+      "durationRangeSeconds": {
+        "min": 0.1,
+        "max": 3
+      }
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 64,
+          "perLevel": 25
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 280,
+        "perLevel": 68.57142857142857
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9a",
+    "skillName_eng": "Mindbreaker",
+    "__v": 0,
+    "category": "active",
+    "cd": 27,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein mächtiger Schildstoß verursacht einmalig physischen Grundschaden von 81 auf Stufe 1, plus 32 je weiterer Stufe auf 369 auf Stufe 10. Senkt die magische Verteidigung des Gegners um zunächst 1 Prozent und je weiterer Stufe um 1 Prozentpunkt mehr, bis zu 10 Prozent. Die Effektdauer steigt wie bisher von 21 um 1 Sekunde je weiterer Stufe auf 30 Sekunden. Der Cooldown 27 Sekunden auf Stufe 1 und 18 Sekunden auf Stufe 10. Mana-Kosten steigen von 37 um 23 je weiterer Stufe auf 244. Castzeit 0,1 Sekunden. Bei Anwendung werden zusätzlich einmalig 500 feste Aggropunkte gegen das Ziel erzeugt, nach dem schadensbezogenen Aggro-Multiplikator; dieser feste Bonus wird nicht erneut multipliziert.",
+    "description_eng": "A powerful shield bash deals physical base damage once, starting at 81 at level 1 and increasing by 32 per additional level to 369 at level 10. Reduces enemy magical defense by 1 percent initially and an additional 1 percentage point per additional level, reaching 10 percent. Effect duration retains its progression from 21 by 1 second per additional level to 30 seconds. Cooldown 27 seconds at level 1 and 18 seconds at level 10. Mana cost increases from 37 by 23 per additional level to 244. Cast time is 0.1 seconds. On activation adds 500 flat threat toward the target once, after damage-based threat multiplication; this fixed bonus is not multiplied again.",
+    "dmgType": "physical",
+    "dur": 21,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 55,
+    "patk": 81,
+    "skillName_de": "Brecher des Geistes",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 27,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "durationScaling": {
+          "type": "linear",
+          "base": 21,
+          "perLevel": 1
+        },
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "mdef",
+        "value": -0.01,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "damageTypes": [],
+        "durationSeconds": 21,
+        "key": "enemy-magic-defense",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.01,
+          "perLevel": -0.01
+        }
+      },
+      {
+        "key": "breaker-flat-threat",
+        "type": "threatGain",
+        "target": "enemy",
+        "value": 500,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "applicationTiming": "onActivation",
+        "affectedByThreatMultiplier": false
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.1,
+    "mana": 37,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 37,
+          "perLevel": 23
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 81,
+        "perLevel": 32
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc2",
+    "skillName_eng": "Shield Storm",
+    "__v": 0,
+    "category": "active",
+    "cd": 39,
+    "charClass": [
+      "Knife",
+      "Templar"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Stürmt mit dem Schild auf den Gegner zu und verursacht einmalig physischen Grundschaden von 272 auf Stufe 1, plus 57 je weiterer Stufe auf 1070 auf Stufe 15. Macht das Ziel zunächst 1 Sekunde benommen; die Effektdauer steigt gleichmäßig auf 3 Sekunden auf Stufe 15. Mana-Kosten steigen von 87 um 36 je weiterer Stufe auf 591. Castzeit 0,1 Sekunden, bisheriger Cooldown 39 Sekunden. Keine anhaltende Schadenswirkung. Ansturmdistanz und genaue Einschränkungen durch Benommenheit werden später geprüft.",
+    "description_eng": "Charges at the enemy with a shield, dealing base physical damage once, starting at 272 and increasing by 57 per additional level to 1070 at level 15. Dazes the target for 1 second initially, increasing evenly to 3 seconds at level 15. Mana cost increases from 87 by 36 per additional level to 591. Cast time is 0.1 seconds, existing cooldown is 39 seconds. No ongoing damage. Charge distance and exact daze restrictions remain to be reviewed.",
+    "dmgType": "physical",
+    "dur": 1,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 95,
+    "patk": 272,
+    "skillName_de": "Schildsturm",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "shield-storm-daze",
+        "type": "control",
+        "controlKind": "dazed",
+        "target": "enemy",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.14285714285714285
+        }
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 87,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 87,
+          "perLevel": 36
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 272,
+        "perLevel": 57
+      }
+    }
+  }
+]

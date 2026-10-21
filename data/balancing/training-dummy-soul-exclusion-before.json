@@ -1,0 +1,206 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b93",
+    "skillName_eng": "Fire of the Damned",
+    "__v": 0,
+    "category": "active",
+    "cd": 57,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein Feld aus bläulich-schwarzen, astral wirkenden Flammen um das anvisierte Ziel, maximale Feldlaufzeit 10 Sekunden. Fläche und Gegnerlimit steigen in Stufen: Stufe 1–2: 3 Meter Durchmesser und bis zu 2 Gegner; Stufe 3–4: 5 Meter Durchmesser und bis zu 4 Gegner; Stufe 5: 7 Meter Durchmesser und bis zu 6 Gegner. Jeder erstmals erfolgreich getroffene Gegner gibt pro Anwendung genau 1 Seelenfragment, unabhängig von späteren Schadensticks und ohne Tötungsvoraussetzung. Das Limit gilt für unterschiedliche Gegner über die gesamte Anwendung, damit durch Zielwechsel nicht mehr als 2/4/6 Seelen gewonnen werden. Weitere Treffer desselben Gegners geben keine zusätzliche Seele. Maximal 6 Seelen auf Stufe 5, begrenzt durch freie Plätze im Reaper-Speicher. Zielauswahl bei mehr Gegnern sowie Mitbewegung des Felds bleiben offen. Initialtreffer bei Sekunde 0 mit vollem berechnetem Initialschaden. Danach Schadensticks bei Sekunde 1,5/3/4,5/6/7,5/9, jeweils 30 Prozent des berechneten Initialschadens (70 Prozent weniger); sechs Folgeticks. Vor weiteren Schadensberechnungen entspricht die gesamte Trefferfolge dem 2,8-Fachen des Initialwerts, falls alle Treffer treffen. Der erste erfolgreiche Treffer verlangsamt um 5 Prozent, jeder weitere erfolgreiche Feldtreffer um einen zusätzlichen Prozentpunkt, maximal 11 Prozent nach sieben Treffern. Verhalten bei Verlassen/Wiedereintritt und genaue Restdauer des Slow-Effekts sind noch zu klären. Magischer Initial-Grundschaden 273 auf Stufe 1 und +112 je weiterer Stufe, auf Stufe 5 721. Mana 167 und +83 je weiterer Stufe, auf Stufe 5 499. Cooldown 57 Sekunden und -1,5 je weiterer Stufe, auf Stufe 5 51 Sekunden. Castzeit 0,4 Sekunden. Der frühere Säulenentwurf mit 2 Sekunden Animation ist ersetzt. Historisch +1 Prozent Schaden je zehn Opfer; Definition von Opfern, Grenzen und Bonusbasis sind noch offen. Ein Wechsel dieses Opferbonus zu zusätzlicher Verlangsamung ist nur eine diskutierte Alternative, nicht festgelegt. Zeitpunkt der Feldplatzierung und Verrechnung der Folgeticks mit gegnerischer Verteidigung bleiben offen. Seelengewinn funktioniert auch gegen Spieler im PvP nach denselben Regeln: eine Seele je unterschiedlichem erfolgreich getroffenem Gegner pro Anwendung, begrenzt durch Gegnerlimit und freien Speicher.",
+    "description_eng": "Creates a field of bluish-black astral flames, around the selected target, lasting at most 10 seconds. Area and target limit increase in milestones: levels 1–2: 3-meter diameter, up to 2 enemies; levels 3–4: 5-meter diameter, up to 4 enemies; level 5: 7-meter diameter, up to 6 enemies. Each enemy successfully hit for the first time grants exactly 1 soul fragment per activation, regardless of subsequent damage ticks, with no kill requirement. The limit applies to unique enemies across the entire activation so switching targets cannot generate more than 2/4/6 souls. Further hits on the same enemy grant no extra souls. Maximum 6 souls at level 5, limited by remaining Reaper storage capacity. Target selection among excess enemies and field tracking remain pending. Initial hit at second 0 deals full calculated initial damage. Six subsequent ticks at 1.5/3/4.5/6/7.5/9 seconds each deal 30 percent of calculated initial damage (70 percent less). Before further damage calculations, all seven hits total 2.8 times the initial value if all land. The first successful hit slows movement by 5 percent; each subsequent successful field hit adds one percentage point, up to 11 percent after seven hits. Exit/reentry behavior and the exact slow expiry remain pending. Initial magical base damage 273 plus 112 per additional level, reaching 721 at level 5. Mana 167 plus 83 per additional level, reaching 499. Cooldown 57 minus 1.5 per additional level, reaching 51 seconds. Cast time 0.4 seconds. Replaces the previous pillar concept and its 2-second animation. Historical bonus of 1 percent damage per ten victims: victim definition, caps and bonus basis remain pending. Replacing this with additional slowing is only a discussed alternative. Field placement timing and mitigation of subsequent ticks remain pending. Soul generation also works against players in PvP under the same rules: one soul per distinct successfully hit opponent per activation, limited by target cap and available storage.",
+    "dmgType": "spell",
+    "matk": 273,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 48,
+    "skillName_de": "Feuer der Verdammten",
+    "skillpoints": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 57,
+      "perLevel": -1.5
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 167,
+          "perLevel": 83
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 273,
+        "perLevel": 112
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 1.5,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "evaluation": "perHit",
+      "radiusScaling": {
+        "type": "table",
+        "values": [
+          1.5,
+          1.5,
+          2.5,
+          2.5,
+          3.5
+        ]
+      },
+      "maxTargets": 2,
+      "maxTargetsScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "centerTracking": "pending"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "dur": 10,
+    "effects": [
+      {
+        "key": "damned-fire-periodic-damage",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 0.3,
+        "unit": "fraction",
+        "initialCalculatedDamageFraction": 0.3,
+        "intervalSeconds": 1.5,
+        "firstTickAfterSeconds": 1.5,
+        "durationSeconds": 10,
+        "damageTypes": [
+          "magical"
+        ],
+        "damageBasisStatus": "pending"
+      },
+      {
+        "key": "damned-fire-stacking-slow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "applicationTrigger": "ownSkillHit",
+        "targetSkillNumber": 48,
+        "additionalSlowFractionPerHit": 0.01,
+        "maximumSlowFraction": 0.11,
+        "durationSeconds": 10,
+        "slowLifetimeStatus": "pending"
+      }
+    ],
+    "effectsVersion": 1,
+    "soulGenerationSettings": {
+      "onSuccessfulHit": true,
+      "fragmentsPerUniqueEnemy": 1,
+      "oncePerEnemyPerActivation": true,
+      "requiresKill": false,
+      "maximumUniqueEnemiesScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          4,
+          4,
+          6
+        ]
+      },
+      "allowsPvpTargets": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcc",
+    "skillName_eng": "Soul Harvest",
+    "__v": 0,
+    "category": "active",
+    "cd": 160,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Manueller Abschluss der Kombination Seelenfessel → Seelenqual → Seelenernte. Verursacht einmalig magischen Schaden und heilt den Anwender. Magischer Grundschaden 481 auf Stufe 1, +183 je weiterer Stufe, auf Stufe 5 1213. Bestehende feste Selbstheilung 150 je gelerntem Skilllevel, von 150 bis 750 HP; bisher keine bestätigte zusätzliche Abhängigkeit der Heilmenge von der Trefferzahl. Die Zahl erfolgreicher Seelenqual-Treffer auf dem gefesselten Ziel bestimmt die Ernte: 0–4 ergibt 0 Seelenfragmente, 5–11 ergibt 1, ab 12 ergibt 2. Maximal 2 Seelenfragmente pro Abschluss. Seelenfessel kostet zuvor 1 Fragment. Seelenernte ist bis 1,5 Sekunden nach Auflösung der Seelenfessel abfeuerbar; genaue serverseitige Ablaufprüfung und Verhalten bei vorzeitigem Tod des Ziels noch offen. Cooldown 160 Sekunden, je weiterer Stufe 5 Sekunden weniger, auf Stufe 5 140 Sekunden. Castzeit 0,3 Sekunden, einmalige Wirkung. Aktivierungskosten, Speicherregeln sowie mögliche zusätzliche Schadens-/Heilskalierung nach Trefferzahl sind noch festzulegen.",
+    "description_eng": "Manual finisher for Soul Shackle → Soul Torment → Soul Harvest. Deals magical damage once and heals the caster. Base damage 481 plus 183 per additional level, reaching 1213 at level 5. Existing fixed self-healing remains 150 per learned skill level, from 150 to 750 HP; no extra hit-count-based healing amount is confirmed. Successful Torment hits on the shackled target determine the harvest: 0–4 yields 0 soul fragments, 5–11 yields 1, at least 12 yields 2. Maximum 2 fragments per finisher. Shackle costs 1 fragment first. Finisher can be fired up to 1.5 seconds after Shackle ends; precise server timing and target death behavior remain pending. Cooldown starts at 160 seconds, decreases by 5 per additional level, reaching 140 at level 5. Cast time 0.3 seconds; one-time effect. Activation costs, storage rules and any additional damage/healing scaling with hit count remain pending.",
+    "dmgType": "spell",
+    "matk": 481,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 105,
+    "skillName_de": "Seelenernte",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 160,
+      "perLevel": -5
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 150,
+          "perLevel": 150
+        },
+        "type": "heal",
+        "target": "self",
+        "value": 150,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "self-heal"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "soulHarvestSettings": {
+      "sourceSkillNumber": 104,
+      "shackleSkillNumber": 103,
+      "minimumHitsForOneFragment": 5,
+      "minimumHitsForTwoFragments": 12,
+      "maximumFragments": 2,
+      "manualFinisher": true,
+      "postShackleWindowSeconds": 1.5,
+      "damageAndHealingScalingByHitCountStatus": "pending"
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 481,
+        "perLevel": 183
+      }
+    }
+  }
+]

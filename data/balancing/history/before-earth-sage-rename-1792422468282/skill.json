@@ -1,0 +1,112 @@
+{
+  "_id": "6ad52e4bbd7150ab09620cf3",
+  "nr": 259,
+  "skillName_de": "Weisheit des Erzdruiden",
+  "skillName_eng": "Wisdom of the Archdruid",
+  "category": "passive",
+  "dmgType": "passive",
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "skillpoints": 1,
+  "resourceCosts": [],
+  "str": 3,
+  "int": 3,
+  "wis": 3,
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": 3
+    },
+    "int": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": 3
+    },
+    "wis": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": 3
+    }
+  },
+  "effectsVersion": 1,
+  "effects": [
+    {
+      "key": "archdruid-mana-regeneration",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "manaRegen",
+      "value": 0.006,
+      "unit": "fraction",
+      "durationSeconds": 0,
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.006,
+        "perLevel": 0.006
+      }
+    }
+  ],
+  "description_de": "Die Lehren des Erzdruiden stärken dauerhaft deine Verbindung zwischen Körper, Geist und Natur. Gewährt je gelernter Stufe 3 Stärke, 3 Intelligenz und 3 Willenskraft, bis zu jeweils 15 auf Stufe 5. Erhöht zusätzlich die gesamte Mana-Regeneration um 0,6 Prozent je Stufe, maximal 3 Prozent. Der Prozentbonus wird nach allen flachen Regenerationsboni und der Umrechnung von Willenskraft angewendet. Keine Geschick-, Vitalitäts- oder Angriffstempoboni. Permanenter passiver Skill ohne Aktivierungskosten, Castzeit oder Cooldown.",
+  "description_eng": "The teachings of the archdruid permanently strengthen the bond between body, mind and nature. Grants 3 Strength, 3 Intelligence and 3 Wisdom per learned level, reaching 15 each at level 5. Also increases total Mana regeneration by 0.6 percent per level, up to 3 percent. This multiplier applies after flat regeneration bonuses and Wisdom conversion. No Dexterity, Vitality or attack-speed bonus. Permanent passive with no activation cost, cast time or cooldown.",
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "statScaling",
+          "str"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 3,
+          "perLevel": 3
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "int"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 3,
+          "perLevel": 3
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "wis"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 3,
+          "perLevel": 3
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "effects",
+          "0",
+          "valueScaling"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 0.006,
+          "perLevel": 0.006
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  }
+}

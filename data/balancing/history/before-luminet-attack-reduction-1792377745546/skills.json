@@ -1,0 +1,407 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b87",
+    "skillName_eng": "Energy Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 2.1,
+    "charClass": [
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Wirft einen Ball aus purem Licht auf dein Ziel und verursacht einmalig magischen Schaden. Der magische Grundangriff steigt von 25 um 20 je weiterer Stufe auf 205. Die Mana-Kosten 6 auf Stufe 1, +5 je weiterer Stufe, maximal 51 auf Stufe 10. Castzeit 0,15 Sekunden, kein anhaltender Effekt. Der Cooldown beträgt zunächst 2,1 Sekunden, ab Stufe 3 1,6 Sekunden, ab Stufe 5 1,1 Sekunden, ab Stufe 8 0,8 Sekunden und ab Stufe 10 0,6 Sekunden. Heiler, Priester, Druide und Alchemist können maximal Stufe 5 lernen; alle übrigen zugeordneten Klassen weiterhin Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Throws a ball of pure light at your target, dealing magical damage once. Base magical attack increases from 25 by 20 per additional level to 205. Mana cost 6 at level 1, maximum 51 at level 10. Cast time 0.15 seconds, no lasting effect. Cooldown starts at 2.1 seconds, then becomes 1.6 seconds at level 3, 1.1 seconds at level 5, 0.8 seconds at level 8, and 0.6 seconds at level 10. Healer and Priest can learn up to level 5; all other assigned classes retain level 10. Druid and Alchemist can learn at most level 5; other existing class limits remain unchanged.",
+    "dmgType": "spell",
+    "matk": 25,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 36,
+    "skillName_de": "Energieschlag",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.15,
+    "cooldownScaling": {
+      "type": "table",
+      "values": [
+        2.1,
+        2.1,
+        1.6,
+        1.6,
+        1.1,
+        1.1,
+        1.1,
+        0.8,
+        0.8,
+        0.6
+      ]
+    },
+    "hasLingeringDamage": false,
+    "mana": 6,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 6,
+          "perLevel": 5
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 20
+      }
+    },
+    "learningLimits": {
+      "defaultMaxLevel": 10,
+      "classOverrides": {
+        "Healer": 5,
+        "Priest": 5,
+        "Druide": 5,
+        "Alchemist": 5
+      },
+      "status": "defined"
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "legacyTable",
+              "values": [
+                2.1,
+                2.1,
+                1.6,
+                1.6,
+                1.1,
+                1.1,
+                1.1,
+                0.8,
+                0.8,
+                0.6
+              ],
+              "beyond": "requiresDefinition"
+            }
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 25,
+            "perLevel": 20
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c35",
+    "skillName_eng": "Lightning Flash",
+    "__v": 0,
+    "category": "active",
+    "cd": 12.5,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen grellen Lichtblitz auf den Gegner. Einmaliger magischer Angriff: 62 auf Stufe 1, +28 je weiterer Stufe, insgesamt 594 auf Stufe 20. Mana-Kosten 16 auf Stufe 1, +7 je weiterer Stufe, maximal 149 auf Stufe 20. Cooldown 12,5 Sekunden auf Stufe 1, 3 Sekunden auf Stufe 20; bisheriger Stufenverlauf um 0,5 Sekunden erhöht. Castzeit 0,1 Sekunde. Wirkungsdauer 0 Sekunden; nur eine Angriffsanimation, keine anhaltende Wirkung. Animationslänge noch nicht festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Hurls a brilliant flash of light at the enemy. One magical hit: 62 at level 1, +28 per additional level, totaling 594 at level 20. Mana cost 16 at level 1, maximum 149 at level 20. Cooldown 12.5 seconds at level 1 and 3 seconds at level 20; previous progression increased by 0.5 seconds throughout. Cast time 0.1 seconds. Effect duration 0 seconds; attack animation only, no ongoing effect. Animation length remains undefined.",
+    "dmgType": "spell",
+    "matk": 62,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 210,
+    "skillName_de": "Lichtblitz",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 12.5,
+      "perLevel": -0.5
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 16,
+          "perLevel": 7
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 62,
+        "perLevel": 28
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 12.5,
+              "perLevel": -0.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "constant",
+            "value": 0
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 62,
+            "perLevel": 28
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4a",
+    "skillName_eng": "Luminus",
+    "__v": 0,
+    "category": "active",
+    "cd": 18,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen schwach leuchtenden Energieball auf deinen Gegner; dieser kann ebenfalls als Lichtquelle dienen. Magischer Grundschaden 17 auf Stufe 1, +9 je weiterer Stufe, insgesamt 98 auf Stufe 10. Mana-Kosten 4 auf Stufe 1, +2 je weiterer Stufe, maximal 22 auf Stufe 10. Cooldown 18 Sekunden auf Stufe 1, 9 Sekunden auf Stufe 10; bisheriger Stufenverlauf um 2 Sekunden erhöht. Castzeit 0,1 Sekunden. Vorläufige Flug-/Animationszeit ungefähr 0,2 Sekunden, keine anhaltende Schadenswirkung. Eine eigenständige Leuchtdauer ist noch nicht festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Throws a faintly glowing energy ball at the enemy; it can also serve as a light source. Magical base damage 17 at level 1, +9 per additional level, reaching 98 at level 10. Mana cost 4 at level 1, maximum 22 at level 10. Cooldown 18 seconds at level 1 and 9 seconds at level 10; previous progression increased by 2 seconds throughout. Cast time 0.1 seconds. Provisional flight/animation time approximately 0.2 seconds; no lingering damage. A separate illumination duration remains undefined.",
+    "dmgType": "spell",
+    "matk": 17,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 231,
+    "skillName_de": "Luminus",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.2,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 18,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 2
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 17,
+        "perLevel": 9
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 18,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "constant",
+            "value": 0
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 4,
+              "perLevel": 2
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 17,
+            "perLevel": 9
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

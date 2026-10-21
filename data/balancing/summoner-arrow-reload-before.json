@@ -1,0 +1,94 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b92",
+    "skillName_eng": "Explosive Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 36,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Deine nächsten 3 Pfeile verursachen 2 Sekunden nach dem treffen des Zieles zusätzlichen Explosionsschaden.",
+    "description_eng": "Your next 3 arrows deal additional explosion damage 2 seconds after hitting the target.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 47,
+    "patk": 334,
+    "skillName_de": "Explosionspfeil",
+    "skillpoints": 1,
+    "castTimeSeconds": 0
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b96",
+    "skillName_eng": "Fire Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 23,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schießt einen brennenden Pfeil auf dein Ziel.",
+    "description_eng": "Shoots a burning arrow at your target.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 51,
+    "patk": 67,
+    "skillName_de": "Feuerpfeil",
+    "skillpoints": 1,
+    "castTimeSeconds": 0
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba5",
+    "skillName_eng": "Headshot",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Atme tief durch und verpasse deinem Gegner den Kopfschuss, den er verdient. Dieser Angriff trifft immer kritisch.",
+    "description_eng": "Take a deep breath and give your opponent the headshot he deserves. This attack always hits critically.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 66,
+    "patk": 474,
+    "skillName_de": "Kopfschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bda",
+    "skillName_eng": "Improved Reload",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Deine Fähigkeiten im Hinterhalt sind unübertroffen. Du erhältst 2 Angriffspunkte für jeden Ambush Punkt.",
+    "description_eng": "Your skill in an ambush is unmatched. Gain 2 attack points for each point of Ambush.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 119,
+    "patk": 2,
+    "skillName_de": "Verbessertes Nachladen",
+    "skillpoints": 1
+  }
+]

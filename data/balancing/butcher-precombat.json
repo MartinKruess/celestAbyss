@@ -1,0 +1,126 @@
+{
+  "classKey": "butcher",
+  "level": 60,
+  "rank": 6,
+  "status": "confirmedPermanentPassives",
+  "bonuses": [
+    {
+      "nr": 2,
+      "name": "Überleben",
+      "stats": {
+        "str": 20,
+        "agi": 10,
+        "dex": 10
+      }
+    },
+    {
+      "nr": 45,
+      "name": "Erweiterung des Körpers",
+      "stats": {
+        "health": 1100,
+        "vita": 22,
+        "wis": 20,
+        "agi": 20
+      }
+    },
+    {
+      "nr": 131,
+      "name": "Zweihändiges Axttraining",
+      "stats": {
+        "str": 12
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 140,
+      "name": "Standhaft",
+      "stats": {
+        "vita": 20,
+        "wis": 10
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "2H Axt",
+      "equipped": {
+        "maxHealth": 4091,
+        "maxMana": 2791,
+        "physicalAttack": 706.2,
+        "magicalAttack": 113.2,
+        "physicalDefense": 725,
+        "magicalDefense": 486,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "passiveBonuses": {
+        "str": 32,
+        "agi": 30,
+        "dex": 10,
+        "health": 1100,
+        "vita": 62,
+        "wis": 50,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        2,
+        45,
+        131,
+        139,
+        140,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 7051,
+        "maxMana": 4291,
+        "physicalAttack": 863.8000000000001,
+        "magicalAttack": 213.2,
+        "physicalDefense": 989,
+        "magicalDefense": 726,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      }
+    }
+  ],
+  "excluded": [
+    "Ewiger Sieger: conditional combat proc",
+    "Active buffs",
+    "Ungebrochen: death proc",
+    "Pets",
+    "Jewelry/stones"
+  ],
+  "equipmentProposalApplied": false
+}

@@ -1,0 +1,59 @@
+{
+  "_id": "6acc1c7e4826525c70d04c32",
+  "skillName_eng": "Heavenly Sacrifice",
+  "__v": 0,
+  "category": "active",
+  "cd": 900,
+  "charClass": [
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Kein Lebenspreis. Jedes andere eigene Gruppenmitglied erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Reichweite und Rundung von Mana-/Heilwerten werden später zentral festgelegt.",
+  "description_eng": "Instant emergency group heal with one learnable level, for Healer/Priest only. Costs 90 percent of maximum Mana, which must be available and actually paid. No health cost. Each other own group member receives the same full healing: 500 HP plus 1.5 HP per Mana point actually sacrificed for this activation. Healing is not divided among recipients; the caster is excluded. Example: 3000 maximum Mana costs 2700 Mana and heals each other group member for 4550 HP before missing-health limits. No guaranteed full heal or ongoing heal ticks. Cooldown 900 seconds (15 minutes), cast time zero; healing resolves instantly. Provisional approximately 2-second animation does not delay healing; whether it blocks other actions remains pending. Range and Mana/healing rounding will be defined centrally later.",
+  "dmgType": "spell",
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 207,
+  "skillName_de": "Himmlische Aufopferung",
+  "skillpoints": 1,
+  "animationDurationSeconds": 2,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "fraction",
+      "scaling": {
+        "type": "fixed",
+        "base": 0.9
+      }
+    }
+  ],
+  "levelProgression": {
+    "version": 1,
+    "rules": [],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "type": "skill",
+  "effects": [
+    {
+      "key": "heavenly-sacrifice-group-heal",
+      "type": "heal",
+      "target": "ownGroup",
+      "recipientGroup": "ownGroup",
+      "excludesCaster": true,
+      "distribution": "fullAmountToEachRecipient",
+      "value": 500,
+      "unit": "flat",
+      "healingFromSpentMana": {
+        "multiplier": 1.5
+      },
+      "durationSeconds": 0
+    }
+  ],
+  "effectsVersion": 1
+}

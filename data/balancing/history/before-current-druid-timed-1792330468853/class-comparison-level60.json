@@ -1,0 +1,2836 @@
+{
+  "level": 60,
+  "rank": 6,
+  "status": "updatedBaseRulesClassSpecializationsIncomplete",
+  "dualWeaponEfficiency": {
+    "mainHand": 1,
+    "offHand": 0.9,
+    "scope": "Direct weapon attack only; all attributes and speed penalties at full value"
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "sp": 283,
+      "base": {
+        "maxHealth": 1942,
+        "maxMana": 1901,
+        "physicalAttack": 114.2,
+        "magicalAttack": 112.2,
+        "physicalDefense": 125,
+        "magicalDefense": 127,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 4292,
+        "maxMana": 3851,
+        "physicalAttack": 398.20000000000005,
+        "magicalAttack": 112.2,
+        "physicalDefense": 777,
+        "magicalDefense": 577,
+        "attackSpeed": 0.7742,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 4.800000000000001,
+        "dodge": 10.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 528,
+        "manaRegen": 132.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "2H Schwert"
+      ],
+      "knownAttributes": {
+        "vitality": 129,
+        "wisdom": 119,
+        "strength": 79,
+        "intelligence": 59,
+        "agility": 7,
+        "dexterity": 3
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "sp": 296,
+      "base": {
+        "maxHealth": 1991,
+        "maxMana": 1891,
+        "physicalAttack": 129.82,
+        "magicalAttack": 7,
+        "physicalDefense": 122,
+        "magicalDefense": 124,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 4091,
+        "maxMana": 2791,
+        "physicalAttack": 607.22,
+        "magicalAttack": 7,
+        "physicalDefense": 725,
+        "magicalDefense": 486,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 133.5,
+        "healthRegen": 488,
+        "manaRegen": 100.60000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "2H Axt"
+      ],
+      "knownAttributes": {
+        "vitality": 119,
+        "wisdom": 84,
+        "strength": 89,
+        "intelligence": 59
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "sp": 245,
+      "base": {
+        "maxHealth": 1953,
+        "maxMana": 1921,
+        "physicalAttack": 115.2,
+        "magicalAttack": 122.51,
+        "physicalDefense": 123,
+        "magicalDefense": 123,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3678,
+        "maxMana": 3871,
+        "physicalAttack": 288.2,
+        "magicalAttack": 400.75,
+        "physicalDefense": 679,
+        "magicalDefense": 611,
+        "attackSpeed": 0.77,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 103.5,
+        "healthRegen": 448,
+        "manaRegen": 132.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "2H Mace"
+      ],
+      "knownAttributes": {
+        "vitality": 109,
+        "wisdom": 119,
+        "strength": 69,
+        "intelligence": 75
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "sp": 300,
+      "base": {
+        "maxHealth": 2070.5,
+        "maxMana": 1907,
+        "physicalAttack": 123.51,
+        "magicalAttack": 6,
+        "physicalDefense": 132.9,
+        "magicalDefense": 121,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 259.8,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 4940.5,
+        "maxMana": 2957,
+        "physicalAttack": 562.11,
+        "magicalAttack": 6,
+        "physicalDefense": 854.9000000000001,
+        "magicalDefense": 530,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 133.5,
+        "healthRegen": 595.8000000000001,
+        "manaRegen": 105.10000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "1H Axt",
+        "1H Axt"
+      ],
+      "knownAttributes": {
+        "vitality": 139,
+        "wisdom": 89,
+        "strength": 89,
+        "intelligence": 59
+      },
+      "unresolvedWeapon": [
+        {
+          "weapon": "1H Axt",
+          "label": "Block",
+          "value": 0.1,
+          "column": 6
+        },
+        {
+          "weapon": "1H Axt",
+          "label": "Block",
+          "value": 0.1,
+          "column": 6
+        }
+      ],
+      "attackIncomplete": false
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "sp": 279,
+      "base": {
+        "maxHealth": 1923,
+        "maxMana": 1952,
+        "physicalAttack": 2,
+        "magicalAttack": 118.2,
+        "physicalDefense": 121,
+        "magicalDefense": 131,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3298,
+        "maxMana": 4362,
+        "physicalAttack": 2,
+        "magicalAttack": 537.6,
+        "physicalDefense": 483,
+        "magicalDefense": 968,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 408,
+        "manaRegen": 142.9,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Wand"
+      ],
+      "knownAttributes": {
+        "vitality": 99,
+        "wisdom": 131,
+        "strength": 59,
+        "intelligence": 77
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "sp": 294,
+      "base": {
+        "maxHealth": 1946,
+        "maxMana": 1933,
+        "physicalAttack": 6,
+        "magicalAttack": 123.51,
+        "physicalDefense": 124,
+        "magicalDefense": 129.9,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3746,
+        "maxMana": 4293,
+        "physicalAttack": 6,
+        "magicalAttack": 544.53,
+        "physicalDefense": 642,
+        "magicalDefense": 611.1,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 448,
+        "manaRegen": 142.9,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Wand"
+      ],
+      "knownAttributes": {
+        "vitality": 109,
+        "wisdom": 131,
+        "strength": 59,
+        "intelligence": 77
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "sp": 294,
+      "base": {
+        "maxHealth": 1954,
+        "maxMana": 1881,
+        "physicalAttack": 13,
+        "magicalAttack": 3,
+        "physicalDefense": 124,
+        "magicalDefense": 137.8,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3504,
+        "maxMana": 3381,
+        "physicalAttack": 538,
+        "magicalAttack": 3,
+        "physicalDefense": 612,
+        "magicalDefense": 566.8,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 428,
+        "manaRegen": 118.60000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Bow"
+      ],
+      "knownAttributes": {
+        "vitality": 104,
+        "wisdom": 104,
+        "strength": 59,
+        "intelligence": 59,
+        "dexterity": 25
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "sp": 288,
+      "base": {
+        "maxHealth": 2178,
+        "maxMana": 1903,
+        "physicalAttack": 111.2,
+        "magicalAttack": 4,
+        "physicalDefense": 134.9,
+        "magicalDefense": 133.9,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 271.6,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 6538,
+        "maxMana": 3253,
+        "physicalAttack": 333.20000000000005,
+        "magicalAttack": 4,
+        "physicalDefense": 1203.9,
+        "magicalDefense": 668.9,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 799.6,
+        "manaRegen": 114.10000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Sword",
+        "Shield"
+      ],
+      "knownAttributes": {
+        "vitality": 179,
+        "wisdom": 99,
+        "strength": 79,
+        "intelligence": 59
+      },
+      "unresolvedWeapon": [
+        {
+          "weapon": "Shield",
+          "label": "Block",
+          "value": 0.15,
+          "column": 6
+        }
+      ],
+      "attackIncomplete": false
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "sp": 272,
+      "base": {
+        "maxHealth": 1941,
+        "maxMana": 1937,
+        "physicalAttack": 4,
+        "magicalAttack": 108.4,
+        "physicalDefense": 122,
+        "magicalDefense": 126,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3541,
+        "maxMana": 3887,
+        "physicalAttack": 4,
+        "magicalAttack": 531.4,
+        "physicalDefense": 548,
+        "magicalDefense": 800,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 428,
+        "manaRegen": 132.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Lichtstab"
+      ],
+      "knownAttributes": {
+        "vitality": 104,
+        "wisdom": 119,
+        "strength": 59,
+        "intelligence": 59,
+        "faith": 20
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "sp": 264,
+      "base": {
+        "maxHealth": 1939,
+        "maxMana": 1937,
+        "physicalAttack": 4,
+        "magicalAttack": 108.4,
+        "physicalDefense": 122,
+        "magicalDefense": 126,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 4029,
+        "maxMana": 3637,
+        "physicalAttack": 4,
+        "magicalAttack": 537.1999999999999,
+        "physicalDefense": 606,
+        "magicalDefense": 709,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 480,
+        "manaRegen": 123.10000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "knownAttributes": {
+        "vitality": 117,
+        "wisdom": 109,
+        "strength": 59,
+        "intelligence": 59,
+        "victim": 22
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "sp": 274,
+      "base": {
+        "maxHealth": 1962,
+        "maxMana": 1923,
+        "physicalAttack": 121.51,
+        "magicalAttack": 116.2,
+        "physicalDefense": 124,
+        "magicalDefense": 122,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 4037,
+        "maxMana": 3873,
+        "physicalAttack": 330.19,
+        "magicalAttack": 230.8,
+        "physicalDefense": 676,
+        "magicalDefense": 628,
+        "attackSpeed": 0.85,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 106.5,
+        "healthRegen": 488,
+        "manaRegen": 132.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Mace"
+      ],
+      "knownAttributes": {
+        "vitality": 119,
+        "wisdom": 119,
+        "strength": 71,
+        "intelligence": 71
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "sp": 272,
+      "base": {
+        "maxHealth": 1945,
+        "maxMana": 1997.5,
+        "physicalAttack": 12,
+        "magicalAttack": 3,
+        "physicalDefense": 123,
+        "magicalDefense": 133.9,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3045,
+        "maxMana": 2935,
+        "physicalAttack": 424.2,
+        "magicalAttack": 3,
+        "physicalDefense": 495,
+        "magicalDefense": 484.4,
+        "attackSpeed": 0.8066,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 22.400000000000002,
+        "dodge": 16.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 368,
+        "manaRegen": 100.60000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Crossbow"
+      ],
+      "knownAttributes": {
+        "vitality": 89,
+        "wisdom": 84,
+        "strength": 59,
+        "intelligence": 59,
+        "dexterity": 14,
+        "agility": 11
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "sp": 266,
+      "base": {
+        "maxHealth": 1936,
+        "maxMana": 1992.5,
+        "physicalAttack": 117.2,
+        "magicalAttack": 6,
+        "physicalDefense": 123,
+        "magicalDefense": 126,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 248,
+        "manaRegen": 78.1,
+        "criticalDamageBonus": 0.8
+      },
+      "equipped": {
+        "maxHealth": 3686,
+        "maxMana": 3087.5,
+        "physicalAttack": 381.6,
+        "magicalAttack": 6,
+        "physicalDefense": 644,
+        "magicalDefense": 498,
+        "attackSpeed": 0.8096000000000001,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 24,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 448,
+        "manaRegen": 105.10000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "weapons": [
+        "Dagger",
+        "Dagger"
+      ],
+      "knownAttributes": {
+        "vitality": 109,
+        "wisdom": 89,
+        "strength": 59,
+        "intelligence": 59,
+        "agility": 16,
+        "ambush": 16
+      },
+      "unresolvedWeapon": [],
+      "attackIncomplete": false
+    }
+  ],
+  "passiveRows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "weapons": [
+        "2H Schwert"
+      ],
+      "knownAttributes": {
+        "vitality": 189,
+        "wisdom": 179,
+        "strength": 106.5,
+        "intelligence": 59,
+        "agility": 19,
+        "dexterity": 26
+      },
+      "includedSkills": [
+        5,
+        45,
+        67,
+        245,
+        139,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 6092,
+        "maxMana": 5651,
+        "physicalAttack": 547.7,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1037,
+        "magicalDefense": 837,
+        "attackSpeed": 0.9814,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 41.6,
+        "dodge": 28.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 159.75,
+        "healthRegen": 778,
+        "manaRegen": 196.1,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "weapons": [
+        "2H Axt"
+      ],
+      "knownAttributes": {
+        "vitality": 179,
+        "wisdom": 134,
+        "strength": 141,
+        "intelligence": 59,
+        "agility": 10,
+        "dexterity": 10
+      },
+      "includedSkills": [
+        2,
+        45,
+        131,
+        139,
+        140,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 5891,
+        "maxMana": 4291,
+        "physicalAttack": 810.1800000000001,
+        "magicalAttack": 107,
+        "physicalDefense": 985,
+        "magicalDefense": 726,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 16,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 211.5,
+        "healthRegen": 738,
+        "manaRegen": 155.60000000000002,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "weapons": [
+        "2H Mace"
+      ],
+      "knownAttributes": {
+        "vitality": 129,
+        "wisdom": 179,
+        "strength": 74,
+        "intelligence": 117,
+        "dexterity": 25
+      },
+      "includedSkills": [
+        1,
+        44,
+        132,
+        139,
+        144,
+        201,
+        203,
+        253
+      ],
+      "stats": {
+        "maxHealth": 4278,
+        "maxMana": 6536,
+        "physicalAttack": 397.20000000000005,
+        "magicalAttack": 580.13,
+        "physicalDefense": 859,
+        "magicalDefense": 871,
+        "attackSpeed": 0.97,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 111,
+        "healthRegen": 528,
+        "manaRegen": 206.1,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "weapons": [
+        "1H Axt",
+        "1H Axt"
+      ],
+      "knownAttributes": {
+        "vitality": 219,
+        "wisdom": 159,
+        "strength": 116,
+        "intelligence": 59,
+        "agility": 5,
+        "luck": 11
+      },
+      "includedSkills": [
+        5,
+        26,
+        45,
+        52,
+        73,
+        139,
+        140,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 7460.5,
+        "maxMana": 5057,
+        "physicalAttack": 713.14,
+        "magicalAttack": 106,
+        "physicalDefense": 1162.9,
+        "magicalDefense": 810,
+        "attackSpeed": 0.9029999999999999,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 7.5,
+        "critChanceRating": 67.6,
+        "block": 0,
+        "penetration": 174,
+        "healthRegen": 941.8000000000001,
+        "manaRegen": 178.1,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "weapons": [
+        "Wand"
+      ],
+      "knownAttributes": {
+        "vitality": 119,
+        "wisdom": 214,
+        "strength": 59,
+        "intelligence": 130,
+        "dexterity": 25,
+        "faith": 12
+      },
+      "includedSkills": [
+        1,
+        44,
+        60,
+        139,
+        143,
+        144,
+        201,
+        208
+      ],
+      "stats": {
+        "maxHealth": 3898,
+        "maxMana": 6852,
+        "physicalAttack": 102,
+        "magicalAttack": 733,
+        "physicalDefense": 663,
+        "magicalDefense": 1316,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 488,
+        "manaRegen": 277.6,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "weapons": [
+        "Wand"
+      ],
+      "knownAttributes": {
+        "vitality": 154,
+        "wisdom": 206,
+        "strength": 59,
+        "intelligence": 131,
+        "dexterity": 20
+      },
+      "includedSkills": [
+        4,
+        5,
+        44,
+        81,
+        139,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 5096,
+        "maxMana": 6543,
+        "physicalAttack": 106,
+        "magicalAttack": 746.59,
+        "physicalDefense": 872,
+        "magicalDefense": 908.6,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 32,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 638,
+        "manaRegen": 220.4,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "weapons": [
+        "Bow"
+      ],
+      "knownAttributes": {
+        "vitality": 160,
+        "wisdom": 144,
+        "strength": 59,
+        "intelligence": 59,
+        "dexterity": 84,
+        "agility": 39,
+        "luck": 3
+      },
+      "includedSkills": [
+        5,
+        10,
+        18,
+        43,
+        122,
+        139,
+        142,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 5184,
+        "maxMana": 4581,
+        "physicalAttack": 764.2,
+        "magicalAttack": 103,
+        "physicalDefense": 864,
+        "magicalDefense": 794.8,
+        "attackSpeed": 0.9234000000000001,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 134.4,
+        "dodge": 58.5,
+        "critChanceRating": 4.800000000000001,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 662,
+        "manaRegen": 164.6,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "weapons": [
+        "Sword",
+        "Shield"
+      ],
+      "knownAttributes": {
+        "vitality": 268,
+        "wisdom": 190,
+        "strength": 113.68,
+        "intelligence": 74,
+        "dexterity": 7
+      },
+      "includedSkills": [
+        1,
+        28,
+        45,
+        93,
+        102,
+        139,
+        140,
+        141,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 9475,
+        "maxMana": 5983,
+        "physicalAttack": 495.624,
+        "magicalAttack": 104,
+        "physicalDefense": 1530.8000000000002,
+        "magicalDefense": 1000,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 11.200000000000001,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 25,
+        "penetration": 170.52,
+        "healthRegen": 1191.2,
+        "manaRegen": 216,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "weapons": [
+        "Lichtstab"
+      ],
+      "knownAttributes": {
+        "vitality": 124,
+        "wisdom": 190,
+        "strength": 59,
+        "intelligence": 112,
+        "faith": 34,
+        "dexterity": 25,
+        "luck": 3
+      },
+      "includedSkills": [
+        1,
+        44,
+        60,
+        116,
+        139,
+        144,
+        201,
+        208
+      ],
+      "stats": {
+        "maxHealth": 4141,
+        "maxMana": 6017,
+        "physicalAttack": 104,
+        "magicalAttack": 761.4000000000001,
+        "physicalDefense": 728,
+        "magicalDefense": 1082,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 4.800000000000001,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 508,
+        "manaRegen": 256,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "faith",
+        "factor": 1.8,
+        "target": "magicalAttack",
+        "amount": 61.2,
+        "assumption": "R6 class-specific unlock assumed active"
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "knownAttributes": {
+        "vitality": 137,
+        "wisdom": 149,
+        "strength": 79,
+        "intelligence": 79,
+        "victim": 22,
+        "agility": 10,
+        "dexterity": 30
+      },
+      "includedSkills": [
+        2,
+        44,
+        139,
+        144,
+        181,
+        201
+      ],
+      "stats": {
+        "maxHealth": 4629,
+        "maxMana": 4837,
+        "physicalAttack": 104,
+        "magicalAttack": 669.1999999999999,
+        "physicalDefense": 786,
+        "magicalDefense": 929,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 48,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 570,
+        "manaRegen": 189.1,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "victim",
+        "factor": 1.9,
+        "target": "magicalAttack",
+        "amount": 41.8,
+        "assumption": "R6 class-specific unlock assumed active"
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, 100 Seelen",
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "knownAttributes": {
+        "vitality": 137,
+        "wisdom": 149,
+        "strength": 79,
+        "intelligence": 79,
+        "victim": 42,
+        "agility": 10,
+        "dexterity": 30
+      },
+      "includedSkills": [
+        2,
+        44,
+        139,
+        144,
+        181,
+        201,
+        120,
+        241
+      ],
+      "stats": {
+        "maxHealth": 4629,
+        "maxMana": 4837,
+        "physicalAttack": 104,
+        "magicalAttack": 807.1999999999999,
+        "physicalDefense": 786,
+        "magicalDefense": 929,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 48,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 570,
+        "manaRegen": 189.1,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "victim",
+        "factor": 1.9,
+        "target": "magicalAttack",
+        "amount": 79.8,
+        "assumption": "R6 class-specific unlock assumed active"
+      }
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "weapons": [
+        "Mace"
+      ],
+      "knownAttributes": {
+        "vitality": 139,
+        "wisdom": 179,
+        "strength": 82,
+        "intelligence": 111.5,
+        "dexterity": 25
+      },
+      "includedSkills": [
+        1,
+        33,
+        44,
+        132,
+        139,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 4637,
+        "maxMana": 5673,
+        "physicalAttack": 480.98,
+        "magicalAttack": 423.70000000000005,
+        "physicalDefense": 856,
+        "magicalDefense": 888,
+        "attackSpeed": 1.05,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 123,
+        "healthRegen": 568,
+        "manaRegen": 206.1,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "weapons": [
+        "Crossbow"
+      ],
+      "knownAttributes": {
+        "vitality": 125,
+        "wisdom": 104,
+        "strength": 79,
+        "intelligence": 59,
+        "dexterity": 71,
+        "agility": 64
+      },
+      "includedSkills": [
+        2,
+        7,
+        43,
+        119,
+        139,
+        142,
+        144,
+        187,
+        201
+      ],
+      "stats": {
+        "maxHealth": 4125,
+        "maxMana": 3565,
+        "physicalAttack": 646.8,
+        "magicalAttack": 103,
+        "physicalDefense": 707,
+        "magicalDefense": 666.4,
+        "attackSpeed": 1.1684,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 113.60000000000001,
+        "dodge": 96,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 522,
+        "manaRegen": 128.60000000000002,
+        "criticalDamageBonus": 0.8
+      }
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "weapons": [
+        "Dagger",
+        "Dagger"
+      ],
+      "knownAttributes": {
+        "vitality": 145,
+        "wisdom": 109,
+        "strength": 90,
+        "intelligence": 59,
+        "agility": 70,
+        "ambush": 16,
+        "dexterity": 55
+      },
+      "includedSkills": [
+        2,
+        22,
+        43,
+        67,
+        139,
+        144,
+        201,
+        243
+      ],
+      "stats": {
+        "maxHealth": 4766,
+        "maxMana": 3827.5,
+        "physicalAttack": 537.4,
+        "magicalAttack": 106,
+        "physicalDefense": 856,
+        "magicalDefense": 678,
+        "attackSpeed": 1.042,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 88,
+        "dodge": 105,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 135,
+        "healthRegen": 602,
+        "manaRegen": 133.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "ambush",
+        "factor": 1.8,
+        "target": "physicalAttack",
+        "amount": 28.8,
+        "assumption": "R6 class-specific unlock assumed active"
+      }
+    }
+  ],
+  "selfBuffRows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "weapons": [
+        "2H Schwert"
+      ],
+      "knownAttributes": {
+        "vitality": 189,
+        "wisdom": 179,
+        "strength": 106.5,
+        "intelligence": 59,
+        "agility": 19,
+        "dexterity": 26
+      },
+      "includedSkills": [
+        5,
+        45,
+        67,
+        245,
+        139,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 6692,
+        "maxMana": 5651,
+        "physicalAttack": 712.7,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1077,
+        "magicalDefense": 837,
+        "attackSpeed": 1.0974000000000002,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 57.6,
+        "dodge": 43.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 197.25,
+        "healthRegen": 858,
+        "manaRegen": 196.1,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "strength": 25,
+        "vitality": 20,
+        "dexterity": 10,
+        "agility": 10,
+        "ambush": 11
+      },
+      "flatBonuses": {
+        "attackSpeed": 0.11,
+        "physicalAttack": 120
+      },
+      "buffs": [
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "level": 5,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "level": 3,
+          "durationSeconds": 1200,
+          "notes": []
+        }
+      ],
+      "excluded": [
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "reason": "Nur Begleiter, keine Spieler."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "weapons": [
+        "2H Axt"
+      ],
+      "knownAttributes": {
+        "vitality": 179,
+        "wisdom": 134,
+        "strength": 141,
+        "intelligence": 59,
+        "agility": 10,
+        "dexterity": 10
+      },
+      "includedSkills": [
+        2,
+        45,
+        131,
+        139,
+        140,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 6404,
+        "maxMana": 4291,
+        "physicalAttack": 1350.7520000000002,
+        "magicalAttack": 107,
+        "physicalDefense": 1003.2,
+        "magicalDefense": 726,
+        "attackSpeed": 1.1960000000000002,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 16,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 378.6,
+        "healthRegen": 774.4,
+        "manaRegen": 155.60000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "strength": 111.4,
+        "vitality": 9.100000000000001
+      },
+      "flatBonuses": {
+        "maxHealth": 240,
+        "physicalAttack": 320,
+        "attackSpeed": 0.29000000000000004
+      },
+      "buffs": [
+        {
+          "nr": 12,
+          "name": "Aufladung",
+          "level": 5,
+          "durationSeconds": 15,
+          "notes": []
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "level": 10,
+          "durationSeconds": 270,
+          "notes": []
+        },
+        {
+          "nr": 174,
+          "name": "Blutrausch",
+          "level": 10,
+          "durationSeconds": 60,
+          "notes": []
+        },
+        {
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "level": 10,
+          "durationSeconds": 15,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": [
+        "Bis in den Tot: zuletzt aktiviert; 20.90 vitality vorübergehend in strength getauscht."
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "weapons": [
+        "2H Mace"
+      ],
+      "knownAttributes": {
+        "vitality": 129,
+        "wisdom": 179,
+        "strength": 74,
+        "intelligence": 117,
+        "dexterity": 25
+      },
+      "includedSkills": [
+        1,
+        44,
+        132,
+        139,
+        144,
+        201,
+        203,
+        253
+      ],
+      "stats": {
+        "maxHealth": 4428,
+        "maxMana": 6836,
+        "physicalAttack": 415.20000000000005,
+        "magicalAttack": 698.93,
+        "physicalDefense": 869,
+        "magicalDefense": 1071,
+        "attackSpeed": 0.97,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 126,
+        "healthRegen": 548,
+        "manaRegen": 275.1,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "strength": 10,
+        "vitality": 5,
+        "wisdom": 10,
+        "intelligence": 20
+      },
+      "flatBonuses": {
+        "magicalAttack": 81,
+        "manaRegen": 60,
+        "magicalDefense": 180
+      },
+      "buffs": [
+        {
+          "nr": 193,
+          "name": "Macht des Wassers",
+          "level": 10,
+          "durationSeconds": 1800,
+          "notes": []
+        },
+        {
+          "nr": 194,
+          "name": "Herr der Elemente",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 225,
+          "name": "Macht des Geistes",
+          "level": 10,
+          "durationSeconds": 1800,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "weapons": [
+        "1H Axt",
+        "1H Axt"
+      ],
+      "knownAttributes": {
+        "vitality": 219,
+        "wisdom": 159,
+        "strength": 116,
+        "intelligence": 59,
+        "agility": 5,
+        "luck": 11
+      },
+      "includedSkills": [
+        5,
+        26,
+        45,
+        52,
+        73,
+        139,
+        140,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 9155.5,
+        "maxMana": 5257,
+        "physicalAttack": 847.95,
+        "magicalAttack": 106,
+        "physicalDefense": 1225.9,
+        "magicalDefense": 810,
+        "attackSpeed": 0.9029999999999999,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 0,
+        "dodge": 7.5,
+        "critChanceRating": 72.39999999999999,
+        "block": 0,
+        "penetration": 272.5,
+        "healthRegen": 1067.8000000000002,
+        "manaRegen": 178.1,
+        "criticalDamageBonus": 0.81
+      },
+      "attributeBonuses": {
+        "strength": 29,
+        "vitality": 30,
+        "luck": 3
+      },
+      "flatBonuses": {
+        "physicalAttack": 80,
+        "penetration": 55,
+        "maxHealth": 750,
+        "criticalDamageBonus": 0.01,
+        "maxMana": 200
+      },
+      "buffs": [
+        {
+          "nr": 34,
+          "name": "Energieausbruch",
+          "level": 10,
+          "durationSeconds": 18,
+          "notes": [
+            "Separater Schild: 15 % Max-Leben; kein zusätzliches Max-Leben",
+            "Zusätzlicher Schaden ist an Angriffsart/Element gebunden; nicht zum allgemeinen Angriff addiert",
+            "Verbrauch: 1 % Max-Mana je MP-Tick; nicht von der Brutto-Regeneration abgezogen"
+          ]
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "level": 1,
+          "durationSeconds": null,
+          "notes": [
+            "Aggro-Faktor 2; kein Charakterattribut",
+            "Verbrauch: 25 Mana je MP-Tick; nicht von der Brutto-Regeneration abgezogen"
+          ]
+        },
+        {
+          "nr": 160,
+          "name": "Energie des Mutes",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 161,
+          "name": "Energie der Wut",
+          "level": 10,
+          "durationSeconds": 59,
+          "notes": [
+            "resourceGain: kein allgemeiner Tabellenwert"
+          ]
+        },
+        {
+          "nr": 162,
+          "name": "Innere Kraft",
+          "level": 15,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 163,
+          "name": "Volles Potential",
+          "level": 3,
+          "durationSeconds": 600,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "weapons": [
+        "Wand"
+      ],
+      "knownAttributes": {
+        "vitality": 119,
+        "wisdom": 214,
+        "strength": 59,
+        "intelligence": 130,
+        "dexterity": 25,
+        "faith": 12
+      },
+      "includedSkills": [
+        1,
+        44,
+        60,
+        139,
+        143,
+        144,
+        201,
+        208
+      ],
+      "stats": {
+        "maxHealth": 4498,
+        "maxMana": 8352,
+        "physicalAttack": 282,
+        "magicalAttack": 985,
+        "physicalDefense": 883,
+        "magicalDefense": 1576,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 568,
+        "manaRegen": 518.6,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "wisdom": 40,
+        "intelligence": 40,
+        "strength": 20,
+        "vitality": 20
+      },
+      "flatBonuses": {
+        "physicalAttack": 180,
+        "magicalAttack": 180,
+        "physicalDefense": 180,
+        "magicalDefense": 180,
+        "manaRegen": 205,
+        "maxMana": 300
+      },
+      "buffs": [
+        {
+          "nr": 74,
+          "name": "Festigung des Geistes",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 197,
+          "name": "Aurora-Segen",
+          "level": 10,
+          "durationSeconds": 1800,
+          "notes": []
+        },
+        {
+          "nr": 240,
+          "name": "Permafrost",
+          "level": 3,
+          "durationSeconds": null,
+          "notes": [
+            "cooldownReduction: kein allgemeiner Tabellenwert",
+            "procChanceBonus: kein allgemeiner Tabellenwert",
+            "Verbrauch: 29 Mana je MP-Tick; nicht von der Brutto-Regeneration abgezogen"
+          ]
+        },
+        {
+          "nr": 242,
+          "name": "Assimilation",
+          "level": 5,
+          "durationSeconds": 600,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "weapons": [
+        "Wand"
+      ],
+      "knownAttributes": {
+        "vitality": 154,
+        "wisdom": 206,
+        "strength": 59,
+        "intelligence": 131,
+        "dexterity": 20
+      },
+      "includedSkills": [
+        4,
+        5,
+        44,
+        81,
+        139,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 5096,
+        "maxMana": 6903,
+        "physicalAttack": 106,
+        "magicalAttack": 849.27,
+        "physicalDefense": 914,
+        "magicalDefense": 975.8000000000001,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 32,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 638,
+        "manaRegen": 231.20000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "wisdom": 12,
+        "intelligence": 12
+      },
+      "flatBonuses": {
+        "physicalDefense": 42,
+        "magicalDefense": 42,
+        "magicalAttack": 80
+      },
+      "buffs": [
+        {
+          "nr": 164,
+          "name": "Natürlicher Schutz",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "level": 10,
+          "durationSeconds": 180,
+          "notes": [
+            "Aggro-Faktor 0.9; kein Charakterattribut"
+          ]
+        },
+        {
+          "nr": 166,
+          "name": "Alles im Fluss",
+          "level": 10,
+          "durationSeconds": 1800,
+          "notes": []
+        },
+        {
+          "nr": 167,
+          "name": "Entgiftung",
+          "level": 10,
+          "durationSeconds": 55,
+          "notes": [
+            "statusResistance: kein allgemeiner Tabellenwert"
+          ]
+        },
+        {
+          "nr": 169,
+          "name": "Innere Unruhe",
+          "level": 10,
+          "durationSeconds": 35,
+          "notes": [
+            "randomDamageBonus: kein allgemeiner Tabellenwert"
+          ]
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "weapons": [
+        "Bow"
+      ],
+      "knownAttributes": {
+        "vitality": 160,
+        "wisdom": 144,
+        "strength": 59,
+        "intelligence": 59,
+        "dexterity": 84,
+        "agility": 39,
+        "luck": 3
+      },
+      "includedSkills": [
+        5,
+        10,
+        18,
+        43,
+        122,
+        139,
+        142,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 5184,
+        "maxMana": 4581,
+        "physicalAttack": 980,
+        "magicalAttack": 103,
+        "physicalDefense": 864,
+        "magicalDefense": 794.8,
+        "attackSpeed": 0.9252000000000001,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 200,
+        "dodge": 83,
+        "critChanceRating": 20.8,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 662,
+        "manaRegen": 164.6,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "dexterity": 26,
+        "luck": 10,
+        "agility": 3
+      },
+      "flatBonuses": {
+        "physicalAttack": 169,
+        "accuracy": 24,
+        "dodge": 20
+      },
+      "buffs": [
+        {
+          "nr": 152,
+          "name": "Giftpfeil",
+          "level": 20,
+          "durationSeconds": 600,
+          "notes": [
+            "periodicDamage: kein allgemeiner Tabellenwert"
+          ]
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "level": 3,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "level": 10,
+          "durationSeconds": 12,
+          "notes": [
+            "triggeredAttack: kein allgemeiner Tabellenwert"
+          ]
+        }
+      ],
+      "excluded": [
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "reason": "Nur Begleiter, keine Spieler."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "weapons": [
+        "Sword",
+        "Shield"
+      ],
+      "knownAttributes": {
+        "vitality": 268,
+        "wisdom": 190,
+        "strength": 113.68,
+        "intelligence": 74,
+        "dexterity": 7
+      },
+      "includedSkills": [
+        1,
+        28,
+        45,
+        93,
+        102,
+        139,
+        140,
+        141,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 10135,
+        "maxMana": 5983,
+        "physicalAttack": 531.984,
+        "magicalAttack": 104,
+        "physicalDefense": 2905.8,
+        "magicalDefense": 2333,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 11.200000000000001,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 28,
+        "penetration": 200.82,
+        "healthRegen": 1279.2,
+        "manaRegen": 216,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "strength": 20.2,
+        "vitality": 20
+      },
+      "flatBonuses": {
+        "physicalDefense": 1333,
+        "magicalDefense": 1333,
+        "block": 3
+      },
+      "buffs": [
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 82,
+          "name": "Schutz Aura",
+          "level": 10,
+          "durationSeconds": 15,
+          "notes": []
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "level": 2,
+          "durationSeconds": null,
+          "notes": [
+            "Aggro-Faktor 3; kein Charakterattribut",
+            "Verbrauch: 45 Mana je MP-Tick; nicht von der Brutto-Regeneration abgezogen"
+          ]
+        },
+        {
+          "nr": 171,
+          "name": "Aktive Deckung",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        }
+      ],
+      "excluded": [
+        {
+          "nr": 107,
+          "name": "Stählerne Rüstung",
+          "reason": "Zielt auf verbündete Spieler; Selbstwirkung nicht ausdrücklich definiert."
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "weapons": [
+        "Lichtstab"
+      ],
+      "knownAttributes": {
+        "vitality": 124,
+        "wisdom": 190,
+        "strength": 59,
+        "intelligence": 112,
+        "faith": 34,
+        "dexterity": 25,
+        "luck": 3
+      },
+      "includedSkills": [
+        1,
+        44,
+        60,
+        116,
+        139,
+        144,
+        201,
+        208
+      ],
+      "stats": {
+        "maxHealth": 4141,
+        "maxMana": 6617,
+        "physicalAttack": 104,
+        "magicalAttack": 793.4000000000001,
+        "physicalDefense": 728,
+        "magicalDefense": 1122,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 4.800000000000001,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 508,
+        "manaRegen": 274,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "faith",
+        "factor": 1.8,
+        "target": "magicalAttack",
+        "amount": 61.2,
+        "assumption": "R6 class-specific unlock assumed active"
+      },
+      "attributeBonuses": {
+        "wisdom": 20,
+        "intelligence": 20
+      },
+      "flatBonuses": {},
+      "buffs": [
+        {
+          "nr": 74,
+          "name": "Festigung des Geistes",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "knownAttributes": {
+        "vitality": 137,
+        "wisdom": 149,
+        "strength": 79,
+        "intelligence": 79,
+        "victim": 22,
+        "agility": 10,
+        "dexterity": 30
+      },
+      "includedSkills": [
+        2,
+        44,
+        139,
+        144,
+        181,
+        201
+      ],
+      "stats": {
+        "maxHealth": 5079,
+        "maxMana": 5287,
+        "physicalAttack": 104,
+        "magicalAttack": 753.6999999999999,
+        "physicalDefense": 816,
+        "magicalDefense": 959,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 48,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 630,
+        "manaRegen": 202.6,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "victim",
+        "factor": 1.9,
+        "target": "magicalAttack",
+        "amount": 41.8,
+        "assumption": "R6 class-specific unlock assumed active"
+      },
+      "attributeBonuses": {
+        "intelligence": 35,
+        "vitality": 15,
+        "wisdom": 15,
+        "victim": 15
+      },
+      "flatBonuses": {},
+      "buffs": [
+        {
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": [
+            "Zusätzlicher Schaden ist an Angriffsart/Element gebunden; nicht zum allgemeinen Angriff addiert"
+          ]
+        },
+        {
+          "nr": 236,
+          "name": "Teufelspakt",
+          "level": 3,
+          "durationSeconds": 600,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, 100 Seelen",
+      "weapons": [
+        "Victim-Stab"
+      ],
+      "knownAttributes": {
+        "vitality": 137,
+        "wisdom": 149,
+        "strength": 79,
+        "intelligence": 79,
+        "victim": 42,
+        "agility": 10,
+        "dexterity": 30
+      },
+      "includedSkills": [
+        2,
+        44,
+        139,
+        144,
+        181,
+        201,
+        120,
+        241
+      ],
+      "stats": {
+        "maxHealth": 5079,
+        "maxMana": 5287,
+        "physicalAttack": 104,
+        "magicalAttack": 891.6999999999999,
+        "physicalDefense": 816,
+        "magicalDefense": 959,
+        "attackSpeed": 0.906,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 48,
+        "dodge": 15,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 630,
+        "manaRegen": 202.6,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "victim",
+        "factor": 1.9,
+        "target": "magicalAttack",
+        "amount": 79.8,
+        "assumption": "R6 class-specific unlock assumed active"
+      },
+      "attributeBonuses": {
+        "intelligence": 35,
+        "vitality": 15,
+        "wisdom": 15,
+        "victim": 15
+      },
+      "flatBonuses": {},
+      "buffs": [
+        {
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": [
+            "Zusätzlicher Schaden ist an Angriffsart/Element gebunden; nicht zum allgemeinen Angriff addiert"
+          ]
+        },
+        {
+          "nr": 236,
+          "name": "Teufelspakt",
+          "level": 3,
+          "durationSeconds": 600,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "weapons": [
+        "Mace"
+      ],
+      "knownAttributes": {
+        "vitality": 139,
+        "wisdom": 179,
+        "strength": 82,
+        "intelligence": 111.5,
+        "dexterity": 25
+      },
+      "includedSkills": [
+        1,
+        33,
+        44,
+        132,
+        139,
+        144,
+        201
+      ],
+      "stats": {
+        "maxHealth": 4637,
+        "maxMana": 5823,
+        "physicalAttack": 790.4300000000001,
+        "magicalAttack": 504.70000000000005,
+        "physicalDefense": 856,
+        "magicalDefense": 1078,
+        "attackSpeed": 1.25,
+        "movementSpeed": 1.15,
+        "maxStamina": 1,
+        "accuracy": 40,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 130.5,
+        "healthRegen": 568,
+        "manaRegen": 210.6,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "strength": 5,
+        "wisdom": 5
+      },
+      "flatBonuses": {
+        "physicalAttack": 300,
+        "attackSpeed": 0.2,
+        "movementSpeed": 0.15000000000000002,
+        "magicalAttack": 81,
+        "magicalDefense": 180
+      },
+      "buffs": [
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "level": 3,
+          "durationSeconds": 1200,
+          "notes": []
+        },
+        {
+          "nr": 223,
+          "name": "Geschwindigkeit der Dox",
+          "level": 3,
+          "durationSeconds": 1800,
+          "notes": []
+        },
+        {
+          "nr": 224,
+          "name": "Macht des Feuers",
+          "level": 10,
+          "durationSeconds": 1800,
+          "notes": []
+        },
+        {
+          "nr": 225,
+          "name": "Macht des Geistes",
+          "level": 10,
+          "durationSeconds": 1800,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "weapons": [
+        "Crossbow"
+      ],
+      "knownAttributes": {
+        "vitality": 125,
+        "wisdom": 104,
+        "strength": 79,
+        "intelligence": 59,
+        "dexterity": 71,
+        "agility": 64
+      },
+      "includedSkills": [
+        2,
+        7,
+        43,
+        119,
+        139,
+        142,
+        144,
+        187,
+        201
+      ],
+      "stats": {
+        "maxHealth": 4125,
+        "maxMana": 3565,
+        "physicalAttack": 771.8,
+        "magicalAttack": 103,
+        "physicalDefense": 707,
+        "magicalDefense": 666.4,
+        "attackSpeed": 1.2934,
+        "movementSpeed": 1.2,
+        "maxStamina": 1,
+        "accuracy": 145.60000000000002,
+        "dodge": 133.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 522,
+        "manaRegen": 128.60000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "attributeBonuses": {
+        "agility": 25,
+        "dexterity": 20,
+        "ambush": 11
+      },
+      "flatBonuses": {
+        "movementSpeed": 0.19999999999999998,
+        "attackSpeed": 0.11,
+        "physicalAttack": 89
+      },
+      "buffs": [
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "level": 10,
+          "durationSeconds": 24.5,
+          "notes": []
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "level": 5,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": [
+            "resourceCostReduction: kein allgemeiner Tabellenwert"
+          ]
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "level": 10,
+          "durationSeconds": 600,
+          "notes": []
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "level": 3,
+          "durationSeconds": 180,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "weapons": [
+        "Dagger",
+        "Dagger"
+      ],
+      "knownAttributes": {
+        "vitality": 145,
+        "wisdom": 109,
+        "strength": 90,
+        "intelligence": 59,
+        "agility": 70,
+        "ambush": 16,
+        "dexterity": 55
+      },
+      "includedSkills": [
+        2,
+        22,
+        43,
+        67,
+        139,
+        144,
+        201,
+        243
+      ],
+      "stats": {
+        "maxHealth": 4766,
+        "maxMana": 3827.5,
+        "physicalAttack": 582.4,
+        "magicalAttack": 106,
+        "physicalDefense": 856,
+        "magicalDefense": 678,
+        "attackSpeed": 1.4449999999999998,
+        "movementSpeed": 1.3,
+        "maxStamina": 1,
+        "accuracy": 88,
+        "dodge": 112.5,
+        "critChanceRating": 8.8,
+        "block": 0,
+        "penetration": 135,
+        "healthRegen": 602,
+        "manaRegen": 133.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "specialAttributeAttack": {
+        "attribute": "ambush",
+        "factor": 1.8,
+        "target": "physicalAttack",
+        "amount": 28.8,
+        "assumption": "R6 class-specific unlock assumed active"
+      },
+      "attributeBonuses": {
+        "agility": 5,
+        "luck": 5.5,
+        "ambush": 25
+      },
+      "flatBonuses": {
+        "movementSpeed": 0.3,
+        "attackSpeed": 0.4,
+        "maxMana": 0
+      },
+      "buffs": [
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "level": 10,
+          "durationSeconds": 24.5,
+          "notes": []
+        },
+        {
+          "nr": 146,
+          "name": "List des Schurken",
+          "level": 10,
+          "durationSeconds": 300,
+          "notes": []
+        },
+        {
+          "nr": 188,
+          "name": "Dunkler Schleier",
+          "level": 2,
+          "durationSeconds": 8,
+          "notes": []
+        },
+        {
+          "nr": 189,
+          "name": "Herz des Verräters",
+          "level": 5,
+          "durationSeconds": 600,
+          "notes": [
+            "12 Mana je eigenem Auto-Attack bei erfüllten Buffbedingungen; kein MP-Tick-Bonus"
+          ]
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "level": 3,
+          "durationSeconds": 180,
+          "notes": []
+        },
+        {
+          "nr": 238,
+          "name": "Attentäter",
+          "level": 10,
+          "durationSeconds": 20,
+          "notes": []
+        }
+      ],
+      "excluded": [],
+      "notes": []
+    }
+  ],
+  "fields": [
+    [
+      "maxHealth",
+      "Leben"
+    ],
+    [
+      "maxMana",
+      "Mana"
+    ],
+    [
+      "physicalAttack",
+      "P-Angriff"
+    ],
+    [
+      "magicalAttack",
+      "M-Angriff"
+    ],
+    [
+      "physicalDefense",
+      "P-DEF"
+    ],
+    [
+      "magicalDefense",
+      "M-DEF"
+    ],
+    [
+      "accuracy",
+      "Genauigkeit*"
+    ],
+    [
+      "dodge",
+      "Ausweichen*"
+    ],
+    [
+      "critChanceRating",
+      "Kritische Treffer*"
+    ],
+    [
+      "criticalDamageBonus",
+      "Krit. Schaden"
+    ],
+    [
+      "block",
+      "Block*"
+    ],
+    [
+      "penetration",
+      "Penetration*"
+    ],
+    [
+      "attackSpeed",
+      "Angriffstempo†"
+    ],
+    [
+      "movementSpeed",
+      "Lauftempo†"
+    ],
+    [
+      "healthRegen",
+      "HP-Reg./Tick*"
+    ],
+    [
+      "manaRegen",
+      "MP-Reg./Tick*"
+    ]
+  ],
+  "highlights": {
+    "maxHealth": {
+      "median": 4766,
+      "mean": 5359.423076923077,
+      "tolerance": 500,
+      "lower": 4266,
+      "upper": 5266,
+      "classCount": 13
+    },
+    "maxMana": {
+      "median": 5651,
+      "mean": 5339.5,
+      "tolerance": 500,
+      "lower": 5151,
+      "upper": 6151,
+      "classCount": 13
+    },
+    "physicalAttack": {
+      "median": 495.624,
+      "mean": 446.8633846153847,
+      "tolerance": 49.562400000000004,
+      "lower": 446.0616,
+      "upper": 545.1864,
+      "classCount": 13
+    },
+    "magicalAttack": {
+      "median": 212.2,
+      "mean": 371.0938461538462,
+      "tolerance": 21.22,
+      "lower": 190.98,
+      "upper": 233.42,
+      "classCount": 13
+    },
+    "physicalDefense": {
+      "median": 859,
+      "mean": 915.9000000000001,
+      "tolerance": 85.9,
+      "lower": 773.1,
+      "upper": 944.9,
+      "classCount": 13
+    },
+    "magicalDefense": {
+      "median": 871,
+      "mean": 885.1384615384615,
+      "tolerance": 87.10000000000001,
+      "lower": 783.9,
+      "upper": 958.1,
+      "classCount": 13
+    },
+    "healthRegen": {
+      "median": 602,
+      "mean": 671.9230769230769,
+      "tolerance": 60.2,
+      "lower": 541.8,
+      "upper": 662.2,
+      "classCount": 13
+    },
+    "manaRegen": {
+      "median": 196.1,
+      "mean": 194.41538461538462,
+      "tolerance": 19.61,
+      "lower": 176.49,
+      "upper": 215.70999999999998,
+      "classCount": 13
+    }
+  },
+  "highlightMethod": "Median across 13 equally weighted class averages; HP/MP tolerance 500, other selected fields 10 percent of median",
+  "druidUpdatedAt": "2026-10-18T12:36:18.334Z"
+}

@@ -1,0 +1,186 @@
+{
+  "total": 32,
+  "active": 18,
+  "passive": 14,
+  "groups": [
+    {
+      "name": "Angriffe",
+      "count": 5,
+      "skills": [
+        {
+          "nr": 106,
+          "name": "Sprungschlag"
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge"
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb"
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff"
+        },
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt"
+        }
+      ]
+    },
+    {
+      "name": "Eigenbuffs",
+      "count": 2,
+      "skills": [
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte"
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis"
+        }
+      ]
+    },
+    {
+      "name": "Gruppen-/Begleiterbuffs",
+      "count": 3,
+      "skills": [
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers"
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft"
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters"
+        }
+      ]
+    },
+    {
+      "name": "Heilung",
+      "count": 2,
+      "skills": [
+        {
+          "nr": 41,
+          "name": "Erste Hilfe"
+        },
+        {
+          "nr": 250,
+          "name": "Lebenstransfer"
+        }
+      ]
+    },
+    {
+      "name": "Bewegung",
+      "count": 3,
+      "skills": [
+        {
+          "nr": 14,
+          "name": "Ausweichrolle"
+        },
+        {
+          "nr": 21,
+          "name": "Dash"
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung"
+        }
+      ]
+    },
+    {
+      "name": "Aktive Kreaturenskills",
+      "count": 3,
+      "skills": [
+        {
+          "nr": 133,
+          "name": "Tamen"
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören"
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen"
+        }
+      ]
+    },
+    {
+      "name": "Übrige Passive einschließlich Procs",
+      "count": 11,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption"
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers"
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung"
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille"
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining"
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining"
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten"
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining"
+        },
+        {
+          "nr": 245,
+          "name": "Breitschwert-Training"
+        },
+        {
+          "nr": 246,
+          "name": "Wilde Bindung"
+        },
+        {
+          "nr": 247,
+          "name": "Beharrlichkeit"
+        }
+      ]
+    },
+    {
+      "name": "Passive Kreaturenskills",
+      "count": 3,
+      "skills": [
+        {
+          "nr": 134,
+          "name": "Bindung"
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle"
+        },
+        {
+          "nr": 138,
+          "name": "Zucht"
+        }
+      ]
+    }
+  ],
+  "uniqueCount": 32,
+  "source": "data/skills.json",
+  "pending": null
+}

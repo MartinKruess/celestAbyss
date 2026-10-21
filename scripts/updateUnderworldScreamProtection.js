@@ -1,0 +1,18 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+try {
+ if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Wrong database');
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+ const before=await SkillDataModel.collection.findOne({nr:99});
+ if(before?.maxSkillLv!==3)throw Error('Unexpected skill');
+ const set={resourceCosts:[{resource:'health',reference:'maxHealth',unit:'fraction',scaling:{type:'fixed',base:0.25}}],activationRequirements:{resource:'health',minimumFraction:0.25,requiresStrictlyAboveMinimumFraction:true},dur:3,cd:90,cooldownScaling:{type:'linear',base:90,perLevel:-5},effectsVersion:1,effects:['pdef','mdef'].map(stat=>({key:'underworld-scream-'+stat,type:'statModifier',target:'self',stat,value:100,unit:'flat',durationSeconds:3})),attackExecution:{hitCount:1,damageValueScope:'perHit',damageTiming:'afterSkillDuration'},attackArea:{shape:'circle',center:'caster',radiusMeters:5,geometryStatus:'defined',target:'enemiesInArea',evaluation:'atImpact'},description_de:'Opfert 25 Prozent des maximalen Lebens. Nur aktivierbar, wenn das aktuelle Leben strikt über 25 Prozent des Maximal-Lebens liegt. Sammelt 3 Sekunden dunkle Energie um den Anwender; währenddessen +100 direkte P-Defense und +100 direkte M-Defense auf allen drei Stufen. Am Ende wird die Energie mit einem Schrei kreisförmig im Radius von 5 Metern um den Anwender ausgestoßen und trifft alle Gegner dort einmal magisch. Cooldown 90/85/80 Sekunden. Schadensentwurf: Stufe 1 666, Stufe 2 50 Prozent und Stufe 3 125 Prozent des tatsächlich geopferten Lebens; ob diese Anteile die 666 ersetzen oder zusätzlich dazu kommen, wird gerade geklärt. Die alte Lebenszahl -25 war kein fixer HP-Abzug und wurde durch strukturierte Kosten ersetzt. Zusätzliche Castzeit, Unterbrechbarkeit, Bewegung während des Sammelns und Charakter-M-Angriffsbeitrag sind noch offen. Keine Manakosten im neuen Kostenentwurf.',description_eng:'Sacrifices 25 percent of maximum health. Usable only when current health is strictly above 25 percent of maximum. Collects dark energy around the caster for 3 seconds, granting +100 direct physical and magical defense at all three levels during that time. At the end releases the energy in a scream, hitting every enemy within a 5-meter radius once with magical damage. Cooldown 90/85/80 seconds. Damage proposal: level 1 666; level 2 50 percent and level 3 125 percent of actual health sacrificed; whether these replace or add to 666 is awaiting clarification. Legacy health -25 replaced by structured costs. Additional cast time, interruption, movement while gathering energy and character magical attack contribution remain pending. No Mana cost in the new cost design.'};
+ const candidate={...before,...set};delete candidate.health;
+ await new SkillDataModel(candidate).validate();
+ await fs.writeFile('data/balancing/underworld-scream-protection-before.json',JSON.stringify(before,null,2)+'\n');
+ await SkillDataModel.collection.updateOne({nr:99},{$set:set,$unset:{health:''}});
+ const after=await SkillDataModel.collection.findOne({nr:99});
+ for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');
+ console.log('Underworld Scream protection, health cost, area and cooldown verified; damage formula pending.');
+}catch(e){console.error('Update failed ('+e.name+'); credentials omitted.');process.exitCode=1;}finally{await mongoose.disconnect();}

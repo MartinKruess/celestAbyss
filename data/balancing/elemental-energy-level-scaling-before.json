@@ -1,0 +1,59 @@
+{
+  "_id": "6acc1c7e4826525c70d04b83",
+  "skillName_eng": "Elemental Energy",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Herbalist",
+    "Witcher"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanenter passiver Skill mit automatischem Kampfeffekt. Jeder dritte eigene Angriff gegen einen Gegner prüft eine Auslösechance von 15 Prozent, sofern der interne Cooldown bereit ist. Auto-Attacks und Angriffsskills zählen; Mehrfachtreffer derselben Anwendung zählen als eine Angriffsaktion. Begleiterangriffe zählen nicht. Eine zusätzliche Mindestkampfdauer von 15 Sekunden ist nicht erforderlich. Auf jeder Skillstufe erhältst du bei Auslösung für 30 Sekunden 2 Intelligenz, und die magische Verteidigung des betroffenen Gegners sinkt für 30 Sekunden um 10 Prozent. Interner Cooldown 120 Sekunden. Keine manuelle Aktivierung. Die Wirkung bleibt auf allen Skillstufen unverändert; keine Levelskalierung. Detailregeln des Angriffszählers und Zielauswahl bei Flächenangriffen werden noch festgelegt.",
+  "description_eng": "Permanent passive skill with an automatic combat effect. Every third own attack against an enemy checks a 15 percent proc chance while the internal cooldown is ready. Basic attacks and attack skills count; multiple hits from one activation count as one attack action. Companion attacks do not count. No additional 15 second combat prerequisite is required. At every skill level, triggering grants 2 Intelligence for 30 seconds and reduces the affected enemy magical defence by 10 percent for 30 seconds. Internal cooldown is 120 seconds. No manual activation. Effects remain identical at every skill level with no level scaling. Detailed attack-counter lifecycle and target selection for area attacks remain pending.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 32,
+  "skillName_de": "Elementarenergie",
+  "skillpoints": 1,
+  "activation": "automatic",
+  "cd": 120,
+  "dur": 30,
+  "triggerConditionStatus": "defined",
+  "effects": [
+    {
+      "type": "statModifier",
+      "target": "self",
+      "stat": "int",
+      "value": 2,
+      "unit": "flat",
+      "damageTypes": [],
+      "durationSeconds": 30,
+      "key": "self-intelligence"
+    },
+    {
+      "type": "statModifier",
+      "target": "enemy",
+      "stat": "mdef",
+      "value": -0.1,
+      "unit": "fraction",
+      "reference": "targetStat",
+      "damageTypes": [],
+      "durationSeconds": 30,
+      "key": "enemy-magic-defense"
+    }
+  ],
+  "effectsVersion": 1,
+  "triggerCondition": {
+    "type": "ownAttack",
+    "checkEveryAttackActions": 3,
+    "chancePerCheck": 0.15,
+    "includesBasicAttacks": true,
+    "includesAttackSkills": true,
+    "oncePerAttackAction": true,
+    "excludeCompanionAttacks": true,
+    "requiresCooldownReady": true
+  },
+  "levelScalingPolicy": "constant"
+}

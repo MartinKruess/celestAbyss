@@ -1,0 +1,157 @@
+{
+  "classKey": "adventurer",
+  "level": 60,
+  "rank": 6,
+  "status": "PermanentPassivesWithConfirmedBroadsword",
+  "bonuses": [
+    {
+      "nr": 5,
+      "name": "Adaption",
+      "maxSkillLevel": 20,
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "manaRegen": 10,
+        "healthRegen": 10
+      }
+    },
+    {
+      "nr": 45,
+      "name": "Erweiterung des Körpers",
+      "maxSkillLevel": 10,
+      "stats": {
+        "vita": 20,
+        "str": 20,
+        "wis": 20
+      }
+    },
+    {
+      "nr": 67,
+      "name": "Körperbeherrschung",
+      "maxSkillLevel": 10,
+      "stats": {
+        "agi": 12,
+        "dex": 23
+      }
+    },
+    {
+      "nr": 245,
+      "name": "Breitschwert-Training",
+      "maxSkillLevel": 10,
+      "stats": {
+        "str": 7.5
+      }
+    },
+    {
+      "nr": 139,
+      "name": "Ausdauertraining",
+      "maxSkillLevel": 20,
+      "stats": {
+        "vita": 20,
+        "wis": 20,
+        "pdef": 80,
+        "mdef": 80
+      }
+    },
+    {
+      "nr": 144,
+      "name": "Rüstungstraining",
+      "maxSkillLevel": 10,
+      "stats": {
+        "pdef": 60,
+        "mdef": 60
+      }
+    },
+    {
+      "nr": 201,
+      "name": "Waffentraining",
+      "maxSkillLevel": 20,
+      "stats": {
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      }
+    }
+  ],
+  "variants": [
+    {
+      "weapon": "2H Schwert",
+      "equipped": {
+        "maxHealth": 4292,
+        "maxMana": 3851,
+        "physicalAttack": 398.20000000000005,
+        "magicalAttack": 112.2,
+        "physicalDefense": 777,
+        "magicalDefense": 577,
+        "attackSpeed": 0.7742,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 4.800000000000001,
+        "dodge": 10.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 528,
+        "manaRegen": 132.10000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "passiveBonuses": {
+        "vita": 60,
+        "wis": 60,
+        "manaRegen": 10,
+        "healthRegen": 10,
+        "str": 27.5,
+        "agi": 12,
+        "dex": 23,
+        "pdef": 140,
+        "mdef": 140,
+        "patk": 100,
+        "matk": 100,
+        "atkSpeed": 0.2
+      },
+      "includedSkills": [
+        5,
+        45,
+        67,
+        245,
+        139,
+        144,
+        201
+      ],
+      "knownPassiveSubtotal": {
+        "maxHealth": 6092,
+        "maxMana": 5651,
+        "physicalAttack": 547.7,
+        "magicalAttack": 212.2,
+        "physicalDefense": 1037,
+        "magicalDefense": 837,
+        "attackSpeed": 0.7742,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 4.800000000000001,
+        "dodge": 10.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 118.5,
+        "healthRegen": 528,
+        "manaRegen": 132.10000000000002,
+        "criticalDamageBonus": 0.8
+      }
+    }
+  ],
+  "excluded": [
+    "Adrenalin",
+    "Überlebenswille",
+    "Durchhalten proc draft",
+    "All active buffs",
+    "Pets",
+    "Jewelry and stones",
+    "Crit, Block and incomplete speed conversions"
+  ],
+  "assumptions": [
+    "Broadsword Training applies with the confirmed two-handed sword",
+    "Broadsword Training grants Strength only; Dexterity removed",
+    "Starting attribute contributions already included in operative baseline"
+  ],
+  "note": "These are combat-independent permanent bonuses only; not a full balance verdict."
+}

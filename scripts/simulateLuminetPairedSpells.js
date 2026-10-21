@@ -1,0 +1,30 @@
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import {pathToFileURL} from 'node:url';
+const original=await fs.readFile('scripts/calculateTenMinutePartyBuffFinal.js','utf8');
+let source=original.slice(0,original.indexOf('\nconst assumptions=['));
+source="import {resolveSkillAtLevel} from '../services/skillLevel.js';\n"+source;
+source=source.replace("import fs from 'node:fs/promises';","import realFs from 'node:fs/promises'; const fs={...realFs,writeFile:async()=>{}};");
+const helper=`function pairedSpell(n){
+ const identity=skills.find(s=>s.nr===n),template=skills.find(s=>s.nr===(n===36?49:232));
+ const s=resolveSkillAtLevel(template,template.maxSkillLv);
+ delete s.levelProgression;
+ return {...s,nr:n,_id:identity._id,skillName_de:identity.skillName_de,skillName_eng:identity.skillName_eng,charClass:['Luminet','Lightmage'],maxSkillLv:n===36?5:10,effectiveSkillLevel:n===36?5:10,learnedLevel:n===36?5:10,learnableMaxSkillLv:n===36?5:10};
+}
+`;
+source=source.replace('const get=n=>skills.find(s=>s.nr===n),damage=',helper+"const get=n=>[36,231].includes(n)?pairedSpell(n):skills.find(s=>s.nr===n),damage=");
+source=source.replace('for(const ref of reference.classes){',"for(const ref of reference.classes.filter(c=>c.key==='luminet')){");
+source=source.replace("['autoOnly','skillsPreferred']","['skillsPreferred']");
+source=source.replace('const all=rotations.classes.find(c=>c.key===ref.key).rows.map(s=>s.nr);',"const all=[...new Set([...rotations.classes.find(c=>c.key===ref.key).rows.map(s=>s.nr).filter(n=>n!==210),231])];");
+source=source.replace('const catalog=skills.filter(s=>needed.has(s.nr));','const catalog=skills.filter(s=>needed.has(s.nr)).map(s=>[36,231].includes(s.nr)?pairedSpell(s.nr):s);');
+source=source.replace('attacks:ref.skillsPreferred.search.priorityPoolAttackNumbers??ref.skillsPreferred.search.selectedAttackNumbers','attacks:(ref.skillsPreferred.search.priorityPoolAttackNumbers??ref.skillsPreferred.search.selectedAttackNumbers).filter(n=>all.includes(n))');
+source=source.replace('const initial=[initialCandidate,',"const previous=JSON.parse(await fs.readFile('data/balancing/energy-strike-five-versus-ten-scenario.json','utf8')).results.find(s=>s.energyStrikeLevel===5).classes.find(c=>c.key===ref.key)[mode];const previousCandidate={name:'currentLuminetPolicy',attacks:[...new Set([...previous.search.priorityPoolAttackNumbers.filter(n=>all.includes(n)),231])],own:previous.search.selectedOwnBuffNumbers,scores:previous.search.priorityScores,lookahead:previous.search.lookaheadSeconds};const initial=[previousCandidate,initialCandidate,");
+source=source.replaceAll(/from '(\.\.\/services\/[^']+)'/g,(_,p)=>'from '+JSON.stringify(new URL(p,pathToFileURL(process.cwd()+'/scripts/calculateTenMinutePartyBuffFinal.js')).href));
+source+='\nexport default {durationSeconds:600,classes,pairedSpells:[pairedSpell(36),pairedSpell(231)]};';
+const result=(await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'))).default;
+const run=result.classes[0].skillsPreferred;
+assert(!run.result.skills.some(s=>s.nr===210));
+assert(run.result.skills.some(s=>s.nr===36&&s.applications>0));
+assert(run.result.skills.some(s=>s.nr===231&&s.applications>0));
+await fs.writeFile('data/balancing/luminet-paired-spells-scenario.json',JSON.stringify({generatedAt:new Date().toISOString(),scope:'RAM-only. Energy Strike uses Fireball maximum combat values (614 base, 149 Mana, 4s cooldown, .1s cast); Luminus uses Dark Pulse maximum combat values (249 base, 65 Mana, 5s cooldown, .1s cast). Energy Strike still represented as learned level 5. Current Luminet attributes/passives and all other skills unchanged; Light Flash excluded. 600s permanent group buffs, normal self buffs, skill-preferred mixed search; best found, not proven global optimum.',...result},null,2)+'\n');
+console.log('Saved validated paired-spell scenario; no database writes.');

@@ -1,0 +1,1932 @@
+{
+  "generatedAt": "2026-10-19T13:06:59.224Z",
+  "scope": "Remaining first-unlock requirements; U-slots specific to class and stable for this review. Prior S-slots separate.",
+  "classes": [
+    {
+      "name": "Abenteurer",
+      "key": "adventurer",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "max": 2,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 21,
+          "name": "Dash",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 25,
+          "name": "Doppelsprung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U5",
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 106,
+          "name": "Sprungschlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 114,
+          "name": "Überlebenswille",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U8",
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 145,
+          "name": "Durchhalten",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U10",
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 245,
+          "name": "Breitschwert-Training",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U15",
+          "nr": 246,
+          "name": "Wilde Bindung",
+          "max": 3,
+          "passive": true
+        },
+        {
+          "slot": "U16",
+          "nr": 247,
+          "name": "Beharrlichkeit",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U17",
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 249,
+          "name": "Rudelangriff",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 250,
+          "name": "Lebenstransfer",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "max": 6,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Butcher",
+      "key": "butcher",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 3,
+          "name": "Abräumer",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 11,
+          "name": "Aufgeladener Schlag",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 12,
+          "name": "Aufladung",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 35,
+          "name": "Energieentladung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 38,
+          "name": "Erdbeben",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 39,
+          "name": "Erdbrecher",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 89,
+          "name": "Schädelspalter",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 98,
+          "name": "Schockwelle der Regeneration",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 131,
+          "name": "Zweihändiges Axttraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U13",
+          "nr": 140,
+          "name": "Standhaft",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U14",
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 174,
+          "name": "Blutrausch",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 176,
+          "name": "Ewiger Sieger",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U19",
+          "nr": 177,
+          "name": "Ungebrochen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U20",
+          "nr": 227,
+          "name": "Dämonische Schockwelle",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U21",
+          "nr": 234,
+          "name": "Zorn des Henkers",
+          "max": 5,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Druide",
+      "key": "druid",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 6,
+          "name": "Adrenalin",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U2",
+          "nr": 9,
+          "name": "Ätherregen",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 29,
+          "name": "Eislanze",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 30,
+          "name": "Eisranken",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 36,
+          "name": "Energieschlag",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 125,
+          "name": "Windfesseln",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 132,
+          "name": "Zweihändiges Streitkolbentraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U9",
+          "nr": 193,
+          "name": "Macht des Wassers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 194,
+          "name": "Herr der Elemente",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 203,
+          "name": "Kanalisation",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U12",
+          "nr": 204,
+          "name": "Katalysator Rein",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 219,
+          "name": "Manaexplosion",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 220,
+          "name": "Bannmagie",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 221,
+          "name": "Windschlitzer",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 222,
+          "name": "Vergessener Zauber",
+          "max": 1,
+          "passive": true
+        },
+        {
+          "slot": "U18",
+          "nr": 225,
+          "name": "Macht des Geistes",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 244,
+          "name": "Naturgeist",
+          "max": 1,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 253,
+          "name": "Gunst der Sylphen",
+          "max": 5,
+          "passive": true
+        }
+      ]
+    },
+    {
+      "name": "Gladiator",
+      "key": "gladiator",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 13,
+          "name": "Ausbruch der Wut",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 26,
+          "name": "Dual Axttraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U3",
+          "nr": 34,
+          "name": "Energieausbruch",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 52,
+          "name": "Glück des Narrens",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U5",
+          "nr": 61,
+          "name": "Holzspalter",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 106,
+          "name": "Sprungschlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 109,
+          "name": "Sturm der Wut",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 114,
+          "name": "Überlebenswille",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U12",
+          "nr": 127,
+          "name": "Wutexplosion",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 128,
+          "name": "Wutklinge",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 140,
+          "name": "Standhaft",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U15",
+          "nr": 145,
+          "name": "Durchhalten",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U16",
+          "nr": 158,
+          "name": "Provozieren",
+          "max": 1,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 161,
+          "name": "Energie der Wut",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 162,
+          "name": "Innere Kraft",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 163,
+          "name": "Volles Potential",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 230,
+          "name": "Blutiger Durchbruch",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U21",
+          "nr": 233,
+          "name": "Kriegerischer Ansturm",
+          "max": 10,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Heiler",
+      "key": "healer",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 29,
+          "name": "Eislanze",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 36,
+          "name": "Energieschlag",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 54,
+          "name": "Gefrierbrand",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U4",
+          "nr": 58,
+          "name": "Kuss der Aurora",
+          "max": 6,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U6",
+          "nr": 64,
+          "name": "Heilung",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 78,
+          "name": "Göttliche Heilung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 124,
+          "name": "Wiederherstellung",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 143,
+          "name": "Immunität",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U13",
+          "nr": 197,
+          "name": "Aurora-Segen",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 206,
+          "name": "Lunare Inkanation",
+          "max": 1,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 207,
+          "name": "Himmlische Aufopferung",
+          "max": 1,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U17",
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 239,
+          "name": "Frostschauer",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 240,
+          "name": "Permafrost",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 242,
+          "name": "Assimilation",
+          "max": 5,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Kräuterkundler",
+      "key": "herbalist",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 4,
+          "name": "Abschöpfen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U2",
+          "nr": 16,
+          "name": "Wasserfesseln",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 29,
+          "name": "Eislanze",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 31,
+          "name": "Elektrisches Feld",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 32,
+          "name": "Elementarenergie",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U6",
+          "nr": 46,
+          "name": "Ewiges Eis",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 56,
+          "name": "Geladener Nebel",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 57,
+          "name": "Gezielter Blitz",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 69,
+          "name": "Kugelblitz",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 71,
+          "name": "Lebensessenz",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 81,
+          "name": "Naturgewalt",
+          "max": 3,
+          "passive": true
+        },
+        {
+          "slot": "U12",
+          "nr": 84,
+          "name": "Lähmung",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U13",
+          "nr": 112,
+          "name": "Tobender Sturm",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 123,
+          "name": "Wiederaufladung",
+          "max": 3,
+          "passive": true
+        },
+        {
+          "slot": "U15",
+          "nr": 164,
+          "name": "Natürlicher Schutz",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 166,
+          "name": "Alles im Fluss",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 167,
+          "name": "Entgiftung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 169,
+          "name": "Innere Unruhe",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 205,
+          "name": "Katalysator Unrein",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U21",
+          "nr": 221,
+          "name": "Windschlitzer",
+          "max": 10,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Jäger",
+      "key": "hunter",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 10,
+          "name": "Auf der Jagd",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U2",
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "max": 2,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 18,
+          "name": "Bogenschießtraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U4",
+          "nr": 25,
+          "name": "Doppelsprung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 63,
+          "name": "Kettenschuss",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 88,
+          "name": "Salve",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 97,
+          "name": "Schockschuss",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 122,
+          "name": "Voll Durchziehen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U14",
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 152,
+          "name": "Giftpfeil",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 154,
+          "name": "Auge des Falken",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 156,
+          "name": "Waldläufer",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "max": 1,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Ritter",
+      "key": "knight",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 28,
+          "name": "Eiserner Schild",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U4",
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 42,
+          "name": "Erwachen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U6",
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 59,
+          "name": "Göttlicher Schutz",
+          "max": 2,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 64,
+          "name": "Heilung",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 82,
+          "name": "Schutz Aura",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 93,
+          "name": "Schildangriffstraining",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U13",
+          "nr": 94,
+          "name": "Schildstoß",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 95,
+          "name": "Schildsturm",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 102,
+          "name": "Schwerttraining",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U16",
+          "nr": 107,
+          "name": "Stählerne Rüstung",
+          "max": 1,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 114,
+          "name": "Überlebenswille",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U18",
+          "nr": 140,
+          "name": "Standhaft",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U19",
+          "nr": 141,
+          "name": "Eiserner Wille",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U20",
+          "nr": 158,
+          "name": "Provozieren",
+          "max": 2,
+          "passive": false
+        },
+        {
+          "slot": "U21",
+          "nr": 171,
+          "name": "Aktive Deckung",
+          "max": 10,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Luminet",
+      "key": "luminet",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 8,
+          "name": "Astralkörper",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 9,
+          "name": "Ätherregen",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 29,
+          "name": "Eislanze",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 36,
+          "name": "Energieschlag",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U6",
+          "nr": 74,
+          "name": "Festigung des Glaubens",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 116,
+          "name": "Unerschöpfliche Hoffnung",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U9",
+          "nr": 117,
+          "name": "Urteil des Himmels",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U11",
+          "nr": 211,
+          "name": "Aurora Wellen",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 213,
+          "name": "Strafendes Licht",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 215,
+          "name": "Heiliges Kreuz",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 216,
+          "name": "Heilige Vernichtung",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 218,
+          "name": "Licht kristallenes Gefängnis",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 228,
+          "name": "Geheiligte Barriere",
+          "max": 1,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 231,
+          "name": "Luminus",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 260,
+          "name": "Läuterung",
+          "max": 10,
+          "passive": true
+        }
+      ]
+    },
+    {
+      "name": "Ritualist",
+      "key": "ritualist",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 48,
+          "name": "Feuer der Verdammten",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 49,
+          "name": "Feuerball",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 72,
+          "name": "Lebenssauger",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 83,
+          "name": "Opfergabe",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U5",
+          "nr": 99,
+          "name": "Schrei der Unterwelt",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 100,
+          "name": "Schwäche des Fleisches",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 103,
+          "name": "Seelenfessel",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 104,
+          "name": "Seelenqual",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 105,
+          "name": "Seelenernte",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 110,
+          "name": "Sturm des Feuers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 120,
+          "name": "Reaper",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U12",
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 180,
+          "name": "Seelenplage",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 181,
+          "name": "Arkane Aufladung",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U15",
+          "nr": 209,
+          "name": "Verloren in der Dunkelheit",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U16",
+          "nr": 214,
+          "name": "Ausbrennen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U17",
+          "nr": 232,
+          "name": "Dunkler Impuls",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 235,
+          "name": "Meteoritenschauer",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 236,
+          "name": "Teufelspakt",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 237,
+          "name": "Morrak´s Meister",
+          "max": 1,
+          "passive": true
+        },
+        {
+          "slot": "U21",
+          "nr": 241,
+          "name": "Zahl der Opfer",
+          "max": 1,
+          "passive": true
+        }
+      ]
+    },
+    {
+      "name": "Schamane",
+      "key": "shaman",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 6,
+          "name": "Adrenalin",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U2",
+          "nr": 15,
+          "name": "Beben",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 33,
+          "name": "Energie Umwandler",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U4",
+          "nr": 38,
+          "name": "Erdbeben",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 50,
+          "name": "Feuerlanze",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 62,
+          "name": "Infernal Zyklon",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 76,
+          "name": "Infernaler Kreuzschlag",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 106,
+          "name": "Sprungschlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 192,
+          "name": "Macht des Felsens",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 202,
+          "name": "Verbrennen",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 223,
+          "name": "Geschwindigkeit der Dox",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 224,
+          "name": "Macht des Feuers",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 252,
+          "name": "Streitkolbentraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U15",
+          "nr": 254,
+          "name": "Weisheit des Salamanders",
+          "max": 5,
+          "passive": true
+        },
+        {
+          "slot": "U16",
+          "nr": 255,
+          "name": "Felszähne",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 256,
+          "name": "Felsensalve",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 257,
+          "name": "Feurige Leidenschaft",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U19",
+          "nr": 258,
+          "name": "Erdsäule",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 259,
+          "name": "Weisheit des Erzdruiden",
+          "max": 5,
+          "passive": true
+        }
+      ]
+    },
+    {
+      "name": "Seelenjäger",
+      "key": "summoner",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 7,
+          "name": "Armbrusttraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U2",
+          "nr": 21,
+          "name": "Dash",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 24,
+          "name": "Doppelschuss",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U4",
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "max": 20,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 63,
+          "name": "Kettenschuss",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U7",
+          "nr": 66,
+          "name": "Kopfschuss",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 119,
+          "name": "Verbessertes Nachladen",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U10",
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 185,
+          "name": "Seelenschuss",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 186,
+          "name": "Seelensammler",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 187,
+          "name": "Hartes Training",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U17",
+          "nr": 190,
+          "name": "Keine Gnade",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 191,
+          "name": "Flinke Füße",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 229,
+          "name": "Spektralketten",
+          "max": 1,
+          "passive": false
+        }
+      ]
+    },
+    {
+      "name": "Schurke",
+      "key": "villian",
+      "skills": [
+        {
+          "slot": "U1",
+          "nr": 17,
+          "name": "Blutklinge",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U2",
+          "nr": 20,
+          "name": "Brecher des Lichts",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U3",
+          "nr": 22,
+          "name": "Dolchtraining",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U4",
+          "nr": 27,
+          "name": "Dunkler Schlag",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U5",
+          "nr": 65,
+          "name": "Klingentornado",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U6",
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "max": 10,
+          "passive": true
+        },
+        {
+          "slot": "U7",
+          "nr": 70,
+          "name": "Kunai Todesstoß",
+          "max": 4,
+          "passive": false
+        },
+        {
+          "slot": "U8",
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U9",
+          "nr": 90,
+          "name": "Schattendolch",
+          "max": 15,
+          "passive": false
+        },
+        {
+          "slot": "U10",
+          "nr": 91,
+          "name": "Schattenfalle",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U11",
+          "nr": 92,
+          "name": "Schattenschlag",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U12",
+          "nr": 111,
+          "name": "Sturmklinge",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U13",
+          "nr": 113,
+          "name": "Tödlicher Tanz",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U14",
+          "nr": 115,
+          "name": "Überschallklinge",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U15",
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U16",
+          "nr": 146,
+          "name": "List des Schurken",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U17",
+          "nr": 188,
+          "name": "Dunkler Schleier",
+          "max": 2,
+          "passive": false
+        },
+        {
+          "slot": "U18",
+          "nr": 189,
+          "name": "Herz des Verräters",
+          "max": 5,
+          "passive": false
+        },
+        {
+          "slot": "U19",
+          "nr": 191,
+          "name": "Flinke Füße",
+          "max": 3,
+          "passive": false
+        },
+        {
+          "slot": "U20",
+          "nr": 238,
+          "name": "Attentäter",
+          "max": 10,
+          "passive": false
+        },
+        {
+          "slot": "U21",
+          "nr": 243,
+          "name": "Technische Perfektion",
+          "max": 1,
+          "passive": true
+        }
+      ]
+    }
+  ]
+}

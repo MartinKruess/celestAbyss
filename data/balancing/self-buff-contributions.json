@@ -1,0 +1,897 @@
+{
+  "generatedAt": "2026-10-19T10:31:15.943Z",
+  "inputHashes": {
+    "data/skills.json": "caed4dca9c5388050d9487e8a8f3c077ca94b215b81a1c039044c150d9288891",
+    "data/balancing/class-comparison-level60.json": "abe63a14537f0f241aba614b3153de9b6e0b1a3854b0644395470a00a699b687",
+    "data/balancing/attribute-model.json": "8bbd65d3dac697d3ac5be12c8d7845a3b6993cfab3ef4cbb794c3b1029f595c2",
+    "data/balancing/all-class-damage-rotations.json": "03d7bd96350a020eb201d04d3ce985d9fb6d8a435f39a9068aa5d0729a636d33",
+    "services/timedDamageSimulation.js": "2d513f5d91a02a280a432e59d4db8baeca97acac128a6670aa61c41e9e2d0c86",
+    "services/attackSpeed.js": "fd7924cfcc6eb08f884fc0fea93dccecd44721611393ab131db787cb052f44bb"
+  },
+  "scope": "Current 600s unbuffed versus normally activated self-only buffs, same fixed policy. Leave-one-buff-out marginal comparisons and a temporary-speed-only removal diagnostic. Marginal contributions interact and must not be added. Healing, defense and utility not scored. No skill/database/report changes.",
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "base": {
+        "total": 506600.90000000515,
+        "auto": 307807.4000000032,
+        "activeSkills": 198793.50000000003,
+        "summon": 0,
+        "autoActions": 562
+      },
+      "buffed": {
+        "total": 643206.1999999988,
+        "auto": 426997.70000000467,
+        "activeSkills": 216208.5000000001,
+        "summon": 0,
+        "autoActions": 631
+      },
+      "deltas": {
+        "total": 136605.29999999364,
+        "auto": 119190.30000000144,
+        "activeSkills": 17415.00000000006,
+        "summon": 0,
+        "autoActions": 69
+      },
+      "gainPercent": 26.965072505791497,
+      "withoutTemporarySpeed": {
+        "total": 594483.800000001,
+        "auto": 378275.30000000383,
+        "activeSkills": 216208.5000000001,
+        "summon": 0,
+        "autoActions": 559
+      },
+      "temporarySpeedMarginal": 48722.39999999781,
+      "buffs": [
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "level": 3,
+          "values": {
+            "str": 5,
+            "patk": 120
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 9,
+            "penetration": 7.5
+          },
+          "duration": 1200,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 291,
+          "uptime": 600,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 98813.99999999453,
+          "without": {
+            "total": 544392.2000000043,
+            "auto": 345598.700000004,
+            "activeSkills": 198793.50000000003,
+            "summon": 0,
+            "autoActions": 631
+          }
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "level": 10,
+          "values": {
+            "amb": 11,
+            "atkSpeed": 0.1
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 300,
+          "cooldown": 60,
+          "activations": 2,
+          "manaSpent": 496.64,
+          "uptime": 599.6600000000001,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 46692.29999999795,
+          "without": {
+            "total": 596513.9000000008,
+            "auto": 380305.40000000386,
+            "activeSkills": 216208.5000000001,
+            "summon": 0,
+            "autoActions": 562
+          }
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "base": {
+        "total": 605955.220000001,
+        "auto": 364580.99999999744,
+        "activeSkills": 241374.21999999933,
+        "summon": 0,
+        "autoActions": 450
+      },
+      "buffed": {
+        "total": 682106.241999999,
+        "auto": 442899.3619999985,
+        "activeSkills": 239206.8800000002,
+        "summon": 0,
+        "autoActions": 478
+      },
+      "deltas": {
+        "total": 76151.02199999802,
+        "auto": 78318.36200000107,
+        "activeSkills": -2167.3399999991234,
+        "summon": 0,
+        "autoActions": 28
+      },
+      "gainPercent": 12.56710388599307,
+      "withoutTemporarySpeed": {
+        "total": 658932.167999999,
+        "auto": 419723.307999998,
+        "activeSkills": 239208.8600000002,
+        "summon": 0,
+        "autoActions": 453
+      },
+      "temporarySpeedMarginal": 23174.074000000022,
+      "buffs": [
+        {
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "level": 10,
+          "values": {
+            "str": 22
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 43.56,
+            "penetration": 33
+          },
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 209,
+          "uptime": 599.7,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 32238.837999995914,
+          "without": {
+            "total": 649867.4040000031,
+            "auto": 417981.6379999983,
+            "activeSkills": 231885.7660000002,
+            "summon": 0,
+            "autoActions": 473
+          }
+        },
+        {
+          "nr": 12,
+          "name": "Aufladung",
+          "level": 5,
+          "values": {
+            "str": 28,
+            "health": 240,
+            "patk": 320
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 55.440000000000005,
+            "penetration": 42
+          },
+          "duration": 15,
+          "cooldown": 122,
+          "activations": 5,
+          "manaSpent": 1935,
+          "uptime": 75,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 23127.262000000803,
+          "without": {
+            "total": 658978.9799999982,
+            "auto": 419374.3859999978,
+            "activeSkills": 239604.59400000013,
+            "summon": 0,
+            "autoActions": 476
+          }
+        },
+        {
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "level": 10,
+          "values": {
+            "str": 13,
+            "vita": 10
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 25.740000000000002,
+            "penetration": 19.5
+          },
+          "duration": 270,
+          "cooldown": 420,
+          "activations": 2,
+          "manaSpent": 334,
+          "uptime": 446.7,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 16168.880000000121,
+          "without": {
+            "total": 665937.3619999989,
+            "auto": 428706.6399999971,
+            "activeSkills": 237230.7219999997,
+            "summon": 0,
+            "autoActions": 473
+          }
+        },
+        {
+          "nr": 174,
+          "name": "Blutrausch",
+          "level": 10,
+          "values": {
+            "str": 7.5,
+            "atkSpeed": 0.1
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 14.850000000000001,
+            "penetration": 11.25
+          },
+          "duration": 60,
+          "cooldown": 300,
+          "activations": 2,
+          "manaSpent": 884,
+          "uptime": 120,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 15370.414000002202,
+          "without": {
+            "total": 666735.8279999968,
+            "auto": 425543.49599999783,
+            "activeSkills": 241192.3320000001,
+            "summon": 0,
+            "autoActions": 460
+          }
+        },
+        {
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "level": 10,
+          "values": {},
+          "convertedAttributeBonuses": {},
+          "effects": [
+            {
+              "key": "until-death-attack-speed",
+              "type": "statModifier",
+              "target": "self",
+              "stat": "atkSpeed",
+              "value": 0.15,
+              "unit": "fraction",
+              "durationSeconds": 15
+            }
+          ],
+          "duration": 15,
+          "cooldown": 141,
+          "activations": 5,
+          "manaSpent": 915,
+          "uptime": 75,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 11531.352000000072,
+          "without": {
+            "total": 670574.889999999,
+            "auto": 427540.1499999977,
+            "activeSkills": 243034.74000000025,
+            "summon": 0,
+            "autoActions": 464
+          }
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "base": {
+        "total": 597263.8957499999,
+        "auto": 244529.2399999978,
+        "activeSkills": 352734.6557499986,
+        "summon": 0,
+        "autoActions": 428
+      },
+      "buffed": {
+        "total": 672136.3164000105,
+        "auto": 304138.5200000013,
+        "activeSkills": 367997.79639999836,
+        "summon": 0,
+        "autoActions": 434
+      },
+      "deltas": {
+        "total": 74872.42065001058,
+        "auto": 59609.28000000349,
+        "activeSkills": 15263.140649999783,
+        "summon": 0,
+        "autoActions": 6
+      },
+      "gainPercent": 12.535902669286791,
+      "withoutTemporarySpeed": {
+        "total": 672136.3164000105,
+        "auto": 304138.5200000013,
+        "activeSkills": 367997.79639999836,
+        "summon": 0,
+        "autoActions": 434
+      },
+      "temporarySpeedMarginal": 0,
+      "buffs": [
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "level": 3,
+          "values": {
+            "str": 5,
+            "patk": 120
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 9.450000000000001,
+            "penetration": 7.5
+          },
+          "duration": 1200,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 300,
+          "uptime": 600,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 74872.42065001058,
+          "without": {
+            "total": 597263.8957499999,
+            "auto": 244529.2399999978,
+            "activeSkills": 352734.6557499986,
+            "summon": 0,
+            "autoActions": 428
+          }
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "base": {
+        "total": 709920.679999987,
+        "auto": 276640.4000000018,
+        "activeSkills": 357609.36000000115,
+        "summon": 75670.92000000045,
+        "autoActions": 362
+      },
+      "buffed": {
+        "total": 881017.8000000134,
+        "auto": 372900,
+        "activeSkills": 420148.20000000007,
+        "summon": 87969.59999999937,
+        "autoActions": 357
+      },
+      "deltas": {
+        "total": 171097.12000002642,
+        "auto": 96259.59999999817,
+        "activeSkills": 62538.83999999892,
+        "summon": 12298.679999998916,
+        "autoActions": -5
+      },
+      "gainPercent": 24.100878424900873,
+      "withoutTemporarySpeed": {
+        "total": 884056.2000000135,
+        "auto": 375840,
+        "activeSkills": 420148.20000000007,
+        "summon": 88067.99999999936,
+        "autoActions": 360
+      },
+      "temporarySpeedMarginal": -3038.4000000000233,
+      "buffs": [
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "level": 3,
+          "values": {
+            "agi": 3,
+            "dex": 6,
+            "patk": 109
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 10.8,
+            "accuracy": 9.600000000000001,
+            "attackSpeed": 0.0018,
+            "dodge": 4.5
+          },
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 165,
+          "uptime": 598.9,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 77612.28000001493,
+          "without": {
+            "total": 803405.5199999985,
+            "auto": 332712.0000000021,
+            "activeSkills": 385430.16000000114,
+            "summon": 85263.36000000188,
+            "autoActions": 360
+          }
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "level": 10,
+          "values": {
+            "patk": 60,
+            "accuracy": 24,
+            "luck": 5,
+            "dodge": 20
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 192,
+          "uptime": 599.3,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 38808.00000000035,
+          "without": {
+            "total": 842209.8000000131,
+            "auto": 351480,
+            "activeSkills": 402760.20000000007,
+            "summon": 87969.59999999937,
+            "autoActions": 357
+          }
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "level": 10,
+          "values": {
+            "dex": 20,
+            "luck": 5
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 36,
+            "accuracy": 32
+          },
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 164,
+          "uptime": 599.7,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 32940.00000002654,
+          "without": {
+            "total": 848077.7999999869,
+            "auto": 360048,
+            "activeSkills": 409715.4000000001,
+            "summon": 78314.40000000008,
+            "autoActions": 357
+          }
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "level": 10,
+          "values": {},
+          "convertedAttributeBonuses": {},
+          "effects": [
+            {
+              "key": "ancestor-three-arrows",
+              "type": "triggeredAttack",
+              "target": "enemy",
+              "value": 16,
+              "unit": "flat",
+              "valueScaling": {
+                "type": "linear",
+                "base": 16,
+                "perLevel": 16
+              },
+              "durationSeconds": 12,
+              "applicationTrigger": "ownBasicAttackHit",
+              "additionalProjectileCount": 3,
+              "requiresOriginalTarget": true,
+              "affectsOnlyTriggerTarget": true,
+              "excludesTriggeredAttacks": true,
+              "excludeCompanionAttacks": true,
+              "addsCasterPhysicalAttack": false,
+              "damageTypes": [
+                "physical"
+              ],
+              "progressionStatus": "defined"
+            }
+          ],
+          "duration": 12,
+          "cooldown": 90,
+          "activations": 7,
+          "manaSpent": 1323,
+          "uptime": 83.99999999999989,
+          "directTriggeredDamage": 23040,
+          "marginalGainAmongOtherBuffs": 18923.20000000007,
+          "without": {
+            "total": 862094.6000000134,
+            "auto": 353780,
+            "activeSkills": 420148.20000000007,
+            "summon": 88166.39999999935,
+            "autoActions": 361
+          }
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "base": {
+        "total": 603247.9899999991,
+        "auto": 340863.59999999666,
+        "activeSkills": 262384.3899999996,
+        "summon": 0,
+        "autoActions": 527
+      },
+      "buffed": {
+        "total": 708170.5100000039,
+        "auto": 447757.1999999955,
+        "activeSkills": 260413.30999999944,
+        "summon": 0,
+        "autoActions": 594
+      },
+      "deltas": {
+        "total": 104922.52000000479,
+        "auto": 106893.59999999881,
+        "activeSkills": -1971.0800000001618,
+        "summon": 0,
+        "autoActions": 67
+      },
+      "gainPercent": 17.392933211431828,
+      "withoutTemporarySpeed": {
+        "total": 661434.9100000017,
+        "auto": 401021.5999999962,
+        "activeSkills": 260413.30999999944,
+        "summon": 0,
+        "autoActions": 532
+      },
+      "temporarySpeedMarginal": 46735.60000000219,
+      "buffs": [
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "level": 10,
+          "values": {
+            "dex": 10,
+            "patk": 89
+          },
+          "convertedAttributeBonuses": {
+            "physicalAttack": 18,
+            "accuracy": 16
+          },
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 141,
+          "uptime": 599.4,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 84220.80000000354,
+          "without": {
+            "total": 623949.7100000003,
+            "auto": 385492.79999999586,
+            "activeSkills": 238456.9099999996,
+            "summon": 0,
+            "autoActions": 596
+          }
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkte",
+          "level": 10,
+          "values": {
+            "amb": 11,
+            "atkSpeed": 0.1
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 300,
+          "cooldown": 60,
+          "activations": 2,
+          "manaSpent": 512,
+          "uptime": 599.11,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 39323.000000001746,
+          "without": {
+            "total": 668847.5100000021,
+            "auto": 404036.79999999615,
+            "activeSkills": 264810.7099999994,
+            "summon": 0,
+            "autoActions": 536
+          }
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "level": 10,
+          "values": {
+            "agi": 10
+          },
+          "convertedAttributeBonuses": {
+            "attackSpeed": 0.005999999999999999,
+            "dodge": 15
+          },
+          "effects": [
+            {
+              "key": "good-reflexes-dash-efficiency",
+              "type": "resourceCostReduction",
+              "target": "self",
+              "resource": "stamina",
+              "appliesTo": "specificSkill",
+              "targetSkillNumber": 21,
+              "value": 0.02,
+              "unit": "flat",
+              "durationSeconds": 600
+            }
+          ],
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 349,
+          "uptime": 599.7,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 2985.399999999907,
+          "without": {
+            "total": 705185.110000004,
+            "auto": 446249.5999999955,
+            "activeSkills": 258935.50999999946,
+            "summon": 0,
+            "autoActions": 592
+          }
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "level": 10,
+          "values": {
+            "agi": 5,
+            "movementSpeed": 0.09999999999999999
+          },
+          "convertedAttributeBonuses": {
+            "attackSpeed": 0.0029999999999999996,
+            "dodge": 7.5
+          },
+          "duration": 24.5,
+          "cooldown": 102,
+          "activations": 6,
+          "manaSpent": 846,
+          "uptime": 147,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": -6761.000000000466,
+          "without": {
+            "total": 714931.5100000043,
+            "auto": 447757.1999999955,
+            "activeSkills": 267174.30999999936,
+            "summon": 0,
+            "autoActions": 594
+          }
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "base": {
+        "total": 476818.4399999952,
+        "auto": 253348.80000000115,
+        "activeSkills": 223469.64000000025,
+        "summon": 0,
+        "autoActions": 470
+      },
+      "buffed": {
+        "total": 474123.2399999953,
+        "auto": 250653.6000000011,
+        "activeSkills": 223469.64000000025,
+        "summon": 0,
+        "autoActions": 465
+      },
+      "deltas": {
+        "total": -2695.199999999895,
+        "auto": -2695.2000000000407,
+        "activeSkills": 0,
+        "summon": 0,
+        "autoActions": -5
+      },
+      "gainPercent": -0.5652465957482478,
+      "withoutTemporarySpeed": {
+        "total": 474123.2399999953,
+        "auto": 250653.6000000011,
+        "activeSkills": 223469.64000000025,
+        "summon": 0,
+        "autoActions": 465
+      },
+      "temporarySpeedMarginal": 0,
+      "buffs": [
+        {
+          "nr": 171,
+          "name": "Aktive Deckung",
+          "level": 10,
+          "values": {
+            "pdef": 33,
+            "mdef": 33
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 108,
+          "uptime": 599.8,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": -539.039999999979,
+          "without": {
+            "total": 474662.27999999525,
+            "auto": 251192.64000000112,
+            "activeSkills": 223469.64000000025,
+            "summon": 0,
+            "autoActions": 466
+          }
+        },
+        {
+          "nr": 82,
+          "name": "Schutz Aura",
+          "level": 10,
+          "values": {
+            "pdef": 1300,
+            "mdef": 1300
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 15,
+          "cooldown": 90,
+          "activations": 7,
+          "manaSpent": 2912,
+          "uptime": 105,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": -2695.199999999895,
+          "without": {
+            "total": 476818.4399999952,
+            "auto": 253348.80000000115,
+            "activeSkills": 223469.64000000025,
+            "summon": 0,
+            "autoActions": 470
+          }
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "base": {
+        "total": 538114.8800000069,
+        "auto": 280522.7999999988,
+        "activeSkills": 257592.07999999958,
+        "summon": 0,
+        "autoActions": 522
+      },
+      "buffed": {
+        "total": 585604.6400000077,
+        "auto": 323598.00000000064,
+        "activeSkills": 262006.6399999996,
+        "summon": 0,
+        "autoActions": 570
+      },
+      "deltas": {
+        "total": 47489.760000000824,
+        "auto": 43075.200000001816,
+        "activeSkills": 4414.560000000027,
+        "summon": 0,
+        "autoActions": 48
+      },
+      "gainPercent": 8.825208475929935,
+      "withoutTemporarySpeed": {
+        "total": 551200.3600000069,
+        "auto": 294927.9999999995,
+        "activeSkills": 256272.35999999958,
+        "summon": 0,
+        "autoActions": 520
+      },
+      "temporarySpeedMarginal": 34404.28000000084,
+      "buffs": [
+        {
+          "nr": 189,
+          "name": "Herz des Verräters",
+          "level": 5,
+          "values": {
+            "atkSpeed": 0.05,
+            "movementSpeed": 0.05
+          },
+          "convertedAttributeBonuses": {},
+          "effects": [
+            {
+              "key": "traitor-assassin-mana",
+              "type": "resourceGain",
+              "target": "self",
+              "resource": "mana",
+              "value": 12,
+              "unit": "flat",
+              "durationSeconds": 600,
+              "minimumSkillLevel": 5,
+              "requiredActiveSkillNumbers": [
+                189,
+                238
+              ],
+              "gainTrigger": "ownBasicAttack",
+              "oncePerAttackAction": true,
+              "excludeCompanionAttacks": true
+            }
+          ],
+          "duration": 600,
+          "cooldown": 60,
+          "activations": 1,
+          "manaSpent": 103.78999999999999,
+          "uptime": 599.7,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 32196.08000000089,
+          "without": {
+            "total": 553408.5600000068,
+            "auto": 303225.5999999998,
+            "activeSkills": 250182.9599999996,
+            "summon": 0,
+            "autoActions": 534
+          }
+        },
+        {
+          "nr": 238,
+          "name": "Attentäter",
+          "level": 10,
+          "values": {
+            "atkSpeed": 0.2,
+            "amb": 10
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 20,
+          "cooldown": 120,
+          "activations": 5,
+          "manaSpent": 1023.3499999999999,
+          "uptime": 100,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 20137.280000000377,
+          "without": {
+            "total": 565467.3600000073,
+            "auto": 308726.80000000005,
+            "activeSkills": 256740.55999999956,
+            "summon": 0,
+            "autoActions": 547
+          }
+        },
+        {
+          "nr": 146,
+          "name": "List des Schurken",
+          "level": 10,
+          "values": {
+            "luck": 5.5,
+            "amb": 15
+          },
+          "convertedAttributeBonuses": {},
+          "duration": 300,
+          "cooldown": 60,
+          "activations": 2,
+          "manaSpent": 285.18,
+          "uptime": 598.4200000000001,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": 7983.4799999997485,
+          "without": {
+            "total": 577621.160000008,
+            "auto": 320640.20000000054,
+            "activeSkills": 256980.95999999956,
+            "summon": 0,
+            "autoActions": 593
+          }
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "level": 10,
+          "values": {
+            "agi": 5,
+            "movementSpeed": 0.09999999999999999
+          },
+          "convertedAttributeBonuses": {
+            "attackSpeed": 0.0029999999999999996,
+            "dodge": 7.5
+          },
+          "duration": 24.5,
+          "cooldown": 102,
+          "activations": 6,
+          "manaSpent": 820.62,
+          "uptime": 146.9999999999999,
+          "directTriggeredDamage": 0,
+          "marginalGainAmongOtherBuffs": -14022.320000000647,
+          "without": {
+            "total": 599626.9600000083,
+            "auto": 331589.60000000097,
+            "activeSkills": 268037.35999999964,
+            "summon": 0,
+            "autoActions": 584
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,546 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T16:33:21.901Z",
+  "backup": "data/balancing/history/before-unbroken-wisdom-linear-1792514001849",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c14",
+        "skillName_eng": "Unbroken",
+        "category": "passive",
+        "cd": 600,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Dauerhafter Bonus: +3 physischer Skillschaden je gelernter Stufe, auf Stufe 10 insgesamt +30. Gilt ständig für passende physische Skilltreffer, unabhängig von der letzten Kampfphase. Kein Stärkebonus, kein allgemeiner P-Angriff und kein Bonus für normale Auto-Attacks oder Begleiter. Nach tödlichem Schaden beginnt automatisch eine letzte Kampfphase mit 80 % deines maximalen Lebens. Auf Skilllevel 1 hält sie 20 Sekunden, gewährt +10 Punkte Angriffsgeschwindigkeit und +30 % Laufgeschwindigkeit und hat 600 Sekunden Cooldown. Auf Skilllevel 10 sind es 30 Sekunden, +20 Punkte Angriffsgeschwindigkeit, +45 % Laufgeschwindigkeit und 300 Sekunden Cooldown. Du kannst währenddessen geheilt werden, stirbst aber spätestens am Ende der Phase. Erneuter Tod beendet die Phase sofort. Zusätzlich dauerhaft +1 Willenskraft ab Stufe 1, zwei weitere Punkte ab Stufe 5 und zwei weitere ab Stufe 10: insgesamt +1 auf Stufen 1–4, +3 auf Stufen 5–9 und +5 auf Stufe 10.",
+        "description_eng": "Permanent bonus: +3 physical skill damage per learned level, up to +30 at level 10. Always applies to matching physical skill hits, independently of the final combat phase. No Strength bonus, general physical attack bonus or normal basic attack/companion bonus. After lethal damage, automatically begin a final combat phase with 80% of your maximum health. At skill level 1, it lasts 20 seconds, grants +10 attack speed rating points and +30% movement speed and has a 600-second cooldown. At skill level 10, it lasts 30 seconds, grants +20 attack speed rating points and +45% movement speed and has a 300-second cooldown. Healing is possible during the phase, but you die when it ends. Dying again ends the phase immediately. Additionally grants 1 permanent Wisdom at level 1, two more points at level 5 and two more at level 10: total Wisdom is 1 at levels 1–4, 3 at levels 5–9 and 5 at level 10.",
+        "dmgType": "passive",
+        "dur": 20,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 177,
+        "skillName_de": "Ungebrochen",
+        "skillpoints": 1,
+        "activation": "automatic",
+        "effects": [
+          {
+            "restoredHealthFraction": 0.8,
+            "healingAllowed": true,
+            "endsOnDeath": true,
+            "disablesEffects": [],
+            "trigger": "lethalDamage",
+            "diesAtEnd": true,
+            "valueScaling": {
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "deathReprieve",
+            "target": "self",
+            "allowedRaces": [],
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "key": "last-stand"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.1,
+              "perLevel": 0.011111111111111112,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "atkSpeed",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-attack-speed"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": 0.016666666666666666,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "movementSpeed",
+            "value": 0.3,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-movement-speed"
+          },
+          {
+            "key": "unbroken-permanent-physical-skill-damage",
+            "type": "damageBonus",
+            "target": "self",
+            "appliesTo": "allSkills",
+            "unit": "flat",
+            "damageTypes": [
+              "physical"
+            ],
+            "value": 3,
+            "valueScaling": {
+              "type": "linear",
+              "base": 3,
+              "perLevel": 3
+            },
+            "durationSeconds": 0
+          }
+        ],
+        "effectsVersion": 1,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 600,
+          "perLevel": -33.333333333333336
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.1,
+                "perLevel": 0.011111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.3,
+                "perLevel": 0.016666666666666666
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 600,
+                  "perLevel": -33.333333333333336
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "3",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 3,
+                "perLevel": 3
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "wis"
+              ],
+              "rule": {
+                "kind": "thresholds",
+                "base": 1,
+                "changes": [
+                  {
+                    "level": 5,
+                    "value": 3
+                  },
+                  {
+                    "level": 10,
+                    "value": 5
+                  }
+                ]
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive",
+        "statScaling": {
+          "wis": {
+            "type": "table",
+            "values": [
+              1,
+              1,
+              1,
+              1,
+              3,
+              3,
+              3,
+              3,
+              3,
+              5
+            ]
+          }
+        },
+        "wis": 1
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04c14",
+        "skillName_eng": "Unbroken",
+        "category": "passive",
+        "cd": 600,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Dauerhafter Bonus: +3 physischer Skillschaden je gelernter Stufe, auf Stufe 10 insgesamt +30. Gilt ständig für passende physische Skilltreffer, unabhängig von der letzten Kampfphase. Kein Stärkebonus, kein allgemeiner P-Angriff und kein Bonus für normale Auto-Attacks oder Begleiter. Nach tödlichem Schaden beginnt automatisch eine letzte Kampfphase mit 80 % deines maximalen Lebens. Auf Skilllevel 1 hält sie 20 Sekunden, gewährt +10 Punkte Angriffsgeschwindigkeit und +30 % Laufgeschwindigkeit und hat 600 Sekunden Cooldown. Auf Skilllevel 10 sind es 30 Sekunden, +20 Punkte Angriffsgeschwindigkeit, +45 % Laufgeschwindigkeit und 300 Sekunden Cooldown. Du kannst währenddessen geheilt werden, stirbst aber spätestens am Ende der Phase. Erneuter Tod beendet die Phase sofort. Zusätzlich dauerhaft +1 Willenskraft je gelernter Skillstufe: +1 auf Stufe 1 bis insgesamt +10 auf Stufe 10.",
+        "description_eng": "Permanent bonus: +3 physical skill damage per learned level, up to +30 at level 10. Always applies to matching physical skill hits, independently of the final combat phase. No Strength bonus, general physical attack bonus or normal basic attack/companion bonus. After lethal damage, automatically begin a final combat phase with 80% of your maximum health. At skill level 1, it lasts 20 seconds, grants +10 attack speed rating points and +30% movement speed and has a 600-second cooldown. At skill level 10, it lasts 30 seconds, grants +20 attack speed rating points and +45% movement speed and has a 300-second cooldown. Healing is possible during the phase, but you die when it ends. Dying again ends the phase immediately. Additionally grants 1 permanent Wisdom per learned skill level, from 1 at level 1 to 10 at level 10.",
+        "dmgType": "passive",
+        "dur": 20,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 177,
+        "skillName_de": "Ungebrochen",
+        "skillpoints": 1,
+        "activation": "automatic",
+        "effects": [
+          {
+            "restoredHealthFraction": 0.8,
+            "healingAllowed": true,
+            "endsOnDeath": true,
+            "disablesEffects": [],
+            "trigger": "lethalDamage",
+            "diesAtEnd": true,
+            "valueScaling": {
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "deathReprieve",
+            "target": "self",
+            "allowedRaces": [],
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "key": "last-stand"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.1,
+              "perLevel": 0.011111111111111112,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "atkSpeed",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-attack-speed"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": 0.016666666666666666,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "movementSpeed",
+            "value": 0.3,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-movement-speed"
+          },
+          {
+            "key": "unbroken-permanent-physical-skill-damage",
+            "type": "damageBonus",
+            "target": "self",
+            "appliesTo": "allSkills",
+            "unit": "flat",
+            "damageTypes": [
+              "physical"
+            ],
+            "value": 3,
+            "valueScaling": {
+              "type": "linear",
+              "base": 3,
+              "perLevel": 3
+            },
+            "durationSeconds": 0
+          }
+        ],
+        "effectsVersion": 1,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 600,
+          "perLevel": -33.333333333333336
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.1,
+                "perLevel": 0.011111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.3,
+                "perLevel": 0.016666666666666666
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 600,
+                  "perLevel": -33.333333333333336
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "3",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 3,
+                "perLevel": 3
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "wis"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive",
+        "statScaling": {
+          "wis": {
+            "type": "linear",
+            "base": 1,
+            "perLevel": 1
+          }
+        },
+        "wis": 1
+      }
+    }
+  ]
+}

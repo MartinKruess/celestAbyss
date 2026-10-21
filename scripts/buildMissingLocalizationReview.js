@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+const result=JSON.parse(await fs.readFile('data/localization/missing-language-result.json','utf8'));
+const items=JSON.parse(await fs.readFile('data/localization/items.json','utf8'));
+const esc=s=>String(s??'—').replaceAll('|','\\|').replaceAll('\n','<br>');
+let md='# Ergänzte Sprachfelder und offene Übersetzungen\n\n';
+md+=`Es wurden ausschließlich fehlende Sprachfelder ergänzt: **${result.fieldsAdded} Felder** bei **${result.itemsUpdated} Items** und **${result.classesUpdated} Klassen**. Die vier Sprachfelder aller **${result.skillsCheckedUnchanged} Skills** waren bereits vollständig und blieben unverändert.\n\n`;
+md+='Vorhandene Felder wie `name`, `description`, Skillnamen, Beschreibungen, IDs, Klassenzuordnungen und sämtliche Spielwerte wurden unverändert zurückgelesen. Zusätzliche Itemfelder: `name_de`, `name_eng`, `description_de`, `description_eng`. Die bestehenden englischen Ausgangstexte wurden nicht redigiert; sie dienen, soweit eindeutig, unverändert als englische Sprachfassung. Technische Namen bleiben bestehen. Neue deutsche Texte sind Übersetzungen vorhandener Inhalte, keine Festlegung zusätzlicher Mechaniken.\n\n';
+md+='## Offen gelassen\n\n| Eintrag | Nicht ergänzte Felder | Grund |\n| --- | --- | --- |\n';
+for(const p of result.pending)md+=`| ${esc(p.name)} | ${esc(p.fields.join(', '))} | ${esc(p.reason)} |\n`;
+md+='\n## Ergänzte Itemnamen\n\n| Bisheriger Name | Deutsch | Englisch |\n| --- | --- | --- |\n';
+for(const i of items)md+=`| ${esc(i.name)} | ${esc(i.name_de)} | ${esc(i.name_eng)} |\n`;
+await fs.mkdir('docs/localization',{recursive:true});await fs.writeFile('docs/localization/missing-language-review.md',md);
+console.log('Created complete localization coverage and unresolved-item report.');

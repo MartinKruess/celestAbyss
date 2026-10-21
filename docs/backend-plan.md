@@ -1,287 +1,230 @@
 # Celest Abyss Backend Plan
 
-Stand: 12. Oktober 2026. Dieses Dokument hält Anforderungen, vorgeschlagene Architektur und die Arbeitsreihenfolge für das MMORPG fest. Die Umsetzung erfolgt schrittweise; die Unreal-Anbindung folgt nach unabhängig testbaren Backend-Schnittstellen.
+Stand: 12. Oktober 2026, nach Merge von PR #5. Dieser Plan beschreibt den aktuellen Funktionsstand und die offenen Aufgaben. Historische Zwischenstände stehen in backend-history.md; abgestimmte Anforderungen haben Vorrang vor alten Notizen.
 
-## Vereinbarte Anforderungen
+## Ziel und Architektur
 
-- Installierbarer Unreal-Client und Unreal Dedicated Server für die Spielsimulation.
-- Node-Backend mit REST und WebSockets sowie dauerhafter Datenbank.
-- Gemeinsamer Account für Registrierung auf der Webseite und Login auf Webseite und im Spiel. Später zusätzlich Steam-Anmeldung ohne separate Registrierung.
-- Charakterfortschritt einschließlich Level, Erfahrung, Quests, Position, Inventar, Ausrüstung und Lager dauerhaft speichern. Items über IDs referenzieren.
-- Asynchrone World Saves alle 5 bis 10 Minuten; zusätzliche Saves bei wichtigen Ereignissen wie World-Boss-Abschluss sowie bei Logout und geordnetem Herunterfahren. Ziel: höchstens 10 Minuten verlorener Fortschritt bei Spielserverausfall.
-- Serverübergreifendes Auktionshaus: einstellen, kaufen, eigene Angebote abbrechen, Angebote anzeigen und suchen, Filter, bis zu 20 Favoriten. Bedeutung einer separaten Löschfunktion noch klären.
-- Chat: global, lokal im vorgesehenen Radius von etwa 100 Metern, Gruppe, Allianz und Privatnachrichten; weitere Räume später möglich. All-Chat als gemeinsame Ansicht noch bestätigen.
-- Freundesliste und Online-Status.
-- Administration mit zeitlich begrenzten und permanenten Bans.
-- Größenordnung für Planung und Lasttests: 10.000 bis 50.000 Spieler. Gleichzeitig online, pro Welt und insgesamt noch unterscheiden.
-- Schnelles Testen ohne wiederholte manuelle Anmeldung soll im Entwicklungsbetrieb möglich bleiben.
+Ein MMORPG mit installierbarem Unreal-Client, Unreal Dedicated Server für die Simulation und Node-Backend für Accounts, dauerhafte Daten, Chat und Wirtschaft. Zunächst eine Spielwelt und ein Dedicated Server; Chat und Auktionshaus gelten zunächst innerhalb dieser Welt. Weitere Welten, Eventverbände und serverübergreifender Handel folgen später.
 
-## Vorgeschlagene Zuständigkeiten
+Modularer Node-Monolith, zunächst eine Backend-Instanz. Microservices sind nicht erforderlich. Mehrere Instanzen derselben Anwendung sind eine spätere Option und brauchen gemeinsame Chatverteilung, Widerrufssignale und Rate-Limits. Spielerzahlen bis 50.000 sind Planungsszenarien, keine gemessene Kapazitätszusage.
 
-Der Dedicated Server entscheidet über Bewegung, Kampf, räumliche Nähe, verdienten Loot und Spielprogression. Das Backend speichert Ergebnisse und verwaltet Accounts, dauerhafte Daten, Auktionshaus und soziale Funktionen. Clients fragen Aktionen an; sie bestimmen keine verbindlichen Belohnungen, Guthaben oder Besitzstände.
+Dedicated Server entscheidet über Bewegung, Kampf, räumliche Nähe und verdienten Fortschritt. Clients fragen Aktionen an. Zuständigkeiten für Inventar, Crafting und Wirtschaft müssen vor deren Umsetzung verbindlich definiert werden.
 
-Für Inventar, Währung und Crafting ist die genaue Grenze noch offen. Vor ihrer Implementierung muss für jede Änderung klar sein, wer sie entscheiden und speichern darf. Ein periodischer Abgleich allein verhindert keine konkurrierenden Änderungen.
+## Bereits umgesetzt
 
-## Regeln für zuverlässige Speicherung
+| Bereich | Tatsächlicher Stand |
+| --- | --- |
+| Laufzeit | Node ab 22; Konfiguration prüfen, MongoDB vor Listenerstart verbinden, HTTP/WebSocket-Ports konfigurierbar, Gesundheitsendpunkte und geordnetes Herunterfahren. |
+| Struktur | Express-App, Laufzeit, Authentifizierung, Chat und Charakterlogik getrennt. |
+| Datenbank | Neue Atlas-Entwicklungsdatenbank celestabyss_dev verbunden; 208 Itemvorlagen und 237 Skills importiert und verifiziert. Alte Kopien in test nicht gelöscht. |
+| Import | Spieldaten prüfen und fehlende Vorlagen wiederholbar importieren, ohne bestehende Vorlagen zu überschreiben. |
+| Registrierung/Login | Eingabeprüfung, Argon2id, gefilterte Antworten, Rate-Limits. Login 10/IP/Minute, Registrierung 5/IP/Stunde. |
+| Sitzungen | Access-JWT 15 Minuten, Sitzung höchstens sieben Tage, Refresh-Rotation, Replay-Sperre, Logout und Logout-all. Refreshlimit 30/IP/Minute. |
+| REST-Zugriff | Account, Banstatus und aktive Sitzung prüfen; Charakterzugriffe prüfen zusätzlich Besitz. |
+| Charaktere | Erstellen, Lesen und Löschen; Charakter/Inventar/Accountverweis transaktional, konkurrierende Limits geprüft, Skills nach Klasse, leeres Startinventar. Standardserver derzeit Asgard. |
+| Globalchat | Echte WebSocket-Verbindung unter /chat; Sitzungsanmeldung, erneute Anmeldung nach Refresh, Logout-/Ablauf-Schließung, Abonnements, persistierte Nachrichten und Bestätigungen. |
+| Chatverlauf | Für Spieler ausschließlich die jeweils neuesten 50 Nachrichten, auch bei alten Cursorn und Sende-Wiederholungen. Live-Client muss später ebenfalls auf 50 kürzen. |
+| Chatsicherheit | Größen- und Ratenlimits, begrenzte Queues/Puffer, Heartbeat, Browser-Origin-Prüfung, Duplikatschutz, stabile Sequenz und Snapshot/Live-Übergang. |
+| Moderationsvorbereitung | moderationRules-Schema, deutsche Seedquelle, Import-/Aktualisierungsskripte und Regeltabelle. 152 deutsche Entwürfe sowie fünf englische Entscheidungen gespeichert; Bastard auf Deutsch aktualisiert. 36 bereits abgestimmte Einträge inzwischen aktiviert; übrige Entwürfe inaktiv. |
+| Tests | Zuletzt 183 automatisierte Tests bestanden; getrennte Atlas-Prüfungen für Auth, Charaktere und Chat erfolgreich. Datenbanktests laufen ausdrücklich separat. |
+| Git | Bisheriger Backend-/Chatstand über PR #5 in main gemergt, Merge b06d7d6. .env bleibt außerhalb von Git. |
 
-- Regelmäßige Checkpoints für Welt und gewöhnlichen Charakterfortschritt; kritische Wirtschaftsänderungen sofort dauerhaft speichern.
-- Ein Auktionshausvorgang muss nicht die gesamte Welt speichern. Geld, Angebot und Itembesitz müssen zusammen konsistent geändert werden.
-- Eingestellte Items werden bis Verkauf, Ablauf oder Abbruch verwahrt und sind nicht mehr im Spiel verfügbar.
-- Eindeutige Item-Instanz-IDs getrennt von IDs der Itemvorlagen.
-- Versionsprüfung verhindert, dass alte World Saves neuere Käufe oder Inventaränderungen überschreiben.
-- Eindeutige Vorgangs-IDs verhindern doppelte Käufe oder Belohnungen bei wiederholten Anfragen.
-- Speichern erst nach dauerhafter Speicherung bestätigen; Fehler, Wiederholungen und aufgestaute Saves sichtbar machen.
-- Die Grenze von zehn Minuten ist ein Betriebsziel, keine automatische Garantie durch den Timer.
-- Charakterzustände können zusammen übertragen werden. Account, Charakter, Inventar, Lager und Wirtschaftsdaten werden nach Konsistenz- und Zugriffsmustern modelliert; kein pauschales Überschreiben eines riesigen Objekts.
-- Serverwechsel und gleichzeitige Charakteranmeldungen brauchen Regeln für die aktive Sitzung und Schreibberechtigung.
+Der alte Positions-/PlayerData-WebSocket-Prototyp ist entfernt. Positionsübertragung gehört zur späteren Unreal-Anbindung.
 
-## Auktionshaus
+Kompatible Paketupdates wurden durchgeführt; der letzte npm-Audit meldete keine bekannten Schwachstellen. Dies ist ein Prüfstand, keine dauerhafte Zusage.
 
-Zusätzlich zu den genannten Spieleraktionen sind Angebotsablauf, Zustellung an ausgeloggte Spieler, Rückgabe unverkaufter Items und Nachvollziehbarkeit abgeschlossener Vorgänge vorzusehen. Gebühren, Laufzeiten, Limits, Teilkäufe und Zustellverfahren sind noch offen.
+## Moderation jetzt umgesetzt
 
-Suche, Filter, Sortierung und Seiteneinteilung gehören für den gesamten Angebotsbestand ins Backend. Lokale Sortierung in Unreal erfasst sonst nur die bereits geladene Seite. Favoritenlimit von 20 serverseitig prüfen; Bezug auf Angebote oder Itemvorlagen noch festlegen.
+- Aktive abgestimmte Regeln in den Chat integriert, einschließlich Maskierung und Blockierung; 36 Einträge aktiviert, offene Entwürfe bleiben aus.
+- Lokale konservative Kontextprüfung, keine KI; unklare Nachrichten vor Zustellung halten. Prüfungen blockieren nicht den Chat anderer Spieler.
+- Systemfälle und Spielermeldungen mit geschützten Originalen, Regelversionen und bis zu 50 Kontextnachrichten.
+- Doppelte Meldungen je Account verhindern und Spielerberichte pro Nachricht bündeln; keine automatischen Bans.
+- Rollen player/moderator/admin und geschützte REST-Endpunkte zur Fallbearbeitung; Audit und administrative Sicherung gegen Löschung.
+- Normale Nachrichten und Sendeversuche nach 24 Stunden ablaufen lassen, sofort aus Spielerabfragen ausschließen und via TTL entfernen.
+- Separate Fallfristen: offen/held 30 Tage, nach bestätigter Bearbeitung 90 Tage, verworfen ein Tag; legalHold-Ausnahmen und Fall-Sweeper.
+- Freigegebene gehaltene Nachrichten werden vom ursprünglichen Client mit derselben ID erneut gesendet; keine automatische Veröffentlichung unter einem ausgeloggten Account.
+- 138 Satzfälle, davon mehr als 100 unterschiedliche Texte, plus weitere Regressionstests. Gesamtsuite: 183 bestanden. Atlas-Test für Moderation und Berechtigungen erfolgreich; temporäre Testdaten entfernt.
 
-## Chat und Online Status
+Noch offen: endgültige Einstufung aller Entwürfe, breitere Kontextqualität, Website für Moderatoren, Warnungen/Chatsperren und zeitliche Accountbans. Regeln sind noch kein vollständiges Moderationsmodell für alle Sprachen.
 
-Zunächst JSON als vorgeschlagenes Transportformat; binäre Formate erst anhand von Messungen und Unreal-Kompatibilität bewerten. Eine Nachricht kann einmal serialisiert werden, muss aber über jede berechtigte Client-Verbindung übertragen werden. Beispielannahme: 10 globale Nachrichten pro Sekunde bei 50.000 Empfängern ergeben 500.000 Zustellungen pro Sekunde. Das ist keine gemessene Projektlast.
+Inventar-Spielaktionen bleiben gesperrt, keine Welt-Saves oder Mehrweltzuordnung implementiert.
 
-Kanalmitgliedschaften, Nachrichtenlimits, Größenlimits, begrenzte Sendepuffer, langsame Clients und Verbindungsabbrüche berücksichtigen. Der Dedicated Server kann die Empfänger des lokalen Chats bestimmen. Ob Clients direkt mit Node verbunden sind oder Nachrichten über Dedicated Server erhalten, ist offen. Weiterleitung über Dedicated Server verschiebt die Verteilungslast und entlastet diese nicht vollständig.
+## Nächste Arbeitsschritte
 
-Online-Status über aktive Sitzungen und Heartbeats verwalten, einschließlich unerwarteter Abbrüche. Aufbewahrung von Chatverläufen, Offline-Privatnachrichten, Blockieren und Moderation noch entscheiden.
+### 1 Moderation und Aufbewahrung
 
-### Chat bei Bedarf und Verlauf
+- [ ] Deutsche und englische Einstufungen abschließen; offene Entscheidungen nicht automatisch aktivieren.
+- [x] Geltungsbereich global gegenüber sprachbezogen im Schema ergänzen. Dies ist unabhängig vom Chatkanal.
+- [x] Eindeutige Stufe-3-Maskierung und Stufe-4-Blockierung mit Originaltextzuordnung und gezielten Varianten implementieren.
+- [ ] Lokale Kontextprüfung umgesetzt; unklare Fälle bleiben held. Erkennung anhand weiterer Beispiele verbessern und bei Bedarf externes Modell evaluieren.
+- [x] Spielermeldungen und Systemmeldungen mit Berechtigungen, Limits und Duplikatbündelung implementieren.
+- [x] Global-Snapshot: bis zu 50 Nachrichten bis einschließlich der gemeldeten Nachricht sichern.
+- [x] Normalnachrichten nach 24 Stunden ihres Alters löschen; geschützte Fall-Snapshots davon trennen.
+- [ ] Fallstatus und Fristen festlegen: etwa 30 Tage offen, frühere Löschung irrelevanter Fälle, etwa drei Monate für verfolgte Fälle; konkrete Sicherungen gesondert begründen.
+- [ ] Moderator-/Adminrollen und REST-Bearbeitung umgesetzt; Website-Oberfläche und Support-Arbeitsablauf fehlen noch.
 
-Gewünschtes Verhalten: Beim Öffnen zunächst die letzten 50 berechtigten Nachrichten laden; ältere Nachrichten beim Hochscrollen seitenweise nachladen. Eine getrennte Moderationshistorie soll die Prüfung von Meldungen ermöglichen. Aufbewahrungsdauer und Administratorrechte sind noch festzulegen. Die 50 Nachrichten sind ein Anzeigefenster, keine Grenze für die gespeicherte Historie.
+### 2 Weitere Kommunikation
 
-Vorgeschlagene Umsetzung: Live-Empfang pro Kanal abonnieren oder pausieren. Explizit deaktivierter globaler Chat braucht keine laufenden Zustellungen; beim erneuten Öffnen Verlauf nachladen und Live-Empfang fortsetzen. Bloßes automatisches Ausblenden des Fensters muss nicht sofort das Abonnement beenden. Kurze Verzögerung verhindert häufiges An- und Abmelden. Privatnachrichten und gewünschte Gruppenbenachrichtigungen separat behandeln; die WebSocket-Verbindung kann dafür offen bleiben.
+- [ ] Privatnachrichten: Teilnehmerrechte, Blockieren, Offline-Verhalten und Kontext mit bis zu 20 vorherigen Beiträgen beider Seiten.
+- [ ] Gruppen und Gruppenverbände mit serverseitig bestätigten Mitgliedschaften; kleinere Gruppen und größere Verbände nutzen dasselbe Grundkonzept.
+- [ ] Gilden-/Allianzchat mit Mitgliedschafts- und Austrittsregeln.
+- [ ] Freunde und belastbarer Online-Status.
+- [ ] Lokalchat später mit vertrauenswürdigen Dedicated-Server-Positionen, Welt/Instanz und ungefähr 100 Metern Radius.
 
-Nachrichten erhalten IDs und eine stabile Reihenfolge pro Kanal. Übergang zwischen Verlauf und Live-Empfang ohne Lücken oder doppelte Anzeige gestalten. Historische Zugriffsrechte besonders für lokale, Gruppen- und Allianzkanäle gesondert definieren.
+### 3 Spieldaten und Quests
 
-Verteilungslast anhand aktiver Kanalabonnenten berechnen, nicht pauschal anhand aller eingeloggten Spieler. Auch bei dauerhaft aktivem globalem Chat muss das System kontrolliert mit hoher Last umgehen können.
+- [ ] Neue ausgearbeitete Itemlisten übernehmen und vorhandene Werte nach Abgleich aktualisieren.
+- [ ] Skillbestand anhand der Nutzerlisten bestätigen; 237 importierte Einträge beweisen keine inhaltliche Vollständigkeit.
+- [ ] Itemvorlagen von Item-Instanzen unterscheiden; stabile fachliche IDs, Stacks, Ausrüstung und Lager modellieren.
+- [ ] Startausrüstung nach Itemüberarbeitung definieren; bis dahin Inventar leer.
+- [ ] Questvorlagen, Voraussetzungen, Ziele und Belohnungen modellieren/importieren.
+- [ ] Questfortschritt je Charakter getrennt speichern und doppelte Belohnungen verhindern.
+- [ ] NPC-Zuordnung über stabile IDs; später Auswahl in Unreal ermöglichen.
 
-### Wachstum und Kapazitätsgrenzen
+### 4 Dedicated Server und Saves
 
-Spielerzahlen von 500, 5.000, 30.000 oder 50.000 sind mögliche Entwicklungsszenarien, keine zugesicherte Kapazität. Architektur auf mehrere Backend-Instanzen vorbereiten und anhand wachsender Lasttests dimensionieren; anfangs klein betreiben. Grenzen pro Dedicated Server, Welt und Backend getrennt konfigurieren und anhand gemessener Kapazität setzen. Viele Chatverbindungen belegen nicht die Machbarkeit derselben Spielerzahl in einer Unreal-Spielsimulation.
+- [ ] Eigene Serverauthentifizierung und Rechte für Fortschritt, Loot und Weltzustände.
+- [ ] Charakterauswahl, Serverbeitritt und exklusive aktive Charaktersitzung festlegen.
+- [ ] Versionierte Charakter-/Welt-Saves mit Bestätigungen und wiederholbaren Vorgängen.
+- [ ] Periodische Saves alle 5 bis 10 Minuten, zusätzliche Saves bei wichtigen Ereignissen.
+- [ ] Abschließende Fortschrittsspeicherung bei Logout und Wartung; jetziger Auth-Logout speichert keinen Spielprogress.
+- [ ] Wiederherstellung und Konkurrenz zwischen Saves und Wirtschaftsänderungen testen.
 
-### Festgelegter Architekturansatz
+Ein Save-Timer allein garantiert keine maximal zehn Minuten Rollback. Fehlgeschlagene oder aufgestaute Saves müssen sichtbar sein. Alte Saves dürfen neuere Item-/Währungsänderungen nicht überschreiben. Kritische Wirtschaftsänderungen sofort konsistent speichern.
 
-Zunächst ein modularer Node-Monolith mit getrennten Bereichen für Accounts, Charaktere, Speicherung, Wirtschaft und Kommunikation. Keine Microservices als Voraussetzung. Bei Bedarf mehrere Instanzen derselben Anwendung betreiben; dafür gemeinsame Sitzungsdaten und instanzübergreifende Chatverteilung vorsehen. Einzelne Bereiche erst auslagern, wenn Messungen oder Betriebsanforderungen dies rechtfertigen.
+### 5 Inventar und Wirtschaft
 
-Loginspitzen bei Release oder Neustarts als Lastszenario testen, ohne eine konkrete Gleichzeitigkeit vorauszusetzen. Begrenzte parallele Passwortprüfungen und eine begrenzte Warteschlange als mögliche Schutzmechanismen vorsehen. Login-Warteschlange für Authentifizierung und Weltbeitritts-Warteschlange für volle Spielserver sind unterschiedliche Abläufe. Eine Warteschlange glättet Spitzen, erhöht aber nicht die Verarbeitungskapazität.
+- [ ] Loot, Verschieben, Ausrüsten, Verbrauch, Lager und Währung mit verbindlichen Zuständigkeiten.
+- [ ] Händler, Crafting und Upgrades sicher ersetzen und testen.
+- [ ] Auktionshaus zunächst für die eine Welt: Einstellen, Suche/Filter/Sortierung, Kauf, Abbruch, Ablauf, Zustellung und Rückgabe.
+- [ ] Bis zu 20 Favoriten; Bezug auf Angebot oder Vorlage entscheiden.
+- [ ] Offline-Zustellung, konsistente Item-/Geldtransfers und Konkurrenztests.
 
-Globalchat zunächst global für aktive Abonnenten. Verzögerungen von etwa ein bis zwei Sekunden sind für den Nutzer akzeptabel; zuverlässige Zustellung ist wichtiger als minimale Latenz. Eigene Nachrichten sofort als ausstehend anzeigen und erst nach Serverbestätigung als angenommen markieren; Fehler und Wiederholungen berücksichtigen. Persistierte Nachrichten können nach Verbindungsabbrüchen über IDs nachgeladen werden. Regionale, Kontinent- oder Dungeonkanäle bleiben spätere Optionen; keine automatische Einschränkung des Globalchats für Dungeonspieler festgelegt.
+### 6 Account und Betrieb vervollständigen
 
-## Arbeitsreihenfolge
-
-### 1 Grundlage und lauffähiger Betrieb
-
-- [ ] Unterstützte Node-Version und Abhängigkeiten prüfen und festlegen.
-- [ ] Konfiguration mit Umgebungsvariablen und Beispielkonfiguration ohne Geheimnisse.
-- [ ] Datenbankbetrieb wiederherstellen oder lokale Entwicklungsdatenbank bereitstellen; keine alten Daten ungeprüft ändern.
-- [ ] App-Erstellung, REST-Start, WebSockets und Datenbankverbindung trennen.
-- [ ] Kontrollierter Start, Gesundheitsprüfung und geordnetes Herunterfahren.
-- [ ] Einheitliche Fehlerbehandlung, sichere Logs, Eingabe- und Größenlimits.
-- [ ] Bekannte Laufzeitfehler gezielt beheben; bestehende Unreal-Verträge berücksichtigen.
-- [ ] Unabhängige Backend-Tests und API-Verträge einführen.
-
-### 2 Accounts und Serverzugriff
-
-- [ ] Registrierung, Login, Passwortspeicherung und Sitzungen planen und implementieren.
-- [ ] Logout, Sitzungsablauf und Widerruf; Passwortzurücksetzen und E-Mail-Verifizierung entscheiden.
-- [ ] Rollen, zeitliche Bans und Permabans.
-- [ ] Dedicated Server authentifizieren; Besitz- und Zugriffsprüfungen.
-- [ ] Expliziter Entwicklungsmodus für einfache Tests.
-- [ ] Steam-Anbindung und Account-Verknüpfung vorbereiten; genaue Umsetzung später.
-
-### 3 Charaktere und Saves
-
-- [ ] Login bis Charakterauswahl, Serverbeitritt und Logout festlegen.
-- [ ] Charakter- und Weltmodell sowie aktive Charaktersitzung definieren.
-- [ ] Laden, versionierte Saves, Wiederholungen und Bestätigungen.
-- [ ] Periodische, ereignisbezogene und abschließende Saves.
-- [ ] Ausfall- und Wiederherstellungsszenarien testen.
-
-### 4 Inventar und Wirtschaft
-
-- [ ] Itemvorlagen und Item-Instanzen, Stacks, Ausrüstung und Lager modellieren.
-- [ ] Zuständigkeit für Loot, Inventaraktionen und Crafting festlegen.
-- [ ] Währung, konsistente Transfers und Schutz vor doppelten Vorgängen.
-- [ ] Konkurrenz zwischen Spielserver-Saves und Backend-Transaktionen testen.
-
-### 5 Auktionshaus
-
-- [ ] Einstellen, Suchen, Filtern, Sortieren und Ergebnisseiten.
-- [ ] Kaufen, eigene Angebote, Abbrechen und Ablauf.
-- [ ] Zustellung, Rückgabe und Verkaufserlöse auch bei Offline-Spielern.
-- [ ] Favoriten und Limits.
-- [ ] Gleichzeitige Käufe und Wiederholungen testen.
-
-### 6 Kommunikation und Skalierung
-
-- [ ] Chatkanäle, Rechte, Moderation und Verbindungsmanagement.
-- [ ] Freunde und Online-Status.
-- [ ] Mehrere Backend-Instanzen und instanzübergreifende Nachrichtenverteilung bei Bedarf.
-- [ ] Lasttests mit festgelegter Spielerzahl, Nachrichtenrate und Save-Größe.
-- [ ] Transportformat nach Messungen bewerten.
+- [ ] Passwortreset und E-Mail-Verifizierung.
+- [ ] Sicherer Browser-Loginvertrag einschließlich Cookie-/CSRF-Verhalten.
+- [ ] Steam-Anmeldung und Accountverknüpfung.
+- [ ] Expliziter Entwicklungszugang für schnelle Tests, ohne Produktionsrechte zu umgehen.
+- [ ] Backups, Wiederherstellung, Betriebsmetriken und automatisierte CI-Checks; PR #5 hatte keine GitHub-CI-Checks.
+- [ ] Lasttests, Login-/Weltbeitrittswarteschlangen bei Bedarf und Kapazitätslimits.
+- [ ] Später Mehrinstanz-/Mehrweltbetrieb und ausdrücklich serverübergreifende Events; erst dann gemeinsame Verteilung ergänzen.
 
 ### 7 Unreal Integration
 
-- [ ] Tatsächlich verwendetes REST-Plugin und WebSocket-Anbindung identifizieren.
-- [ ] Client und Dedicated Server gemeinsam an die API-Verträge anbinden.
-- [ ] End-to-End-Abläufe einschließlich Wiederverbindung und Serverausfall testen.
+- [ ] Aktuelle Unreal-Version und C++-HTTP-/WebSocket-Anbindung vorbereiten; alte Plugin-Kompatibilität nicht voraussetzen.
+- [ ] Fertige Backend-Verträge schrittweise anbinden und End-to-End testen.
+- [ ] Klassentesten in der Charaktererstellung mit vorgefertigten Testcharakteren, vorläufig lokal und ohne dauerhaften Fortschritt.
+- [ ] Optionale Trailer vor Login als Spielerfunktion, nicht als Kapazitätsgarantie.
 
-## Offene Entscheidungen für die nächsten Gespräche
+## Verbindliche Moderationsgrundsätze
 
-1. Login, Charakterauswahl, Weltwahl, Serverbeitritt und Logout im Detail.
-2. Anzahl Spieler insgesamt gegenüber Spielern pro Dedicated Server; Welten, Instanzen und Transfers.
-3. Aktueller Datenbankstand, Hosting und gewünschte Entwicklungsumgebung.
-4. Verbindlicher Eigentümer jeder Art von Inventar-, Währungs- und Fortschrittsänderung.
-5. Weltinhalt eines Saves, erwartete Datenmenge und Wiederherstellungsregeln.
-6. Auktionshausregeln und Zustellung.
-7. Direkte Client-WebSockets oder Weiterleitung über Dedicated Server; Verlauf und Offline-Nachrichten.
-8. Bestehende Unreal-Anfrage- und Antwortformate.
+- Stufe 1: frei, kein alleiniger automatischer Treffer.
+- Stufe 2: Kontext prüfen und erst bei Freigabe zustellen; Lokale konservative Prüfung umgesetzt; unklare Treffer bleiben zurückgehalten.
+- Stufe 3: betreffende Stellen durch *** ersetzen; interner Treffer, keine sofortige Moderatorenmeldung allein durch den Treffer.
+- Stufe 4: blockieren und zur Prüfung melden. Kontextpflichtige persönliche Bedrohungen sofort als Fall erfassen, vor Zustellung prüfen.
+- Kein automatischer Ban allein aus Treffer oder Anzahl von Spielermeldungen.
+- Spielsprache nur als Hinweis; Standort ist kein Sprachbeweis. Kurze Kürzel/Zahlen und normale Spielbegriffe nicht pauschal sperren.
+- Schreibvarianten gezielt pro Regel statt beliebiger Silben-/Substring-Sperren.
+- Freigaben und Kontextfälle vor Aktivierung bestätigen; Quellen und Konflikte stehen in moderation-rules-draft.md.
 
-## Aktueller Stand
+## Nachweise und Bedienung
 
-CORS bleibt im Entwicklungsbetrieb offen; Produktion erfordert explizite Website-Origins. CORS ist keine Zugriffskontrolle für Unreal oder Dedicated Server. Auth-Anfragen sind auf 16 KiB begrenzt; JSON- und HTTP-Fehler werden ohne interne Details beantwortet. Login und Registrierung akzeptieren nur typgeprüfte Felder und keine vom Client vorgegebenen MongoDB-Abfrageobjekte. Übrige Endpunkte benötigen weiterhin eigene Validierung, Authentifizierung und Besitzprüfungen.
+- Chatvertrag: docs/chat-protocol.md.
+- Regeltabelle: docs/moderation-rules-draft.md.
+- Deutsche Entwurfsdaten: scripts/moderationData.js.
+- Historische Notizen: docs/backend-history.md.
+- npm test: Tests ohne echte Datenbank, teils lokale HTTP-/WebSocket-Verbindungen.
+- npm run test:db-auth, test:db-characters und test:db-chat: ausdrücklich separate Atlas-Prüfungen.
+- npm run seed:check / seed: Spieldaten prüfen beziehungsweise fehlende Vorlagen importieren.
+- npm run moderation:check / moderation:seed: Entwürfe prüfen beziehungsweise fehlende inaktive Regeln importieren.
 
-MongoDB zunächst beibehalten. Die Spielerzahl allein entscheidet nicht über SQL oder MongoDB. Vor der Wirtschaftsimplementierung Datenmodell, Indizes und Transaktionen prüfen; für MongoDB-Transaktionen einen Replica Set vorsehen. Ein späterer SQL-Wechsel ist eine Daten- und Code-Migration mit Tests, kein bloßer Austausch der Verbindungsadresse. Persistenzzugriffe künftig in Repository-Modulen bündeln.
+Nächster konkreter Bereich: weitere Regelabstimmung und Privatnachrichten. Danach Privatnachrichten; neue Item-/Questdaten können unabhängig davon vorbereitet werden. 183 Tests bestanden nach Moderationsintegration. Kein neuer npm-Audit für diese Änderung; keine neuen Abhängigkeiten hinzugefügt.
 
-Erster Authentifizierungsschritt umgesetzt: Argon2id statt bcrypt, getrennte Validierung für Registrierung und Login, gefilterte Loginantwort und signierter Access-JWT mit 15 Minuten Laufzeit. Datenbankfreie Tests prüfen Controller, Validierung, echte Hashes und Tokens. Login liefert `token`, `tokenType`, `expiresIn` und `userData` mit interner ID, Benutzername, Sprache und Charakterlimit; Charaktere werden später separat geladen.
+## Gerettete Tabellen geprüft
 
-Noch keine vollständige Sitzungsverwaltung: Refresh und Logout/Widerruf fehlen. Alte bcrypt-Hashes werden nicht akzeptiert; nach Prüfung des Datenbestands Migration beim Login oder Passwortreset entscheiden. Datenbankintegration bleibt bis zur Wiederherstellung ungeprüft. AES-Feldverschlüsselung ist nicht implementiert; zuerst schützenswerte Felder und Schlüsselverwaltung festlegen. npm meldet bekannte Schwachstellen im vorhandenen Abhängigkeitsbaum; gesondert prüfen und beheben.
+Fünf vom Nutzer benannte ODS-Dateien in Downloads plus werte.ods gelesen und mit Repositorydaten verglichen. Ergebnisse in docs/recovered-data-review.md. 192 Itemeinträge (darunter 78 Waffen) stimmen in gemeinsam vorhandenen Feldern mit der JS-Quelle überein. SkillList enthält 240 ursprüngliche IDs; Matrix für 14 Klassen ist nicht direkt mit den aktuellen 237 Importnummern kompatibel. Leveldaten 1 bis 200 und zusätzliche Balancingformeln erhalten. Keine Originaldatei verändert, keine Spieldaten importiert. Vor nächstem Import ursprüngliche Skill-IDs und Matrix zusammen abgleichen.
 
-Bestandsaufnahme durchgeführt. Verbleibende bekannte Probleme umfassen auskommentierte Routen-Authentifizierung, fehlerhafte Inventaroperationen, fehlende Antworten, nicht abgewartete Speicheroperationen, unvollständige Charaktererstellung und ungeprüfte WebSocket-Nachrichten. Die deaktivierte Anmeldung war bewusst für frühe Entwicklungstests eingerichtet.
+## Hauptdatei gefunden und geprüft
 
-Bei jeder Arbeitssitzung abgeschlossene Punkte markieren und neue Entscheidungen hier ergänzen. Nächster geplanter Schritt: Ablauf von Login bis Logout konkretisieren und den Umfang der ersten technischen Stabilisierung festlegen.
+E:/projects_g/CA_Project/Questsystem.ods ist vorhanden und enthält 19 Tabellenblätter mit 3.910 erhaltenen Formeln, Klassen-/Equipment-/Waffen-/Schmuckwerten, Skills, 30 nummerierten Questentwürfen, Items und Kreaturen. Nur gelesen, nichts importiert. Bytegleiche lokale Projektkopie data/source/Questsystem.ods per SHA-256 verifiziert; Google-Sicherung nicht überprüft. Befunde in docs/main-data-review.md.
 
-## Technische Referenzen
+Items enthält 526 benannte Datenzeilen, wiederholte Namen je Rang und eine zweite geänderte Überschrift in Zeile 235. Bewusste Emptycard-Platzhalter erhalten; keine IDs aus Zeilennummern neu vergeben. Neue Namen und Rüstungsvorlagen vor Import fachlich abgleichen. Charakter-/Attributmodell anhand der geretteten Originalwerte gemeinsam festlegen, erst danach kontrollierte Datenübernahme.
 
-- [MongoDB Transaktionen](https://www.mongodb.com/docs/manual/core/transactions/)
-- [WebSocket Bibliothek ws](https://github.com/websockets/ws)
-- [Steam Authentifizierung](https://partner.steamgames.com/doc/features/auth)
+## Klassenvorlagen angelegt
 
-### REST Zugriffsschutz umgesetzt
+13 Klassenvorlagen aus dem Blatt Klassen und 14 ursprüngliche Skillmatrizen in celestabyss_dev gespeichert und Anzahl verifiziert. Collections classTemplates und legacyClassSkillMappings. Elf rassenbezogene Grundklassen plus Ritter und Jäger rassenübergreifend; Weiterentwicklungsnamen, Rollen-/Waffen-/Attributnotizen und genaue Quellposition erhalten. Keine Spielercharaktere erzeugt.
 
-Spielrouten verlangen Bearer-JWT und ein bestehendes, nicht gebanntes Accountobjekt. Charakterlesen und -löschen prüfen Charakter-ID und Accountbesitz gemeinsam. Erstellung übernimmt die Account-ID aus der Anmeldung und akzeptiert keine Fortschrittsfelder. Charakterantworten schließen das Accountpasswort aus.
+Stabile keys getrennt von Anzeigenamen. baseStats und statConversions bleiben null, Vorlagen status=draft/selectable=false. Das Blatt Skills enthält einige Grundwertansätze (beispielsweise Gladiator/Berserker), deren Bedeutung als Startwerte noch zu klären ist. Skillmatrix behält ursprüngliche numerische IDs und Slots, resolvedSkills bleibt leer; Nummern über 240 offen. Keine ungeprüfte Zuordnung auf bisherige Import-nr oder MongoDB-IDs.
 
-Loginlimit: 10 Anfragen pro IP und Minute; Registrierung: 5 pro IP und Stunde. Limits zählen auch ungültige und erfolgreiche Anfragen und liefern 429 mit Retry-After. Speicher ist begrenzt und lokal: mehrere Instanzen benötigen einen gemeinsamen Store. Reverse-Proxy-Vertrauen muss vor Deployment ausdrücklich konfiguriert werden; Forwarded-Header werden aktuell nicht vertraut.
+GET /classes liefert den authentifizierten Vorlagenkatalog. Die bisherige Charaktererstellung nutzt noch ihre bestehende Klassen-/Rassenlogik und ist noch nicht auf diesen Katalog umgestellt. Nächster Schritt: bestätigte Klassennamen, Rassenwahl und tatsächliche Grundattribute/Umrechnungen definieren; danach Charaktererstellung und Skillverknüpfung anbinden. npm run classes:check prüft die Quell-Drafts, classes:seed fügt fehlende hinzu, ohne bestehende zu überschreiben.
 
-Unsichere Legacy-Funktionen für Loot, Upgrades, Händler, Kreaturen und Datenimport sind nach Authentifizierung vorläufig mit 503 FEATURE_NOT_READY gesperrt. Bei Inventar, Upgrade und Händler wird zusätzlich der Charakterbesitz geprüft. Itemvorlagen bleiben authentifiziert lesbar. Freischaltung erfordert sichere Spiellogik sowie Server- oder Adminrechte.
+## Konkrete Grundwerte aus Screenshot übernommen
 
-Zwölf datenbankfreie Tests bestehen. Datenbank- und Netzwerkabläufe bleiben ungeprüft. WebSocket-Authentifizierung ist separat noch offen; der PlayerData-Prototyp ist kein sicherer Chatdienst. Charaktererstellung und -löschung sind noch nicht transaktional; Konkurrenz- und Ausfallverhalten folgen mit der Datenbankarbeit.
+Nutzer liefert ausdrücklich neue Grundwerte für alle 13 Klassen. Je Klasse maxHealth, maxMana, physicalAttack, magicalAttack, physicalDefense und magicalDefense übernommen; 78 Werte insgesamt. Screenshot als lokale Quelle data/source/class-base-stats-2026-10-12.png erhalten. Vergleichs-/Balancingwerte aus der alten Skills-Tabelle wurden dafür nicht benutzt.
 
-### Neue Atlas Datenbank verbunden
+data/stat-definitions.json trennt Kapazitäten, Kampfwerte, Primärattribute und abgeleitete Werte. Primärattribute bleiben ohne erfundene Zahlen; Umrechnungen bleiben offen. Critical Chance und Critical Damage getrennt, Attack Speed und Movement Speed getrennt. Ambush und Victim benötigen genaue Bedeutungsdefinition; Block Chance/Reduction und Penetration ebenfalls klären. Rage und Penetration später. Alle Schlüssel und Labels Englisch. maxHealth/maxMana sind Kapazitäten, aktuelle Füllstände gehören später separat zum Charakterzustand.
 
-Am 12. Oktober 2026 neue Atlas-Datenbank erfolgreich verbunden und angepingt. 208 Itemvorlagen und 237 Skills importiert und Anzahl anschließend lesend verifiziert. Konfiguration akzeptiert DB_MONGO_URL oder MONGODB_URI. Import mit npm run seed:check ohne Datenbank prüfen; npm run seed fügt fehlende Vorlagen hinzu und überschreibt bestehende nicht. Startausrüstung enthält weiterhin alte Datenbank-IDs, einschließlich einer Kreatur; vor Charaktererstellung neu zuordnen. ACCESS_TOKEN_SECRET muss für echten Login konfiguriert sein. Zwölf JS-Tests bestehen weiterhin.
+Klassenvorlagen bleiben draft/selectable=false, da Primärwerte, Rassenwahl und endgültige Skillverknüpfungen noch fehlen. Die vorhandene Charaktererstellung verwendet diese neuen Werte noch nicht automatisch.
 
-### Expliziter Datenbankname
+## Skillbaum und Klassenwahl präzisiert
 
-Der neue Atlas-Verbindungsstring enthielt keinen Datenbanknamen; der erste Import landete deshalb in test. Konfiguration und Import verwenden nun MONGODB_DB_NAME=celestabyss_dev explizit. Dort wurden 208 Items und 237 Skills erneut importiert. Die Datenbank test wurde nicht gelöscht. Produktivbetrieb muss einen passenden eigenen Namen konfigurieren.
+Nutzerklärung: Charakter startet mit Rassen-/Aussehenswahl ohne endgültige Klasse. Klassenwahl erst auf Level 10 innerhalb der Rasse. Abenteurer ist dabei zusätzlich eine spätere menschliche Klasse und nicht ungeprüft die generische Startklasse aller Völker. Gemeinsame Startwerte noch festlegen; die 78 Screenshotwerte bleiben bisherige Klassenentwürfe, nicht automatisch Level-1-Werte.
 
-### Registrierung und Login gegen Atlas geprüft
+Blatt Skills erneut direkt aus der Originaldatei gelesen. Links stehen Mensch-Grundskills und Klassendetails mit Beschreibungen, Effekten, MP, CD und Stufen; G-Zeilen sind nach Nutzerklärung Kalkulationsszenarien. Rechts stehen Namens-/ID-Zuordnungskästen. Universell enthält Tamen, Bindung, Kontrolle, Beschwören (Quelle Beshwören), Zurückrufen und Zucht mit IDs 139 bis 144. Fixed Skills enthält Reiten, Tauchen, Tamen, Emotes, Springen, Klettern und Fliegen; nicht alle haben hier IDs oder Freischaltbedingungen.
 
-Am 12. Oktober 2026 mit npm run test:db-auth die tatsächlichen HTTP-Auth-Routen auf einem temporären lokalen Port gegen celestabyss_dev geprüft: Registrierung, doppelte Registrierung, Argon2id-Speicherung, falsches Passwort, Login, JWT, geschützter Zugriff und Ban einschließlich Ablehnung eines bereits ausgestellten Tokens. Ban danach zurückgenommen. Test-Player test_bbdff39799fd bleibt mit leerer Charakterliste erhalten; zufälliges Passwort wurde nicht ausgegeben oder gespeichert. ACCESS_TOKEN_SECRET lokal zufällig erzeugt. Datenbanktest ist ausdrücklich separat und nicht Teil von npm test.
+Abenteurer: Offence und Offence 2 je sechs belegte Namensslots, einschließlich Waffentraining beziehungsweise Schwerttraining. Defence und Buffs ebenfalls je sechs; Passive vier belegte Namen, weitere Slots x/leer. Nicht automatisch jede Offence-Zuordnung als aktiven Angriff modellieren: Training kann passiv sein. Beispiel: Macht des Begleiters ID 156 im Buffbereich; Körperbeherrschung ID 70 im passiven Bereich.
 
-Players referenzieren Characters über ObjectIds; Characters enthalten accountID und server (derzeit Standard Asgard). Aktuelle Collections: players, items, skills, characters. Keine servers-Collection vorhanden. Charaktererstellung wegen alter Startitem-IDs weiterhin nicht gegen Datenbank getestet.
+Levelangaben neben den Kästen nicht ungeprüft als neue Freischaltlevel übernehmen: alte Tabellen enthalten Klassenzuordnungen bereits bei 3/5, während die aktuelle Klassenwahl auf 10 festgelegt ist. Ebenfalls Unterschiede zwischen Namens-/ID-Kästen der Hauptdatei, exportierter SkillList und bisherigem JS-Import beachten. Hauptdatei-Kasten nennt Kettenschuss ID 65, gerettete SkillList ID 64, bisheriger JS-Import nr 63. Zuordnung deshalb anhand Name/Version prüfen und alte Nummern mit Herkunft sichern.
 
-### Serverbetrieb stabilisiert
+Keine Skillzuordnungen oder Grundwerte in der Datenbank geändert. Nächster Modellschritt: universelle Skills, rassenspezifische Grundskills, spätere Klassenskills und Weiterentwicklungen getrennt definieren. Slots, fehlende IDs, fehlende Beschreibungen und ungeklärte Levelbedingungen erhalten.
 
-Konfigurationsprüfung vor Start; Datenbankverbindung vor Öffnen der Ports; HOST, PORT und WS_PORT konfigurierbar. Express-App und Laufzeit getrennt, Import der App öffnet keine Verbindungen. /health/live und /health/ready ergänzt. Datenbankausfall oder Herunterfahren sperrt Anfragen mit 503. SIGINT/SIGTERM schließen Netzwerk und MongoDB; Teilstart bei belegtem Port wird zurückgerollt. Ungeschützter WebSocket-Prototyp deaktiviert bis Chat-Authentifizierung umgesetzt ist.
+## Skillnamen mit aktueller Datenbank abgeglichen
 
-16 datenbankfreie Tests bestehen. Atlas-Laufzeittest ohne Datenänderungen: Start, beide Health-Endpunkte mit 200 und vollständiges Herunterfahren erfolgreich. Kompatible npm-Sicherheitsupdates installiert; ungenutztes file-system entfernt; nodemon durch node --watch ersetzt. npm audit meldet aktuell null bekannte Schwachstellen. Nächster Schritt: Startitem-Zuordnung und konsistente Charaktererstellung.
+364 belegte Namensslots aus den grauen Klassenzuordnungskästen erfasst; 282 über normalisierten deutschen Namen eindeutig mit aktuellen MongoDB-Skill-IDs verknüpfbar, 82 noch ungeklärt. Dies sind Slot-Zuordnungen, keine 364 verschiedenen Skills. Entwurf in data/skill-name-mapping-draft.json, noch nicht auf Spielercharaktere oder Klassen angewendet. Schreibvarianten, abgekürzte Namen, Platzhalter und fehlende Definitionen offen; keine Voraussetzungen aus ähnlichen Namen ableiten.
 
-### Charaktererstellung und Inventar repariert
+Direkt bestätigt in Atlas: Waffentraining nr 201, Rüstungstraining nr 144, Ausdauertraining nr 139, Durchhalten nr 145, Ausweichtraining nr 142, Immunität nr 143, Standhaft nr 140. Character.skills speichert derzeit MongoDB-ObjectIds, nicht diese nr oder Tabellen-IDs. Schadensreduzierung und Standhaftigkeit haben unter diesen exakten Namen keinen Eintrag; Standhaft ist vorhanden, aber Gleichsetzung mit Standhaftigkeit bleibt fachlich offen. Bestehende charClass-Zuweisungen unterscheiden sich teilweise von den neuen Tabellen (Immunität aktuell nur Healer/Priest), daher nicht als endgültige neue Zuordnung übernehmen.
 
-Entscheidung: vorläufig leeres Startinventar bis zur Überarbeitung der Items. Alte Startitem-IDs entfernt und ungenutzten fehlerhaften Startitem-Helfer gelöscht. Kein Starter-Pet angelegt. Startausrüstung wird später anhand der neuen Itemdaten definiert.
+## SkillList vollständig über beide Sprachen verglichen
 
-Charakter, leeres Inventar und Accountverknüpfung werden in einer MongoDB-Transaktion erstellt. Charakterlimit wird durch bedingtes Schreiben am Account auch bei konkurrierenden Anfragen eingehalten. Skills werden anhand der Klasse verknüpft; Race wird serverseitig aus der bisherigen Klassenliste bestimmt. Default-Server bleibt Asgard. Inventar bleibt zur Wahrung des aktuellen Datenformats ein Array mit einer Inventar-ID.
+Aktuelle SkillList.ods erneut gelesen: Header Nr/S_Name_ENG/S_Name_DE, Zeilen 2 bis 241 enthalten 240 Skills; letzter Eintrag Wind Cutter/Windschlitzer. Bereiche darunter nicht als Skills importiert. Direkter Atlas-Abgleich verwendet beide Sprachfelder plus Beschreibungen und Maximallevel. 213 eindeutige Namenskandidaten, 25 ohne exakten Namenskandidaten, zwei widersprüchliche Mehrfachtreffer. Bei 58 Namenskandidaten weichen Beschreibung oder Maximallevel ab; das beweist nicht automatisch einen anderen Skill.
 
-Lesen und Löschen verwenden Account-ID und Charakter-ID gemeinsam. Löschen entfernt Charakter, zugehörige Inventare und Accountverweis transaktional. Accountantworten enthalten nur ausdrücklich ausgewählte Felder. Dynamische Item/Kreatur-Verweise im Inventarschema korrigiert. Erstellen liefert HTTP 201 mit characterID und userData; ungültige Klasse 400, Namenskonflikt oder Charakterlimit 409, fremder oder fehlender Charakter 404.
+Dashing/Dashen und Mighty Strike/Mächtiger Schlag über Englisch gefunden. Passion Expansion ebenfalls gefunden. Mut des Abenteurers/Adventurer's Courage, Great Regeneration/Große Regeneration und weitere neue beziehungsweise umbenannte Begriffe haben keinen exakten Datenbanktreffer. Regeneration nicht mit Heilung gleichgesetzt. Katalysator/Catalyst ist nicht automatisch Catalyst Pure oder Impure.
 
-21 datenbankfreie Tests bestehen. npm run test:db-characters gegen Atlas erfolgreich: Erstellung, leeres Inventar, Skills, Besitzerprüfung, serverseitige Defaults, konkurrierendes Limit, doppelte Namen, echtes Rollback bei injiziertem Fehler, Item-Population und Löschung. Die dafür erzeugten Accounts, Charaktere und Inventare wurden wieder entfernt. Der frühere Auth-Testplayer bleibt erhalten.
+Namenszuordnungsentwurf aktualisiert: 298 eindeutig namensbasierte Slots, 23 Slots mit Quelldefinition ohne DB-Namenstreffer, 43 weiter ungeklärt. Dies sind Slots, keine unterschiedlichen Skills. Vergleich in data/skill-list-comparison.json; keine MongoDB-Einträge oder Charakterzuordnungen geändert.
 
-Nächster geplanter Schritt: vollständige Sitzungsverwaltung mit Refresh, Logout und Widerruf. Spätere Itemüberarbeitung und konfigurierbare Serverauswahl bleiben offen.
+## Erweiterungs und Macht Skills Effekte verglichen
 
-### Sitzungsverwaltung umgesetzt
+Atlas erneut gelesen und mit aktueller SkillList verglichen, ohne Datenänderung. Erweiterung der Sinne: DB amb2/dex3/str3, Quelle agi3/amb2/dex3. Erweiterung des Geistes: beide faith3/int3/vic3/wis3, aber Beschreibung nennt nur Int3. Erweiterung des Körpers: beide health150/agi2/vita3/wis2, Beschreibung nennt Wisdom1. Erwachen ist eigener Low-Health-Passivskill (unter30%HP,1% Schadensreduktion pro Level), nicht mit Expansion gleichsetzen.
 
-Access-JWT mit Sitzungs-ID und zufälliger Token-ID, 15 Minuten Laufzeit. Persistierte sessions mit Account-ID, Refresh-Hash, absolutem Ablauf nach sieben Tagen und Widerrufszeitpunkt. Refresh-Token separat signiert mit eigener Audience, bei jeder Verwendung atomar ersetzt; Wiederverwendung eines alten signierten Tokens sperrt die Sitzung. Forged Tokens können keine Sitzung sperren. Client muss Refresh serialisieren; verlorene Antworten können erneuten Login erfordern.
+DB Energie des Geistes (nr74) ist passiv matk4/mdef6; neue Liste Macht des Geistes ID75 hat faith2/int2/vic2/wis1. DB Energie des Körpers (nr75) ist aktiv patk20/pdef60,300s,Text nennt Angriff35; neue Liste Macht des Körpers ID76 hat vita2/wis1 ohne Dauer. DB Mentale Erweiterung (nr79) aktiv matk60/300s; neue Liste Mentale Erweiterung ID81 primäre Magieattribute faith3/int3/vic3/wis2. DB Erweiterung der Leidenschaft dex3/1800s,Text auchagi2; neue Liste ID149 str6. Keine automatische Vereinigung aufgrund von Namensähnlichkeit.
 
-POST /user/refresh, /user/logout und /user/logout-all ergänzt. Alle REST-Zugriffe prüfen aktive Sitzung sowie Account/Ban. Logout sperrt auch noch nicht abgelaufene Access-Tokens. Abgelaufene Sessions werden via TTL-Index bereinigt; Ablauf wird zusätzlich in jeder Abfrage geprüft. Auth-Antworten no-store; Refreshlimit 30/IP/Minute. Frühere Tokens ohne sid sind nicht mehr gültig.
+Elementare Macht-Skills getrennt behandeln. Direkte Mana-/MDEF-Zuwächse aus Primärwerten erst nach bestätigten Umrechnungen berechnen. Festgestellte Text-/Datenwidersprüche bleiben offen; Zahlen nicht als bestätigte Implementierung übernehmen.
 
-24 datenbankfreie Tests bestehen. Atlas-HTTP-Test für Registrierung, Login, Refresh-Rotation, Replay-Widerruf, Logout und Logout-all erfolgreich. Neuer Auth-Testplayer test_0d05f8440d20 bleibt erhalten; dessen Sitzungen sind widerrufen. Charakter-DB-Test erneut erfolgreich, seine temporären Daten entfernt.
+## Einzelprüfung der Skills begonnen
 
-Offen: WebSocket-Sitzungen, sicherer Browser-Cookie/CSRF-Vertrag, Passwortreset, E-Mail-Verifizierung, Sitzungsübersicht und serverseitige Fortschrittsspeicherung bei Logout. Itemdaten werden später überarbeitet; Startinventar bleibt leer.
+Vergleich für alle 240 Quelldefinitionen in data/skill-review.json vorbereitet, mit Rohwerten, Datenbankkandidat, numerischen Unterschieden, Klassen-, Beschreibungs- und Namensänderungen sowie offenem Entscheidungsfeld. 80 eindeutige Namenskandidaten haben Unterschiede bei explizit vorhandenen numerischen Quellfeldern. Nicht ausgefüllte Quellfelder bleiben unbekannt; keine automatische Löschung vorhandener DB-Werte. Noch nichts angewendet.
 
-### Nächster Bereich WebSocket Chat
+Erster Skill Erleuchtung: In Liste und Datenbank MaxSkillLv20, Intelligence+1 und Wisdom+1; numerische Werte stimmen überein. Englische Schreibweise in neuer Liste Enlightenment, DB Enlightment. Klassenzuordnung unterscheidet sich; Zugehörigkeit unter neuer Level-10-Klassenwahl und Aurora-Ritter noch festlegen. Keine doppelte neue Skilldefinition erzeugen.
 
-Reihenfolge angepasst: WebSocket-Chat wird vor Itemüberarbeitung, Dedicated-Server-Anbindung und Saves umgesetzt. Globalchat und Privatnachrichten können unabhängig von Unreal und Inventar entwickelt und getestet werden. Zunächst Accountidentität verwenden; Charakteranzeigen später ergänzen.
+## Drei gemeinsame Klassenskills gekennzeichnet
 
-1. Nachrichtenvertrag und authentifizierte WebSocket-Verbindung einschließlich Ablauf, Logout/Widerruf und Wiederverbindung.
-2. Globalchat mit berechtigten Abonnements, Größen- und Ratenlimits, Serverbestätigung sowie stabilen Nachrichten-IDs.
-3. Verlauf: letzte 50 Nachrichten, ältere Seiten, lückenfreier Übergang zum Live-Empfang und Moderationsaufbewahrung.
-4. Privatnachrichten mit Empfängerrechten und festzulegendem Offline-Verhalten.
-5. Gruppen-, Allianz- und lokale Kanäle nach Aufbau verlässlicher Mitgliedschafts- beziehungsweise Ortsinformationen. Lokale Empfänger ermittelt später der Dedicated Server.
-6. Chatlasttests und Vorbereitung instanzübergreifender Verteilung nach Bedarf.
+Erleuchtung/Enlightenment (Aurora), aktueller DB-Eintrag Überleben/Survive (Umbra) und Adaption/Adaptation (Human) als isClassCore=true und unlockPhase=race gekennzeichnet. allowedRaces explizit gespeichert. Vorhandene Werte unverändert; die Zuordnung wird erst in späterer Charakter-/Skillbaumlogik wirksam.
 
-Items, Wirtschaft und Welt-Saves bleiben danach auf dem Plan. Unreal muss für den ersten Chatabschnitt noch nicht installiert sein.
+Echte Kollision: Gewünschter Name Überlebenswille/Will to Survive ist bereits von DB-nr114 belegt, einem anderen passiven situativen Skill (+15 Vita,+3 Strength,12s Dauer,30s CD,maxLv5). Umbra-Grundskill DB-nr2 hat str1/agi1,maxLv20. Keine Zusammenführung; Umbenennung zurückgestellt, beide Einträge erhalten. Seedquelle synchronisiert, damit Erleuchtung nach Namenskorrektur nicht erneut unter altem Namen angelegt wird. Namensentscheidung für zwei unterschiedliche Skills angefragt.
 
-### Globalchat umgesetzt
+### Namensentscheidung zum Umbra Grundskill
 
-Positions-/PlayerData-Prototyp vollständig ersetzt durch Chat unter /chat. Authentifizierung mit Access-JWT und aktiver Sitzung, erneute Anmeldung nach Refresh, Ablauf und lokale Logout-Signale. Kein Positions-, Gesundheits- oder Bewegungsbroadcast.
+Nutzer bestätigt: Grundskill künftig Überlebenswille/Will to Survive; separaten situativen Skill DB-nr114 später anders benennen. Aktuelle DB-Namen bleiben bis zur abgestimmten Umbenennung beider Einträge erhalten, da Namen eindeutig indiziert sind. Zahlenwerte und IDs nicht zusammenführen. Präferenz im Skillreview gespeichert.
 
-Globalchat abonnieren/pausieren, speichern, bestätigen, live verteilen und nachladen. Letzte 50 Nachrichten, ältere Seiten und Catch-up mit stabiler Sequenz. Sequenzvergabe und Speicherung transaktional; Idempotenz anhand accountID/clientMessageID; keine bestätigten Duplikate. Snapshot/Live-Übergang puffert konkurrierende Nachrichten und filtert bereits enthaltene Sequenzen.
+## Zwei mehrdeutige Geistes Skillzuordnungen entschieden
 
-JSON-Validierung, Nachrichten- und Befehlslimits, begrenzte Warteschlangen und Puffer, Upgrade-Limits, Origin-Prüfung für Browser, Heartbeat, Ablauf- und Sitzungsprüfungen. Lokale Logout/Logout-all/Refresh-Replay-Ereignisse schließen betroffene Sockets. Periodische Prüfung deckt externe Änderungen ab. Limits und Live-Verteilung sind derzeit pro Backend-Instanz; gemeinsamer Broker folgt bei Mehrinstanzbetrieb.
+Nutzer bestätigt Quelldefinition Erweiterung des Geistes auf DB-nr44, vier Attribute faith/int/vic/wis jeweils3, als aktiver Buff mit300s Dauer. Dauer/Aktivierung gespeichert und zurückgelesen. Cooldown, Kosten und Levelskalierung noch offen; keine neuen Zahlen dafür erfunden. Bestehende Beschreibungen/DMG-Typ noch im Gesamtabgleich prüfen, da sie zuvor einen Passivskill beschrieben. Separater DB-nr79 Mentale Erweiterung mit matk60 bleibt erhalten.
 
-36 Tests ohne echte Datenbank bestehen. Atlas-Chatprüfung mit echten HTTP-Logins und zwei WebSocket-Clients erfolgreich: persistierte Zustellung, Wiederholung ohne Duplikat, Verlauf, Refresh/erneute Anmeldung, sofortiger Logout-Abbruch und Wiederverbindung. Testdaten anschließend gezielt entfernt. Protokoll in docs/chat-protocol.md dokumentiert.
+Nutzer bestätigt Quelle Macht des Geistes auf DB-nr225: Gruppenbuff für magische Verteidigung, mdef18,1800s. Bestehende Definition behalten. Separater DB-nr74 Energie des Geistes mit matk4/mdef6 bleibt erhalten. Beide Namensmehrdeutigkeiten im Skillreview manuell aufgelöst; Zahlen können später bewusst gebalanced werden.
 
-Nächste Chatfunktionen: Privatnachrichten mit Offline-/Blockierregeln; Gruppen/Allianzen nach Mitgliedschaftsmodell; Lokalchat nach Dedicated-Server-Ortsinformationen. Aufbewahrungsdauer und Moderationszugriff noch festlegen; Nachrichten werden bisher ohne automatische Löschung aufbewahrt. Itemüberarbeitung bleibt separat für später.
+## Beschreibungen geprüft und eindeutige Texte korrigiert
 
-### Spielerhistorie auf aktuelle 50 begrenzt
+Alle237 DB-Skills haben DE-/EN-Beschreibungen; aktuelle SkillList enthält108 Texte und132 Lücken. Bestehende DB-Texte bei Quelllücken behalten. 43 eindeutige Beschreibungspaare überarbeitet, atomar in Atlas gespeichert und alle43 zurückgelesen. Nur description_de/description_eng geändert, keine Namen, Klassen oder Zahlen. Gedankestrichfreie Sätze, konkrete Spielhandlungen erhalten. Source-Overrides mit Wirkungsfingerprint verhindern, dass nach später geänderten Werten alte Beschreibungen ungeprüft angewendet werden.
 
-Korrektur der Anforderung: Spieler dürfen insgesamt nur die jeweils neuesten 50 Globalchat-Nachrichten sehen, keine unbegrenzten älteren Seiten. Backend-Verlauf ist entsprechend begrenzt, auch bei alten before/after/through-Cursorn. Wiederholte Sendeanfragen können alte gespeicherte Nachrichten nicht aus dem Archiv abrufen. Der spätere Client muss seinen sichtbaren Live-Puffer ebenfalls auf 50 kürzen. Reconnect ersetzt den sichtbaren Verlauf durch den aktuellen Snapshot; ältere verpasste Nachrichten werden nicht nachgeliefert.
-
-36 JS-Tests bestehen; Atlas-Test bestätigt die Grenze mit 55 zusätzlichen, anschließend entfernten Testnachrichten. Ältere Nachrichten bleiben vorläufig gespeichert und sind nicht über Spieler-Verlaufsanfragen zugänglich. Keine automatische Datenlöschung umgesetzt.
-
-Vorschlag für späteres Meldesystem, noch nicht implementiert: Client meldet eine serverseitige Nachrichten-ID und einen Grund. Backend sichert unveränderte Nachricht und begrenzten Gesprächskontext, etwa zehn Nachrichten davor und danach, soweit zum Meldezeitpunkt vorhanden. Bei privaten Gesprächen nur einen begrenzten Abschnitt sichern, nicht automatisch den gesamten unbegrenzten Verlauf. Moderatorzugriff und Bearbeitung protokollieren, Meldungen begrenzen, normale Aufbewahrung und gesonderte Fallfristen festlegen. Keine vom Client eingeschickten Chattexte als authentische Belege übernehmen. Diese Regeln sind noch zu bestätigen.
-
-### Festgelegte Moderations und Kanalregeln
-
-Normale Chatnachrichten sollen 24 Stunden aufbewahrt werden. Technisch nach dem Alter jeder Nachricht löschen, nicht nur einmal täglich sämtliche Verläufe leeren. Spieler können weiterhin nur die aktuellen 50 Nachrichten abrufen. Report-Snapshots werden separat gespeichert und bleiben von der normalen Löschung ausgenommen; eigene Fallfrist, Moderatorrechte und Bearbeitungsstatus noch festlegen.
-
-Globalchat: Bei Spielermeldung einen Snapshot mit bis zu 50 Nachrichten einschließlich der gemeldeten Nachricht und deren Vorgeschichte sichern. Der gemeldete Beitrag dient als zeitlicher Anker, damit spätere neue Nachrichten den relevanten Kontext nicht verdrängen. Privatnachrichten: gemeldete Nachricht und davor 10 bis 20 Nachrichten beider Beteiligten in diesem Gespräch. Gilden-, Gruppen- und weitere Chats: gemeldete Nachricht mit davor 10 bis 20 Nachrichten aus dem berechtigten Kanal. Genaue kleinere Fenstergrößen noch vereinheitlichen. Meldender Spieler muss die betroffene Nachricht empfangen beziehungsweise berechtigt gesehen haben; keine freie Abfrage beliebiger archivierter Nachrichten. Snapshot durch das Backend aus Originalnachrichten erstellen, nicht aus vom Client eingeschicktem Text.
-
-Zwei Meldungsquellen: Spieler und System. Konfigurierbare Wort-/Phrasenregeln maskieren Treffer für Spieler mit Sternchen; ausgewählte schwere Treffer erstellen zusätzlich automatisch einen Moderationsfall. Kontextprüfung durch Moderation vor Sanktionen, keine automatischen Bans allein aufgrund eines Treffers. Für Belege Originaltext ausschließlich im geschützten Moderationsspeicher sichern; öffentliche Texte maskiert ausliefern. Regeln, Normalisierung und Verhalten bei Varianten/Treffern in Zitaten noch definieren. Ein automatischer Treffer kann vorläufigen Kontext sichern; ein vollständiger Global-Snapshot darf erst nach dem Speichern der ausgelösten Nachricht entstehen.
-
-Kanäle auf demselben Mitgliedschaftskonzept aufbauen: Gruppe (zunächst etwa 6 bis 8 Spieler), übergeordneter Gruppenverband (beispielsweise 40 Spieler; endgültiger Name offen), Gilde/Allianz und ausdrückliche Eventverbände. Gruppenkanäle stehen nur berechtigten aktuellen Mitgliedern offen; Wechsel und Austritt müssen Live-Abonnement und Verlaufrechte prüfen.
-
-Globalchat gilt pro Spielserver beziehungsweise Welt; gewöhnlicher Chat ist nicht serverübergreifend. Eventverbände können ausdrücklich Teilnehmer verschiedener Server zusammenbringen, etwa 40 Spieler von Server 1 gegen Server 2. Aktuell gibt es erst einen einzigen Backend-Globalraum ohne bestätigte Weltzuordnung; vor mehreren Welten vertrauenswürdige Server-/Weltzuordnung einführen, keine freie Clientwahl als Berechtigungsnachweis.
-
-Lokalchat im Radius von ungefähr 100 Metern bleibt bis zur Unreal/Dedicated-Server-Anbindung zurückgestellt. Empfänger anhand vertrauenswürdiger Positionen und Welt-/Instanzzugehörigkeit bestimmen. Positionsbroadcast über Chat-WebSockets bleibt entfernt.
-
-Nächste Umsetzung: Global-Meldesystem, Maskierung/automatische Meldungen und 24-Stunden-Aufbewahrung zusammen. Privat- und Gruppenkanäle anschließend mit passenden Mitgliedschafts- und Kontextregeln. Diese Regeln sind bisher geplant, noch nicht implementiert.
-
-### Sprachabhängige Filter und Fallfristen Entwurf
-
-Nutzeridee: gemeinsame schwere Filterregeln und zusätzliche Sprachlisten, um harmlose deutsche Wörter und Antworten nicht durch fremdsprachige Teiltreffer zu maskieren. Empfehlung zur weiteren Abstimmung: Spielsprache nur als Hinweis, Standort nicht als Sprachbeweis; kein Umschalten der Spielsprache als Ausweg aus verbindlichen Regeln. Ganze Wörter und genaue Phrasen statt pauschaler Silben-/Substring-Sperren. Mehrdeutige Treffer vorsichtig behandeln; Tests mit normalen Spielsätzen, gemischten Sprachen und Umgehungsvarianten. Keine externen Moderationsdienste verbunden, kein neuer Filter implementiert.
-
-Fristen noch nicht eindeutig festgelegt: Nutzer nennt einen Monat für unbearbeitete Meldungen, frühere Löschung bei als irrelevant bewerteten Fällen und zunächst etwa drei Monate für weiterverfolgte Fälle. Rechtsfälle brauchen eine separat begründete Sicherung; keine pauschale gesetzliche Pflicht von sechs Monaten festgestellt. Website für Admins/Support später als Fallbearbeitung vorgesehen. Als umsetzbare Zustände offen, verworfen, bestätigt und gesichert vorsehen; endgültige Fristen vor automatischer Löschung bestätigen.
-
-### Moderationssammlungen konsolidiert
-
-Deutsche und englische Begriffe in docs/moderation-rules-draft.md zusammengeführt. Ausdrückliche Freigaben von vorgeschlagenen Freigaben getrennt; direkte Sperren, Zensurvorschläge, Kontextkandidaten, Bedrohungen und Einstufungskonflikte zur Abstimmung aufgeführt. Neue englische Liste aus dem bereitgestellten Text berücksichtigt. Kein Datenbankimport und kein neuer Filter aktiviert. Zunächst eine Spielwelt; Mehrserver-Zuordnung wird später umgesetzt.
-
-### Deutsche Moderationsentwürfe für Import vorbereitet
-
-152 deutsche Einträge in scripts/moderationData.js, Schema moderationRules mit Stufe, Aktion, Grund, Varianten, Wort-/Phrasenvergleich, Kontextbedarf, automatischer Meldung, Status, Aktivflag und Version. Freigaben mit dokumentierten offenen Entscheidungen werden ebenfalls zur Nachvollziehbarkeit gespeichert. Zwitter, Trans, Lesbe, lesbisch und Pedo ergänzt. Alle Einträge active=false; kein Chatfilter aktiviert. Englische Sammlung noch nicht importiert.
-
-npm run moderation:check prüft ohne Datenbank; npm run moderation:seed fügt fehlende Entwürfe hinzu, ohne bestehende Regeln zu überschreiben. 37 Tests bestehen. Import aktuell nicht erfolgreich: Atlas-Verbindung scheitert mit MongooseServerSelectionError. Nach Wiederherstellung der Verbindung erneut importieren und verifizieren.
-
-### Moderationsentwürfe erfolgreich gespeichert
-
-Die Atlas-Verbindung ist wieder verfügbar. 152 deutsche Moderationsentwürfe erfolgreich in celestabyss_dev.moderationRules eingefügt und anschließend verifiziert. Aktive Einträge: 0. Die Regeln beeinflussen den Chat noch nicht. Englische Sammlung und endgültige Einstufungen folgen separat.
-
-### Bestätigte englische Entscheidungen gespeichert
-
-Fuck you und Fuck off frei; Bitch kontextabhängig; Bastard auf Deutsch und Englisch zensieren; Cunt zensieren. Sechs betroffene Sprach-/Begriffseinträge erfolgreich in moderationRules verifiziert, weiterhin alle inaktiv. Unklar diktierter Begriff „dickpo…“ noch nicht übernommen; Klärung angefragt. Vollständige englische Sammlung noch nicht importiert. Deutsche Seedquelle berücksichtigt die bestätigte Bastard-Zensur.
+33 große Widersprüche unverändert in docs/skill-description-review.md und data/skill-description-review.json aufgeführt. Zahlen/Prozente, Zielgruppen, Voraussetzungen oder Dauer nicht erfunden. Bekannte Spezialmechaniken werden nicht allein wegen fehlender skalarer Felder gelöscht. Nächster Review kann diese Tabelle der Reihe nach bearbeiten.

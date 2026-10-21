@@ -1,0 +1,115 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c09",
+    "skillName_eng": "Everything Flows",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Gruppenbuff für 1800 Sekunden. Auf Stufe 1 erhältst du mit deinen Verbündeten 3 Intelligenz und 17 magischen Angriff. Je weiterer Stufe kommen 1 Intelligenz und 7 magischer Angriff hinzu, bis zu 12 Intelligenz und 80 magischer Angriff auf Stufe 10. Mana-Kosten 53, plus 28 je weiterer Stufe, bis zu 305. Cooldown 60 Sekunden. Castzeit noch offen.",
+    "description_eng": "Group buff lasting 1800 seconds. At level 1 grants you and your allies 3 Intelligence and 17 magical attack. Each additional level adds 1 Intelligence and 7 magical attack, reaching 12 Intelligence and 80 magical attack at level 10. Mana cost starts at 53 and increases by 28 per additional level to 305. Cooldown is 60 seconds. Cast time remains pending.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "int": 3,
+    "matk": 17,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 166,
+    "skillName_de": "Alles im Fluss",
+    "skillpoints": 1,
+    "mana": 53,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 53,
+          "perLevel": 28
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "int": "selfAndAllies",
+      "matk": "selfAndAllies"
+    },
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      },
+      "matk": {
+        "type": "linear",
+        "base": 17,
+        "perLevel": 7
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c0c",
+    "skillName_eng": "Inner Restlessness",
+    "__v": 0,
+    "category": "active",
+    "cd": 70,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff mit wechselndem magischem Schadensbonus. Für jeden eigenen magischen Angriff wird ein zusätzlicher Schadenswert neu ausgewürfelt. Auf Stufe 1 liegt der Bonus zwischen 13 und 31. Die Untergrenze steigt je weiterer Stufe um 5, die Obergrenze um 10, bis zu 58 bis 121 auf Stufe 10. Der Buff gibt keine Stärke, Intelligenz oder Angriffsgeschwindigkeit mehr. Dauer steigt gleichmäßig von 30 auf 35 Sekunden. Cooldown 70 Sekunden, minus 1 je weiterer Stufe, bis zu 61 Sekunden. Castzeit 0,1 Sekunden. Mana-Kosten sowie die genaue Zufallsverteilung und Behandlung mehrteiliger Angriffe oder DoT-Ticks sind noch offen.",
+    "description_eng": "Self buff granting a varying magical damage bonus. A new additional damage value is rolled for each own magical attack. At level 1 the bonus ranges from 13 to 31. Each additional level adds 5 to the minimum and 10 to the maximum, reaching 58 to 121 at level 10. No longer grants Strength, Intelligence or attack speed. Duration increases evenly from 30 to 35 seconds. Cooldown starts at 70 seconds and decreases by 1 per additional level to 61 seconds. Cast time is 0.1 seconds. Mana cost, exact random distribution and treatment of multi-part attacks or damage-over-time ticks remain pending.",
+    "dmgType": "selfbuff",
+    "dur": 30,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 169,
+    "skillName_de": "Innere Unruhe",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 70,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 30,
+      "perLevel": 0.5555555555555556
+    },
+    "effects": [
+      {
+        "key": "inner-restlessness-random-magic",
+        "type": "randomDamageBonus",
+        "target": "self",
+        "value": 13,
+        "unit": "flat",
+        "appliesTo": "allSkills",
+        "damageTypes": [
+          "magical"
+        ],
+        "durationSeconds": 30,
+        "durationScaling": {
+          "type": "linear",
+          "base": 30,
+          "perLevel": 0.5555555555555556
+        },
+        "randomDamageRange": {
+          "minimum": 13,
+          "maximum": 31,
+          "minimumPerAdditionalLevel": 5,
+          "maximumPerAdditionalLevel": 10,
+          "rerollPerAttackAction": true,
+          "distributionStatus": "pending"
+        }
+      }
+    ]
+  }
+]

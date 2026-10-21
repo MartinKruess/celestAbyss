@@ -1,0 +1,53 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04be2",
+    "skillName_eng": "Rage Explosion",
+    "__v": 0,
+    "category": "active",
+    "cd": 90,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Entfessele deine Wut und steigere deinen Schaden für kurze Zeit.",
+    "description_eng": "Unleash your rage and increase your damage for a short time.",
+    "dmgType": "physical",
+    "dur": 15,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 127,
+    "patk": 399,
+    "skillName_de": "Wutexplosion",
+    "skillpoints": 1,
+    "str": 15,
+    "activationRequirements": {
+      "activeBuff": {
+        "skillNumber": 13,
+        "effectKey": "rage-outburst-strength"
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be3",
+    "skillName_eng": "Berserk Slash",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Deine Wut ist so groß, dass du sie in deinen Angriffen kanalisierst. Pro Wutpunkt erhälst du 5 Angriffspunkte auf diesne Angriff.",
+    "description_eng": "Your rage is so great that you channel it into your attacks. For each rage point you gain 5 attack points on this attack.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 128,
+    "patk": 192,
+    "skillName_de": "Wutklinge",
+    "skillpoints": 1
+  }
+]

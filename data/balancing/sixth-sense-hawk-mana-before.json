@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bfe",
+    "skillName_eng": "Sixth Sense",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deinen Glückswert um 1. Castzeit 0,3 Sekunden.",
+    "description_eng": "Increase the Luck by 1. Cast time is 0.3 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "luck": 1,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 155,
+    "skillName_de": "Sechster Sinn",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bfd",
+    "skillName_eng": "Hawk Eye",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Gewährt 6 physischen Angriff je gelerntem Skilllevel, bis zu 60 auf Stufe 10. Genauigkeit startet mit 15 auf Stufe 1 und steigt um 1 je weiterer Stufe auf 24. Glück beträgt 1 auf Stufe 1 bis 4, 2 auf Stufe 5 bis 9 und 4 auf Stufe 10. Genauigkeit ist ein direkter Wert, kein Geschicklichkeitsbonus und keine Prozentangabe. Castzeit 0,3 Sekunden, Cooldown 60 Sekunden. Mana-Kosten sind noch offen.",
+    "description_eng": "Self buff lasting 600 seconds. Grants 6 physical attack per learned skill level, reaching 60 at level 10. Accuracy starts at 15 and increases by 1 per additional level to 24. Luck is 1 at levels 1 through 4, 2 at levels 5 through 9 and 4 at level 10. Accuracy is a direct rating, not a Dexterity bonus or percentage. Cast time is 0.3 seconds and cooldown is 60 seconds. Mana cost remains pending.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "luck": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 154,
+    "patk": 6,
+    "skillName_de": "Auge des Falken",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "accuracy": 15,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      },
+      "accuracy": {
+        "type": "linear",
+        "base": 15,
+        "perLevel": 1
+      },
+      "luck": {
+        "type": "table",
+        "values": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          4
+        ]
+      }
+    }
+  }
+]

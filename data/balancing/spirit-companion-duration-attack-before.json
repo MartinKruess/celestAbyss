@@ -1,0 +1,52 @@
+{
+  "_id": "6acc1c7e4826525c70d04c45",
+  "skillName_eng": "Spirit Animal",
+  "__v": 0,
+  "category": "active",
+  "cd": 300,
+  "charClass": [
+    "Druide",
+    "Alchemist",
+    "Archer",
+    "Hunter"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört für 9 Sekunden deinen Seelenbegleiter, der deine Feinde angreift. Der gespeicherte physische und magische Angriffswert beträgt jeweils 120 auf Skilllevel 1 und steigt um 12 je weiterer Stufe auf jeweils 228 auf Stufe 10. Die Werte gehören zur Beschwörungswirkung und erhöhen nicht als Eigenbuff deinen Angriff. Mana-Kosten steigen von 53 um 22 je weiterer Stufe auf 251. Castzeit 0,4 Sekunden. Der bisherige Cooldown beträgt 300 Sekunden. Angriffsfrequenz, Schadensberechnung und genaue Umsetzung des Begleiters werden noch festgelegt.",
+  "description_eng": "Summons your spirit companion for 9 seconds to attack your enemies. Stored physical and magical attack values each start at 120 at skill level 1 and increase by 12 per additional level to 228 each at level 10. These values belong to the summon effect and do not buff your own attack. Mana cost increases from 53 by 22 per additional level to 251. Cast time is 0.4 seconds. Existing cooldown is 300 seconds. Attack frequency, damage calculation and exact companion implementation remain to be defined.",
+  "dmgType": "spell",
+  "dur": 9,
+  "matk": 120,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 226,
+  "patk": 120,
+  "skillName_de": "Seelenbegleiter",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.4,
+  "mana": 53,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 53,
+        "perLevel": 22
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": 12
+    },
+    "matk": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": 12
+    }
+  }
+}

@@ -1,0 +1,227 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b64",
+    "skillName_eng": "Enlightenment",
+    "__v": 0,
+    "category": "Aurora",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Aurora-Grundskill. Gewährt 1 Intelligenz und 1 Wisdom je gelerntem Skilllevel, bis zu jeweils 20 auf Stufe 20. Keine Aktivierungskosten, Castzeit oder Cooldown. Zusätzlich +1 direkte MP-Regeneration je gelerntem Skilllevel, auf Stufe 20 +20 MP je Regenerationstick. Diese Boni werden zur Grundregeneration und anderen Boni addiert. Tickintervalle werden zentral später festgelegt.",
+    "description_eng": "Permanent passive Aurora core skill. Grants 1 Intelligence and 1 Wisdom per learned skill level, reaching 20 each at level 20. No activation costs, cast time or cooldown. Additionally grants +1 direct Mana regeneration per learned skill level, totaling +20 MP per regeneration tick at level 20. These bonuses add to base regeneration and other bonuses. Tick intervals will be configured centrally later.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 1,
+    "skillName_de": "Erleuchtung",
+    "skillpoints": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Aurora"
+    ],
+    "unlockPhase": "race",
+    "isClassCore": true,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "manaRegen": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9f",
+    "skillName_eng": "Ray of Hope",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill für Lichtmagier und Heiler. Die bisherigen Startboni betragen 3 Faith, 2 Intelligenz und 1 Wisdom. Faith bleibt konstant bei 3. Die Stufen 2, 4, 6, 8 und 10 gewähren jeweils zusätzlich 1 Intelligenz und 1 Wisdom. Die Stufen 1, 3, 5, 7 und 9 gewähren jeweils 8 direkte Mana-Regeneration. Auf Stufe 10 sind die Gesamtboni 3 Faith, 7 Intelligenz, 6 Wisdom und 40 direkte Mana-Regeneration je Regenerationstick; das Tickintervall wird zentral festgelegt. Kein zusätzlicher Licht- oder Heiligschadensbonus festgelegt. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive skill for Light Mages and Healers. Existing starting bonuses are 3 Faith, 2 Intelligence and 1 Wisdom. Faith remains fixed at 3. Levels 2, 4, 6, 8 and 10 each add 1 Intelligence and 1 Wisdom. Levels 1, 3, 5, 7 and 9 each add 8 direct Mana regeneration. At level 10 total bonuses are 3 Faith, 7 Intelligence, 6 Wisdom and 40 direct Mana regeneration per regeneration tick; the tick interval is configured centrally. No additional light or holy damage bonus is defined. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "faith": 3,
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 60,
+    "skillName_de": "Hoffnungsschimmer",
+    "skillpoints": 1,
+    "wis": 1,
+    "manaRegen": 8,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5,
+          6
+        ]
+      },
+      "manaRegen": {
+        "type": "table",
+        "values": [
+          8,
+          8,
+          16,
+          16,
+          24,
+          24,
+          32,
+          32,
+          40,
+          40
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd7",
+    "skillName_eng": "Inexhaustible Hope",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Gewährt auf Stufe 1 +2 M-Angriff und je weiterer Stufe +2 M-Angriff, insgesamt +20 auf Stufe 10. Ab Stufe 5 zusätzlich insgesamt +1 Glück und +1 Faith; auf Stufe 10 steigen diese Gesamtboni auf +3 Glück und +3 Faith. Der direkte M-Angriffsbonus hängt nicht vom Faith-Wert ab. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive skill. Grants +2 magical attack at level 1 and +2 per additional level, totaling +20 at level 10. From level 5, also grants a total of +1 Luck and +1 Faith; at level 10 these total bonuses increase to +3 Luck and +3 Faith. The direct magical attack bonus does not depend on Faith. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "matk": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 116,
+    "skillName_de": "Unerschöpfliche Hoffnung",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "luck": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      },
+      "faith": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c33",
+    "skillName_eng": "The Eternal Knowledge",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Die bisherigen Startwerte bleiben +2 Faith, +5 Intelligenz und +2 Wisdom. Je weiterer Stufe steigen Faith und Intelligenz jeweils um 1. Auf Stufe 10 insgesamt +11 Faith, +14 Intelligenz und unverändert +2 Wisdom. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive skill. Existing starting bonuses remain +2 Faith, +5 Intelligence and +2 Wisdom. Each additional level adds 1 Faith and 1 Intelligence. Level 10 totals: +11 Faith, +14 Intelligence and unchanged +2 Wisdom. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "faith": 2,
+    "int": 5,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 208,
+    "skillName_de": "Das ewige Wissen",
+    "skillpoints": 1,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "faith": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      },
+      "int": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 1
+      }
+    }
+  }
+]

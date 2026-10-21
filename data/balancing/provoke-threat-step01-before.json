@@ -1,0 +1,73 @@
+{
+  "_id": "6acc1c7e4826525c70d04c01",
+  "skillName_eng": "Provoke",
+  "__v": 0,
+  "category": "active",
+  "cd": 20,
+  "charClass": [
+    "Gladiator",
+    "Berserker",
+    "Knife",
+    "Templar"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Aktivierbarer Toggle, der deine aus verursachtem Schaden erzeugte Aggro verstärkt. Der Multiplikator beträgt 1 plus 0,15 je gelerntem Skilllevel: 1,15 auf Stufe 1, 2,5 auf Stufe 10 und 4 auf Stufe 20. Gladiator und Berserker können maximal Stufe 10 lernen, Ritter und Templer Stufe 20. Solange eingeschaltet, kostet der Skill bei jedem Mana-Regenerationstick 7 Mana auf Stufe 1, plus 2 je weiterer Stufe, bis zu 25 auf Stufe 10 und 45 auf Stufe 20. Keine feste Wirkungsdauer. Das Tickintervall wird vom Mana-Regenerationssystem übernommen. Verhalten bei unzureichendem Mana ist vorläufig Abschalten. Der Cooldown für das Umschalten beträgt 20 Sekunden. Das Umschalten erfolgt sofort mit 0 Sekunden Castzeit.",
+  "description_eng": "A toggle that increases threat generated from damage dealt. Multiplier is 1 plus 0.15 per learned skill level: 1.15 at level 1, 2.5 at level 10 and 4 at level 20. Gladiator and Berserker can learn up to level 10; Knight and Templar up to level 20. While enabled, each Mana regeneration tick costs 7 Mana at level 1 plus 2 per additional level, reaching 25 at level 10 and 45 at level 20. No fixed duration. Uses the Mana regeneration system tick interval. Provisional behavior on insufficient Mana is deactivation. Toggle cooldown is 20 seconds. Toggling is immediate with a cast time of 0 seconds.",
+  "dmgType": "selfbuff",
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 158,
+  "skillName_de": "Provozieren",
+  "skillpoints": 1,
+  "activation": "toggle",
+  "effects": [
+    {
+      "key": "provoke-threat",
+      "type": "threatMultiplier",
+      "target": "self",
+      "value": 1.15,
+      "unit": "flat",
+      "threatBasis": "damageDealt",
+      "valueScaling": {
+        "type": "linear",
+        "base": 1.15,
+        "perLevel": 0.15
+      },
+      "durationSeconds": 0
+    },
+    {
+      "key": "provoke-mana-drain",
+      "type": "resourceDrain",
+      "target": "self",
+      "resource": "mana",
+      "value": 7,
+      "unit": "flat",
+      "valueScaling": {
+        "type": "linear",
+        "base": 7,
+        "perLevel": 2
+      },
+      "intervalSource": "manaRegenerationTick",
+      "durationSeconds": 0
+    }
+  ],
+  "learningLimits": {
+    "defaultMaxLevel": 20,
+    "classOverrides": {
+      "Gladiator": 10,
+      "Berserker": 10,
+      "Knife": 20,
+      "Templar": 20,
+      "Ritter": 20,
+      "Tempelritter": 20
+    },
+    "status": "defined"
+  },
+  "toggleSettings": {
+    "durationMode": "whileEnabled",
+    "onInsufficientResource": "deactivate"
+  },
+  "castTimeSeconds": 0,
+  "castTimeStatus": "defined"
+}

@@ -1,0 +1,147 @@
+{
+  "generatedAt": "2026-10-19T18:36:58.194Z",
+  "scope": "Read-only ownership audit. No database changes. Compared pre-consolidation count snapshot and historical simulation catalogs; old spreadsheet slot IDs excluded because numbering differs.",
+  "classes": [
+    {
+      "name": "Nachtjäger / Seelenjäger",
+      "currentCount": 31,
+      "beforeConsolidation": 32,
+      "removed": [
+        {
+          "nr": 151,
+          "name": "Für die Ehre"
+        }
+      ],
+      "added": []
+    },
+    {
+      "name": "Schamane / Hochelfe",
+      "currentCount": 31,
+      "beforeConsolidation": 32,
+      "removed": [
+        {
+          "nr": 30,
+          "name": "Eisranken"
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag"
+        },
+        {
+          "nr": 57,
+          "name": "Gezielter Blitz"
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre"
+        },
+        {
+          "nr": 79,
+          "name": "Mentale Erweiterung"
+        },
+        {
+          "nr": 87,
+          "name": "Rotier Schlag"
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls"
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln"
+        },
+        {
+          "nr": 132,
+          "name": "Zweihändiges Streitkolbentraining"
+        },
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher"
+        },
+        {
+          "nr": 225,
+          "name": "Macht des Geistes"
+        }
+      ],
+      "added": [
+        {
+          "nr": 106,
+          "name": "Sprungschlag"
+        },
+        {
+          "nr": 192,
+          "name": "Macht des Felsens"
+        },
+        {
+          "nr": 202,
+          "name": "Verbrennen"
+        },
+        {
+          "nr": 252,
+          "name": "Streitkolbentraining"
+        },
+        {
+          "nr": 254,
+          "name": "Weisheit des Salamanders"
+        },
+        {
+          "nr": 255,
+          "name": "Felszähne"
+        },
+        {
+          "nr": 256,
+          "name": "Felsensalve"
+        },
+        {
+          "nr": 257,
+          "name": "Feurige Leidenschaft"
+        },
+        {
+          "nr": 258,
+          "name": "Erdsäule"
+        },
+        {
+          "nr": 259,
+          "name": "Weisheit des Erdweisen"
+        }
+      ]
+    },
+    {
+      "name": "Luminet / Lichtmagier",
+      "currentCount": 31,
+      "beforeConsolidation": 32,
+      "removed": [
+        {
+          "nr": 79,
+          "name": "Mentale Erweiterung"
+        },
+        {
+          "nr": 210,
+          "name": "Lichtblitz"
+        }
+      ],
+      "added": [
+        {
+          "nr": 260,
+          "name": "Läuterung"
+        }
+      ]
+    }
+  ],
+  "skybreaker": {
+    "nr": 212,
+    "currentOwners": [
+      "Druide",
+      "Alchemist"
+    ],
+    "historicalOwners": [
+      "Shamane",
+      "High Elves"
+    ],
+    "transferEvidence": "data/balancing/druid-shaman-skill-transfers.json",
+    "luminetAssignmentFound": false,
+    "maxSkillLevel": 10
+  },
+  "conclusion": "No additional accidental assignment loss confirmed. Historic removals correspond to explicit consolidation/removal scripts."
+}

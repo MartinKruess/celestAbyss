@@ -1,0 +1,28 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba1",
+  "skillName_eng": "Infernal Cyclone",
+  "__v": 0,
+  "category": "active",
+  "cd": 150,
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erzeuge einen Zyklon aus Höllenfeuer, der Feuer auf das Gebiet regnen lässt. Gegner im Feuerregen erleiden Schaden. Der Feuerregen hält auf Skilllevel 1 sechs Sekunden an. Pro weiterem Skilllevel steigt die Dauer um eine Sekunde, bis zu zehn Sekunden auf Skilllevel 5.",
+  "description_eng": "Create a cyclone of hellfire that rains fire over the area. Enemies in the fire rain take damage. The fire rain lasts six seconds at skill level 1. Each additional skill level increases its duration by one second, reaching ten seconds at skill level 5.",
+  "dmgType": "spell",
+  "dur": 6,
+  "matk": 368,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 62,
+  "skillName_de": "Infernal Zyklon",
+  "skillpoints": 1,
+  "durationScaling": {
+    "type": "linear",
+    "base": 6,
+    "perLevel": 1
+  }
+}

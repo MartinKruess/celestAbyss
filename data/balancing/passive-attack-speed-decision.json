@@ -1,0 +1,951 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-passive-attack-speed-1792370195325",
+  "internalUnits": "Legacy fractions retained; 0.05 means 5 raw rating points, not 5 percent final frequency",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bda",
+        "skillName_eng": "Improved Reload",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert dauerhaft dein Nachladen. Gewährt 2 physischen Angriff je gelerntem Skilllevel, bis zu 20 auf Stufe 10. Auf Stufe 10 zusätzlich 5 Prozent Angriffsgeschwindigkeit. Permanent passiv ohne Aktivierungskosten oder Cooldown. Ersetzt die frühere vorläufige Umrechnung von Ambush in Angriff.",
+        "description_eng": "Permanently improves reloading. Grants 2 physical attack per learned skill level, reaching 20 at level 10. At level 10 also grants 5 percent attack speed. Permanent passive skill without activation costs or cooldown. Replaces the earlier tentative Ambush-to-attack conversion.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 119,
+        "patk": 2,
+        "skillName_de": "Verbessertes Nachladen",
+        "skillpoints": 1,
+        "resourceCosts": [],
+        "statBonusUnits": {
+          "patk": "flat",
+          "atkSpeed": "fraction"
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "atkSpeed": {
+            "type": "table",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0.05
+            ]
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 2
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 0.05
+                  }
+                ]
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04bda",
+        "skillName_eng": "Improved Reload",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verbessert dauerhaft dein Nachladen. Gewährt 2 physischen Angriff je gelerntem Skilllevel, bis zu 20 auf Stufe 10. Auf Stufe 10 zusätzlich 5 Punkte Angriffsgeschwindigkeit. Permanent passiv ohne Aktivierungskosten oder Cooldown. Ersetzt die frühere vorläufige Umrechnung von Ambush in Angriff.",
+        "description_eng": "Permanently improves reloading. Grants 2 physical attack per learned skill level, reaching 20 at level 10. At level 10 also grants 5 attack speed rating points. Permanent passive skill without activation costs or cooldown. Replaces the earlier tentative Ambush-to-attack conversion.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 119,
+        "patk": 2,
+        "skillName_de": "Verbessertes Nachladen",
+        "skillpoints": 1,
+        "resourceCosts": [],
+        "statBonusUnits": {
+          "patk": "flat",
+          "atkSpeed": "fraction"
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "atkSpeed": {
+            "type": "table",
+            "values": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0.05
+            ]
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 2
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 0.05
+                  }
+                ]
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c14",
+        "skillName_eng": "Unbroken",
+        "__v": 0,
+        "category": "passive",
+        "cd": 600,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Nach tödlichem Schaden beginnt automatisch eine letzte Kampfphase mit 80 % deines maximalen Lebens. Auf Skilllevel 1 hält sie 20 Sekunden, gewährt +10 % Angriffsgeschwindigkeit und +30 % Lauftempo und hat 600 Sekunden Cooldown. Auf Skilllevel 10 sind es 30 Sekunden, +20 % Angriffsgeschwindigkeit, +45 % Lauftempo und 300 Sekunden Cooldown. Du kannst währenddessen geheilt werden, stirbst aber spätestens am Ende der Phase. Erneuter Tod beendet die Phase sofort.",
+        "description_eng": "After lethal damage, automatically begin a final combat phase with 80% of your maximum health. At skill level 1, it lasts 20 seconds, grants +10% attack speed and +30% movement speed and has a 600-second cooldown. At skill level 10, it lasts 30 seconds, grants +20% attack speed and +45% movement speed and has a 300-second cooldown. Healing is possible during the phase, but you die when it ends. Dying again ends the phase immediately.",
+        "dmgType": "passive",
+        "dur": 20,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 177,
+        "skillName_de": "Ungebrochen",
+        "skillpoints": 1,
+        "activation": "automatic",
+        "effects": [
+          {
+            "restoredHealthFraction": 0.8,
+            "healingAllowed": true,
+            "endsOnDeath": true,
+            "disablesEffects": [],
+            "trigger": "lethalDamage",
+            "diesAtEnd": true,
+            "valueScaling": {
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "deathReprieve",
+            "target": "self",
+            "allowedRaces": [],
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "key": "last-stand"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.1,
+              "perLevel": 0.011111111111111112,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "atkSpeed",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-attack-speed"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": 0.016666666666666666,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "movementSpeed",
+            "value": 0.3,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-movement-speed"
+          }
+        ],
+        "effectsVersion": 1,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 600,
+          "perLevel": -33.333333333333336
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.1,
+                "perLevel": 0.011111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.3,
+                "perLevel": 0.016666666666666666
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 600,
+                  "perLevel": -33.333333333333336
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04c14",
+        "skillName_eng": "Unbroken",
+        "__v": 0,
+        "category": "passive",
+        "cd": 600,
+        "charClass": [
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Nach tödlichem Schaden beginnt automatisch eine letzte Kampfphase mit 80 % deines maximalen Lebens. Auf Skilllevel 1 hält sie 20 Sekunden, gewährt +10 Punkte Angriffsgeschwindigkeit und +30 % Laufgeschwindigkeit und hat 600 Sekunden Cooldown. Auf Skilllevel 10 sind es 30 Sekunden, +20 Punkte Angriffsgeschwindigkeit, +45 % Laufgeschwindigkeit und 300 Sekunden Cooldown. Du kannst währenddessen geheilt werden, stirbst aber spätestens am Ende der Phase. Erneuter Tod beendet die Phase sofort.",
+        "description_eng": "After lethal damage, automatically begin a final combat phase with 80% of your maximum health. At skill level 1, it lasts 20 seconds, grants +10 attack speed rating points and +30% movement speed and has a 600-second cooldown. At skill level 10, it lasts 30 seconds, grants +20 attack speed rating points and +45% movement speed and has a 300-second cooldown. Healing is possible during the phase, but you die when it ends. Dying again ends the phase immediately.",
+        "dmgType": "passive",
+        "dur": 20,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 177,
+        "skillName_de": "Ungebrochen",
+        "skillpoints": 1,
+        "activation": "automatic",
+        "effects": [
+          {
+            "restoredHealthFraction": 0.8,
+            "healingAllowed": true,
+            "endsOnDeath": true,
+            "disablesEffects": [],
+            "trigger": "lethalDamage",
+            "diesAtEnd": true,
+            "valueScaling": {
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "deathReprieve",
+            "target": "self",
+            "allowedRaces": [],
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "key": "last-stand"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.1,
+              "perLevel": 0.011111111111111112,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "atkSpeed",
+            "value": 0.1,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-attack-speed"
+          },
+          {
+            "disablesEffects": [],
+            "valueScaling": {
+              "type": "linear",
+              "base": 0.3,
+              "perLevel": 0.016666666666666666,
+              "values": []
+            },
+            "durationScaling": {
+              "type": "linear",
+              "base": 20,
+              "perLevel": 1.1111111111111112,
+              "values": []
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "movementSpeed",
+            "value": 0.3,
+            "unit": "fraction",
+            "reference": "targetStat",
+            "damageTypes": [],
+            "durationSeconds": 20,
+            "endWith": "last-stand",
+            "key": "last-stand-movement-speed"
+          }
+        ],
+        "effectsVersion": 1,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 600,
+          "perLevel": -33.333333333333336
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 1.1111111111111112
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.1,
+                "perLevel": 0.011111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.3,
+                "perLevel": 0.016666666666666666
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 600,
+                  "perLevel": -33.333333333333336
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 20,
+                "perLevel": 1.1111111111111112
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c1e",
+        "skillName_eng": "Hard Training",
+        "__v": 0,
+        "atkSpeed": 0.05,
+        "category": "passive",
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Permanentes passives Training. Gewährt auf Stufe 1 bis 9 konstant 5 Prozent Angriffsgeschwindigkeit. Auf Stufe 10 steigt der gesamte Bonus auf 8 Prozent. Zusätzlich erhältst du 1 Geschicklichkeit je gelerntem Skilllevel, bis zu 10 auf Stufe 10. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+        "description_eng": "Permanent passive training. Grants a constant 5 percent attack speed at levels 1 through 9, increasing to a total of 8 percent at level 10. Additionally grants 1 Dexterity per learned skill level, reaching 10 at level 10. No activation costs, cast time or cooldown.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 187,
+        "skillName_de": "Hartes Training",
+        "skillpoints": 1,
+        "dex": 1,
+        "resourceCosts": [],
+        "statBonusUnits": {
+          "atkSpeed": "fraction",
+          "dex": "flat"
+        },
+        "statScaling": {
+          "atkSpeed": {
+            "type": "table",
+            "values": [
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.05,
+              0.08
+            ]
+          },
+          "dex": {
+            "type": "linear",
+            "base": 1,
+            "perLevel": 1
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "thresholds",
+                "base": 0.05,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 0.08
+                  }
+                ]
+              },
+              "source": "verifiedExistingLevels"
+            },
+            {
+              "path": [
+                "statScaling",
+                "dex"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04c1e",
+        "skillName_eng": "Hard Training",
+        "__v": 0,
+        "atkSpeed": 0.05,
+        "category": "passive",
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Permanentes passives Training mit 10 Stufen. Gewährt auf jeder gelernten Stufe insgesamt 5 Punkte Angriffsgeschwindigkeit. Zusätzlich erhältst du 1 Geschick je gelerntem Skilllevel, bis zu 10 auf Stufe 10. Keine Aktivierungskosten, Zauberzeit oder Abklingzeit.",
+        "description_eng": "Permanent passive training with 10 levels. Grants a total of 5 attack speed rating points at every learned level. Also grants 1 Dexterity per learned skill level, reaching 10 at level 10. No activation cost, cast time or cooldown.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 187,
+        "skillName_de": "Hartes Training",
+        "skillpoints": 1,
+        "dex": 1,
+        "resourceCosts": [],
+        "statBonusUnits": {
+          "atkSpeed": "fraction",
+          "dex": "flat"
+        },
+        "statScaling": {
+          "atkSpeed": {
+            "type": "linear",
+            "base": 0.05,
+            "perLevel": 0
+          },
+          "dex": {
+            "type": "linear",
+            "base": 1,
+            "perLevel": 1
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.05,
+                "perLevel": 0
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "dex"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c2c",
+        "skillName_eng": "Weapon Training",
+        "__v": 0,
+        "atkSpeed": 0.01,
+        "category": "passive",
+        "charClass": [
+          "Abenteuer",
+          "Butcher",
+          "Destroyer",
+          "Gladiator",
+          "Berserker",
+          "Knife",
+          "Templar",
+          "Herbalist",
+          "Witcher",
+          "Archer",
+          "Hunter",
+          "Druide",
+          "Alchemist",
+          "Summoner",
+          "Soulseeker",
+          "Bloodmage",
+          "Luminet",
+          "Lightmage",
+          "Healer",
+          "Priest",
+          "Ritualist",
+          "Shamane",
+          "High Elves",
+          "Villian",
+          "Shadowwarrior"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Waffentraining verbessert deine allgemeinen Waffenfertigkeiten. Mit jeder Skillstufe steigen dein physischer und magischer Angriff sowie deine Angriffsgeschwindigkeit.",
+        "description_eng": "Weapon Training improves your general weapon proficiency. Each skill level increases your physical and magical attack and your attack speed.",
+        "dmgType": "passive",
+        "matk": 5,
+        "maxSkillLv": 20,
+        "maxUpgradeLv": 10,
+        "nr": 201,
+        "patk": 5,
+        "skillName_de": "Waffentraining",
+        "skillpoints": 1,
+        "statBonusUnits": {
+          "patk": "flat",
+          "matk": "flat",
+          "atkSpeed": "fraction"
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "matk": {
+            "type": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "atkSpeed": {
+            "type": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 5,
+                "perLevel": 5
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "matk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 5,
+                "perLevel": 5
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "atkSpeed"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.01,
+                "perLevel": 0.01
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04c2c",
+        "skillName_eng": "Weapon Training",
+        "__v": 0,
+        "category": "passive",
+        "charClass": [
+          "Abenteuer",
+          "Butcher",
+          "Destroyer",
+          "Gladiator",
+          "Berserker",
+          "Knife",
+          "Templar",
+          "Herbalist",
+          "Witcher",
+          "Archer",
+          "Hunter",
+          "Druide",
+          "Alchemist",
+          "Summoner",
+          "Soulseeker",
+          "Bloodmage",
+          "Luminet",
+          "Lightmage",
+          "Healer",
+          "Priest",
+          "Ritualist",
+          "Shamane",
+          "High Elves",
+          "Villian",
+          "Shadowwarrior"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Waffentraining verbessert dauerhaft deine allgemeinen Waffenfertigkeiten. Gewährt je gelernter Stufe 5 physischen und 5 magischen Angriff, bis zu jeweils 100 auf Stufe 20. Gewährt keine Angriffsgeschwindigkeit.",
+        "description_eng": "Weapon Training permanently improves your general weapon proficiency. Each learned level grants 5 physical attack and 5 magical attack, reaching 100 each at level 20. Does not grant attack speed.",
+        "dmgType": "passive",
+        "matk": 5,
+        "maxSkillLv": 20,
+        "maxUpgradeLv": 10,
+        "nr": 201,
+        "patk": 5,
+        "skillName_de": "Waffentraining",
+        "skillpoints": 1,
+        "statBonusUnits": {
+          "patk": "flat",
+          "matk": "flat"
+        },
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "matk": {
+            "type": "linear",
+            "base": 5,
+            "perLevel": 5
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 5,
+                "perLevel": 5
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "matk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 5,
+                "perLevel": 5
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    }
+  ]
+}

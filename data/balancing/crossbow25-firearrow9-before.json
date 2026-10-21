@@ -1,0 +1,211 @@
+{
+  "weapons": [
+    {
+      "_id": "6acc1c7d4826525c70d04a97",
+      "name": "Light Crossbow",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 1,
+        "maxLevel": 10,
+        "pang": 26,
+        "speed": -15
+      },
+      "category": "weapon",
+      "description": "A compact crossbow designed for quick aiming and firing.",
+      "isLegendary": false,
+      "rang": 1,
+      "rare": 2,
+      "sell": 71,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Crossbow",
+      "weight": 10
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04aa4",
+      "name": "Heaviness Crossbow",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 20,
+        "maxLevel": 10,
+        "pang": 46,
+        "speed": -15,
+        "dexerity": 2,
+        "agility": 2
+      },
+      "category": "weapon",
+      "description": "A heavy crossbow designed for maximum impact, capable of piercing armor.",
+      "isLegendary": false,
+      "rang": 2,
+      "rare": 2,
+      "sell": 164,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Crossbow",
+      "weight": 20
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ab1",
+      "name": "Crossbow of target Shot",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 40,
+        "maxLevel": 10,
+        "pang": 81,
+        "speed": -15,
+        "dexerity": 5,
+        "agility": 5
+      },
+      "category": "weapon",
+      "description": "An enchanted crossbow blessed with the ability to unfailingly strike its intended target. Wielded by hunters and assassins, it never misses its mark, ensuring swift and silent elimination of foes.",
+      "isLegendary": false,
+      "rang": 3,
+      "rare": 2,
+      "sell": 357,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Crossbow",
+      "weight": 20
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04abe",
+      "name": "The Huntress of the Shaddow",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 60,
+        "maxLevel": 10,
+        "pang": 139,
+        "speed": -20,
+        "dexerity": 10,
+        "agility": 7
+      },
+      "category": "weapon",
+      "description": "A legendary bow wielded by the elusive and deadly huntress who stalks the shadows. Crafted from the finest ebony wood and imbued with dark magic, it strikes fear into the hearts of her prey.",
+      "isLegendary": false,
+      "rang": 4,
+      "rare": 2,
+      "sell": 783,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Crossbow",
+      "weight": 20
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04acb",
+      "name": "Hunters Arbalist",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 80,
+        "maxLevel": 10,
+        "pang": 238,
+        "speed": -20,
+        "dexerity": 10,
+        "agility": 10
+      },
+      "category": "weapon",
+      "description": "An arbalest designed for precision and power, favored by skilled hunters and marksmen. Wielded by those who stalk their prey from the shadows, it delivers swift and lethal bolts with deadly accuracy.",
+      "isLegendary": false,
+      "rang": 5,
+      "rare": 2,
+      "sell": 1637,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Crossbow",
+      "weight": 20
+    },
+    {
+      "_id": "6acc1c7d4826525c70d04ad8",
+      "name": "Crossbow of the Shddowhunter",
+      "__v": 0,
+      "attributes": {
+        "slots": 2,
+        "level": 100,
+        "maxLevel": 10,
+        "pang": 403,
+        "speed": -20,
+        "dexerity": 14,
+        "agility": 11
+      },
+      "category": "weapon",
+      "description": "A crossbow crafted by shadowhunters, skilled assassins who stalked their prey from the shadows. It was designed for silent and deadly strikes, its bolts infused with shadow magic to pierce through defenses unnoticed.",
+      "isLegendary": false,
+      "rang": 6,
+      "rare": 3,
+      "sell": 3452,
+      "sellable": true,
+      "stacksize": 1,
+      "thumbnail": "",
+      "tradable": true,
+      "type": "Crossbow",
+      "weight": 20
+    }
+  ],
+  "skill": {
+    "_id": "6acc1c7e4826525c70d04b96",
+    "skillName_eng": "Fire Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 23,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schießt einen brennenden Pfeil auf dein Ziel. Verursacht einmalig physischen Grundschaden von 67, plus 19 je weiterer Stufe, bis zu 428 auf Stufe 20. Mana-Kosten 32, plus 13 je weiterer Stufe, bis zu 279. Cooldown sinkt von 23 um 0,75 Sekunden je weiterer Stufe auf 8,75 Sekunden. Zusätzliche Castzeit 0 Sekunden, vorläufige Flug-/Ausführungsanimation 0,8 Sekunden. Kein zusätzlicher DoT festgelegt.",
+    "description_eng": "Shoots a burning arrow at your target, dealing physical damage once. Base damage starts at 67 and increases by 19 per additional level to 428 at level 20. Mana cost starts at 32 and increases by 13 per additional level to 279. Cooldown decreases from 23 by 0.75 seconds per additional level to 8.75 seconds. Additional cast time is 0 seconds; provisional travel/execution animation is 0.8 seconds. No additional damage over time is defined.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 51,
+    "patk": 67,
+    "skillName_de": "Feuerpfeil",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "animationDurationSeconds": 0.8,
+    "animationTimingStatus": "provisional",
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 23,
+      "perLevel": -0.75
+    },
+    "hasLingeringDamage": false,
+    "mana": 32,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 32,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 67,
+        "perLevel": 19
+      }
+    }
+  }
+}

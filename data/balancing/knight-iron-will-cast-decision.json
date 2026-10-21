@@ -1,0 +1,478 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-knight-iron-will-cast-1792359661968",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bf0",
+        "skillName_eng": "Iron Will",
+        "__v": 0,
+        "block": 2,
+        "category": "passive",
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Permanenter passiver Skill mit 10 Stufen. Statt fester Stärke gewährt jede gelernte Stufe einen dynamischen Stärke-Bonus von 1 % der aktuellen gesamten Vitalität, einschließlich Ausrüstung, permanenten Passiven und aktiven Buffs. Der Faktor bleibt auf allen Stufen 1 %. Vitalität wird nicht verbraucht oder abgezogen. Intern wird ohne Rundung gerechnet; die Anzeige rundet auf ganze Punkte. Vita und Willenskraft: +2 auf Stufe 1 und 2, danach jeweils +2 bis +16 auf Stufe 9; Stufe 10 bleibt bei +16. Schildblock: +2 je Stufe bis +20. Block ist ein Punktewert. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+        "description_eng": "Permanent passive with 10 levels. Replaces fixed Strength with a dynamic bonus equal to 1% of current total Vitality, including equipment, permanent passives and active buffs. The factor stays at 1% at every learned level. Vitality is not removed or consumed. Calculations retain precision; display rounds to whole points. Vitality and Wisdom: +2 at levels 1 and 2, then +2 per level through +16 at level 9; level 10 remains +16. Shield Block: +2 per level through +20 rating. No activation costs, cast time or cooldown.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 141,
+        "skillName_de": "Eiserner Wille",
+        "skillpoints": 1,
+        "vita": 2,
+        "statBonusUnits": {
+          "vita": "flat",
+          "block": "flat",
+          "wis": "flat"
+        },
+        "statScaling": {
+          "vita": {
+            "type": "table",
+            "values": [
+              2,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              16
+            ]
+          },
+          "block": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "wis": {
+            "type": "table",
+            "values": [
+              2,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              16
+            ]
+          }
+        },
+        "wis": 2,
+        "attributeConversionBonus": {
+          "sourceStat": "vita",
+          "targetStat": "str",
+          "amountPerPoint": 0.01,
+          "usesCurrentAttributeValue": true
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "vita"
+              ],
+              "rule": {
+                "kind": "legacyTable",
+                "values": [
+                  2,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  16
+                ],
+                "beyond": "requiresDefinition"
+              },
+              "source": "verifiedExistingLevels"
+            },
+            {
+              "path": [
+                "statScaling",
+                "block"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 2
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "wis"
+              ],
+              "rule": {
+                "kind": "legacyTable",
+                "values": [
+                  2,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  16
+                ],
+                "beyond": "requiresDefinition"
+              },
+              "source": "verifiedExistingLevels"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04bf0",
+        "skillName_eng": "Iron Will",
+        "__v": 0,
+        "block": 2,
+        "category": "passive",
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Permanenter passiver Skill mit 10 Stufen. Gewährt je gelernter Stufe zusätzlich 1 Prozent der aktuellen gesamten Vitalität als Stärke: 1 Prozent auf Stufe 1, 5 Prozent auf Stufe 5 und 10 Prozent auf Stufe 10. Ausrüstung, permanente Passive und aktive Vitalitätsboni werden berücksichtigt; spätere Änderungen aktualisieren den Stärke-Bonus. Vitalität wird weder verbraucht noch abgezogen. Intern wird ohne Rundung gerechnet; die Anzeige rundet auf ganze Punkte. Vita und Willenskraft: jeweils +2 auf Stufe 1 und 2, danach jeweils +2 je weiterer Stufe bis +16 auf Stufe 9; Stufe 10 bleibt bei +16. Schildblock: +2 Punkte je Stufe bis +20. Block ist ein Punktewert, keine Prozentangabe. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+        "description_eng": "Permanent passive with 10 levels. Each learned level grants additional Strength equal to 1 percent of current total Vitality: 1 percent at level 1, 5 percent at level 5 and 10 percent at level 10. Equipment, permanent passives and active Vitality bonuses are included; later changes update the Strength bonus. Vitality is neither consumed nor reduced. Internal calculations retain full precision; the display rounds to whole points. Vitality and Wisdom each grant +2 at levels 1 and 2, then increase by +2 per additional level to +16 at level 9; level 10 remains at +16. Shield Block grants +2 rating points per level to +20, not a percentage. No activation cost, cast time, cooldown or limited duration.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 141,
+        "skillName_de": "Eiserner Wille",
+        "skillpoints": 1,
+        "vita": 2,
+        "statBonusUnits": {
+          "vita": "flat",
+          "block": "flat",
+          "wis": "flat"
+        },
+        "statScaling": {
+          "vita": {
+            "type": "table",
+            "values": [
+              2,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              16
+            ]
+          },
+          "block": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "wis": {
+            "type": "table",
+            "values": [
+              2,
+              2,
+              4,
+              6,
+              8,
+              10,
+              12,
+              14,
+              16,
+              16
+            ]
+          }
+        },
+        "wis": 2,
+        "attributeConversionBonus": {
+          "sourceStat": "vita",
+          "targetStat": "str",
+          "amountPerPoint": 0.01,
+          "usesCurrentAttributeValue": true,
+          "amountPerPointScaling": {
+            "type": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "vita"
+              ],
+              "rule": {
+                "kind": "legacyTable",
+                "values": [
+                  2,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  16
+                ],
+                "beyond": "requiresDefinition"
+              },
+              "source": "verifiedExistingLevels"
+            },
+            {
+              "path": [
+                "statScaling",
+                "block"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 2
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "wis"
+              ],
+              "rule": {
+                "kind": "legacyTable",
+                "values": [
+                  2,
+                  2,
+                  4,
+                  6,
+                  8,
+                  10,
+                  12,
+                  14,
+                  16,
+                  16
+                ],
+                "beyond": "requiresDefinition"
+              },
+              "source": "verifiedExistingLevels"
+            },
+            {
+              "path": [
+                "attributeConversionBonus",
+                "amountPerPointScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 0.01,
+                "perLevel": 0.01
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bb0",
+        "skillName_eng": "Mighty Strike",
+        "__v": 0,
+        "category": "active",
+        "cd": 27,
+        "charClass": [
+          "Gladiator",
+          "Berserker",
+          "Knife",
+          "Templar",
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Trifft den Gegner nach 0,6 Sekunden Aufladen mit einem mächtigen Hieb. Der physische Skill-Grundschaden steigt gleichmäßig von 73 auf Stufe 1 auf 733 auf Stufe 10. Mana-Kosten 18 auf Stufe 1, +18 je weiterer Stufe, maximal 180 auf Stufe 10. Keine anhaltende Wirkungsdauer, bisheriger Cooldown 27 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "After charging for 0.6 seconds, hits the opponent with a mighty strike. Physical skill base damage increases evenly from 73 at level 1 to 733 at level 10. Mana cost 18 at level 1, maximum 180 at level 10. No lasting effect; existing cooldown is 27 seconds.",
+        "dmgType": "physical",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 77,
+        "patk": 73,
+        "skillName_de": "Mächtiger Hieb",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.6,
+        "hasLingeringDamage": false,
+        "mana": 18,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 18,
+              "perLevel": 18
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 73,
+            "perLevel": 73.33333333333333
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 18,
+                  "perLevel": 18
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 73,
+                "perLevel": 73.33333333333333
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04bb0",
+        "skillName_eng": "Mighty Strike",
+        "__v": 0,
+        "category": "active",
+        "cd": 27,
+        "charClass": [
+          "Gladiator",
+          "Berserker",
+          "Knife",
+          "Templar",
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Trifft den Gegner nach 0,2 Sekunden Aufladen mit einem mächtigen Hieb. Der physische Skill-Grundschaden steigt gleichmäßig von 73 auf Stufe 1 auf 733 auf Stufe 10. Mana-Kosten 18 auf Stufe 1, +18 je weiterer Stufe, maximal 180 auf Stufe 10. Keine anhaltende Wirkungsdauer, bisheriger Cooldown 27 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "After charging for 0.2 seconds, hits the opponent with a mighty strike. Physical skill base damage increases evenly from 73 at level 1 to 733 at level 10. Mana cost 18 at level 1, maximum 180 at level 10. No lasting effect; existing cooldown is 27 seconds.",
+        "dmgType": "physical",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 77,
+        "patk": 73,
+        "skillName_de": "Mächtiger Hieb",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.2,
+        "hasLingeringDamage": false,
+        "mana": 18,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 18,
+              "perLevel": 18
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 73,
+            "perLevel": 73.33333333333333
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 18,
+                  "perLevel": 18
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 73,
+                "perLevel": 73.33333333333333
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    }
+  ],
+  "mindbreakerMaximumDuration": 30
+}

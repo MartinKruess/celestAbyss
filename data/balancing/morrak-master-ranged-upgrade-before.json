@@ -1,0 +1,77 @@
+{
+  "_id": "6acc1c7e4826525c70d04c50",
+  "skillName_eng": "Morrak's Master",
+  "__v": 0,
+  "category": "active",
+  "charClass": [
+    "Ritualist",
+    "Bloodmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört Morrak für maximal 5 Minuten; stirbt er vorher, endet die Beschwörung. Solange er beschworen ist, erhält der Anwender +5 Victim und +5 Wisdom und hat 500 weniger Max-Leben. Keine zusätzlichen Intelligenz- oder Vita-Boni. Die Max-HP-Einbuße ist nur während der Beschwörung aktiv, kein permanenter Freischaltpreis; eine solche Freischaltung wurde lediglich als Alternative diskutiert. Alle drei Anwenderboni enden mit dem Dämon. Morrak übernimmt beim Beschwören ein Drittel des Max-Lebens und ein Drittel des M-Angriffs des Anwenders, vor dem 500-Max-HP-Abzug. Diese Momentaufnahme ist vorläufig. Eine Rüstungsskalierung von etwa einem Drittel wurde vorgeschlagen, aber noch nicht festgelegt. Er kämpft im Nahkampf mit Krallen und verursacht magischen Schaden, besitzt normalen Attack-Speed-Wert 1, kein Mana und keine Cast-Spells. Jeder Auto-Attack hat 1,5 Prozent Chance, das Lauftempo des Gegners für 1,5 Sekunden um 50 Prozent zu senken. Morrak ist angreifbar und wird von Flächenangriffen normal getroffen. Castzeit der Beschwörung 0,4 Sekunden. Cooldown, weitere Aktivierungskosten, Umgang mit aktuellem Leben beim Max-HP-Wechsel, Agro-/Bedrohungsverhalten und genaue Angriffsfrequenz aus dem Speed-Wert sind noch offen. Keine pauschale Aggro-Immunität festgelegt.",
+  "description_eng": "Summons Morrak for up to 5 minutes; his death ends the summon early. While summoned, the caster gains +5 Victim and +5 Wisdom and has 500 less maximum health. No additional Intelligence or Vitality bonus. Max-health penalty applies only while summoned, not as a permanent unlock price; permanent sacrifice was only discussed as an alternative. All caster modifiers end with the demon. Provisionally snapshots one third of caster maximum health and one third of magical attack on summon, before the 500-max-health penalty. Defense scaling around one third was suggested but remains pending. Melee claw attacks deal magical damage; attack-speed rating 1, no Mana or cast spells. Each basic attack has a 1.5 percent chance to reduce enemy movement speed by 50 percent for 1.5 seconds. Morrak can be targeted and is hit normally by area attacks. Summon cast time 0.4 seconds. Cooldown, other activation costs, current-health handling on maximum-health changes, threat/aggro behavior and exact attack frequency from speed rating remain pending. No blanket aggro immunity defined.",
+  "dmgType": "spell",
+  "dur": 300,
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 237,
+  "skillName_de": "Morrak´s Meister",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.4,
+  "effects": [
+    {
+      "key": "morrak-caster-vic",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "vic",
+      "value": 5,
+      "unit": "flat",
+      "durationSeconds": 300,
+      "endWith": "morrak-summon"
+    },
+    {
+      "key": "morrak-caster-wis",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "wis",
+      "value": 5,
+      "unit": "flat",
+      "durationSeconds": 300,
+      "endWith": "morrak-summon"
+    },
+    {
+      "key": "morrak-caster-maxHealth",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "maxHealth",
+      "value": -500,
+      "unit": "flat",
+      "durationSeconds": 300,
+      "endWith": "morrak-summon"
+    }
+  ],
+  "effectsVersion": 1,
+  "summonedCreatureSettings": {
+    "name": "Morrak",
+    "healthFractionOfCaster": 0.3333333333333333,
+    "magicalAttackFractionOfCaster": 0.3333333333333333,
+    "statSampling": "onSummonBeforeHealthPenalty",
+    "defenseScalingStatus": "pending",
+    "attackStyle": "meleeClaws",
+    "damageType": "magical",
+    "attackSpeed": 1,
+    "usesMana": false,
+    "hasCastSpells": false,
+    "targetable": true,
+    "affectedByAreaAttacks": true,
+    "lifetimeSeconds": 300,
+    "endsOnCreatureDeath": true,
+    "casterBuffsEndWithCreature": true,
+    "slowProcChancePerBasicAttack": 0.015,
+    "slowDurationSeconds": 1.5,
+    "movementSlowFraction": 0.5,
+    "threatAndAggroStatus": "pending",
+    "currentHealthAdjustmentStatus": "pending"
+  }
+}

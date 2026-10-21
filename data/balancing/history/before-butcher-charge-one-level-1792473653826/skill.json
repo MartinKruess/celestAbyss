@@ -1,0 +1,161 @@
+{
+  "_id": "6acc1c7e4826525c70d04b6f",
+  "skillName_eng": "Charge",
+  "__v": 0,
+  "category": "active",
+  "cd": 130,
+  "charClass": [
+    "Butcher",
+    "Destroyer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Verstärkt dich für 15 Sekunden. Stärke 20 +1,25 je weiterer Stufe bis 25, maximale Lebenspunkte 80 +40 bis 240, P-Angriff 100 +25 bis 200 auf Stufe 5. Der Lebensbonus ist keine direkte Heilung. Cooldown 130 Sekunden, -2 je weiterer Stufe bis 122. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 102 auf Stufe 5, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+  "description_eng": "For 15 seconds, grants 20 Strength at level 1, +1.25 per additional level to 25 at level 5; maximum Health 80 +40 per level to 240; physical attack 100 +25 per level to 200. Cooldown 130 seconds, -2 per additional level to 122. Fixed cast time 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, before discounts.",
+  "dmgType": "selfbuff",
+  "dur": 15,
+  "health": 80,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 12,
+  "skillName_de": "Aufladung",
+  "skillpoints": 1,
+  "str": 20,
+  "activation": "manual",
+  "castTimeSeconds": 0.1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 130,
+    "perLevel": -2
+  },
+  "mana": 50,
+  "patk": 100,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 50,
+        "perLevel": 13
+      }
+    }
+  ],
+  "statBonusTargets": {
+    "str": "self",
+    "health": "self",
+    "patk": "self"
+  },
+  "statBonusUnits": {
+    "str": "flat",
+    "health": "flat",
+    "patk": "flat"
+  },
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 20,
+      "perLevel": 1.25
+    },
+    "health": {
+      "type": "linear",
+      "base": 80,
+      "perLevel": 40
+    },
+    "patk": {
+      "type": "linear",
+      "base": 100,
+      "perLevel": 25
+    }
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "cooldownScaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0.1,
+          "rule": {
+            "kind": "linear",
+            "base": 130,
+            "perLevel": -2
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 50,
+            "perLevel": 13
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "str"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 20,
+          "perLevel": 1.25
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "health"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 80,
+          "perLevel": 40
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "patk"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 100,
+          "perLevel": 25
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "castTimeStatus": "defined",
+  "timingModifiers": {
+    "castTimeIsFixed": true,
+    "affectedByAttackSpeed": false,
+    "affectedByCastSpeed": false
+  },
+  "manaPricing": {
+    "category": "selfbuff",
+    "basis": "skillLevel",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "classificationVersion": 1,
+  "target": "self",
+  "type": "selfBuff"
+}

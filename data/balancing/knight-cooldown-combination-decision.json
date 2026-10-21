@@ -1,0 +1,1497 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-knight-cooldown-combination-1792362043231",
+  "maximumLearned": {
+    "19": 27,
+    "23": 37,
+    "40": 74,
+    "55": 18,
+    "94": 29,
+    "95": 37
+  },
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04b76",
+        "skillName_eng": "Breaker of the Shield",
+        "__v": 0,
+        "category": "active",
+        "cd": 33,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Trifft den Gegner mit einem Schildangriff und senkt seine physische Verteidigung für zunächst 15 Sekunden um 1 Prozent. Physischer Skill-Grundschaden 97 auf Stufe 1, +46 je weiterer Stufe, maximal 511 auf Stufe 10. Mana-Kosten 24 auf Stufe 1, +12 je weiterer Stufe, maximal 132 auf Stufe 10. Castzeit 0,1 Sekunden, Cooldown 33 Sekunden auf Stufe 1 und 24 Sekunden auf Stufe 10. Die Dauer der Verteidigungssenkung steigt um 1 Sekunde je weiterer Stufe auf 24 Sekunden; ihre Stärke bleibt bei 1 Prozent. Bei Anwendung werden zusätzlich einmalig 500 feste Aggropunkte gegen das Ziel erzeugt, nach dem schadensbezogenen Aggro-Multiplikator; dieser feste Bonus wird nicht erneut multipliziert. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Hits the enemy with a shield attack and reduces physical defense by 1 percent for initially 15 seconds.  Cast time is 0.1 seconds; Cooldown 33 seconds at level 1 and 24 seconds at level 10. Defense reduction duration increases by 1 second per additional level to 24 seconds; reduction strength remains at 1 percent. On activation adds 500 flat threat toward the target once, after damage-based threat multiplication; this fixed bonus is not multiplied again. Physical skill base damage 97 at level 1, +46 per additional level, maximum 511 at level 10. Mana cost 24 +12 per additional level, maximum 132. Current physical attack is added once per target hit. Existing effects, cooldown and cast time unchanged.",
+        "dmgType": "physical",
+        "dur": 15,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 19,
+        "skillName_de": "Brecher der Deckung",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "effects": [
+          {
+            "key": "shield-breaker-defense",
+            "type": "statModifier",
+            "target": "enemy",
+            "stat": "pdef",
+            "reference": "targetStat",
+            "value": -0.01,
+            "unit": "fraction",
+            "durationSeconds": 15,
+            "durationScaling": {
+              "type": "linear",
+              "base": 15,
+              "perLevel": 1
+            }
+          },
+          {
+            "key": "breaker-flat-threat",
+            "type": "threatGain",
+            "target": "enemy",
+            "value": 500,
+            "unit": "flat",
+            "durationSeconds": 0,
+            "applicationTiming": "onActivation",
+            "affectedByThreatMultiplier": false
+          }
+        ],
+        "mana": 24,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 24,
+              "perLevel": 12
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 97,
+            "perLevel": 46
+          }
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 33,
+          "perLevel": -1
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        },
+        "patk": 97,
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 24,
+                  "perLevel": 12
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 97,
+                "perLevel": 46
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 33,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04b76",
+        "skillName_eng": "Breaker of the Shield",
+        "__v": 0,
+        "category": "active",
+        "cd": 36,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Trifft den Gegner mit einem Schildangriff und senkt seine physische Verteidigung für zunächst 15 Sekunden um 1 Prozent. Physischer Skill-Grundschaden 97 auf Stufe 1, +46 je weiterer Stufe, maximal 511 auf Stufe 10. Mana-Kosten 24 auf Stufe 1, +12 je weiterer Stufe, maximal 132 auf Stufe 10. Castzeit 0,1 Sekunden, Cooldown 36 Sekunden auf Stufe 1 und 27 Sekunden auf Stufe 10. Die Dauer der Verteidigungssenkung steigt um 1 Sekunde je weiterer Stufe auf 24 Sekunden; ihre Stärke bleibt bei 1 Prozent. Bei Anwendung werden zusätzlich einmalig 500 feste Aggropunkte gegen das Ziel erzeugt, nach dem schadensbezogenen Aggro-Multiplikator; dieser feste Bonus wird nicht erneut multipliziert. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Hits the enemy with a shield attack and reduces physical defense by 1 percent for initially 15 seconds.  Cast time is 0.1 seconds; Cooldown 36 seconds at level 1 and 27 seconds at level 10. Defense reduction duration increases by 1 second per additional level to 24 seconds; reduction strength remains at 1 percent. On activation adds 500 flat threat toward the target once, after damage-based threat multiplication; this fixed bonus is not multiplied again. Physical skill base damage 97 at level 1, +46 per additional level, maximum 511 at level 10. Mana cost 24 +12 per additional level, maximum 132. Current physical attack is added once per target hit. Other effects and cast time are unchanged.",
+        "dmgType": "physical",
+        "dur": 15,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 19,
+        "skillName_de": "Brecher der Deckung",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "effects": [
+          {
+            "key": "shield-breaker-defense",
+            "type": "statModifier",
+            "target": "enemy",
+            "stat": "pdef",
+            "reference": "targetStat",
+            "value": -0.01,
+            "unit": "fraction",
+            "durationSeconds": 15,
+            "durationScaling": {
+              "type": "linear",
+              "base": 15,
+              "perLevel": 1
+            }
+          },
+          {
+            "key": "breaker-flat-threat",
+            "type": "threatGain",
+            "target": "enemy",
+            "value": 500,
+            "unit": "flat",
+            "durationSeconds": 0,
+            "applicationTiming": "onActivation",
+            "affectedByThreatMultiplier": false
+          }
+        ],
+        "mana": 24,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 24,
+              "perLevel": 12
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 97,
+            "perLevel": 46
+          }
+        },
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 36,
+          "perLevel": -1
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        },
+        "patk": 97,
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 24,
+                  "perLevel": 12
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 97,
+                "perLevel": 46
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 36,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bc1",
+        "skillName_eng": "Shield Strike",
+        "__v": 0,
+        "category": "active",
+        "cd": 31,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Stößt mit dem Schild gegen den Gegner und verursacht einmalig physischen Grundschaden von 137 auf Stufe 1, plus 47 je weiterer Stufe auf 1030 auf Stufe 20. Keine Benommenheit oder zusätzliche Kontrollwirkung. Mana-Kosten 34 auf Stufe 1, +12 je weiterer Stufe, maximal 262 auf Stufe 20. Castzeit 0,1 Sekunden, vorläufige Animation 1 Sekunde, Cooldown 31 Sekunden auf Stufe 1 und 31 Sekunden auf Stufe 20. Keine anhaltende Schadenswirkung. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Hits the enemy with a shield thrust, dealing base physical damage once, starting at 137 and increasing by 47 per additional level to 1030 at level 20. No daze or additional control effect. Mana cost 34 at level 1, maximum 262 at level 20. Cast time is 0.1 seconds, provisional animation is 1 second, Cooldown 31 seconds at level 1 and 31 seconds at level 20. No ongoing damage.",
+        "dmgType": "physical",
+        "maxSkillLv": 20,
+        "maxUpgradeLv": 10,
+        "nr": 94,
+        "patk": 137,
+        "skillName_de": "Schildstoß",
+        "skillpoints": 1,
+        "animationDurationSeconds": 1,
+        "animationTimingStatus": "provisional",
+        "castTimeSeconds": 0.1,
+        "effects": [],
+        "hasLingeringDamage": false,
+        "mana": 34,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 34,
+              "perLevel": 12
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 137,
+            "perLevel": 47
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 34,
+                  "perLevel": 12
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 137,
+                "perLevel": 47
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04bc1",
+        "skillName_eng": "Shield Strike",
+        "__v": 0,
+        "category": "active",
+        "cd": 29,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Stößt mit dem Schild gegen den Gegner und verursacht einmalig physischen Grundschaden von 137 auf Stufe 1, plus 47 je weiterer Stufe auf 1030 auf Stufe 20. Keine Benommenheit oder zusätzliche Kontrollwirkung. Mana-Kosten 34 auf Stufe 1, +12 je weiterer Stufe, maximal 262 auf Stufe 20. Castzeit 0,1 Sekunden, vorläufige Animation 1 Sekunde, Cooldown 29 Sekunden auf Stufe 1 und 29 Sekunden auf Stufe 20. Keine anhaltende Schadenswirkung. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Hits the enemy with a shield thrust, dealing base physical damage once, starting at 137 and increasing by 47 per additional level to 1030 at level 20. No daze or additional control effect. Mana cost 34 at level 1, maximum 262 at level 20. Cast time is 0.1 seconds, provisional animation is 1 second, Cooldown 29 seconds at level 1 and 29 seconds at level 20. No ongoing damage.",
+        "dmgType": "physical",
+        "maxSkillLv": 20,
+        "maxUpgradeLv": 10,
+        "nr": 94,
+        "patk": 137,
+        "skillName_de": "Schildstoß",
+        "skillpoints": 1,
+        "animationDurationSeconds": 1,
+        "animationTimingStatus": "provisional",
+        "castTimeSeconds": 0.1,
+        "effects": [],
+        "hasLingeringDamage": false,
+        "mana": 34,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 34,
+              "perLevel": 12
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 137,
+            "perLevel": 47
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 34,
+                  "perLevel": 12
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 137,
+                "perLevel": 47
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bc2",
+        "skillName_eng": "Shield Storm",
+        "__v": 0,
+        "category": "active",
+        "cd": 39,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Stürmt mit dem Schild auf den Gegner zu und verursacht einmalig physischen Schaden. Physischer Skill-Grundschaden 272 auf Stufe 1, +65 je weiterer Stufe, maximal 1182 auf Stufe 15. Macht das Ziel zunächst 1 Sekunde benommen; die Effektdauer steigt gleichmäßig auf 3 Sekunden auf Stufe 15. Mana-Kosten 68 auf Stufe 1, +16 je weiterer Stufe, maximal 292 auf Stufe 15. Castzeit 0,1 Sekunden, bisheriger Cooldown 39 Sekunden. Keine anhaltende Schadenswirkung. Ansturmdistanz und genaue Einschränkungen durch Benommenheit werden später geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": " Dazes the target for 1 second initially, increasing evenly to 3 seconds at level 15.  Cast time is 0.1 seconds, existing cooldown is 39 seconds. No ongoing damage. Charge distance and exact daze restrictions remain to be reviewed. Physical skill base damage 272 at level 1, +65 per additional level, maximum 1182 at level 15. Mana cost 68 +16 per additional level, maximum 292. Current physical attack is added once per target hit. Existing effects, cooldown and cast time unchanged.",
+        "dmgType": "physical",
+        "dur": 1,
+        "maxSkillLv": 15,
+        "maxUpgradeLv": 10,
+        "nr": 95,
+        "patk": 272,
+        "skillName_de": "Schildsturm",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "effects": [
+          {
+            "key": "shield-storm-daze",
+            "type": "control",
+            "controlKind": "dazed",
+            "target": "enemy",
+            "actionRestrictionsStatus": "pending",
+            "durationSeconds": 1,
+            "durationScaling": {
+              "type": "linear",
+              "base": 1,
+              "perLevel": 0.14285714285714285
+            }
+          }
+        ],
+        "hasLingeringDamage": false,
+        "mana": 68,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 68,
+              "perLevel": 16
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 272,
+            "perLevel": 65
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 0.14285714285714285
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 68,
+                  "perLevel": 16
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 272,
+                "perLevel": 65
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04bc2",
+        "skillName_eng": "Shield Storm",
+        "__v": 0,
+        "category": "active",
+        "cd": 37,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Stürmt mit dem Schild auf den Gegner zu und verursacht einmalig physischen Schaden. Physischer Skill-Grundschaden 272 auf Stufe 1, +65 je weiterer Stufe, maximal 1182 auf Stufe 15. Macht das Ziel zunächst 1 Sekunde benommen; die Effektdauer steigt gleichmäßig auf 3 Sekunden auf Stufe 15. Mana-Kosten 68 auf Stufe 1, +16 je weiterer Stufe, maximal 292 auf Stufe 15. Castzeit 0,1 Sekunden, Cooldown 37 Sekunden. Keine anhaltende Schadenswirkung. Ansturmdistanz und genaue Einschränkungen durch Benommenheit werden später geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": " Dazes the target for 1 second initially, increasing evenly to 3 seconds at level 15.  Cast time is 0.1 seconds, cooldown is 37 seconds. No ongoing damage. Charge distance and exact daze restrictions remain to be reviewed. Physical skill base damage 272 at level 1, +65 per additional level, maximum 1182 at level 15. Mana cost 68 +16 per additional level, maximum 292. Current physical attack is added once per target hit. Other effects and cast time are unchanged.",
+        "dmgType": "physical",
+        "dur": 1,
+        "maxSkillLv": 15,
+        "maxUpgradeLv": 10,
+        "nr": 95,
+        "patk": 272,
+        "skillName_de": "Schildsturm",
+        "skillpoints": 1,
+        "castTimeSeconds": 0.1,
+        "effects": [
+          {
+            "key": "shield-storm-daze",
+            "type": "control",
+            "controlKind": "dazed",
+            "target": "enemy",
+            "actionRestrictionsStatus": "pending",
+            "durationSeconds": 1,
+            "durationScaling": {
+              "type": "linear",
+              "base": 1,
+              "perLevel": 0.14285714285714285
+            }
+          }
+        ],
+        "hasLingeringDamage": false,
+        "mana": 68,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 68,
+              "perLevel": 16
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 272,
+            "perLevel": 65
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 0.14285714285714285
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 68,
+                  "perLevel": 16
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 272,
+                "perLevel": 65
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04b7a",
+        "skillName_eng": "Thundering Lance",
+        "__v": 0,
+        "category": "active",
+        "cd": 39,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erschafft eine Aura um dein Schwert oder deinen Streitkolben und stürmt zum Gegner vor, um ihn einmalig zu treffen. Physischer Skill-Grundschaden 280 auf Stufe 1, +194 je weiterer Stufe, maximal 2996 auf Stufe 15. Mana-Kosten 70 auf Stufe 1, +49 je weiterer Stufe, maximal 756 auf Stufe 15. Die Ansturmzeit hängt vom Abstand zum Gegner ab und liegt vorläufig zwischen 0,1 und 3 Sekunden. Keine anhaltende Schadenswirkung. Cooldown 39 Sekunden auf Stufe 1 und 39 Sekunden auf Stufe 15. Eine zusätzliche feste Castzeit sowie Reichweite und genaue Distanz-Zeit-Berechnung sind noch nicht festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Creates an aura around your sword or mace and charges toward the enemy to hit once.  Provisional charge time depends on distance to the target and ranges from 0.1 to 3 seconds. No ongoing damage. Cooldown 39 seconds at level 1 and 39 seconds at level 15. Additional fixed cast time, range and exact distance-to-time calculation remain unspecified. Physical skill base damage 280 at level 1, +194 per additional level, maximum 2996 at level 15. Mana cost 70 +49 per additional level, maximum 756. Current physical attack is added once per target hit. Existing effects, cooldown and cast time unchanged.",
+        "dmgType": "physical",
+        "maxSkillLv": 15,
+        "maxUpgradeLv": 10,
+        "nr": 23,
+        "patk": 280,
+        "skillName_de": "Donnernde Lanze",
+        "skillpoints": 1,
+        "hasLingeringDamage": false,
+        "mana": 70,
+        "movement": {
+          "type": "chargeToEnemy",
+          "durationBasis": "targetDistance",
+          "durationRangeSeconds": {
+            "min": 0.1,
+            "max": 3
+          }
+        },
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 70,
+              "perLevel": 49
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 280,
+            "perLevel": 194
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 70,
+                  "perLevel": 49
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 280,
+                "perLevel": 194
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04b7a",
+        "skillName_eng": "Thundering Lance",
+        "__v": 0,
+        "category": "active",
+        "cd": 37,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erschafft eine Aura um dein Schwert oder deinen Streitkolben und stürmt zum Gegner vor, um ihn einmalig zu treffen. Physischer Skill-Grundschaden 280 auf Stufe 1, +194 je weiterer Stufe, maximal 2996 auf Stufe 15. Mana-Kosten 70 auf Stufe 1, +49 je weiterer Stufe, maximal 756 auf Stufe 15. Die Ansturmzeit hängt vom Abstand zum Gegner ab und liegt vorläufig zwischen 0,1 und 3 Sekunden. Keine anhaltende Schadenswirkung. Cooldown 37 Sekunden auf Stufe 1 und 37 Sekunden auf Stufe 15. Eine zusätzliche feste Castzeit sowie Reichweite und genaue Distanz-Zeit-Berechnung sind noch nicht festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Creates an aura around your sword or mace and charges toward the enemy to hit once.  Provisional charge time depends on distance to the target and ranges from 0.1 to 3 seconds. No ongoing damage. Cooldown 37 seconds at level 1 and 37 seconds at level 15. Additional fixed cast time, range and exact distance-to-time calculation remain unspecified. Physical skill base damage 280 at level 1, +194 per additional level, maximum 2996 at level 15. Mana cost 70 +49 per additional level, maximum 756. Current physical attack is added once per target hit. Other effects and cast time are unchanged.",
+        "dmgType": "physical",
+        "maxSkillLv": 15,
+        "maxUpgradeLv": 10,
+        "nr": 23,
+        "patk": 280,
+        "skillName_de": "Donnernde Lanze",
+        "skillpoints": 1,
+        "hasLingeringDamage": false,
+        "mana": 70,
+        "movement": {
+          "type": "chargeToEnemy",
+          "durationBasis": "targetDistance",
+          "durationRangeSeconds": {
+            "min": 0.1,
+            "max": 3
+          }
+        },
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 70,
+              "perLevel": 49
+            }
+          }
+        ],
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 280,
+            "perLevel": 194
+          }
+        },
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0,
+                "rule": {
+                  "kind": "linear",
+                  "base": 70,
+                  "perLevel": 49
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 280,
+                "perLevel": 194
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04b8b",
+        "skillName_eng": "Redeeming Field",
+        "__v": 0,
+        "category": "active",
+        "cd": 81,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erschafft ein heiliges Feld, das deine Aggro auf Gegner erhöht. Beim Setzen trifft es betroffene Gegner einmal physisch: einmaliger Treffer. Physischer Skill-Grundschaden 187 auf Stufe 1, +120 je weiterer Stufe, maximal 1267 auf Stufe 10. Kein zusätzlicher Schaden über Zeit. Bei Aktivierung erzeugt das Feld auf betroffene Gegner einmalig 5000 zusätzliche Aggro. Dieser feste Bonus wird nach dem schadensbezogenen Aggro-Multiplikator addiert und nicht erneut multipliziert. Gruppenmitglieder im Feld erhalten 15 zusätzlichen magischen Angriff auf Stufe 1, plus 2,5 je weiterer Stufe bis zu 37,5 auf Stufe 10. Dieser Gruppenbonus ist vom Initialtreffer getrennt. Gegner im Feld verlieren auf Stufe 1 2 Prozent physische und 1 Prozent magische Verteidigung. Beide Reduktionen steigen um 1 Prozentpunkt je weiterer Stufe auf 11 Prozent physische und 10 Prozent magische Verteidigung. Die Dauer steigt gleichmäßig von 25 auf 30 Sekunden. Der Cooldown 81 Sekunden auf Stufe 1 und 72 Sekunden auf Stufe 10. Der Feldradius beträgt 12 Meter. Mana-Kosten 47 auf Stufe 1, +30 je weiterer Stufe, maximal 317 auf Stufe 10. Castzeit 0,4 Sekunden. Ein Zeitfenster für das allgemeine Aggro-System wird hier nicht festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Creates a sacred field with a single physical hit on placement: 187 base damage at level 1 plus 120 per additional level, reaching 1267 at level 10. No damage over time. Increases threat toward enemies; on activation it adds 5000 flat threat toward affected enemies once. This flat bonus is added after damage-based threat multiplication and is not multiplied again. Group members within the field gain 15 magical attack at level 1, increasing by 2.5 per additional level to 37.5 at level 10. This group bonus is separate from the initial hit. Enemies within the field lose 2 percent physical and 1 percent magical defense at level 1. Both reductions increase by 1 percentage point per additional level to 11 percent physical and 10 percent magical defense reduction. Duration increases evenly from 25 to 30 seconds. Cooldown 81 seconds at level 1 and 72 seconds at level 10. Field radius is 12 meters.  Cast time 0.4 seconds. No general threat-system time window is defined here. Physical skill base damage 187 at level 1, +120 per additional level, maximum 1267 at level 10. Mana cost 47 +30 per additional level, maximum 317. Current physical attack is added once per target hit. Existing effects, cooldown and cast time unchanged.",
+        "dmgType": "spell",
+        "dur": 25,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 40,
+        "skillName_de": "Erlösendes Feld",
+        "skillpoints": 1,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 81,
+          "perLevel": -1
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 25,
+          "perLevel": 0.5555555555555556
+        },
+        "effects": [
+          {
+            "key": "redeeming-field-magic",
+            "type": "statModifier",
+            "target": "alliesInArea",
+            "recipientGroup": "ownGroup",
+            "stat": "matk",
+            "value": 15,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 15,
+              "perLevel": 2.5
+            },
+            "durationSeconds": 25,
+            "durationScaling": {
+              "type": "linear",
+              "base": 25,
+              "perLevel": 0.5555555555555556
+            }
+          },
+          {
+            "key": "redeeming-field-physical-defense",
+            "type": "statModifier",
+            "target": "enemiesInArea",
+            "stat": "pdef",
+            "reference": "targetStat",
+            "value": -0.02,
+            "unit": "fraction",
+            "valueScaling": {
+              "type": "linear",
+              "base": -0.02,
+              "perLevel": -0.01
+            },
+            "durationSeconds": 25,
+            "durationScaling": {
+              "type": "linear",
+              "base": 25,
+              "perLevel": 0.5555555555555556
+            }
+          },
+          {
+            "key": "redeeming-field-magical-defense",
+            "type": "statModifier",
+            "target": "enemiesInArea",
+            "stat": "mdef",
+            "reference": "targetStat",
+            "value": -0.01,
+            "unit": "fraction",
+            "valueScaling": {
+              "type": "linear",
+              "base": -0.01,
+              "perLevel": -0.01
+            },
+            "durationSeconds": 25,
+            "durationScaling": {
+              "type": "linear",
+              "base": 25,
+              "perLevel": 0.5555555555555556
+            }
+          },
+          {
+            "key": "redeeming-field-threat",
+            "type": "threatGain",
+            "target": "enemiesInArea",
+            "value": 5000,
+            "unit": "flat",
+            "durationSeconds": 0,
+            "applicationTiming": "onActivation",
+            "affectedByThreatMultiplier": false
+          }
+        ],
+        "areaSettings": {
+          "radiusMeters": 12
+        },
+        "attackExecution": {
+          "hitCount": 1,
+          "damageValueScope": "perHit"
+        },
+        "hasLingeringDamage": false,
+        "patk": 187,
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 187,
+            "perLevel": 120
+          }
+        },
+        "castTimeSeconds": 0.4,
+        "mana": 47,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 47,
+              "perLevel": 30
+            }
+          }
+        ],
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 81,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "0",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 2.5
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": -0.02,
+                "perLevel": -0.01
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": -0.01,
+                "perLevel": -0.01
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 187,
+                "perLevel": 120
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "outputCost",
+                "factor": 0.25,
+                "basis": "damage",
+                "minimum": 0
+              },
+              "source": "verifiedManaPricing"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      },
+      "skill": {
+        "_id": "6acc1c7e4826525c70d04b8b",
+        "skillName_eng": "Redeeming Field",
+        "__v": 0,
+        "category": "active",
+        "cd": 83,
+        "charClass": [
+          "Knife",
+          "Templar"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erschafft ein heiliges Feld, das deine Aggro auf Gegner erhöht. Beim Setzen trifft es betroffene Gegner einmal physisch: einmaliger Treffer. Physischer Skill-Grundschaden 187 auf Stufe 1, +120 je weiterer Stufe, maximal 1267 auf Stufe 10. Kein zusätzlicher Schaden über Zeit. Bei Aktivierung erzeugt das Feld auf betroffene Gegner einmalig 5000 zusätzliche Aggro. Dieser feste Bonus wird nach dem schadensbezogenen Aggro-Multiplikator addiert und nicht erneut multipliziert. Gruppenmitglieder im Feld erhalten 15 zusätzlichen magischen Angriff auf Stufe 1, plus 2,5 je weiterer Stufe bis zu 37,5 auf Stufe 10. Dieser Gruppenbonus ist vom Initialtreffer getrennt. Gegner im Feld verlieren auf Stufe 1 2 Prozent physische und 1 Prozent magische Verteidigung. Beide Reduktionen steigen um 1 Prozentpunkt je weiterer Stufe auf 11 Prozent physische und 10 Prozent magische Verteidigung. Die Dauer steigt gleichmäßig von 25 auf 30 Sekunden. Der Cooldown 83 Sekunden auf Stufe 1 und 74 Sekunden auf Stufe 10. Der Feldradius beträgt 12 Meter. Mana-Kosten 47 auf Stufe 1, +30 je weiterer Stufe, maximal 317 auf Stufe 10. Castzeit 0,4 Sekunden. Ein Zeitfenster für das allgemeine Aggro-System wird hier nicht festgelegt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Creates a sacred field with a single physical hit on placement: 187 base damage at level 1 plus 120 per additional level, reaching 1267 at level 10. No damage over time. Increases threat toward enemies; on activation it adds 5000 flat threat toward affected enemies once. This flat bonus is added after damage-based threat multiplication and is not multiplied again. Group members within the field gain 15 magical attack at level 1, increasing by 2.5 per additional level to 37.5 at level 10. This group bonus is separate from the initial hit. Enemies within the field lose 2 percent physical and 1 percent magical defense at level 1. Both reductions increase by 1 percentage point per additional level to 11 percent physical and 10 percent magical defense reduction. Duration increases evenly from 25 to 30 seconds. Cooldown 83 seconds at level 1 and 74 seconds at level 10. Field radius is 12 meters.  Cast time 0.4 seconds. No general threat-system time window is defined here. Physical skill base damage 187 at level 1, +120 per additional level, maximum 1267 at level 10. Mana cost 47 +30 per additional level, maximum 317. Current physical attack is added once per target hit. Other effects and cast time are unchanged.",
+        "dmgType": "spell",
+        "dur": 25,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 40,
+        "skillName_de": "Erlösendes Feld",
+        "skillpoints": 1,
+        "cooldownScaling": {
+          "type": "linear",
+          "base": 83,
+          "perLevel": -1
+        },
+        "durationScaling": {
+          "type": "linear",
+          "base": 25,
+          "perLevel": 0.5555555555555556
+        },
+        "effects": [
+          {
+            "key": "redeeming-field-magic",
+            "type": "statModifier",
+            "target": "alliesInArea",
+            "recipientGroup": "ownGroup",
+            "stat": "matk",
+            "value": 15,
+            "unit": "flat",
+            "valueScaling": {
+              "type": "linear",
+              "base": 15,
+              "perLevel": 2.5
+            },
+            "durationSeconds": 25,
+            "durationScaling": {
+              "type": "linear",
+              "base": 25,
+              "perLevel": 0.5555555555555556
+            }
+          },
+          {
+            "key": "redeeming-field-physical-defense",
+            "type": "statModifier",
+            "target": "enemiesInArea",
+            "stat": "pdef",
+            "reference": "targetStat",
+            "value": -0.02,
+            "unit": "fraction",
+            "valueScaling": {
+              "type": "linear",
+              "base": -0.02,
+              "perLevel": -0.01
+            },
+            "durationSeconds": 25,
+            "durationScaling": {
+              "type": "linear",
+              "base": 25,
+              "perLevel": 0.5555555555555556
+            }
+          },
+          {
+            "key": "redeeming-field-magical-defense",
+            "type": "statModifier",
+            "target": "enemiesInArea",
+            "stat": "mdef",
+            "reference": "targetStat",
+            "value": -0.01,
+            "unit": "fraction",
+            "valueScaling": {
+              "type": "linear",
+              "base": -0.01,
+              "perLevel": -0.01
+            },
+            "durationSeconds": 25,
+            "durationScaling": {
+              "type": "linear",
+              "base": 25,
+              "perLevel": 0.5555555555555556
+            }
+          },
+          {
+            "key": "redeeming-field-threat",
+            "type": "threatGain",
+            "target": "enemiesInArea",
+            "value": 5000,
+            "unit": "flat",
+            "durationSeconds": 0,
+            "applicationTiming": "onActivation",
+            "affectedByThreatMultiplier": false
+          }
+        ],
+        "areaSettings": {
+          "radiusMeters": 12
+        },
+        "attackExecution": {
+          "hitCount": 1,
+          "damageValueScope": "perHit"
+        },
+        "hasLingeringDamage": false,
+        "patk": 187,
+        "statScaling": {
+          "patk": {
+            "type": "linear",
+            "base": 187,
+            "perLevel": 120
+          }
+        },
+        "castTimeSeconds": 0.4,
+        "mana": 47,
+        "resourceCosts": [
+          {
+            "resource": "mana",
+            "reference": "maxMana",
+            "unit": "flat",
+            "scaling": {
+              "type": "linear",
+              "base": 47,
+              "perLevel": 30
+            }
+          }
+        ],
+        "manaPricing": {
+          "category": "normal",
+          "factor": 0.25,
+          "basis": "skillBaseDamagePerTarget",
+          "usesCharacterAttack": false,
+          "version": 1
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "cooldownScaling"
+              ],
+              "rule": {
+                "kind": "bounded",
+                "min": 0.1,
+                "rule": {
+                  "kind": "linear",
+                  "base": 83,
+                  "perLevel": -1
+                }
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "0",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 15,
+                "perLevel": 2.5
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "0",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": -0.02,
+                "perLevel": -0.01
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": -0.01,
+                "perLevel": -0.01
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "2",
+                "durationScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 25,
+                "perLevel": 0.5555555555555556
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "patk"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 187,
+                "perLevel": 120
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "resourceCosts",
+                "0",
+                "scaling"
+              ],
+              "rule": {
+                "kind": "outputCost",
+                "factor": 0.25,
+                "basis": "damage",
+                "minimum": 0
+              },
+              "source": "verifiedManaPricing"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        }
+      }
+    }
+  ],
+  "expectedDamage": 607805.1599999974
+}

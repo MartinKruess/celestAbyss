@@ -1,0 +1,192 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bd9",
+    "skillName_eng": "Vacuum Impulse",
+    "__v": 0,
+    "category": "active",
+    "cd": 150,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nach Abschluss der Castzeit trifft ein körperlicher Initialschlag ausschließlich das anvisierte Ziel: 266 physischer Grundschaden auf Stufe 1, +178,5 je weiterer Stufe bis 980 auf Stufe 5, zuzüglich einmal des aktuellen P-Angriffs. Anschließend werden Gegner im Radius von 10 Metern zum Skillzentrum gezogen. Die Zuggeschwindigkeit beträgt 110 auf der relativen Skala mit Standard-Lauftempo 100 und wird mit der freiwilligen Bewegung kombiniert; am Zentrum endet der Zug. Verhalten in der Luft und Umsetzung in Unreal-Bewegungseinheiten bleiben offen. Ansaugdauer 4 Sekunden, +0,75 je weiterer Stufe bis 7 Sekunden. Danach trifft eine einmalige magische Explosion alle noch im Bereich befindlichen Gegner einschließlich des ursprünglichen Ziels: 532 Grundschaden, +357 je weiterer Stufe bis 1960, zuzüglich einmal des aktuellen M-Angriffs je getroffenem Gegner. Während des Ansaugens kein wiederholter Schaden. Mana unverändert 133 +89 bis 489, Castzeit 0,8 Sekunden, Cooldown 150 minus 2 je weiterer Stufe bis 142 Sekunden.",
+    "description_eng": "At cast completion, only the selected enemy takes one physical hit: base 266 plus 178.5 per additional level to 980 at level 5, plus current physical attack once. Enemies within 10 meters are then pulled toward the skill center at speed 110 on a relative scale where standard movement is 100, combined with voluntary movement and stopping at the center. Airborne behavior and Unreal movement-unit conversion remain undefined. Pull duration is 4 seconds plus 0.75 per additional level to 7. At its end, one magical explosion hits every enemy still inside, including the original target if present: base 532 plus 357 per additional level to 1960, plus current magical attack once per target. No repeated damage during the pull. Mana unchanged at 133 plus 89 to 489, cast time 0.8 seconds, cooldown 150 minus 2 per additional level to 142 seconds.",
+    "dmgType": "spell",
+    "dur": 4,
+    "matk": 532,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 118,
+    "skillName_de": "Vakuumimpuls",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 10,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "defined"
+    },
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perApplication",
+      "hitTimingStatus": "defined",
+      "damagePhases": [
+        {
+          "stat": "patk",
+          "timing": "castEnd",
+          "target": "enemy",
+          "addsCasterAttack": true
+        },
+        {
+          "stat": "matk",
+          "timing": "afterSkillDuration",
+          "target": "enemiesInArea",
+          "addsCasterAttack": true
+        }
+      ]
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 150,
+      "perLevel": -2
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 0.75
+    },
+    "effects": [
+      {
+        "key": "vacuum-impulse-pull",
+        "type": "control",
+        "controlKind": "pull",
+        "target": "enemiesInArea",
+        "pullCenter": "skillCenter",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 0.75
+        },
+        "pullSpeed": 110,
+        "pullSpeedReference": "standardMovement100",
+        "combinesWithVoluntaryMovement": true,
+        "stopsAtCenter": true,
+        "airbornePullStatus": "pending"
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 133,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 133,
+          "perLevel": 89
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 532,
+        "perLevel": 357
+      },
+      "patk": {
+        "type": "linear",
+        "base": 266,
+        "perLevel": 178.5
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "patk": 266
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c37",
+    "skillName_eng": "Skybreaker",
+    "__v": 0,
+    "category": "active",
+    "cd": 137,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein gleißendes Licht trifft deine Feinde zweimal mit kombiniertem physischem und magischem Schaden. Zu Beginn der Animation erfolgt ein Treffer mit 100 Prozent des Schadenswerts, am Ende ein zweiter mit 80 Prozent. Physischer Grundschaden des ersten Treffers steigt von 144 um 22 je weiterer Stufe auf 342 auf Stufe 10; magischer Grundschaden steigt von 292 um 44 auf 688. Auf Stufe 10 beträgt der erste Treffer zusammen 1030 und der zweite 824 Skill-Grundschaden, insgesamt 1854 vor Charakterangriff und gegnerischer Verteidigung. Mana-Kosten 196 auf Stufe 1, +30 je weiterer Stufe, maximal 466 auf Stufe 10. Castzeit 0,6 Sekunden, vorläufige Animation 2,5 Sekunden. Der zweite Treffer liegt vorläufig bei 2,5 Sekunden nach Animationsbeginn; bei Anpassung der Animation wird sein Zeitpunkt mit angepasst. Bisheriger Cooldown 137 Sekunden. Kein zusätzlicher DoT; Trefferbereich wird noch geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "A dazzling light hits your enemies twice with combined physical and magical damage. The first hit occurs at animation start for 100 percent of the damage value; the second occurs at animation end for 80 percent. First-hit base physical damage increases from 144 by 22 per additional level to 342 at level 10; base magical damage increases from 292 by 44 to 688. At level 10 the first hit totals 1030 skill base damage and the second 824, totaling 1854 before character attack and enemy defense. Mana cost 196 at level 1, maximum 466 at level 10. Cast time is 0.6 seconds; provisional animation is 2.5 seconds. The second hit is provisionally 2.5 seconds after animation start and will move with any animation-duration adjustment. Existing cooldown is 137 seconds. No additional DoT; hit area remains pending.",
+    "dmgType": "spell",
+    "matk": 292,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 212,
+    "patk": 144,
+    "skillName_de": "Himmelsbrecher",
+    "skillpoints": 1,
+    "animationDurationSeconds": 2.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.6,
+    "hasLingeringDamage": false,
+    "mana": 196,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 196,
+          "perLevel": 30
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 144,
+        "perLevel": 22
+      },
+      "matk": {
+        "type": "linear",
+        "base": 292,
+        "perLevel": 44
+      }
+    },
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending",
+      "hitSequence": [
+        {
+          "offsetSeconds": 0,
+          "damageMultiplier": 1
+        },
+        {
+          "offsetSeconds": 2.5,
+          "damageMultiplier": 0.8
+        }
+      ]
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  }
+]

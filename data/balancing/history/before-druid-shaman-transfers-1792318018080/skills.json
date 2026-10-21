@@ -1,0 +1,953 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b72",
+    "skillName_eng": "Tremor",
+    "__v": 0,
+    "category": "active",
+    "cd": 40,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schmettert deine Waffe auf den Boden und erzeugt ein Beben, das getroffene Gegner schädigt und verlangsamt. Der physische Grundangriffswert steigt von 81 um 39 je weiterer Skillstufe auf 822. Die Mana-Kosten 20 auf Stufe 1, +10 je weiterer Stufe, maximal 210 auf Stufe 20. Der Cooldown sinkt von 40 auf 30 Sekunden. Die Verlangsamung beginnt bei 5 Prozent für 1 Sekunde. Auf Skilllevel 5, 10, 15 und 20 steigt sie jeweils um 1 Prozentpunkt und ihre Dauer um 0,5 Sekunden, bis zu 9 Prozent für 3 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Slams your weapon into the ground, causing a tremor that damages and slows affected enemies. Physical base attack increases from 81 by 39 per additional skill level to 822. Mana cost 20 at level 1, maximum 210 at level 20. Cooldown decreases from 40 to 30 seconds. The slow starts at 5 percent for 1 second. At skill levels 5, 10, 15 and 20, it increases by 1 percentage point and lasts 0.5 seconds longer, reaching 9 percent for 3 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 15,
+    "patk": 81,
+    "skillName_de": "Beben",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 40,
+      "perLevel": -0.5263157894736842
+    },
+    "effects": [
+      {
+        "key": "tremorSlow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationStatus": "defined",
+        "progressionStatus": "defined",
+        "durationSeconds": 1,
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.05,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.06,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.07,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.08,
+            -0.09
+          ]
+        },
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            1,
+            1,
+            1,
+            1,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            1.5,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            2.5,
+            3
+          ]
+        }
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 20,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 10
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 81,
+        "perLevel": 39
+      }
+    },
+    "castTimeSeconds": 0.2,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b81",
+    "skillName_eng": "Ice Thorns",
+    "__v": 0,
+    "category": "active",
+    "cd": 22,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer verursacht magischen Grundschaden von 123 auf Stufe 1, plus 37 je weiterer Stufe, bis zu 456 auf Stufe 10. Die Fesselwirkung steigt gleichmäßig von 1 auf 4 Sekunden über zehn Stufen. Währenddessen verursacht ein DoT nach jeder vollen Sekunde 8 festen magischen Schaden auf Stufe 1, plus 4 je weiterer Stufe, bis zu 44 je Tick auf Stufe 10. Der DoT erhält keinen zusätzlichen M-Angriffsbeitrag pro Tick. Auf Stufe 10 ergeben sich vier Ticks mit zusammen 176 und insgesamt 632 Skill-Grundschaden einschließlich erstem Treffer, vor zusätzlichem Charakterangriff auf den ersten Treffer und gegnerischer Verteidigung. Castzeit 0,5 Sekunden, bisheriger Cooldown 22 Sekunden. Mana-Kosten 33 auf Stufe 1, Stufenwerte 33, 43, 53, 69, 80, 91, 110, 123, 135, 158, maximal 158 auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Encloses the opponent in ice thorns, rooting them. Initial magical base damage starts at 123 at level 1 and increases by 37 per additional level to 456 at level 10. Root duration increases evenly from 1 to 4 seconds over ten levels. During this time a DoT ticks after each full second for 8 flat magical damage at level 1, increasing by 4 per additional level to 44 per tick at level 10. The DoT does not add caster magical attack per tick. At level 10 four ticks deal 176 damage, totaling 632 skill base damage including the initial hit, before additional character attack on the initial hit and enemy defense. Cast time is 0.5 seconds; existing cooldown is 22 seconds. Mana cost 33 at level 1, maximum 158 at level 10.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 123,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 30,
+    "skillName_de": "Eisranken",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.5,
+    "durationScaling": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.3333333333333333
+    },
+    "effects": [
+      {
+        "key": "ice-thorns-root",
+        "type": "control",
+        "controlKind": "root",
+        "target": "enemy",
+        "actionRestrictionsStatus": "defined",
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.3333333333333333
+        }
+      },
+      {
+        "key": "ice-thorns-dot",
+        "type": "periodicDamage",
+        "target": "enemy",
+        "value": 8,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "addsCasterMagicalAttack": false,
+        "valueScaling": {
+          "type": "linear",
+          "base": 8,
+          "perLevel": 4
+        },
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.3333333333333333
+        }
+      }
+    ],
+    "hasLingeringDamage": true,
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 123,
+        "perLevel": 37
+      }
+    },
+    "mana": 33,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            33,
+            43,
+            53,
+            69,
+            80,
+            91,
+            110,
+            123,
+            135,
+            158
+          ],
+          "base": 33
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b89",
+    "skillName_eng": "Earthquake",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer",
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein Erdbeben in einem kreisförmigen Bereich mit 5 Metern Radius um dich und trifft Gegner physisch und magisch. Verlangsamt getroffene Gegner für 3 Sekunden: auf Level 1 um 7 Prozent, je weiterer Stufe um 1 Prozentpunkt mehr, bis zu 16 Prozent auf Level 10. Der physische Grundangriffswert steigt von 167 um 53 je weiterer Stufe auf 644, der magische von 35 um 25 auf 260. Die Mana-Kosten 51 auf Stufe 1, +20 je weiterer Stufe, maximal 231 auf Stufe 10. Die Cast Time beträgt 0,1 Sekunden, der Cooldown bleibt zunächst bei 55 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Causes an earthquake in a circular 5 meter radius around you, dealing physical and magical damage to enemies. Slows affected enemies for 3 seconds: 7 percent at level 1, increasing by 1 percentage point per additional level to 16 percent at level 10. Physical base attack increases from 167 by 53 per additional level to 644; magical base attack increases from 35 by 25 to 260. Mana cost 51 at level 1, maximum 231 at level 10. Cast time is 0.1 seconds and cooldown remains provisionally 55 seconds.",
+    "dmgType": "physical",
+    "dur": 3,
+    "matk": 35,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 38,
+    "patk": 167,
+    "skillName_de": "Erdbeben",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "mana": 51,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 51,
+          "perLevel": 20
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 167,
+        "perLevel": 53
+      },
+      "matk": {
+        "type": "linear",
+        "base": 35,
+        "perLevel": 25
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 5,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "effects": [
+      {
+        "key": "earthquakeSlow",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": -0.07,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 3,
+        "durationStatus": "defined",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.07,
+          "perLevel": -0.01
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b8c",
+    "skillName_eng": "First Aid",
+    "__v": 0,
+    "category": "active",
+    "cd": 35,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Luminet",
+      "Lightmage",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt dich nach einer Cast Time von 0,2 Sekunden sofort um 50 Lebenspunkte. Je weiterer Skillstufe steigt die Heilung um 25, bis zu 275 Lebenspunkten. Die Mana-Kosten 18 auf Stufe 1, +9 je weiterer Stufe, maximal 99 auf Stufe 10. Der Cooldown sinkt von 35 um 1 Sekunde je weiterer Stufe auf 26 Sekunden. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Instantly heals you for 50 Health after a 0.2 second cast time. Healing increases by 25 per additional skill level, up to 275 Health. Mana cost 18 at level 1, maximum 99 at level 10. Cooldown decreases from 35 by 1 second per additional level to 26 seconds.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 41,
+    "skillName_de": "Erste Hilfe",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 35,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "key": "firstAidHeal",
+        "type": "heal",
+        "target": "self",
+        "unit": "flat",
+        "value": 50,
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 25
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 18,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 18,
+          "perLevel": 9
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "heal",
+      "factor": 0.35,
+      "basis": "healingPerRecipient",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcd",
+    "skillName_eng": "Leap Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Druide",
+      "Alchemist",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Springt senkrecht hoch und schlägt mit der Waffe auf den Boden. Trifft Gegner in einem kreisförmigen Bereich mit 2 Metern Radius um dich, ohne Vorwärtsbewegung oder zusätzlichen Debuff. Der physische Skill-Grundschaden steigt gleichmäßig von 391 auf Stufe 1 auf 1606 auf Stufe 10. Die Mana-Kosten 98 auf Stufe 1, +34 je weiterer Stufe, maximal 404 auf Stufe 10. Der Cooldown 45 Sekunden auf Stufe 1 und 36 Sekunden auf Stufe 10. Die Aktion beginnt ohne zusätzliche Cast Time; die Animation dauert vorläufig 0,5 Sekunden. Sprunghöhe und genauer Trefferzeitpunkt werden im Spiel geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Jumps vertically and slams the weapon into the ground. Hits enemies within a circular 2 meter radius around you, with no forward movement or additional debuff. Physical skill base damage increases evenly from 391 at level 1 to 1606 at level 10. Mana cost 98 at level 1, maximum 404 at level 10. Cooldown 45 seconds at level 1 and 36 seconds at level 10. The action begins without additional cast time; provisional animation duration is 0.5 seconds. Jump height and exact impact timing will be verified in game.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 106,
+    "patk": 391,
+    "skillName_de": "Sprungschlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "mana": 98,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 98,
+          "perLevel": 34
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 391,
+        "perLevel": 135
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "caster",
+      "radiusMeters": 2,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "pending"
+    },
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 45,
+      "perLevel": -1
+    },
+    "effects": [],
+    "movement": {
+      "type": "verticalJump",
+      "forwardDistanceMeters": 0,
+      "heightStatus": "provisional"
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd9",
+    "skillName_eng": "Vacuum Impulse",
+    "__v": 0,
+    "category": "active",
+    "cd": 150,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Zieht Gegner innerhalb von 10 Metern Radius zum Zentrum des Skills. Nach der Ansaugphase explodiert das Feld und verursacht einmalig magischen Grundschaden je getroffenem Gegner: 532 auf Stufe 1, plus 357 je weiterer Stufe, bis zu 1960 auf Stufe 5. Die Ansaugphase steigt von 4 auf 7 Sekunden über fünf Stufen. Während dieser Phase verursacht der Skill keinen zusätzlichen Schaden über Zeit. Mana-Kosten 133 auf Stufe 1, +89 je weiterer Stufe, maximal 489 auf Stufe 5. Der Cooldown sinkt von 150 um 2 Sekunden je weiterer Stufe auf 142 Sekunden. Castzeit 0,8 Sekunden. Platzierung des Skillzentrums, genaue Zugbewegung und Verhalten gegen kontrollimmune Ziele werden später geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Pulls enemies within a 10 meter radius toward the skill center. After the pull phase, the field explodes once, dealing magical base damage per enemy hit: 532 at level 1, increasing by 357 per additional level to 1960 at level 5. Pull duration increases from 4 to 7 seconds over five levels. This phase deals no additional damage over time. Mana cost 133 at level 1, maximum 489 at level 5. Cooldown decreases from 150 by 2 seconds per additional level to 142 seconds. Cast time is 0.8 seconds. Skill-center placement, exact pull movement and behavior against control-immune targets remain to be reviewed.",
+    "dmgType": "spell",
+    "dur": 4,
+    "matk": 532,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 118,
+    "skillName_de": "Vakuumimpuls",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 10,
+      "target": "enemiesInArea",
+      "evaluation": "atImpact",
+      "timingStatus": "defined"
+    },
+    "attackExecution": {
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "damageTiming": "afterSkillDuration",
+      "hitTimingStatus": "defined"
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 150,
+      "perLevel": -2
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 0.75
+    },
+    "effects": [
+      {
+        "key": "vacuum-impulse-pull",
+        "type": "control",
+        "controlKind": "pull",
+        "target": "enemiesInArea",
+        "pullCenter": "skillCenter",
+        "actionRestrictionsStatus": "pending",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 0.75
+        }
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 133,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 133,
+          "perLevel": 89
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 532,
+        "perLevel": 357
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be0",
+    "skillName_eng": "Wind Shackles",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Trifft den Gegner einmalig mit Windmagie und verlangsamt sein Angriffstempo. Der magische Grundschaden steigt von 223 um 34 je weiterer Stufe auf 529 auf Stufe 10. Die Angriffstempo-Senkung beträgt 1 Prozent je gelerntem Skilllevel, bis zu 10 Prozent. Die Debuffdauer steigt gleichmäßig von 1 auf 5 Sekunden. Mana-Kosten 56 auf Stufe 1, +9 je weiterer Stufe, maximal 137 auf Stufe 10. Castzeit 0,2 Sekunden, bisheriger Cooldown 37 Sekunden. Keine zusätzliche Bewegungsfessel und kein Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Hits the enemy once with wind magic and slows their attack speed. Base magical damage increases from 223 by 34 per additional level to 529 at level 10. Attack speed reduction is 1 percent per learned skill level, reaching 10 percent. Debuff duration increases evenly from 1 to 5 seconds. Mana cost 56 at level 1, maximum 137 at level 10. Cast time is 0.2 seconds; existing cooldown is 37 seconds. No additional movement root or damage over time.",
+    "dmgType": "spell",
+    "dur": 1,
+    "matk": 223,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 125,
+    "skillName_de": "Windfesseln",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "durationScaling": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.4444444444444444
+    },
+    "effects": [
+      {
+        "key": "wind-shackles-attack-speed",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "atkSpeed",
+        "reference": "targetStat",
+        "unit": "fraction",
+        "value": -0.01,
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.01,
+          "perLevel": -0.01
+        },
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.4444444444444444
+        }
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 56,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 56,
+          "perLevel": 9
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 223,
+        "perLevel": 34
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c23",
+    "skillName_eng": "Power of the Rock",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die physische Verteidigung deiner Gruppe einschließlich dir selbst um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 10 kommen zusätzlich 5 Vitalität hinzu. Die Mana-Kosten steigen von 54 um 16 je weiterer Stufe auf 198. Castzeit 0,6 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases physical defense for your group, including yourself, by 18 per learned skill level, reaching 180 at level 10. Level 10 additionally grants 5 Vitality. Mana cost increases from 54 by 16 per additional level to 198. Cast time is 0.6 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 192,
+    "pdef": 18,
+    "skillName_de": "Macht des Felsens",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "mana": 54,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 54,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2b",
+    "skillName_eng": "Mana Conversion",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Wandelt eigenes Leben in Mana um. Je gelerntem Skilllevel opferst du 50 HP und erhältst 35 Mana, bis zu 500 HP für 350 Mana auf Stufe 10. Castzeit 1,2 Sekunden. Die Umwandlung erfolgt einmalig und hat keine anhaltende Wirkungsdauer. Der Cooldown beginnt bei 75 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 66 Sekunden. Bei unzureichendem Leben ist der Skill nicht aktivierbar.",
+    "description_eng": "Converts your own Health into Mana. Each learned skill level costs 50 HP and restores 35 Mana, reaching 500 HP for 350 Mana at level 10. Cast time is 1.2 seconds. Conversion occurs once with no lasting effect. Cooldown starts at 75 seconds and decreases by 1 second per additional level to 66 seconds. Cannot be activated with insufficient Health.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 200,
+    "skillName_de": "Mana Umwandlung",
+    "skillpoints": 1,
+    "castTimeSeconds": 1.2,
+    "cd": 75,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 75,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "key": "mana-conversion-gain",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "mana",
+        "unit": "flat",
+        "value": 35,
+        "valueScaling": {
+          "type": "linear",
+          "base": 35,
+          "perLevel": 35
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "resourceCosts": [
+      {
+        "resource": "health",
+        "reference": "maxHealth",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 50
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2d",
+    "skillName_eng": "Burn",
+    "__v": 0,
+    "category": "active",
+    "cd": 22,
+    "charClass": [
+      "Druide",
+      "Alchemist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lässt getroffene Gegner für 5 Sekunden brennen. Jede Sekunde verursacht der Schaden über Zeit den magischen Grundschadenswert des Skills: 12 auf Stufe 1, plus 6 je weiterer Stufe, bis zu 96 je Tick auf Stufe 15. Insgesamt fünf Ticks. Die Mana-Kosten 15 auf Stufe 1, +8 je weiterer Stufe, maximal 127 auf Stufe 15. Castzeit 0,8 Sekunden. Der bisherige Cooldown beträgt 22 Sekunden. Zielanzahl und Trefferbereich werden noch geprüft. Nachwirkender Verbrennungs-DoT: kein erneuter Charakter-M-Angriff je Tick. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Burns affected enemies for 5 seconds. Each second deals the skill base magical damage value: 12 at level 1, increasing by 6 per additional level to 96 per tick at level 15. Five ticks in total. Mana cost 15 at level 1, maximum 127 at level 15. Cast time is 0.8 seconds. Existing cooldown is 22 seconds. Target count and hit area remain to be reviewed. Residual burn damage does not add caster magical attack again each tick.",
+    "dmgType": "spell",
+    "dur": 5,
+    "matk": 12,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 202,
+    "skillName_de": "Verbrennen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.8,
+    "effects": [
+      {
+        "key": "burn-dot",
+        "type": "periodicDamage",
+        "target": "enemy",
+        "value": 12,
+        "unit": "flat",
+        "damageTypes": [
+          "magical"
+        ],
+        "intervalSeconds": 1,
+        "firstTickAfterSeconds": 1,
+        "durationSeconds": 5,
+        "valueScaling": {
+          "type": "linear",
+          "base": 12,
+          "perLevel": 6
+        },
+        "periodicDamageKind": "residualDot",
+        "addsCasterMagicalAttack": false
+      }
+    ],
+    "hasLingeringDamage": true,
+    "mana": 15,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 8
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 12,
+        "perLevel": 6
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c37",
+    "skillName_eng": "Skybreaker",
+    "__v": 0,
+    "category": "active",
+    "cd": 137,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein gleißendes Licht trifft deine Feinde zweimal mit kombiniertem physischem und magischem Schaden. Zu Beginn der Animation erfolgt ein Treffer mit 100 Prozent des Schadenswerts, am Ende ein zweiter mit 80 Prozent. Physischer Grundschaden des ersten Treffers steigt von 144 um 22 je weiterer Stufe auf 342 auf Stufe 10; magischer Grundschaden steigt von 292 um 44 auf 688. Auf Stufe 10 beträgt der erste Treffer zusammen 1030 und der zweite 824 Skill-Grundschaden, insgesamt 1854 vor Charakterangriff und gegnerischer Verteidigung. Mana-Kosten 196 auf Stufe 1, +30 je weiterer Stufe, maximal 466 auf Stufe 10. Castzeit 0,6 Sekunden, vorläufige Animation 2,5 Sekunden. Der zweite Treffer liegt vorläufig bei 2,5 Sekunden nach Animationsbeginn; bei Anpassung der Animation wird sein Zeitpunkt mit angepasst. Bisheriger Cooldown 137 Sekunden. Kein zusätzlicher DoT; Trefferbereich wird noch geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "A dazzling light hits your enemies twice with combined physical and magical damage. The first hit occurs at animation start for 100 percent of the damage value; the second occurs at animation end for 80 percent. First-hit base physical damage increases from 144 by 22 per additional level to 342 at level 10; base magical damage increases from 292 by 44 to 688. At level 10 the first hit totals 1030 skill base damage and the second 824, totaling 1854 before character attack and enemy defense. Mana cost 196 at level 1, maximum 466 at level 10. Cast time is 0.6 seconds; provisional animation is 2.5 seconds. The second hit is provisionally 2.5 seconds after animation start and will move with any animation-duration adjustment. Existing cooldown is 137 seconds. No additional DoT; hit area remains pending.",
+    "dmgType": "spell",
+    "matk": 292,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 212,
+    "patk": 144,
+    "skillName_de": "Himmelsbrecher",
+    "skillpoints": 1,
+    "animationDurationSeconds": 2.5,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.6,
+    "hasLingeringDamage": false,
+    "mana": 196,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 196,
+          "perLevel": 30
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 144,
+        "perLevel": 22
+      },
+      "matk": {
+        "type": "linear",
+        "base": 292,
+        "perLevel": 44
+      }
+    },
+    "attackExecution": {
+      "hitCount": 2,
+      "damageValueScope": "perHit",
+      "hitTimingStatus": "pending",
+      "hitSequence": [
+        {
+          "offsetSeconds": 0,
+          "damageMultiplier": 1
+        },
+        {
+          "offsetSeconds": 2.5,
+          "damageMultiplier": 0.8
+        }
+      ]
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c44",
+    "skillName_eng": "Power of Mind",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht die magische Verteidigung deiner Gruppe um 18 je gelerntem Skilllevel, bis zu 180 auf Stufe 10. Auf Stufe 10 kommen zusätzlich 5 Wisdom hinzu. Mana-Kosten beginnen bei 63 und steigen um 25 je weiterer Stufe auf 288. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases group magical defense by 18 per learned skill level, reaching 180 at level 10. Level 10 additionally grants 5 Wisdom. Mana cost starts at 63 and increases by 25 per additional level to 288. Cast time is 0.4 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 18,
+    "nr": 225,
+    "skillName_de": "Macht des Geistes",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 25
+        }
+      }
+    ],
+    "statScaling": {
+      "mdef": {
+        "type": "linear",
+        "base": 18,
+        "perLevel": 18
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba7",
+  "skillName_eng": "Crystallized Water Sphere",
+  "__v": 0,
+  "category": "active",
+  "cd": 29,
+  "charClass": [
+    "Shamane",
+    "High Elves"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmalig magischen Schaden verursacht. Der Grundschaden steigt von 137 um 27 je weiterer Stufe auf 380 auf Stufe 10. Mana-Kosten steigen von 39 um 14 je weiterer Stufe auf 165. Der Cooldown sinkt gleichmäßig von 29 auf 25 Sekunden. Castzeit 0,2 Sekunden. Die vorläufige Animation dauert 1 Sekunde; keine anhaltende Wirkungsdauer oder zusätzlicher Kontrolleffekt.",
+  "description_eng": "Hurls an ice sphere at your target, shattering on impact and dealing magical damage once. Base damage increases from 137 by 27 per additional level to 380 at level 10. Mana cost increases from 39 by 14 per additional level to 165. Cooldown decreases evenly from 29 to 25 seconds. Cast time is 0.2 seconds. Provisional animation lasts 1 second; no lasting effect or additional control effect.",
+  "dmgType": "spell",
+  "matk": 137,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 68,
+  "skillName_de": "Kristallisierte Wasserspähre",
+  "skillpoints": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 29,
+    "perLevel": -0.4444444444444444
+  },
+  "mana": 39,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 39,
+        "perLevel": 14
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 137,
+      "perLevel": 27
+    }
+  },
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.2,
+  "hasLingeringDamage": false
+}

@@ -1,0 +1,103 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bb0",
+    "skillName_eng": "Mighty Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 27,
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Triff deinen Gegner mit einem mächtigen Schlag.",
+    "description_eng": "Hit your opponent with a powerful blow.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 77,
+    "patk": 73,
+    "skillName_de": "Mächtiger Hieb",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bba",
+    "skillName_eng": "Rotating Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen rotierenden physischen Hieb aus. Der Grundangriffswert steigt von 36 um 18 je weiterer Stufe auf 198. Die Mana-Kosten steigen von 24 um 12 je weiterer Stufe auf 132. Der Cooldown sinkt von 37 um 1 Sekunde je weiterer Stufe auf 28 Sekunden. Der Angriff beginnt ohne Cast Time; die Animation dauert vorläufig 0,7 Sekunden.",
+    "description_eng": "Performs a rotating physical strike. Base attack increases from 36 by 18 per additional level to 198. Mana cost increases from 24 by 12 per additional level to 132. Cooldown decreases from 37 by 1 second per additional level to 28 seconds. The attack starts without cast time; provisional animation duration is 0.7 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 87,
+    "patk": 36,
+    "skillName_de": "Rotier Schlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.7,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 37,
+      "perLevel": -1
+    },
+    "mana": 24,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 24,
+          "perLevel": 12
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 36,
+        "perLevel": 18
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bbc",
+    "skillName_eng": "Skull Splitter",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Mit roher Gewalt schlägst du auf deinen Gegner ein und verursachst dabei Schaden.",
+    "description_eng": "You hit your opponent with a powerful blow and cause damage.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 89,
+    "patk": 387,
+    "skillName_de": "Schädelspalter",
+    "skillpoints": 1
+  }
+]

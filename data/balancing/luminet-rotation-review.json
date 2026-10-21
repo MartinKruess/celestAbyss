@@ -1,0 +1,203 @@
+{
+  "classKey": "luminet",
+  "level": 60,
+  "rank": 6,
+  "stats": {
+    "maxHealth": 4141,
+    "maxMana": 5867,
+    "physicalAttack": 104,
+    "magicalAttack": 948.8,
+    "physicalDefense": 728,
+    "magicalDefense": 1072,
+    "attackSpeed": 0.9,
+    "movementSpeed": 1,
+    "maxStamina": 1,
+    "accuracy": 32,
+    "dodge": 0,
+    "critChanceRating": 4.800000000000001,
+    "block": 0,
+    "penetration": 88.5,
+    "healthRegen": 508,
+    "manaRegen": 640,
+    "criticalDamageBonus": 0.8
+  },
+  "manaPool": 5867,
+  "attackSkillCount": 14,
+  "oneRotation": 6923,
+  "twoRotations": 13846,
+  "manaAfterOneRotation": -1056,
+  "manaAfterTwoRotations": -7979,
+  "totalRawDamageOneTarget": 34621.6,
+  "rows": [
+    {
+      "nr": 8,
+      "name": "Astralkörper",
+      "mana": 682,
+      "skillBasePerHit": 1450,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 2398.8,
+      "assumption": null
+    },
+    {
+      "nr": 9,
+      "name": "Ätherregen",
+      "mana": 975,
+      "skillBasePerHit": 957,
+      "hits": 4,
+      "totalHitMultiplier": 4,
+      "rawDamage": 7623.2,
+      "assumption": "All four pulses hit the same enemy"
+    },
+    {
+      "nr": 29,
+      "name": "Eislanze",
+      "mana": 462,
+      "skillBasePerHit": 601,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 1549.8,
+      "assumption": null
+    },
+    {
+      "nr": 36,
+      "name": "Energieschlag",
+      "mana": 120,
+      "skillBasePerHit": 205,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 1153.8,
+      "assumption": null
+    },
+    {
+      "nr": 101,
+      "name": "Schwerter des Lichtes",
+      "mana": 708,
+      "skillBasePerHit": 1029,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 1977.8,
+      "assumption": null
+    },
+    {
+      "nr": 117,
+      "name": "Urteil des Himmels",
+      "mana": 405,
+      "skillBasePerHit": 768,
+      "hits": 2,
+      "totalHitMultiplier": 1.5,
+      "rawDamage": 2575.2,
+      "assumption": "Second hit scales the complete first hit by 50 percent"
+    },
+    {
+      "nr": 210,
+      "name": "Lichtblitz",
+      "mana": 374,
+      "skillBasePerHit": 594,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 1542.8,
+      "assumption": null
+    },
+    {
+      "nr": 211,
+      "name": "Aurora Wellen",
+      "mana": 783,
+      "skillBasePerHit": 1500,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 2448.8,
+      "assumption": "One full center hit; repeat frequency remains pending"
+    },
+    {
+      "nr": 213,
+      "name": "Strafendes Licht",
+      "mana": 656,
+      "skillBasePerHit": 1255,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 2203.8,
+      "assumption": null
+    },
+    {
+      "nr": 215,
+      "name": "Heiliges Kreuz",
+      "mana": 464,
+      "skillBasePerHit": 1146,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 2094.8,
+      "assumption": null
+    },
+    {
+      "nr": 216,
+      "name": "Heilige Vernichtung",
+      "mana": 298,
+      "skillBasePerHit": 446,
+      "hits": 3,
+      "totalHitMultiplier": 3,
+      "rawDamage": 4184.4,
+      "assumption": "Full character magical attack added to each spear"
+    },
+    {
+      "nr": 217,
+      "name": "Göttliche Nova",
+      "mana": 712,
+      "skillBasePerHit": 1415,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 2363.8,
+      "assumption": null
+    },
+    {
+      "nr": 218,
+      "name": "Licht kristallenes Gefängnis",
+      "mana": 209,
+      "skillBasePerHit": 509,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 1457.8,
+      "assumption": null
+    },
+    {
+      "nr": 231,
+      "name": "Luminus",
+      "mana": 75,
+      "skillBasePerHit": 98,
+      "hits": 1,
+      "totalHitMultiplier": 1,
+      "rawDamage": 1046.8,
+      "assumption": null
+    }
+  ],
+  "extrasExcludedFromAttackRotation": [
+    {
+      "nr": 41,
+      "name": "Erste Hilfe",
+      "mana": 164
+    },
+    {
+      "nr": 74,
+      "name": "Festigung des Geistes",
+      "mana": 251
+    },
+    {
+      "nr": 79,
+      "name": "Mentale Erweiterung",
+      "mana": 190
+    },
+    {
+      "nr": 228,
+      "name": "Geheiligte Barriere",
+      "mana": 150
+    }
+  ],
+  "assumptions": [
+    "Level 60, original R6 gear, maximum permanent passives; same Intelligence-based comparison conversion as prior classes",
+    "Faith/Victim not additionally converted to attack without confirmed class-specific eligibility",
+    "Each of 14 attack skills used once, all hits land on one target; all four Ether Rain pulses included",
+    "No enemy defense, critical hits, active buffs, light vulnerability, dark/demon bonus, pets, regeneration or cooldown timeline",
+    "Character magical attack added to each hit; Judgement final hit is 50 percent of first-hit total",
+    "Aurora center hit counted once provisionally; edge hit is half; this is not a multi-target or sustained-DPS total"
+  ]
+}

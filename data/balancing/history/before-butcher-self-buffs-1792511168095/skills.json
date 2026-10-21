@@ -1,0 +1,372 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b6f",
+    "skillName_eng": "Charge",
+    "__v": 0,
+    "category": "active",
+    "cd": 122,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Aktiver Eigenbuff mit einer einzigen Skillstufe. Verstärkt dich für 15 Sekunden um 25 Stärke, 240 maximale Lebenspunkte und 200 P-Angriff. Der Lebensbonus ist keine direkte Heilung. Cooldown 122 Sekunden. Feste Castzeit 0,1 Sekunden, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 102 Mana vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet. Die einzige Stufe übernimmt die bisherigen Werte von Skillstufe 5 und kostet einen Skillpunkt.",
+    "description_eng": "Active self buff with one learnable skill level. For 15 seconds, grants 25 Strength, 240 maximum Health and 200 physical attack. The maximum Health bonus is not direct healing. Cooldown 122 seconds. Fixed cast time 0.1 seconds, unaffected by attack or cast speed; animation duration is separate. Activation costs 102 Mana before discounts. Ongoing Mana drain is calculated separately. This single level retains the former level-five values and costs one skill point.",
+    "dmgType": "selfbuff",
+    "dur": 15,
+    "health": 240,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 12,
+    "skillName_de": "Aufladung",
+    "skillpoints": 1,
+    "str": 25,
+    "activation": "manual",
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 122,
+      "perLevel": 0
+    },
+    "mana": 102,
+    "patk": 200,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 102,
+          "perLevel": 0
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "str": "self",
+      "health": "self",
+      "patk": "self"
+    },
+    "statBonusUnits": {
+      "str": "flat",
+      "health": "flat",
+      "patk": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 25,
+        "perLevel": 0
+      },
+      "health": {
+        "type": "linear",
+        "base": 240,
+        "perLevel": 0
+      },
+      "patk": {
+        "type": "linear",
+        "base": 200,
+        "perLevel": 0
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 122,
+              "perLevel": 0
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 102,
+              "perLevel": 0
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 25,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "health"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 240,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 200,
+            "perLevel": 0
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c0f",
+    "skillName_eng": "Combat Instinct",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Stärke steigt gleichmäßig von 4 auf Stufe 1 bis 10 auf Stufe 10. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self-buff lasting 600 seconds. Strength increases evenly from 4 at level 1 to 10 at level 10. Cooldown 60 seconds. Fixed cast time 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, before discounts.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 172,
+    "skillName_de": "Kampfinstinkt",
+    "skillpoints": 1,
+    "str": 4,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 0.6666666666666666
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 0.6666666666666666
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c11",
+    "skillName_eng": "Bloodlust",
+    "__v": 0,
+    "atkSpeed": 0.05,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 60 Sekunden. Gewährt 5 bis 10 Punkte Angriffsgeschwindigkeit über 10 Stufen und 3 bis 7 Stärke. Castzeit fest 0,1 Sekunden., Dauer 60 Sekunden, Cooldown 300 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self-buff lasting 60 seconds. Grants 5 to 10 Attack Speed rating points and 3 to 7 Strength over 10 levels. Cooldown 300 seconds. Fixed cast time 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, before discounts.",
+    "dmgType": "selfbuff",
+    "dur": 60,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 174,
+    "skillName_de": "Blutrausch",
+    "skillpoints": 1,
+    "str": 3,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 0.4444444444444444
+      },
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.05,
+        "perLevel": 0.005555555555555556
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 0.4444444444444444
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.05,
+            "perLevel": 0.005555555555555556
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  }
+]

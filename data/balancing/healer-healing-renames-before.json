@@ -1,0 +1,311 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b9d",
+    "skillName_eng": "Divine Healing",
+    "__v": 0,
+    "category": "active",
+    "cd": 80,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. Sechs Skillstufen. Grundheilung 550 HP auf Stufe 1 und +430 je weiterer Stufe: 550, 980, 1410, 1840, 2270, 2700 HP. Auf Stufe 5 zusätzlich 3 Prozent des Maximal-Lebens desselben Ziels, auf Stufe 6 stattdessen insgesamt 5 Prozent. Dieser prozentuale Anteil wird zur Grundheilung derselben Anwendung addiert, nicht als separater Cast ausgeführt. Mana 283 auf Stufe 1 und +185 je weiterer Stufe, auf Stufe 5 1023 und auf Stufe 6 1208. Cooldown 80 Sekunden und je weiterer Stufe 2 Sekunden weniger, auf Stufe 5 72 und auf Stufe 6 70 Sekunden. Castzeit 0,6 Sekunden. Einmalige Heilung nach der Castzeit, keine anschließende Wirkungsdauer oder Heilticks.",
+    "description_eng": "Uses the power of Aurora to heal one allied target once. Six skill levels. Base healing 550 HP plus 430 per additional level: 550, 980, 1410, 1840, 2270, 2700 HP. Level 5 adds 3 percent of that same target’s maximum health; level 6 instead adds a total of 5 percent. The percentage component is added to base healing within the same activation, not cast separately. Mana 283 plus 185 per additional level: 1023 at level 5, 1208 at level 6. Cooldown 80 seconds minus 2 per additional level: 72 at level 5, 70 at level 6. Cast time 0.6 seconds. One healing application after casting, no lingering duration or healing ticks.",
+    "dmgType": "spell",
+    "health": 550,
+    "maxSkillLv": 6,
+    "maxUpgradeLv": 10,
+    "nr": 58,
+    "skillName_de": "Göttliche Heilung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 80,
+      "perLevel": -2
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "effects": [
+      {
+        "key": "divine-healing-single-target",
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 550,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 550,
+          "perLevel": 430
+        },
+        "durationSeconds": 0
+      },
+      {
+        "key": "divine-healing-target-max-health",
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 0,
+        "unit": "fraction",
+        "reference": "targetMaxHealth",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0.03,
+            0.05
+          ]
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 283,
+          "perLevel": 185
+        }
+      }
+    ],
+    "statScaling": {
+      "health": {
+        "type": "linear",
+        "base": 550,
+        "perLevel": 430
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba3",
+    "skillName_eng": "Small Healing",
+    "__v": 0,
+    "category": "active",
+    "cd": 17,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 20, 26, 32, 38 und so weiter: Jeder nächste Zuwachs ist um 6 höher. Heilwerte von Stufe 1 bis 20: 20, 46, 78, 116, 160, 210, 266, 328, 396, 470, 550, 636, 728, 826, 930, 1040, 1156, 1278, 1406, 1540. Formel für Stufe L: 20 × L + 3 × L × (L - 1). Auf Stufe 20 beträgt der Heilwert 1540 HP. Castzeit 0,1 Sekunden. Bestehender Cooldown 17 Sekunden. Mana-Kosten 16 auf Stufe 1 und +6 je weiterer Stufe, insgesamt 130 auf Stufe 20. Einmalige Heilung nach der Castzeit, Wirkungsdauer 0 Sekunden, keine Heilticks.",
+    "description_eng": "Heals an allied target. Healing grows cumulatively with increments of 20, 26, 32, 38 and so on, increasing each successive increment by 6. Healing values at levels 1–20: 20, 46, 78, 116, 160, 210, 266, 328, 396, 470, 550, 636, 728, 826, 930, 1040, 1156, 1278, 1406, 1540. Formula for level L: 20 × L + 3 × L × (L - 1). Level 20 healing is 1540 HP. Cast time 0.1 seconds. Existing cooldown 17 seconds. Mana cost 16 at level 1 and +6 per additional level, totaling 130 at level 20. Heals once after casting, effect duration 0 seconds, no healing ticks.",
+    "dmgType": "spell",
+    "health": 20,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 64,
+    "skillName_de": "Kleine Heilung",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "statScaling": {
+      "health": {
+        "type": "table",
+        "values": [
+          20,
+          46,
+          78,
+          116,
+          160,
+          210,
+          266,
+          328,
+          396,
+          470,
+          550,
+          636,
+          728,
+          826,
+          930,
+          1040,
+          1156,
+          1278,
+          1406,
+          1540
+        ]
+      }
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "effects": [
+      {
+        "key": "small-healing-single-target",
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 20,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "table",
+          "values": [
+            20,
+            46,
+            78,
+            116,
+            160,
+            210,
+            266,
+            328,
+            396,
+            470,
+            550,
+            636,
+            728,
+            826,
+            930,
+            1040,
+            1156,
+            1278,
+            1406,
+            1540
+          ]
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 16,
+          "perLevel": 6
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb1",
+    "skillName_eng": "Mass Healing",
+    "__v": 0,
+    "category": "active",
+    "cd": 64,
+    "charClass": [
+      "Healer",
+      "Priest"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Metern Radius um den Heiler. Nach der Castzeit erfolgt die erste Heilung mit dem vollen Skill-Heilwert; 1 Sekunde später folgt eine zweite Heilung mit 50 Prozent dieses Werts. Grundheilwert 162 HP auf Stufe 1, +97 je weiterer Stufe, auf Stufe 10 1035 HP. Je Gruppenmitglied insgesamt 243 HP auf Stufe 1 beziehungsweise 1552,5 HP auf Stufe 10 vor Begrenzung durch fehlende HP. Mana 92 auf Stufe 1, +69 je weiterer Stufe, auf Stufe 10 713 pro Anwendung für beide Heilungen zusammen. Cooldown gleichmäßig von 64 auf 58 Sekunden über zehn Stufen. Castzeit 0,2 Sekunden. Gesamter visueller Ablauf ungefähr 2 Sekunden; genau zwei Heilungen, kein fortlaufender Heil-Tick. Ob Empfänger beim ersten Heal festgehalten oder beim zweiten erneut im Radius geprüft werden, ist noch offen.",
+    "description_eng": "Heals the entire own group including the healer within a 12-meter radius of the healer. The first heal applies full skill healing after casting; 1 second later a second heal applies 50 percent of that value. Base healing 162 HP plus 97 per additional level, reaching 1035 at level 10. Total per group member 243 HP at level 1 or 1552.5 at level 10 before missing-health limits. Mana 92 plus 69 per additional level, reaching 713 per activation for both heals combined. Cooldown decreases linearly from 64 to 58 seconds across ten levels. Cast time 0.2 seconds. Approximate total visual sequence 2 seconds; exactly two heals, no ongoing healing ticks. Whether recipients are fixed at the first heal or checked again within the radius for the second remains pending.",
+    "dmgType": "spell",
+    "health": 162,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 78,
+    "skillName_de": "Massenheilung",
+    "skillpoints": 1,
+    "animationDurationSeconds": 2,
+    "animationTimingStatus": "provisional",
+    "areaSettings": {
+      "center": "caster",
+      "includeCaster": true,
+      "radiusMeters": 12
+    },
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 64,
+      "perLevel": -0.6666666666666666
+    },
+    "dur": 2,
+    "effects": [
+      {
+        "key": "mass-healing-full",
+        "type": "heal",
+        "target": "alliesInArea",
+        "recipientGroup": "ownGroup",
+        "distribution": "fullAmountToEachRecipient",
+        "value": 162,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 162,
+          "perLevel": 97
+        },
+        "applicationDelaySeconds": 0,
+        "durationSeconds": 0
+      },
+      {
+        "key": "mass-healing-followup",
+        "type": "heal",
+        "target": "alliesInArea",
+        "recipientGroup": "ownGroup",
+        "distribution": "fullAmountToEachRecipient",
+        "value": 81,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 81,
+          "perLevel": 48.5
+        },
+        "applicationDelaySeconds": 1,
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 92,
+          "perLevel": 69
+        }
+      }
+    ],
+    "statScaling": {
+      "health": {
+        "type": "linear",
+        "base": 162,
+        "perLevel": 97
+      }
+    }
+  }
+]

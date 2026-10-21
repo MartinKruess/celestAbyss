@@ -1,0 +1,972 @@
+{
+  "generatedAt": "2026-10-21T05:30:34.482Z",
+  "assumptions": "Hypothetical only. R6 Level 60, +0 equipment and permanent passives, without active buffs. Base Vitality-to-physical-defense factor varied; existing class multipliers retained. All flat armor, weapon and passive defense remains unchanged. HP, HP regeneration, attack, Wisdom and magical defense unchanged. Starting base stats are retained, not reverse-engineered. No combat damage simulation.",
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "vitality": 104,
+      "multiplier": 1,
+      "fixedDefense": 549,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 208,
+          "physicalDefense": 757,
+          "physicalDefenseWithHypotheticalArmorMinus100": 657,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 472.20000000000005,
+          "magicalDefense": 597,
+          "defensePerAttack": 1.603134265141889
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 187.20000000000002,
+          "physicalDefense": 736.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 636.2,
+          "difference": -20.799999999999955,
+          "differencePercent": -2.7476882430647276,
+          "physicalAttack": 472.20000000000005,
+          "magicalDefense": 597,
+          "defensePerAttack": 1.5590851334180431
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 166.4,
+          "physicalDefense": 715.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 615.4,
+          "difference": -41.60000000000002,
+          "differencePercent": -5.495376486129466,
+          "physicalAttack": 472.20000000000005,
+          "magicalDefense": 597,
+          "defensePerAttack": 1.5150360016941973
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 145.6,
+          "physicalDefense": 694.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 594.6,
+          "difference": -62.39999999999998,
+          "differencePercent": -8.243064729194183,
+          "physicalAttack": 472.20000000000005,
+          "magicalDefense": 597,
+          "defensePerAttack": 1.4709868699703514
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 135.20000000000002,
+          "physicalDefense": 684.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 584.2,
+          "difference": -72.79999999999995,
+          "differencePercent": -9.616908850726546,
+          "physicalAttack": 472.20000000000005,
+          "magicalDefense": 597,
+          "defensePerAttack": 1.4489623041084285
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "vitality": 99,
+      "multiplier": 1,
+      "fixedDefense": 517,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 198,
+          "physicalDefense": 715,
+          "physicalDefenseWithHypotheticalArmorMinus100": 615,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 690.58,
+          "magicalDefense": 586,
+          "defensePerAttack": 1.0353615801210576
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 178.20000000000002,
+          "physicalDefense": 695.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 595.2,
+          "difference": -19.799999999999955,
+          "differencePercent": -2.7692307692307683,
+          "physicalAttack": 690.58,
+          "magicalDefense": 586,
+          "defensePerAttack": 1.0066900286715514
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 158.4,
+          "physicalDefense": 675.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 575.4,
+          "difference": -39.60000000000002,
+          "differencePercent": -5.5384615384615365,
+          "physicalAttack": 690.58,
+          "magicalDefense": 586,
+          "defensePerAttack": 0.9780184772220452
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 138.6,
+          "physicalDefense": 655.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 555.6,
+          "difference": -59.39999999999998,
+          "differencePercent": -8.307692307692305,
+          "physicalAttack": 690.58,
+          "magicalDefense": 586,
+          "defensePerAttack": 0.949346925772539
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 128.70000000000002,
+          "physicalDefense": 645.7,
+          "physicalDefenseWithHypotheticalArmorMinus100": 545.7,
+          "difference": -69.29999999999995,
+          "differencePercent": -9.69230769230769,
+          "physicalAttack": 690.58,
+          "magicalDefense": 586,
+          "defensePerAttack": 0.9350111500477859
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "vitality": 84,
+      "multiplier": 1,
+      "fixedDefense": 491,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 168,
+          "physicalDefense": 659,
+          "physicalDefenseWithHypotheticalArmorMinus100": 559,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 335.20000000000005,
+          "magicalDefense": 641,
+          "defensePerAttack": 1.9659904534606203
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 151.20000000000002,
+          "physicalDefense": 642.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 542.2,
+          "difference": -16.799999999999955,
+          "differencePercent": -2.549317147192709,
+          "physicalAttack": 335.20000000000005,
+          "magicalDefense": 641,
+          "defensePerAttack": 1.915871121718377
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 134.4,
+          "physicalDefense": 625.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 525.4,
+          "difference": -33.60000000000002,
+          "differencePercent": -5.09863429438544,
+          "physicalAttack": 335.20000000000005,
+          "magicalDefense": 641,
+          "defensePerAttack": 1.8657517899761333
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 117.6,
+          "physicalDefense": 608.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 508.6,
+          "difference": -50.39999999999998,
+          "differencePercent": -7.647951441578149,
+          "physicalAttack": 335.20000000000005,
+          "magicalDefense": 641,
+          "defensePerAttack": 1.81563245823389
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 109.2,
+          "physicalDefense": 600.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 500.20000000000005,
+          "difference": -58.799999999999955,
+          "differencePercent": -8.922610015174504,
+          "physicalAttack": 335.20000000000005,
+          "magicalDefense": 641,
+          "defensePerAttack": 1.7905727923627683
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "vitality": 114,
+      "multiplier": 1.05,
+      "fixedDefense": 593,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2.1,
+          "vitalityDefense": 239.4,
+          "physicalDefense": 832.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 732.4,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 629.36,
+          "magicalDefense": 620,
+          "defensePerAttack": 1.322613448582687
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8900000000000001,
+          "vitalityDefense": 215.46,
+          "physicalDefense": 808.46,
+          "physicalDefenseWithHypotheticalArmorMinus100": 708.46,
+          "difference": -23.93999999999994,
+          "differencePercent": -2.876021143680918,
+          "physicalAttack": 629.36,
+          "magicalDefense": 620,
+          "defensePerAttack": 1.2845748061522817
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6800000000000002,
+          "vitalityDefense": 191.52,
+          "physicalDefense": 784.52,
+          "physicalDefenseWithHypotheticalArmorMinus100": 684.52,
+          "difference": -47.879999999999995,
+          "differencePercent": -5.7520422873618475,
+          "physicalAttack": 629.36,
+          "magicalDefense": 620,
+          "defensePerAttack": 1.2465361637218761
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.47,
+          "vitalityDefense": 167.57999999999998,
+          "physicalDefense": 760.5799999999999,
+          "physicalDefenseWithHypotheticalArmorMinus100": 660.5799999999999,
+          "difference": -71.82000000000005,
+          "differencePercent": -8.628063431042776,
+          "physicalAttack": 629.36,
+          "magicalDefense": 620,
+          "defensePerAttack": 1.2084975212914706
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3650000000000002,
+          "vitalityDefense": 155.61,
+          "physicalDefense": 748.61,
+          "physicalDefenseWithHypotheticalArmorMinus100": 648.61,
+          "difference": -83.78999999999996,
+          "differencePercent": -10.06607400288323,
+          "physicalAttack": 629.36,
+          "magicalDefense": 620,
+          "defensePerAttack": 1.189478200076268
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "vitality": 79,
+      "multiplier": 1,
+      "fixedDefense": 315,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 158,
+          "physicalDefense": 473,
+          "physicalDefenseWithHypotheticalArmorMinus100": 373,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 22,
+          "magicalDefense": 1060,
+          "defensePerAttack": 21.5
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 142.20000000000002,
+          "physicalDefense": 457.20000000000005,
+          "physicalDefenseWithHypotheticalArmorMinus100": 357.20000000000005,
+          "difference": -15.799999999999955,
+          "differencePercent": -3.3403805496828642,
+          "physicalAttack": 22,
+          "magicalDefense": 1060,
+          "defensePerAttack": 20.781818181818185
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 126.4,
+          "physicalDefense": 441.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 341.4,
+          "difference": -31.600000000000023,
+          "differencePercent": -6.680761099365751,
+          "physicalAttack": 22,
+          "magicalDefense": 1060,
+          "defensePerAttack": 20.063636363636363
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 110.6,
+          "physicalDefense": 425.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 325.6,
+          "difference": -47.39999999999998,
+          "differencePercent": -10.021141649048626,
+          "physicalAttack": 22,
+          "magicalDefense": 1060,
+          "defensePerAttack": 19.345454545454547
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 102.7,
+          "physicalDefense": 417.7,
+          "physicalDefenseWithHypotheticalArmorMinus100": 317.7,
+          "difference": -55.30000000000001,
+          "differencePercent": -11.691331923890068,
+          "physicalAttack": 22,
+          "magicalDefense": 1060,
+          "defensePerAttack": 18.986363636363635
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "vitality": 94,
+      "multiplier": 1,
+      "fixedDefense": 454,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 188,
+          "physicalDefense": 642,
+          "physicalDefenseWithHypotheticalArmorMinus100": 542,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 26,
+          "magicalDefense": 639.6,
+          "defensePerAttack": 24.692307692307693
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 169.20000000000002,
+          "physicalDefense": 623.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 523.2,
+          "difference": -18.799999999999955,
+          "differencePercent": -2.928348909657319,
+          "physicalAttack": 26,
+          "magicalDefense": 639.6,
+          "defensePerAttack": 23.96923076923077
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 150.4,
+          "physicalDefense": 604.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 504.4,
+          "difference": -37.60000000000002,
+          "differencePercent": -5.856697819314649,
+          "physicalAttack": 26,
+          "magicalDefense": 639.6,
+          "defensePerAttack": 23.246153846153845
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 131.6,
+          "physicalDefense": 585.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 485.6,
+          "difference": -56.39999999999998,
+          "differencePercent": -8.785046728971956,
+          "physicalAttack": 26,
+          "magicalDefense": 639.6,
+          "defensePerAttack": 22.523076923076925
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 122.2,
+          "physicalDefense": 576.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 476.20000000000005,
+          "difference": -65.79999999999995,
+          "differencePercent": -10.249221183800616,
+          "physicalAttack": 26,
+          "magicalDefense": 639.6,
+          "defensePerAttack": 22.161538461538463
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "vitality": 94,
+      "multiplier": 1,
+      "fixedDefense": 434,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 188,
+          "physicalDefense": 622,
+          "physicalDefenseWithHypotheticalArmorMinus100": 522,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 628.2,
+          "magicalDefense": 604.8,
+          "defensePerAttack": 0.9901305316778095
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 169.20000000000002,
+          "physicalDefense": 603.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 503.20000000000005,
+          "difference": -18.799999999999955,
+          "differencePercent": -3.0225080385852032,
+          "physicalAttack": 628.2,
+          "magicalDefense": 604.8,
+          "defensePerAttack": 0.9602037567653614
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 150.4,
+          "physicalDefense": 584.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 484.4,
+          "difference": -37.60000000000002,
+          "differencePercent": -6.045016077170418,
+          "physicalAttack": 628.2,
+          "magicalDefense": 604.8,
+          "defensePerAttack": 0.930276981852913
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 131.6,
+          "physicalDefense": 565.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 465.6,
+          "difference": -56.39999999999998,
+          "differencePercent": -9.06752411575562,
+          "physicalAttack": 628.2,
+          "magicalDefense": 604.8,
+          "defensePerAttack": 0.9003502069404647
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 122.2,
+          "physicalDefense": 556.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 456.20000000000005,
+          "difference": -65.79999999999995,
+          "differencePercent": -10.578778135048228,
+          "physicalAttack": 628.2,
+          "magicalDefense": 604.8,
+          "defensePerAttack": 0.8853868194842407
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "vitality": 129,
+      "multiplier": 1.05,
+      "fixedDefense": 858,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2.1,
+          "vitalityDefense": 270.90000000000003,
+          "physicalDefense": 1128.9,
+          "physicalDefenseWithHypotheticalArmorMinus100": 1028.9,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 421.42,
+          "magicalDefense": 749.4,
+          "defensePerAttack": 2.6788002467846805
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8900000000000001,
+          "vitalityDefense": 243.81,
+          "physicalDefense": 1101.81,
+          "physicalDefenseWithHypotheticalArmorMinus100": 1001.81,
+          "difference": -27.090000000000146,
+          "differencePercent": -2.3996811055009393,
+          "physicalAttack": 421.42,
+          "magicalDefense": 749.4,
+          "defensePerAttack": 2.614517583408476
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6800000000000002,
+          "vitalityDefense": 216.72000000000003,
+          "physicalDefense": 1074.72,
+          "physicalDefenseWithHypotheticalArmorMinus100": 974.72,
+          "difference": -54.180000000000064,
+          "differencePercent": -4.799362211001867,
+          "physicalAttack": 421.42,
+          "magicalDefense": 749.4,
+          "defensePerAttack": 2.550234920032272
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.47,
+          "vitalityDefense": 189.63,
+          "physicalDefense": 1047.63,
+          "physicalDefenseWithHypotheticalArmorMinus100": 947.6300000000001,
+          "difference": -81.26999999999998,
+          "differencePercent": -7.1990433165027845,
+          "physicalAttack": 421.42,
+          "magicalDefense": 749.4,
+          "defensePerAttack": 2.4859522566560677
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3650000000000002,
+          "vitalityDefense": 176.08500000000004,
+          "physicalDefense": 1034.085,
+          "physicalDefenseWithHypotheticalArmorMinus100": 934.085,
+          "difference": -94.81500000000005,
+          "differencePercent": -8.39888386925326,
+          "physicalAttack": 421.42,
+          "magicalDefense": 749.4,
+          "defensePerAttack": 2.4538109249679656
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "vitality": 89,
+      "multiplier": 1,
+      "fixedDefense": 370,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 178,
+          "physicalDefense": 548,
+          "physicalDefenseWithHypotheticalArmorMinus100": 448,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 24,
+          "magicalDefense": 860,
+          "defensePerAttack": 22.833333333333332
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 160.20000000000002,
+          "physicalDefense": 530.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 430.20000000000005,
+          "difference": -17.799999999999955,
+          "differencePercent": -3.2481751824817384,
+          "physicalAttack": 24,
+          "magicalDefense": 860,
+          "defensePerAttack": 22.09166666666667
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 142.4,
+          "physicalDefense": 512.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 412.4,
+          "difference": -35.60000000000002,
+          "differencePercent": -6.49635036496351,
+          "physicalAttack": 24,
+          "magicalDefense": 860,
+          "defensePerAttack": 21.349999999999998
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 124.6,
+          "physicalDefense": 494.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 394.6,
+          "difference": -53.39999999999998,
+          "differencePercent": -9.74452554744525,
+          "physicalAttack": 24,
+          "magicalDefense": 860,
+          "defensePerAttack": 20.608333333333334
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 115.7,
+          "physicalDefense": 485.7,
+          "physicalDefenseWithHypotheticalArmorMinus100": 385.7,
+          "difference": -62.30000000000001,
+          "differencePercent": -11.368613138686134,
+          "physicalAttack": 24,
+          "magicalDefense": 860,
+          "defensePerAttack": 20.2375
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "vitality": 97,
+      "multiplier": 1,
+      "fixedDefense": 402,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 194,
+          "physicalDefense": 596,
+          "physicalDefenseWithHypotheticalArmorMinus100": 496,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 24.833333333333332
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 174.6,
+          "physicalDefense": 576.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 476.6,
+          "difference": -19.399999999999977,
+          "differencePercent": -3.2550335570469713,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 24.025000000000002
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 155.20000000000002,
+          "physicalDefense": 557.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 457.20000000000005,
+          "difference": -38.799999999999955,
+          "differencePercent": -6.510067114093953,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 23.21666666666667
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 135.79999999999998,
+          "physicalDefense": 537.8,
+          "physicalDefenseWithHypotheticalArmorMinus100": 437.79999999999995,
+          "difference": -58.200000000000045,
+          "differencePercent": -9.765100671140948,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 22.40833333333333
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 126.10000000000001,
+          "physicalDefense": 528.1,
+          "physicalDefenseWithHypotheticalArmorMinus100": 428.1,
+          "difference": -67.89999999999998,
+          "differencePercent": -11.39261744966442,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 22.004166666666666
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, 100 Seelen",
+      "vitality": 97,
+      "multiplier": 1,
+      "fixedDefense": 402,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 194,
+          "physicalDefense": 596,
+          "physicalDefenseWithHypotheticalArmorMinus100": 496,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 24.833333333333332
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 174.6,
+          "physicalDefense": 576.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 476.6,
+          "difference": -19.399999999999977,
+          "differencePercent": -3.2550335570469713,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 24.025000000000002
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 155.20000000000002,
+          "physicalDefense": 557.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 457.20000000000005,
+          "difference": -38.799999999999955,
+          "differencePercent": -6.510067114093953,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 23.21666666666667
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 135.79999999999998,
+          "physicalDefense": 537.8,
+          "physicalDefenseWithHypotheticalArmorMinus100": 437.79999999999995,
+          "difference": -58.200000000000045,
+          "differencePercent": -9.765100671140948,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 22.40833333333333
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 126.10000000000001,
+          "physicalDefense": 528.1,
+          "physicalDefenseWithHypotheticalArmorMinus100": 428.1,
+          "difference": -67.89999999999998,
+          "differencePercent": -11.39261744966442,
+          "physicalAttack": 24,
+          "magicalDefense": 729,
+          "defensePerAttack": 22.004166666666666
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "vitality": 87,
+      "multiplier": 1,
+      "fixedDefense": 468,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 174,
+          "physicalDefense": 642,
+          "physicalDefenseWithHypotheticalArmorMinus100": 542,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 481.88,
+          "magicalDefense": 648,
+          "defensePerAttack": 1.332281895907695
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 156.6,
+          "physicalDefense": 624.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 524.6,
+          "difference": -17.399999999999977,
+          "differencePercent": -2.710280373831775,
+          "physicalAttack": 481.88,
+          "magicalDefense": 648,
+          "defensePerAttack": 1.2961733211587947
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 139.20000000000002,
+          "physicalDefense": 607.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 507.20000000000005,
+          "difference": -34.799999999999955,
+          "differencePercent": -5.42056074766355,
+          "physicalAttack": 481.88,
+          "magicalDefense": 648,
+          "defensePerAttack": 1.2600647464098946
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 121.8,
+          "physicalDefense": 589.8,
+          "physicalDefenseWithHypotheticalArmorMinus100": 489.79999999999995,
+          "difference": -52.200000000000045,
+          "differencePercent": -8.130841121495337,
+          "physicalAttack": 481.88,
+          "magicalDefense": 648,
+          "defensePerAttack": 1.2239561716609944
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 113.10000000000001,
+          "physicalDefense": 581.1,
+          "physicalDefenseWithHypotheticalArmorMinus100": 481.1,
+          "difference": -60.89999999999998,
+          "differencePercent": -9.485981308411207,
+          "physicalAttack": 481.88,
+          "magicalDefense": 648,
+          "defensePerAttack": 1.2059018842865443
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "vitality": 84,
+      "multiplier": 1,
+      "fixedDefense": 347,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 168,
+          "physicalDefense": 515,
+          "physicalDefenseWithHypotheticalArmorMinus100": 415,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 535.2,
+          "magicalDefense": 544.4,
+          "defensePerAttack": 0.9622571001494767
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 151.20000000000002,
+          "physicalDefense": 498.20000000000005,
+          "physicalDefenseWithHypotheticalArmorMinus100": 398.20000000000005,
+          "difference": -16.799999999999955,
+          "differencePercent": -3.2621359223300894,
+          "physicalAttack": 535.2,
+          "magicalDefense": 544.4,
+          "defensePerAttack": 0.9308669656203289
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 134.4,
+          "physicalDefense": 481.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 381.4,
+          "difference": -33.60000000000002,
+          "differencePercent": -6.524271844660201,
+          "physicalAttack": 535.2,
+          "magicalDefense": 544.4,
+          "defensePerAttack": 0.8994768310911807
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 117.6,
+          "physicalDefense": 464.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 364.6,
+          "difference": -50.39999999999998,
+          "differencePercent": -9.78640776699029,
+          "physicalAttack": 535.2,
+          "magicalDefense": 544.4,
+          "defensePerAttack": 0.8680866965620329
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 109.2,
+          "physicalDefense": 456.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 356.2,
+          "difference": -58.80000000000001,
+          "differencePercent": -11.417475728155345,
+          "physicalAttack": 535.2,
+          "magicalDefense": 544.4,
+          "defensePerAttack": 0.8523916292974588
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "vitality": 84,
+      "multiplier": 1,
+      "fixedDefense": 456,
+      "scenarios": [
+        {
+          "baseFactor": 2,
+          "effectiveFactor": 2,
+          "vitalityDefense": 168,
+          "physicalDefense": 624,
+          "physicalDefenseWithHypotheticalArmorMinus100": 524,
+          "difference": 0,
+          "differencePercent": 0,
+          "physicalAttack": 452.00000000000006,
+          "magicalDefense": 548,
+          "defensePerAttack": 1.3805309734513274
+        },
+        {
+          "baseFactor": 1.8,
+          "effectiveFactor": 1.8,
+          "vitalityDefense": 151.20000000000002,
+          "physicalDefense": 607.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 507.20000000000005,
+          "difference": -16.799999999999955,
+          "differencePercent": -2.6923076923076827,
+          "physicalAttack": 452.00000000000006,
+          "magicalDefense": 548,
+          "defensePerAttack": 1.343362831858407
+        },
+        {
+          "baseFactor": 1.6,
+          "effectiveFactor": 1.6,
+          "vitalityDefense": 134.4,
+          "physicalDefense": 590.4,
+          "physicalDefenseWithHypotheticalArmorMinus100": 490.4,
+          "difference": -33.60000000000002,
+          "differencePercent": -5.384615384615388,
+          "physicalAttack": 452.00000000000006,
+          "magicalDefense": 548,
+          "defensePerAttack": 1.3061946902654864
+        },
+        {
+          "baseFactor": 1.4,
+          "effectiveFactor": 1.4,
+          "vitalityDefense": 117.6,
+          "physicalDefense": 573.6,
+          "physicalDefenseWithHypotheticalArmorMinus100": 473.6,
+          "difference": -50.39999999999998,
+          "differencePercent": -8.07692307692307,
+          "physicalAttack": 452.00000000000006,
+          "magicalDefense": 548,
+          "defensePerAttack": 1.2690265486725663
+        },
+        {
+          "baseFactor": 1.3,
+          "effectiveFactor": 1.3,
+          "vitalityDefense": 109.2,
+          "physicalDefense": 565.2,
+          "physicalDefenseWithHypotheticalArmorMinus100": 465.20000000000005,
+          "difference": -58.799999999999955,
+          "differencePercent": -9.423076923076913,
+          "physicalAttack": 452.00000000000006,
+          "magicalDefense": 548,
+          "defensePerAttack": 1.250442477876106
+        }
+      ]
+    }
+  ]
+}

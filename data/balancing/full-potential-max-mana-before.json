@@ -1,0 +1,50 @@
+{
+  "_id": "6acc1c7e4826525c70d04c06",
+  "skillName_eng": "Full Potential",
+  "__v": 0,
+  "category": "active",
+  "cd": 900,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Eigenbuff, der maximales Leben um 500 und physischen Angriff um 25 je gelerntem Skilllevel erhöht. Auf Stufe 3 sind das 1500 maximales Leben und 75 physischer Angriff. Cooldown 900 Sekunden, Dauer 600 Sekunden, Castzeit 0,6 Sekunden. Bisherige Mana-Kosten: 133 auf Stufe 1, plus 62 je weiterer Stufe auf 257. Die zuletzt genannten 133 Mana je Level werden noch als Bonus oder Kosten eingeordnet.",
+  "description_eng": "Self buff granting 500 maximum Health and 25 physical attack per learned skill level, reaching 1500 maximum Health and 75 physical attack at level 3. Cooldown is 900 seconds, duration is 600 seconds, cast time is 0.6 seconds. Existing Mana cost starts at 133 and increases by 62 per additional level to 257. The newly specified 133 Mana per level remains to be clarified as a bonus or cost.",
+  "dmgType": "selfbuff",
+  "dur": 600,
+  "health": 500,
+  "maxSkillLv": 3,
+  "maxUpgradeLv": 10,
+  "nr": 163,
+  "patk": 25,
+  "skillName_de": "Volles Potential",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.6,
+  "mana": 133,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 133,
+        "perLevel": 62
+      }
+    }
+  ],
+  "statScaling": {
+    "health": {
+      "type": "linear",
+      "base": 500,
+      "perLevel": 500
+    },
+    "patk": {
+      "type": "linear",
+      "base": 25,
+      "perLevel": 25
+    }
+  }
+}

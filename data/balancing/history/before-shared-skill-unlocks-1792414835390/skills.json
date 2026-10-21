@@ -1,0 +1,1874 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b64",
+    "skillName_eng": "Enlightenment",
+    "__v": 0,
+    "category": "Aurora",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Aurora-Grundskill. Je Stufe +1 Willenskraft und +1 direkte MP-Regeneration. Der Intelligenzbonus steigt auf insgesamt +15; auf jeder vierten Stufe wird stattdessen +1 Geschick gewährt, insgesamt +5 Geschick auf Stufe 20. Endwerte: +15 Intelligenz, +20 Willenskraft, +5 Geschick und +20 MP-Regeneration je Tick. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive Aurora core skill. Each level grants +1 Wisdom and +1 direct MP regeneration per tick. Every fourth level grants Dexterity instead of Intelligence. Level 20 totals: +15 Intelligence, +20 Wisdom, +5 Dexterity, +20 MP regeneration per tick. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 1,
+    "skillName_de": "Erleuchtung",
+    "skillpoints": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Aurora"
+    ],
+    "unlockPhase": "race",
+    "isClassCore": true,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          1,
+          2,
+          3,
+          3,
+          4,
+          5,
+          6,
+          6,
+          7,
+          8,
+          9,
+          9,
+          10,
+          11,
+          12,
+          12,
+          13,
+          14,
+          15,
+          15
+        ]
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      }
+    },
+    "manaRegen": 1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 1,
+            "steps": [
+              1,
+              1,
+              0,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 0,
+            "steps": [
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b65",
+    "skillName_eng": "Survive",
+    "__v": 1,
+    "agi": 0.5,
+    "category": "Umbra",
+    "charClass": [
+      "Butcher",
+      "Destroyer",
+      "Summoner",
+      "Soulseeker",
+      "Ritualist",
+      "Bloodmage",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Umbra-Grundskill. Je gelerntem Skilllevel erhältst du 1 Stärke, 0,5 Agilität und 0,5 Geschicklichkeit. Auf Stufe 20 sind das 20 Stärke, 10 Agilität und 10 Geschicklichkeit. Keine Aktivierungskosten oder Cooldown. Zusätzlich je gelerntem Skilllevel +0,5 direkte HP-Regeneration und +0,5 direkte MP-Regeneration, auf Stufe 20 jeweils +10 HP und +10 MP je zugehörigem Regenerationstick. Diese Boni werden zur Grundregeneration und anderen Boni addiert. Tickintervalle werden zentral später festgelegt.",
+    "description_eng": "Permanent passive Umbra core skill. Each learned skill level grants 1 Strength, 0.5 Agility and 0.5 Dexterity. At level 20 this grants 20 Strength, 10 Agility and 10 Dexterity. No activation costs or cooldown. Additionally grants +0.5 direct Health and +0.5 direct Mana regeneration per learned skill level, totaling +10 HP and +10 MP per respective regeneration tick at level 20. These bonuses add to base regeneration and other bonuses. Tick intervals will be configured centrally later.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 2,
+    "skillName_de": "Überleben",
+    "skillpoints": 1,
+    "str": 1,
+    "allowedRaces": [
+      "Umbra"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race",
+    "resourceCosts": [],
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "agi": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "dex": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "healthRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "dex": 0.5,
+    "healthRegen": 0.5,
+    "manaRegen": 0.5,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "healthRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b68",
+    "skillName_eng": "Adaptation",
+    "__v": 1,
+    "category": "Human",
+    "charClass": [
+      "Witcher",
+      "Herbalist",
+      "Knife",
+      "Templar",
+      "Archer",
+      "Hunter",
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft deine Vitalität und Willenskraft jeweils um 1 je gelerntem Skilllevel, bis zu jeweils 20. Zusätzlich je gelerntem Skilllevel +0,5 direkte HP-Regeneration und +0,5 direkte MP-Regeneration, auf Stufe 20 jeweils +10 HP und +10 MP je zugehörigem Regenerationstick. Diese Boni werden zur Grundregeneration und anderen Boni addiert. Tickintervalle werden zentral später festgelegt.",
+    "description_eng": "Permanently increases Vitality and Wisdom by 1 each per learned skill level, up to 20 each. Additionally grants +0.5 direct Health and +0.5 direct Mana regeneration per learned skill level, totaling +10 HP and +10 MP per respective regeneration tick at level 20. These bonuses add to base regeneration and other bonuses. Tick intervals will be configured centrally later.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 5,
+    "skillName_de": "Adaption",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Human"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race",
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "manaRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      },
+      "healthRegen": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "healthRegen": 0.5,
+    "manaRegen": 0.5,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "manaRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "healthRegen"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b8e",
+    "skillName_eng": "Expansion of the Senses",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter",
+      "Summoner",
+      "Soulseeker",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Bonus. Agilität und Geschick starten jeweils mit +3, steigen bis Stufe 9 je weiterer Stufe um 1 auf +11 und werden auf Stufe 10 auf jeweils +22 verdoppelt. Zusätzlich +1,6 Vita je gelerntem Skilllevel, bis zu +16 Vita auf Stufe 10. Kein zusätzlicher Glücksbonus. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive. Agility and Dexterity start at 3 each, add 1 per additional level through level 9 (11 each), and double to 22 each at level 10. Additionally grants 1.6 Vitality per learned level, reaching 16 at level 10. No added Luck bonus. No activation costs, cast time or cooldown.",
+    "dex": 3,
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 43,
+    "skillName_de": "Erweiterung der Sinne",
+    "skillpoints": 1,
+    "agi": 3,
+    "resourceCosts": [],
+    "statScaling": {
+      "dex": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          22
+        ]
+      },
+      "agi": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          22
+        ]
+      },
+      "vita": {
+        "type": "linear",
+        "base": 1.6,
+        "perLevel": 1.6
+      }
+    },
+    "vita": 1.6,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 3,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 10
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 3,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 10
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1.6,
+            "perLevel": 1.6
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b8f",
+    "skillName_eng": "Expansion of the Spirit",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher",
+      "Ritualist",
+      "Bloodmage",
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Shamane",
+      "High Elves",
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht dauerhaft Intelligenz, Willenskraft und Geschick auf Stufe 1 jeweils um 2. Bis Stufe 9 steigt jeder Bonus je weiterer Stufe um 1 auf jeweils 10. Auf Stufe 10 werden die Boni verdoppelt: jeweils +20. Faith und Victim werden nicht mehr gewährt. Geschick erhöht die Genauigkeit physischer und magischer Angriffe; ein Angriffsbonus daraus gilt nur für Bogen-/Armbrustklassen. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanently grants 2 Intelligence, Wisdom and Dexterity at level 1, adding 1 to each per additional level through level 9 (10 each). Level 10 doubles those bonuses to 20 each. No Faith or Victim bonus. Dexterity improves accuracy for physical and magical attacks; its attack contribution applies only to bow/crossbow classes. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 44,
+    "skillName_de": "Erweiterung des Geistes",
+    "skillpoints": 1,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "dex": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      }
+    },
+    "dex": 2,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b90",
+    "skillName_eng": "Expansion of the Body",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Berserker",
+      "Abenteuer",
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Bonus. Auf Stufe 1 jeweils +2 Vita, Stärke und Willenskraft. Bis Stufe 9 steigt jeder Bonus je weiterer Stufe um 1 auf jeweils 10. Auf Stufe 10 werden diese Boni verdoppelt: jeweils +20. Kein direkter Max-Lebensbonus. Stärke ersetzt den bisherigen Agilitätsbonus. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive. Grants 2 Vitality, Strength and Wisdom at level 1, adding 1 to each per additional level through level 9 (10 each). Level 10 doubles those bonuses to 20 each. No direct maximum Health bonus. Strength replaces Agility. No activation costs, cast time or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 45,
+    "skillName_de": "Erweiterung des Körpers",
+    "skillpoints": 1,
+    "vita": 2,
+    "wis": 2,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "str": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      },
+      "wis": {
+        "type": "table",
+        "values": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          20
+        ]
+      }
+    },
+    "str": 2,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "sum",
+            "terms": [
+              {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 1
+              },
+              {
+                "kind": "thresholds",
+                "base": 0,
+                "changes": [
+                  {
+                    "level": 10,
+                    "value": 9
+                  }
+                ]
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be8",
+    "skillName_eng": "Tame",
+    "__v": 0,
+    "category": "creature",
+    "cd": 60,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen.",
+    "description_eng": "Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined.",
+    "dmgType": "spell",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 133,
+    "skillName_de": "Tamen",
+    "skillpoints": 1,
+    "castTimeScaling": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": -0.5
+    },
+    "castTimeSeconds": 3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 60,
+      "perLevel": -10
+    },
+    "mana": 100,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 100,
+          "perLevel": 25
+        }
+      }
+    ],
+    "taming": {
+      "requiresMatchingItem": true,
+      "itemConsumptionStatus": "pending",
+      "creatureCounterStatus": "pending",
+      "baseSuccessChance": 0.5,
+      "successChanceScaling": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.15
+      }
+    },
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3,
+        "Gladiator": 1,
+        "Berserker": 1
+      },
+      "status": "secondSpecialistPending"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "castTimeScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 3,
+              "perLevel": -0.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 60,
+              "perLevel": -10
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 100,
+              "perLevel": 25
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "taming",
+            "successChanceScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.15
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04be9",
+    "skillName_eng": "Bond",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown.",
+    "description_eng": "The bond permanently strengthens your companion. At skill level 1 it gains 10 Strength, Vitality, Intelligence and Wisdom each. Each additional level adds 5 to each attribute, reaching 20 each at level 3. The player does not receive these bonuses. Standard classes can learn level 1; the Adventurer can learn level 3. The second specialist class is still to be defined. Bond has no activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 134,
+    "skillName_de": "Bindung",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "bond_str",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "str",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      },
+      {
+        "key": "bond_vita",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "vita",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      },
+      {
+        "key": "bond_int",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "int",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      },
+      {
+        "key": "bond_wis",
+        "type": "statModifier",
+        "target": "companion",
+        "stat": "wis",
+        "value": 10,
+        "unit": "flat",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 5
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3
+      },
+      "status": "secondSpecialistPending"
+    },
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "3",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bea",
+    "skillName_eng": "Control",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Je besser du deine Kreaturen kontrollierst, desto effizienter werden sie.",
+    "description_eng": "The better you control your creatures, the more efficient they become.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 135,
+    "skillName_de": "Kontrolle",
+    "skillpoints": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 3,
+      "classOverrides": {
+        "Gladiator": 1,
+        "Berserker": 1,
+        "Villian": 1,
+        "Shadowwarrior": 1
+      },
+      "status": "defined"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04beb",
+    "skillName_eng": "Summon",
+    "__v": 0,
+    "category": "creature",
+    "cd": 5,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualiost",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer.",
+    "description_eng": "Summons your companion after a 1 second cast time. Costs 5 Mana and has a 5 second cooldown. There is no subsequent effect duration.",
+    "dmgType": "spell",
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 136,
+    "skillName_de": "Beschwören",
+    "skillpoints": 1,
+    "castTimeSeconds": 1,
+    "mana": 5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 5
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 5
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bec",
+    "skillName_eng": "Recall",
+    "__v": 0,
+    "category": "creature",
+    "cd": 5,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer.",
+    "description_eng": "Recalls your companion instantly. Costs 5 Mana and has a 5 second cooldown. No cast time or subsequent effect duration.",
+    "dmgType": "spell",
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 137,
+    "skillName_de": "Zurückrufen",
+    "skillpoints": 1,
+    "castTimeSeconds": 0,
+    "mana": 5,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 5
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 5
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bed",
+    "skillName_eng": "Breed",
+    "__v": 0,
+    "category": "creature",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen.",
+    "description_eng": "Allows your companion to gain experience and level up. It receives the same experience as you, plus 10 percent per learned skill level: 110 percent at level 1, 120 percent at level 2 and 130 percent at level 3. Permanently passive with no costs or cooldown. Standard classes can learn level 1, the Adventurer level 3; the second specialist class is still to be defined.",
+    "dmgType": "passive",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 138,
+    "skillName_de": "Zucht",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "breedExperience",
+        "type": "experienceBonus",
+        "target": "companion",
+        "experienceSource": "playerExperience",
+        "value": 0.1,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.1,
+          "perLevel": 0.1
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3
+      },
+      "status": "secondSpecialistPending"
+    },
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bee",
+    "skillName_eng": "Endurance Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Zähigkeit. Je gelerntem Skilllevel erhältst du 1 Vitalität, 1 Willenskraft sowie jeweils 4 physische und magische Verteidigung. Auf Level 20 sind das 20 Vitalität, 20 Willenskraft und jeweils 80 Verteidigung. Keine Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently improves resilience. Each learned skill level grants 1 Vitality, 1 Wisdom, and 4 physical and magical defense each. At level 20, this grants 20 Vitality, 20 Wisdom, and 80 of each defense. No activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "mdef": 4,
+    "nr": 139,
+    "pdef": 4,
+    "skillName_de": "Ausdauertraining",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "vita": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 4
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 4
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf1",
+    "skillName_eng": "Dodge Training",
+    "__v": 0,
+    "agi": 1,
+    "category": "passive",
+    "charClass": [
+      "Archer",
+      "Hunter",
+      "Summoner",
+      "Soulseeker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanentes passives Ausweichtraining. Gewährt 1 Agilität und 0,5 Geschicklichkeit je gelerntem Skilllevel, bis zu 10 Agilität und 5 Geschicklichkeit auf Stufe 10. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive dodge training. Grants 1 Agility and 0.5 Dexterity per learned skill level, reaching 10 Agility and 5 Dexterity at level 10. No activation costs, cast time or cooldown.",
+    "dex": 0.5,
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 142,
+    "skillName_de": "Ausweichtraining",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "statScaling": {
+      "agi": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "dex": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "agi"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "dex"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf3",
+    "skillName_eng": "Armor Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbessert dauerhaft deine Rüstungsbeherrschung. Je gelerntem Skilllevel erhältst du jeweils 6 physische und magische Verteidigung, bis zu jeweils 60 auf Level 10. Keine Vitalitätsboni, Aktivierungskosten oder Cooldown.",
+    "description_eng": "Permanently improves armor proficiency. Each learned skill level grants 6 physical and magical defense each, up to 60 each at level 10. No Vitality bonus, activation costs or cooldown.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 144,
+    "pdef": 6,
+    "skillName_de": "Rüstungstraining",
+    "skillpoints": 1,
+    "mdef": 6,
+    "resourceCosts": [],
+    "statScaling": {
+      "pdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 6,
+        "perLevel": 6
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "pdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "mdef"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 6
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c2c",
+    "skillName_eng": "Weapon Training",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Waffentraining verbessert dauerhaft deine allgemeinen Waffenfertigkeiten. Gewährt je gelernter Stufe 5 physischen und 5 magischen Angriff, bis zu jeweils 100 auf Stufe 20. Gewährt keine Angriffsgeschwindigkeit.",
+    "description_eng": "Weapon Training permanently improves your general weapon proficiency. Each learned level grants 5 physical attack and 5 magical attack, reaching 100 each at level 20. Does not grant attack speed.",
+    "dmgType": "passive",
+    "matk": 5,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 201,
+    "patk": 5,
+    "skillName_de": "Waffentraining",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "patk": "flat",
+      "matk": "flat"
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "matk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

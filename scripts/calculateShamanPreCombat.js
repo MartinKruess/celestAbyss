@@ -1,0 +1,17 @@
+import fs from 'node:fs/promises';
+const skills=JSON.parse(await fs.readFile('data/skills.json','utf8'));
+const comparison=JSON.parse(await fs.readFile('data/balancing/class-comparison-level60.json','utf8'));
+const row=comparison.rows.find(r=>r.key==='shaman');
+const maceTraining=skills.find(s=>s.skillName_eng==='Dual Mace Training'&&s.charClass.includes('Shamane'));
+if(!maceTraining)throw Error('Missing Shaman mace training');
+const numbers=[1,33,44,maceTraining.nr,139,144,201];const bonuses=[];const totals={};
+for(const nr of numbers){const s=skills.find(s=>s.nr===nr);if(!s)throw Error('Missing skill');const stats={};const curves=s.nr===1?{int:{type:'linear',base:1,perLevel:1},wis:{type:'linear',base:1,perLevel:1}}:s.statScaling;if(!curves)throw Error('Missing scaling');for(const[k,c]of Object.entries(curves)){const v=c.type==='table'?c.values[s.maxSkillLv-1]:c.base+(s.maxSkillLv-1)*c.perLevel;stats[k]=v;totals[k]=(totals[k]??0)+v;}bonuses.push({nr,name:s.skillName_de,stats});}
+const base=row.equipped;
+const stats={...base,maxHealth:base.maxHealth+(totals.health??0)+(totals.vita??0)*30,maxMana:base.maxMana+(totals.wis??0)*30+(totals.mana??0),physicalAttack:base.physicalAttack+(totals.patk??0)+(totals.str??0)*1.8,magicalAttack:base.magicalAttack+(totals.matk??0)+(totals.int??0)*1.8,physicalDefense:base.physicalDefense+(totals.pdef??0)+(totals.vita??0)*2,magicalDefense:base.magicalDefense+(totals.mdef??0)+(totals.wis??0)*2};
+const report={classKey:'shaman',level:60,rank:6,status:'confirmedPermanentPassives',bonuses,variants:[{weapon:'Streitkolben',equipped:base,passiveBonuses:totals,includedSkills:numbers,knownPassiveSubtotal:stats}],excluded:['Adrenalin: combat proc','Active buffs','Pets','Jewelry/stones','Infernal Cyclone DoT pending; irrelevant to permanent stats'],equipmentProposalApplied:false};
+await fs.writeFile('data/balancing/shaman-precombat.json',JSON.stringify(report,null,2)+'\n');
+const f=v=>Number(v.toFixed(6)).toLocaleString('de-DE');
+let md='# Schamane vor dem Kampf\n\nLevel 60, R6-Grundausrüstung und maximal gelernte bestätigte permanente Passive. Adrenalin ist vor dem Kampf nicht aktiv.  Keine Eigenbuffs, Gruppenbuffs, Kampf-Procs, Pets, Schmuck oder Steine. Erleuchtung wird nach der bestätigten Beschreibung mit +1 Intelligenz und +1 Wisdom je gelerntem Skilllevel gerechnet. Faith und Victim werden beim Schamanen nicht zusätzlich in M-Angriff umgerechnet, da die klassenabhängige Anwendung noch fehlt.\n\n| Wert | Nur Ausrüstung | Mit bestätigten permanenten Passiven |\n| --- | ---: | ---: |\n';
+for(const[k,label]of [['maxHealth','Leben'],['maxMana','Mana'],['physicalAttack','P-Angriff'],['magicalAttack','M-Angriff'],['physicalDefense','P-Defense'],['magicalDefense','M-Defense']])md+=`| ${label} | ${f(base[k])} | ${f(stats[k])} |\n`;
+md+='\n## Eingerechnete Skills\n\n| Skill | Maximalboni |\n| --- | --- |\n';for(const s of bonuses)md+=`| ${s.name} | ${Object.entries(s.stats).map(([k,v])=>k+' +'+f(v)).join(', ')} |\n`;
+await fs.writeFile('docs/balancing/classes/shaman-precombat.md',md);console.log(stats);

@@ -1,0 +1,61 @@
+import {retiredBalancingReportPath} from '../services/retiredBalancingReports.js';
+import fs from 'node:fs/promises';
+const read=async p=>JSON.parse(await fs.readFile(p,'utf8'));
+const catalog=await read('data/skills.json'),comparison=await read('data/balancing/class-comparison-level60.json');
+const skill=nr=>{const s=catalog.find(s=>s.nr===nr);if(!s)throw Error('Missing skill '+nr);return s;};
+const end=(c,l)=>c.type==='table'?c.values[l-1]:c.base+(c.type==='fixed'?0:(l-1)*c.perLevel);
+const value=(s,k)=>s.statScaling?.[k]?end(s.statScaling[k],s.maxSkillLv):(s[k]??0);
+const base=comparison.rows.find(r=>r.key==='ritualist').equipped;
+const numbers=[2,44,139,144,181,201],totals={},bonuses=[];
+for(const nr of numbers){const s=skill(nr),stats={};for(const[k,c]of Object.entries(s.statScaling??{})){stats[k]=end(c,s.maxSkillLv);totals[k]=(totals[k]??0)+stats[k];}bonuses.push({nr,name:s.skillName_de,stats});}
+const stats={...comparison.passiveRows.find(r=>r.key==='ritualist'&&!r.includedSkills.includes(120)).stats};
+const combatPassiveAttack=80,healthDrainPerInterval=72,healthDrainInterval=1.5;
+const pre={classKey:'ritualist',level:60,status:'reviewedPermanentPassives',bonuses,variants:[{weapon:'Magiewaffe, leerer Seelenspeicher',equipped:base,passiveBonuses:totals,includedSkills:numbers,knownPassiveSubtotal:stats},{weapon:'Magiewaffe, 100 Seelen',equipped:base,passiveBonuses:{...totals,matk:(totals.matk??0)+100,vic:(totals.vic??0)+20},includedSkills:[...numbers,120,241],knownPassiveSubtotal:{...stats,magicalAttack:stats.magicalAttack+100}}],directPassiveAttackSpeedBonus:totals.atkSpeed,combatPassive:{name:'Ausbrennen',extraMagicalAttack:80,healthDrain:72,intervalSeconds:1.5,excludedFromPrecombatTable:true},regeneration:{directHPPerTick:12+totals.healthRegen,directMPPerTick:25+totals.manaRegen,additionalMPFromWisdomStatus:'provisional conversion not timed'},excluded:['Active buffs','Morrak and regular pet','Jewelry/stones','Additional Victim-to-attack conversion pending class rule; Intelligence comparison factor only','Combat drain passive excluded from precombat rows'],equipmentProposalApplied:false};
+pre.regeneration={directHPPerTick:12+(totals.healthRegen??0),directMPPerTick:25+(totals.manaRegen??0),knownHPPerTick:stats.healthRegen,knownMPPerTick:stats.manaRegen,additionalStartAttributeContributions:'Starting Vita/Wisdom unknown; tick interval pending'};
+pre.excluded=pre.excluded.map(x=>x.startsWith('Additional Victim')?'Victim retained as special stat with no direct attack conversion':x);
+await fs.writeFile('data/balancing/ritualist-precombat.json',JSON.stringify(pre,null,2)+'\n');
+const mana=s=>{const c=s.resourceCosts?.find(c=>c.resource==='mana');return c?end(c.scaling,s.maxSkillLv)*(c.unit==='fraction'?stats.maxMana:1):0;};
+const soulBonus=120;
+// Deliberate resource-feasible ordering avoids wasting soul generation at the storage cap.
+const plan=[{nr:180,uses:1,soulCost:30},{nr:103,uses:1,soulCost:1},{nr:104,uses:15},{nr:105,uses:1,soulGain:2},{nr:48,uses:1,soulGain:6},{nr:49,uses:1},{nr:72,uses:1},{nr:99,uses:1},{nr:110,uses:1},{nr:232,uses:1},{nr:235,uses:1}];
+const run=(initialSouls)=>{
+ let souls=initialSouls;const rows=[];
+ for(const p of plan){const s=skill(p.nr),start=souls;souls-=p.soulCost??0;if(souls<0)throw Error('Insufficient souls');const soulsForHit=souls;
+  const attack=stats.magicalAttack+combatPassiveAttack+soulsForHit;
+  let raw=0,initialDamage=0;
+  const sb=[103,104,105,180].includes(p.nr)?soulBonus:0;
+  if(p.nr===235)raw=(value(s,'patk')+stats.physicalAttack)*3;
+  else if(p.nr===99)raw=value(s,'matk')+stats.maxHealth*0.25*1.25+attack;
+  else if(p.nr===48)raw=(value(s,'matk')+attack)*2.8;
+  else raw=(value(s,'matk')+attack+sb)*p.uses;
+  raw*=1.01; // Sacrifice: one percent to the whole attack-skill damage.
+  if(p.nr===48)initialDamage=raw/2.8;
+  const heal=p.nr===105?750:p.nr===72?350+raw*0.02:0;
+  const healthCost=stats.maxHealth*0.005*p.uses+(p.nr===99?stats.maxHealth*0.25:0);
+  souls=Math.min(100,souls+(p.soulGain??0));
+  rows.push({nr:p.nr,name:s.skillName_de,uses:p.uses,mana:mana(s)*p.uses,soulsBefore:start,soulCost:p.soulCost??0,soulGain:p.soulGain??0,soulsAfter:souls,magicalAttackForHit:attack,rawDamage:raw,initialDamage,healthCost,selfHealing:heal});
+ }
+ const result={initialSouls,finalSouls:souls,rows,mana:rows.reduce((a,r)=>a+r.mana,0),rawDamageOneTarget:rows.reduce((a,r)=>a+r.rawDamage,0),healthCost:rows.reduce((a,r)=>a+r.healthCost,0),selfHealing:rows.reduce((a,r)=>a+r.selfHealing,0),soulCost:rows.reduce((a,r)=>a+r.soulCost,0),soulGain:rows.reduce((a,r)=>a+r.soulGain,0)};
+ result.netHealthLossBeforeOngoingDrain=result.healthCost-result.selfHealing;return result;
+};
+const first=run(100),second=run(first.finalSouls);
+const weakness={nr:100,name:skill(100).skillName_de,mana:mana(skill(100)),health:95};
+const oneMana=first.mana+weakness.mana,twoMana=oneMana*2;
+const ranked=[...first.rows].sort((a,b)=>b.rawDamage-a.rawDamage);
+const strongestIndividualSkills=ranked.filter(r=>r.nr!==104).slice(0,3);
+const assumptions=['Level60, original R6 Wand/armor, maximum skill levels, no active buffs or companion damage', 'Intelligence contributes 1.8 magical attack per point, same comparison convention as other classes; Victim is NOT additionally added until class conversion is settled', 'Start with100 souls; Soul Plague then Shackle/Torment15/Harvest then Fire of the Damned maximally hitting six enemies for six soul gains', 'Damage total shown against ONE enemy; six-target requirement is only for the resource-gain best case; with a lone boss Fire grants1 instead of6', 'Ausbrennen active: +80 magical attack included; ongoing health drain72 per1.5s reported separately, no elapsed combat duration assumed', 'Opfergabe adds1% total damage, costs0.5% maxHP once per attack-skill activation including each Torment cast; no cost per field tick', 'Soul attack flat passive+120 applied per Torment cast and once to Shackle/Harvest/Plague; group definitions still provisional', 'One enemy takes all six30% Fire follow-up ticks and all six Meteor wave portions; visual meteor count is NOT a damage multiplier', 'Meteor remains physical per stored field: three times (2172+character physical attack), then Opfergabe; magical alternative is a separate sensitivity', 'All attacks land; no defense/crit/damage resistance. Weakness debuff does not get converted into a guessed damage multiplier', 'No regeneration or potions; timing includes cooldown resets for the hypothetical second round; not a sustainable-DPS simulation', 'Morrak and buffs excluded from main rotation; no reliable attacks-per-second conversion for Morrak yet'];
+const report={classKey:'ritualist',level:60,rank:6,stats,precombat:pre,firstRotation:first,secondRotation:second,debuffPerRotation:weakness,mana:{pool:stats.maxMana,oneRotation:oneMana,twoRotations:twoMana,deficitOne:oneMana-stats.maxMana,deficitTwo:twoMana-stats.maxMana,torment15:15*mana(skill(104)),torment16:16*mana(skill(104))},health:{maxHP:stats.maxHealth,costOne:first.healthCost+95,healOne:first.selfHealing,netLossOne:first.netHealthLossBeforeOngoingDrain+95,costTwo:first.healthCost+second.healthCost+190,healTwo:first.selfHealing+second.selfHealing,netLossTwo:first.netHealthLossBeforeOngoingDrain+second.netHealthLossBeforeOngoingDrain+190,ongoingDrainPerSecondEquivalent:48,ongoingDrainPerInterval:72,intervalSeconds:1.5,HPRegenPerTick:22},souls:{maxGrossSpendOne:31,maxGrossSpendTwo:62,maximumGainOne:8,netChangeOne:-23,start:100,afterOne:77,afterTwo:54,singleBossMaximumGainOne:3,singleBossNetChangeOne:-28},strongestIndividualSkills,fullTormentSequence:first.rows.find(r=>r.nr===104),buffSetupMana:[79,178,236].reduce((a,n)=>a+mana(skill(n)),0),assumptions};
+report.meteorMagicalInsteadOfPhysicalSensitivity=first.rows.find(r=>r.nr===235).rawDamage+3*(first.rows.find(r=>r.nr===235).magicalAttackForHit-stats.physicalAttack)*1.01;
+report.health.HPRegenPerTick=stats.healthRegen;
+report.assumptions=report.assumptions.map(x=>x.startsWith('Intelligence contributes')?'Intelligence contributes 1.8 magical attack per point. Victim/Faith/Ambush have no direct attack conversion; future threshold rewards are undefined.':x);
+await fs.writeFile('data/balancing/ritualist-final-review.json',JSON.stringify(report,null,2)+'\n');
+const f=v=>Number(v.toFixed(2)).toLocaleString('de-DE');
+let md='# Ritualist: R6-Abschlussrechnung\n\n'+assumptions.map(x=>'- '+x).join('\n')+'\n\n## Werte\n\n| Wert | Leerer Speicher, ohne Ausbrennen | 100 Seelen, ohne Ausbrennen |\n| --- | ---: | ---: |\n';
+for(const[k,label]of [['maxHealth','Leben'],['maxMana','Mana'],['magicalAttack','M-Angriff'],['physicalAttack','P-Angriff'],['physicalDefense','P-Defense'],['magicalDefense','M-Defense']])md+=`| ${label} | ${f(stats[k])} | ${f(k==='magicalAttack'?stats[k]+100:stats[k])} |\n`;
+md+='\n## Eine volle Rotation\n\n| Skill | Anwendungen | Mana | Rohschaden ein Ziel | HP-Kosten | Selbstheilung | Seelen −/+ |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: |\n';
+for(const r of first.rows)md+=`| ${r.name} | ${r.uses} | ${f(r.mana)} | ${f(r.rawDamage)} | ${f(r.healthCost)} | ${f(r.selfHealing)} | −${r.soulCost}/+${r.soulGain} |\n`;
+md+=`| Schwäche des Fleisches | 1 | ${weakness.mana} | 0, Debuff nicht in Rohschaden umgerechnet | 95 | 0 | 0 |\n\nMana-Pool **${stats.maxMana}**; eine Runde **${oneMana}**, zwei **${twoMana}**, Fehlbetrag für zwei **${twoMana-stats.maxMana}** ohne Regeneration. Einmalige aktive Eigenbuff-Vorbereitung zusätzlich **${report.buffSetupMana} Mana**.\n\nRohschaden erste Rotation **${f(first.rawDamageOneTarget)}**, zweite bei weiter gesunkenem Seelenvorrat **${f(second.rawDamageOneTarget)}**.\n\nMaximale Seelenausgabe **31 pro Runde**; mögliche Gewinne **8**, netto **−23**, Start100 →77 →54. Bei nur einem Boss liefert das Feuerfeld nur1 statt6, daher netto−28 je erfolgreicher kompletter Kette.\n\nLebenskosten einschließlich Debuff **${f(report.health.costOne)} pro erster Runde**; Selbstheilung **${f(report.health.healOne)}**, Nettoverlust **${f(report.health.netLossOne)}** vor Ausbrennen, Regeneration und gegnerischem Schaden. Ausbrennen kostet zusätzlich **72 HP alle1,5 Sekunden**. Direkte HP-Regeneration **22 pro Tick**, Tickintervall offen; daher kein unbelegter zeitlicher Ausgleich.\n\n## Stärkste einzelne Skillanwendungen\n\n`;
+for(const r of strongestIndividualSkills)md+=`- ${r.name}: **${f(r.rawDamage)} Rohschaden**.\n`;
+md+=`\nDie gesamte Seelenqual-Serie aus15 separaten Anwendungen verursacht **${f(report.fullTormentSequence.rawDamage)}**, zählt aber nicht als einzelne Skillanwendung. Meteoritenschauer bei hypothetischer magischer statt gespeicherter physischer Verrechnung: **${f(report.meteorMagicalInsteadOfPhysicalSensitivity)}**; keine Datenbankänderung.\n\n## Morrak\n\nNicht in die Rotation eingerechnet. Während der Beschwörung −500 Max-HP, +5 Wisdom und +5 Victim mit gelernter Verbesserung. Dämonenwerte live je⅓ des Meisters; beide Verteidigungen verwenden dessen M-Defense. Keine feste Angriffsfrequenz oder Lauf-/Zielzeit erfunden.\n`;
+await fs.writeFile(await retiredBalancingReportPath('docs/balancing/classes/ritualist-final-review.md'),md);
+console.log(JSON.stringify({stats,mana:report.mana,health:report.health,souls:report.souls,damage:first.rawDamageOneTarget,secondDamage:second.rawDamageOneTarget,top:strongestIndividualSkills.map(r=>({name:r.name,damage:r.rawDamage})),torment:report.fullTormentSequence.rawDamage,buffMana:report.buffSetupMana},null,2));

@@ -1,0 +1,109 @@
+{
+  "_id": "6acc1c7e4826525c70d04c03",
+  "skillName_eng": "Warrior's Pride",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Selbstbuff. Gewährt je Skillstufe +1 Stärke und +1 Vitalität, bis zu jeweils +10 auf Stufe 10. Dauer 300 Sekunden, Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden. Aktivierungskosten 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 Mana auf Stufe 10 vor Vergünstigungen.",
+  "description_eng": "Self-buff granting +1 Strength and +1 Vitality per skill level, reaching +10 each at level 10. Lasts 300 seconds. Cooldown: 60 seconds. Fixed cast time: 0.1 seconds. Costs 50 Mana at level 1 plus 13 per additional level, reaching 167 Mana at level 10 before discounts.",
+  "dmgType": "selfbuff",
+  "dur": 300,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 160,
+  "skillName_de": "Stolz des Kriegers",
+  "skillpoints": 1,
+  "mana": 50,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 50,
+        "perLevel": 13
+      }
+    }
+  ],
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    },
+    "vita": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    }
+  },
+  "castTimeSeconds": 0.1,
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 50,
+            "perLevel": 13
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "str"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 1,
+          "perLevel": 1
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "vita"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 1,
+          "perLevel": 1
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "castTimeStatus": "defined",
+  "timingModifiers": {
+    "castTimeIsFixed": true,
+    "affectedByAttackSpeed": false,
+    "affectedByCastSpeed": false
+  },
+  "manaPricing": {
+    "category": "selfbuff",
+    "basis": "skillLevel",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "classificationVersion": 1,
+  "target": "self",
+  "type": "selfBuff",
+  "str": 1,
+  "vita": 1
+}

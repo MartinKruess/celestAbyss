@@ -1,0 +1,108 @@
+{
+  "_id": "6acc1c7e4826525c70d04bad",
+  "skillName_eng": "Mind Fortification",
+  "__v": 0,
+  "category": "active",
+  "charClass": [
+    "Luminet",
+    "Lightmage",
+    "Healer",
+    "Priest"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht deine Intelligenz und Weisheit sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel. Mana-Kosten 53 auf Stufe 1, plus 22 je weiterer Stufe, bis zu 251 auf Stufe 10. Castzeit 0,3 Sekunden.",
+  "description_eng": "Increases your Intelligence and Wisdom and those of your allies by 2 each per skill level for 300 seconds. Mana cost starts at 53 and increases by 22 per additional level to 251 at level 10. Cast time is 0.3 seconds.",
+  "dmgType": "buff",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 74,
+  "skillName_de": "Festigung des Geistes",
+  "skillpoints": 1,
+  "activation": "manual",
+  "cd": 60,
+  "dur": 300,
+  "int": 2,
+  "statBonusTargets": {
+    "int": "selfAndAllies",
+    "wis": "selfAndAllies"
+  },
+  "statBonusUnits": {
+    "int": "flat",
+    "wis": "flat"
+  },
+  "statScaling": {
+    "int": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    },
+    "wis": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    }
+  },
+  "wis": 2,
+  "castTimeSeconds": 0.3,
+  "mana": 53,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 53,
+        "perLevel": 22
+      }
+    }
+  ],
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "statScaling",
+          "int"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 2,
+          "perLevel": 2
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "wis"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 2,
+          "perLevel": 2
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 53,
+            "perLevel": 22
+          }
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-fiery-passion-chance-1792335115632",
+  "skill": {
+    "_id": "6ad4dcc0c50d0cd4e8963c82",
+    "nr": 257,
+    "skillName_de": "Feurige Leidenschaft",
+    "skillName_eng": "Fiery Passion",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "cd": 90,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 90,
+      "perLevel": -1
+    },
+    "dur": 10,
+    "triggerConditionStatus": "defined",
+    "triggerCondition": {
+      "type": "ownAttack",
+      "chancePerCheck": 0.005,
+      "requiresCooldownReady": true,
+      "manaBelowFraction": 0.5,
+      "oncePerAttackAction": true,
+      "includesBasicAttacks": true,
+      "includesAttackSkills": true,
+      "excludeCompanionAttacks": true,
+      "excludesPeriodicDamage": true,
+      "chancePerCheckScaling": {
+        "type": "linear",
+        "base": 0.005,
+        "perLevel": 0.005
+      }
+    },
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "passion-fire-auto",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "basicAttack",
+        "damageTypes": [
+          "magical"
+        ],
+        "damageSchool": "fire",
+        "value": 2,
+        "unit": "flat",
+        "durationSeconds": 10,
+        "valueScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 2
+        }
+      },
+      {
+        "key": "passion-auto-mana",
+        "type": "resourceGain",
+        "resource": "mana",
+        "target": "self",
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "value": 5,
+        "unit": "flat",
+        "durationSeconds": 10
+      }
+    ],
+    "description_de": "Bei weniger als 50 Prozent deines maximalen Manas können erfolgreiche eigene Auto-Attacks oder direkte Angriffsskills mit 0,5 Prozent Wahrscheinlichkeit je gelernter Skillstufe Feurige Leidenschaft entfesseln (0,5 Prozent auf Stufe 1, +0,5 Prozentpunkte je weiterer Stufe, maximal 5 Prozent auf Stufe 10), sofern der Skill bereit ist. Jede Angriffsaktion prüft die Chance nur einmal: zwei Waffen, Mehrfachtreffer oder mehrere getroffene Ziele geben keine zusätzlichen Würfe; periodischer Schaden und Begleiter lösen nicht aus. Die Wirkung hält auf allen zehn Stufen 10 Sekunden. Währenddessen verursacht jede erfolgreiche eigene Auto-Attack-Aktion zusätzlich 2 magischen Feuerschaden je Skillstufe, maximal 20 auf Stufe 10, und stellt einmalig 5 Mana wieder her. Kein Zusatz des M-Angriffs zu diesem festen Bonusschaden. Angriffsskills können die Passive auslösen, erhalten aber weder deren Zusatzschaden noch Mana-Rückgewinnung. Keine Aktivierungskosten. Interner Cooldown beginnt mit Auslösung: 90 Sekunden, −1 je weiterer Stufe bis 81 auf Stufe 10. Die Wirkung stapelt nicht und wird nicht durch neue Auslösungen verlängert. Ein Anstieg auf mindestens 50 Prozent Mana beendet eine bereits laufende Wirkung nicht vorzeitig.",
+    "description_eng": "While below50 percent maximum Mana, successful own basic attacks or direct attack skills have a chance of 0.5 percent per learned skill level per attack action (0.5 percent at level 1, increasing by 0.5 percentage points per additional level to 5 percent at level 10) to trigger Fiery Passion when ready. Dual weapons, multi-hit skills and multiple targets do not grant extra rolls; periodic and companion damage cannot trigger it. Duration10 seconds at all ten levels. Each successful own basic-attack action during the effect deals2 additional flat magical fire damage per skill level, up to20, and restores5 Mana once. No magical-attack contribution to this flat bonus. Attack skills can trigger the passive but do not receive its bonus damage or Mana return. No activation cost. Internal cooldown starts on trigger:90 seconds minus1 per additional level to81. No stacking or refreshing. Recovering to50 percent Mana or above does not end an already active effect."
+  },
+  "simulationStatus": "Random procs remain excluded from deterministic 600-second comparison"
+}

@@ -1,0 +1,53 @@
+{
+  "_id": "6acc1c7e4826525c70d04b73",
+  "skillName_eng": "Water Chains",
+  "__v": 0,
+  "category": "active",
+  "cd": 38,
+  "charClass": [
+    "Herbalist",
+    "Witcher"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erschafft Wasserfesseln, die ein Ziel festhalten. Auf Skilllevel 1 beträgt die Fesseldauer 1 Sekunde. Auf den Skillleveln 5, 10, 15 und 20 steigt sie jeweils um 0,5 Sekunden, bis auf 3 Sekunden. Der Cooldown startet bei 38 Sekunden und sinkt pro weiterem Skilllevel um 0,5 Sekunden auf 28,5 Sekunden.",
+  "description_eng": "Creates water chains that immobilize a target. At skill level 1, the duration is 1 second. At skill levels 5, 10, 15 and 20, it increases by 0.5 seconds each, reaching 3 seconds. The cooldown starts at 38 seconds and decreases by 0.5 seconds per additional skill level, reaching 28.5 seconds.",
+  "dmgType": "spell",
+  "dur": 1,
+  "matk": 47,
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 16,
+  "skillName_de": "Wasserfesseln",
+  "skillpoints": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 38,
+    "perLevel": -0.5
+  },
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      1,
+      1,
+      1,
+      1,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      1.5,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      2.5,
+      3
+    ]
+  }
+}

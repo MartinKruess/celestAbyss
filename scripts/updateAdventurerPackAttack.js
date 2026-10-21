@@ -1,0 +1,31 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {isDeepStrictEqual} from 'node:util';
+import {SkillDataModel} from '../models/skillSchema.js';
+try {
+ if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Development database required');
+ await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+ const col=SkillDataModel.collection;
+ const blade=await col.findOne({nr:115}),cross=await col.findOne({nr:248});
+ if(!blade.charClass.includes('Abenteuer')||await col.findOne({nr:249})||await col.findOne({nr:250}))throw Error('Unexpected source state');
+ const common={charClass:['Abenteuer'],currentSkillLv:0,currentUpgradeLv:0,maxUpgradeLv:10,skillpoints:1,category:'active'};
+ const pack={...common,_id:new mongoose.Types.ObjectId(),nr:249,skillName_de:'Rudelangriff',skillName_eng:'Pack Attack',dmgType:'physical',maxSkillLv:20,patk:273,statScaling:{patk:{type:'linear',base:273,perLevel:154}},
+ description_de:'Der Abenteurer springt zurück, gibt bis zu zwei verfügbaren Begleitern Zeit zur Positionierung und stürmt zum gemeinsamen Angriff vor. Grundschaden 273, +154 je weiterer Stufe bis 3199 auf Stufe 20. Dazu einmal der aktuelle P-Angriff des Abenteurers und einmal die Angriffskraft jedes beteiligten Begleiters. Eine gemeinsame Schadensanzeige. Funktioniert auch allein oder mit nur einem Begleiter; nicht teilnehmende Begleiter tragen nichts bei. Vorbereitungsdauer, Castzeit, Cooldown, Mana, Reichweite und die Verrechnung magischer Pet-Angriffe noch offen.',
+ description_eng:'Retreat, allow up to two companions to position, then charge for a coordinated attack. Base damage 273 +154 per additional level to 3199. Add current owner physical attack once and each participating companion attack once. Combined damage display; usable solo or with one companion. Timing, cooldown, mana, range and magical companion damage mapping pending.',
+ packAttackSettings:{maxCompanions:2,usableWithoutCompanions:true,usesCurrentOwnerPhysicalAttack:true,companionAttackFactor:1,combinedDamageDisplay:true,preparation:'backstep, companion positioning, forward charge',preparationTimingStatus:'pending',magicalCompanionDamageMappingStatus:'pending'}};
+ const transfer={...common,_id:new mongoose.Types.ObjectId(),nr:250,skillName_de:'Lebenstransfer',skillName_eng:'Life Transfer',dmgType:'heal',maxSkillLv:10,castTimeSeconds:1.2,castTimeStatus:'defined',animationDurationSeconds:2,animationTimingStatus:'defined',cd:60,cooldownScaling:{type:'linear',base:60,perLevel:-2},
+ description_de:'Heilt einen ausgewählten eigenen Begleiter unter Opferung eigener HP und Mana. Zehn Lernstufen bestätigt. Castzeit 1,2 Sekunden, feste anschließende Animation 2 Sekunden; Heilung kann unterbrochen oder durch Bewegung abgebrochen werden, nur erfolgte Impulse heilen. Cooldown 60 Sekunden, -2 je weiterer Stufe bis 42. Der frühere Fünf-Stufen-Entwurf hatte vier Impulse alle 0,5 Sekunden mit je 10/30/60/120/160 HP sowie insgesamt 100 HP und vorgeschlagenen 50 Mana je Skillstufe. Neue Zehn-Stufen-Heilkurve (ungefähr 2000 Gesamtheilung am Ende), Impulszahl (zuletzt drei statt ursprünglich vier genannt) und endgültige Kosten noch offen; alte Heilkurve wird nicht automatisch auf zehn Stufen erweitert.',
+ description_eng:'Transfer own health and mana to heal a selected own companion. Ten levels, cast 1.2 seconds, fixed subsequent animation 2 seconds; interruptible. Cooldown 60 -2 per additional level to 42 seconds. Ten-level healing progression, final impulse count and costs pending; original five-level draft retained as reference only.',
+ lifeTransferSettings:{target:'selectedOwnCompanion',interruptible:true,healingProgressionStatus:'pending',impulseCountStatus:'pending',healingAtMaxLevelApproximate:2000,confirmedFiveLevelHealingPerImpulse:[10,30,60,120,160],originalImpulseIntervalSeconds:.5,originalImpulseCount:4,costProgressionStatus:'pending'}};
+ const bladeSet={charClass:blade.charClass.filter(c=>c!=='Abenteuer')};
+ const crossSet={cd:43,cooldownScaling:{type:'linear',base:43,perLevel:-1},description_de:cross.description_de.replace('Cooldown und genaue Trefferzeitpunkte noch offen.','Cooldown 43 Sekunden, -1 je weiterer Stufe bis 34 Sekunden. Genaue Trefferzeitpunkte noch offen.'),description_eng:cross.description_eng.replace('Cooldown and precise hit times pending.','Cooldown 43 -1 per additional level to 34 seconds; precise hit times pending.')};
+ for(const s of [pack,transfer,{...blade,...bladeSet},{...cross,...crossSet}])await new SkillDataModel(s).validate();
+ const path='data/reports/class-skill-counts.json',r=JSON.parse(await fs.readFile(path,'utf8')),c=r.counts.find(c=>c.name==='Abenteurer / Scout');if(c.total!==30)throw Error('Unexpected count');
+ const dir='data/balancing/history/before-adventurer-pack-attack-'+new Date().toISOString().replaceAll(':','-');await fs.mkdir(dir,{recursive:true});await fs.writeFile(dir+'/skills-before.json',JSON.stringify([blade,cross],null,2)+'\n',{flag:'wx'});await fs.copyFile(path,dir+'/class-skill-counts-before.json');
+ for(const [before,set]of [[blade,bladeSet],[cross,crossSet]]){await col.updateOne({nr:before.nr},{$set:set});if(!isDeepStrictEqual(await col.findOne({nr:before.nr}),{...before,...set}))throw Error('Read-back mismatch');}
+ for(const s of [pack,transfer]){await col.insertOne(s);if(!isDeepStrictEqual(await col.findOne({nr:s.nr}),s))throw Error('Read-back mismatch');}
+ c.skillNumbers=c.skillNumbers.filter(n=>n!==115).concat(249,250).sort((a,b)=>a-b);c.total=c.skillNumbers.length;c.healing++;r.classified.find(s=>s.nr===115).classes=bladeSet.charClass;
+ for(const s of [pack,transfer])r.classified.push({nr:s.nr,id:s._id.toString(),name:s.skillName_de,classes:s.charClass,category:s.nr===249?'offensive':'healing',activeDefensive:false});
+ r.catalogCount=await col.countDocuments({});await fs.writeFile(path,JSON.stringify(r,null,2)+'\n');console.log('Verified: Pack Attack 20 levels replaces Adventurer Supersonic Blade; Life Transfer 10 levels; Cross Strike cooldown 43–34. Total31.');
+}catch(e){console.error(e.message);process.exitCode=1;}finally{await mongoose.disconnect();}

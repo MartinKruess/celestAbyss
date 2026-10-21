@@ -1,0 +1,48 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c02",
+    "skillName_eng": "Critical Strikes",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöhe deinen Glückswert um 1.",
+    "description_eng": "Increase your Luck by 1.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "luck": 1,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 159,
+    "skillName_de": "Kritische Schläge",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c03",
+    "skillName_eng": "Energy of Courage",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Fasse deinen Mut zusammen und erhöhe deinen Angriff um 5 Punkte.",
+    "description_eng": "Gather your courage and increase your attack by 5 points.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 160,
+    "patk": 5,
+    "skillName_de": "Energie des Mutes",
+    "skillpoints": 1
+  }
+]

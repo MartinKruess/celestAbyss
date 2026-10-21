@@ -1,0 +1,53 @@
+{
+  "_id": "6acc1c7e4826525c70d04b96",
+  "skillName_eng": "Fire Arrow",
+  "__v": 0,
+  "category": "active",
+  "cd": 23.25,
+  "charClass": [
+    "Summoner",
+    "Soulseeker",
+    "Archer",
+    "Hunter"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Schießt einen brennenden Pfeil auf dein Ziel. Verursacht einmalig physischen Grundschaden von 67, plus 19 je weiterer Stufe, bis zu 428 auf Stufe 20. Mana-Kosten 32, plus 13 je weiterer Stufe, bis zu 279. Cooldown 23,25 Sekunden auf Stufe 1, minus 0,75 Sekunden je weiterer Stufe bis auf 9 Sekunden auf Stufe 20. Zusätzliche Castzeit 0 Sekunden, vorläufige Flug-/Ausführungsanimation 0,8 Sekunden. Kein zusätzlicher DoT festgelegt.",
+  "description_eng": "Shoots a burning arrow at your target, dealing physical damage once. Base damage starts at 67 and increases by 19 per additional level to 428 at level 20. Mana cost starts at 32 and increases by 13 per additional level to 279. Cooldown 23.25 seconds at level 1, minus 0.75 seconds per additional level to 9 seconds at level 20. Additional cast time is 0 seconds; provisional travel/execution animation is 0.8 seconds. No additional damage over time is defined.",
+  "dmgType": "physical",
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 51,
+  "patk": 67,
+  "skillName_de": "Feuerpfeil",
+  "skillpoints": 1,
+  "castTimeSeconds": 0,
+  "animationDurationSeconds": 0.8,
+  "animationTimingStatus": "provisional",
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 23.25,
+    "perLevel": -0.75
+  },
+  "hasLingeringDamage": false,
+  "mana": 32,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 32,
+        "perLevel": 13
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 67,
+      "perLevel": 19
+    }
+  }
+}

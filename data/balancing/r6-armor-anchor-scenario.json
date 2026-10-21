@@ -1,0 +1,648 @@
+{
+  "generatedAt": "2026-10-21T05:59:13.475Z",
+  "status": "hypotheticalOnly",
+  "baseScenario": "defense-factor-12.json",
+  "anchor": {
+    "class": "gladiator",
+    "rank": 6,
+    "original": 554,
+    "target": 354,
+    "multiplier": 0.6389891696750902,
+    "reductionPercent": 36.101083032490976
+  },
+  "scope": "Only R6 direct armor P/M defense, same multiplicative reduction across all classes, rounded aggregate totals then largest-remainder slot distribution. R1-R5 unchanged. Weapons and shield unchanged; no active buffs, cloak values or future bonuses. All class attribute modifiers retained in the 1.2 scenario.",
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "physicalAttack": 472.20000000000005,
+      "magicalAttack": 132.2,
+      "physicalDefense": {
+        "currentArmor": 512,
+        "proposedArmor": 327,
+        "withoutArmor": 161.79999999999995,
+        "currentFinal": 673.8,
+        "proposedFinal": 488.79999999999995,
+        "proposedParts": [
+          98,
+          85,
+          53,
+          52,
+          39
+        ],
+        "armorSharePercent": 66.89852700491
+      },
+      "magicalDefense": {
+        "currentArmor": 330,
+        "proposedArmor": 211,
+        "withoutArmor": 187.79999999999995,
+        "currentFinal": 517.8,
+        "proposedFinal": 398.79999999999995,
+        "proposedParts": [
+          63,
+          55,
+          34,
+          34,
+          25
+        ],
+        "armorSharePercent": 52.908726178535616
+      }
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "physicalAttack": 690.58,
+      "magicalAttack": 27,
+      "physicalDefense": {
+        "currentArmor": 483,
+        "proposedArmor": 309,
+        "withoutArmor": 152.79999999999995,
+        "currentFinal": 635.8,
+        "proposedFinal": 461.79999999999995,
+        "proposedParts": [
+          93,
+          80,
+          50,
+          49,
+          37
+        ],
+        "armorSharePercent": 66.91208315288004
+      },
+      "magicalDefense": {
+        "currentArmor": 312,
+        "proposedArmor": 199,
+        "withoutArmor": 190.8,
+        "currentFinal": 502.8,
+        "proposedFinal": 389.8,
+        "proposedParts": [
+          59,
+          52,
+          32,
+          32,
+          24
+        ],
+        "armorSharePercent": 51.05182144689584
+      }
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "physicalAttack": 335.20000000000005,
+      "magicalAttack": 486.9,
+      "physicalDefense": {
+        "currentArmor": 456,
+        "proposedArmor": 291,
+        "withoutArmor": 135.79999999999995,
+        "currentFinal": 591.8,
+        "proposedFinal": 426.79999999999995,
+        "proposedParts": [
+          87,
+          76,
+          47,
+          46,
+          35
+        ],
+        "armorSharePercent": 68.18181818181819
+      },
+      "magicalDefense": {
+        "currentArmor": 368,
+        "proposedArmor": 235,
+        "withoutArmor": 189.79999999999995,
+        "currentFinal": 557.8,
+        "proposedFinal": 424.79999999999995,
+        "proposedParts": [
+          70,
+          61,
+          38,
+          38,
+          28
+        ],
+        "armorSharePercent": 55.320150659133716
+      }
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "physicalAttack": 629.36,
+      "magicalAttack": 26,
+      "physicalDefense": {
+        "currentArmor": 554,
+        "proposedArmor": 354,
+        "withoutArmor": 182.64,
+        "currentFinal": 736.64,
+        "proposedFinal": 536.64,
+        "proposedParts": [
+          106,
+          92,
+          57,
+          57,
+          42
+        ],
+        "armorSharePercent": 65.96601073345259
+      },
+      "magicalDefense": {
+        "currentArmor": 349,
+        "proposedArmor": 223,
+        "withoutArmor": 187.79999999999995,
+        "currentFinal": 536.8,
+        "proposedFinal": 410.79999999999995,
+        "proposedParts": [
+          67,
+          58,
+          36,
+          35,
+          27
+        ],
+        "armorSharePercent": 54.284323271665045
+      }
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "physicalAttack": 22,
+      "magicalAttack": 638.6,
+      "physicalDefense": {
+        "currentArmor": 282,
+        "proposedArmor": 180,
+        "withoutArmor": 127.80000000000001,
+        "currentFinal": 409.8,
+        "proposedFinal": 307.8,
+        "proposedParts": [
+          54,
+          47,
+          29,
+          29,
+          21
+        ],
+        "armorSharePercent": 58.47953216374269
+      },
+      "magicalDefense": {
+        "currentArmor": 693,
+        "proposedArmor": 443,
+        "withoutArmor": 266.20000000000005,
+        "currentFinal": 959.2,
+        "proposedFinal": 709.2,
+        "proposedParts": [
+          133,
+          115,
+          71,
+          71,
+          53
+        ],
+        "armorSharePercent": 62.464749012972355
+      }
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "physicalAttack": 26,
+      "magicalAttack": 640.13,
+      "physicalDefense": {
+        "currentArmor": 418,
+        "proposedArmor": 267,
+        "withoutArmor": 148.79999999999995,
+        "currentFinal": 566.8,
+        "proposedFinal": 415.79999999999995,
+        "proposedParts": [
+          80,
+          69,
+          43,
+          43,
+          32
+        ],
+        "armorSharePercent": 64.21356421356423
+      },
+      "magicalDefense": {
+        "currentArmor": 330,
+        "proposedArmor": 211,
+        "withoutArmor": 212.15999999999997,
+        "currentFinal": 542.16,
+        "proposedFinal": 423.15999999999997,
+        "proposedParts": [
+          63,
+          55,
+          34,
+          34,
+          25
+        ],
+        "armorSharePercent": 49.86293600529351
+      }
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "physicalAttack": 628.2,
+      "magicalAttack": 23,
+      "physicalDefense": {
+        "currentArmor": 398,
+        "proposedArmor": 254,
+        "withoutArmor": 148.79999999999995,
+        "currentFinal": 546.8,
+        "proposedFinal": 402.79999999999995,
+        "proposedParts": [
+          76,
+          66,
+          41,
+          41,
+          30
+        ],
+        "armorSharePercent": 63.05858987090368
+      },
+      "magicalDefense": {
+        "currentArmor": 330,
+        "proposedArmor": 211,
+        "withoutArmor": 192.07999999999993,
+        "currentFinal": 522.0799999999999,
+        "proposedFinal": 403.0799999999999,
+        "proposedParts": [
+          63,
+          55,
+          34,
+          34,
+          25
+        ],
+        "armorSharePercent": 52.346928649399636
+      }
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "physicalAttack": 421.42,
+      "magicalAttack": 24,
+      "physicalDefense": {
+        "currentArmor": 693,
+        "proposedArmor": 443,
+        "withoutArmor": 327.5400000000001,
+        "currentFinal": 1020.5400000000001,
+        "proposedFinal": 770.5400000000001,
+        "proposedParts": [
+          133,
+          115,
+          71,
+          71,
+          53
+        ],
+        "armorSharePercent": 57.49214836348534
+      },
+      "magicalDefense": {
+        "currentArmor": 451,
+        "proposedArmor": 288,
+        "withoutArmor": 211.03999999999996,
+        "currentFinal": 662.04,
+        "proposedFinal": 499.03999999999996,
+        "proposedParts": [
+          86,
+          75,
+          46,
+          46,
+          35
+        ],
+        "armorSharePercent": 57.71080474511062
+      }
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "physicalAttack": 24,
+      "magicalAttack": 655.2,
+      "physicalDefense": {
+        "currentArmor": 336,
+        "proposedArmor": 215,
+        "withoutArmor": 140.8,
+        "currentFinal": 476.8,
+        "proposedFinal": 355.8,
+        "proposedParts": [
+          65,
+          56,
+          34,
+          34,
+          26
+        ],
+        "armorSharePercent": 60.42720629567172
+      },
+      "magicalDefense": {
+        "currentArmor": 554,
+        "proposedArmor": 354,
+        "withoutArmor": 210.79999999999995,
+        "currentFinal": 764.8,
+        "proposedFinal": 564.8,
+        "proposedParts": [
+          106,
+          92,
+          57,
+          57,
+          42
+        ],
+        "armorSharePercent": 62.677053824362616
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "physicalAttack": 24,
+      "magicalAttack": 584.8,
+      "magicalAttackWithFullSouls": 614.8,
+      "physicalDefense": {
+        "currentArmor": 368,
+        "proposedArmor": 235,
+        "withoutArmor": 150.39999999999998,
+        "currentFinal": 518.4,
+        "proposedFinal": 385.4,
+        "proposedParts": [
+          70,
+          61,
+          38,
+          38,
+          28
+        ],
+        "armorSharePercent": 60.97560975609756
+      },
+      "magicalDefense": {
+        "currentArmor": 483,
+        "proposedArmor": 309,
+        "withoutArmor": 174.79999999999995,
+        "currentFinal": 657.8,
+        "proposedFinal": 483.79999999999995,
+        "proposedParts": [
+          93,
+          80,
+          50,
+          49,
+          37
+        ],
+        "armorSharePercent": 63.8693675072344
+      }
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "physicalAttack": 481.88,
+      "magicalAttack": 391.20000000000005,
+      "physicalDefense": {
+        "currentArmor": 432,
+        "proposedArmor": 276,
+        "withoutArmor": 140.39999999999998,
+        "currentFinal": 572.4,
+        "proposedFinal": 416.4,
+        "proposedParts": [
+          83,
+          72,
+          44,
+          44,
+          33
+        ],
+        "armorSharePercent": 66.28242074927955
+      },
+      "magicalDefense": {
+        "currentArmor": 386,
+        "proposedArmor": 247,
+        "withoutArmor": 182.79999999999995,
+        "currentFinal": 568.8,
+        "proposedFinal": 429.79999999999995,
+        "proposedParts": [
+          74,
+          64,
+          40,
+          39,
+          30
+        ],
+        "armorSharePercent": 57.46859004187995
+      }
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "physicalAttack": 535.2,
+      "magicalAttack": 23,
+      "physicalDefense": {
+        "currentArmor": 312,
+        "proposedArmor": 199,
+        "withoutArmor": 135.8,
+        "currentFinal": 447.8,
+        "proposedFinal": 334.8,
+        "proposedParts": [
+          59,
+          52,
+          32,
+          32,
+          24
+        ],
+        "armorSharePercent": 59.438470728793305
+      },
+      "magicalDefense": {
+        "currentArmor": 298,
+        "proposedArmor": 190,
+        "withoutArmor": 175.83999999999997,
+        "currentFinal": 473.84,
+        "proposedFinal": 365.84,
+        "proposedParts": [
+          57,
+          50,
+          30,
+          30,
+          23
+        ],
+        "armorSharePercent": 51.93527225016401
+      }
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "physicalAttack": 452.00000000000006,
+      "magicalAttack": 26,
+      "physicalDefense": {
+        "currentArmor": 421,
+        "proposedArmor": 269,
+        "withoutArmor": 135.79999999999995,
+        "currentFinal": 556.8,
+        "proposedFinal": 404.79999999999995,
+        "proposedParts": [
+          81,
+          70,
+          43,
+          43,
+          32
+        ],
+        "armorSharePercent": 66.45256916996048
+      },
+      "magicalDefense": {
+        "currentArmor": 312,
+        "proposedArmor": 199,
+        "withoutArmor": 168.8,
+        "currentFinal": 480.8,
+        "proposedFinal": 367.8,
+        "proposedParts": [
+          59,
+          52,
+          32,
+          32,
+          24
+        ],
+        "armorSharePercent": 54.10549211528004
+      }
+    }
+  ],
+  "rank5Conflicts": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "field": "physicalDefense",
+      "rank5": 387,
+      "proposedRank6": 327
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "field": "magicalDefense",
+      "rank5": 264,
+      "proposedRank6": 211
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "field": "magicalDefense",
+      "rank5": 245,
+      "proposedRank6": 199
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "field": "physicalDefense",
+      "rank5": 331,
+      "proposedRank6": 291
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "field": "magicalDefense",
+      "rank5": 273,
+      "proposedRank6": 235
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "field": "physicalDefense",
+      "rank5": 396,
+      "proposedRank6": 354
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "field": "magicalDefense",
+      "rank5": 289,
+      "proposedRank6": 223
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "field": "physicalDefense",
+      "rank5": 203,
+      "proposedRank6": 180
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "field": "magicalDefense",
+      "rank5": 498,
+      "proposedRank6": 443
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "field": "physicalDefense",
+      "rank5": 308,
+      "proposedRank6": 267
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "field": "magicalDefense",
+      "rank5": 254,
+      "proposedRank6": 211
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "field": "physicalDefense",
+      "rank5": 266,
+      "proposedRank6": 254
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "field": "magicalDefense",
+      "rank5": 256,
+      "proposedRank6": 211
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "field": "physicalDefense",
+      "rank5": 498,
+      "proposedRank6": 443
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "field": "magicalDefense",
+      "rank5": 323,
+      "proposedRank6": 288
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "field": "physicalDefense",
+      "rank5": 254,
+      "proposedRank6": 215
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "field": "magicalDefense",
+      "rank5": 396,
+      "proposedRank6": 354
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "field": "physicalDefense",
+      "rank5": 257,
+      "proposedRank6": 235
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "field": "physicalDefense",
+      "rank5": 313,
+      "proposedRank6": 276
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "field": "magicalDefense",
+      "rank5": 283,
+      "proposedRank6": 247
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "field": "physicalDefense",
+      "rank5": 245,
+      "proposedRank6": 199
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "field": "magicalDefense",
+      "rank5": 231,
+      "proposedRank6": 190
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "field": "magicalDefense",
+      "rank5": 245,
+      "proposedRank6": 199
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+const set={mana:127,castTimeSeconds:0,animationDurationSeconds:0.5,animationTimingStatus:'provisional',hasLingeringDamage:false,statScaling:{patk:{type:'linear',base:234,perLevel:37}},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:127,perLevel:63}}],cooldownScaling:{type:'linear',base:52,perLevel:-1},attackExecution:{hitCount:2,damageValueScope:'perHit',hitTimingStatus:'pending'},description_de:'Führt zwei schnelle physische Angriffe aus. Der Grundschaden je Treffer steigt von 234 um 37 je weiterer Stufe auf 567 auf Stufe 10. Zwei Treffer ergeben insgesamt 468 bis 1134 Skill-Grundschaden vor Charakterangriff und Verteidigung. Mana-Kosten steigen von 127 um 63 je weiterer Stufe auf 694. Der Cooldown sinkt von 52 um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0 Sekunden, vorläufige Animation 0,5 Sekunden. Keine Unsichtbarkeit und keine anhaltende Wirkungsdauer. Die bisher beschriebene erhöhte Crit-Chance des zweiten Treffers wird separat noch beziffert.',description_eng:'Performs two quick physical attacks. Base damage per hit increases from 234 by 37 per additional level to 567 at level 10. Both hits total 468 to 1134 skill base damage before character attack and defense. Mana cost increases from 127 by 63 per additional level to 694. Cooldown decreases from 52 by 1 second per additional level to 43 seconds. Cast time is 0 seconds; provisional animation is 0.5 seconds. No invisibility or lasting effect. The previously described increased critical chance of the second hit remains to be quantified separately.'};
+try{
+if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Requires development database');
+await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+const before=await SkillDataModel.collection.findOne({nr:20});if(!before)throw Error('Missing skill');
+await new SkillDataModel({...before,...set}).validate();await fs.writeFile('data/balancing/breaker-light-double-hit-before.json',JSON.stringify(before,null,2)+'\n');
+await SkillDataModel.collection.updateOne({_id:before._id},{$set:set,$unset:{dur:''}});
+const after=await SkillDataModel.collection.findOne({_id:before._id});for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');
+console.log('Breaker of Light verified: two hits, 234 to 567 each, mana 127 to 694, cooldown 52 to 43.');
+}catch(e){console.error(`Eternal Victor update failed (${e.name}); credentials omitted.`);process.exitCode=1;}finally{await mongoose.disconnect();}

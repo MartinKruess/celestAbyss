@@ -1,0 +1,221 @@
+{
+  "definitions": [
+    {
+      "nr": 75,
+      "old": "Energie des Körpers",
+      "name": "Verstärkung des Körpers",
+      "en": "Body Reinforcement",
+      "stats": [
+        "str",
+        "vita"
+      ],
+      "labels": [
+        "Stärke",
+        "Vitalität"
+      ],
+      "eng": [
+        "Strength",
+        "Vitality"
+      ],
+      "remove": [
+        "patk",
+        "pdef"
+      ],
+      "max": 10,
+      "de": "Erhöht deine Stärke und Vitalität sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+      "engText": "Increases your Strength and Vitality and those of your allies by 2 each per skill level for 300 seconds.",
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bae",
+        "skillName_eng": "Body Reinforcement",
+        "__v": 0,
+        "category": "active",
+        "cd": 60,
+        "charClass": [
+          "Knife",
+          "Templar",
+          "Gladiator",
+          "Butcher",
+          "Destroyer"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erhöht deine Stärke und Vitalität sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+        "description_eng": "Increases your Strength and Vitality and those of your allies by 2 each per skill level for 300 seconds.",
+        "dmgType": "buff",
+        "dur": 300,
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 75,
+        "skillName_de": "Verstärkung des Körpers",
+        "skillpoints": 1,
+        "statScaling": {
+          "str": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "vita": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        },
+        "activation": "manual",
+        "statBonusTargets": {
+          "str": "selfAndAllies",
+          "vita": "selfAndAllies"
+        },
+        "statBonusUnits": {
+          "str": "flat",
+          "vita": "flat"
+        },
+        "str": 2,
+        "vita": 2
+      }
+    },
+    {
+      "nr": 74,
+      "old": "Energie des Geistes",
+      "name": "Festigung des Geistes",
+      "en": "Mind Fortification",
+      "stats": [
+        "int",
+        "wis"
+      ],
+      "labels": [
+        "Intelligenz",
+        "Weisheit"
+      ],
+      "eng": [
+        "Intelligence",
+        "Wisdom"
+      ],
+      "remove": [
+        "matk",
+        "mdef"
+      ],
+      "max": 10,
+      "de": "Erhöht deine Intelligenz und Weisheit sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+      "engText": "Increases your Intelligence and Wisdom and those of your allies by 2 each per skill level for 300 seconds.",
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bad",
+        "skillName_eng": "Mind Fortification",
+        "__v": 0,
+        "category": "active",
+        "charClass": [
+          "Luminet",
+          "Lightmage",
+          "Ritualist",
+          "Bloodmage",
+          "Healer",
+          "Priest"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erhöht deine Intelligenz und Weisheit sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+        "description_eng": "Increases your Intelligence and Wisdom and those of your allies by 2 each per skill level for 300 seconds.",
+        "dmgType": "buff",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 74,
+        "skillName_de": "Festigung des Geistes",
+        "skillpoints": 1,
+        "activation": "manual",
+        "cd": 60,
+        "dur": 300,
+        "int": 2,
+        "statBonusTargets": {
+          "int": "selfAndAllies",
+          "wis": "selfAndAllies"
+        },
+        "statBonusUnits": {
+          "int": "flat",
+          "wis": "flat"
+        },
+        "statScaling": {
+          "int": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "wis": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        },
+        "wis": 2
+      }
+    },
+    {
+      "nr": 147,
+      "old": "Erweiterung der Leidenschaft",
+      "name": "Erweckung der Leidenschaft",
+      "en": "Passion Awakening",
+      "stats": [
+        "dex",
+        "agi"
+      ],
+      "labels": [
+        "Geschicklichkeit",
+        "Agilität"
+      ],
+      "eng": [
+        "Dexterity",
+        "Agility"
+      ],
+      "remove": [],
+      "max": 5,
+      "de": "Erhöht deine Geschicklichkeit und Agilität sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+      "engText": "Increases your Dexterity and Agility and those of your allies by 2 each per skill level for 300 seconds.",
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bf6",
+        "skillName_eng": "Passion Awakening",
+        "__v": 0,
+        "category": "active",
+        "cd": 60,
+        "charClass": [
+          "Summoner",
+          "Soulseeker"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Erhöht deine Geschicklichkeit und Agilität sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+        "description_eng": "Increases your Dexterity and Agility and those of your allies by 2 each per skill level for 300 seconds.",
+        "dex": 2,
+        "dmgType": "buff",
+        "dur": 300,
+        "maxSkillLv": 5,
+        "maxUpgradeLv": 10,
+        "nr": 147,
+        "skillName_de": "Erweckung der Leidenschaft",
+        "skillpoints": 1,
+        "agi": 2,
+        "activation": "manual",
+        "statBonusTargets": {
+          "dex": "selfAndAllies",
+          "agi": "selfAndAllies"
+        },
+        "statBonusUnits": {
+          "dex": "flat",
+          "agi": "flat"
+        },
+        "statScaling": {
+          "dex": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "agi": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        }
+      }
+    }
+  ],
+  "classAssignment": "unchanged; Herbalist and other missing classes pending",
+  "levelCaps": "Body and Mind 10; Passion 5 unchanged",
+  "groupScope": "self and allies; membership/range rules pending"
+}

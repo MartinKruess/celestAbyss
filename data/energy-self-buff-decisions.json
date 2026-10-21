@@ -1,0 +1,47 @@
+{
+  "status": "confirmedForCurrentReview",
+  "skills": [
+    {
+      "nr": 160,
+      "name": "Energie des Mutes",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "role": "longDurationSelfBuff",
+      "physicalAttack": 5,
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "maxSkillLv": 10
+    },
+    {
+      "nr": 161,
+      "name": "Energie der Wut",
+      "classes": [
+        "Gladiator",
+        "Berserker"
+      ],
+      "role": "shortDurationRageSelfBuff",
+      "physicalAttack": 50,
+      "durationSeconds": 45,
+      "cooldownSeconds": 90,
+      "maxSkillLv": 10
+    },
+    {
+      "nr": 170,
+      "name": "Energie des Lebens",
+      "classes": [
+        "Knife",
+        "Templar"
+      ],
+      "role": "selfBuff",
+      "vitality": 3,
+      "health": 500,
+      "durationSeconds": 600,
+      "cooldownSeconds": 60,
+      "maxSkillLv": 10
+    }
+  ],
+  "deferred": "Full level scaling, costs and runtime semantics belong to later class review; no additional current-review questions.",
+  "supersedes": "Earlier tentative association of Energy of Courage with Adventurer"
+}

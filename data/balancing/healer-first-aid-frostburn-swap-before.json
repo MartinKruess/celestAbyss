@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b8c",
+    "skillName_eng": "First Aid",
+    "__v": 0,
+    "category": "active",
+    "cd": 35,
+    "charClass": [
+      "Druide",
+      "Alchemist",
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Heilt dich nach einer Cast Time von 0,2 Sekunden sofort um 50 Lebenspunkte. Je weiterer Skillstufe steigt die Heilung um 25, bis zu 275 Lebenspunkten. Die Mana-Kosten steigen von 20 um 16 je weiterer Stufe auf 164. Der Cooldown sinkt von 35 um 1 Sekunde je weiterer Stufe auf 26 Sekunden.",
+    "description_eng": "Instantly heals you for 50 Health after a 0.2 second cast time. Healing increases by 25 per additional skill level, up to 275 Health. Mana cost increases from 20 by 16 per additional level to 164. Cooldown decreases from 35 by 1 second per additional level to 26 seconds.",
+    "dmgType": "spell",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 41,
+    "skillName_de": "Erste Hilfe",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 35,
+      "perLevel": -1
+    },
+    "effects": [
+      {
+        "key": "firstAidHeal",
+        "type": "heal",
+        "target": "self",
+        "unit": "flat",
+        "value": 50,
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 25
+        },
+        "progressionStatus": "defined"
+      }
+    ],
+    "effectsVersion": 1,
+    "mana": 20,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 20,
+          "perLevel": 16
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b99",
+    "skillName_eng": "Frostburn",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein Ziel kann Erfrierungen erleiden, während es gefroren ist",
+    "description_eng": "A target can become freezer burned while frozen.",
+    "dmgType": "passive",
+    "matk": 28,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 54,
+    "skillName_de": "Gefrierbrand",
+    "skillpoints": 1
+  }
+]

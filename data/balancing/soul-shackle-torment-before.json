@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bca",
+    "skillName_eng": "Soul Shackle",
+    "__v": 0,
+    "category": "active",
+    "cd": 45,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verringere den Kampfgeist deines Gegners.",
+    "description_eng": "Decrease the fighting spirit of your opponent.",
+    "dmgType": "spell",
+    "dur": 30,
+    "health": -75,
+    "matk": 97,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 103,
+    "skillName_de": "Seelenfessel",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcb",
+    "skillName_eng": "Soul Torment",
+    "__v": 0,
+    "category": "active",
+    "cd": 33,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verursacht hohen Schaden am Ziel, solange Seelenfessel wirkt.",
+    "description_eng": "Deals heavy damage to the target while Soul Shackle is active.",
+    "dmgType": "spell",
+    "dur": 3,
+    "health": -11,
+    "matk": 127,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 104,
+    "skillName_de": "Seelenqual",
+    "skillpoints": 1
+  }
+]

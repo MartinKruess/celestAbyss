@@ -11,6 +11,10 @@ function removeEmpty(value) {
 const itemSchema = mongoose.Schema({
   name: { type: String, required: true, unique: true },
   description: { type: String },
+  name_de: { type: String },
+  name_eng: { type: String },
+  description_de: { type: String },
+  description_eng: { type: String },
   thumbnail: { type: String },
   type: { type: String },
   category: { type: String },
@@ -69,6 +73,16 @@ const itemSchema = mongoose.Schema({
   duration: { type: Number, set: removeEmpty },
   range: { type: Number, set: removeEmpty },
   isLegendary: { type: Boolean, default: false },
+  armorDefinitionId: { type: String },
+  equipmentSlot: { type: String, enum: ['chest','pants','helmet','gloves','boots','cloak'] },
+  allowedClassKeys: { type: [String], default: undefined },
+  armorSetId: { type: String },
+  armorNameStatus: { type: String },
+  armorDefenseStatus: { type: String, enum: ['assigned','pending'] },
+  armorBonusSlots: { type: [mongoose.Schema.Types.Mixed], default: undefined },
+  armorBonusSlotLimit: { type: Number, min: 0, max: 6 },
 });
+itemSchema.add({'attributes.mdeff':{type:Number,set:removeEmpty}});
+itemSchema.index({armorDefinitionId:1},{unique:true,partialFilterExpression:{armorDefinitionId:{$type:'string'}}});
 
 export const ItemModel = mongoose.model('items', itemSchema);

@@ -1,0 +1,187 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c15",
+    "skillName_eng": "Spirit of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Aktiver Eigenbuff mit zehn Stufen für 300 Sekunden. Gewährt +0,5 Intelligenz und +1 flachen Feuerangriffsbonus je Skillstufe, maximal +5 Intelligenz und +10 Feuerbonus auf Stufe 10. Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden unabhängig vom Tempo. Aktivierung kostet 50 Mana auf Stufe 1, +13 je weiterer Stufe bis 167 vor Rabatten. Kein Bonus für normale Auto-Attacks. Einheitliche Element-Zuordnung und genaue Anwendung bei Mehrfachtreffern und DoTs bleiben abzustimmen.",
+    "description_eng": "Active self buff with ten levels for 300 seconds. Grants 0.5 Intelligence and 1 flat fire attack bonus per level, up to 5 Intelligence and 10 fire bonus. Cooldown 60 seconds; fixed 0.1-second cast unaffected by speed. Mana starts at 50 plus 13 per additional level, up to 167 before discounts. No normal basic attack bonus. Unified element tags and exact multi-hit/DoT application remain pending.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "int": 0.5,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 178,
+    "skillName_de": "Geist des Feuers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "fire-spirit-fire-attack",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "allSkills",
+        "damageSchool": "fire",
+        "value": 1,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 1
+        },
+        "durationSeconds": 300
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 0.5,
+        "perLevel": 0.5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.5,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "mana": 50,
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c34",
+    "skillName_eng": "Lost in the Darkness",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Erhöht den Schaden von Seelenangriffen um 12 je gelerntem Skilllevel, auf Maximalstufe 120. Kein prozentualer Bonus. Keine Aktivierungskosten, Castzeit oder begrenzte Dauer. Der Name ist vorläufig; eine bessere Bezeichnung wird später festgelegt. Einheitliche Seelen-Skillzuordnung und Anwendung auf Mehrfachtreffer beziehungsweise DoTs bleiben für die gemeinsame Gruppenprüfung offen.",
+    "description_eng": "Permanent passive. Grants soul attacks +12 flat damage per learned skill level, reaching 120 at maximum level. Not a percentage bonus. No activation costs, cast time or limited duration. Name is provisional. Unified soul-skill tags and application to multi-hits/DoTs remain pending.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 209,
+    "skillName_de": "Verloren in der Dunkelheit",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "darkness-soul-damage",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "allSkills",
+        "damageSchool": "soul",
+        "value": 12,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 12,
+          "perLevel": 12
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 12,
+            "perLevel": 12
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

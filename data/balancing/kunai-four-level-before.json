@@ -1,0 +1,158 @@
+{
+  "_id": "6acc1c7e4826525c70d04ba9",
+  "skillName_eng": "Kunai Deathblow",
+  "__v": 0,
+  "category": "active",
+  "cd": 0.5,
+  "charClass": [
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Kunai-Angriff, der nur unter der skilllevelabhängigen Lebensschwelle des Ziels eingesetzt werden kann. Die Schwelle startet unter 5 Prozent auf Stufe 1 und steigt um 0,1 Prozentpunkte je weiterer Stufe, ausgenommen Stufe 5, 10, 15 und 20, bis auf 6,5 Prozent. Der physische Grundschaden steigt von 17 um 11 je weiterer Stufe auf 226 auf Stufe 20. Der gesamte Angriffsschaden wird auf Stufe 1 bis 9 verdoppelt, ab Stufe 10 verdreifacht und auf Stufe 20 vervierfacht. Zunächst sind zwei Anwendungen mit je 0,5 Sekunden Abstand möglich, ab Stufe 5 drei. Danach folgen zunächst 16 Sekunden Cooldown, ab Stufe 15 8 Sekunden. Nicht gegen Bosse oder im PvP anwendbar. Keine Mana-Kosten, Castzeit 0 Sekunden, vorläufige Animation 1 Sekunde. Zusammenspiel mit Animation und Reset einer unvollständigen Folge werden später geprüft.",
+  "description_eng": "Kunai attack usable only below the target Health threshold for the learned skill level. The threshold starts below 5 percent at level 1 and rises by 0.1 percentage points per additional level except levels 5, 10, 15 and 20, reaching 6.5 percent. Base physical damage increases from 17 by 11 per additional level to 226 at level 20. The entire attack damage is doubled at levels 1 to 9, tripled from level 10 and quadrupled at level 20. Initially allows two uses separated by 0.5 seconds, increasing to three uses at level 5. The following burst cooldown starts at 16 seconds and becomes 8 seconds at level 15. Cannot be used against bosses or in PvP. No Mana cost, cast time is 0 seconds, provisional animation is 1 second. Animation interaction and reset of a partially used burst remain pending.",
+  "dmgType": "physical",
+  "maxSkillLv": 20,
+  "maxUpgradeLv": 10,
+  "nr": 70,
+  "patk": 17,
+  "skillName_de": "Kunai Todesstoß",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0,
+  "hasLingeringDamage": false,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "fixed",
+        "base": 0
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 17,
+      "perLevel": 11
+    }
+  },
+  "activationRequirements": {
+    "targetHealthBelowFractionScaling": {
+      "type": "table",
+      "values": [
+        0.05,
+        0.051,
+        0.052,
+        0.053,
+        0.053,
+        0.054,
+        0.055,
+        0.056,
+        0.057,
+        0.057,
+        0.058,
+        0.059,
+        0.06,
+        0.061,
+        0.061,
+        0.062,
+        0.063,
+        0.064,
+        0.065,
+        0.065
+      ]
+    }
+  },
+  "burstUsage": {
+    "usesPerBurst": 2,
+    "usesPerBurstScaling": {
+      "type": "table",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "betweenUsesCooldownSeconds": 0.5,
+    "afterBurstCooldownSeconds": 16,
+    "afterBurstCooldownScaling": {
+      "type": "table",
+      "values": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        16,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ]
+    },
+    "partialBurstResetStatus": "pending"
+  },
+  "attackExecution": {
+    "targetMode": "singleEnemy",
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "hitTimingStatus": "pending",
+    "damageMultiplierScaling": {
+      "type": "table",
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ]
+    }
+  }
+}

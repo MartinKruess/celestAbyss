@@ -1,0 +1,250 @@
+{
+  "generatedAt": "2026-10-20T06:52:29.050Z",
+  "status": "allClassesNormalized280",
+  "remainingClasses": [],
+  "databaseVerification": "scripts/checkSkillCatalogDatabase.js successfully compared all fields and IDs of all 263 definitions with celestabyss_dev during this audit",
+  "catalogSha256": "f0a8f2911831468d447494553a09435faaa7beb4776119e7f78daead3416965d",
+  "counting": "One point per learned level, including level one; base and advancement combined; shared definitions counted once; class learning limits respected; six creature skills included",
+  "classes": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "summoner",
+      "name": "Nachtjäger",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "skillCount": 32,
+      "points": 280,
+      "deltaTo280": 0
+    }
+  ],
+  "roleReview": {
+    "status": "Assignments, skill types, damage schools and structured healing effects inspected; this is not a full combat correctness certification",
+    "knightHealingSkillNumbers": [],
+    "notes": [
+      "All thirteen families have 32 skills. Luminet now shares Aura Suppression (165) with Herbalist and has exactly 280 points.",
+      "Ritter has no structured heal effect. Erlösendes Feld (40) is physical damage, threat, allied magical attack and enemy defense reduction; its legacy report category unclear is not evidence of a heal.",
+      "Offensive self-healing exists intentionally in Entzugspfeil, Schockwelle der Regeneration, Lebenssauger and Seelenernte. Stoßgebet includes self and allied healing. Coarse report categories do not enumerate all secondary effects.",
+      "Thirteen unresolved legacy source entries remain excluded from assigned skill counts and point totals."
+    ]
+  },
+  "normalizationPreview": {
+    "status": "notApplied",
+    "policy": "Candidate changes only. Recalculate intermediate curves and descriptions while retaining existing final effects, damage, costs and timings. Do not simply extend old growth formulas. Check special thresholds, class variants and runtime consumers before applying.",
+    "classes": [
+      {
+        "key": "adventurer",
+        "name": "Abenteurer",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "butcher",
+        "name": "Butcher",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "druid",
+        "name": "Druide",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "gladiator",
+        "name": "Gladiator",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "knight",
+        "name": "Ritter",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "shaman",
+        "name": "Schamane",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "healer",
+        "name": "Heiler",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "herbalist",
+        "name": "Kräuterkundler",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "hunter",
+        "name": "Jäger",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "summoner",
+        "name": "Nachtjäger",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "ritualist",
+        "name": "Ritualist",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "luminet",
+        "name": "Luminet",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      },
+      {
+        "key": "villian",
+        "name": "Schurke",
+        "skillCount": 32,
+        "points": 280,
+        "deltaTo280": 0,
+        "changes": [],
+        "missingSkillPoints": 0,
+        "projectedPoints": 280
+      }
+    ]
+  },
+  "openDecisions": [],
+  "databaseWritesPerformed": true,
+  "appliedDecision": "data/balancing/shared-aura-suppression-decision.json"
+}

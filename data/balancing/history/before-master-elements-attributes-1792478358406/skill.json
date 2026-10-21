@@ -1,0 +1,182 @@
+{
+  "_id": "6acc1c7e4826525c70d04c25",
+  "skillName_eng": "Master of the Elements",
+  "__v": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Druide",
+    "Alchemist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erhöht ausschließlich deine eigenen Attribute für 600 Sekunden. Je Skillstufe erhältst du 1 Stärke, von 1 auf Stufe 1 bis 10 auf Stufe 10. Intelligenz beginnt bei 2 und steigt je weiterer Stufe um 2 auf 20. Vitalität und Willenskraft geben auf Stufe 1 bis 9 keinen Bonus; erst auf Stufe 10 erhältst du zusätzlich jeweils 5. Keine Faith- oder Victim-Boni. Castzeit fest 0,1 Sekunden., Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+  "description_eng": "Increases only your own attributes for 600 seconds. Gain 1 Strength per skill level, from 1 at level 1 to 10 at level 10. Intelligence starts at 2 and increases by 2 per additional level to 20. Vitality and Wisdom grant no bonus at levels 1 through 9; level 10 additionally grants 5 each. No Faith or Victim bonuses. Fixed cast time 0.1 seconds., cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+  "dmgType": "selfbuff",
+  "dur": 600,
+  "int": 2,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 194,
+  "skillName_de": "Herr der Elemente",
+  "skillpoints": 1,
+  "str": 1,
+  "castTimeSeconds": 0.1,
+  "mana": 50,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 50,
+        "perLevel": 13
+      }
+    }
+  ],
+  "statScaling": {
+    "str": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 1
+    },
+    "vita": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    },
+    "wis": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    },
+    "int": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 2
+    }
+  },
+  "statBonusTargets": {
+    "str": "self",
+    "vita": "self",
+    "wis": "self",
+    "int": "self"
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 50,
+            "perLevel": 13
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "str"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 1,
+          "perLevel": 1
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "vita"
+        ],
+        "rule": {
+          "kind": "thresholds",
+          "base": 0,
+          "changes": [
+            {
+              "level": 10,
+              "value": 5
+            }
+          ]
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "statScaling",
+          "wis"
+        ],
+        "rule": {
+          "kind": "thresholds",
+          "base": 0,
+          "changes": [
+            {
+              "level": 10,
+              "value": 5
+            }
+          ]
+        },
+        "source": "verifiedExistingLevels"
+      },
+      {
+        "path": [
+          "statScaling",
+          "int"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 2,
+          "perLevel": 2
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "castTimeStatus": "defined",
+  "timingModifiers": {
+    "castTimeIsFixed": true,
+    "affectedByAttackSpeed": false,
+    "affectedByCastSpeed": false
+  },
+  "manaPricing": {
+    "category": "selfbuff",
+    "basis": "skillLevel",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "classificationVersion": 1,
+  "target": "self",
+  "type": "selfBuff"
+}

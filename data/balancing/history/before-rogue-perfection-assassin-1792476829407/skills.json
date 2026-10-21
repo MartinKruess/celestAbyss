@@ -1,0 +1,279 @@
+[
+  {
+    "_id": "6ad0b3779cdbe618f141e06c",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 11,
+      "perLevel": 1
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 238,
+    "skillName_eng": "Assassin",
+    "skillName_de": "Attentäter",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Self buff with 10 levels. Grants 0 to 20 attack speed rating points and 1 to 10 Ambush. Duration increases from 11 to 20 seconds. Cooldown 120 seconds; Fixed cast time 0.1 seconds. No extra or double basic attack hits. While Heart of the Traitor at level 5 is also active, each own basic attack restores 12 Mana. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "description_de": "Eigenbuff mit 10 Stufen. Gewährt 0 bis 20 Punkte Angriffsgeschwindigkeit und 1 bis 10 Ambush. Die Dauer steigt von 11 auf 20 Sekunden. Cooldown 120 Sekunden, Castzeit fest 0,1 Sekunden. Keine zusätzlichen oder doppelten Auto-Attack-Treffer. Bei gleichzeitig aktivem Herz des Verräters auf Stufe 5 stellt jeder eigene Auto-Attack 12 Mana wieder her. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "dmgType": "selfbuff",
+    "skillpoints": 1,
+    "cd": 120,
+    "dur": 11,
+    "amb": 1,
+    "atkSpeed": 0,
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "amb": "flat"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0,
+        "perLevel": 0.022222222222222223
+      },
+      "amb": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 11,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0,
+            "perLevel": 0.022222222222222223
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "amb"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  },
+  {
+    "_id": "6ad23ba7a21c2357f9e61cdd",
+    "attributeConversionBonus": {
+      "sourceStat": "dex",
+      "targetStat": "maxMana",
+      "amountPerPoint": 2,
+      "usesCurrentAttributeValue": true
+    },
+    "soulGenerationSettings": {
+      "maximumUniqueEnemiesScaling": {
+        "values": []
+      }
+    },
+    "soulStorageSettings": {
+      "capacityScaling": {
+        "values": []
+      }
+    },
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "tetherSettings": {
+      "worldAnchorKinds": []
+    },
+    "collectedPointScaling": {
+      "thresholds": [],
+      "durationSecondsByTier": [],
+      "baseDamageBonusFractionByTier": []
+    },
+    "attackExecution": {
+      "additionalDamageFromSacrificedHealth": {
+        "values": []
+      },
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "attackArea": {
+      "radiusScaling": {
+        "values": []
+      },
+      "maxTargetsScaling": {
+        "values": []
+      }
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      },
+      "hopDirections": []
+    },
+    "durationScaling": {
+      "values": []
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "resourceCosts": [],
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheckScaling": {
+        "values": []
+      },
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 243,
+    "skillName_eng": "Technical Perfection",
+    "skillName_de": "Technische Perfektion",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 1,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "passive",
+    "description_eng": "One-level permanent passive. Each current Dexterity point grants +2 maximum Mana. Uses current total Dexterity including equipment, permanent passives and active attribute bonuses; later changes affect the bonus. Currently known 55 Dexterity without active buffs grants +110 maximum Mana, plus any starting Dexterity still undefined. No instant Mana restoration, extra regeneration or further cost reduction. No activation costs, cast time, cooldown or limited duration. Current-Mana handling on maximum changes follows a central rule still pending.",
+    "description_de": "Einstufiger permanenter passiver Skill. Jeder aktuelle Geschickpunkt gewährt zusätzlich 2 Max-Mana. Verwendet den aktuellen Gesamtwert einschließlich Geschick aus Ausrüstung, permanenten Passiven und aktiven Attributboni; spätere Änderungen wirken auf den Bonus. Mit derzeit 55 bekannten Geschickpunkten ohne aktive Buffs +110 Max-Mana, zuzüglich eines noch nicht festgelegten Geschick-Startwerts. Keine direkte Mana-Wiederherstellung, zusätzliche Regeneration oder weitere Manakostenreduktion. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer. Aktuelles Mana bei Änderungen des Maximums wird nach der noch zentral festzulegenden Regel behandelt.",
+    "dmgType": "passive",
+    "skillpoints": 1,
+    "__v": 0,
+    "levelProgression": {
+      "version": 1,
+      "rules": [],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive"
+  }
+]

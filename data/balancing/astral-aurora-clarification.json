@@ -1,0 +1,55 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-astral-aurora-clarification-1792583082449",
+  "updates": [
+    {
+      "nr": 8,
+      "before": {
+        "description_de": "Erschafft ein Abbild deiner selbst, das durch die Gegner fliegt, ihnen Schaden zufügt und dahinter verschwindet. Es kann auch Gegnergruppen treffen, laut bisheriger Beschreibung bis zu sieben Gegner. Die vorläufige Animation dauert 4 Sekunden und blockiert keine weiteren Angriffe. Kein viersekündiger DoT. Magischer Skill-Grundschaden 506 auf Stufe 1, plus 236 je weiterer Stufe, bis zu 1450 auf Stufe 5. Mana-Kosten 127 auf Stufe 1, +59 je weiterer Stufe, maximal 363 auf Stufe 5. Cooldown 123 Sekunden auf Stufe 1, 115 Sekunden auf Stufe 5; bisheriger Stufenverlauf um 3 Sekunden erhöht. Castzeit 0,5 Sekunden. Genaue Flugbahn, Trefferbereich und mögliche Mehrfachtreffer auf dasselbe Ziel bleiben noch offen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Creates an image of yourself that flies through enemies, deals damage and disappears behind them. Can hit groups, up to seven enemies according to the existing description. Provisional animation lasts 4 seconds and does not block further attacks. Does not deal damage over time for four seconds. Magical skill base damage starts at 506 and increases by 236 per additional level to 1450 at level 5. Mana cost 127 at level 1, maximum 363 at level 5. Cooldown 123 seconds at level 1 and 115 seconds at level 5; previous progression increased by 3 seconds throughout. Cast time is 0.5 seconds. Exact trajectory, hit area and possible repeated hits on one target remain pending."
+      },
+      "set": {
+        "description_de": "Erschafft ein Abbild deiner selbst, das durch die Gegner fliegt, ihnen Schaden zufügt und dahinter verschwindet. Es kann auch Gegnergruppen treffen, laut bisheriger Beschreibung bis zu sieben Gegner. Die vorläufige Animation dauert 4 Sekunden und blockiert keine weiteren Angriffe. Kein viersekündiger DoT. Magischer Skill-Grundschaden 506 auf Stufe 1, plus 236 je weiterer Stufe, bis zu 1450 auf Stufe 5. Mana-Kosten 127 auf Stufe 1, +59 je weiterer Stufe, maximal 363 auf Stufe 5. Cooldown 123 Sekunden auf Stufe 1, 115 Sekunden auf Stufe 5; bisheriger Stufenverlauf um 3 Sekunden erhöht. Castzeit 0,5 Sekunden. Jeder Gegner kann pro Anwendung höchstens einmal getroffen werden; keine Mehrfachtreffer auf dasselbe Ziel. Genaue Flugbahn und Trefferbereich bleiben noch offen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Creates an image of yourself that flies through enemies, deals damage and disappears behind them. Can hit groups, up to seven enemies according to the existing description. Provisional animation lasts 4 seconds and does not block further attacks. Does not deal damage over time for four seconds. Magical skill base damage starts at 506 and increases by 236 per additional level to 1450 at level 5. Mana cost 127 at level 1, maximum 363 at level 5. Cooldown 123 seconds at level 1 and 115 seconds at level 5; previous progression increased by 3 seconds throughout. Cast time is 0.5 seconds. Each enemy can be hit at most once per activation; no repeated hits on the same target. Exact trajectory and hit area remain pending.",
+        "attackExecution": {
+          "hitCount": 1,
+          "maxHitsPerTargetPerActivation": 1
+        }
+      }
+    },
+    {
+      "nr": 211,
+      "before": {
+        "description_de": "Beschwört eine Welle aus Licht, die durch eine größere Fläche fliegt. In der Mitte voller Schaden, an den äußeren Rändern halber Schaden. Die Fläche ist rechteckig, 6 Meter lang und 4 Meter breit, vor dem Spieler beziehungsweise mit Bezug zum anvisierten Gegner. Die genaue Position und Ausrichtung relativ zum Gegner sowie die Breite der Randzonen (äußere 20 oder 30 Prozent) sind noch offen. M-Angriff 384 auf Stufe 1, +124 je weiterer Stufe, auf Stufe 10 insgesamt 1500. Mana-Kosten 96 auf Stufe 1, +31 je weiterer Stufe, maximal 375 auf Stufe 10. Cooldown 300 Sekunden, -7 je weiterer Stufe, auf Stufe 10 237 Sekunden. Castzeit 0,8 Sekunden. Die bisherigen 12 Sekunden sind keine bestätigte Wirkungsdauer: Animationsdauer (beispielsweise 4 Sekunden statt 12), Trefferzahl und mögliche anhaltende Wirkung müssen noch geklärt werden. Ablauf: Zunächst etwa 1,5 Sekunden visuelles Spektakel am Himmel ohne Schaden; anschließend entlädt es sich als schadensverursachende Lichtwelle über die Fläche. Diese Vorphase ist keine zusätzliche Castzeit und legt die Gesamtlänge der Animation nicht fest. Die genaue zeitliche Einordnung zur Castzeit bleibt zu prüfen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Summons a wave of light traveling through a large area. Full damage in the center, half damage at the outer edges. The area is a rectangle 6 meters long and 4 meters wide, in front of the caster with placement related to the selected enemy. Exact placement/orientation relative to the target and edge widths (20 or 30 percent were discussed) remain pending. Magical attack 384 plus 124 per additional level, totaling 1500 at level 10. Mana cost 96 at level 1, maximum 375 at level 10. Cooldown 300 minus 7 per additional level, totaling 237 seconds. Cast time 0.8 seconds. The old 12-second duration is unconfirmed: animation duration (possibly 4 rather than 12 seconds), hit count and any lingering effect remain pending. Sequence: approximately 1.5 seconds of visual spectacle in the sky without damage, followed by discharge as a damaging light wave across the area. This visual prelude is not an additional cast time and does not define total animation length. Its exact timing relative to the cast remains to be reviewed.",
+        "waveDamageProfile": {
+          "centerDamageMultiplier": 1,
+          "edgeDamageMultiplier": 0.5,
+          "edgeWidthStatus": "pending",
+          "areaDimensionsStatus": "defined",
+          "hitFrequencyStatus": "pending",
+          "visualPreludeSeconds": 1.5,
+          "damageStartsAfterVisualPrelude": true
+        }
+      },
+      "set": {
+        "description_de": "Beschwört eine Welle aus Licht, die durch eine größere Fläche fliegt. In der Mitte voller Schaden, an den äußeren Rändern halber Schaden. Die Fläche ist rechteckig, 6 Meter lang und 4 Meter breit, vor dem Spieler beziehungsweise mit Bezug zum anvisierten Gegner. Die Breite teilt sich quer zur Wellenrichtung in 30 Prozent linken Rand, 40 Prozent Mitte und 30 Prozent rechten Rand. Bei 4 Metern Gesamtbreite sind die Randstreifen je 1,2 Meter und die Mitte 1,6 Meter breit. Die Mitte verursacht vollen Schaden, beide Randstreifen halben Schaden. Für die Zuordnung zählt ausschließlich der Positions-/Referenzpunkt des getroffenen Charakters, nicht seine sichtbare Körperbreite oder eine Überlappung mehrerer Zonen. Die exakten Übergangslinien zählen zur Mitte, jedes Ziel erhält nur einen Zonenfaktor je Treffer. Die genaue Position und Ausrichtung der Gesamtfläche relativ zum Gegner bleiben offen. M-Angriff 384 auf Stufe 1, +124 je weiterer Stufe, auf Stufe 10 insgesamt 1500. Mana-Kosten 96 auf Stufe 1, +31 je weiterer Stufe, maximal 375 auf Stufe 10. Cooldown 300 Sekunden, -7 je weiterer Stufe, auf Stufe 10 237 Sekunden. Castzeit 0,8 Sekunden. Die bisherigen 12 Sekunden sind keine bestätigte Wirkungsdauer: Animationsdauer (beispielsweise 4 Sekunden statt 12), Trefferzahl und mögliche anhaltende Wirkung müssen noch geklärt werden. Ablauf: Zunächst etwa 1,5 Sekunden visuelles Spektakel am Himmel ohne Schaden; anschließend entlädt es sich als schadensverursachende Lichtwelle über die Fläche. Diese Vorphase ist keine zusätzliche Castzeit und legt die Gesamtlänge der Animation nicht fest. Die genaue zeitliche Einordnung zur Castzeit bleibt zu prüfen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+        "description_eng": "Summons a wave of light traveling through a large area. Full damage in the center, half damage at the outer edges. The area is a rectangle 6 meters long and 4 meters wide, in front of the caster with placement related to the selected enemy. Across the wave width, the left edge occupies 30 percent, the center 40 percent, and the right edge 30 percent. For a 4-meter width, each edge is 1.2 meters wide and the center is 1.6 meters wide. Center damage is full, edge damage half. Determine the zone solely from the character reference position, not visible body width or overlap. Exact transition lines belong to the center; each hit applies only one zone multiplier. Exact placement and orientation of the overall area relative to the target remain pending. Magical attack 384 plus 124 per additional level, totaling 1500 at level 10. Mana cost 96 at level 1, maximum 375 at level 10. Cooldown 300 minus 7 per additional level, totaling 237 seconds. Cast time 0.8 seconds. The old 12-second duration is unconfirmed: animation duration (possibly 4 rather than 12 seconds), hit count and any lingering effect remain pending. Sequence: approximately 1.5 seconds of visual spectacle in the sky without damage, followed by discharge as a damaging light wave across the area. This visual prelude is not an additional cast time and does not define total animation length. Its exact timing relative to the cast remains to be reviewed.",
+        "waveDamageProfile": {
+          "centerDamageMultiplier": 1,
+          "edgeDamageMultiplier": 0.5,
+          "edgeWidthStatus": "defined",
+          "areaDimensionsStatus": "defined",
+          "hitFrequencyStatus": "pending",
+          "visualPreludeSeconds": 1.5,
+          "damageStartsAfterVisualPrelude": true,
+          "leftWidthFraction": 0.3,
+          "centerWidthFraction": 0.4,
+          "rightWidthFraction": 0.3,
+          "targetPositionBasis": "characterReferencePoint",
+          "boundaryAssignment": "centerIncludesBoundaries"
+        }
+      }
+    }
+  ]
+}

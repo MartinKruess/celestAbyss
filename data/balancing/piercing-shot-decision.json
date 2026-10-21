@@ -1,0 +1,109 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-19T19:23:00.147Z",
+  "backup": "data/balancing/history/before-piercing-shot-1792437780107",
+  "skill": {
+    "nr": 262,
+    "skillName_de": "Durchdringender Schuss",
+    "skillName_eng": "Piercing Shot",
+    "category": "active",
+    "type": "skill",
+    "damageType": "physical",
+    "classificationVersion": 1,
+    "dmgType": "physical",
+    "charClass": [
+      "Summoner",
+      "Soulseeker"
+    ],
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 340,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 340,
+        "perLevel": 61
+      }
+    },
+    "mana": 85,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 85,
+          "values": [
+            85,
+            100,
+            116,
+            131,
+            146,
+            161,
+            177,
+            192,
+            207,
+            222
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "cd": 42,
+    "castTimeSeconds": 0,
+    "castTimeStatus": "defined",
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "penetrationBonus": 20,
+      "timingStatus": "pending"
+    },
+    "description_de": "Ein gezielter Schuss mit erhöhter Durchdringung. Verursacht einmalig physischen Skill-Grundschaden von 340 auf Stufe 1, plus 61 je weiterer Stufe, bis zu 889 auf Stufe 10, zuzüglich des aktuellen P-Angriffs. Ausschließlich dieser Treffer erhält zusätzlich 20 Penetrationspunkte; kein dauerhafter Charakterbonus und keine Senkung der gegnerischen Verteidigung für andere Angriffe. Mana je Stufe nach der 25-Prozent-Regel aus dem Skill-Grundschaden ohne Charakterangriff, auf ganze Mana gerundet: 85 bis 222. Keine zusätzliche Castzeit. Cooldown auf allen Stufen 42 Sekunden. Kein DoT. Animation, Projektilflugzeit und genaue Trefferzeitpunkte bleiben für die Umsetzung offen.",
+    "description_eng": "A targeted shot with increased penetration. Deals physical base skill damage once: 340 at level 1 plus 61 per additional level, reaching 889 at level 10, plus current physical attack. This hit alone gains 20 additional penetration rating; no permanent character bonus and no target defense debuff for other attacks. Mana equals 25% of base skill damage excluding character attack, rounded to whole Mana: 85 to 222. No additional cast time. Cooldown 42 seconds at every level. No damage over time. Animation, projectile travel and exact impact timing remain pending.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 340,
+            "perLevel": 61
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.25,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  "scope": "Hit-specific penetration metadata. Existing zero-defense damage tests do not model mitigation or block penetration."
+}

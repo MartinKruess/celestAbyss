@@ -1,0 +1,96 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b97",
+    "skillName_eng": "Fool of Luck",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Als Narr des Glücks ziehst du deine Stärke aus deiner kritischen Chance.",
+    "description_eng": "As a fool of luck, you draw your strength from your critical chance.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 52,
+    "skillName_de": "Glück des Narrens",
+    "skillpoints": 1,
+    "str": 2
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bac",
+    "skillName_eng": "Lucky Strike",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Lucky Strike erhöht leicht deine Kritische Chance. +1 pro Level",
+    "description_eng": "Lucky Strike slightly increases your critical chance by 1 per skill level.",
+    "dmgType": "passive",
+    "luck": 1,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 73,
+    "skillName_de": "Lucky Strike",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba0",
+    "skillName_eng": "Woodsplitter",
+    "__v": 0,
+    "category": "active",
+    "cd": 42,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du setzt zu einem mächtigen Schlag aus einem Sprung heraus an. Sollte dein Angriff ein kritischer sein, erhälst du 50% der Manakosten zurück.",
+    "description_eng": "You launch a powerful strike from a jump. If your attack is critical, you get 50% of the mana cost back.",
+    "dmgType": "physical",
+    "dur": 10,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 61,
+    "patk": 55,
+    "pdef": -0.025,
+    "skillName_de": "Holzspalter",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb0",
+    "skillName_eng": "Mighty Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 27,
+    "charClass": [
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Triff deinen Gegner mit einem mächtigen Schlag. Lädt den Hieb 0,6 Sekunden auf und schlägt dann zu. Keine anhaltende Schadensdauer.",
+    "description_eng": "Hit your opponent with a powerful blow. Charges the strike for 0.6 seconds, then hits. No lingering damage duration.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 77,
+    "patk": 73,
+    "skillName_de": "Mächtiger Hieb",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.6,
+    "hasLingeringDamage": false
+  }
+]

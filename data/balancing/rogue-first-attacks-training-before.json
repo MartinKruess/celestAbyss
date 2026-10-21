@@ -1,0 +1,70 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b74",
+    "skillName_eng": "Blood Reaver",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nach deinem Angriff aktivierst du Blutklinge und heilst dich um 2% des verursachten Schadens.",
+    "description_eng": "After your attack, you activate Bloodblade and heal yourself for 2% of the damage done.",
+    "dmgType": "physical",
+    "dur": 10,
+    "health": 0.02,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 17,
+    "patk": 100,
+    "skillName_de": "Blutklinge",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b79",
+    "skillName_eng": "Dagger and Sword Training",
+    "__v": 0,
+    "agi": 1,
+    "amb": 2,
+    "category": "passive",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du hast einzigartige Dolch- und Schwertkampffähigkeiten.\n+2 Hinterhalt und +1 Agilität",
+    "description_eng": "You have unique dagger and sword fighting skills.\n+2 Ambush and +1 Agility",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 22,
+    "skillName_de": "Dolch- und Schwerttraining",
+    "skillpoints": 1
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b7e",
+    "skillName_eng": "Dark Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 3,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Du greifst aus den Schatten an und nutzt den Hinterhalt.",
+    "description_eng": "You attack from the shadows and use the ambush.",
+    "dmgType": "physical",
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 27,
+    "patk": 41,
+    "skillName_de": "Dunkler Schlag",
+    "skillpoints": 1
+  }
+]

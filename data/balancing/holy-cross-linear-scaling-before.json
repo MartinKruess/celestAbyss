@@ -1,0 +1,69 @@
+{
+  "_id": "6acc1c7e4826525c70d04c3a",
+  "skillName_eng": "Holy Cross",
+  "__v": 0,
+  "category": "active",
+  "cd": 43,
+  "charClass": [
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erschafft ein heiliges Kreuz, schleudert es nach vorne und lässt es explodieren. Magischer Grundschaden 237 auf Stufe 1. Bis einschließlich Stufe 5 steigt er je weiterer Stufe um 101 auf 641; ab Stufe 6 jeweils um 92 auf insgesamt 1101 auf Stufe 10. Mana 77 auf Stufe 1 und +43 je weiterer Stufe, insgesamt 464 auf Stufe 10. Castzeit 0,2 Sekunden. Vorläufige Animationsdauer 1 Sekunde, keine anhaltende Wirkung. Bestehender Cooldown 43 Sekunden.",
+  "description_eng": "Creates a holy cross, hurls it forward and makes it explode. Magical base damage starts at 237. Each additional level through level 5 adds 101, reaching 641; levels 6 through 10 each add 92, reaching 1101. Mana starts at 77 and increases by 43 per additional level to 464. Cast time 0.2 seconds. Provisional animation duration 1 second; no lingering effect. Existing cooldown remains 43 seconds.",
+  "dmgType": "spell",
+  "matk": 237,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 215,
+  "skillName_de": "Heiliges Kreuz",
+  "skillpoints": 1,
+  "animationDurationSeconds": 1,
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.2,
+  "durationScaling": {
+    "type": "table",
+    "values": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 77,
+        "perLevel": 43
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "table",
+      "values": [
+        237,
+        338,
+        439,
+        540,
+        641,
+        733,
+        825,
+        917,
+        1009,
+        1101
+      ]
+    }
+  }
+}

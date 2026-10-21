@@ -1,0 +1,114 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-rock-volley-1792334137115",
+  "skill": {
+    "_id": "6ad4d939ec1879104cce1e72",
+    "nr": 256,
+    "skillName_de": "Felsensalve",
+    "skillName_eng": "Rock Volley",
+    "category": "active",
+    "dmgType": "physical",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "patk": 611,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 611,
+        "perLevel": 150
+      }
+    },
+    "mana": 306,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "base": 306,
+          "values": [
+            306,
+            381,
+            456,
+            531,
+            908,
+            1021,
+            1133,
+            1246,
+            1358,
+            1961,
+            2111,
+            2261,
+            2411,
+            2561,
+            3389
+          ]
+        }
+      }
+    ],
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "castTimeSeconds": 0.6,
+    "cd": 65,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 65,
+      "perLevel": -1
+    },
+    "animationDurationSeconds": 2.5,
+    "animationTimingStatus": "provisional",
+    "hasLingeringDamage": false,
+    "attackExecution": {
+      "hitCount": 2,
+      "hitCountScaling": {
+        "type": "table",
+        "values": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      "damageValueScope": "perHit",
+      "targetMode": "singleEnemy",
+      "hitTimingStatus": "pending",
+      "secondarySplinters": {
+        "damageFractionOfPrimaryHit": 0.1,
+        "maxTargetsPerProjectile": 4,
+        "reselectEachProjectile": true,
+        "distinctWithinProjectile": true,
+        "excludesPrimaryTarget": true,
+        "unusedSlotsExpire": true,
+        "canCauseFurtherSplinters": false,
+        "region": "behindPrimaryTarget",
+        "geometryStatus": "pending"
+      }
+    },
+    "description_de": "Hebt Felsplatten aus dem Boden und schleudert sie auf ein Hauptziel. Zwei Platten auf Stufe 1–4, drei auf Stufe 5–9, vier auf Stufe 10–14 und fünf auf Stufe 15. Jede Platte verursacht 611 physischen Grundschaden, +150 je weiterer Skillstufe bis 2711, zuzüglich einmal des aktuellen P-Angriffs. Jeder Einschlag erzeugt eine Splitterwelle hinter dem Hauptziel: bis zu vier verschiedene zufällige Nebenziele erhalten jeweils 10 Prozent des Schadens der jeweiligen Platte. Die Auswahl erfolgt je Platte neu aus den dann im Gebiet stehenden Gegnern. Das Hauptziel erhält keinen zusätzlichen Splitterschaden. Fehlende Nebenziele lassen Trefferplätze verfallen; keine Umverteilung auf bereits getroffene Gegner und keine weiteren Splitter aus Splittern. Exakte Fächergeometrie und Reichweite bleiben offen. Castzeit 0,6 Sekunden. Cooldown 65 Sekunden, −1 je weiterer Stufe bis 51 Sekunden. Vorläufige Animationsdauer 2,5 Sekunden; genaue Trefferzeitpunkte bleiben offen. Mana pro gesamter Anwendung: gerundet 25 Prozent des gesamten Grundschadens der Hauptziel-Platten, ohne Charakterangriff oder zusätzliche Gegnerzahl; 306 bis 3389. Kein DoT oder Kontrolleffekt. Weisheit des Salamanders erhöht den physischen Schaden, gibt diesem Erdangriff aber keinen Mana-Rabatt.",
+    "description_eng": "Lifts rock plates and throws them at one primary target. Two plates at levels1–4, three at5–9, four at10–14 and five at15. Each plate deals physical base damage611 plus150 per additional level to2711, plus full current physical attack once. Each impact sends splinters behind the primary target: up to four distinct random secondary enemies each receive10 percent of that plate damage. Targets are reselected independently for every plate from enemies currently inside. Excludes the primary target; unused slots expire, with no redistribution or recursive splinters. Exact fan geometry and range remain undefined. Cast0.6 seconds, cooldown65 minus1 per additional level to51. Provisional animation2.5 seconds, exact hit offsets pending. Mana per full application is rounded25 percent of all primary-projectile base damage, excluding character attack and secondary target count:306–3389. No DoT or control. Wisdom of the Salamander boosts physical damage but does not discount Mana for this earth skill."
+  }
+}

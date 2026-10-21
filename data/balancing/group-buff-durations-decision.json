@@ -1,0 +1,32 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T07:52:12.032Z",
+  "backup": "data/balancing/history/before-group-buff-durations-1792482731874",
+  "changes": [
+    {
+      "nr": 75,
+      "name": "Verstärkung des Körpers",
+      "beforeSeconds": 300,
+      "afterSeconds": 600
+    },
+    {
+      "nr": 107,
+      "name": "Stählerne Rüstung",
+      "beforeSeconds": 1500,
+      "afterSeconds": 1800
+    },
+    {
+      "nr": 147,
+      "name": "Erweckung der Leidenschaft",
+      "beforeSeconds": 300,
+      "afterSeconds": 600
+    },
+    {
+      "nr": 191,
+      "name": "Flinke Füße",
+      "beforeSeconds": 180,
+      "afterSeconds": 600
+    }
+  ],
+  "rule": "Previously 25/30-minute group buffs last 30 minutes. All other group buffs last 10 minutes. Includes group companion buffs; self buffs unchanged."
+}

@@ -1,0 +1,202 @@
+{
+  "model": {
+    "operative": [
+      "maxHealth",
+      "maxMana",
+      "physicalAttack",
+      "magicalAttack",
+      "physicalDefense",
+      "magicalDefense",
+      "attackSpeed",
+      "movementSpeed"
+    ],
+    "primary": [
+      "vitality",
+      "strength",
+      "intelligence",
+      "wisdom",
+      "dexterity",
+      "agility",
+      "luck"
+    ],
+    "special": [
+      "victim",
+      "ambush",
+      "faith"
+    ],
+    "speedUnits": "Multipliers; 1 means 100% of baseline speed, absolute movement/attack rate pending",
+    "conversions": [
+      {
+        "attribute": "vitality",
+        "target": "maxHealth",
+        "amountPerPoint": 30,
+        "status": "confirmedFactor",
+        "formula": "Full calculation including base offsets pending"
+      },
+      {
+        "attribute": "vitality",
+        "target": "physicalDefense",
+        "status": "confirmedFactor",
+        "amountPerPoint": 2
+      },
+      {
+        "attribute": "strength",
+        "target": "physicalAttack",
+        "status": "provisionalComparisonFactor",
+        "amountPerPoint": 1.8,
+        "note": "Shared comparison assumption; verify against Unreal Engine later."
+      },
+      {
+        "attribute": "ambush",
+        "target": "physicalAttack",
+        "status": "provisionalComparisonFactor",
+        "amountPerPoint": 1.8,
+        "note": "Provisional rogue comparison factor; verify in Unreal Engine later."
+      },
+      {
+        "attribute": "strength",
+        "target": "penetration",
+        "status": "pendingSmallContribution"
+      },
+      {
+        "attribute": "intelligence",
+        "target": "magicalAttack",
+        "status": "provisionalComparisonFactor",
+        "amountPerPoint": 1.8
+      },
+      {
+        "attribute": "faith",
+        "target": "magicalAttack",
+        "status": "provisionalComparisonFactor",
+        "amountPerPoint": 1.8
+      },
+      {
+        "attribute": "victim",
+        "target": "magicalAttack",
+        "status": "provisionalComparisonFactor",
+        "amountPerPoint": 1.8
+      },
+      {
+        "attribute": "dexterity",
+        "target": "physicalAttack",
+        "status": "provisionalComparisonFactor",
+        "amountPerPoint": 1.8,
+        "note": "Confirmed for hunter and crossbow archetypes; class-specific conversion eligibility still needs review."
+      },
+      {
+        "attribute": "intelligence",
+        "target": "maxMana",
+        "status": "notConfirmed",
+        "note": "Earlier tentative attribution; latest confirmed mana conversion is Wisdom -> 30 Mana. Do not apply Intelligence-to-Mana unless separately confirmed."
+      },
+      {
+        "attribute": "wisdom",
+        "target": "magicalDefense",
+        "status": "confirmedFactor",
+        "label": "Wisdom / Willenskraft",
+        "amountPerPoint": 2
+      },
+      {
+        "attribute": "wisdom",
+        "target": "manaRegen",
+        "status": "pendingConfirmation"
+      },
+      {
+        "attribute": "agility",
+        "target": "attackSpeed",
+        "status": "unitPending",
+        "amountPerPoint": 0.7,
+        "note": "User supplied 0.7 attack speed per Agility; percent points versus rating still unconfirmed. Do not use as multiplier 0.7."
+      },
+      {
+        "attribute": "agility",
+        "target": "movementSpeed",
+        "status": "pendingSmallContribution"
+      },
+      {
+        "attribute": "wisdom",
+        "target": "maxMana",
+        "amountPerPoint": 30,
+        "status": "confirmedFactor"
+      }
+    ],
+    "rule": "Do not double-count attribute conversions on top of existing operative baselines; initial primary attributes and offsets still unknown"
+  },
+  "regeneration": {
+    "regeneration": {
+      "baseManaPerTick": 25,
+      "baseHealthPerTick": 12,
+      "tickIntervalSeconds": null,
+      "status": "intervalPending"
+    },
+    "wisdomManaPerTick": {
+      "factor": 1,
+      "status": "provisionalProposal"
+    },
+    "percentageBonuses": {
+      "status": "skillDependentNotAutomaticallyGranted"
+    },
+    "combatRules": "pending",
+    "healerWisdomMagicalAttack": {
+      "enabled": true,
+      "factor": null,
+      "status": "factorPending",
+      "scope": "Healer / Priest / Erzbischof only"
+    },
+    "note": "Definitions only, no runtime ticker implemented; 12 HP and 25 Mana are per tick, not per second."
+  },
+  "classes": [
+    {
+      "key": "adventurer",
+      "statConversions": null
+    },
+    {
+      "key": "butcher",
+      "statConversions": null
+    },
+    {
+      "key": "druid",
+      "statConversions": null
+    },
+    {
+      "key": "gladiator",
+      "statConversions": null
+    },
+    {
+      "key": "healer",
+      "statConversions": null
+    },
+    {
+      "key": "herbalist",
+      "statConversions": null
+    },
+    {
+      "key": "hunter",
+      "statConversions": null
+    },
+    {
+      "key": "knight",
+      "statConversions": null
+    },
+    {
+      "key": "luminet",
+      "statConversions": null
+    },
+    {
+      "key": "ritualist",
+      "statConversions": null
+    },
+    {
+      "key": "shaman",
+      "statConversions": null
+    },
+    {
+      "key": "summoner",
+      "statConversions": null
+    },
+    {
+      "key": "villian",
+      "statConversions": null
+    }
+  ]
+}

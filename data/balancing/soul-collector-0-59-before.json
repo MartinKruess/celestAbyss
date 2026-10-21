@@ -1,0 +1,55 @@
+{
+  "_id": "6acc1c7e4826525c70d04c1d",
+  "skillName_eng": "Soul Collector",
+  "__v": 0,
+  "category": "active",
+  "cd": 0.15,
+  "charClass": [
+    "Summoner",
+    "Soulseeker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Nur gegen ein mit Seelenschuss markiertes Ziel einsetzbar. Verursacht einmalig physischen Skill-Grundschaden von 59 auf Stufe 1, plus 10 je weiterer Stufe, bis zu 149 auf Stufe 10, zusätzlich zum regulären Charakterangriffsbeitrag. Jeder erfolgreiche Treffer gibt 1 Sammelpunkt. Geblockte und kritische Treffer geben ebenfalls genau 1 Punkt, verfehlte und ausgewichene Angriffe keinen. Castzeit 0,2 Sekunden, Cooldown 0,15 Sekunden. Die vorläufige Animation von 0,3 Sekunden blockiert keine weiteren Aktionen. Die sieben Sekunden lange Markierung begrenzt das Sammelfenster. Kostet kein Mana. Die genaue zeitliche Verrechnung von Castzeit und Cooldown ist noch offen.",
+  "description_eng": "Requires a target marked by Soulshot. Deals physical skill base damage once, increasing evenly from 59 at level 1 by 10 per additional level to 149 at level 10, plus the normal character attack contribution. Each successful hit grants 1 collected point. Blocked and critical hits also grant exactly 1 point; missed or dodged attacks grant none. Cast time is 0.2 seconds and cooldown is 0.15 seconds. Provisional animation is 0.3 seconds and does not block other actions. The 7 second target mark limits the collection window. Costs no Mana. Exact cast/cooldown scheduling remains pending.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 186,
+  "patk": 59,
+  "skillName_de": "Seelensammler",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.2,
+  "activationRequirements": {
+    "requiredTargetMarkSkillNumber": 185
+  },
+  "animationDurationSeconds": 0.3,
+  "animationTimingStatus": "provisional",
+  "blocksOtherSkillsDuringAnimation": false,
+  "hasLingeringDamage": false,
+  "pointGeneration": {
+    "requiresTargetMarkSkillNumber": 185,
+    "pointsPerSuccessfulHit": 1,
+    "countsBlockedHits": true,
+    "countsMissedOrDodgedHits": false,
+    "criticalHitPoints": 1
+  },
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 59,
+      "perLevel": 10
+    }
+  },
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "fixed",
+        "base": 0
+      }
+    }
+  ]
+}

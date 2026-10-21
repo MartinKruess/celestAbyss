@@ -1,0 +1,26 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T06:02:11.672Z",
+  "backup": "data/balancing/history/before-underworld-scream-six-levels-1792476131615",
+  "nr": 99,
+  "previousMaxLevel": 3,
+  "maxSkillLevel": 6,
+  "pointDelta": 3,
+  "sacrificedHealthDamageFractions": [
+    0,
+    0.2,
+    0.4,
+    0.65,
+    0.95,
+    1.25
+  ],
+  "cooldownByLevel": [
+    90,
+    88,
+    86,
+    84,
+    82,
+    80
+  ],
+  "interpolation": "Former three-level health-damage curve interpolated over six levels, retaining its shape, starting value and maximum. All non-scaling mechanics retained."
+}

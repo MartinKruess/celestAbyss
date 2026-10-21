@@ -1,0 +1,48 @@
+{
+  "_id": "6acc1c7e4826525c70d04b83",
+  "skillName_eng": "Elemental Energy",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Herbalist",
+    "Witcher"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Löst automatisch einen vorübergehenden Effekt aus. Auf Skilllevel 1 erhältst du für 30 Sekunden +2 Intelligenz und die magische Verteidigung des betroffenen Gegners sinkt um 10 %. Der Effekt kann frühestens nach 120 Sekunden erneut ausgelöst werden.",
+  "description_eng": "Automatically triggers a temporary effect. At skill level 1, you gain +2 Intelligence for 30 seconds and the affected enemy loses 10% of their magical defense for the same duration. The effect cannot trigger again for 120 seconds.",
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 32,
+  "skillName_de": "Elementarenergie",
+  "skillpoints": 1,
+  "activation": "automatic",
+  "cd": 120,
+  "dur": 30,
+  "triggerConditionStatus": "pending",
+  "effects": [
+    {
+      "type": "statModifier",
+      "target": "self",
+      "stat": "int",
+      "value": 2,
+      "unit": "flat",
+      "damageTypes": [],
+      "durationSeconds": 30,
+      "key": "self-intelligence"
+    },
+    {
+      "type": "statModifier",
+      "target": "enemy",
+      "stat": "mdef",
+      "value": -0.1,
+      "unit": "fraction",
+      "reference": "targetStat",
+      "damageTypes": [],
+      "durationSeconds": 30,
+      "key": "enemy-magic-defense"
+    }
+  ],
+  "effectsVersion": 1
+}

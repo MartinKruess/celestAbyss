@@ -1,0 +1,188 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bd3",
+    "skillName_eng": "Raging Storm",
+    "__v": 0,
+    "category": "active",
+    "cd": 180,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eine Gewitterwolke bedeckt einen kreisförmigen Bereich mit 16 Metern Durchmesser beziehungsweise 8 Metern Radius. Kein Initialtreffer: Der erste volle Blitzschaden erfolgt 1 Sekunde nach Entstehung der Wolke, weitere Blitzwellen folgen alle 2 Sekunden. Pro Welle werden höchstens 5 Gegner innerhalb der Fläche getroffen, sowohl im PvE als auch im PvP. Bei jeder Welle werden die Ziele neu zufällig gewählt; sind weniger Gegner vorhanden, können entsprechend weniger getroffen werden. Die Wolke besteht auf Stufe 1 für 4 Sekunden und je weiterer Stufe 1,5 Sekunden länger, bis zu 17,5 Sekunden auf Stufe 10. Das ergibt 2 bis 9 Blitzwellen. Auf Stufe 10 trifft die letzte Welle bei Sekunde 17; die Wolke läuft danach noch 0,5 Sekunden aus. Jeder Blitz verursacht 266 magischen Skill-Grundschaden auf Stufe 1, plus 31 je weiterer Stufe, bis zu 545 auf Stufe 10, zusätzlich zum Charakter-M-Angriff. Mana-Kosten 123, plus 45 je weiterer Stufe, bis zu 528. Castzeit 0,8 Sekunden. Cooldown beginnt bei 180 Sekunden und sinkt um 2 Sekunden je weiterer Stufe auf 162 Sekunden auf Stufe 10. Der Sturm hat keinen eigenen garantierten Stun; die passive Lähmung unterliegt ihren eigenen Regeln. Platzierung und genaue Proc-Prüfung periodischer Blitzwellen bleiben zu klären.",
+    "description_eng": "A thundercloud covers a circular area with a 16 metre diameter and 8 metre radius. No initial hit: the first full lightning damage occurs 1 second after the cloud appears, with subsequent waves every 2 seconds. Each wave hits at most 5 enemies in the area in both PvE and PvP. Targets are randomly selected again for each wave; fewer enemies allow fewer targets. Cloud duration starts at 4 seconds and increases by 1.5 per additional level to 17.5 seconds at level 10, producing 2 to 9 waves. At level 10 the final wave hits at second 17 and the cloud fades over the remaining 0.5 seconds. Each lightning hit deals 266 magical skill base damage at level 1 plus 31 per additional level to 545 at level 10, plus character magical attack. Mana cost starts at 123 and increases by 45 per additional level to 528. Cast time is 0.8 seconds. Cooldown starts at 180 seconds and decreases by 2 seconds per additional level to 162 seconds at level 10. The storm itself does not guarantee a stun; passive Paralysis follows its own rules. Placement and exact proc checks for periodic lightning waves remain pending.",
+    "dmgType": "spell",
+    "matk": 266,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 112,
+    "skillName_de": "Tobender Sturm",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 8,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "evaluation": "perHit",
+      "timingStatus": "defined",
+      "maxTargets": 5,
+      "targetSelection": "randomEachTick"
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 180,
+      "perLevel": -2
+    },
+    "dur": 4,
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 1.5
+    },
+    "effects": [
+      {
+        "key": "raging-storm-lightning",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "damageSchool": "electric",
+        "value": 266,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 266,
+          "perLevel": 31
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1.5
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 1,
+        "addsCasterMagicalAttack": true,
+        "onlyWhileTargetInsideArea": true,
+        "damageTypes": [
+          "magical"
+        ]
+      }
+    ],
+    "mana": 123,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 123,
+          "perLevel": 45
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 266,
+        "perLevel": 31
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c4e",
+    "skillName_eng": "Meteor Shower",
+    "__v": 0,
+    "category": "active",
+    "cd": 468,
+    "charClass": [
+      "Ritualist",
+      "Bloodmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Vorläufig beibehaltener Flächenangriff: Meteoritenschauer über einer Fläche mit 12 Metern Durchmesser (6 Meter Radius). Drei Skillstufen. Der bisher gespeicherte physische Skill-Grundschaden 543 verdoppelt sich je weiterer Stufe: 543/1086/2172. Schadensart bleibt vorerst entsprechend dem vorhandenen P-Angriff physisch. Mana 255/362/469. Cooldown 468/428/388 Sekunden, auf Stufe 3 also 6 Minuten 28 Sekunden. Castzeit 0,8 Sekunden. Letztgenannte Gesamtlaufzeit 6 Sekunden. Meteoriteneinschläge erfolgen versetzt in kleinen und etwas größeren Wellen mit je sechs Meteoriten; erste Teilwelle 40 Prozent, zweite 60 Prozent, Abstand innerhalb eines Paars 0,5 Sekunden. Bestätigter Rhythmus: bei Sekunde 1/3/5 jeweils eine 40-Prozent-Welle, bei Sekunde 1,5/3,5/5,5 jeweils eine 60-Prozent-Welle. Sechs Wellen mit jeweils sechs Meteoriten, insgesamt 36 Meteoriten. Die genaue Schadensverteilung des Wellenanteils auf die einzelnen Einschläge bleibt offen; daraus wird noch kein garantierter Gesamtschaden je Gegner abgeleitet. Einschlagspositionen und lokale Trefferflächen müssen später definiert werden; nicht jeder Meteorit trifft jeden Gegner. Entscheidung über langfristigen Verbleib des Skills noch offen.",
+    "description_eng": "Provisionally retained area attack: meteor shower over a 12-meter-diameter area (6-meter radius). Three skill levels. Existing physical skill base damage 543 doubles per additional level: 543/1086/2172. Damage type provisionally remains physical according to the existing physical-attack field. Mana 255/362/469. Cooldown 468/428/388 seconds, reaching 6 minutes 28 seconds at level 3. Cast time 0.8 seconds. Latest stated duration 6 seconds. Staggered waves of six smaller then six slightly larger meteors, with 40 percent then 60 percent portions separated by 0.5 seconds. Confirmed timing: 40-percent waves at seconds 1/3/5, 60-percent waves at 1.5/3.5/5.5. Six waves of six meteors each, totaling 36 meteors. Exact distribution of wave damage across individual impacts remains pending; no guaranteed total per enemy is derived yet. Impact positions and local hit areas remain undefined; not every meteor hits every enemy. Long-term inclusion remains open.",
+    "dmgType": "spell",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 235,
+    "patk": 543,
+    "skillName_de": "Meteoritenschauer",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 6,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea"
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 468,
+      "perLevel": -40
+    },
+    "dur": 6,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 255,
+          "perLevel": 107
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "table",
+        "values": [
+          543,
+          1086,
+          2172
+        ]
+      }
+    },
+    "attackExecution": {
+      "meteorWaveSequence": [
+        {
+          "offsetSeconds": 1,
+          "damageFraction": 0.4,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 1.5,
+          "damageFraction": 0.6,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 3,
+          "damageFraction": 0.4,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 3.5,
+          "damageFraction": 0.6,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 5,
+          "damageFraction": 0.4,
+          "meteorCount": 6
+        },
+        {
+          "offsetSeconds": 5.5,
+          "damageFraction": 0.6,
+          "meteorCount": 6
+        }
+      ],
+      "meteorDamageDistributionStatus": "pending"
+    }
+  }
+]

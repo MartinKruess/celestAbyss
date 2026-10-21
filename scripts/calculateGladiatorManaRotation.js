@@ -1,0 +1,16 @@
+import {retiredBalancingReportPath} from '../services/retiredBalancingReports.js';
+import fs from 'node:fs/promises';
+const skills=JSON.parse(await fs.readFile('data/skills.json','utf8'));
+const pre=JSON.parse(await fs.readFile('data/balancing/gladiator-precombat.json','utf8'));
+const end=(c,l)=>c.type==='table'?c.values[l-1]:c.base+(c.type==='fixed'?0:(l-1)*c.perLevel);
+const rows=[61,77,96,106,230,233].map(n=>{const s=skills.find(s=>s.nr===n);return {nr:n,name:s.skillName_de,level:s.maxSkillLv,mana:end(s.resourceCosts.find(c=>c.resource==='mana').scaling,s.maxSkillLv)}});
+const once=rows.reduce((v,r)=>v+r.mana,0),pool=pre.variants[0].knownPassiveSubtotal.maxMana;
+const buffs=[75,159,160,161,162,163].map(n=>{const s=skills.find(s=>s.nr===n);return {nr:n,name:s.skillName_de,mana:end(s.resourceCosts.find(c=>c.resource==='mana').scaling,s.maxSkillLv)}});
+const report={level:60,equipmentRank:6,skillLevel:'maximum',manaPool:pool,attackSkills:rows,oneRotation:once,twoRotations:once*2,deficitWithoutRegeneration:once*2-pool,excludedRageSkills:[13,109,127,128],buffs,buffSetupCost:buffs.reduce((a,r)=>a+r.mana,0),regeneration:{basePerTick:25,addedWisdom:159,manaPerTickWithProvisionalWisdomFactor:184,tickIntervalSeconds:null,provokeDrainPerTick:25},limitations:['No elapsed-time simulation, cooldowns and regeneration not simulated','Equipment proposals not applied','Jewelry, stones and foreign buffs excluded','Starting Wisdom contribution beyond existing baseline not independently known'],open:['Endurance proc cooldown and final trigger; existing database definition not yet migrated','General creature mechanics deferred; Gladiator learning caps confirmed']};
+await fs.writeFile('data/balancing/gladiator-mana-rotation.json',JSON.stringify(report,null,2)+'\n');
+let md='# Gladiator: Mana für zwei Angriffsrotationen\n\nLevel 60, ursprüngliche R6-Rüstung, zwei Einhandäxte mit 100/90 Prozent Wirkung und bestätigte permanente Passive. Maximal gelernte Skills. Keine aktiven Buffs, Kampf-Procs, Schmuck oder Steine.\n\nManapool: **'+pool+'**.\n\n| Angriff | Mana je Anwendung | Zweimal |\n| --- | ---: | ---: |\n';
+for(const r of rows)md+=`| ${r.name} | ${r.mana} | ${r.mana*2} |\n`;
+md+=`| Gesamt | ${once} | ${once*2} |\n\nOhne Mana-Regeneration fehlen ${once*2-pool} Mana. Keine zeitliche Simulation; Cooldowns verhindern direktes Wiederholen der gesamten Rotation.\n\nWut-Angriffe sind auf Nutzerwunsch ausgelassen. Die sechs normalen Buffs kosten einmalig zusammen ${report.buffSetupCost} Mana; sie gehören nicht zu jeder Rotation. Provozieren kostet zusätzlich 25 Mana pro Mana-Regenerationstick. Energieausbruch kostet bei Aktivierung nichts zusätzlich und verbraucht während seiner Wirkung 1 Prozent des maximalen Manas pro Mana-Regenerationstick.\n\nMit der vorläufigen Umrechnung von 1 Wisdom zu 1 Mana je Tick ergeben sich 25 + 159 = 184 Mana je Tick, ohne unabhängig unbekannten Start-Wisdom-Beitrag. Mit Provozieren verbleiben 159 je Tick. Das Tickintervall ist nicht festgelegt.\n\n## Noch offen\n\n`+report.open.map(x=>'- '+x).join('\n')+'\n';
+await fs.writeFile(await retiredBalancingReportPath('docs/balancing/classes/gladiator-mana-rotation.md'),md);
+if(once!==2772||pool!==5057)throw Error('Unexpected rotation total');
+console.log('Verified rotation totals and persisted report.');

@@ -1,0 +1,52 @@
+{
+  "_id": "6acc1c7e4826525c70d04bb9",
+  "skillName_eng": "Precision Shot",
+  "__v": 0,
+  "category": "active",
+  "cd": 75,
+  "charClass": [
+    "Archer",
+    "Hunter"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Ein gezielter Schuss, der garantiert kritisch trifft. Physischer Skill-Grundschaden 491 auf Stufe 1, plus 137 je weiterer Stufe, bis zu 2409 auf Stufe 15 vor Krit-Multiplikator, Charakterangriff und Verteidigung. Mana-Kosten 173, plus 64 je weiterer Stufe, bis zu 1069. Castzeit 0,5 Sekunden zum Zielen. Cooldown bisher 75 Sekunden. Die alte Beschreibung nennt zusätzlich einen sicher treffenden Pfeil und eine Verringerung der gegnerischen Ausweichchance um 1 Prozent je Level. Ob diese Zusatzeffekte bleiben und ob die gespeicherten 30 Sekunden deren Dauer sind, ist noch zu klären.",
+  "description_eng": "An aimed shot that is guaranteed to be critical. Physical skill base damage starts at 491 and increases by 137 per additional level to 2409 at level 15 before critical multiplier, character attack and defence. Mana cost starts at 173 and increases by 64 per additional level to 1069. Aiming cast time is 0.5 seconds. Existing cooldown is 75 seconds. The old description also specifies a guaranteed hit and a reduction of the enemy dodge chance by 1 percent per level. Whether those effects remain and whether the stored 30 seconds are their duration is pending.",
+  "dmgType": "physical",
+  "dur": 30,
+  "maxSkillLv": 15,
+  "maxUpgradeLv": 10,
+  "nr": 86,
+  "patk": 491,
+  "skillName_de": "Präzisionsschuss",
+  "skillpoints": 1,
+  "attackExecution": {
+    "targetMode": "singleEnemy",
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "guaranteedCriticalHit": true,
+    "criticalImmunityStatus": "pending",
+    "timingStatus": "pending"
+  },
+  "castTimeSeconds": 0.5,
+  "mana": 173,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 173,
+        "perLevel": 64
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 491,
+      "perLevel": 137
+    }
+  }
+}

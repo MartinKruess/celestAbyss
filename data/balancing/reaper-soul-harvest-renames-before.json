@@ -1,0 +1,268 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bca",
+    "skillName_eng": "Soul Shackle",
+    "__v": 0,
+    "category": "active",
+    "cd": 70,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbraucht 1 Seelenfragment und lässt zwei seelenhafte Hände aus dem Boden den Gegner festhalten. Kein Lebensopfer. Die Fessel betäubt das Ziel und senkt seine M-Defense währenddessen um 10 Prozent. Dauer gleichmäßig von 2 Sekunden auf Stufe 1 bis 3 Sekunden auf Stufe 15. Magischer Initial-Grundschaden 97, +34 je weiterer Stufe, auf Stufe 15 573. Mana 25, +12 je weiterer Stufe, auf Stufe 15 193. Cooldown 70 Sekunden, -1,5 je weiterer Stufe, auf Stufe 15 49 Sekunden. Castzeit vorläufig 0,1 Sekunden innerhalb des genannten Bereichs 0,1–0,2 Sekunden. Während der Fessel ist Seelenqual nutzbar. Definition, Kapazität und Wiederauffüllen des permanenten Seelenvorrats werden separat ausgearbeitet.",
+    "description_eng": "Consumes 1 soul fragment and summons two spectral hands from the ground to hold the enemy. No health cost. Stuns the target and reduces magical defense by 10 percent for the same duration. Duration increases linearly from 2 seconds at level 1 to 3 at level 15. Initial magical base damage 97 plus 34 per additional level, reaching 573. Mana 25 plus 12 per additional level, reaching 193. Cooldown 70 minus 1.5 per additional level, reaching 49 seconds. Provisional cast time 0.1 seconds within the stated 0.1–0.2 range. Soul Torment can be used during the shackle. Permanent soul storage capacity and replenishment are defined separately.",
+    "dmgType": "spell",
+    "dur": 2,
+    "matk": 97,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 103,
+    "skillName_de": "Seelenfessel",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 70,
+      "perLevel": -1.5
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 0.07142857142857142
+    },
+    "effects": [
+      {
+        "key": "soul-shackle-control",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "stun",
+        "durationSeconds": 2,
+        "durationScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 0.07142857142857142
+        }
+      },
+      {
+        "key": "soul-shackle-magical-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "mdef",
+        "value": -0.1,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 2,
+        "durationScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 0.07142857142857142
+        },
+        "endWith": "soul-shackle-control"
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 25,
+          "perLevel": 12
+        }
+      },
+      {
+        "resource": "soulFragments",
+        "reference": "currentSoulFragments",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 1
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 97,
+        "perLevel": 34
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcb",
+    "skillName_eng": "Soul Torment",
+    "__v": 0,
+    "category": "active",
+    "cd": 0.19,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein Lebensopfer, kein Schaden über Zeit. Grundschaden 127, +22 je weiterer Stufe, auf Stufe 10 325. Mana 23 je Anwendung auf Stufe 1, +9 je weiterer Stufe, auf Stufe 10 104 je Anwendung. Castzeit 0 Sekunden, Cooldown 0,19 Sekunden. Bei sofortiger erster Anwendung passen theoretisch bis zu 16 Anwendungen in ein volles 3-Sekunden-Fenster (Zeitpunkte 0 bis 2,85 Sekunden); Reaktionszeit und Serverablauf können das reduzieren. 15 Anwendungen kosten auf Stufe 10 1560 Mana; 16 Anwendungen kosten 1664 Mana. Für Seelentrennung vorgemerkt: 0–4 erfolgreiche Seelenqual-Treffer ergeben 0 Seelen, 5–11 ergeben 1, ab 12 ergeben 2; höhere Trefferzahlen durch das geänderte Timing erhöhen die Ernte nicht über 2. Manueller Abschluss bevorzugt, genaue Umsetzung noch offen. Seelenfessel kostet zuvor 1 Seele, daher entspricht eine Ernte von 1 nur dem Ausgleich dieses Einsatzes.",
+    "description_eng": "One magical hit, usable only while Soul Shackle affects the target. No health cost or damage over time. Base damage 127 plus 22 per additional level, reaching 325 at level 10. Mana 23 per activation plus 9 per additional level, reaching 104. Cast time zero, cooldown 0.19 seconds. If the first activation is immediate, up to 16 theoretical activations fit into a full 3-second window (times 0 through 2.85 seconds); reaction time and server timing can reduce this. At level 10, 15 activations cost 1560 Mana; 16 activations cost 1664 Mana. Soul Separation proposal: 0–4 successful Torment hits yield 0 souls, 5–11 yield 1, at least 12 yield 2; additional hits possible under the new timing do not increase the proposed maximum reward above 2. Manual finishing preferred, exact implementation pending. Shackle costs 1 soul first, so harvesting 1 only recovers the initial investment.",
+    "dmgType": "spell",
+    "matk": 127,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 104,
+    "skillName_de": "Seelenqual",
+    "skillpoints": 1,
+    "activationRequirements": {
+      "requiredTargetMarkSkillNumber": 103
+    },
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit"
+    },
+    "castTimeSeconds": 0,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 23,
+          "perLevel": 9
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 127,
+        "perLevel": 22
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bcc",
+    "skillName_eng": "Soul Separation",
+    "__v": 0,
+    "category": "active",
+    "cd": 160,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Manueller Abschluss der Kombination Seelenfessel → Seelenqual → Seelentrennung. Verursacht einmalig magischen Schaden und heilt den Anwender. Magischer Grundschaden 481 auf Stufe 1, +183 je weiterer Stufe, auf Stufe 5 1213. Bestehende feste Selbstheilung 150 je gelerntem Skilllevel, von 150 bis 750 HP; bisher keine bestätigte zusätzliche Abhängigkeit der Heilmenge von der Trefferzahl. Die Zahl erfolgreicher Seelenqual-Treffer auf dem gefesselten Ziel bestimmt die Ernte: 0–4 ergibt 0 Seelenfragmente, 5–11 ergibt 1, ab 12 ergibt 2. Maximal 2 Seelenfragmente pro Abschluss. Seelenfessel kostet zuvor 1 Fragment. Seelentrennung ist bis 1,5 Sekunden nach Auflösung der Seelenfessel abfeuerbar; genaue serverseitige Ablaufprüfung und Verhalten bei vorzeitigem Tod des Ziels noch offen. Cooldown 160 Sekunden, je weiterer Stufe 5 Sekunden weniger, auf Stufe 5 140 Sekunden. Castzeit 0,3 Sekunden, einmalige Wirkung. Aktivierungskosten, Speicherregeln sowie mögliche zusätzliche Schadens-/Heilskalierung nach Trefferzahl sind noch festzulegen.",
+    "description_eng": "Manual finisher for Soul Shackle → Soul Torment → Soul Separation. Deals magical damage once and heals the caster. Base damage 481 plus 183 per additional level, reaching 1213 at level 5. Existing fixed self-healing remains 150 per learned skill level, from 150 to 750 HP; no extra hit-count-based healing amount is confirmed. Successful Torment hits on the shackled target determine the harvest: 0–4 yields 0 soul fragments, 5–11 yields 1, at least 12 yields 2. Maximum 2 fragments per finisher. Shackle costs 1 fragment first. Finisher can be fired up to 1.5 seconds after Shackle ends; precise server timing and target death behavior remain pending. Cooldown starts at 160 seconds, decreases by 5 per additional level, reaching 140 at level 5. Cast time 0.3 seconds; one-time effect. Activation costs, storage rules and any additional damage/healing scaling with hit count remain pending.",
+    "dmgType": "spell",
+    "matk": 481,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 105,
+    "skillName_de": "Seelentrennung",
+    "skillpoints": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 160,
+      "perLevel": -5
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 150,
+          "perLevel": 150
+        },
+        "type": "heal",
+        "target": "self",
+        "value": 150,
+        "unit": "flat",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "self-heal"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "soulHarvestSettings": {
+      "sourceSkillNumber": 104,
+      "shackleSkillNumber": 103,
+      "minimumHitsForOneFragment": 5,
+      "minimumHitsForTwoFragments": 12,
+      "maximumFragments": 2,
+      "manualFinisher": true,
+      "postShackleWindowSeconds": 1.5,
+      "damageAndHealingScalingByHitCountStatus": "pending"
+    },
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 481,
+        "perLevel": 183
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bdb",
+    "skillName_eng": "Corrupted Soul",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Permanenter passiver Skill. Erlaubt auf Stufe 1 einen Speicher von 10 Seelenfragmenten und je weiterer Stufe 10 zusätzliche Plätze, bis zu 100 auf Stufe 10. Je volle 10 aktuell gespeicherte Seelenfragmente erhältst du +2 Victim: Bonus = 2 × abrunden(aktueller Vorrat / 10). Bei 100 gespeicherten Fragmenten insgesamt +20 Victim; bei leerem Speicher kein Victim-Bonus. Der Bonus sinkt entsprechend, wenn Seelen ausgegeben werden. Seelenfragmente sind eine eigene Ressource, getrennt vom Attribut Victim. Vorrat bleibt dauerhaft auch offline erhalten, ohne zeitlichen Verfall. Überschüssige Gewinne oberhalb der Speicherkapazität werden nicht aufgenommen. Der Skill erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Eine Umbenennung in Seelensammler oder Reaper ist nur vorgemerkt, noch nicht beschlossen. Dies sind Skilldefinitionen; die persistente Charakterressource ist später serverseitig anzubinden.",
+    "description_eng": "Permanent passive skill. Soul-fragment storage starts at 10 at level 1 and gains 10 capacity per additional level, reaching 100 at level 10. Every complete 10 currently stored fragments grants +2 Victim: bonus = 2 × floor(current storage / 10). At 100 stored fragments the bonus is +20 Victim; empty storage grants none. Spending souls reduces the bonus accordingly. Soul fragments are a separate resource from the Victim attribute. Storage persists offline with no time decay. Gains beyond storage capacity are discarded. This skill does not generate souls itself. No activation costs, cast time or cooldown. Soul Collector or Reaper is only a possible future rename. These are skill definitions; persistent character-resource behavior still requires server integration.",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 120,
+    "skillName_de": "Verdorbene Seele",
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "soulStorageSettings": {
+      "resource": "soulFragments",
+      "capacityScaling": {
+        "type": "linear",
+        "base": 10,
+        "perLevel": 10
+      },
+      "persistsOffline": true,
+      "decaysOverTime": false,
+      "bonusStat": "vic",
+      "fragmentsPerBonusStep": 10,
+      "bonusPerFullStep": 2,
+      "usesCurrentStoredAmount": true,
+      "onCapacityReached": "discardExcess"
+    }
+  }
+]

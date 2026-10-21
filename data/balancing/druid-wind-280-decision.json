@@ -1,0 +1,36 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T06:36:18.389Z",
+  "backup": "data/balancing/history/before-druid-wind-280-1792478178249",
+  "pointDelta": 16,
+  "changes": [
+    {
+      "nr": 221,
+      "druidMax": 20,
+      "herbalistMax": 10,
+      "druidDamageAtMax": 921,
+      "druidManaAtMax": 233,
+      "baseCooldownRange": [
+        54,
+        45
+      ]
+    },
+    {
+      "nr": 125,
+      "from": 10,
+      "to": 15,
+      "preservedEndpoints": true
+    },
+    {
+      "nr": 222,
+      "from": 1,
+      "to": 2,
+      "attributeCostsByLevel": [
+        20,
+        15
+      ],
+      "bonusLevels": 1
+    }
+  ],
+  "energyStrikeCapUnchanged": 5
+}

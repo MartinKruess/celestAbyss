@@ -1,0 +1,103 @@
+{
+  "level": 60,
+  "equipmentRank": 6,
+  "skillLevel": "maximum",
+  "manaPool": 5057,
+  "attackSkills": [
+    {
+      "nr": 61,
+      "name": "Holzspalter",
+      "level": 20,
+      "mana": 395
+    },
+    {
+      "nr": 77,
+      "name": "Mächtiger Hieb",
+      "level": 10,
+      "mana": 240
+    },
+    {
+      "nr": 96,
+      "name": "Schmetterschlag",
+      "level": 10,
+      "mana": 441
+    },
+    {
+      "nr": 106,
+      "name": "Sprungschlag",
+      "level": 10,
+      "mana": 1002
+    },
+    {
+      "nr": 230,
+      "name": "Wirbelsturm",
+      "level": 10,
+      "mana": 389
+    },
+    {
+      "nr": 233,
+      "name": "Kriegerischer Ansturm",
+      "level": 10,
+      "mana": 305
+    }
+  ],
+  "oneRotation": 2772,
+  "twoRotations": 5544,
+  "deficitWithoutRegeneration": 487,
+  "excludedRageSkills": [
+    13,
+    109,
+    127,
+    128
+  ],
+  "buffs": [
+    {
+      "nr": 75,
+      "name": "Verstärkung des Körpers",
+      "mana": 254
+    },
+    {
+      "nr": 159,
+      "name": "Kritische Schläge",
+      "mana": 148
+    },
+    {
+      "nr": 160,
+      "name": "Energie des Mutes",
+      "mana": 305
+    },
+    {
+      "nr": 161,
+      "name": "Energie der Wut",
+      "mana": 455
+    },
+    {
+      "nr": 162,
+      "name": "Innere Kraft",
+      "mana": 595
+    },
+    {
+      "nr": 163,
+      "name": "Volles Potential",
+      "mana": 257
+    }
+  ],
+  "buffSetupCost": 2014,
+  "regeneration": {
+    "basePerTick": 25,
+    "addedWisdom": 159,
+    "manaPerTickWithProvisionalWisdomFactor": 184,
+    "tickIntervalSeconds": null,
+    "provokeDrainPerTick": 25
+  },
+  "limitations": [
+    "No elapsed-time simulation, cooldowns and regeneration not simulated",
+    "Equipment proposals not applied",
+    "Jewelry, stones and foreign buffs excluded",
+    "Starting Wisdom contribution beyond existing baseline not independently known"
+  ],
+  "open": [
+    "Endurance proc cooldown and final trigger; existing database definition not yet migrated",
+    "General creature mechanics deferred; Gladiator learning caps confirmed"
+  ]
+}

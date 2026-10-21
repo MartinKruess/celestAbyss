@@ -1,0 +1,75 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04ba6",
+    "skillName_eng": "Body Control",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Im Kampf ist es wichtig, seine Grenzen zu kennen.\n+5 Stärke und +5 Vitalität",
+    "description_eng": "In combat it is important to know your limits.\n+5 Strength and +5 Vitality",
+    "dmgType": "passive",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 67,
+    "skillName_de": "Körperbeherrschung",
+    "skillpoints": 1,
+    "str": 5,
+    "vita": 5
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bae",
+    "skillName_eng": "Body Reinforcement",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Knife",
+      "Templar",
+      "Gladiator",
+      "Butcher",
+      "Destroyer",
+      "Berserker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht deine Stärke und Vitalität sowie die deiner Verbündeten für 300 Sekunden um jeweils 2 pro Skilllevel.",
+    "description_eng": "Increases your Strength and Vitality and those of your allies by 2 each per skill level for 300 seconds.",
+    "dmgType": "buff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 75,
+    "skillName_de": "Verstärkung des Körpers",
+    "skillpoints": 1,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      },
+      "vita": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "activation": "manual",
+    "statBonusTargets": {
+      "str": "selfAndAllies",
+      "vita": "selfAndAllies"
+    },
+    "statBonusUnits": {
+      "str": "flat",
+      "vita": "flat"
+    },
+    "str": 2,
+    "vita": 2
+  }
+]

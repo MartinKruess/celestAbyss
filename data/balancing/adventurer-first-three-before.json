@@ -1,0 +1,108 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b68",
+    "skillName_eng": "Adaptation",
+    "__v": 1,
+    "category": "Human",
+    "charClass": [
+      "Witcher",
+      "Herbalist",
+      "Knife",
+      "Templar",
+      "Archer",
+      "Hunter",
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Adaption erhöht deine Vita und Weisheit. +1 Vita +1 Weisheit pro Level",
+    "description_eng": "Adaptation will increase your Vita and Wisdom. +1 Vita +1 Wisdom per Level",
+    "dmgType": "passive",
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 5,
+    "skillName_de": "Adaption",
+    "skillpoints": 1,
+    "vita": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Human"
+    ],
+    "isClassCore": true,
+    "unlockPhase": "race"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b69",
+    "skillName_eng": "Adrenaline",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Nach mehr als 15 Sekunden im Kampf kann Adrenalin ausgelöst werden. Es erhöht deine Stärke und Intelligenz für 30 Sekunden um 1 Prozent je Skillstufe, bis zu 5 Prozent. Der Cooldown beträgt 120 Sekunden. Die Auslösewahrscheinlichkeit ist noch festzulegen.",
+    "description_eng": "After more than 15 seconds in combat, Adrenaline can trigger. It increases Strength and Intelligence for 30 seconds by 1 percent per skill level, up to 5 percent. The cooldown is 120 seconds. The trigger probability is still to be defined.",
+    "dmgType": "passive",
+    "int": 0.01,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 6,
+    "skillName_de": "Adrenalin",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "str": "fraction",
+      "int": "fraction"
+    },
+    "str": 0.01,
+    "activation": "automatic",
+    "cd": 120,
+    "dur": 30,
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      },
+      "int": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.01
+      }
+    },
+    "triggerCondition": {
+      "type": "sustainedCombat",
+      "combatDurationSeconds": 15,
+      "comparison": "greaterThan",
+      "chancePerCheck": null
+    },
+    "triggerConditionStatus": "pending"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b71",
+    "skillName_eng": "Dodge Roll",
+    "__v": 0,
+    "category": "active",
+    "cd": 3,
+    "charClass": [
+      "Hunter",
+      "Archer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Mache eine Ausweichrolle um einem Angriff auszuweichen.",
+    "description_eng": "Make a dodge roll to dodge an attack.",
+    "dmgType": "Movement",
+    "maxSkillLv": 2,
+    "maxUpgradeLv": 10,
+    "nr": 14,
+    "skillName_de": "Ausweichrolle",
+    "skillpoints": 1
+  }
+]

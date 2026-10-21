@@ -1,0 +1,562 @@
+{
+  "catalogCount": 238,
+  "databaseMatch": "All 238 definitions and every exported field matched live database in this audit",
+  "scope": "Missing-field detection only; does not prove a skill has never been discussed",
+  "classes": [
+    {
+      "name": "Gladiator / Berserker",
+      "total": 35,
+      "gaps": [
+        {
+          "nr": 109,
+          "name": "Sturm der Wut",
+          "missing": [
+            "Mana costs"
+          ]
+        },
+        {
+          "nr": 127,
+          "name": "Wutexplosion",
+          "missing": [
+            "Mana costs"
+          ]
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "missing": [
+            "Mana costs"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Kräuterkundler / Witcher",
+      "total": 33,
+      "gaps": [],
+      "note": "All active basic cost/cast/cooldown fields present after final Water Chains cast confirmation; this is not a check of pending gameplay detail rules"
+    },
+    {
+      "name": "Abenteurer / Scout",
+      "total": 33,
+      "gaps": []
+    },
+    {
+      "name": "Jäger / Schütze",
+      "total": 33,
+      "gaps": []
+    },
+    {
+      "name": "Butcher / Destroyer",
+      "total": 33,
+      "gaps": [
+        {
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 174,
+          "name": "Blutrausch",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 227,
+          "name": "Dämonische Schockwelle",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 234,
+          "name": "Zorn des Henkers",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schurke / Schattenkrieger",
+      "total": 32,
+      "gaps": []
+    },
+    {
+      "name": "Nachtjäger / Seelenjäger",
+      "total": 32,
+      "gaps": []
+    },
+    {
+      "name": "Ritualist / Blutmagier",
+      "total": 37,
+      "gaps": [
+        {
+          "nr": 48,
+          "name": "Feuer der Verdammten",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 49,
+          "name": "Feuerball",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 72,
+          "name": "Lebenssauger",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 74,
+          "name": "Festigung des Geistes",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 85,
+          "name": "Pforte der Verbannung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 99,
+          "name": "Schrei der Unterwelt",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 100,
+          "name": "Schwäche des Fleisches",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 103,
+          "name": "Seelenfessel",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 104,
+          "name": "Seelenqual",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 105,
+          "name": "Seelentrennung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 110,
+          "name": "Sturm des Feuers",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 179,
+          "name": "Dunkle Macht",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 180,
+          "name": "Seelenplage",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 232,
+          "name": "Dunkler Impuls",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 235,
+          "name": "Meteoritenschauer",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 236,
+          "name": "Teufelspackt",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 237,
+          "name": "Morrak´s Meister",
+          "missing": [
+            "Mana costs",
+            "cast time",
+            "cooldown"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Druide / Alchemist",
+      "total": 33,
+      "gaps": []
+    },
+    {
+      "name": "Heiler / Priester",
+      "total": 34,
+      "gaps": [
+        {
+          "nr": 58,
+          "name": "Göttliche Heilung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 64,
+          "name": "Kleine Heilung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 74,
+          "name": "Festigung des Geistes",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 78,
+          "name": "Massenheilung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 124,
+          "name": "Wiederherstellung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 195,
+          "name": "Lichtwaffe",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 196,
+          "name": "Strahlende Rüstung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 197,
+          "name": "Segen des Angriffes",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 198,
+          "name": "Segen der Mentalität",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 199,
+          "name": "Segen der Verteidigung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 206,
+          "name": "Lunare Inkanation",
+          "missing": [
+            "cast time"
+          ]
+        },
+        {
+          "nr": 207,
+          "name": "Himmlische Aufopferung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Schamane / Hochelfe",
+      "total": 32,
+      "gaps": []
+    },
+    {
+      "name": "Luminet / Lichtmagier",
+      "total": 35,
+      "gaps": [
+        {
+          "nr": 8,
+          "name": "Astalkörper",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 64,
+          "name": "Kleine Heilung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 74,
+          "name": "Festigung des Geistes",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 117,
+          "name": "Urteil des Himmels",
+          "missing": [
+            "cast time"
+          ]
+        },
+        {
+          "nr": 207,
+          "name": "Himmlische Aufopferung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 210,
+          "name": "Lichtblitz",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 211,
+          "name": "Aurora Wellen",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 213,
+          "name": "Strafendes Licht",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 215,
+          "name": "Heiliges Kreuz",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 216,
+          "name": "Heilige Vernichtung",
+          "missing": [
+            "Mana costs",
+            "cast time",
+            "cooldown"
+          ]
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 218,
+          "name": "Licht kristallenes Gefängnis",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 228,
+          "name": "Geheiligte Barriere",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 231,
+          "name": "Luminus",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ritter / Tempelritter",
+      "total": 33,
+      "gaps": [
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "missing": [
+            "cast time"
+          ]
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld der Schwäche",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 64,
+          "name": "Kleine Heilung",
+          "missing": [
+            "Mana costs",
+            "cast time"
+          ]
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "missing": [
+            "Mana costs"
+          ]
+        }
+      ]
+    }
+  ]
+}

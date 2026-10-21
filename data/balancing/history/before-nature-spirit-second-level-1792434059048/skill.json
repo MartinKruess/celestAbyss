@@ -1,0 +1,95 @@
+{
+  "_id": "6ad3a9de427c3c124063398e",
+  "skillName_eng": "Nature Spirit",
+  "__v": 0,
+  "category": "active",
+  "cd": 360,
+  "charClass": [
+    "Druide",
+    "Alchemist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Beschwört einen Naturgeist, der mit kleinen Wirbelstürmen magischen Windschaden aus der Entfernung verursacht. Eigene Skilldefinition nur für Druide/Alchemist, getrennt vom Seelenbegleiter des Jägers. Übernimmt live jeweils 30 % der aktuellen Intelligenz, Vitalität und Willenskraft seines Meisters. Statt Geschick liefert Intelligenz den Angriff: 1,8 M-Angriff je übernommenes Intelligenz-Punkt; keine direkte Übernahme von Waffenangriff oder fertigem M-Angriff. Vita und Willenskraft werden nach den normalen Begleiterregeln verwertet. Keine physische Angriffskomponente. Eine lernbare Stufe, 132 Mana, 0,4 Sekunden Castzeit, 360 Sekunden Dauer und 360 Sekunden Cooldown ab Beschwörung. Maximal ein Naturgeist gleichzeitig; erneutes Rufen ersetzt den bisherigen. Bei Tod nur verbleibenden Beschwörungs-Cooldown abwarten. Angreifbar und von Flächenschaden betroffen. Kein dauerhafter Pet-Platz, mit normalem Pet kombinierbar. Grundfrequenz 1,1 Angriffe pro Sekunde bei 100 % eigenem Angriffstempo, keine Übernahme von Agilität. Meister-Buffs und -Debuffs wirken live auf die übernommenen Attribute. Begleiterbuffs wirken direkt auf den Naturgeist. Reichweite und Anpassung aktueller HP bei Max-HP-Änderungen noch offen. Zusätzliche eigene Grundwerte: 125 Max-Leben, 0 P-Angriff, 37 M-Angriff, 22 P-Verteidigung und 31 M-Verteidigung. Diese Werte werden zur bisherigen Vererbung addiert. Grundfrequenz 1,1 Angriffe pro Sekunde. Bindung wirkt direkt und zusätzlich auf die Kreaturenattribute; die normale Lerngrenze des Meisters ist zu beachten.",
+  "description_eng": "Summons a Nature Spirit that uses small tornadoes as ranged magical wind basic attacks. Separate Druid/Alchemist skill. Live inheritance: 30% each of current master Intelligence, Vitality and Wisdom. Intelligence replaces Dexterity as the attack source: 1.8 magical attack per inherited Intelligence point, without direct weapon or final master attack inheritance. Standard companion Vitality/Wisdom conversions. No physical attack component. One learnable level, 132 Mana, 0.4-second cast, 360-second lifetime and cooldown starting on summon. Maximum one active instance; resummoning replaces it. Death requires waiting only the remaining summon cooldown. Targetable and affected by area damage. Does not occupy a permanent pet slot. Base frequency 1.1 attacks per second at 100% own speed; no Agility inheritance. Master attribute changes apply live; companion buffs apply directly. Range and current-HP adjustments remain pending. Additional fixed base stats: 125 maximum HP, 0 physical attack, 37 magical attack, 22 physical defense and 31 magical defense, added to existing inheritance. Base frequency 1.1 attacks per second. Bond applies directly to creature attributes in addition to inheritance, at the master class learning cap.",
+  "dmgType": "spell",
+  "dur": 360,
+  "maxSkillLv": 1,
+  "maxUpgradeLv": 10,
+  "nr": 244,
+  "skillName_de": "Naturgeist",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.4,
+  "mana": 132,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 132,
+        "perLevel": 0
+      }
+    }
+  ],
+  "summonedCreatureSettings": {
+    "occupiesPermanentPetSlot": false,
+    "canCoexistWithPermanentPet": true,
+    "inheritedAttributeFractions": {
+      "intelligence": 0.3,
+      "vitality": 0.3,
+      "wisdom": 0.3
+    },
+    "attributeConversionMode": "standardMagical",
+    "acceptsGroupCompanionBuffs": true,
+    "maximumActiveInstances": 1,
+    "statSampling": "liveBeforeSummonHealthPenalty",
+    "defenseScalingStatus": "defined",
+    "attackStyle": "rangedBasicAttack",
+    "damageType": "magical",
+    "targetable": true,
+    "affectedByAreaAttacks": true,
+    "lifetimeSeconds": 360,
+    "endsOnCreatureDeath": true,
+    "currentHealthAdjustmentStatus": "pending",
+    "summonCooldownSeconds": 360,
+    "cooldownStartsOn": "summon",
+    "deathRestartsCooldown": false,
+    "attackSpeed": 1,
+    "damageElement": "wind",
+    "baseAttacksPerSecond": 1.1,
+    "baseStats": {
+      "maxHealth": 125,
+      "magicalAttack": 37,
+      "physicalDefense": 22,
+      "magicalDefense": 31
+    },
+    "receivesBond": true
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 132,
+            "perLevel": 0
+          }
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "classificationVersion": 1,
+  "type": "skill"
+}

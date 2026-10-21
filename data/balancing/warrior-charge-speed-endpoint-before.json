@@ -1,0 +1,74 @@
+{
+  "_id": "6acc1c7e4826525c70d04c4c",
+  "skillName_eng": "Warrior's Charge",
+  "__v": 0,
+  "atkSpeed": 0.1,
+  "category": "active",
+  "cd": 71,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Stürmt auf den Gegner zu und stößt ihn zurück. Verursacht einmalig physischen Grundschaden von 84 auf Skilllevel 1, plus 36 je weiterer Stufe, bis zu 408 auf Stufe 10. Mana-Kosten steigen von 44 um 29 je weiterer Stufe auf 305. Castzeit 0,3 Sekunden, bisheriger Cooldown 71 Sekunden. Anschließend erhöht ein Eigenbuff Attack Speed um 10 Prozent auf Stufe 1, plus 1 Prozentpunkt je weiterer Stufe auf 19 Prozent auf Stufe 10. Die Buffdauer steigt von 1 Sekunde um 0,2 Sekunden je weiterer Stufe auf 2,8 Sekunden. Der Angriff selbst verursacht keinen Schaden über Zeit. Ansturmdistanz und Rückstoß werden später genauer festgelegt.",
+  "description_eng": "Charges at the enemy and pushes them back. Deals base physical damage once, starting at 84 at skill level 1 and increasing by 36 per additional level to 408 at level 10. Mana cost increases from 44 by 29 per additional level to 305. Cast time is 0.3 seconds; existing cooldown is 71 seconds. A subsequent self buff increases attack speed by 10 percent at level 1, adding 1 percentage point per additional level to 19 percent at level 10. Buff duration increases from 1 second by 0.2 seconds per additional level to 2.8 seconds. The attack itself deals no damage over time. Charge distance and knockback details will be defined later.",
+  "dmgType": "physical",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 233,
+  "patk": 84,
+  "skillName_de": "Kriegerischer Ansturm",
+  "skillpoints": 1,
+  "mana": 44,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 44,
+        "perLevel": 29
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "linear",
+      "base": 84,
+      "perLevel": 36
+    }
+  },
+  "castTimeSeconds": 0.3,
+  "dur": 1,
+  "durationScaling": {
+    "type": "linear",
+    "base": 1,
+    "perLevel": 0.2
+  },
+  "effects": [
+    {
+      "key": "warrior-charge-attack-speed",
+      "type": "statModifier",
+      "target": "self",
+      "stat": "atkSpeed",
+      "value": 0.1,
+      "unit": "fraction",
+      "valueScaling": {
+        "type": "linear",
+        "base": 0.1,
+        "perLevel": 0.01
+      },
+      "durationSeconds": 1,
+      "durationScaling": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 0.2
+      }
+    }
+  ],
+  "statBonusUnits": {
+    "atkSpeed": "fraction"
+  }
+}

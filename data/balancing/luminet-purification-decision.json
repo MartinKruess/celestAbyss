@@ -1,0 +1,117 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-19T12:06:31.403Z",
+  "backup": "data/balancing/history/before-luminet-purification-1792411591186",
+  "skill": {
+    "_id": "6ad607c72acbb73ee0623fe3",
+    "nr": 260,
+    "skillName_de": "Läuterung",
+    "skillName_eng": "Purification",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "purification-poison-damage",
+        "type": "damageReduction",
+        "damageSchool": "poison",
+        "value": 0.01,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.01,
+          "perLevel": 0.01
+        },
+        "target": "self",
+        "unit": "fraction",
+        "durationSeconds": 0
+      },
+      {
+        "key": "purification-darkness-damage",
+        "type": "damageReduction",
+        "damageSchool": "darkness",
+        "value": 0.005,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        },
+        "target": "self",
+        "unit": "fraction",
+        "durationSeconds": 0
+      },
+      {
+        "key": "purification-curse-resistance",
+        "type": "statusResistance",
+        "resistedStatus": "curse",
+        "resistanceCheck": "onStatusApplication",
+        "value": 0.005,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        },
+        "target": "self",
+        "unit": "fraction",
+        "durationSeconds": 0
+      }
+    ],
+    "description_de": "Permanente Passive. Je Skillstufe erleidest du 1 Prozent weniger Giftschaden und 0,5 Prozent weniger Dunkelheitsschaden. Zusätzlich besteht je Skillstufe eine um 0,5 Prozentpunkte erhöhte Chance, einen neu angewendeten Fluch abzuwehren. Auf Stufe 10: 10 Prozent Giftschadensresistenz, 5 Prozent Dunkelheitsschadensresistenz und 5 Prozent Fluchresistenz. Verhindert keine Vergiftung und entfernt keine bestehenden Vergiftungen oder Flüche. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent passive. Each skill level reduces poison damage taken by 1 percent and darkness damage taken by 0.5 percent, and grants a 0.5 percentage point chance to resist a newly applied curse. At level 10: 10 percent poison damage resistance, 5 percent darkness damage resistance and 5 percent curse resistance. Does not prevent poisoning or remove existing poison or curses. No activation cost, cast time or cooldown.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.01
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  "scope": "Permanent resistance definition; outgoing-only dummy simulation has no incoming damage or curse applications and is unaffected. Runtime incoming damage resolution remains future work."
+}

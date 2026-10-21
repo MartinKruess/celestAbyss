@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bf8",
+    "skillName_eng": "Power of the Wild",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht deine Stärke um 3, deine Intelligenz um 2 und deinen physischen Angriff um 120.",
+    "description_eng": "Increases your Strength by 3, Intelligence by 2 and physical attack by 120.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "int": 2,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 149,
+    "patk": 120,
+    "skillName_de": "Macht der Wildnis",
+    "skillpoints": 1,
+    "str": 3
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf9",
+    "skillName_eng": "Power of the Pet",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Hunter",
+      "Archer",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht den physischen und magischen Angriff sowie die physische und magische Verteidigung deines Begleiters um jeweils 5 pro Skilllevel. Auf Skilllevel 10 beträgt jeder dieser Boni 50.",
+    "description_eng": "Increases your companion's physical and magical attack and physical and magical defense by 5 each per skill level. At skill level 10, each of these bonuses reaches 50.",
+    "dmgType": "buff",
+    "dur": 600,
+    "matk": 5,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "mdef": 5,
+    "nr": 150,
+    "patk": 5,
+    "pdef": 5,
+    "skillName_de": "Macht des Begleiters",
+    "skillpoints": 1,
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "matk": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "pdef": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "mdef": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    }
+  }
+]

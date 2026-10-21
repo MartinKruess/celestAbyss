@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Deterministische 600-Sekunden-Dummy-Simulation: geprüfte Regeln für Jäger, Seelenjäger und Schurke.",
+  "confirmedSimulationRules": {
+    "durationSeconds": 600,
+    "baseBasicAttacksPerSecond": 1.5,
+    "optionalActiveBuffs": false,
+    "randomCriticalHits": false,
+    "randomProcs": false,
+    "misses": false,
+    "mitigation": false,
+    "dualWieldSingleCombinedAttackAction": true,
+    "castBlocksActions": true,
+    "visualAnimationBlocksActions": false,
+    "healthRegenerationTickSeconds": 2,
+    "manaRegenerationTickSeconds": 3
+  },
+  "classes": {
+    "hunter": {
+      "reviewPrefix": "hunter",
+      "optionalSelfBuffsExcluded": [
+        152,
+        153,
+        154,
+        155,
+        156,
+        157
+      ],
+      "optionalCompanionBuffExcluded": 150,
+      "guaranteedCriticalAttackSkills": [
+        86
+      ],
+      "summon": {
+        "skillNumber": 226,
+        "requiredForSimulation": true,
+        "attributeFractions": {
+          "dexterity": 0.3,
+          "vitality": 0.3,
+          "wisdom": 0.3
+        },
+        "physicalAttackPerDexterity": 1.8,
+        "baseAttackSpeedMultiplier": 1,
+        "baseAttacksPerSecond": 1.5,
+        "lifetimeSeconds": 360,
+        "cooldownSeconds": 360,
+        "manaCost": 132,
+        "castSeconds": 0.4,
+        "noMasterWeaponAttackInheritance": true,
+        "noMagicalAttack": true,
+        "noPetBuff150": true,
+        "resummonOnlyWhenAbsent": true
+      },
+      "attacks": [
+        37,
+        51,
+        53,
+        63,
+        86,
+        88,
+        97,
+        121
+      ],
+      "fallback": "Eigene kombinierte Auto-Attack, sofern kein höher priorisierter bezahlbarer Angriff bereit ist."
+    },
+    "summoner": {
+      "reviewPrefix": "summoner",
+      "optionalActiveBuffsExcluded": [
+        80,
+        147,
+        148,
+        151,
+        183,
+        190,
+        191
+      ],
+      "guaranteedCriticalAttackSkills": [
+        66
+      ],
+      "combo": {
+        "setupSkillNumber": 185,
+        "collectorSkillNumber": 186,
+        "finisherSkillNumber": 229,
+        "markDurationSeconds": 5,
+        "collectorCastSeconds": 0.2,
+        "collectorCooldownSeconds": 0,
+        "collectorApplications": 25,
+        "collectorFirstHitAfterSeconds": 0.2,
+        "collectorLastHitAfterSeconds": 5,
+        "finisherGraceSeconds": 1.5,
+        "finisherCastSeconds": 0.3,
+        "markCooldownSeconds": 75,
+        "finisherCooldownSeconds": 69,
+        "requiresFinisherReadyBeforeStart": true,
+        "exclusiveDuringCollection": true,
+        "pointsPerHit": 1,
+        "pointsConsumedByFinisher": true,
+        "tierThresholds": [
+          6,
+          16,
+          22
+        ],
+        "baseBonusFractions": [
+          0,
+          0.04,
+          0.09,
+          0.15
+        ]
+      },
+      "independentAttacks": [
+        24,
+        47,
+        51,
+        63,
+        66,
+        184
+      ],
+      "explosiveArrow": {
+        "skillNumber": 47,
+        "activationHitCount": 0,
+        "empoweredOwnBasicAttacks": 3,
+        "explosionDelaySeconds": 2,
+        "manaPaidOnce": true,
+        "normalBasicAttackStillDealsOwnDamage": true,
+        "bonusPhysicalBaseAddsCharacterPhysicalAttack": true
+      },
+      "excludedProcEffects": [
+        {
+          "skillNumber": 184,
+          "effect": "damageReplay",
+          "reason": "Nur 60 Prozent Auslösechance, daher im deterministischen Grundlauf nur der Initialtreffer."
+        }
+      ],
+      "priority": "Vollständige Seelenkombo bei bereitem Abschluss vor unabhängigen Angriffen; während des fünfsekündigen Sammelfensters keine anderen Skills oder Auto-Attacks. Danach stärkste bereitstehende Angriffe; Auto-Attacks füllen Lücken."
+    },
+    "villian": {
+      "reviewPrefix": "rogue",
+      "optionalActiveBuffsExcluded": [
+        80,
+        146,
+        148,
+        189,
+        191,
+        238
+      ],
+      "manaCostMultiplier": 0.97,
+      "guaranteedCriticalAttackSkills": [
+        20
+      ],
+      "stealth": {
+        "setupSkillNumber": 188,
+        "cooldownSeconds": 90,
+        "durationSeconds": 8,
+        "manaAtMaximum": 154,
+        "castSeconds": 0.1,
+        "orderedSkillNumbers": [
+          91,
+          92,
+          90
+        ],
+        "trapPreservesStealth": true,
+        "trapPlacementsPerStealth": 1,
+        "trapLifetimeSeconds": 10,
+        "trapDummyTriggerConvention": "Unbewegliches Ziel befindet sich unmittelbar auf dem platzierten Fallenpunkt; Falle löst ohne zusätzliche Laufzeit aus.",
+        "shadowStrikeTemporaryRevealSeconds": 1,
+        "shadowStrikeResumesOriginalStealth": true,
+        "shadowDaggerEndsStealth": true,
+        "suppressOwnNormalAttacksWhileStealthSetupPending": true,
+        "waitAfterShadowStrikeSeconds": 1,
+        "canCastTrapOnlyOncePerStealth": true,
+        "requiresEnoughManaForSelectedSequenceBeforeSetup": true
+      },
+      "independentAttacks": [
+        17,
+        20,
+        27,
+        65,
+        70,
+        111,
+        113,
+        115,
+        126
+      ],
+      "kunai": {
+        "skillNumber": 70,
+        "normalApplicationCount": 1,
+        "executeFinisherDisabled": true,
+        "reason": "Unsterblicher Dummy hat keinen Unter-6-Prozent-Zustand."
+      },
+      "priority": "Bereite sinnvolle Tarnsequenz als Voraussetzung behandeln. Zuerst Falle, danach Schattenschlag, nach Wiederkehr der Tarnung Schattendolch. Normale Angriffe dürfen die geplante Sequenz nicht vorher aufdecken."
+    }
+  },
+  "schedulerRecommendation": {
+    "selection": "Abhängige Kombinationen als endliche Sequenzen; ansonsten absteigender Rohschaden unter den bereiten bezahlbaren Angriffen. Spam-/Auto-Attacks sind Füller, nie feste höchste Priorität.",
+    "recheckAt": "Nach jeder abgeschlossenen Castaktion und jedem Cooldown-/Ressourcenereignis; keine Unterbrechung eines bereits gestarteten Einzelcasts erforderlich.",
+    "baselineImportant": "Begleiter laufen unabhängig vom Meister-Cast weiter. Schaden und Anwendungen nach dem 600-Sekunden-Ende nicht gutschreiben."
+  },
+  "notGameDatabaseChanges": true
+}

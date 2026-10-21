@@ -1,0 +1,322 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b88",
+    "skillName_eng": "Draining Arrow",
+    "__v": 0,
+    "category": "active",
+    "cd": 57,
+    "charClass": [
+      "Hunter",
+      "Archer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verursacht einmalig physischen Schaden und heilt dich um einen festen Lebensbetrag. Auf Stufe 1: 101 physischer Grundschaden und 48 Heilung. Je weiterer Stufe kommen 42 Grundschaden und 12 Heilung hinzu, bis zu 479 Grundschaden und 156 Heilung auf Stufe 10. Mana-Kosten 27, plus 12 je weiterer Stufe, bis zu 135. Castzeit 0,1 Sekunden, vorläufige Animation 0,3 Sekunden. Keine anhaltende Wirkungsdauer und kein Bonus auf maximales Leben.",
+    "description_eng": "Deals physical damage once and heals you for a fixed amount. Level 1 has 101 physical base damage and 48 healing. Each additional level adds 42 base damage and 12 healing, reaching 479 base damage and 156 healing at level 10. Mana cost starts at 27 and increases by 12 per additional level to 135. Cast time is 0.1 seconds; provisional animation is 0.3 seconds. No lingering duration or maximum Health bonus.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 37,
+    "patk": 101,
+    "skillName_de": "Entzugspfeil",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.3,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "draining-arrow-self-heal",
+        "type": "heal",
+        "target": "self",
+        "value": 48,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 48,
+          "perLevel": 12
+        },
+        "durationSeconds": 0
+      }
+    ],
+    "hasLingeringDamage": false,
+    "mana": 27,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 27,
+          "perLevel": 12
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 101,
+        "perLevel": 42
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb9",
+    "skillName_eng": "Precision Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 75,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Ein gezielter Schuss, der garantiert kritisch trifft. Physischer Skill-Grundschaden 491 auf Stufe 1, plus 137 je weiterer Stufe, bis zu 2409 auf Stufe 15 vor Krit-Multiplikator, Charakterangriff und Verteidigung. Mana-Kosten 173, plus 64 je weiterer Stufe, bis zu 1069. Castzeit 0,4 Sekunden zum Zielen. Cooldown startet bei 75 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 61 Sekunden. Senkt beim getroffenen Gegner Angriffsgeschwindigkeit und Bewegungsgeschwindigkeit. Beide Senkungen beginnen auf Stufe 1 bei 0 und steigen gleichmäßig bis auf 7,5 Prozent Angriffsgeschwindigkeit und 5 Prozent Bewegungsgeschwindigkeit auf Stufe 15. Die Effektdauer beginnt bei 15 Sekunden und steigt um 1 Sekunde je weiterer Stufe auf 29 Sekunden. Die frühere Ausweichsenkung entfällt.",
+    "description_eng": "An aimed shot guaranteed to be critical. Physical skill base damage starts at 491 and increases by 137 per additional level to 2409 at level 15 before critical multiplier, character attack and defence. Mana cost starts at 173 and increases by 64 per additional level to 1069. Aiming cast time is 0.4 seconds. Cooldown starts at 75 seconds and decreases by 1 second per additional level to 61 seconds. Reduces the hit enemy attack and movement speed. Both reductions start at 0 at level 1 and increase evenly to 7.5 percent attack speed and 5 percent movement speed reduction at level 15. Effect duration starts at 15 seconds and increases by 1 second per additional level to 29 seconds. Replaces the former dodge reduction.",
+    "dmgType": "physical",
+    "dur": 15,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 86,
+    "patk": 491,
+    "skillName_de": "Präzisionsschuss",
+    "skillpoints": 1,
+    "attackExecution": {
+      "targetMode": "singleEnemy",
+      "hitCount": 1,
+      "damageValueScope": "perHit",
+      "guaranteedCriticalHit": true,
+      "criticalImmunityStatus": "pending",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.4,
+    "mana": 173,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 173,
+          "perLevel": 64
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 491,
+        "perLevel": 137
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 15,
+      "perLevel": 1
+    },
+    "effects": [
+      {
+        "key": "precision-shot-attack-speed",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "atkSpeed",
+        "value": 0,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0,
+          "perLevel": -0.005357142857142857
+        },
+        "durationSeconds": 15,
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        }
+      },
+      {
+        "key": "precision-shot-movement-speed",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "movementSpeed",
+        "value": 0,
+        "unit": "fraction",
+        "valueScaling": {
+          "type": "linear",
+          "base": 0,
+          "perLevel": -0.0035714285714285718
+        },
+        "durationSeconds": 15,
+        "durationScaling": {
+          "type": "linear",
+          "base": 15,
+          "perLevel": 1
+        }
+      }
+    ],
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 75,
+      "perLevel": -1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bbb",
+    "skillName_eng": "Salve",
+    "__v": 0,
+    "category": "active",
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schießt mehrere Wellen aus jeweils gleichzeitig abgefeuerten Pfeilen. Stufe 1: eine Welle mit 3 Pfeilen. Stufe 2: zwei Wellen mit je 3 Pfeilen. Stufe 3: 4 und 3 Pfeile. Stufe 4: 4 und 4 Pfeile. Stufe 5: drei Wellen mit 5, 4 und 3 Pfeilen. Jeder Pfeil hat 138 physischen Skill-Grundschaden; eine zusätzliche Schadensskalierung wurde noch nicht festgelegt. Castzeit 0,2 Sekunden, vorläufige Ausführungsanimation insgesamt 1 Sekunde. Keine anhaltende Wirkung nach den Einschlägen. Genaue Wellenabstände und Verteilungspriorität sind noch offen. Ein anvisierter Gegner bestimmt das Zentrum eines Kreises mit 4 Metern Radius. Gegner innerhalb dieses Bereichs können von den Pfeilen getroffen werden. Wie sich der Mittelpunkt bei Zielbewegung verhält und nach welcher Priorität Pfeile auf mehrere Ziele verteilt werden, ist noch offen. Alle Pfeile können denselben Gegner treffen, auch einen Boss. Bei mehreren Gegnern im 4-Meter-Bereich können sich die Pfeile auf diese verteilen; ein Ziel kann dabei mehrfach getroffen werden. Auf Stufe 5 sind bis zu 12 Treffer auf dasselbe Ziel möglich. Mana-Kosten einmalig für die gesamte Salve: 82, plus 33 je weiterer Stufe, bis zu 214 auf Stufe 5. Cooldown 75 Sekunden, minus 2 je weiterer Stufe, bis zu 67 Sekunden.",
+    "description_eng": "Fires waves of simultaneously released arrows. Level 1: one wave of 3 arrows. Level 2: two waves of 3 arrows each. Level 3: 4 and 3 arrows. Level 4: 4 and 4 arrows. Level 5: three waves of 5, 4 and 3 arrows. Each arrow has 138 physical skill base damage; no additional damage scaling has been defined yet. Cast time is 0.2 seconds; provisional total execution animation is 1 second. No lingering effect after impacts. Exact wave timing and distribution priority remain pending. A selected enemy defines the centre of a circle with a 4 metre radius. Enemies inside that area can be hit by the arrows. Whether the centre follows a moving target and the distribution priority among multiple targets remain pending. All arrows can hit the same enemy, including a boss. With multiple enemies inside the 4 metre area, arrows can be distributed among them, with repeated hits on a target allowed. Level 5 can deal up to 12 hits to a single target. Mana cost is paid once for the full volley: 82 plus 33 per additional level to 214 at level 5. Cooldown starts at 75 and decreases by 2 per additional level to 67 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 88,
+    "patk": 138,
+    "skillName_de": "Salve",
+    "skillpoints": 1,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "attackExecution": {
+      "projectileWavesByLevel": [
+        {
+          "counts": [
+            3
+          ]
+        },
+        {
+          "counts": [
+            3,
+            3
+          ]
+        },
+        {
+          "counts": [
+            4,
+            3
+          ]
+        },
+        {
+          "counts": [
+            4,
+            4
+          ]
+        },
+        {
+          "counts": [
+            5,
+            4,
+            3
+          ]
+        }
+      ],
+      "damageValueScope": "perHit",
+      "timingStatus": "pending",
+      "projectileTargetDistributionStatus": "pending",
+      "canRepeatTarget": true
+    },
+    "castTimeSeconds": 0.2,
+    "hasLingeringDamage": false,
+    "attackArea": {
+      "shape": "circle",
+      "center": "selectedTarget",
+      "radiusMeters": 4,
+      "target": "enemiesInArea",
+      "centerTracking": "pending",
+      "timingStatus": "pending"
+    },
+    "cd": 75,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 75,
+      "perLevel": -2
+    },
+    "mana": 82,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 82,
+          "perLevel": 33
+        }
+      }
+    ]
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bc4",
+    "skillName_eng": "Shock Shot",
+    "__v": 0,
+    "category": "active",
+    "cd": 51,
+    "charClass": [
+      "Archer",
+      "Hunter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schießt einen Pfeil auf deinen Gegner. Physischer Skill-Grundschaden 236, plus 44 je weiterer Stufe, bis zu 632 auf Stufe 10. Der getroffene Gegner wird mit einer festen Wahrscheinlichkeit von 50 Prozent betäubt. Die Betäubungsdauer steigt gleichmäßig von 1 Sekunde auf Stufe 1 auf 3 Sekunden auf Stufe 10. Mana-Kosten 97, plus 41 je weiterer Stufe, bis zu 466. Castzeit 0,3 Sekunden. Die Chance bleibt auf allen Stufen unverändert.",
+    "description_eng": "Shoots an arrow at an enemy. Physical skill base damage starts at 236 and increases by 44 per additional level to 632 at level 10. A hit has a fixed 50 percent chance to stun the enemy. Stun duration increases evenly from 1 second at level 1 to 3 seconds at level 10. Mana cost starts at 97 and increases by 41 per additional level to 466. Cast time is 0.3 seconds. Stun chance remains unchanged at all levels.",
+    "dmgType": "physical",
+    "dur": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 97,
+    "patk": 236,
+    "skillName_de": "Schockschuss",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.3,
+    "durationScaling": {
+      "type": "linear",
+      "base": 1,
+      "perLevel": 0.2222222222222222
+    },
+    "effects": [
+      {
+        "key": "shock-shot-stun",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "stun",
+        "hitChance": 0.5,
+        "value": 1,
+        "unit": "flat",
+        "durationSeconds": 1,
+        "durationScaling": {
+          "type": "linear",
+          "base": 1,
+          "perLevel": 0.2222222222222222
+        },
+        "actionRestrictionsStatus": "pending"
+      }
+    ],
+    "mana": 97,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 97,
+          "perLevel": 41
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 236,
+        "perLevel": 44
+      }
+    }
+  }
+]

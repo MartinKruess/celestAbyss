@@ -1,0 +1,20 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T13:15:44.492Z",
+  "backup": "data/balancing/history/before-group-skill-damage-1792502144388",
+  "skillNumbers": [
+    193,
+    224
+  ],
+  "maximums": {
+    "193": {
+      "magicalSkillDamage": 81,
+      "manaRegen": 60
+    },
+    "224": {
+      "physicalSkillDamage": 180,
+      "magicalSkillDamage": 81
+    }
+  },
+  "scope": "All recipients. Replaces only direct attack bonuses; no effects on basic attacks or summons. Skill hits with attack contribution, including matching multi-hits and attack-scaled periodic hits, retain the converted bonus. Fixed residual DoTs unchanged."
+}

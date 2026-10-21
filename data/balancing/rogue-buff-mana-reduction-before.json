@@ -1,0 +1,278 @@
+[
+  {
+    "_id": "6ad0b3779cdbe618f141e06c",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 11,
+      "perLevel": 1
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 238,
+    "skillName_eng": "Assassin",
+    "skillName_de": "Attentäter",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Self buff improving basic attacks. Level 1 grants 3 percent additional attack speed and 1 Ambush for 11 seconds. Each additional level adds 1 second, 3 percentage points of attack speed and 1 Ambush. Level 10 grants 30 percent attack speed and 10 Ambush for 20 seconds. Mana cost starts at 67 and increases by 31 per additional level to 346. Cooldown is 120 seconds and cast time is 0.1 seconds. Does not add or double basic attack hits. While level 5 Heart of the Traitor is also active, each own basic attack restores 12 Mana.",
+    "description_de": "Eigenbuff für effektivere Auto-Attacks. Gewährt auf Stufe 1 für 11 Sekunden 3 Prozent zusätzliche Angriffsgeschwindigkeit und 1 Ambush. Je weiterer Stufe steigen die Dauer um 1 Sekunde, die Angriffsgeschwindigkeit um 3 Prozentpunkte und Ambush um 1. Auf Stufe 10 sind es 20 Sekunden, 30 Prozent Angriffsgeschwindigkeit und 10 Ambush. Mana-Kosten 67, plus 31 je weiterer Stufe, bis zu 346. Cooldown 120 Sekunden, Castzeit 0,1 Sekunden. Keine zusätzlichen oder doppelten Auto-Attack-Treffer. Bei gleichzeitig aktivem Herz des Verräters auf Stufe 5 stellt jeder eigene Auto-Attack 12 Mana wieder her.",
+    "dmgType": "selfbuff",
+    "skillpoints": 1,
+    "cd": 120,
+    "dur": 11,
+    "amb": 1,
+    "atkSpeed": 0.03,
+    "castTimeSeconds": 0.1,
+    "mana": 67,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 31
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "amb": "flat"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.03,
+        "perLevel": 0.03
+      },
+      "amb": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c1f",
+    "skillName_eng": "Dark Veil",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Tarnt dich auf Stufe 1 für 5 Sekunden und auf Stufe 2 für 8 Sekunden. Währenddessen bist du für Gegner unsichtbar und nicht direkt anwählbar. Flächenschaden und zufällige Treffer können dich weiterhin treffen. Deine Gruppe sieht dich. Dein kleiner Supportbegleiter wird ebenfalls unsichtbar, dein Kampftier nicht. Ein Treffer oder ein eigener Angriff beendet die Tarnung, sofern der Skill keine ausdrücklich definierte Ausnahme hat. Schattenfalle darf einmal ohne Aufdeckung platziert werden. Schattenschlag macht dich für 1 Sekunde sichtbar und lässt dich danach in die verbleibende Tarnzeit zurückkehren. Die ursprüngliche Zeit läuft dabei weiter. Schattendolch beendet die Tarnung als normaler Angriff. Aktivierung setzt nur deine eigene NPC-Aggro auf null; andere Aggrowerte bleiben erhalten und Gegner wählen ihr nächstes gültiges Ziel. Bewegungsgeschwindigkeit plus 3 Prozent auf Stufe 1, plus 5 Prozent auf Stufe 2. Mana-Kosten 117 beziehungsweise 234, Cooldown 120 beziehungsweise 90 Sekunden, Castzeit 0,1 Sekunden.",
+    "description_eng": "Stealths you for 5 seconds at level 1 or 8 seconds at level 2. Enemies cannot see or directly target you, but area damage and incidental hits can still hit you. Your group can see you. Your small support companion is hidden; your combat pet is not. Incoming hits and own attacks end stealth unless explicitly excepted. One Shadow Trap may be placed without revealing you. Shadow Strike reveals you for 1 second before returning to the remaining original stealth duration, whose timer continues. Shadow Dagger ends stealth as a normal attack. Activation clears only your own NPC threat; other threat values remain and enemies select their next valid target. Grants 3 or 5 percent movement speed. Mana cost is 117 or 234, cooldown is 120 or 90 seconds and cast time is 0.1 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 5,
+    "maxSkillLv": 2,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.03,
+    "nr": 188,
+    "skillName_de": "Dunkler Schleier",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 120,
+      "perLevel": -30
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 5,
+      "perLevel": 3
+    },
+    "mana": 117,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 117,
+          "perLevel": 117
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.03,
+        "perLevel": 0.02
+      }
+    },
+    "stealthSettings": {
+      "preventsDirectTargeting": true,
+      "grantsDamageImmunity": false,
+      "visibleToGroup": true,
+      "hidesSupportCompanion": true,
+      "hidesCombatPet": false,
+      "breaksOnIncomingHit": true,
+      "breaksOnOwnAttackUnlessExcepted": true,
+      "clearsOwnNpcThreat": true,
+      "otherCharactersThreatUnchanged": true
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf7",
+    "skillName_eng": "Sharp Instincts",
+    "__v": 0,
+    "amb": 2,
+    "atkSpeed": 0.03,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior",
+      "Summoner",
+      "Soulseeker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schärft sofort deine Instinkte und erhöht Ambush auf Skilllevel 1 um 2 sowie Attack Speed um 3 Prozent. Je weiterer Stufe kommen 1 Ambush und 2 Prozentpunkte Attack Speed hinzu, bis zu 11 Ambush und 21 Prozent Attack Speed auf Level 10. Die Mana-Kosten steigen von 110 um 23 je weiterer Stufe auf 317. Keine Cast Time; eine kurze Animation dauert vorläufig 0,2 bis 0,3 Sekunden. Der Buff hält 300 Sekunden und hat 60 Sekunden Cooldown.",
+    "description_eng": "Instantly sharpens your instincts, increasing Ambush by 2 and Attack Speed by 3 percent at skill level 1. Each additional level adds 1 Ambush and 2 percentage points of Attack Speed, reaching 11 Ambush and 21 percent Attack Speed at level 10. Mana cost increases from 110 by 23 per additional level to 317. No cast time; a brief animation provisionally lasts 0.2 to 0.3 seconds. The buff lasts 300 seconds with a 60 second cooldown.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 148,
+    "skillName_de": "Scharfer Instinkte",
+    "skillpoints": 1,
+    "animationDurationRangeSeconds": {
+      "min": 0.2,
+      "max": 0.3
+    },
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "mana": 110,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 110,
+          "perLevel": 23
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "amb": "flat",
+      "atkSpeed": "fraction"
+    },
+    "statScaling": {
+      "amb": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      },
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.03,
+        "perLevel": 0.02
+      }
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bf5",
+    "skillName_eng": "Rogue's Cunning",
+    "__v": 0,
+    "amb": 3,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht für 300 Sekunden dein Glück und Ambush. Auf Stufe 1 erhältst du 1 Glück und 3 Ambush. Jede weitere Stufe gewährt zusätzlich 0,5 Glück und 1 Ambush, bis zu 5,5 Glück und 12 Ambush auf Stufe 10. Die Mana-Kosten beginnen bei 44 und steigen um 17 je weiterer Stufe auf 197. Castzeit 0,4 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Increases your Luck and Ambush for 300 seconds. Level 1 grants 1 Luck and 3 Ambush. Each additional level adds 0.5 Luck and 1 Ambush, reaching 5.5 Luck and 12 Ambush at level 10. Mana cost starts at 44 and increases by 17 per additional level to 197. Cast time is 0.4 seconds and cooldown is 60 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "luck": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 146,
+    "skillName_de": "List des Schurken",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 44,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 44,
+          "perLevel": 17
+        }
+      }
+    ],
+    "statScaling": {
+      "luck": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 0.5
+      },
+      "amb": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 1
+      }
+    }
+  }
+]

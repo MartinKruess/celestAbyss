@@ -1,0 +1,27 @@
+{
+  "regeneration": {
+    "baseManaPerTick": 25,
+    "baseHealthPerTick": 12,
+    "tickIntervalSeconds": null,
+    "status": "intervalPending"
+  },
+  "wisdomManaPerTick": {
+    "factor": 3,
+    "status": "confirmedFactor"
+  },
+  "percentageBonuses": {
+    "status": "skillDependentNotAutomaticallyGranted"
+  },
+  "combatRules": "pending",
+  "healerWisdomMagicalAttack": {
+    "enabled": true,
+    "factor": null,
+    "status": "factorPending",
+    "scope": "Healer / Priest / Erzbischof only"
+  },
+  "note": "Definitions only, no runtime ticker implemented; 12 HP and 25 Mana are per tick, not per second.",
+  "vitalityHealthPerTick": {
+    "factor": 4,
+    "status": "confirmedFactor"
+  }
+}

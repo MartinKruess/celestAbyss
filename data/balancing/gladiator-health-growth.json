@@ -1,0 +1,74 @@
+{
+  "classKey": "gladiator",
+  "stat": "maxHealth",
+  "status": "supersededByAttributeGrowth",
+  "baseLevel": 1,
+  "baseValue": 212,
+  "targetLevel": 60,
+  "targetValueApprox": 5500,
+  "equipmentIncluded": false,
+  "skillsIncluded": false,
+  "candidates": [
+    {
+      "name": "Gleichmäßiger Zuwachs",
+      "type": "linear",
+      "base": 212,
+      "perLevel": 90,
+      "formula": "212 + (level - 1) * 90",
+      "levels": [
+        {
+          "level": 1,
+          "value": 212
+        },
+        {
+          "level": 10,
+          "value": 1022
+        },
+        {
+          "level": 20,
+          "value": 1922
+        },
+        {
+          "level": 40,
+          "value": 3722
+        },
+        {
+          "level": 60,
+          "value": 5522
+        }
+      ]
+    },
+    {
+      "name": "Fester Multiplikator",
+      "type": "exponential",
+      "base": 212,
+      "factor": 1.0567361303211986,
+      "formula": "212 * factor ** (level - 1)",
+      "levels": [
+        {
+          "level": 1,
+          "value": 212
+        },
+        {
+          "level": 10,
+          "value": 348
+        },
+        {
+          "level": 20,
+          "value": 605
+        },
+        {
+          "level": 40,
+          "value": 1824
+        },
+        {
+          "level": 60,
+          "value": 5500
+        }
+      ]
+    }
+  ],
+  "recommendation": "Linear +90 per level as first comparison; geometric growth shifts most increases to late levels",
+  "attributeIntegration": "If implemented through +3 Vitality per level, Physical Defense also increases by +6; integration pending, do not double-count",
+  "supersededBy": "data/balancing/class-base-growth.json"
+}

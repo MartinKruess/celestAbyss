@@ -1,3 +1,4 @@
+import {skillClassification} from '../services/skillClassification.js';
 import { skills } from "../scripts/skilldata.js";
 import { SkillDataModel } from "../models/skillSchema.js";
 
@@ -33,7 +34,9 @@ export const skillController = async (req, res) => {
                 }
 
                 const newSkill = {
-                    nr: i + 1,
+                    nr: skills[i].nr ?? i + 1,
+                    ...skillClassification(skills[i].catalogRecord ?? skills[i]),
+                    classificationVersion: 1,
                     skillName_eng: skills[i].S_Name_eng,
                     skillName_de: skills[i].S_Name_de,
                     charClass: arr,

@@ -1,0 +1,584 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bf7",
+    "skillName_eng": "Sharp Instincts",
+    "__v": 0,
+    "amb": 2,
+    "atkSpeed": 0.01,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Summoner",
+      "Soulseeker",
+      "Abenteuer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 300 Sekunden. Gewährt auf Stufe 1 2 Ambush und 1 Prozent Angriffsgeschwindigkeit. Ambush steigt um 1 je weiterer Stufe auf 11. Der Angriffsgeschwindigkeitsbonus steigt gleichmäßig auf 11 Prozent auf Stufe 10. Mana-Kosten steigen gleichmäßig von 110 auf 256. Sofortige Aktivierung mit kurzer vorläufiger Animation, Cooldown 60 Sekunden.",
+    "description_eng": "Self buff lasting 300 seconds. Grants 2 Ambush and 1 percent attack speed at level 1. Ambush increases by 1 per additional level to 11. Attack speed bonus increases evenly to 11 percent at level 10. Mana cost increases evenly from 110 to 256. Immediate activation with a short provisional animation; cooldown is 60 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 148,
+    "skillName_de": "Scharfer Instinkte",
+    "skillpoints": 1,
+    "animationDurationRangeSeconds": {
+      "min": 0.2,
+      "max": 0.3
+    },
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "mana": 110,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 110,
+          "perLevel": 16.22222222222222
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "amb": "flat",
+      "atkSpeed": "fraction"
+    },
+    "statScaling": {
+      "amb": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 1
+      },
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.01,
+        "perLevel": 0.011111111111111112
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 110,
+              "perLevel": 16.22222222222222
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "amb"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.01,
+            "perLevel": 0.011111111111111112
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c11",
+    "skillName_eng": "Bloodlust",
+    "__v": 0,
+    "atkSpeed": 0.05,
+    "category": "active",
+    "cd": 300,
+    "charClass": [
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff: Auf Stufe 1 +3 Stärke und +5 Prozent Angriffstempo. Je weiterer Stufe +0,5 Stärke und +1 Prozentpunkt Angriffstempo; auf Stufe 10 +7,5 Stärke und +14 Prozent Angriffstempo. Mana 73, je weiterer Stufe +41 bis 442. Castzeit 0,3 Sekunden, Dauer 60 Sekunden, Cooldown 300 Sekunden.",
+    "description_eng": "Self buff: Level 1 grants 3 Strength and 5 percent attack speed. Each additional level adds 0.5 Strength and 1 percentage point attack speed; level 10 grants 7.5 Strength and 14 percent attack speed. Mana 73 plus 41 per additional level to 442. Cast time 0.3 seconds, duration 60 seconds, cooldown 300 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 60,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 174,
+    "skillName_de": "Blutrausch",
+    "skillpoints": 1,
+    "str": 3,
+    "castTimeSeconds": 0.3,
+    "mana": 73,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 73,
+          "perLevel": 41
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction"
+    },
+    "statScaling": {
+      "str": {
+        "type": "linear",
+        "base": 3,
+        "perLevel": 0.5
+      },
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.05,
+        "perLevel": 0.01
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 73,
+              "perLevel": 41
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": 0.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.05,
+            "perLevel": 0.01
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c42",
+    "skillName_eng": "Speed of the Dox",
+    "__v": 0,
+    "atkSpeed": 0.15,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Gruppenbuff, der Attack Speed auf Stufe 1 um 15 Prozent und Movement Speed um 10 Prozent erhöht. Je weiterer Stufe kommen jeweils 2,5 Prozentpunkte hinzu, bis zu 20 Prozent Attack Speed und 15 Prozent Movement Speed auf Stufe 3. Mana-Kosten steigen von 63 um 23 je weiterer Stufe auf 109. Castzeit 0,4 Sekunden, Dauer 1800 Sekunden, Cooldown 60 Sekunden.",
+    "description_eng": "Group buff granting 15 percent attack speed and 10 percent movement speed at level 1. Each additional level adds 2.5 percentage points to both, reaching 20 percent attack speed and 15 percent movement speed at level 3. Mana cost increases from 63 by 23 per additional level to 109. Cast time is 0.4 seconds, duration is 1800 seconds, cooldown is 60 seconds.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.1,
+    "nr": 223,
+    "skillName_de": "Geschwindigkeit der Dox",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 63,
+          "perLevel": 23
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.15,
+        "perLevel": 0.025
+      },
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.1,
+        "perLevel": 0.025
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 63,
+              "perLevel": 23
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.15,
+            "perLevel": 0.025
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "movementSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.1,
+            "perLevel": 0.025
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c20",
+    "skillName_eng": "Heart of the Traitor",
+    "__v": 0,
+    "atkSpeed": 0.07,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erhöht als Eigenbuff für 600 Sekunden deine Angriffsgeschwindigkeit und Bewegungsgeschwindigkeit. Auf Stufe 1 erhältst du 7 Prozent Angriffsgeschwindigkeit und 2 Prozent Bewegungsgeschwindigkeit. Jede weitere Stufe erhöht beide Boni um 0,75 Prozentpunkte, bis zu 10 Prozent Angriffsgeschwindigkeit und 5 Prozent Bewegungsgeschwindigkeit auf Stufe 5. Cooldown 60 Sekunden. Zusatzeffekt auf Stufe 5: Solange dieser Buff und Attentäter gleichzeitig aktiv sind, stellt jeder eigene Auto-Attack 12 Mana wieder her. Begleiterangriffe zählen nicht. Mana-Kosten 43 auf Stufe 1, plus 16 je weiterer Stufe, bis zu 107 auf Stufe 5. Castzeit 0,3 Sekunden.",
+    "description_eng": "A self buff that increases attack speed and movement speed for 600 seconds. Level 1 grants 7 percent attack speed and 2 percent movement speed. Each additional level adds 0.75 percentage points to both bonuses, reaching 10 percent attack speed and 5 percent movement speed at level 5. Cooldown is 60 seconds. Additional level 5 effect: while this buff and Assassin are both active, each own basic attack restores 12 Mana. Companion attacks do not count. Mana cost starts at 43 and increases by 16 per additional level to 107 at level 5. Cast time is 0.3 seconds.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "movementSpeed": 0.02,
+    "nr": 189,
+    "skillName_de": "Herz des Verräters",
+    "skillpoints": 1,
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "movementSpeed": "fraction"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.07,
+        "perLevel": 0.0075
+      },
+      "movementSpeed": {
+        "type": "linear",
+        "base": 0.02,
+        "perLevel": 0.0075
+      }
+    },
+    "effects": [
+      {
+        "key": "traitor-assassin-mana",
+        "type": "resourceGain",
+        "target": "self",
+        "resource": "mana",
+        "value": 12,
+        "unit": "flat",
+        "durationSeconds": 600,
+        "minimumSkillLevel": 5,
+        "requiredActiveSkillNumbers": [
+          189,
+          238
+        ],
+        "gainTrigger": "ownBasicAttack",
+        "oncePerAttackAction": true,
+        "excludeCompanionAttacks": true
+      }
+    ],
+    "mana": 43,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 43,
+          "perLevel": 16
+        }
+      }
+    ],
+    "castTimeSeconds": 0.3,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.07,
+            "perLevel": 0.0075
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "movementSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.02,
+            "perLevel": 0.0075
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 43,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6ad0b3779cdbe618f141e06c",
+    "activationRequirements": {
+      "targetHealthBelowFractionScaling": {
+        "values": []
+      }
+    },
+    "attackExecution": {
+      "hitCountScaling": {
+        "values": []
+      },
+      "damageMultiplierScaling": {
+        "values": []
+      },
+      "armorIgnoreFractionByLevel": []
+    },
+    "movement": {
+      "distanceScaling": {
+        "values": []
+      }
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 11,
+      "perLevel": 1
+    },
+    "cooldownScaling": {
+      "values": []
+    },
+    "burstUsage": {
+      "usesPerBurstScaling": {
+        "values": []
+      },
+      "afterBurstCooldownScaling": {
+        "values": []
+      },
+      "belowTargetHealthFractionByLevel": [],
+      "usesBelowThresholdByLevel": []
+    },
+    "triggerCondition": {
+      "chancePerCheck": null,
+      "healthThresholds": []
+    },
+    "allowedRaces": [],
+    "isClassCore": false,
+    "nr": 238,
+    "skillName_eng": "Assassin",
+    "skillName_de": "Attentäter",
+    "charClass": [
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "maxSkillLv": 10,
+    "currentUpgradeLv": 0,
+    "maxUpgradeLv": 10,
+    "category": "active",
+    "description_eng": "Self buff improving basic attacks. Level 1 grants 3 percent additional attack speed and 1 Ambush for 11 seconds. Each additional level adds 1 second, 3 percentage points of attack speed and 1 Ambush. Level 10 grants 30 percent attack speed and 10 Ambush for 20 seconds.  Cooldown is 120 seconds and cast time is 0.1 seconds. Does not add or double basic attack hits. While level 5 Heart of the Traitor is also active, each own basic attack restores 12 Mana. Mana cost increases evenly from 67 at level 1 to 211 at level 10.",
+    "description_de": "Eigenbuff für effektivere Auto-Attacks. Gewährt auf Stufe 1 für 11 Sekunden 3 Prozent zusätzliche Angriffsgeschwindigkeit und 1 Ambush. Je weiterer Stufe steigen die Dauer um 1 Sekunde, die Angriffsgeschwindigkeit um 3 Prozentpunkte und Ambush um 1. Auf Stufe 10 sind es 20 Sekunden, 30 Prozent Angriffsgeschwindigkeit und 10 Ambush.  Cooldown 120 Sekunden, Castzeit 0,1 Sekunden. Keine zusätzlichen oder doppelten Auto-Attack-Treffer. Bei gleichzeitig aktivem Herz des Verräters auf Stufe 5 stellt jeder eigene Auto-Attack 12 Mana wieder her. Mana-Kosten steigen gleichmäßig von 67 auf Stufe 1 auf 211 auf Stufe 10.",
+    "dmgType": "selfbuff",
+    "skillpoints": 1,
+    "cd": 120,
+    "dur": 11,
+    "amb": 1,
+    "atkSpeed": 0.03,
+    "castTimeSeconds": 0.1,
+    "mana": 67,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 67,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "atkSpeed": "fraction",
+      "amb": "flat"
+    },
+    "statScaling": {
+      "atkSpeed": {
+        "type": "linear",
+        "base": 0.03,
+        "perLevel": 0.03
+      },
+      "amb": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 11,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 67,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "atkSpeed"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.03,
+            "perLevel": 0.03
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "amb"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

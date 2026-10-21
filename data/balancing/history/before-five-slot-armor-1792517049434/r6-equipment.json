@@ -1,0 +1,505 @@
+{
+  "source": "data/source/Questsystem.ods",
+  "sourceSha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+  "rank": 6,
+  "scope": "Base rank values only; no upgrades, mastery, jewelry, stones, passives or active buffs. Armor totals use aggregate columns, not distribution columns.",
+  "armor": [
+    {
+      "name": "Butcher",
+      "rank": 6,
+      "row": 8,
+      "raw": {
+        "health": 300,
+        "mana": 150,
+        "physicalDefense": 483,
+        "magicalDefense": 312,
+        "vitality": 60,
+        "wisdom": 25
+      },
+      "converted": {
+        "health": 2100,
+        "mana": 900,
+        "physicalDefense": 603,
+        "magicalDefense": 362
+      }
+    },
+    {
+      "name": "Gladiator",
+      "rank": 6,
+      "row": 16,
+      "raw": {
+        "health": 350,
+        "mana": 150,
+        "physicalDefense": 554,
+        "magicalDefense": 349,
+        "vitality": 80,
+        "wisdom": 30
+      },
+      "converted": {
+        "health": 2750,
+        "mana": 1050,
+        "physicalDefense": 714,
+        "magicalDefense": 409
+      }
+    },
+    {
+      "name": "Tank",
+      "rank": 6,
+      "row": 24,
+      "raw": {
+        "health": 400,
+        "mana": 150,
+        "physicalDefense": 693,
+        "magicalDefense": 451,
+        "vitality": 100,
+        "wisdom": 40
+      },
+      "converted": {
+        "health": 3400,
+        "mana": 1350,
+        "physicalDefense": 893,
+        "magicalDefense": 531
+      }
+    },
+    {
+      "name": "Villain",
+      "rank": 6,
+      "row": 32,
+      "raw": {
+        "health": 250,
+        "mana": 150,
+        "physicalDefense": 421,
+        "magicalDefense": 312,
+        "vitality": 50,
+        "wisdom": 30
+      },
+      "converted": {
+        "health": 1750,
+        "mana": 1050,
+        "physicalDefense": 521,
+        "magicalDefense": 372
+      }
+    },
+    {
+      "name": "Bloodmage",
+      "rank": 6,
+      "row": 40,
+      "raw": {
+        "health": 350,
+        "mana": 200,
+        "physicalDefense": 368,
+        "magicalDefense": 483,
+        "vitality": 50,
+        "wisdom": 50
+      },
+      "converted": {
+        "health": 1850,
+        "mana": 1700,
+        "physicalDefense": 468,
+        "magicalDefense": 583
+      }
+    },
+    {
+      "name": "Healer",
+      "rank": 6,
+      "row": 48,
+      "raw": {
+        "health": 175,
+        "mana": 250,
+        "physicalDefense": 282,
+        "magicalDefense": 693,
+        "vitality": 40,
+        "wisdom": 60
+      },
+      "converted": {
+        "health": 1375,
+        "mana": 2050,
+        "physicalDefense": 362,
+        "magicalDefense": 813
+      }
+    },
+    {
+      "name": "Lightmage",
+      "rank": 6,
+      "row": 56,
+      "raw": {
+        "health": 250,
+        "mana": 150,
+        "physicalDefense": 336,
+        "magicalDefense": 554,
+        "vitality": 45,
+        "wisdom": 50
+      },
+      "converted": {
+        "health": 1600,
+        "mana": 1650,
+        "physicalDefense": 426,
+        "magicalDefense": 654
+      }
+    },
+    {
+      "name": "Kräuterkundler",
+      "rank": 6,
+      "row": 64,
+      "raw": {
+        "health": 300,
+        "mana": 200,
+        "physicalDefense": 418,
+        "magicalDefense": 330,
+        "vitality": 50,
+        "wisdom": 60
+      },
+      "converted": {
+        "health": 1800,
+        "mana": 2000,
+        "physicalDefense": 518,
+        "magicalDefense": 450
+      }
+    },
+    {
+      "name": "Archer",
+      "rank": 6,
+      "row": 76,
+      "raw": {
+        "health": 200,
+        "mana": 150,
+        "physicalDefense": 398,
+        "magicalDefense": 330,
+        "vitality": 45,
+        "wisdom": 45
+      },
+      "converted": {
+        "health": 1550,
+        "mana": 1500,
+        "physicalDefense": 488,
+        "magicalDefense": 420
+      }
+    },
+    {
+      "name": "Shamane",
+      "rank": 6,
+      "row": 84,
+      "raw": {
+        "health": 275,
+        "mana": 150,
+        "physicalDefense": 432,
+        "magicalDefense": 386,
+        "vitality": 60,
+        "wisdom": 60
+      },
+      "converted": {
+        "health": 2075,
+        "mana": 1950,
+        "physicalDefense": 552,
+        "magicalDefense": 506
+      }
+    },
+    {
+      "name": "Druid",
+      "rank": 6,
+      "row": 92,
+      "raw": {
+        "health": 225,
+        "mana": 150,
+        "physicalDefense": 456,
+        "magicalDefense": 368,
+        "vitality": 50,
+        "wisdom": 60
+      },
+      "converted": {
+        "health": 1725,
+        "mana": 1950,
+        "physicalDefense": 556,
+        "magicalDefense": 488
+      }
+    },
+    {
+      "name": "Seelenjäger",
+      "rank": 6,
+      "row": 100,
+      "raw": {
+        "health": 200,
+        "mana": 150,
+        "physicalDefense": 312,
+        "magicalDefense": 298,
+        "vitality": 30,
+        "wisdom": 25
+      },
+      "converted": {
+        "health": 1100,
+        "mana": 900,
+        "physicalDefense": 372,
+        "magicalDefense": 348
+      }
+    },
+    {
+      "name": "Adventure",
+      "rank": 6,
+      "row": 108,
+      "raw": {
+        "health": 250,
+        "mana": 150,
+        "physicalDefense": 512,
+        "magicalDefense": 330,
+        "vitality": 70,
+        "wisdom": 60
+      },
+      "converted": {
+        "health": 2350,
+        "mana": 1950,
+        "physicalDefense": 652,
+        "magicalDefense": 450
+      }
+    }
+  ],
+  "weapons": [
+    {
+      "name": "1H Axt",
+      "rank": 6,
+      "row": 8,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 25
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 267
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "2H Axt",
+      "rank": 6,
+      "row": 16,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 40
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 515
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.15
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -30
+        }
+      ]
+    },
+    {
+      "name": "Bow",
+      "rank": 6,
+      "row": 24,
+      "raw": [
+        {
+          "label": "Dexterity",
+          "column": 3,
+          "value": 30
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 531
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -30
+        }
+      ]
+    },
+    {
+      "name": "Crossbow",
+      "rank": 6,
+      "row": 32,
+      "raw": [
+        {
+          "label": "Agility",
+          "column": 3,
+          "value": 20
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 462
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -20
+        }
+      ]
+    },
+    {
+      "name": "Dagger",
+      "rank": 6,
+      "row": 40,
+      "raw": [
+        {
+          "label": "Ambush",
+          "column": 3,
+          "value": 25
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 211
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -10
+        }
+      ]
+    },
+    {
+      "name": "Mace",
+      "rank": 6,
+      "row": 48,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 15
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 256
+        },
+        {
+          "label": "Intelligence",
+          "column": 5,
+          "value": 15
+        },
+        {
+          "label": "M.Ang",
+          "column": 6,
+          "value": 128
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "Shield",
+      "rank": 6,
+      "row": 56,
+      "raw": [
+        {
+          "label": "Vita",
+          "column": 3,
+          "value": 35
+        },
+        {
+          "label": "P.Deff",
+          "column": 4,
+          "value": 212
+        },
+        {
+          "label": "Block",
+          "column": 6,
+          "value": 0.15
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "Sword",
+      "rank": 6,
+      "row": 64,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 25
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 232
+        },
+        {
+          "label": "Agylity",
+          "column": 5,
+          "value": 25
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "Wand",
+      "rank": 6,
+      "row": 72,
+      "raw": [
+        {
+          "label": "Int/Faith/Vic",
+          "column": 3,
+          "value": 40
+        },
+        {
+          "label": "M.Ang",
+          "column": 4,
+          "value": 498
+        },
+        {
+          "label": "Wisdom",
+          "column": 5,
+          "value": 8
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -30
+        }
+      ]
+    }
+  ]
+}

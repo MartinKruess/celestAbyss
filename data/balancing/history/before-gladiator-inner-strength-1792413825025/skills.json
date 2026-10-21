@@ -1,0 +1,318 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04c03",
+    "skillName_eng": "Energy of Courage",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 600 Sekunden. Gewährt 7 P-Angriff je Skillstufe bis 70 auf Stufe 10. Ab Stufe 5 +10 Penetration, auf Stufe 10 insgesamt +20 feste Penetrationspunkte. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 600 seconds. Grants 7 physical attack per skill level to 70 at level 10. Grants 10 flat penetration rating from level 5 and 20 total at level 10. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 160,
+    "patk": 7,
+    "skillName_de": "Energie des Mutes",
+    "skillpoints": 1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statBonusUnits": {
+      "penetration": "flat"
+    },
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 7,
+        "perLevel": 7
+      },
+      "penetration": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          10,
+          10,
+          10,
+          10,
+          10,
+          20
+        ]
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 7,
+            "perLevel": 7
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "penetration"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 0,
+            "changes": [
+              {
+                "level": 5,
+                "value": 10
+              },
+              {
+                "level": 10,
+                "value": 20
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c05",
+    "skillName_eng": "Inner Strength",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Gladiator",
+      "Berserker"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff mit 15 Skillstufen für 600 Sekunden. Stärke je Stufe: 2/3/5/6/7/8/10/11/12/14/15/16/17/19/20. Vitalität beginnt bei 3 und steigt auf jeder geraden Stufe um 1 bis 10. Auf ungeraden Stufen ab Stufe 3 kommen jeweils 5 feste Penetrationspunkte hinzu, maximal 35. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 232 auf Stufe 15, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff with 15 skill levels lasting 600 seconds. Strength by level: 2/3/4/5/6/7/8/9/9/10/11/12/13/14/15. Vitality starts at 3 and increases by 1 at each even level to 10. Each odd level from level 3 adds 5 flat penetration rating, reaching 35. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 232 at level 15, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 600,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 162,
+    "skillName_de": "Innere Kraft",
+    "skillpoints": 1,
+    "str": 2,
+    "vita": 3,
+    "statBonusUnits": {
+      "penetration": "flat"
+    },
+    "statScaling": {
+      "str": {
+        "type": "table",
+        "base": 2,
+        "values": [
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          10,
+          11,
+          12,
+          14,
+          15,
+          16,
+          17,
+          19,
+          20
+        ]
+      },
+      "vita": {
+        "type": "table",
+        "values": [
+          3,
+          4,
+          4,
+          5,
+          5,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          9,
+          9,
+          10,
+          10
+        ]
+      },
+      "penetration": {
+        "type": "table",
+        "values": [
+          0,
+          0,
+          5,
+          5,
+          10,
+          10,
+          15,
+          15,
+          20,
+          20,
+          25,
+          25,
+          30,
+          30,
+          35
+        ]
+      }
+    },
+    "castTimeSeconds": 0.1,
+    "mana": 50,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "str"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 2,
+            "steps": [
+              1,
+              2,
+              1,
+              1,
+              1,
+              2,
+              1
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 3,
+            "steps": [
+              1,
+              0
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "statScaling",
+            "penetration"
+          ],
+          "rule": {
+            "kind": "periodicSteps",
+            "base": 0,
+            "steps": [
+              0,
+              5
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    }
+  }
+]

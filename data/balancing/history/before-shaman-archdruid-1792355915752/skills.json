@@ -1,0 +1,807 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04ba1",
+    "skillName_eng": "Infernal Cyclone",
+    "__v": 0,
+    "category": "active",
+    "cd": 150,
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt einen Zyklon aus Höllenfeuer im betroffenen Gebiet. Der bisherige magische Grundschadenswert steigt von 368 um 142 je weiterer Stufe auf 936 auf Stufe 5. Mana-Kosten 234 auf Stufe 1, Stufenwerte 234, 325, 467, 570, 746, maximal 746 auf Stufe 5. Die Dauer steigt von 6 um 1 Sekunde je weiterer Stufe auf 10 Sekunden. Der Cooldown sinkt von 150 um 2 Sekunden je weiterer Stufe auf 142 Sekunden. Castzeit 1 Sekunde. Der genannte Grundschaden trifft einmal beim Auslösen. Danach verursacht der Zyklon alle 2 Sekunden zusätzlichen magischen Schaden: 72 auf Stufe 1, je weiterer Stufe +28,5 bis 186 auf Stufe 5, zuzüglich des aktuellen Charakter-M-Angriffs bei jedem Tick. Der erste zusätzliche Tick erfolgt nach 2 Sekunden. Bei voller Laufzeit trifft der DoT auf Stufe 1 dreimal (2/4/6 Sekunden) und auf Stufe 5 fünfmal (2/4/6/8/10 Sekunden). Trefferbereich und Verhalten bei Bewegung des Ziels bleiben offen. Aktuelle Mana-Gruppe: finisher (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates a cyclone of hellfire in the affected area. Existing magical base damage increases from 368 by 142 per additional level to 936 at level 5. Mana cost 234 at level 1, maximum 746 at level 5. Duration increases from 6 by 1 second per additional level to 10 seconds. Cooldown decreases from 150 by 2 seconds per additional level to 142 seconds. Cast time is 1 second. The stated base damage hits once on activation. Additional magical damage ticks every 2 seconds: 72 at level 1 plus 28.5 per additional level to 186 at level 5, adding current caster magical attack to each tick. First tick after 2 seconds. Full duration gives three ticks at level 1 (2/4/6 seconds) and five at level 5 (2/4/6/8/10 seconds). Hit area and behavior when the target moves remain pending.",
+    "dmgType": "spell",
+    "dur": 6,
+    "matk": 368,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 62,
+    "skillName_de": "Infernal Zyklon",
+    "skillpoints": 1,
+    "durationScaling": {
+      "type": "linear",
+      "base": 6,
+      "perLevel": 1
+    },
+    "castTimeSeconds": 1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 150,
+      "perLevel": -2
+    },
+    "mana": 234,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            234,
+            325,
+            467,
+            570,
+            746
+          ],
+          "base": 234
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 368,
+        "perLevel": 142
+      }
+    },
+    "effects": [
+      {
+        "key": "infernal-cyclone-periodic",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 72,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 72,
+          "perLevel": 28.5
+        },
+        "durationSeconds": 6,
+        "durationScaling": {
+          "type": "linear",
+          "base": 6,
+          "perLevel": 1
+        },
+        "firstTickAfterSeconds": 2,
+        "intervalSeconds": 2,
+        "addsCasterMagicalAttack": true,
+        "damageTypes": [
+          "magical"
+        ],
+        "periodicDamageKind": "areaAttack"
+      }
+    ],
+    "manaPricing": {
+      "category": "finisher",
+      "factor": 0.4,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 150,
+              "perLevel": -2
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.4,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 368,
+            "perLevel": 142
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 72,
+            "perLevel": 28.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 6,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bba",
+    "skillName_eng": "Rotating Strike",
+    "__v": 0,
+    "category": "active",
+    "cd": 37,
+    "charClass": [
+      "Shamane",
+      "High Elves",
+      "Butcher",
+      "Destroyer"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Führt einen rotierenden physischen Hieb aus. Der Grundangriffswert steigt von 36 um 62 je weiterer Stufe auf 594. Die Mana-Kosten 9 auf Stufe 1, +16 je weiterer Stufe, maximal 153 auf Stufe 10. Der Cooldown sinkt von 37 um 1 Sekunde je weiterer Stufe auf 28 Sekunden. Der Angriff beginnt ohne Cast Time; die Animation dauert vorläufig 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Performs a rotating physical strike. Base attack increases from 36 by 62 per additional level to 594. Mana cost 9 at level 1, maximum 153 at level 10. Cooldown decreases from 37 by 1 second per additional level to 28 seconds. The attack starts without cast time; provisional animation duration is 0.7 seconds.",
+    "dmgType": "physical",
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 87,
+    "patk": 36,
+    "skillName_de": "Rotier Schlag",
+    "skillpoints": 1,
+    "animationDurationSeconds": 0.7,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 37,
+      "perLevel": -1
+    },
+    "mana": 9,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 9,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "patk": {
+        "type": "linear",
+        "base": 36,
+        "perLevel": 62
+      }
+    },
+    "hasLingeringDamage": false,
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 37,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 9,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "patk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 36,
+            "perLevel": 62
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  },
+  {
+    "_id": "6ad4d38a6157f3dde2217aed",
+    "nr": 254,
+    "skillName_de": "Weisheit des Salamanders",
+    "skillName_eng": "Wisdom of the Salamander",
+    "category": "passive",
+    "dmgType": "passive",
+    "charClass": [
+      "Shamane",
+      "High Elves"
+    ],
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "skillpoints": 1,
+    "resourceCosts": [],
+    "effectsVersion": 1,
+    "effects": [
+      {
+        "key": "salamander-damageBonus-15-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 15,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-38-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 38,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-76-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 76,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-87-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 87,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-106-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 106,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "physical"
+        ]
+      },
+      {
+        "key": "salamander-damageBonus-50-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 50,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-resourceCostReduction-50-mana",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 50,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        },
+        "resource": "mana"
+      },
+      {
+        "key": "salamander-damageBonus-62-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 62,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-resourceCostReduction-62-mana",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 62,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        },
+        "resource": "mana"
+      },
+      {
+        "key": "salamander-damageBonus-76-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 76,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-resourceCostReduction-76-mana",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 76,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        },
+        "resource": "mana"
+      },
+      {
+        "key": "salamander-damageBonus-202-magical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 202,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        },
+        "damageTypes": [
+          "magical"
+        ]
+      },
+      {
+        "key": "salamander-resourceCostReduction-202-mana",
+        "type": "resourceCostReduction",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 202,
+        "value": 0.005,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.005,
+          "perLevel": 0.005
+        },
+        "resource": "mana"
+      },
+      {
+        "key": "salamander-damageBonus-255-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 255,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "damageTypes": [
+          "physical"
+        ],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        }
+      },
+      {
+        "key": "salamander-damageBonus-256-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 256,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "damageTypes": [
+          "physical"
+        ],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        }
+      },
+      {
+        "key": "salamander-damageBonus-258-physical",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "specificSkill",
+        "targetSkillNumber": 258,
+        "value": 0.003,
+        "unit": "fraction",
+        "durationSeconds": 0,
+        "damageTypes": [
+          "physical"
+        ],
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.003,
+          "perLevel": 0.003
+        }
+      }
+    ],
+    "description_de": "Verbessert deinen Umgang mit körperlichen Angriffen und Feuer. Je Skillstufe steigt der physische Schaden von Beben, Erdbeben, Infernalem Kreuzschlag, Rotierschlag, Sprungschlag Felszähne und Felsensalve um 0,3 Prozent. Der magische Feuerschaden von Feuerlanze, Infernal Zyklon, Infernalem Kreuzschlag und Verbrennen steigt ebenfalls um 0,3 Prozent je Stufe; deren Mana-Kosten sinken um 0,5 Prozent je Stufe. Auf Stufe 5: +1,5 Prozent auf die jeweilige Schadenskomponente und −2,5 Prozent Mana-Kosten der vier Feuerangriffe. Schadensboni umfassen den passenden Charakterangriff. Beim Kreuzschlag werden die beiden Schadenskomponenten jeweils um 1,5 Prozent erhöht, nicht der Gesamtschaden zweimal. Vorhandene Feuer-DoTs profitieren ebenfalls; keine zusätzliche Brandchance oder neuen DoTs. Keine Wirkung auf Auto-Attacks, Cooldowns, Castzeiten oder den magischen Erdschaden von Erdbeben. Permanenter passiver Skill ohne Aktivierungskosten. Der physische Schadensbonus gilt auch für beide Schadensphasen der Erdsäule.",
+    "description_eng": "Improves physical attacks and fire magic. Each level adds 0.3 percent physical damage to Tremor, Earthquake, Infernal Cross Strike, Rotating Strike, Jump Strike Rock Fangs and Rock Volley. Each level adds 0.3 percent magical fire damage and reduces Mana costs by 0.5 percent for Fire Lance, Infernal Cyclone, Infernal Cross Strike and Burn. At level 5: +1.5 percent to each eligible damage component and -2.5 percent Mana cost for the four fire attacks. Includes the matching character attack. Cross Strike components are each increased once, without applying the bonus twice to the combined total. Existing fire damage over time benefits; no new burning proc or DoT. No effect on basic attacks, cooldowns, cast times or Earthquake magical earth damage. Permanent passive without activation costs. The physical damage bonus also applies to both damage phases of Earth Pillar.",
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "2",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "3",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "4",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "5",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "6",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "7",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "8",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "9",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "10",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "11",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "12",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.005,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "13",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "14",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "15",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.003,
+            "perLevel": 0.003
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    }
+  }
+]

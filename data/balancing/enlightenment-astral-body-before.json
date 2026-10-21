@@ -1,0 +1,59 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b64",
+    "skillName_eng": "Enlightenment",
+    "__v": 0,
+    "category": "Aurora",
+    "charClass": [
+      "Healer",
+      "Priest",
+      "Luminet",
+      "Lightmage",
+      "Shamane",
+      "High Elves",
+      "Druide",
+      "Alchemist",
+      "Ritter",
+      "Tempelritter"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erleuchtung erhöht deine Intelligenz und Weisheit. +1 Intelligenz +1 Weisheit pro Level",
+    "description_eng": "Enlightenment increases your Intelligence and Wisdom by 1 each per skill level.",
+    "dmgType": "passive",
+    "int": 1,
+    "maxSkillLv": 20,
+    "maxUpgradeLv": 10,
+    "nr": 1,
+    "skillName_de": "Erleuchtung",
+    "skillpoints": 1,
+    "wis": 1,
+    "allowedRaces": [
+      "Aurora"
+    ],
+    "unlockPhase": "race",
+    "isClassCore": true
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b6b",
+    "skillName_eng": "Astral Body",
+    "__v": 0,
+    "category": "active",
+    "cd": 120,
+    "charClass": [
+      "Luminet",
+      "Lightmage"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erschafft einen Astralkörper, der auf deine Gegner zufliegt und bis zu sieben Feinde trifft.",
+    "description_eng": "Creates an astral body that flies toward your opponents and hits up to seven enemies.",
+    "dmgType": "spell",
+    "matk": 506,
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 8,
+    "skillName_de": "Astalkörper",
+    "skillpoints": 1
+  }
+]

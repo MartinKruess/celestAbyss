@@ -1,0 +1,300 @@
+{
+  "model": {
+    "status": "provisionalEquipmentIncomplete",
+    "formula": "r = clamp(rating, 0, capRating); maximum * (r / (scale + r)) / (capRating / (scale + capRating))",
+    "scaleMeaning": "Curvature parameter; curve is normalized to reach maximum at capRating",
+    "capMeaning": "350 rating reaches the configured maximum; additional rating gives no further chance",
+    "ratings": {
+      "critChanceRating": {
+        "scale": 350,
+        "capRating": 350,
+        "maximum": 0.8
+      },
+      "dodge": {
+        "scale": 350,
+        "capRating": 350,
+        "maximum": 0.6
+      },
+      "block": {
+        "scale": 350,
+        "capRating": 350,
+        "maximum": 0.6
+      },
+      "accuracy": {
+        "scale": 350,
+        "capRating": 350,
+        "maximum": 0.8
+      },
+      "penetration": {
+        "scale": 350,
+        "capRating": 350,
+        "maximum": 0.6
+      }
+    },
+    "accuracyMeaning": "Bonus in probability points, not final hit chance",
+    "penetrationMeaning": "Provisional counter-strength only; block interaction not yet defined",
+    "baseHitChance": 0.8333333333333334,
+    "combatRollsEnabled": false,
+    "notes": [
+      "Primary attribute conversion factors remain unchanged.",
+      "Critical damage bonus is not diminished by this model.",
+      "No random critical, block, dodge or hit rolls are added to damage simulations.",
+      "Weapon critical and shield block units remain unresolved and are not silently combined with ratings."
+    ]
+  },
+  "scenario": "Current equipment and permanent passives; no active buffs",
+  "scenarios": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 18,
+        "block": 0,
+        "accuracy": 20.8,
+        "penetration": 163.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0.058695652173913045,
+        "block": 0,
+        "accuracy": 0.08975188781014025,
+        "penetration": 0.38208373904576437
+      }
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 7.5,
+        "block": 0,
+        "accuracy": 8,
+        "penetration": 181.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0.025174825174825177,
+        "block": 0,
+        "accuracy": 0.03575418994413408,
+        "penetration": 0.4097836312323612
+      }
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 16,
+        "penetration": 126
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 0.06994535519125683,
+        "penetration": 0.3176470588235294
+      }
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "ratings": {
+        "critChanceRating": 41,
+        "dodge": 7.5,
+        "block": 0,
+        "accuracy": 0,
+        "penetration": 171
+      },
+      "converted": {
+        "critChanceRating": 0.16777493606138108,
+        "dodge": 0.025174825174825177,
+        "block": 0,
+        "accuracy": 0,
+        "penetration": 0.39385796545105567
+      }
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 16,
+        "penetration": 88.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 0.06994535519125683,
+        "penetration": 0.2421892816419612
+      }
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 16,
+        "penetration": 88.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 0.06994535519125683,
+        "penetration": 0.2421892816419612
+      }
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "ratings": {
+        "critChanceRating": 4.800000000000001,
+        "dodge": 31.5,
+        "block": 0,
+        "accuracy": 102.4,
+        "penetration": 118.5
+      },
+      "converted": {
+        "critChanceRating": 0.021645997745208572,
+        "dodge": 0.09908256880733946,
+        "block": 0,
+        "accuracy": 0.3621573828470381,
+        "penetration": 0.30352187833511207
+      }
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 30,
+        "accuracy": 0,
+        "penetration": 175.35000000000002
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0.09473684210526315,
+        "accuracy": 0,
+        "penetration": 0.4005329780146569
+      }
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "ratings": {
+        "critChanceRating": 4.800000000000001,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 16,
+        "penetration": 88.5
+      },
+      "converted": {
+        "critChanceRating": 0.021645997745208572,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 0.06994535519125683,
+        "penetration": 0.2421892816419612
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, leerer Seelenspeicher",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 7.5,
+        "block": 0,
+        "accuracy": 24,
+        "penetration": 103.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0.025174825174825177,
+        "block": 0,
+        "accuracy": 0.10267379679144387,
+        "penetration": 0.2738699007717751
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist / Magiewaffe, 100 Seelen",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 7.5,
+        "block": 0,
+        "accuracy": 24,
+        "penetration": 103.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0.025174825174825177,
+        "block": 0,
+        "accuracy": 0.10267379679144387,
+        "penetration": 0.2738699007717751
+      }
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 16,
+        "penetration": 138
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0,
+        "block": 0,
+        "accuracy": 0.06994535519125683,
+        "penetration": 0.3393442622950819
+      }
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 61.5,
+        "block": 0,
+        "accuracy": 86.4,
+        "penetration": 103.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0.17934386391251517,
+        "block": 0,
+        "accuracy": 0.31677360219981676,
+        "penetration": 0.2738699007717751
+      }
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "ratings": {
+        "critChanceRating": 0,
+        "dodge": 64.5,
+        "block": 0,
+        "accuracy": 40,
+        "penetration": 130.5
+      },
+      "converted": {
+        "critChanceRating": 0,
+        "dodge": 0.1867310012062726,
+        "block": 0,
+        "accuracy": 0.1641025641025641,
+        "penetration": 0.3259105098855359
+      }
+    }
+  ]
+}

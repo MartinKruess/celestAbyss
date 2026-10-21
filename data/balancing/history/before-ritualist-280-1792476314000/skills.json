@@ -1,0 +1,479 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04bc7",
+    "skillName_eng": "Weakness of the Flesh",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Opfert 50 HP auf Stufe 1 und je weiterer Stufe 5 zusätzliche HP, auf Stufe 10 95 HP. Kostet zusätzlich 47 Mana und +26 je weiterer Stufe, auf Stufe 10 281. Belegt einen Gegner für 30 Sekunden mit Schwäche: physische Verteidigung -3 Prozent je gelerntem Skilllevel, maximal -30 Prozent; magische Verteidigung -5 Prozent je gelerntem Skilllevel, maximal -50 Prozent. Dies reduziert Verteidigungswerte, nicht direkt erlittenen Schaden um denselben Prozentsatz. Bisheriger Cooldown 55 Sekunden. Castzeit 0,1 Sekunden. Verhalten bei unzureichenden HP ist noch offen.",
+    "description_eng": "Sacrifices 50 HP at level 1 plus 5 per additional level, reaching 95 at level 10. Also costs 47 Mana plus 26 per additional level, reaching 281. Debuffs one enemy for 30 seconds: physical defense -3 percent per learned level, reaching -30 percent; magical defense -5 percent per learned level, reaching -50 percent. These modify defense stats, not incoming damage by the same percentages. Existing cooldown 55 seconds. Cast time 0.1 seconds. Insufficient-health behavior remains pending.",
+    "dmgType": "spell",
+    "dur": 30,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 100,
+    "skillName_de": "Schwäche des Fleisches",
+    "skillpoints": 1,
+    "effects": [
+      {
+        "key": "flesh-weakness-physical-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "pdef",
+        "value": -0.03,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.03,
+          "perLevel": -0.03
+        },
+        "durationSeconds": 30
+      },
+      {
+        "key": "flesh-weakness-magical-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "mdef",
+        "value": -0.05,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "valueScaling": {
+          "type": "linear",
+          "base": -0.05,
+          "perLevel": -0.05
+        },
+        "durationSeconds": 30
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "health",
+        "reference": "maxHealth",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 5
+        }
+      },
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 47,
+          "perLevel": 26
+        }
+      }
+    ],
+    "castTimeSeconds": 0.1,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": -0.03,
+            "perLevel": -0.03
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": -0.05,
+            "perLevel": -0.05
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "1",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": 26
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bca",
+    "skillName_eng": "Soul Shackle",
+    "__v": 0,
+    "category": "active",
+    "cd": 104,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verbraucht 1 Seelenfragment und lässt zwei seelenhafte Hände aus dem Boden den Gegner festhalten. Kein Lebensopfer. Die Fessel betäubt das Ziel und senkt seine M-Defense währenddessen um 10 Prozent. Dauer gleichmäßig von 2 Sekunden auf Stufe 1 bis 3 Sekunden auf Stufe 15. Magischer Initial-Grundschaden 97, +10 je weiterer Stufe, auf Stufe 15 237. Mana-Kosten 39 auf Stufe 1, +4 je weiterer Stufe, maximal 95 auf Stufe 15. Cooldown 104 Sekunden, -1 je weiterer Stufe, auf Stufe 15 90 Sekunden. Castzeit vorläufig 0,1 Sekunden innerhalb des genannten Bereichs 0,1–0,2 Sekunden. Während der Fessel ist Seelenqual nutzbar. Definition, Kapazität und Wiederauffüllen des permanenten Seelenvorrats werden separat ausgearbeitet. Aktuelle Mana-Gruppe: combo (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Consumes 1 soul fragment and summons two spectral hands from the ground to hold the enemy. No health cost. Stuns the target and reduces magical defense by 10 percent for the same duration. Duration increases linearly from 2 seconds at level 1 to 3 at level 15. Initial magical base damage 97 at level 1, plus 10 per additional level to 237. Mana cost 39 at level 1, maximum 95 at level 15. Cooldown starts at 104 seconds and decreases by 1 per additional level to 90 seconds at level 15. Provisional cast time 0.1 seconds within the stated 0.1–0.2 range. Soul Torment can be used during the shackle. Permanent soul storage capacity and replenishment are defined separately.",
+    "dmgType": "spell",
+    "dur": 2,
+    "matk": 97,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 103,
+    "skillName_de": "Seelenfessel",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 104,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 0.07142857142857142
+    },
+    "effects": [
+      {
+        "key": "soul-shackle-control",
+        "type": "control",
+        "target": "enemy",
+        "controlKind": "stun",
+        "durationSeconds": 2,
+        "durationScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 0.07142857142857142
+        }
+      },
+      {
+        "key": "soul-shackle-magical-defense",
+        "type": "statModifier",
+        "target": "enemy",
+        "stat": "mdef",
+        "value": -0.1,
+        "unit": "fraction",
+        "reference": "targetStat",
+        "durationSeconds": 2,
+        "durationScaling": {
+          "type": "linear",
+          "base": 2,
+          "perLevel": 0.07142857142857142
+        },
+        "endWith": "soul-shackle-control"
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 39,
+          "perLevel": 4
+        }
+      },
+      {
+        "resource": "soulFragments",
+        "reference": "currentSoulFragments",
+        "unit": "flat",
+        "scaling": {
+          "type": "fixed",
+          "base": 1
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 97,
+        "perLevel": 10
+      }
+    },
+    "manaPricing": {
+      "category": "combo",
+      "factor": 0.4,
+      "basis": "sharedComboBudget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 104,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 0.07142857142857142
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 0.07142857142857142
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 0.07142857142857142
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 39,
+              "perLevel": 4
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "1",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "constant",
+              "value": 1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 97,
+            "perLevel": 10
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill"
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c15",
+    "skillName_eng": "Spirit of Fire",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Bloodmage",
+      "Ritualist"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eigenbuff für 300 Sekunden. Der bestehende Intelligenzbonus bleibt +2 je gelerntem Skilllevel, auf Stufe 10 +20. Zusätzlich erhalten Feuerangriffe +4 direkten Angriff je gelerntem Skilllevel, auf Stufe 10 +40. Mana 13 auf Stufe 1 und +6 je weiterer Stufe, auf Stufe 10 67. Castzeit fest 0,1 Sekunden., bestehender Cooldown 60 Sekunden. Einheitliche Element-Zuordnung und genaue Anwendung des flachen Feuerbonus bei Mehrfachtreffern und DoTs werden noch abgestimmt. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+    "description_eng": "Self buff lasting 300 seconds. Preserves the existing +2 Intelligence per learned level, reaching +20 at level 10. Additionally grants fire attacks +4 flat attack per learned level, reaching +40. Mana 13 plus 6 per additional level, reaching 67. Fixed cast time 0.1 seconds.; existing cooldown 60 seconds. Unified element tags and application of the flat fire bonus to multi-hits/DoTs remain pending. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+    "dmgType": "selfbuff",
+    "dur": 300,
+    "int": 2,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 178,
+    "skillName_de": "Geist des Feuers",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.1,
+    "effects": [
+      {
+        "key": "fire-spirit-fire-attack",
+        "type": "damageBonus",
+        "target": "self",
+        "appliesTo": "allSkills",
+        "damageSchool": "fire",
+        "value": 4,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 4
+        },
+        "durationSeconds": 300
+      }
+    ],
+    "effectsVersion": 1,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 50,
+          "perLevel": 13
+        }
+      }
+    ],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 2,
+        "perLevel": 2
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 4
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 50,
+              "perLevel": 13
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 2,
+            "perLevel": 2
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "castTimeStatus": "defined",
+    "timingModifiers": {
+      "castTimeIsFixed": true,
+      "affectedByAttackSpeed": false,
+      "affectedByCastSpeed": false
+    },
+    "mana": 50,
+    "manaPricing": {
+      "category": "selfbuff",
+      "basis": "skillLevel",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "classificationVersion": 1,
+    "target": "self",
+    "type": "selfBuff"
+  }
+]

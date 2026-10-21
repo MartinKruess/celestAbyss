@@ -1,0 +1,1730 @@
+{
+  "date": "2026-10-17",
+  "simulationStarted": false,
+  "databaseVerification": {
+    "skills": 243,
+    "classConversions": 13,
+    "readOnly": true,
+    "commands": [
+      "node scripts/checkSkillCatalogDatabase.js",
+      "node scripts/checkClassConversionDatabase.js"
+    ],
+    "result": "Both passed immediately before this local audit"
+  },
+  "classes": [
+    {
+      "key": "adventurer",
+      "prefix": "adventurer",
+      "total": 33,
+      "skillNumbers": [
+        5,
+        6,
+        14,
+        15,
+        21,
+        25,
+        41,
+        45,
+        67,
+        75,
+        76,
+        87,
+        102,
+        106,
+        114,
+        115,
+        126,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        144,
+        145,
+        147,
+        148,
+        149,
+        150,
+        151,
+        201
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1516,
+      "markdownMissing": []
+    },
+    {
+      "key": "butcher",
+      "prefix": "butcher",
+      "total": 33,
+      "skillNumbers": [
+        2,
+        3,
+        11,
+        12,
+        35,
+        38,
+        39,
+        45,
+        75,
+        77,
+        87,
+        89,
+        96,
+        98,
+        131,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        144,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        201,
+        227,
+        234
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1433,
+      "markdownMissing": []
+    },
+    {
+      "key": "druid",
+      "prefix": "druid",
+      "total": 33,
+      "skillNumbers": [
+        1,
+        6,
+        9,
+        15,
+        29,
+        36,
+        38,
+        41,
+        44,
+        79,
+        106,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        192,
+        193,
+        194,
+        200,
+        201,
+        202,
+        203,
+        204,
+        219,
+        220,
+        221,
+        222,
+        226
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1574,
+      "markdownMissing": []
+    },
+    {
+      "key": "gladiator",
+      "prefix": "gladiator",
+      "total": 35,
+      "skillNumbers": [
+        5,
+        13,
+        26,
+        34,
+        45,
+        52,
+        61,
+        73,
+        75,
+        77,
+        96,
+        106,
+        109,
+        114,
+        127,
+        128,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        144,
+        145,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        201,
+        230,
+        233
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1618,
+      "markdownMissing": []
+    },
+    {
+      "key": "healer",
+      "prefix": "healer",
+      "total": 33,
+      "skillNumbers": [
+        1,
+        29,
+        36,
+        44,
+        54,
+        58,
+        60,
+        64,
+        68,
+        74,
+        78,
+        79,
+        101,
+        108,
+        124,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        143,
+        144,
+        197,
+        201,
+        206,
+        207,
+        208,
+        217,
+        239,
+        240,
+        242
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1837,
+      "markdownMissing": []
+    },
+    {
+      "key": "herbalist",
+      "prefix": "herbalist",
+      "total": 33,
+      "skillNumbers": [
+        4,
+        5,
+        16,
+        29,
+        31,
+        32,
+        44,
+        46,
+        56,
+        57,
+        69,
+        71,
+        79,
+        81,
+        84,
+        112,
+        123,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        164,
+        165,
+        166,
+        167,
+        169,
+        201,
+        205,
+        221
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1570,
+      "markdownMissing": []
+    },
+    {
+      "key": "hunter",
+      "prefix": "hunter",
+      "total": 33,
+      "skillNumbers": [
+        5,
+        10,
+        14,
+        18,
+        25,
+        37,
+        43,
+        51,
+        53,
+        63,
+        86,
+        88,
+        97,
+        121,
+        122,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        142,
+        144,
+        150,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        201,
+        226
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1456,
+      "markdownMissing": []
+    },
+    {
+      "key": "knight",
+      "prefix": "knight",
+      "total": 33,
+      "skillNumbers": [
+        1,
+        19,
+        23,
+        28,
+        40,
+        42,
+        45,
+        55,
+        59,
+        64,
+        75,
+        77,
+        82,
+        93,
+        94,
+        95,
+        102,
+        107,
+        114,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        144,
+        158,
+        170,
+        171,
+        201
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1502,
+      "markdownMissing": []
+    },
+    {
+      "key": "luminet",
+      "prefix": "luminet",
+      "total": 32,
+      "skillNumbers": [
+        1,
+        8,
+        9,
+        29,
+        36,
+        41,
+        44,
+        60,
+        74,
+        79,
+        101,
+        116,
+        117,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        201,
+        208,
+        210,
+        211,
+        213,
+        215,
+        216,
+        217,
+        218,
+        228,
+        231
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1571,
+      "markdownMissing": []
+    },
+    {
+      "key": "ritualist",
+      "prefix": "ritualist",
+      "total": 33,
+      "skillNumbers": [
+        2,
+        44,
+        48,
+        49,
+        72,
+        79,
+        83,
+        99,
+        100,
+        103,
+        104,
+        105,
+        110,
+        120,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        178,
+        180,
+        181,
+        201,
+        209,
+        214,
+        232,
+        235,
+        236,
+        237,
+        241
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1678,
+      "markdownMissing": []
+    },
+    {
+      "key": "villian",
+      "prefix": "rogue",
+      "total": 33,
+      "skillNumbers": [
+        2,
+        17,
+        20,
+        22,
+        27,
+        43,
+        65,
+        67,
+        70,
+        80,
+        90,
+        91,
+        92,
+        111,
+        113,
+        115,
+        126,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        146,
+        148,
+        188,
+        189,
+        191,
+        201,
+        238,
+        243
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1502,
+      "markdownMissing": []
+    },
+    {
+      "key": "shaman",
+      "prefix": "shaman",
+      "total": 32,
+      "skillNumbers": [
+        1,
+        6,
+        15,
+        30,
+        33,
+        36,
+        38,
+        44,
+        50,
+        57,
+        62,
+        68,
+        76,
+        79,
+        87,
+        118,
+        125,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        144,
+        149,
+        201,
+        212,
+        223,
+        224,
+        225
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1451,
+      "markdownMissing": []
+    },
+    {
+      "key": "summoner",
+      "prefix": "summoner",
+      "total": 32,
+      "skillNumbers": [
+        2,
+        7,
+        21,
+        24,
+        43,
+        47,
+        51,
+        63,
+        66,
+        80,
+        119,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        142,
+        144,
+        147,
+        148,
+        151,
+        183,
+        184,
+        185,
+        186,
+        187,
+        190,
+        191,
+        201,
+        229
+      ],
+      "jsonMismatches": [],
+      "checkedFields": 1417,
+      "markdownMissing": []
+    }
+  ],
+  "curveErrors": [],
+  "findings": [
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 13,
+          "name": "Ausbruch der Wut"
+        }
+      ],
+      "classes": [
+        "gladiator"
+      ],
+      "detail": "Wutgewinn je Auto-Attack fehlt. Voller Startbalken allein definiert keinen wiederholten 10-Minuten-Betrieb."
+    },
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 127,
+          "name": "Wutexplosion"
+        }
+      ],
+      "classes": [
+        "gladiator"
+      ],
+      "detail": "Wutexplosion: Aktivierungskosten ausdrücklich offen; nicht als kostenlos behandeln."
+    },
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld der Schwäche"
+        }
+      ],
+      "classes": [
+        "knight"
+      ],
+      "detail": "Erlösendes Feld: Mana-Kosten und Castzeit fehlen."
+    },
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze"
+        }
+      ],
+      "classes": [
+        "knight"
+      ],
+      "detail": "Donnernde Lanze: keine feste Castzeit, Ansturm 0,1–3 s ohne Distanzformel. Für Dummytest Distanz/Aktionsdauer festlegen."
+    },
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 239,
+          "name": "Frostschauer"
+        }
+      ],
+      "classes": [
+        "healer"
+      ],
+      "detail": "Frostschauer: Cooldown fehlt, Charakter-M-Angriffsbeitrag je Tick ausdrücklich offen."
+    },
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 62,
+          "name": "Infernal Zyklon"
+        }
+      ],
+      "classes": [
+        "shaman"
+      ],
+      "detail": "Infernal Zyklon: zusätzlicher DoT-Schaden und Tickintervall fehlen. Gespeicherter Grundtreffer ersetzt diese Wirkung nicht."
+    },
+    {
+      "severity": "blocker",
+      "skills": [
+        {
+          "nr": 186,
+          "name": "Seelensammler"
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten"
+        }
+      ],
+      "classes": [
+        "summoner"
+      ],
+      "detail": "Seelensammler: Cast-/Cooldown-Überlappung offen; Spektralketten verlangt aktive Markierung, Abschluss nach maximaler Sammelphase ungeklärt. 25 Treffer plus Abschluss nicht ohne Zeitregel voraussetzen."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 104,
+          "name": "Seelenqual"
+        },
+        {
+          "nr": 105,
+          "name": "Seelenernte"
+        }
+      ],
+      "classes": [
+        "ritualist"
+      ],
+      "detail": "Seelenqual: 0 Cast und 0,19 s Cooldown erlaubt rechnerisch bis 16 Anwendungen in 3 s statt berichteter 15. Abschlussfenster/Skillpriorität müssen festgelegt werden."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 83,
+          "name": "Opfergabe"
+        },
+        {
+          "nr": 99,
+          "name": "Schrei der Unterwelt"
+        }
+      ],
+      "classes": [
+        "ritualist"
+      ],
+      "detail": "Opfergabe: tödlicher Lebenspreis/Aktivierungsreihenfolge offen. Schrei der Unterwelt: Beitrag des Charakter-M-Angriffs offen; bisherige Rotation addiert ihn als Annahme."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 48,
+          "name": "Feuer der Verdammten"
+        },
+        {
+          "nr": 209,
+          "name": "Verloren in der Dunkelheit"
+        }
+      ],
+      "classes": [
+        "ritualist"
+      ],
+      "detail": "Feuer der Verdammten: historischer Opferbonus ungeklärt. Verloren in der Dunkelheit: fehlende verbindliche Seelen-Skill-Tags und Anwendung je Mehrfachtreffer/DoT."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil"
+        }
+      ],
+      "classes": [
+        "summoner"
+      ],
+      "detail": "Hinterhältiger Pfeil: zufällige 60-%-Markierung führt zu 90-%-Schadenswiederholung. Im deterministischen Test explizit ausschließen oder eigene Variante; kein garantierter Proc. Zwischenstufenkurven offen, Maximalwerte vorhanden."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 8,
+          "name": "Astralkörper"
+        },
+        {
+          "nr": 65,
+          "name": "Klingentornado"
+        },
+        {
+          "nr": 76,
+          "name": "Mächtiger Doppelschlag"
+        },
+        {
+          "nr": 88,
+          "name": "Salve"
+        },
+        {
+          "nr": 113,
+          "name": "Tödlicher Tanz"
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge"
+        },
+        {
+          "nr": 180,
+          "name": "Seelenplage"
+        },
+        {
+          "nr": 211,
+          "name": "Aurora Wellen"
+        },
+        {
+          "nr": 227,
+          "name": "Dämonische Schockwelle"
+        },
+        {
+          "nr": 235,
+          "name": "Meteoritenschauer"
+        }
+      ],
+      "classes": [
+        "adventurer",
+        "butcher",
+        "hunter",
+        "luminet",
+        "ritualist",
+        "villian",
+        "shaman"
+      ],
+      "detail": "Ausführungs-/Trefferzeitpunkte oder Blockierung weiterer Aktionen teilweise offen. Besonders Klingentornado (Attack-Speed-Abhängigkeit), Seelenplage (4 s Animation), Astralkörper (Mehrfachtrefferfrage), Aurora-Randzonen und Meteoriten-Einschlagsverteilung beeinflussen Zeitvergleich."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 202,
+          "name": "Verbrennen"
+        }
+      ],
+      "classes": [
+        "druid"
+      ],
+      "detail": "Verbrennen: Grundwert je Tick definiert, zusätzlicher Charakter-M-Angriff nicht explizit definiert. Bisheriger Vergleich zählt nur Grundwert."
+    },
+    {
+      "severity": "excluded",
+      "skills": [
+        {
+          "nr": 135,
+          "name": "Kontrolle"
+        }
+      ],
+      "classes": [
+        "adventurer",
+        "butcher",
+        "druid",
+        "gladiator",
+        "healer",
+        "herbalist",
+        "hunter",
+        "knight",
+        "luminet",
+        "ritualist",
+        "villian",
+        "shaman",
+        "summoner"
+      ],
+      "detail": "Kontrolle: gemeinsame Definition mit Lerngrenzen vorhanden, konkrete Wirkung/Skalierung fehlt. Laut Nutzer normale Pet-Mechanik jetzt ausgenommen."
+    },
+    {
+      "severity": "excluded",
+      "skills": [
+        {
+          "nr": 206,
+          "name": "Lunare Inkanation"
+        },
+        {
+          "nr": 207,
+          "name": "Himmlische Aufopferung"
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld"
+        }
+      ],
+      "classes": [
+        "healer"
+      ],
+      "detail": "Wiederbelebung: Aktivierungs-Mana fehlt. Himmlische Aufopferung: genaue Heilumwandlung/HP-Grenze offen. Aurafeld: M-Angriffsbeitrag offen. Keine Blocker für reinen offensiven Dummytest ohne Heilaktionen."
+    },
+    {
+      "severity": "decision",
+      "skills": [
+        {
+          "nr": 169,
+          "name": "Innere Unruhe"
+        },
+        {
+          "nr": 152,
+          "name": "Giftpfeil"
+        },
+        {
+          "nr": 54,
+          "name": "Gefrierbrand"
+        },
+        {
+          "nr": 32,
+          "name": "Elementarenergie"
+        },
+        {
+          "nr": 84,
+          "name": "Lähmung"
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers"
+        },
+        {
+          "nr": 176,
+          "name": "Ewiger Sieger"
+        }
+      ],
+      "classes": [
+        "adventurer",
+        "butcher",
+        "gladiator",
+        "healer",
+        "herbalist",
+        "hunter",
+        "knight"
+      ],
+      "detail": "Zufalls-Procs/Boni separat behandeln. Nutzer schließt Zufalls-Krit aus, aber andere Zufallseffekte noch nicht pauschal entschieden; etwa Gift, Gefrierbrand, Adrenalin und Innere Unruhe können Schaden ändern."
+    },
+    {
+      "severity": "ready",
+      "skills": [
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter"
+        },
+        {
+          "nr": 237,
+          "name": "Morrak´s Meister"
+        }
+      ],
+      "classes": [
+        "druid",
+        "hunter",
+        "ritualist"
+      ],
+      "detail": "Seelenbegleiter: 30 % Dex/Vita/Wis live, Fernkampf-P-Angriff, 360 s Laufzeit/CD, 132 Mana, 0,4 s Cast. Morrak: 1/3 M-Angriff live, 300 s Laufzeit/360 s CD, nur −500 Max-HP, 0,4 s Beschwörung; separate Questaktion noch nicht angebunden. Beide Attack-Speed 1. Neue Testannahme 1,5 Angriffe/s löst Grundfrequenz, keine Reichweite/Todeslogik für unbeweglichen unsterblichen Dummy nötig."
+    }
+  ],
+  "pendingFields": [
+    {
+      "nr": 8,
+      "name": "Astralkörper",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 9,
+      "name": "Ätherregen",
+      "path": "effects[1].damageBasisStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 9,
+      "name": "Ätherregen",
+      "path": "effects[1].primaryTargetSelectionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 11,
+      "name": "Aufgeladener Schlag",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 13,
+      "name": "Ausbruch der Wut",
+      "path": "activationRequirements.generationAmountStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 17,
+      "name": "Blutklinge",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 20,
+      "name": "Brecher des Lichts",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 20,
+      "name": "Brecher des Lichts",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 20,
+      "name": "Brecher des Lichts",
+      "path": "effects[0].criticalImmunityStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 24,
+      "name": "Doppelschuss",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 25,
+      "name": "Doppelsprung",
+      "path": "movement.heightStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 31,
+      "name": "Elektrisches Feld",
+      "path": "attackArea.geometryStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 31,
+      "name": "Elektrisches Feld",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 35,
+      "name": "Energieentladung",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 35,
+      "name": "Energieentladung",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 37,
+      "name": "Entzugspfeil",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 38,
+      "name": "Erdbeben",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 46,
+      "name": "Ewiges Eis",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 46,
+      "name": "Ewiges Eis",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 46,
+      "name": "Ewiges Eis",
+      "path": "conditionalProcBonus.bonusAmountStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 46,
+      "name": "Ewiges Eis",
+      "path": "conditionalProcBonus.conditionDurationStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 47,
+      "name": "Explosionspfeil",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 47,
+      "name": "Explosionspfeil",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 48,
+      "name": "Feuer der Verdammten",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 48,
+      "name": "Feuer der Verdammten",
+      "path": "effects[0].damageBasisStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 48,
+      "name": "Feuer der Verdammten",
+      "path": "effects[1].slowLifetimeStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 49,
+      "name": "Feuerball",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 51,
+      "name": "Feuerpfeil",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 53,
+      "name": "Gebundener Schuss",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 56,
+      "name": "Geladener Nebel",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 57,
+      "name": "Gezielter Blitz",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "path": "tetherSettings.delayRelationToCastTimeStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "path": "tetherSettings.highBossArcHeightStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "path": "tetherSettings.enemyPullSelectionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "path": "tetherSettings.levelFourBehaviorStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "path": "tetherSettings.worldAnchorEligibilityStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 63,
+      "name": "Kettenschuss",
+      "path": "tetherSettings.worldAnchorRangeStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 65,
+      "name": "Klingentornado",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 65,
+      "name": "Klingentornado",
+      "path": "attackArea.geometryStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 65,
+      "name": "Klingentornado",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 65,
+      "name": "Klingentornado",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 66,
+      "name": "Kopfschuss",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 66,
+      "name": "Kopfschuss",
+      "path": "attackExecution.criticalImmunityStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 66,
+      "name": "Kopfschuss",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 68,
+      "name": "Kristallisierte Wasserspähre",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 69,
+      "name": "Kugelblitz",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "path": "burstUsage.partialBurstResetStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 70,
+      "name": "Kunai Todesstoß",
+      "path": "usageRestrictions.pvpDamageFactorStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 72,
+      "name": "Lebenssauger",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 76,
+      "name": "Mächtiger Doppelschlag",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 76,
+      "name": "Mächtiger Doppelschlag",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 78,
+      "name": "Göttliche Heilung",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 83,
+      "name": "Opfergabe",
+      "path": "attackSacrificeSettings.nonAttackSkillInteractionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 83,
+      "name": "Opfergabe",
+      "path": "attackSacrificeSettings.lethalCostPolicyStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 84,
+      "name": "Lähmung",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 86,
+      "name": "Präzisionsschuss",
+      "path": "attackExecution.criticalImmunityStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 86,
+      "name": "Präzisionsschuss",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 87,
+      "name": "Rotier Schlag",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "path": "attackExecution.projectileTargetDistributionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 88,
+      "name": "Salve",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 89,
+      "name": "Schädelspalter",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 89,
+      "name": "Schädelspalter",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 92,
+      "name": "Schattenschlag",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 94,
+      "name": "Schildstoß",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 95,
+      "name": "Schildsturm",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 97,
+      "name": "Schockschuss",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 99,
+      "name": "Schrei der Unterwelt",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 99,
+      "name": "Schrei der Unterwelt",
+      "path": "attackExecution.knockbackResistanceStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 101,
+      "name": "Schwerter des Lichtes",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 105,
+      "name": "Seelenernte",
+      "path": "soulHarvestSettings.damageAndHealingScalingByHitCountStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 106,
+      "name": "Sprungschlag",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 106,
+      "name": "Sprungschlag",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 106,
+      "name": "Sprungschlag",
+      "path": "movement.heightStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 108,
+      "name": "Strahlendes Aurafeld",
+      "path": "sustainedActionSettings.otherActionCancellationStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 108,
+      "name": "Strahlendes Aurafeld",
+      "path": "sustainedActionSettings.incomingDamageCancellationStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 109,
+      "name": "Sturm der Wut",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 109,
+      "name": "Sturm der Wut",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 109,
+      "name": "Sturm der Wut",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 111,
+      "name": "Sturmklinge",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 111,
+      "name": "Sturmklinge",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 113,
+      "name": "Tödlicher Tanz",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 113,
+      "name": "Tödlicher Tanz",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 113,
+      "name": "Tödlicher Tanz",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 115,
+      "name": "Überschallklinge",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 115,
+      "name": "Überschallklinge",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 118,
+      "name": "Vakuumimpuls",
+      "path": "effects[0].actionRestrictionsStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 126,
+      "name": "Wirbelnde Klinge",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 126,
+      "name": "Wirbelnde Klinge",
+      "path": "attackArea.geometryStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 126,
+      "name": "Wirbelnde Klinge",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 126,
+      "name": "Wirbelnde Klinge",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 127,
+      "name": "Wutexplosion",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 127,
+      "name": "Wutexplosion",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 128,
+      "name": "Wutklinge",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 130,
+      "name": "Zielschuss",
+      "path": "attackExecution.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 133,
+      "name": "Tamen",
+      "path": "taming.itemConsumptionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 133,
+      "name": "Tamen",
+      "path": "taming.creatureCounterStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 147,
+      "name": "Erweckung der Leidenschaft",
+      "path": "castTimeStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 148,
+      "name": "Scharfer Instinkte",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 149,
+      "name": "Macht der Wildnis",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 151,
+      "name": "Für die Ehre",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 169,
+      "name": "Innere Unruhe",
+      "path": "effects[0].randomDamageRange.distributionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 175,
+      "name": "Bis in den Tot",
+      "path": "attributeExchangeSettings.currentHealthAdjustmentStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 180,
+      "name": "Seelenplage",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 180,
+      "name": "Seelenplage",
+      "path": "attackArea.geometryStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 184,
+      "name": "Hinterhältiger Pfeil",
+      "path": "effects[0].progressionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 184,
+      "name": "Hinterhältiger Pfeil",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 185,
+      "name": "Seelenschuss",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 186,
+      "name": "Seelensammler",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 206,
+      "name": "Lunare Inkanation",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 207,
+      "name": "Himmlische Aufopferung",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 211,
+      "name": "Aurora Wellen",
+      "path": "waveDamageProfile.edgeWidthStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 211,
+      "name": "Aurora Wellen",
+      "path": "waveDamageProfile.hitFrequencyStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 212,
+      "name": "Himmelsbrecher",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 212,
+      "name": "Himmelsbrecher",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 213,
+      "name": "Strafendes Licht",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 215,
+      "name": "Heiliges Kreuz",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 216,
+      "name": "Heilige Vernichtung",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 217,
+      "name": "Göttliche Nova",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 217,
+      "name": "Göttliche Nova",
+      "path": "visualSphereProfile.contractionTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 218,
+      "name": "Licht kristallenes Gefängnis",
+      "path": "prisonSettings.bossInteractionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 220,
+      "name": "Bannmagie",
+      "path": "castTimeStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 226,
+      "name": "Seelenbegleiter",
+      "path": "summonedCreatureSettings.currentHealthAdjustmentStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 230,
+      "name": "Wirbelsturm",
+      "path": "attackArea.timingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 230,
+      "name": "Wirbelsturm",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 230,
+      "name": "Wirbelsturm",
+      "path": "attackExecution.hitTimingStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 231,
+      "name": "Luminus",
+      "path": "animationTimingStatus",
+      "status": "provisional"
+    },
+    {
+      "nr": 235,
+      "name": "Meteoritenschauer",
+      "path": "attackExecution.meteorDamageDistributionStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 237,
+      "name": "Morrak´s Meister",
+      "path": "summonedCreatureSettings.threatAndAggroStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 237,
+      "name": "Morrak´s Meister",
+      "path": "summonedCreatureSettings.currentHealthAdjustmentStatus",
+      "status": "pending"
+    },
+    {
+      "nr": 237,
+      "name": "Morrak´s Meister",
+      "path": "summonedCreatureSettings.rangedAttackRangeStatus",
+      "status": "pending"
+    }
+  ],
+  "globalDecisions": [
+    "100 % Angriffstempo = 1,5 gemeinsame Waffenaktionen/s; zwei Waffen sind ein gemeinsamer Angriff.",
+    "HP/MP-Regeneration alle 2 s; Mana nach jedem Tick für nächste bezahlbare Aktion nutzbar, nicht auf volles Mana warten.",
+    "Skill-Priorität, Auto-Attack während Cast/Animation, globaler Aktionsabstand, Cooldownstart und nicht blockierende Animationen zentral festlegen.",
+    "Keine Rüstung, Verfehlen oder Zufalls-Krit; garantierter Krit weiterhin ×1,8.",
+    "Eigenbuff-/Gruppenbuff-Nutzung und Zufalls-Schadensprocs vor Messung einheitlich bestimmen."
+  ],
+  "reportingRequirements": [
+    "Zeitpunkt erstmals unzureichendes Mana und Gesamtzeit ressourcenbedingt ohne Skills.",
+    "Auto-Attack-only-Phasen getrennt nach Mana, Cooldowns und Voraussetzungen ausweisen.",
+    "Kein Warten auf vollen Mana-Pool; erste bezahlbare erlaubte Aktion nutzen."
+  ]
+}

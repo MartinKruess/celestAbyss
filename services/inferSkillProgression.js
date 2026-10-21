@@ -50,6 +50,19 @@ export function buildSkillProgression(skill){
  walk(skill);
  const progression={version:1,rules,extensionNeedsDefinition};
  const candidate={...skill,levelProgression:progression};
+ // A prepaid combo charges the opener for a fixed number of collection actions.
+ // Round each original action price before multiplying, preserving the paid budget.
+ const budget=skill.prepaidComboBudget;
+ if(budget?.perApplicationManaScaling&&Number.isInteger(budget.paidApplications)&&budget.paidApplications>0){
+  const index=skill.resourceCosts?.findIndex(c=>c.resource==='mana'&&c.unit==='flat');
+  const entry=rules.find(e=>e.path.join('.')===`resourceCosts.${index}.scaling`);
+  if(entry){
+   const actionRule=inferCurveRule(budget.perApplicationManaScaling);
+   const rule={kind:'sum',terms:Array.from({length:budget.paidApplications},()=>structuredClone(actionRule))};
+   for(let level=1;level<=skill.maxSkillLv;level++)if(!close(evaluateProgression(rule,level),curveValue(skill.resourceCosts[index].scaling,level)))throw Error('Prepaid combo budget differs from stored costs');
+   entry.rule=rule;entry.source='verifiedPrepaidComboBudget';
+  }
+ }
  for(let index=0;index<(skill.resourceCosts?.length??0);index++){
   const cost=skill.resourceCosts[index],pricing=skill.manaPricing;
   if(cost.resource!=='mana'||cost.unit!=='flat'||!pricing||pricing.category==='combo'||!Number.isFinite(pricing.factor))continue;

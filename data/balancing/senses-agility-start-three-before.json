@@ -1,0 +1,59 @@
+{
+  "_id": "6acc1c7e4826525c70d04b8e",
+  "skillName_eng": "Expansion of the Senses",
+  "__v": 0,
+  "category": "passive",
+  "charClass": [
+    "Archer",
+    "Hunter",
+    "Summoner",
+    "Soulseeker",
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Permanenter passiver Bonus ohne Aktivierungskosten. Bis Skilllevel 9 steigt jeder Attributbonus je weiterer Stufe um 1. Auf Skilllevel 10 werden die Boni von Level 9 verdoppelt, ohne vorher einen weiteren normalen Zuwachs hinzuzufügen.",
+  "description_eng": "Permanent passive bonus with no activation cost. Up to skill level 9, each attribute bonus increases by 1 per additional level. At skill level 10, the level 9 bonuses are doubled without applying another normal increment first.",
+  "dex": 3,
+  "dmgType": "passive",
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 43,
+  "skillName_de": "Erweiterung der Sinne",
+  "skillpoints": 1,
+  "agi": 4,
+  "resourceCosts": [],
+  "statScaling": {
+    "dex": {
+      "type": "table",
+      "values": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        22
+      ]
+    },
+    "agi": {
+      "type": "table",
+      "values": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        24
+      ]
+    }
+  }
+}

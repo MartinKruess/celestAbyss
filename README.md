@@ -65,3 +65,11 @@ Der aktuelle Vertrag ist für den nativen Client ausgelegt. Die spätere Webseit
 Globalchat mit gespeicherten Nachrichten, Abonnements, einem strikt auf die neuesten 50 Nachrichten begrenzten Spieler-Verlauf und Wiederverbindung ist implementiert. Privat-, Gruppen-, Allianz- und lokale Kanäle folgen separat. Siehe [Chatprotokoll](docs/chat-protocol.md).
 
 `npm run test:db-chat` prüft Login, WebSockets, Speicherung, Wiederholungen, Verlauf, Logout und Wiederverbindung gegen die Entwicklungsdatenbank und entfernt die dafür erzeugten Testdaten.
+
+## Moderation
+
+Moderation ist jetzt in den Globalchat integriert. Aktive abgestimmte Regeln maskieren oder blockieren Nachrichten; eine lokale konservative Kontextprüfung hält unklare Beiträge für Moderatoren zurück. Es ist keine KI angeschlossen. Spieler können aktuelle Nachrichten melden; geschützte Moderator-Endpunkte bearbeiten Fälle und protokollieren Entscheidungen.
+
+Normale Nachrichten laufen nach 24 Stunden ab. Gemeldete Ausschnitte werden getrennt aufbewahrt; administrative Sicherungen verhindern die Falllöschung. Siehe [Moderationsvertrag](docs/moderation-api.md).
+
+`npm run test:db-moderation` prüft den vollständigen Atlas-Ablauf mit anschließendem Entfernen eigener Testdaten. `npm run moderation:activate` aktiviert ausschließlich abgestimmte Entwürfe in der Entwicklungsdatenbank. Ungeklärte Regeln bleiben inaktiv.

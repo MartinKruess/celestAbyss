@@ -1,0 +1,16 @@
+import 'dotenv/config';
+import fs from 'node:fs/promises';
+import mongoose from 'mongoose';
+import {SkillDataModel} from '../models/skillSchema.js';
+const set={maxSkillLv:10,patk:277,mana:123,cd:75,statScaling:{patk:{type:'linear',base:277,perLevel:35}},resourceCosts:[{resource:'mana',reference:'maxMana',unit:'flat',scaling:{type:'linear',base:123,perLevel:78}}],cooldownScaling:{type:'linear',base:75,perLevel:-2},animationDurationRangeSeconds:{min:0.8,max:1},animationTimingStatus:'provisional',attackExecution:{hitCount:5,damageValueScope:'perHit',hitTimingStatus:'pending'},attackArea:{shape:'frontal',center:'caster',rangeMeters:3,geometryStatus:'pending',target:'enemiesInArea',evaluation:'perHit',timingStatus:'pending'},description_de:'Führt fünf physische Treffer im Bereich bis 3 Meter vor dir aus, ohne nach vorne zu stürmen. Jeder Treffer hat auf Skilllevel 1 einen Grundangriffswert von 277, der je weiterer Stufe um 35 auf 592 steigt. Die Mana-Kosten steigen von 123 um 78 je weiterer Stufe auf 825. Der Cooldown sinkt von 75 um 2 Sekunden je weiterer Stufe auf 57 Sekunden. Die Ausführung dauert vorläufig 0,8 bis 1 Sekunde. Genaue Breite des Trefferbereichs und Trefferzeitpunkte werden im Spiel festgelegt.',description_eng:'Performs five physical hits in the area up to 3 meters in front of you, without charging forward. Each hit has a base attack value of 277 at skill level 1, increasing by 35 per additional level to 592. Mana cost increases from 123 by 78 per additional level to 825. Cooldown decreases from 75 by 2 seconds per additional level to 57 seconds. Execution provisionally lasts 0.8 to 1 second. Exact area width and hit timings will be defined in game.'};
+try{
+if(process.env.MONGODB_DB_NAME!=='celestabyss_dev')throw Error('Requires development database');
+await mongoose.connect(process.env.DB_MONGO_URL||process.env.MONGODB_URI,{dbName:process.env.MONGODB_DB_NAME,autoIndex:false,serverSelectionTimeoutMS:10000});
+const before=await SkillDataModel.collection.findOne({nr:126});if(!before)throw Error('Missing skill');
+const candidate={...before,...set};delete candidate.dur;await new SkillDataModel(candidate).validate();
+await fs.writeFile('data/balancing/bladestorm-before.json',JSON.stringify(before,null,2)+'\n');
+await SkillDataModel.collection.updateOne({_id:before._id},{$set:set,$unset:{dur:''}});
+const after=await SkillDataModel.collection.findOne({_id:before._id});for(const[k,v]of Object.entries(set))if(JSON.stringify(after[k])!==JSON.stringify(v))throw Error('Read-back mismatch');
+await fs.writeFile('data/balancing/bladestorm-assignment-review.json',JSON.stringify({nr:126,currentClasses:after.charClass,status:'reviewPending',userRecollection:'Rogue uses Klingentornado, not Wirbelnde Klinge',action:'No class assignment changed without confirmed replacement',movementDuringExecution:'pending',frontalAreaWidth:'pending',castTime:'pending'},null,2)+'\n');
+console.log('Bladestorm verified: five hits, 277 to 592 per hit, Mana 123 to 825, cooldown 75 to 57 s, frontal reach 3 m. Class assignments unchanged.');
+}catch(e){console.error(`Bladestorm update failed (${e.name}); credentials omitted.`);process.exitCode=1;}finally{await mongoose.disconnect();}

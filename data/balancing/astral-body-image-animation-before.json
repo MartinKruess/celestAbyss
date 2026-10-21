@@ -1,0 +1,48 @@
+{
+  "_id": "6acc1c7e4826525c70d04b6b",
+  "skillName_eng": "Astral Body",
+  "__v": 0,
+  "category": "active",
+  "cd": 120,
+  "charClass": [
+    "Luminet",
+    "Lightmage"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Erschafft einen Astralkörper, der auf deine Gegner zufliegt und bis zu sieben Feinde trifft. Magischer Skill-Grundschaden 506 auf Stufe 1, plus 236 je weiterer Stufe, bis zu 1450 auf Stufe 5. Mana-Kosten 234, plus 112 je weiterer Stufe, bis zu 682. Cooldown beginnt bei 120 Sekunden und sinkt um 2 Sekunden je weiterer Stufe auf 112 Sekunden. Castzeit 0,5 Sekunden. Genaue Flugbahn, Trefferverteilung und mögliche Mehrfachtreffer auf dasselbe Ziel sind noch offen.",
+  "description_eng": "Creates an astral body that flies toward your opponents and hits up to seven enemies. Magical skill base damage starts at 506 and increases by 236 per additional level to 1450 at level 5. Mana cost starts at 234 and increases by 112 per additional level to 682. Cooldown starts at 120 seconds and decreases by 2 per additional level to 112 seconds. Cast time is 0.5 seconds. Exact trajectory, hit distribution and possible repeated hits against one target remain pending.",
+  "dmgType": "spell",
+  "matk": 506,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 8,
+  "skillName_de": "Astralkörper",
+  "skillpoints": 1,
+  "castTimeSeconds": 0.5,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 120,
+    "perLevel": -2
+  },
+  "mana": 234,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 234,
+        "perLevel": 112
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 506,
+      "perLevel": 236
+    }
+  }
+}

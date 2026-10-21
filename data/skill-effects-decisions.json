@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "definitions": [
+    {
+      "nr": 32,
+      "name": "Elementarenergie",
+      "effects": [
+        {
+          "key": "self-intelligence",
+          "type": "statModifier",
+          "target": "self",
+          "stat": "int",
+          "value": 2,
+          "unit": "flat",
+          "durationSeconds": 30
+        },
+        {
+          "key": "enemy-magic-defense",
+          "type": "statModifier",
+          "target": "enemy",
+          "stat": "mdef",
+          "value": -0.1,
+          "unit": "fraction",
+          "reference": "targetStat",
+          "durationSeconds": 30
+        }
+      ],
+      "remove": [
+        "int",
+        "mdef",
+        "statBonusUnits",
+        "statBonusTargets"
+      ]
+    },
+    {
+      "nr": 34,
+      "name": "Energieausbruch",
+      "activation": "manual",
+      "dur": 15,
+      "effects": [
+        {
+          "key": "shield",
+          "type": "shield",
+          "target": "self",
+          "value": 0.1,
+          "unit": "fraction",
+          "reference": "maxHealth",
+          "damageTypes": [
+            "physical",
+            "magical"
+          ],
+          "durationSeconds": 15
+        },
+        {
+          "key": "basic-attack-bonus",
+          "type": "damageBonus",
+          "target": "self",
+          "value": 0.1,
+          "unit": "fraction",
+          "appliesTo": "basicAttack",
+          "durationSeconds": 15,
+          "endWith": "shield"
+        },
+        {
+          "key": "mana-drain",
+          "type": "resourceDrain",
+          "target": "self",
+          "value": 0.01,
+          "unit": "fraction",
+          "resource": "mana",
+          "reference": "maxMana",
+          "intervalSeconds": 1,
+          "durationSeconds": 15,
+          "endWith": "shield"
+        }
+      ],
+      "remove": [
+        "health",
+        "mana"
+      ],
+      "de": "Du erhältst für maximal 15 Sekunden einen Schild, der physischen und magischen Schaden bis zu 10 % deines maximalen Lebens absorbiert. Solange der Schild besteht, verursachen normale Angriffe 10 % mehr Schaden und du verbrauchst pro Sekunde 1 % deines maximalen Manas. Beim Ablauf oder Aufbrauchen des Schilds enden alle drei Effekte.",
+      "en": "Gain a shield for up to 15 seconds that absorbs physical and magical damage up to 10% of your maximum health. While the shield remains, basic attacks deal 10% more damage and you consume 1% of your maximum mana per second. All three effects end when the shield expires or is depleted."
+    }
+  ],
+  "cooldownEnergyOutburst": "pending: 104 seconds at level 1 proposed; level 10 31 versus reduction by 31 unclear. Existing 44 unchanged.",
+  "levelScaling": "pending",
+  "runtime": "Dedicated server implementation pending"
+}

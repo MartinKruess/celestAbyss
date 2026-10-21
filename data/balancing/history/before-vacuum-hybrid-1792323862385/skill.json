@@ -1,0 +1,92 @@
+{
+  "_id": "6acc1c7e4826525c70d04bd9",
+  "skillName_eng": "Vacuum Impulse",
+  "__v": 0,
+  "category": "active",
+  "cd": 150,
+  "charClass": [
+    "Druide",
+    "Alchemist"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Zieht Gegner innerhalb von 10 Metern Radius zum Zentrum des Skills. Nach der Ansaugphase explodiert das Feld und verursacht einmalig magischen Grundschaden je getroffenem Gegner: 532 auf Stufe 1, plus 357 je weiterer Stufe, bis zu 1960 auf Stufe 5. Die Ansaugphase steigt von 4 auf 7 Sekunden über fünf Stufen. Während dieser Phase verursacht der Skill keinen zusätzlichen Schaden über Zeit. Mana-Kosten 133 auf Stufe 1, +89 je weiterer Stufe, maximal 489 auf Stufe 5. Der Cooldown sinkt von 150 um 2 Sekunden je weiterer Stufe auf 142 Sekunden. Castzeit 0,8 Sekunden. Platzierung des Skillzentrums, genaue Zugbewegung und Verhalten gegen kontrollimmune Ziele werden später geprüft. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+  "description_eng": "Pulls enemies within a 10 meter radius toward the skill center. After the pull phase, the field explodes once, dealing magical base damage per enemy hit: 532 at level 1, increasing by 357 per additional level to 1960 at level 5. Pull duration increases from 4 to 7 seconds over five levels. This phase deals no additional damage over time. Mana cost 133 at level 1, maximum 489 at level 5. Cooldown decreases from 150 by 2 seconds per additional level to 142 seconds. Cast time is 0.8 seconds. Skill-center placement, exact pull movement and behavior against control-immune targets remain to be reviewed.",
+  "dmgType": "spell",
+  "dur": 4,
+  "matk": 532,
+  "maxSkillLv": 5,
+  "maxUpgradeLv": 10,
+  "nr": 118,
+  "skillName_de": "Vakuumimpuls",
+  "skillpoints": 1,
+  "attackArea": {
+    "shape": "circle",
+    "center": "skillCenter",
+    "radiusMeters": 10,
+    "target": "enemiesInArea",
+    "evaluation": "atImpact",
+    "timingStatus": "defined"
+  },
+  "attackExecution": {
+    "hitCount": 1,
+    "damageValueScope": "perHit",
+    "damageTiming": "afterSkillDuration",
+    "hitTimingStatus": "defined"
+  },
+  "castTimeSeconds": 0.8,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 150,
+    "perLevel": -2
+  },
+  "durationScaling": {
+    "type": "linear",
+    "base": 4,
+    "perLevel": 0.75
+  },
+  "effects": [
+    {
+      "key": "vacuum-impulse-pull",
+      "type": "control",
+      "controlKind": "pull",
+      "target": "enemiesInArea",
+      "pullCenter": "skillCenter",
+      "actionRestrictionsStatus": "pending",
+      "durationSeconds": 4,
+      "durationScaling": {
+        "type": "linear",
+        "base": 4,
+        "perLevel": 0.75
+      }
+    }
+  ],
+  "hasLingeringDamage": false,
+  "mana": 133,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 133,
+        "perLevel": 89
+      }
+    }
+  ],
+  "statScaling": {
+    "matk": {
+      "type": "linear",
+      "base": 532,
+      "perLevel": 357
+    }
+  },
+  "manaPricing": {
+    "category": "normal",
+    "factor": 0.25,
+    "basis": "skillBaseDamagePerTarget",
+    "usesCharacterAttack": false,
+    "version": 1
+  }
+}

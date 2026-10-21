@@ -1,0 +1,1530 @@
+{
+  "generatedAt": "2026-10-20T07:35:39.555Z",
+  "scope": "Fixed unconditional player attribute bonuses from all assigned passive skills at maximum learnable levels. No equipment, base stats, active buffs, procs, companion stats, conditional storage, or chosen extra skill level.",
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "totals": {
+        "str": 22,
+        "vita": 40,
+        "int": 0,
+        "wis": 40,
+        "agi": 12,
+        "dex": 23
+      },
+      "total": 137,
+      "special": {},
+      "sources": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "level": 20,
+          "bonuses": {
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "level": 10,
+          "bonuses": {
+            "str": 10,
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "level": 10,
+          "bonuses": {
+            "agi": 12,
+            "dex": 23
+          },
+          "total": 35
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 245,
+          "name": "Breitschwert-Training",
+          "level": 10,
+          "bonuses": {
+            "str": 12
+          },
+          "total": 12
+        }
+      ],
+      "notes": [
+        "Durchhalten: Unvollständige Definition; +3 Vitalität nicht sicher als dauerhaft einzuordnen"
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "totals": {
+        "str": 32,
+        "vita": 50,
+        "int": 0,
+        "wis": 40,
+        "agi": 5,
+        "dex": 5
+      },
+      "total": 132,
+      "special": {},
+      "sources": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "level": 20,
+          "bonuses": {
+            "str": 10,
+            "agi": 5,
+            "dex": 5
+          },
+          "total": 20
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "level": 10,
+          "bonuses": {
+            "str": 10,
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 131,
+          "name": "Zweihändiges Axttraining",
+          "level": 10,
+          "bonuses": {
+            "str": 12
+          },
+          "total": 12
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "level": 10,
+          "bonuses": {
+            "vita": 20,
+            "wis": 10
+          },
+          "total": 30
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "totals": {
+        "str": 5,
+        "vita": 20,
+        "int": 27,
+        "wis": 40,
+        "agi": 0,
+        "dex": 10
+      },
+      "total": 102,
+      "special": {},
+      "sources": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "level": 20,
+          "bonuses": {
+            "int": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "level": 10,
+          "bonuses": {
+            "int": 10,
+            "wis": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 132,
+          "name": "Zweihändiges Streitkolbentraining",
+          "level": 10,
+          "bonuses": {
+            "str": 5,
+            "int": 7
+          },
+          "total": 12
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        }
+      ],
+      "notes": [
+        "Vergessener Zauber: Zielskillabhängige Wahl: auf Stufe 2 −15 je Hauptattribut, insgesamt −90, plus Bonus des gewählten Zielskills"
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "totals": {
+        "str": 17,
+        "vita": 60,
+        "int": 0,
+        "wis": 50,
+        "agi": 5,
+        "dex": 0
+      },
+      "total": 132,
+      "special": {
+        "luck": 10
+      },
+      "sources": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "level": 20,
+          "bonuses": {
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 26,
+          "name": "Dual Axttraining",
+          "level": 10,
+          "bonuses": {
+            "str": 7,
+            "agi": 5
+          },
+          "total": 12
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "level": 10,
+          "bonuses": {
+            "str": 10,
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "level": 10,
+          "bonuses": {
+            "vita": 20,
+            "wis": 10
+          },
+          "total": 30
+        }
+      ],
+      "notes": [
+        "Durchhalten: Unvollständige Definition; +3 Vitalität nicht sicher als dauerhaft einzuordnen"
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "totals": {
+        "str": 0,
+        "vita": 20,
+        "int": 38,
+        "wis": 63,
+        "agi": 0,
+        "dex": 10
+      },
+      "total": 131,
+      "special": {},
+      "sources": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "level": 20,
+          "bonuses": {
+            "int": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "level": 10,
+          "bonuses": {
+            "int": 10,
+            "wis": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "level": 10,
+          "bonuses": {
+            "int": 6,
+            "wis": 5
+          },
+          "total": 11
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 143,
+          "name": "Immunität",
+          "level": 10,
+          "bonuses": {
+            "wis": 12
+          },
+          "total": 12
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "level": 10,
+          "bonuses": {
+            "int": 12,
+            "wis": 6
+          },
+          "total": 18
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "totals": {
+        "str": 0,
+        "vita": 32.5,
+        "int": 37,
+        "wis": 52.5,
+        "agi": 0,
+        "dex": 10
+      },
+      "total": 132,
+      "special": {},
+      "sources": [
+        {
+          "nr": 4,
+          "name": "Abschöpfen",
+          "level": 10,
+          "bonuses": {
+            "int": 20,
+            "wis": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "level": 20,
+          "bonuses": {
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "level": 10,
+          "bonuses": {
+            "int": 10,
+            "wis": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 81,
+          "name": "Naturgewalt",
+          "level": 1,
+          "bonuses": {
+            "vita": 2.5,
+            "int": 7,
+            "wis": 2.5
+          },
+          "total": 12
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "totals": {
+        "str": 0,
+        "vita": 35,
+        "int": 0,
+        "wis": 35,
+        "agi": 27,
+        "dex": 47
+      },
+      "total": 144,
+      "special": {
+        "luck": 3
+      },
+      "sources": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "level": 20,
+          "bonuses": {
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 10,
+          "name": "Auf der Jagd",
+          "level": 5,
+          "bonuses": {
+            "agi": 7,
+            "dex": 16
+          },
+          "total": 23
+        },
+        {
+          "nr": 18,
+          "name": "Bogenschießtraining",
+          "level": 10,
+          "bonuses": {
+            "dex": 11
+          },
+          "total": 11
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "level": 10,
+          "bonuses": {
+            "vita": 5,
+            "wis": 5,
+            "agi": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 122,
+          "name": "Voll Durchziehen",
+          "level": 10,
+          "bonuses": {
+            "dex": 5
+          },
+          "total": 5
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "level": 10,
+          "bonuses": {
+            "agi": 10,
+            "dex": 5
+          },
+          "total": 15
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "totals": {
+        "str": 22,
+        "vita": 85,
+        "int": 10,
+        "wis": 60,
+        "agi": 0,
+        "dex": 0
+      },
+      "total": 177,
+      "special": {},
+      "sources": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "level": 20,
+          "bonuses": {
+            "int": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 28,
+          "name": "Eiserner Schild",
+          "level": 10,
+          "bonuses": {
+            "vita": 10
+          },
+          "total": 10
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "level": 10,
+          "bonuses": {
+            "str": 10,
+            "vita": 10,
+            "wis": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 93,
+          "name": "Schildangriffstraining",
+          "level": 5,
+          "bonuses": {
+            "str": 6,
+            "vita": 3
+          },
+          "total": 9
+        },
+        {
+          "nr": 102,
+          "name": "Schwerttraining",
+          "level": 5,
+          "bonuses": {
+            "str": 6,
+            "vita": 2
+          },
+          "total": 8
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "level": 10,
+          "bonuses": {
+            "vita": 20,
+            "wis": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 141,
+          "name": "Eiserner Wille",
+          "level": 10,
+          "bonuses": {
+            "vita": 20,
+            "wis": 10
+          },
+          "total": 30
+        }
+      ],
+      "notes": [
+        "Eiserner Wille: zusätzlich 10 % der aktuellen Gesamt-Vitalität als Stärke. Allein aus den hier summierten Skill-Vitalitätsboni ergibt das +8,5 Stärke; Grundwerte, Ausrüstung und Buffs kämen als Berechnungsbasis hinzu."
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "totals": {
+        "str": 0,
+        "vita": 20,
+        "int": 40,
+        "wis": 51,
+        "agi": 0,
+        "dex": 10
+      },
+      "total": 121,
+      "special": {
+        "luck": 3
+      },
+      "sources": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "level": 20,
+          "bonuses": {
+            "int": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "level": 10,
+          "bonuses": {
+            "int": 10,
+            "wis": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "level": 10,
+          "bonuses": {
+            "int": 6,
+            "wis": 5
+          },
+          "total": 11
+        },
+        {
+          "nr": 116,
+          "name": "Unerschöpfliche Hoffnung",
+          "level": 10,
+          "bonuses": {
+            "int": 2
+          },
+          "total": 2
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "level": 10,
+          "bonuses": {
+            "int": 12,
+            "wis": 6
+          },
+          "total": 18
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "totals": {
+        "str": 10,
+        "vita": 20,
+        "int": 10,
+        "wis": 30,
+        "agi": 5,
+        "dex": 15
+      },
+      "total": 90,
+      "special": {},
+      "sources": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "level": 20,
+          "bonuses": {
+            "str": 10,
+            "agi": 5,
+            "dex": 5
+          },
+          "total": 20
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "level": 10,
+          "bonuses": {
+            "int": 10,
+            "wis": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        }
+      ],
+      "notes": [
+        "Reaper: zusätzlich 0 bis +20 Intelligenz abhängig vom aktuellen Seelenvorrat; nicht in der festen Summe.",
+        "Morrak´s Meister: Nur während der Morrak-Beschwörung"
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "totals": {
+        "str": 22,
+        "vita": 20,
+        "int": 40,
+        "wis": 55,
+        "agi": 0,
+        "dex": 10
+      },
+      "total": 147,
+      "special": {},
+      "sources": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "level": 20,
+          "bonuses": {
+            "int": 10,
+            "wis": 10
+          },
+          "total": 20
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "level": 10,
+          "bonuses": {
+            "int": 10,
+            "wis": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 252,
+          "name": "Streitkolbentraining",
+          "level": 10,
+          "bonuses": {
+            "str": 7,
+            "int": 5
+          },
+          "total": 12
+        },
+        {
+          "nr": 259,
+          "name": "Weisheit des Erdweisen",
+          "level": 5,
+          "bonuses": {
+            "str": 15,
+            "int": 15,
+            "wis": 15
+          },
+          "total": 45
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "summoner",
+      "name": "Nachtjäger",
+      "totals": {
+        "str": 10,
+        "vita": 25,
+        "int": 0,
+        "wis": 25,
+        "agi": 30,
+        "dex": 36
+      },
+      "total": 126,
+      "special": {},
+      "sources": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "level": 20,
+          "bonuses": {
+            "str": 10,
+            "agi": 5,
+            "dex": 5
+          },
+          "total": 20
+        },
+        {
+          "nr": 7,
+          "name": "Armbrusttraining",
+          "level": 10,
+          "bonuses": {
+            "agi": 5,
+            "dex": 6
+          },
+          "total": 11
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "level": 10,
+          "bonuses": {
+            "vita": 5,
+            "wis": 5,
+            "agi": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "level": 10,
+          "bonuses": {
+            "agi": 10,
+            "dex": 5
+          },
+          "total": 15
+        },
+        {
+          "nr": 187,
+          "name": "Hartes Training",
+          "level": 10,
+          "bonuses": {
+            "dex": 10
+          },
+          "total": 10
+        }
+      ],
+      "notes": []
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "totals": {
+        "str": 15,
+        "vita": 25,
+        "int": 0,
+        "wis": 25,
+        "agi": 34,
+        "dex": 38
+      },
+      "total": 137,
+      "special": {},
+      "sources": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "level": 20,
+          "bonuses": {
+            "str": 10,
+            "agi": 5,
+            "dex": 5
+          },
+          "total": 20
+        },
+        {
+          "nr": 22,
+          "name": "Dolchtraining",
+          "level": 10,
+          "bonuses": {
+            "str": 5,
+            "agi": 7
+          },
+          "total": 12
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "level": 10,
+          "bonuses": {
+            "vita": 5,
+            "wis": 5,
+            "agi": 10,
+            "dex": 10
+          },
+          "total": 30
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "level": 10,
+          "bonuses": {
+            "agi": 12,
+            "dex": 23
+          },
+          "total": 35
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "level": 20,
+          "bonuses": {
+            "vita": 20,
+            "wis": 20
+          },
+          "total": 40
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "proposals": {
+    "status": "discussionOnlyNotApplied",
+    "standhaft": {
+      "maximum": {
+        "vita": 10,
+        "wis": 5
+      }
+    },
+    "bodyControl": {
+      "options": [
+        {
+          "dex": 10,
+          "agi": 5
+        },
+        {
+          "agi": 10,
+          "dex": 5
+        }
+      ],
+      "manaCostReduction": "No change decided"
+    },
+    "classAttributeDistribution": {
+      "status": "draftNotAppliedNotDamageValidated",
+      "targetMainAttributePoints": 130,
+      "targetOverrides": {
+        "ritualist": 120
+      },
+      "balanceIntent": "Ritualist alone slightly weaker than Luminet; with Morrak damage and summon-dependent owner bonuses roughly equal or slightly weaker. Compare matching buff scenarios and account for summon uptime.",
+      "scope": "Same fixed passive attribute scope as the current table; conditional bonuses remain separate",
+      "rows": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "attributes": {
+            "str": 30,
+            "vita": 45,
+            "int": 0,
+            "wis": 40,
+            "agi": 5,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -7,
+          "role": "Vielseitiger Begleiterkämpfer: solide Stärke und Überleben, etwas Geschick für Genauigkeit."
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "attributes": {
+            "str": 45,
+            "vita": 40,
+            "int": 0,
+            "wis": 35,
+            "agi": 5,
+            "dex": 5
+          },
+          "total": 130,
+          "changeFromCurrent": -2,
+          "role": "Schwerer Nahkämpfer: Schwerpunkt Stärke, danach Vitalität."
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "attributes": {
+            "str": 15,
+            "vita": 25,
+            "int": 35,
+            "wis": 45,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": 28,
+          "role": "Hybrid und Unterstützer: Magie mit kleiner körperlicher Komponente, ausreichende Willenskraft."
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "attributes": {
+            "str": 25,
+            "vita": 55,
+            "int": 0,
+            "wis": 45,
+            "agi": 5,
+            "dex": 0
+          },
+          "total": 130,
+          "changeFromCurrent": -2,
+          "role": "Robuster Nahkämpfer: Stärke und Vitalität, etwas Agilität."
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "attributes": {
+            "str": 0,
+            "vita": 20,
+            "int": 45,
+            "wis": 55,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -1,
+          "role": "Heilung und Ausdauer: Willenskraft vor Intelligenz; Heilskalierung gesondert prüfen."
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "attributes": {
+            "str": 0,
+            "vita": 35,
+            "int": 40,
+            "wis": 45,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -2,
+          "role": "Magischer Unterstützer: Intelligenz und Willenskraft gleich gewichtet, etwas mehr Vitalität."
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "attributes": {
+            "str": 0,
+            "vita": 35,
+            "int": 0,
+            "wis": 35,
+            "agi": 21,
+            "dex": 39
+          },
+          "total": 130,
+          "changeFromCurrent": -14,
+          "role": "Fernkämpfer: Geschick als Angriffsattribut, Agilität als zweiter Schwerpunkt."
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "attributes": {
+            "str": 25,
+            "vita": 50,
+            "int": 10,
+            "wis": 45,
+            "agi": 0,
+            "dex": 0
+          },
+          "total": 130,
+          "changeFromCurrent": -47,
+          "role": "Tank: höchster Vitalitätsbonus, ergänzende Willenskraft und etwas Stärke. Intelligenz aus dem Rassen-Skill bleibt enthalten."
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "attributes": {
+            "str": 0,
+            "vita": 30,
+            "int": 40,
+            "wis": 50,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": 9,
+          "role": "Bereits starker Magier: Intelligenz unverändert; das zusätzliche Budget geht in Vitalität statt mehr Angriff."
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "attributes": {
+            "str": 10,
+            "vita": 30,
+            "int": 10,
+            "wis": 50,
+            "agi": 5,
+            "dex": 15
+          },
+          "total": 120,
+          "changeFromCurrent": 30,
+          "role": "Vorläufig 120 statt 130 feste Attributpunkte als Abschlag für Morrak. Ohne Dämon etwas schwächer als Luminet; mit Morraks eigenem Schaden und den Beschwörungsboni ungefähr gleichauf, gerne leicht darunter. Feste Intelligenz unverändert. Reaper bleibt separat. Die genaue Differenz muss der Schadensvergleich bestätigen."
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "attributes": {
+            "str": 17,
+            "vita": 28,
+            "int": 35,
+            "wis": 40,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -17,
+          "role": "Offensiver Hybrid: Stärke und Intelligenz, weniger zusätzliche Willenskraft als bisher."
+        },
+        {
+          "key": "summoner",
+          "name": "Nachtjäger",
+          "attributes": {
+            "str": 10,
+            "vita": 25,
+            "int": 0,
+            "wis": 25,
+            "agi": 30,
+            "dex": 40
+          },
+          "total": 130,
+          "changeFromCurrent": 4,
+          "role": "Schneller Armbrustkämpfer: Geschick vor Agilität; Rassen-Stärke bleibt erhalten."
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "attributes": {
+            "str": 28,
+            "vita": 25,
+            "int": 0,
+            "wis": 25,
+            "agi": 27,
+            "dex": 25
+          },
+          "total": 130,
+          "changeFromCurrent": -7,
+          "role": "Beweglicher Nahkämpfer: mehr Stärke für den tatsächlichen Angriff, Agilität für Tempo; Geschick unterstützt Genauigkeit und Technische Perfektion."
+        }
+      ]
+    },
+    "concretePassivePlan": {
+      "status": "discussionOnlyNotApplied",
+      "maximumAttributeReplacements": [
+        {
+          "nr": 140,
+          "attributes": {
+            "vita": 10,
+            "wis": 5
+          },
+          "note": "Standhaft halbieren. Gilt identisch für Gladiator, Butcher und Ritter."
+        },
+        {
+          "nr": 67,
+          "attributes": {
+            "dex": 10,
+            "agi": 5
+          },
+          "note": "Körperbeherrschung vereinheitlichen; die bisherigen 3 % Mana-Kostenreduktion auf Maximalstufe bleiben."
+        },
+        {
+          "nr": 145,
+          "attributes": {
+            "str": 8,
+            "vita": 5
+          },
+          "note": "Durchhalten erstmals eindeutig als dauerhaften Attributskill definieren, ohne Auslöser und ohne direkte Abwehrboni. Gleiche Werte für Abenteurer und Gladiator. Die bisher unvollständige Definition wird damit ersetzt."
+        },
+        {
+          "nr": 177,
+          "attributes": {
+            "str": 13
+          },
+          "note": "Ungebrochen erhält zusätzlich einen ständig wirksamen Stärkebonus. Der bestehende Effekt nach tödlichem Schaden bleibt separat und unverändert. Dieser permanente Anteil wäre neu."
+        },
+        {
+          "nr": 203,
+          "attributes": {
+            "str": 10,
+            "vita": 5,
+            "int": 8,
+            "wis": 5
+          },
+          "note": "Kanalisierung erhält einen neuen permanenten Attributanteil. Der bestehende direkte Max-Mana-Bonus bleibt unverändert."
+        },
+        {
+          "nr": 60,
+          "attributes": {
+            "int": 6,
+            "wis": 4
+          },
+          "note": "Hoffnungsschimmer gemeinsam für Heiler und Luminet. Direkte MP-Regeneration bleibt unverändert."
+        },
+        {
+          "nr": 208,
+          "attributes": {
+            "int": 14,
+            "wis": 6
+          },
+          "note": "Das ewige Wissen gemeinsam für Heiler und Luminet."
+        },
+        {
+          "nr": 143,
+          "attributes": {
+            "int": 5,
+            "wis": 5
+          },
+          "note": "Immunität: bisherige Attributboni ersetzen; Fluchabwehr und direkte M-Abwehr bleiben unverändert."
+        },
+        {
+          "nr": 4,
+          "attributes": {
+            "int": 25,
+            "wis": 5
+          },
+          "note": "Abschöpfen stärker auf Intelligenz ausrichten."
+        },
+        {
+          "nr": 81,
+          "attributes": {
+            "int": 5,
+            "vita": 5
+          },
+          "note": "Naturgewalt: bisherigen Attributanteil ersetzen; eine lernbare Stufe bleibt erhalten."
+        },
+        {
+          "nr": 10,
+          "attributes": {
+            "dex": 8,
+            "agi": 1
+          },
+          "note": "Auf der Jagd verkleinern. Waffen-, Ausweichtraining und Durchziehen bleiben erhalten."
+        },
+        {
+          "nr": 28,
+          "attributes": {
+            "vita": 5
+          },
+          "note": "Eiserner Schild: Vitalität halbieren; +10 M-Abwehr und +10 Blockpunkte bleiben."
+        },
+        {
+          "nr": 141,
+          "attributes": {
+            "str": 3
+          },
+          "note": "Eiserner Wille: feste +20 Vitalität/+10 Willenskraft durch +3 Stärke ersetzen. +20 Blockpunkte und dynamische Vitalität-zu-Stärke-Umrechnung bleiben separat erhalten."
+        },
+        {
+          "nr": 116,
+          "attributes": {
+            "vita": 10
+          },
+          "note": "Unerschöpfliche Hoffnung: bisherigen festen Intelligenzbonus durch Vitalität ersetzen. +3 Glück und +20 direkter M-Angriff bleiben unverändert."
+        },
+        {
+          "nr": 181,
+          "attributes": {
+            "vita": 10,
+            "wis": 20
+          },
+          "note": "Arkane Aufladung erhält neue dauerhafte defensive Attribute. +20 direkte MP-Regeneration bleiben unverändert. Keine zusätzliche Intelligenz; Dämon und Seelenspeicher bleiben separat."
+        },
+        {
+          "nr": 259,
+          "attributes": {
+            "str": 10,
+            "vita": 8,
+            "int": 10
+          },
+          "note": "Weisheit des Erdweisen umverteilen; bisherige feste Willenskraft entfällt. Die 3 % zusätzliche Mana-Regeneration bleiben."
+        },
+        {
+          "nr": 187,
+          "attributes": {
+            "dex": 14
+          },
+          "note": "Hartes Training: Geschick von 10 auf 14. Die konstanten 5 Punkte Angriffsgeschwindigkeit bleiben."
+        },
+        {
+          "nr": 243,
+          "attributes": {
+            "str": 13
+          },
+          "note": "Technische Perfektion erhält einen neuen permanenten Stärkebonus. +4 Max-Mana je aktuellem Geschickpunkt auf Stufe 4 bleiben unverändert."
+        }
+      ],
+      "rows": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "attributes": {
+            "str": 30,
+            "vita": 45,
+            "int": 0,
+            "wis": 40,
+            "agi": 5,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -7,
+          "role": "Vielseitiger Begleiterkämpfer: solide Stärke und Überleben, etwas Geschick für Genauigkeit."
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "attributes": {
+            "str": 45,
+            "vita": 40,
+            "int": 0,
+            "wis": 35,
+            "agi": 5,
+            "dex": 5
+          },
+          "total": 130,
+          "changeFromCurrent": -2,
+          "role": "Schwerer Nahkämpfer: Schwerpunkt Stärke, danach Vitalität."
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "attributes": {
+            "str": 15,
+            "vita": 25,
+            "int": 35,
+            "wis": 45,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": 28,
+          "role": "Hybrid und Unterstützer: Magie mit kleiner körperlicher Komponente, ausreichende Willenskraft."
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "attributes": {
+            "str": 25,
+            "vita": 55,
+            "int": 0,
+            "wis": 45,
+            "agi": 5,
+            "dex": 0
+          },
+          "total": 130,
+          "changeFromCurrent": -2,
+          "role": "Robuster Nahkämpfer: Stärke und Vitalität, etwas Agilität."
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "attributes": {
+            "str": 0,
+            "vita": 20,
+            "int": 45,
+            "wis": 55,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -1,
+          "role": "Heilung und Ausdauer: Willenskraft vor Intelligenz; Heilskalierung gesondert prüfen."
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "attributes": {
+            "str": 0,
+            "vita": 35,
+            "int": 40,
+            "wis": 45,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -2,
+          "role": "Magischer Unterstützer: Intelligenz und Willenskraft gleich gewichtet, etwas mehr Vitalität."
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "attributes": {
+            "str": 0,
+            "vita": 35,
+            "int": 0,
+            "wis": 35,
+            "agi": 21,
+            "dex": 39
+          },
+          "total": 130,
+          "changeFromCurrent": -14,
+          "role": "Fernkämpfer: Geschick als Angriffsattribut, Agilität als zweiter Schwerpunkt."
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "attributes": {
+            "str": 25,
+            "vita": 50,
+            "int": 10,
+            "wis": 45,
+            "agi": 0,
+            "dex": 0
+          },
+          "total": 130,
+          "changeFromCurrent": -47,
+          "role": "Tank: höchster Vitalitätsbonus, ergänzende Willenskraft und etwas Stärke. Intelligenz aus dem Rassen-Skill bleibt enthalten."
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "attributes": {
+            "str": 0,
+            "vita": 30,
+            "int": 40,
+            "wis": 50,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": 9,
+          "role": "Bereits starker Magier: Intelligenz unverändert; das zusätzliche Budget geht in Vitalität statt mehr Angriff."
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "attributes": {
+            "str": 10,
+            "vita": 30,
+            "int": 10,
+            "wis": 50,
+            "agi": 5,
+            "dex": 15
+          },
+          "total": 120,
+          "changeFromCurrent": 30,
+          "role": "Vorläufig 120 statt 130 feste Attributpunkte als Abschlag für Morrak. Ohne Dämon etwas schwächer als Luminet; mit Morraks eigenem Schaden und den Beschwörungsboni ungefähr gleichauf, gerne leicht darunter. Feste Intelligenz unverändert. Reaper bleibt separat. Die genaue Differenz muss der Schadensvergleich bestätigen."
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "attributes": {
+            "str": 17,
+            "vita": 28,
+            "int": 35,
+            "wis": 40,
+            "agi": 0,
+            "dex": 10
+          },
+          "total": 130,
+          "changeFromCurrent": -17,
+          "role": "Offensiver Hybrid: Stärke und Intelligenz, weniger zusätzliche Willenskraft als bisher."
+        },
+        {
+          "key": "summoner",
+          "name": "Nachtjäger",
+          "attributes": {
+            "str": 10,
+            "vita": 25,
+            "int": 0,
+            "wis": 25,
+            "agi": 30,
+            "dex": 40
+          },
+          "total": 130,
+          "changeFromCurrent": 4,
+          "role": "Schneller Armbrustkämpfer: Geschick vor Agilität; Rassen-Stärke bleibt erhalten."
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "attributes": {
+            "str": 28,
+            "vita": 25,
+            "int": 0,
+            "wis": 25,
+            "agi": 27,
+            "dex": 25
+          },
+          "total": 130,
+          "changeFromCurrent": -7,
+          "role": "Beweglicher Nahkämpfer: mehr Stärke für den tatsächlichen Angriff, Agilität für Tempo; Geschick unterstützt Genauigkeit und Technische Perfektion."
+        }
+      ],
+      "scope": "Replace all six fixed main-attribute fields on the listed skills with the proposed maximum bonuses. Keep levels, class assignments and unmentioned effects. New permanent components are explicitly identified. Full rank progression still to be designed before implementation."
+    }
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-20T16:40:53.621Z",
+  "backup": "data/balancing/history/before-ritualist-passive-reduction-1792514453502",
+  "changes": [
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04bdb",
+        "skillName_eng": "Reaper",
+        "category": "passive",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Reaper: permanenter passiver Skill. Erlaubt auf Stufe 1 einen Speicher von 10 Seelenfragmenten und je weiterer Stufe 10 zusätzliche Plätze, bis zu 100 auf Stufe 10. Je volle 10 aktuell gespeicherte Seelenfragmente erhältst du +2 Intelligenz: Bonus = 2 × abrunden(aktueller Vorrat / 10). Bei 100 gespeicherten Fragmenten insgesamt +20 Intelligenz; bei leerem Speicher kein Intelligenz-Bonus. Der Bonus sinkt entsprechend, wenn Seelen ausgegeben werden. Seelenfragmente sind eine eigene Ressource, getrennt vom Attribut Intelligenz. Vorrat bleibt dauerhaft auch offline erhalten, ohne zeitlichen Verfall. Überschüssige Gewinne oberhalb der Speicherkapazität werden nicht aufgenommen. Der Skill erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Dies sind Skilldefinitionen; die persistente Charakterressource ist später serverseitig anzubinden.",
+        "description_eng": "Reaper: permanent passive skill. Soul-fragment storage starts at 10 at level 1 and gains 10 capacity per additional level, reaching 100 at level 10. Every complete 10 currently stored fragments grants +2 Intelligence: bonus = 2 × floor(current storage / 10). At 100 stored fragments the bonus is +20 Intelligence; empty storage grants none. Spending souls reduces the bonus accordingly. Soul fragments are a separate resource from the Intelligence attribute. Storage persists offline with no time decay. Gains beyond storage capacity are discarded. This skill does not generate souls itself. No activation costs, cast time or cooldown. These are skill definitions; persistent character-resource behavior still requires server integration.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 120,
+        "skillName_de": "Reaper",
+        "skillpoints": 1,
+        "resourceCosts": [],
+        "soulStorageSettings": {
+          "resource": "soulFragments",
+          "capacityScaling": {
+            "type": "linear",
+            "base": 10,
+            "perLevel": 10
+          },
+          "persistsOffline": true,
+          "decaysOverTime": false,
+          "bonusStat": "int",
+          "fragmentsPerBonusStep": 10,
+          "bonusPerFullStep": 2,
+          "usesCurrentStoredAmount": true,
+          "onCapacityReached": "discardExcess"
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "soulStorageSettings",
+                "capacityScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 10,
+                "perLevel": 10
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04bdb",
+        "skillName_eng": "Reaper",
+        "category": "passive",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Reaper: permanenter passiver Skill. Erlaubt auf Stufe 1 einen Speicher von 10 Seelenfragmenten und je weiterer Stufe 10 zusätzliche Plätze, bis zu 100 auf Stufe 10. Je volle 10 aktuell gespeicherte Seelenfragmente erhältst du +1 Intelligenz: Bonus = 1 × abrunden(aktueller Vorrat / 10). Bei 100 gespeicherten Fragmenten insgesamt +10 Intelligenz; bei leerem Speicher kein Intelligenz-Bonus. Der Bonus sinkt entsprechend, wenn Seelen ausgegeben werden. Seelenfragmente sind eine eigene Ressource, getrennt vom Attribut Intelligenz. Vorrat bleibt dauerhaft auch offline erhalten, ohne zeitlichen Verfall. Überschüssige Gewinne oberhalb der Speicherkapazität werden nicht aufgenommen. Der Skill erzeugt selbst keine Seelen. Keine Aktivierungskosten, Castzeit oder Cooldown. Dies sind Skilldefinitionen; die persistente Charakterressource ist später serverseitig anzubinden.",
+        "description_eng": "Reaper: permanent passive skill. Soul-fragment storage starts at 10 at level 1 and gains 10 capacity per additional level, reaching 100 at level 10. Every complete 10 currently stored fragments grants +1 Intelligence: bonus = 1 × floor(current storage / 10). At 100 stored fragments the bonus is +10 Intelligence; empty storage grants none. Spending souls reduces the bonus accordingly. Soul fragments are a separate resource from the Intelligence attribute. Storage persists offline with no time decay. Gains beyond storage capacity are discarded. This skill does not generate souls itself. No activation costs, cast time or cooldown. These are skill definitions; persistent character-resource behavior still requires server integration.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 120,
+        "skillName_de": "Reaper",
+        "skillpoints": 1,
+        "resourceCosts": [],
+        "soulStorageSettings": {
+          "resource": "soulFragments",
+          "capacityScaling": {
+            "type": "linear",
+            "base": 10,
+            "perLevel": 10
+          },
+          "persistsOffline": true,
+          "decaysOverTime": false,
+          "bonusStat": "int",
+          "fragmentsPerBonusStep": 10,
+          "bonusPerFullStep": 1,
+          "usesCurrentStoredAmount": true,
+          "onCapacityReached": "discardExcess"
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "soulStorageSettings",
+                "capacityScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 10,
+                "perLevel": 10
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c18",
+        "skillName_eng": "Arcane Charge",
+        "category": "passive",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Dauerhafter Attributanteil: je gelernter Stufe +1 Vitalität, +2 Willenskraft; auf Stufe 10 insgesamt +10 Vitalität, +20 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Permanenter passiver Skill. Erhöht die direkte MP-Regeneration auf Stufe 1 um 11 und je weiterer Stufe um 1, auf Stufe 10 insgesamt um 20 pro Mana-Regenerationstick. Keine Victim-Voraussetzung, kein direkter M-Angriffsbonus. Keine aktive Nutzung, keine Castzeit, kein Cooldown und keine begrenzte Laufzeit. Das Tickintervall wird zentral im Regenerationssystem festgelegt.",
+        "description_eng": "Permanent attribute component: +1 Vitality, +2 Wisdom per learned level; at level 10, +10 Vitality, +20 Wisdom total. This component always applies independently of any triggered effects. Permanent passive. Grants +11 direct Mana regeneration at level 1 and +1 per additional level, totaling +20 per Mana regeneration tick at level 10. No Victim requirement or direct magical attack bonus. No manual activation, cast time, cooldown or limited duration. Tick interval is configured centrally by the regeneration system.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 181,
+        "skillName_de": "Arkane Aufladung",
+        "skillpoints": 1,
+        "manaRegen": 11,
+        "resourceCosts": [],
+        "statScaling": {
+          "manaRegen": {
+            "type": "linear",
+            "base": 11,
+            "perLevel": 1
+          },
+          "vita": {
+            "type": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "wis": {
+            "type": "linear",
+            "base": 2,
+            "perLevel": 2
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "manaRegen"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 11,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "vita"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "wis"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 2,
+                "perLevel": 2
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive",
+        "vita": 1,
+        "wis": 2
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04c18",
+        "skillName_eng": "Arcane Charge",
+        "category": "passive",
+        "charClass": [
+          "Bloodmage",
+          "Ritualist"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Permanente Passive mit zehn Stufen. Gewährt +1 Vitalität je Stufe, maximal +10. Kein Willenskraftbonus. Direkte MP-Regeneration je 3-Sekunden-Tick steigt gleichmäßig von +16 auf Stufe 1 bis +24 auf Stufe 10, also +8/9 je weiterer Stufe. Keine Victim-Voraussetzung und kein direkter M-Angriffsbonus. Keine Aktivierungskosten, Castzeit, Cooldown oder begrenzte Dauer.",
+        "description_eng": "Permanent passive with ten levels. Grants 1 Vitality per level, up to 10. No Wisdom bonus. Direct Mana regeneration per 3-second tick increases evenly from 16 at level 1 to 24 at level 10, adding 8/9 per additional level. No Victim requirement or direct magical attack bonus. No activation costs, cast time, cooldown or limited duration.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 181,
+        "skillName_de": "Arkane Aufladung",
+        "skillpoints": 1,
+        "manaRegen": 16,
+        "resourceCosts": [],
+        "statScaling": {
+          "manaRegen": {
+            "type": "linear",
+            "base": 16,
+            "perLevel": 0.8888888888888888
+          },
+          "vita": {
+            "type": "linear",
+            "base": 1,
+            "perLevel": 1
+          }
+        },
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "statScaling",
+                "manaRegen"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 16,
+                "perLevel": 0.8888888888888888
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "statScaling",
+                "vita"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 1,
+                "perLevel": 1
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive",
+        "vita": 1
+      }
+    },
+    {
+      "before": {
+        "_id": "6acc1c7e4826525c70d04c39",
+        "skillName_eng": "Burn Out",
+        "category": "passive",
+        "charClass": [
+          "Ritualist",
+          "Bloodmage"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verstärkt deine Blutmagie auf Skilllevel 1 um 8 magischen Angriff. Solange die Verstärkung wirkt, verlierst du alle 1,5 Sekunden 18 Lebenspunkte. Pro weiterem Skilllevel steigt der Angriffsbonus um 8 und der Lebensverbrauch je Intervall um 6. Auf Skilllevel 10 erhältst du +80 magischen Angriff und verlierst 72 Lebenspunkte je Intervall.",
+        "description_eng": "Strengthens your blood magic by 8 magical attack at skill level 1. While the enhancement is active, you lose 18 health every 1.5 seconds. Each additional skill level adds 8 magical attack and increases the health cost per interval by 6. At skill level 10, gain +80 magical attack and lose 72 health per interval.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 214,
+        "skillName_de": "Ausbrennen",
+        "skillpoints": 1,
+        "effects": [
+          {
+            "valueScaling": {
+              "type": "linear",
+              "base": 8,
+              "perLevel": 8
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "matk",
+            "value": 8,
+            "unit": "flat",
+            "damageTypes": [],
+            "durationSeconds": 0,
+            "key": "blood-magic-strength"
+          },
+          {
+            "valueScaling": {
+              "type": "linear",
+              "base": 18,
+              "perLevel": 6
+            },
+            "type": "resourceDrain",
+            "target": "self",
+            "allowedRaces": [],
+            "value": 18,
+            "unit": "flat",
+            "resource": "health",
+            "damageTypes": [],
+            "intervalSeconds": 1.5,
+            "durationSeconds": 0,
+            "key": "blood-magic-health-drain"
+          }
+        ],
+        "effectsVersion": 1,
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 8,
+                "perLevel": 8
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 18,
+                "perLevel": 6
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      },
+      "after": {
+        "_id": "6acc1c7e4826525c70d04c39",
+        "skillName_eng": "Burn Out",
+        "category": "passive",
+        "charClass": [
+          "Ritualist",
+          "Bloodmage"
+        ],
+        "currentSkillLv": 0,
+        "currentUpgradeLv": 0,
+        "description_de": "Verstärkt deine Blutmagie auf Skilllevel 1 um 4 magischen Angriff. Solange die Verstärkung wirkt, verlierst du alle 1,5 Sekunden 18 Lebenspunkte. Pro weiterem Skilllevel steigt der Angriffsbonus um 4 und der Lebensverbrauch je Intervall um 6. Auf Skilllevel 10 erhältst du +40 magischen Angriff und verlierst 72 Lebenspunkte je Intervall.",
+        "description_eng": "Strengthens your blood magic by 4 magical attack at skill level 1. While the enhancement is active, you lose 18 health every 1.5 seconds. Each additional skill level adds 4 magical attack and increases the health cost per interval by 6. At skill level 10, gain +40 magical attack and lose 72 health per interval.",
+        "dmgType": "passive",
+        "maxSkillLv": 10,
+        "maxUpgradeLv": 10,
+        "nr": 214,
+        "skillName_de": "Ausbrennen",
+        "skillpoints": 1,
+        "effects": [
+          {
+            "valueScaling": {
+              "type": "linear",
+              "base": 4,
+              "perLevel": 4
+            },
+            "type": "statModifier",
+            "target": "self",
+            "allowedRaces": [],
+            "stat": "matk",
+            "value": 4,
+            "unit": "flat",
+            "damageTypes": [],
+            "durationSeconds": 0,
+            "key": "blood-magic-strength"
+          },
+          {
+            "valueScaling": {
+              "type": "linear",
+              "base": 18,
+              "perLevel": 6
+            },
+            "type": "resourceDrain",
+            "target": "self",
+            "allowedRaces": [],
+            "value": 18,
+            "unit": "flat",
+            "resource": "health",
+            "damageTypes": [],
+            "intervalSeconds": 1.5,
+            "durationSeconds": 0,
+            "key": "blood-magic-health-drain"
+          }
+        ],
+        "effectsVersion": 1,
+        "levelProgression": {
+          "version": 1,
+          "rules": [
+            {
+              "path": [
+                "effects",
+                "0",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 4,
+                "perLevel": 4
+              },
+              "source": "storedFormula"
+            },
+            {
+              "path": [
+                "effects",
+                "1",
+                "valueScaling"
+              ],
+              "rule": {
+                "kind": "linear",
+                "base": 18,
+                "perLevel": 6
+              },
+              "source": "storedFormula"
+            }
+          ],
+          "extensionNeedsDefinition": []
+        },
+        "classificationVersion": 1,
+        "type": "passive"
+      }
+    }
+  ]
+}

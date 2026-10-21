@@ -1,0 +1,99 @@
+{
+  "_id": "6acc1c7e4826525c70d04c04",
+  "skillName_eng": "Energy of Anger",
+  "__v": 0,
+  "category": "active",
+  "cd": 67,
+  "charClass": [
+    "Gladiator",
+    "Berserker"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Eigenbuff, der deinen physischen Angriff auf allen Skillstufen um 50 erhöht. Während der Buff aktiv ist, erzeugen ausschließlich deine Auto-Attacks Wut: 0,5 Wutpunkte je Angriff auf Stufe 1 bei einer Leiste von 100 Punkten. Je weiterer Stufe kommen bis Stufe 9 0,05 Punkte hinzu; Stufe 10 erreicht genau 1 Wutpunkt je Auto-Attack. Skills und Begleiter erzeugen durch diesen Effekt keine Wut. Die Dauer steigt gleichmäßig von 45 auf 50 Sekunden, der Cooldown 67 Sekunden auf Stufe 1 und 58 Sekunden auf Stufe 10. Mana-Kosten steigen von 77 um 42 je weiterer Stufe auf 455. Wutaufbau im Verhältnis zum Angriffstempo wird später geprüft. Castzeit 0,1 Sekunden. Wutaufbau durch Auto-Attacks ist ausschließlich während dieses Buffs möglich; es gibt keinen zusätzlichen Grund-Wutgewinn außerhalb des Buffs.",
+  "description_eng": "Self buff increasing physical attack by 50 at every skill level. While active, only your basic attacks generate Rage: 0.5 Rage points per attack at level 1 on a 100 point bar. Each additional level adds 0.05 points through level 9; level 10 reaches exactly 1 Rage point per basic attack. Skills and companions do not generate Rage through this effect. Duration increases evenly from 45 to 50 seconds and Cooldown 67 seconds at level 1 and 58 seconds at level 10. Mana cost increases from 77 by 42 per additional level to 455. Rage generation relative to attack speed remains to be reviewed. Cast time is 0.1 seconds. Basic attacks generate Rage only while this buff is active; no additional baseline Rage generation outside the buff.",
+  "dmgType": "selfbuff",
+  "dur": 45,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 161,
+  "patk": 50,
+  "skillName_de": "Energie der Wut",
+  "skillpoints": 1,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 67,
+    "perLevel": -1
+  },
+  "durationScaling": {
+    "type": "linear",
+    "base": 45,
+    "perLevel": 0.5555555555555556
+  },
+  "effects": [
+    {
+      "key": "energy-anger-basic-attack-rage",
+      "type": "resourceGain",
+      "target": "self",
+      "resource": "rage",
+      "reference": "maxRage",
+      "value": 0.005,
+      "unit": "fraction",
+      "valueScaling": {
+        "type": "table",
+        "values": [
+          0.005,
+          0.0055,
+          0.006,
+          0.0065,
+          0.007,
+          0.0075,
+          0.008,
+          0.0085,
+          0.009,
+          0.01
+        ]
+      },
+      "gainTrigger": "ownBasicAttack",
+      "oncePerAttackAction": true,
+      "excludeCompanionAttacks": true,
+      "durationSeconds": 45,
+      "durationScaling": {
+        "type": "linear",
+        "base": 45,
+        "perLevel": 0.5555555555555556
+      }
+    }
+  ],
+  "mana": 77,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 77,
+        "perLevel": 42
+      }
+    }
+  ],
+  "statScaling": {
+    "patk": {
+      "type": "table",
+      "values": [
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50,
+        50
+      ]
+    }
+  },
+  "castTimeSeconds": 0.1
+}
