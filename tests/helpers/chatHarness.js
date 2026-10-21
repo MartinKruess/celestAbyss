@@ -34,7 +34,8 @@ export async function harness(options = {}) {
   ]);
   const authenticate = async token => { if (!identities.has(token)) throw new Error('invalid'); return identities.get(token); };
   const http = createServer();
-  const chat = attachChat(http, { events, store, authenticate, ...options });
+  const chat = attachChat(http, { events, store, authenticate,
+    moderation: { prepare: async ({ text }) => ({ action: 'allow', text }) }, ...options });
   http.listen(0, '127.0.0.1'); await once(http, 'listening');
   const clients = [];
   const connect = async (path = '/chat', origin) => {

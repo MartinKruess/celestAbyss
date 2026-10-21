@@ -2,6 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 import { CharDataModel } from './characterSchema.js';
 
 const playerSchema = mongoose.Schema({
+    role: { type: String, enum: ['player', 'moderator', 'admin'], default: 'player' },
     username: {
         type: String,
         required: true,

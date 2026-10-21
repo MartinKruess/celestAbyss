@@ -3,13 +3,14 @@ import { authenticateChat } from './authentication.js';
 import { chatStore } from './store.js';
 import { chatError, parseCommand } from './protocol.js';
 import { sessionEvents } from '../security/sessionEvents.js';
+import { moderationService, moderationEvents } from '../moderation/service.js';
 
 export function attachChat(server, { authenticate = authenticateChat, store = chatStore,
   events = sessionEvents, isReady = () => true, origins = '*', authTimeoutMs = 5000,
   recheckMs = 30000, heartbeatMs = 30000, sendLimit = 5, sendWindowMs = 10000,
-  maxBufferedBytes = 1024 * 1024 } = {}) {
+  maxBufferedBytes = 1024 * 1024, moderation = moderationService, moderationSignals = moderationEvents } = {}) {
   const wss = new WebSocketServer({ noServer: true, maxPayload: 16384, perMessageDeflate: false });
-  const peers = new Map(), subscribers = new Set(), addresses = new Map(), sendBuckets = new Map(), attempts = new Map();
+  const peers = new Map(), subscribers = new Set(), addresses = new Map(), sendBuckets = new Map(), reportBuckets = new Map(), attempts = new Map();
   let stopping = false, publication = Promise.resolve(), pendingPublications = 0, revocationVersion = 0;
   const fail = (peer, code, reason) => peer.ws.close(code, reason);
   const send = (peer, data) => {
@@ -79,6 +80,17 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
       send(peer, { type: 'unsubscribed', requestID: command.requestID, channel: 'global' });
     } else if (command.type === 'history') {
       send(peer, { type: 'history', requestID: command.requestID, ...await store.history(command) });
+    } else if (command.type === 'report') {
+      const now = Date.now();
+      let bucket = reportBuckets.get(peer.identity.accountID);
+      if (!bucket || now >= bucket.reset) {
+        if (!bucket && reportBuckets.size >= 10000) throw chatError('CHAT_BUSY');
+        bucket = { count: 0, reset: now + 60000 }; reportBuckets.set(peer.identity.accountID, bucket);
+      }
+      if (++bucket.count > 5) throw chatError('REPORT_RATE_LIMITED');
+      send(peer, { type: 'reported', requestID: command.requestID, ...await moderation.report({
+        identity: peer.identity, messageID: command.messageID, reason: command.reason.trim(),
+      }) });
     } else if (command.type === 'send') {
       if (!peer.subscribed) throw chatError('NOT_SUBSCRIBED');
       const key = peer.identity.accountID, now = Date.now();
@@ -88,12 +100,21 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
         bucket = { count: 0, reset: now + sendWindowMs }; sendBuckets.set(key, bucket);
       }
       if (++bucket.count > sendLimit) throw chatError('RATE_LIMITED');
+      // Context analysis must not stall the global publication queue.
+      const decision = await moderation.prepare({ identity: peer.identity, clientMessageID: command.clientMessageID, text: command.text });
+      if (decision.action === 'block' || decision.action === 'hold') {
+        send(peer, { type: decision.action === 'block' ? 'blocked' : 'held', requestID: command.requestID,
+          clientMessageID: command.clientMessageID, caseID: decision.caseID,
+          notice: decision.action === 'block' ? 'Diese Nachricht wurde gesperrt und zur Prüfung gemeldet.' : 'Diese Nachricht wird vor der Zustellung geprüft.' });
+        return;
+      }
       await publish(async () => {
         // Logout may have happened while this message waited in the queue.
         if (stopping || peer.ws.readyState !== WebSocket.OPEN) return;
         await verified(peer.token);
         if (peer.ws.readyState !== WebSocket.OPEN) return;
-        const result = await store.append({ identity: peer.identity, clientMessageID: command.clientMessageID, text: command.text });
+        const result = await store.append({ identity: peer.identity, clientMessageID: command.clientMessageID, text: decision.text, originalText: command.text });
+        await moderation.published?.({ caseID: decision.caseID, message: result.message });
         // Persistence precedes both acknowledgement and distribution.
         send(peer, { type: 'sent', requestID: command.requestID, duplicate: !result.created, message: result.message });
         if (result.created) for (const recipient of subscribers) live(recipient, result.message);
@@ -106,6 +127,12 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
       (peer.identity.sessionID === sessionID || peer.identity.accountID === accountID)) fail(peer, 4001, 'Session revoked');
   };
   events.on('revoked', onRevoked);
+  const onResolved = result => {
+    for (const peer of peers.values()) if (peer.identity?.accountID === result.senderID) send(peer, {
+      type: 'moderation-result', caseID: result.caseID, clientMessageID: result.clientMessageID, status: result.status,
+    });
+  };
+  moderationSignals.on('resolved', onResolved);
   const rejectUpgrade = (socket, status, reason) => socket.end(`HTTP/1.1 ${status} ${reason}\r\nConnection: close\r\nContent-Length: 0\r\n\r\n`);
   const upgrade = (request, socket, head) => {
     socket.on('error', () => {});
@@ -163,11 +190,11 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
       if (!peer.alive || !isReady()) { peer.ws.terminate(); continue; }
       peer.alive = false; if (peer.ws.readyState === WebSocket.OPEN) peer.ws.ping();
     }
-    for (const map of [attempts, sendBuckets]) for (const [key, value] of map) if (value.reset <= Date.now()) map.delete(key);
+    for (const map of [attempts, sendBuckets, reportBuckets]) for (const [key, value] of map) if (value.reset <= Date.now()) map.delete(key);
   }, heartbeatMs);
   heartbeat.unref();
   return { wss, stop: async () => {
-    stopping = true; clearInterval(heartbeat); events.off('revoked', onRevoked);
+    stopping = true; clearInterval(heartbeat); events.off('revoked', onRevoked); moderationSignals.off('resolved', onResolved);
     // Keep the upgrade handler in place to explicitly reject new connections.
     const queues = [...peers.values()].map(peer => {
       clearTimeout(peer.authTimer); clearTimeout(peer.expiryTimer); clearTimeout(peer.recheckTimer);

@@ -1,2 +1,12 @@
 .env
 node_modules
+
+# Local scratch work and repeated exports; keep canonical data and review inputs tracked.
+/tmp/
+/outputs/
+# Large superseded damage traces remain available locally. Current reports are tracked.
+/data/balancing/history/**/report.json
+/data/balancing/history/**/buff-scenarios.json
+/data/balancing/history/**/all-class-timed-damage.json
+/data/balancing/history/**/all-class-buffed-timed-damage.json
+/data/balancing/history/**/all-class-ten-minute-full-buff-attack-modes.json

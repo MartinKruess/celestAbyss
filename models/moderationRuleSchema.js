@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 const schema = new mongoose.Schema({
   key: { type: String, required: true, unique: true },
   language: { type: String, required: true },
+  scope: { type: String, enum: ['global', 'language'], default: 'global' },
   term: { type: String, required: true },
   variants: { type: [String], default: [] },
   matchType: { type: String, enum: ['word', 'phrase'], required: true },

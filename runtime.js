@@ -4,6 +4,7 @@ import { attachChat } from './chat/server.js';
 import { initializeChatStore } from './chat/store.js';
 import { createApp } from './app.js';
 import { SessionModel } from './models/sessionSchema.js';
+import { initializeModeration, moderationService } from './moderation/service.js';
 
 const listen = (server, port, host) => new Promise((resolve, reject) => {
   const failed = error => { server.off('listening', ready); reject(error); };
@@ -20,11 +21,12 @@ const close = server => new Promise(resolve => {
 
 export async function startBackend(config, { database = mongoose, logger = console, chatOptions = {} } = {}) {
   let stopping = false, stopPromise;
-  let http, wsHttp, wss, chat;
+  let http, wsHttp, wss, chat, cleanup, cleanupTask;
   const isReady = () => !stopping && database.connection.readyState === 1;
   const stop = () => {
     if (stopPromise) return stopPromise;
     stopping = true;
+    clearInterval(cleanup);
     stopPromise = (async () => {
       const deadline = setTimeout(() => {
         http?.closeAllConnections(); wsHttp?.closeAllConnections();
@@ -33,7 +35,7 @@ export async function startBackend(config, { database = mongoose, logger = conso
       try {
         const wsClosed = wss ? new Promise(resolve => wss.close(resolve)) : Promise.resolve();
         wss?.clients.forEach(client => client.close(1001, 'Server shutting down'));
-        await Promise.all([close(http), close(wsHttp), wsClosed, chat?.stop()]);
+        await Promise.all([close(http), close(wsHttp), wsClosed, chat?.stop(), cleanupTask?.catch(() => {})]);
         await database.disconnect();
       } finally { clearTimeout(deadline); }
     })();
@@ -43,6 +45,17 @@ export async function startBackend(config, { database = mongoose, logger = conso
     await database.connect(config.uri, { dbName: config.dbName, serverSelectionTimeoutMS: 10000, autoIndex: false });
     if (database === mongoose) await SessionModel.createIndexes();
     if (database === mongoose) await initializeChatStore();
+    if (database === mongoose) {
+      await initializeModeration();
+      let sweeping = false;
+      cleanup = setInterval(async () => {
+        if (sweeping || stopping) return;
+        sweeping = true;
+        try { cleanupTask = moderationService.sweep(); await cleanupTask; } catch { logger.error('Moderation cleanup failed.'); }
+        finally { sweeping = false; }
+      }, 60000);
+      cleanup.unref();
+    }
     http = createServer(createApp({ isReady, corsConfig: config.cors }));
     wsHttp = createServer((req, res) => { res.writeHead(404); res.end(); });
     chat = attachChat(wsHttp, { ...chatOptions, isReady, origins: config.cors.origin });
