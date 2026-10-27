@@ -1,0 +1,166 @@
+{
+  "status": "itemSourceUpdatedNotDatabaseImported",
+  "source": "scripts/itemData.js",
+  "normalAttributeBonusesByRank": {
+    "2": 2,
+    "3": 4,
+    "4": 8,
+    "5": 10,
+    "6": 16,
+    "7": 18
+  },
+  "interpretation": "Latest user correction replaces proposed R6 14 with 16; R7 remains the proposed 18.",
+  "example": {
+    "stones": 6,
+    "bonusPerStone": 16,
+    "totalAttributeBonus": 96
+  },
+  "luck": "Existing Achat records left unchanged; Luck stones are excluded under the new socket design.",
+  "legacySpecialAttributes": "Existing Faith/Victim/Ambush rows adjusted in source but not thereby approved as socketable under the new attribute system.",
+  "changes": [
+    {
+      "name": "Refined Granat",
+      "rank": 6,
+      "stat": "vita",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Granat\",\n        description: \"Increases vitality by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"20\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Saphir",
+      "rank": 6,
+      "stat": "int",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Saphir\",\n        description: \"Increases intelligence by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"20\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Amethyst",
+      "rank": 6,
+      "stat": "wisdom",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Amethyst\",\n        description: \"Increases Wisdom by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"20\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Jade",
+      "rank": 6,
+      "stat": "faith",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Jade\",\n        description: \"Increases Faith by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"20\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Onyx",
+      "rank": 6,
+      "stat": "victim",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Onyx\",\n        description: \"Increases Victim by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"20\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Turmalin",
+      "rank": 6,
+      "stat": "dexerity",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Turmalin\",\n        description: \"Increases Dexterity by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"20\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Opal",
+      "rank": 6,
+      "stat": "agility",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Opal\",\n        description: \"Increases Dexterity by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"20\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Labradorit",
+      "rank": 6,
+      "stat": "ambush",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Labradorit\",\n        description: \"Increases Ambush by +20.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"20\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Refined Jaspis",
+      "rank": 6,
+      "stat": "strength",
+      "before": 20,
+      "after": 16,
+      "beforeSource": "    {\n        name: \"Refined Jaspis\",\n        description: \"Increases strength by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"6\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"500\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"100\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"20\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Granat",
+      "rank": 7,
+      "stat": "vita",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Granat\",\n        description: \"Increases vitality by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"30\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Saphir",
+      "rank": 7,
+      "stat": "int",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Saphir\",\n        description: \"Increases intelligence by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"30\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Amethyst",
+      "rank": 7,
+      "stat": "wisdom",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Amethyst\",\n        description: \"Increases Wisdom by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"30\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Jade",
+      "rank": 7,
+      "stat": "faith",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Jade\",\n        description: \"Increases Faith by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"30\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Onyx",
+      "rank": 7,
+      "stat": "victim",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Onyx\",\n        description: \"Increases Victim by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"30\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Turmalin",
+      "rank": 7,
+      "stat": "dexerity",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Turmalin\",\n        description: \"Increases Dexterity by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"30\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Opal",
+      "rank": 7,
+      "stat": "agility",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Opal\",\n        description: \"Increases Dexterity by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"30\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Labradorit",
+      "rank": 7,
+      "stat": "ambush",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Labradorit\",\n        description: \"Increases Ambush by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"30\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    },
+    {
+      "name": "Blessed Jaspis",
+      "rank": 7,
+      "stat": "strength",
+      "before": 30,
+      "after": 18,
+      "beforeSource": "    {\n        name: \"Blessed Jaspis\",\n        description: \"Increases strength by +30.\",\n        thumbnail: \"\",\n        type: \"Soulstone\",\n        category: \"upgrade\",\n        rang: \"7\",\n        weight: \"5\",\n        stacksize: \"100\",\n        sellable: \"true\",\n        tadable: \"true\",\n        sell: \"1000\",\n        price: \"0\",\n        rare: \"2\",\n        slots: \"1\",\n        level: \"120\",\n        maxlevel: \"\",\n        pang: \"\",\n        mang: \"\",\n        pdeff: \"\",\n        crit: \"\",\n        block: \"\",\n        speed: \"\",\n        health: \"\",\n        mana: \"\",\n        agility: \"\",\n        ambush: \"\",\n        dexerity: \"\",\n        faith: \"\",\n        int: \"\",\n        strength: \"30\",\n        victim: \"\",\n        vita: \"\",\n        wisdom: \"\",\n        luck: \"\",\n        cd: \"\",\n        duration: \"\",\n    },"
+    }
+  ]
+}

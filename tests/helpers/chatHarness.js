@@ -8,26 +8,40 @@ import { visibleHistory } from '../../chat/history.js';
 
 export function memoryStore(initial = []) {
   const messages = [...initial];
+  const pending = new Set(), originals = new Map();
   return {
-    messages, fail: false,
-    append: async function ({ identity, clientMessageID, text }) {
+    messages, pending, fail: false, failDispatch: false, failPending: false,
+    append: async function ({ identity, clientMessageID, text, originalText = text, onStored }) {
       if (this.fail) throw new Error('database secret');
       const existing = messages.find(message => message.sender.accountID === identity.accountID && message.clientMessageID === clientMessageID);
       if (existing) {
         if (!messages.slice(-50).includes(existing)) throw chatError('MESSAGE_OUTSIDE_HISTORY');
-        if (existing.text !== text) throw chatError('MESSAGE_ID_CONFLICT');
+        if ((originals.get(existing.id) ?? existing.text) !== originalText) throw chatError('MESSAGE_ID_CONFLICT');
+        await onStored?.({ message: existing, session: {} });
         return { message: existing, created: false };
       }
       const message = { id: String(messages.length + 1), channel: 'global', sequence: messages.length + 1,
         sender: { accountID: identity.accountID, username: identity.username }, clientMessageID, text, sentAt: new Date().toISOString() };
-      messages.push(message); return { message, created: true };
+      await onStored?.({ message, session: {} });
+      messages.push(message); originals.set(message.id, originalText); pending.add(message.id);
+      return { message, created: true };
+    },
+    pendingDeliveries: async function () {
+      if (this.failPending) throw new Error('database secret');
+      const latest = messages.slice(-50);
+      for (const id of pending) if (!latest.some(message => message.id === id)) pending.delete(id);
+      return latest.filter(message => pending.has(message.id));
+    },
+    markDispatched: async function (id) {
+      if (this.failDispatch) throw new Error('database secret');
+      pending.delete(id);
     },
     history: async (options = {}) => visibleHistory(messages.slice(-50), options, messages.at(-1)?.sequence ?? 0),
   };
 }
 
 export async function harness(options = {}) {
-  const events = new EventEmitter(), store = memoryStore();
+  const events = new EventEmitter(), store = options.store ?? memoryStore();
   const identities = new Map([
     ['one', { accountID: 'a'.repeat(24), sessionID: 'b'.repeat(24), username: 'One', expiresAt: Date.now() + 60000 }],
     ['two', { accountID: 'c'.repeat(24), sessionID: 'd'.repeat(24), username: 'Two', expiresAt: Date.now() + 60000 }],

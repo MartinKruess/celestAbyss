@@ -9,6 +9,14 @@ export const ClassTemplateModel = mongoose.model('classTemplates', new mongoose.
   raceScope: { type: String, enum: ['fixed', 'crossRace'], required: true },
   roleNotes: [String], weaponNotes: String, attributeNotes: String,
   baseStats: { type: Map, of: Number, default: null }, statConversions: { type: mongoose.Schema.Types.Mixed, default: null },
+  // Runtime inputs only. baseStats remains the historical naked level-1 balancing reference.
+  statFoundation: { type: new mongoose.Schema({
+    version: { type: Number, required: true, enum: [2] },
+    baseLevel: { type: Number, required: true, enum: [1] },
+    directStats: { type: Map, of: Number, required: true },
+    attributes: { type: Map, of: Number, required: true },
+    attributeGrowth: { type: Map, of: Number, required: true },
+  }, { _id: false }), default: undefined },
   regeneration: {
     baseManaPerTick: { type: Number, min: 0 },
     baseHealthPerTick: { type: Number, min: 0 },

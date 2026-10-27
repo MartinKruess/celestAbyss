@@ -5,9 +5,8 @@ import { startBackend } from './runtime.js';
 try {
   const backend = await startBackend(readRuntimeConfig());
   const shutdown = () => {
-    const deadline = setTimeout(() => process.exit(1), 15000);
-    backend.stop().then(() => clearTimeout(deadline)).catch(() => {
-      console.error('Shutdown failed.'); clearTimeout(deadline); process.exitCode = 1;
+    backend.stop().catch(() => {
+      console.error('Shutdown failed.'); process.exitCode = 1;
     });
   };
   process.once('SIGINT', shutdown);

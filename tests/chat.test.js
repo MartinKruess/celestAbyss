@@ -7,6 +7,35 @@ const login = (client, token) => client.command({ type: 'auth', token });
 const subscribe = client => client.command({ type: 'subscribe', channel: 'global' });
 const message = (client, clientMessageID, text) => client.command({ type: 'send', channel: 'global', clientMessageID, text });
 
+test('graceful shutdown drains accepted chat writes before closing connections',async()=>{
+  const h=await harness();let release;
+  try {
+    const client=await h.connect();await login(client,'one');await subscribe(client);
+    let entered;const started=new Promise(resolve=>{entered=resolve;});const gate=new Promise(resolve=>{release=resolve;});
+    const append=h.store.append.bind(h.store);
+    h.store.append=async input=>{entered();await gate;return append(input);};
+    const writing=message(client,'shutdown','accepted before shutdown');await started;
+    let done=false;const stopping=h.chat.stop().then(()=>{done=true;});
+    await new Promise(resolve=>setImmediate(resolve));assert.equal(done,false);
+    release();assert.equal((await writing).type,'sent');await stopping;
+    assert.equal(h.store.messages[0].text,'accepted before shutdown');
+  } finally {release?.();await h.stop();}
+});
+
+test('shutdown waits for moderation already running when its sender disconnects',async()=>{
+  let entered,release;const started=new Promise(resolve=>{entered=resolve;});const gate=new Promise(resolve=>{release=resolve;});
+  let finished=false;
+  const h=await harness({moderation:{report:async()=>{entered();await gate;finished=true;return {reported:true};}}});
+  try {
+    const client=await h.connect();await login(client,'one');
+    client.ws.send(JSON.stringify({type:'report',channel:'global',requestID:'r2',messageID:'a'.repeat(24),reason:'spam'}));await started;
+    client.ws.terminate();await once(client.ws,'close');await new Promise(resolve=>setImmediate(resolve));
+    let stopped=false;const stopping=h.chat.stop().then(()=>{stopped=true;});
+    await new Promise(resolve=>setImmediate(resolve));assert.equal(stopped,false);
+    release();await stopping;assert.equal(finished,true);
+  } finally {release();await h.stop();}
+});
+
 test('global chat authenticates, persists, acknowledges, distributes and deduplicates', async () => {
   const h = await harness();
   try {

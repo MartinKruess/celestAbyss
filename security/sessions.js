@@ -5,6 +5,8 @@ import { UserDataModel } from '../models/userSchema.js';
 import { createTokenService } from './tokens.js';
 import { envConfig } from '../scripts/config.js';
 import { sessionEvents } from './sessionEvents.js';
+import { publicBanReason } from './accountBan.js';
+import { trackService } from '../services/pendingWork.js';
 
 export const refreshHash = token => createHash('sha256').update(token).digest('hex');
 const validID = value => typeof value === 'string' && /^[a-f0-9]{24}$/i.test(value);
@@ -14,7 +16,7 @@ export function createSessionService({ sessions, users, tokens, newID = () => ne
     token: tokens().issue(accountID, sid), tokenType: 'Bearer', expiresIn: 900,
     refreshToken, refreshExpiresAt: expiresAt.toISOString(),
   });
-  return {
+  return trackService({
     start: async accountID => {
       const sid = newID(), expiresAt = new Date(now().getTime() + 7 * 86400000);
       const refreshToken = tokens().issueRefresh(accountID, sid, expiresAt);
@@ -27,10 +29,11 @@ export function createSessionService({ sessions, users, tokens, newID = () => ne
       let claims;
       try { claims = tokens().verifyRefresh(token); } catch { throw invalid(); }
       if (!validID(claims.sid) || !validID(claims.sub)) throw invalid();
-      const account = await users.findById(claims.sub).select('_id isBanned');
+      const account = await users.findById(claims.sub).select('_id isBanned banReason');
       if (!account || account.isBanned) {
-        await sessions.updateOne({ _id: claims.sid, accountID: claims.sub }, { $set: { revokedAt: now() } });
-        events.emit('revoked', { sessionID: claims.sid });
+        await sessions.updateMany({ accountID: claims.sub, revokedAt: null }, { $set: { revokedAt: now() } });
+        events.emit('revoked', { accountID: claims.sub });
+        if (account?.isBanned) throw Object.assign(new Error('ACCOUNT_BANNED'), { status: 403, reason: publicBanReason(account) });
         throw invalid();
       }
       const expiresAt = new Date(claims.exp * 1000);
@@ -57,7 +60,7 @@ export function createSessionService({ sessions, users, tokens, newID = () => ne
       await sessions.updateMany({ accountID, revokedAt: null }, { $set: { revokedAt: now() } });
       events.emit('revoked', { accountID: String(accountID) });
     },
-  };
+  });
 }
 export const sessionService = createSessionService({ sessions: SessionModel, users: UserDataModel,
   tokens: () => createTokenService(envConfig.ACCESS_TOKEN_SECRET) });

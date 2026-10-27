@@ -8,7 +8,7 @@ export const skillController = async (req, res) => {
         for (let i = 0; i < skills.length; i++) {
             const skillCheck = await SkillDataModel.findOne({ skillName_de: skills[i].S_Name_de })
 
-            // Query: {$and: [{"charClass": "Knife", "charClass": "Templar", "category": "passive"}]}
+            // Query: {$and: [{"charClass": "Knight", "charClass": "Templar", "category": "passive"}]}
 
 
             if (!skillCheck) {

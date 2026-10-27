@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "status": "optimalClassSpecificReferenceDesignNotYetCalculated",
+  "purpose": "Calibrate central monster growth against plausible player progression rather than instantaneous full equipment at rank unlocks.",
+  "checkpoints": [
+    1,
+    5,
+    10,
+    20,
+    40,
+    60,
+    90
+  ],
+  "equipment": {
+    "levelOne": "Starting weapon; no armor in the reference",
+    "progression": "Optimal reference replaces earlier typical-drop baseline after starter period; retain mixed-slot equipment as a lower-progression comparison.",
+    "fullSetComparisons": "Full level-appropriate sets are the intended high-level calibration baseline under the latest user instruction.",
+    "dropOrder": "Use plausible mixed-slot scenarios: chest first versus gloves/shoes first; evaluate resulting total defense rather than assume one specific drop order. More than one combination may satisfy the encounter requirement.",
+    "rankTransition": "A rank unlock does not guarantee a complete set. Intended readiness may require finding/crafting more pieces or compensating through skills.",
+    "starterReference": {
+      "levels1Through9": "Exclude armor from the calibration reference even if a player already finds pieces.",
+      "level10": "At least two armor pieces. Exact slots not fixed.",
+      "levels12Through13": "Expected full R1 set, +0. User expects frequent starter drops.",
+      "level15": "Main progression demands begin. Earlier mention of three pieces is retained as a lower-equipment comparison, not a forced downgrade after full R1.",
+      "level40AndLater": "Full level-appropriate equipment for optimal reference, including configured upgrade/buff assumptions; exact contributions still to be supplied."
+    }
+  },
+  "passives": {
+    "levelOne": "None",
+    "intermediateLevels": "Class-specific intended optimum; do not audit skill-point availability or exact learning order now.",
+    "level40AndLater": "User intends full relevant passive progression in the optimal reference; use each class actual permitted definitions/caps when calculating. Exact acquisition timing not being verified.",
+    "levelNinety": "Same passive system; no invented additional passive progression."
+  },
+  "buffs": {
+    "ownBuffs": "Include learned own buffs with actual effects, durations, costs, cooldowns and upkeep. No blanket stat multiplier.",
+    "externalBuffs": {
+      "levelSixty": "Include in the expected-world scenario; user expects frequent access to other players' buffs",
+      "levelNinety": "Include in the expected-world scenario",
+      "exactBuffSet": "Pending; do not silently treat every possible maximum group buff as permanently active",
+      "comparison": "Keep an own-buffs-only comparison to show the contribution of external buffs, not as the sole expected progression baseline"
+    },
+    "estimatedOwnBuffImprovement": {
+      "source": "User estimate",
+      "approximatePercentRange": [
+        2,
+        7
+      ],
+      "verification": "Not measured; not an instruction to increase all stats by 2–7 percent"
+    }
+  },
+  "additionalEquipmentStats": {
+    "randomAffixes": {
+      "includeInProgressionDesign": true,
+      "numericalDistribution": "pending"
+    },
+    "soulstones": {
+      "firstDropLevelApprox": [
+        22,
+        28
+      ],
+      "socketingAccess": "First capital visit, typically level 30; later if player delays story",
+      "naturalEquipmentSocketsFromLevel": 40,
+      "socketCapacitySource": "data/balancing/socket-design.json",
+      "numericalContribution": "Basic attribute stone values, per-item duplication caps and tutorial grant are defined. Tutorial: two slots across one weapon and one armor item, +2 each, up to +4 in one common eligible attribute. Apply chosen legal loadouts at later levels; direct-stat stone values remain pending.",
+      "budgetSource": "data/balancing/socket-reference-budgets.json"
+    },
+    "accounting": "Compute independently from buffs once values are known. Do not assume they exactly replace any particular buff's contribution.",
+    "upgrades": {
+      "weaponAndArmor": true,
+      "numericalContribution": "pending_for_typical_progression_reference"
+    }
+  },
+  "calibration": {
+    "reference": "Compute complete class-specific optimal reference scenarios at checkpoints. Any aggregate is a summary across complete builds, not a typical population build or cross-class maximum composite.",
+    "monsterHealth": "Track actual effective player damage and desired fight duration",
+    "monsterAttack": "Track player health and actual physical/magical mitigation",
+    "monsterDefense": "Use intended per-type reduction and the established monster-defense formula",
+    "rule": "Count each passive, buff, affix and soulstone contribution once; these assumptions do not change runtime stats or approve a new monster growth curve",
+    "difficultyTargets": "Define acceptable fight duration/actions, incoming pressure and survival margin for normal solo encounters, with a modest gradual increase at later levels. Exact numeric target bands not yet assigned.",
+    "calibrationLoop": "Set desired world challenge -> choose explicit reference progression scenarios -> derive shared HP/attack/defense growth -> verify checkpoints and role profiles. Tune global curves for major drift, not individual level variants for each build.",
+    "growthState": "Shared curves and final numbers remain pending. No runtime monster, skill, equipment or database values changed by this design clarification."
+  },
+  "classAdvancement": {
+    "providesAdditionalBonuses": true,
+    "timingAndNumericalContribution": "pending",
+    "doNotInventSpecificSuccessorClasses": true
+  },
+  "worldDifficultyPolicy": {
+    "authority": "Fixed world encounters set progression expectations; individual player builds do not dynamically change monster stats.",
+    "overworldIntent": "Accessible solo content with a modest, gradual increase in challenge over levels; not exact identical fight duration and not mandatory six-player normal mobs.",
+    "referenceMeaning": "Class-specific intended optimum with starter exceptions; monsters set progression demands, no dynamic per-player adaptation.",
+    "playerAgency": "Players may meet requirements through stronger armor, additional equipment pieces, different passive choices, active skill use or other available progression. A weak build may struggle without lowering the monster.",
+    "skillGates": "Do not impose one mandatory named skill unless explicitly designed; consider alternative ways to meet effective offense and survivability requirements.",
+    "bosses": "Keep boss/group encounter roles separate from normal solo targets; common scaling must preserve role differences.",
+    "noAutomaticLevelSolution": "Higher-level dungeon monsters are one tuning tool, not proof that their damage and defenses remain playable; mitigation and group mechanics still require checking."
+  },
+  "skillBuildScenarios": {
+    "primary": "Class-specific optimal build at each checkpoint with starter exceptions.",
+    "secondary": "Weaker/offensive/defensive/mixed builds may demonstrate progression pressure; they do not set the primary monster difficulty.",
+    "timingAudit": "Not requested; explicitly stopped by user."
+  },
+  "uncertainPowerBudget": {
+    "systems": [
+      "Socket/soulstones: drops before level 30, capital tutorial around 30, natural gear sockets from 40",
+      "Random equipment affixes and ability to improve chosen rolls",
+      "Weapon and armor upgrades",
+      "Crafting and class advancement",
+      "Stronger dungeon equipment",
+      "Future skill improvements",
+      "Pets and other small progression bonuses"
+    ],
+    "numericalAssumptions": "Use explicit provisional typical contributions only when ranges and availability are known. Do not silently assume maximum rolls, maximum upgrades, pets or all future bonuses.",
+    "beforeKnown": "Keep contributions separately visible; start with defined equipment/skill requirements and report missing systems as unmodeled. No invented universal percentage.",
+    "pets": "Build creatures first; add a separate with-pet scenario when pet values and access are available. Do not silently count summon skills a second time as a regular pet."
+  },
+  "referencePolicy": {
+    "mode": "classSpecificOptimumWithStarterExceptions",
+    "meaning": "Use the intended optimal progression of each individual class at the checkpoint, not a population-average build and not maxima assembled from different classes.",
+    "skillPointTimingAudit": "Stopped at user request; level-20 and intermediate skill-point timing differ by character and are not to be researched now.",
+    "unknownBonuses": "Plus values, affixes, stones, crafted/dungeon gear and other bonuses require explicit reference values when calculated; do not invent unlimited maxima."
+  }
+}

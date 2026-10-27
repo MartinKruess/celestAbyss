@@ -1,3 +1,4 @@
+import {playerArmorReduction,monsterArmorReduction} from './combatDefense.js';
 import {attributeConversionFactor} from './attributeConversion.js';
 import {autoAttackInterval,normalizedSpeedBonus} from './attackSpeed.js';
 import {curveValue,skillValue,evaluateDamageSkill,evaluateSequenceHit,evaluateDamagePhase,casterAttackForDamage} from './rotationDamage.js';
@@ -26,7 +27,11 @@ export function conversionDelta(model,key,attribute,amount){
   if(c.unit==='percentagePoints')f/=100;result[c.target]=(result[c.target]??0)+amount*f;
  }return result;
 }
-export function simulateClass({pre,skills,model,attackNumbers,config={}}){
+export function simulateClass(args){
+ const frames=simulateClassFrames(args);let next=frames.next();while(!next.done)next=frames.next();return next.value;
+}
+// Cooperative stepping keeps party actors on the same clock and shared boss state.
+export function* simulateClassFrames({pre,skills,model,attackNumbers,config={}}){
  if(config.attackMode!==undefined&&!['mixed','autoOnly','skillsOnly','skillsPreferred'].includes(config.attackMode))throw Error('Unknown attack mode');
  skills=skills.map(s=>skillForClass(s,pre.key));
  skills=skills.map(s=>{const m=targetedSkillModifiers(skills,pre.includedSkills,s.nr);return m.replacementSkillName_de?{...s,skillName_de:m.replacementSkillName_de,skillName_eng:m.replacementSkillName_eng??s.skillName_eng}:s;});
@@ -58,8 +63,8 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  const summonRate=nr=>get(nr)?.summonedCreatureSettings?.baseAttacksPerSecond??cfg.baseAttacksPerSecond;
  const active=(nr)=>state.buffs.some(b=>b.nr===nr&&b.until>state.time+1e-8);
  function stats(){
-  if(cfg.cacheCombatStats&&statsSnapshot?.time===state.time&&statsSnapshot.buffs===state.buffs&&statsSnapshot.buffCount===state.buffs.length&&statsSnapshot.souls===state.souls)return statsSnapshot.value;
-  const r={...pre.stats};for(const b of state.buffs.filter(b=>b.until>state.time+1e-8)){for(const[k,v]of Object.entries(b.delta))r[k]=(r[k]??0)+v;}
+  if(cfg.cacheCombatStats&&(!cfg.party||statsSnapshot?.time===state.time)&&statsSnapshot?.buffs===state.buffs&&statsSnapshot.buffCount===state.buffs.length&&statsSnapshot.souls===state.souls&&statsSnapshot.partyRevision===(cfg.party?.revision??0))return statsSnapshot.value;
+  const r={...pre.stats};if(cfg.party?.statBonus)r.magicalAttack+=cfg.party.statBonus(key,'magicalAttack',state.time);for(const b of state.buffs.filter(b=>b.until>state.time+1e-8)){for(const[k,v]of Object.entries(b.delta))r[k]=(r[k]??0)+v;}
   if(key==='ritualist'){r.magicalAttack+=soulReserveAttackBonus(get(241),state.souls)+burnAttack;const storage=get(120)?.soulStorageSettings;if(storage?.bonusStat==='int'){const bonus=Math.floor(state.souls/storage.fragmentsPerBonusStep)*storage.bonusPerFullStep;const capacity=curveValue(storage.capacityScaling,get(120).maxSkillLv)??0;const baked=pre.includedSkills?.includes(120)?Math.floor(capacity/storage.fragmentsPerBonusStep)*storage.bonusPerFullStep:0;for(const [stat,value]of Object.entries(conversionDelta(model,key,'intelligence',bonus-baked)))r[stat]=(r[stat]??0)+value;}}
   for(const nr of pre.includedSkills??[]){const cv=get(nr)?.attributeConversionBonus;if(cv?.sourceStat==='vita'&&cv.targetStat==='str'){const extraVitality=state.buffs.filter(b=>b.until>state.time+1e-8).reduce((sum,b)=>sum+(b.vitalityBonus??0),0);for(const [stat,amount]of Object.entries(conversionDelta(model,key,'strength',extraVitality*attributeConversionFactor(get(nr)))))r[stat]=(r[stat]??0)+amount;}}
   const specialFactor=cfg.specialAttributeAttackFactors?.[key]??cfg.specialAttributeAttackFactor;
@@ -71,13 +76,13 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
   }
   if(cfg.enableOwnBuffs)for(const nr of pre.includedSkills??[]){const cv=get(nr)?.attributeConversionBonus;if(cv?.targetStat==='maxMana'){r.maxMana+=(buffAttribute(ownAttributes[cv.sourceStat])??0)*attributeConversionFactor(get(nr));}}
   r.manaRegen=pre.stats.manaRegen+(r.manaRegen-pre.stats.manaRegen)*permanentRegenFactor;
-  if(cfg.cacheCombatStats)statsSnapshot={time:state.time,buffs:state.buffs,buffCount:state.buffs.length,souls:state.souls,value:r};
+  if(cfg.cacheCombatStats)statsSnapshot={time:state.time,buffs:state.buffs,buffCount:state.buffs.length,souls:state.souls,partyRevision:cfg.party?.revision??0,value:r};
   return r;
  }
  function buffAttribute(name){return state.buffs.filter(b=>b.until>state.time+1e-8).reduce((sum,b)=>sum+(b.attributeBonuses?.[name]??0),0);}
  function skillStats(){const base=stats();if(!cfg.enableOwnBuffs&&!hasPassiveSkillBonus)return base;if(skillStatsSnapshot?.base===base)return skillStatsSnapshot.value;const permanent=hasPassiveSkillBonus?{...base,physicalSkillDamageBonus:(base.physicalSkillDamageBonus??0)+passiveSkillBonus.physicalSkillDamageBonus,magicalSkillDamageBonus:(base.magicalSkillDamageBonus??0)+passiveSkillBonus.magicalSkillDamageBonus}:base;const activeBuffs=cfg.enableOwnBuffs?state.buffs.filter(b=>b.until>state.time+1e-8).map(b=>get(b.nr)):[];const value=cfg.enableOwnBuffs?withSelfSkillDamageBonuses(withGroupSkillDamageBonuses(permanent,activeBuffs),activeBuffs):permanent;skillStatsSnapshot={base,value};return value;}
  function installOwnBuff(s){
-  const duration=cfg.permanentPrebuffs||permanentBuffNumbers.has(s.nr)||s.activation==='toggle'||[158,240].includes(s.nr)?Infinity:end(s);
+  const duration=cfg.permanentPrebuffs||permanentBuffNumbers.has(s.nr)||s.activation==='toggle'||[158,240].includes(s.nr)?Infinity:(cfg.buffDurationOverrides?.[s.nr]??end(s));
   if(!(duration>0)){warn(s.skillName_de+': keine definierte Buffdauer; nicht dauerhaft angenommen.');return;}
   const delta={},attributeBonuses={};const add=(k,v)=>{if(ownAttributes[k])attributeBonuses[ownAttributes[k]]=(attributeBonuses[ownAttributes[k]]??0)+v;else if(ownFlat[k])delta[ownFlat[k]]=(delta[ownFlat[k]]??0)+v;};
   if(s.nr!==150){
@@ -96,8 +101,34 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  state.buffs=state.buffs.filter(b=>b.nr!==s.nr);state.buffs.push({nr:s.nr,until:state.time+duration,delta,vitalityBonus:skillValue(s,'vita')??0,intelligenceBonus:skillValue(s,'int')??0});}
  function event(at,fn){if(at<=cfg.duration+1e-7)state.events.push({at:round(at),fn});}
  function ledger(nr,name,kind){const id=String(nr);return result.skills[id]??=( {nr,name,kind,applications:0,hits:0,damage:0,manaSpent:0,healing:0,firstUse:null,lastUse:null,useTimes:[]} );}
- function damage(n,name,kind,amount){if(state.dead||state.targetHealth<=0||state.time>cfg.duration+1e-7)return;amount=Math.max(0,amount);const entry=ledger(n,name,kind);entry.damage+=amount;entry.hits++;result.totalDamage+=amount;result[kind+'Damage']+=amount;const bin=result.minutes[Math.min(result.minutes.length-1,Math.floor((state.time-1e-8)/60))<0?0:Math.min(result.minutes.length-1,Math.floor((state.time-1e-8)/60))];bin.damage+=amount;bin[kind+'Damage']+=amount;state.targetHealth-=amount;if(state.targetHealth<=0)result.targetDeathAt=state.time;}
- function heal(n,name,amount){if(!(amount>0))return;const accepted=Math.max(0,Math.min(amount,stats().maxHealth-state.health));state.health+=accepted;result.healing+=accepted;result.overhealing+=amount-accepted;ledger(n,name,'skill').healing+=accepted;}
+ function damage(n,name,kind,amount,damageType){if(state.dead||state.targetHealth<=0||cfg.party?.targetHealth<=0||state.time>cfg.duration+1e-7)return 0;amount=Math.max(0,amount);
+ if(cfg.encounter){
+  const raw=amount,skill=get(n);let physicalShare;
+  if(damageType)physicalShare=damageType==='physical'?1:0;
+  else if(kind==='auto')physicalShare=['herbalist','healer','luminet','ritualist'].includes(key)?0:1;
+  else if(kind==='summon')physicalShare=skill.summonedCreatureSettings.damageType==='physical'?1:0;
+  else{
+   const p=skillValue(skill,'patk')??0,m=skillValue(skill,'matk')??0;
+   if(p&&m){const opts=attackOptions(skill),total=evaluateDamageSkill(skill,skillStats(),opts).initialDamage;physicalShare=total?evaluateDamageSkill(skill,skillStats(),{...opts,magicalMultiplier:0}).initialDamage/total:0;}
+   else physicalShare=p?1:0;
+  }
+  if(cfg.encounter.pack){
+   const hit=cfg.encounter.pack.resolveHit({raw,physicalShare,skill,kind,time:state.time});
+   amount=hit.amount;
+   result.rawOutgoingDamage=(result.rawOutgoingDamage??0)+hit.rawDamage;
+   result.preventedOutgoingDamage=(result.preventedOutgoingDamage??0)+hit.prevented;
+   result.overkillDamage=(result.overkillDamage??0)+hit.overkill;
+  }else{
+   const enemy=cfg.encounter.enemy;
+   // Calibration needs a true unmitigated baseline; zero armor normally retains 10%.
+   const pReduction=cfg.encounter.ignoreTargetArmor===true?0:monsterArmorReduction(enemy.physicalDefense,cfg.encounter.playerLevel),mReduction=cfg.encounter.ignoreTargetArmor===true?0:monsterArmorReduction(enemy.magicalDefense,cfg.encounter.playerLevel);
+   amount*=physicalShare*(1-pReduction)+(1-physicalShare)*(1-mReduction);
+   result.rawOutgoingDamage=(result.rawOutgoingDamage??0)+raw;
+   result.preventedOutgoingDamage=(result.preventedOutgoingDamage??0)+raw-amount;
+  }
+ }
+ const entry=ledger(n,name,kind);entry.damage+=amount;entry.hits++;result.totalDamage+=amount;result[kind+'Damage']+=amount;const bin=result.minutes[Math.min(result.minutes.length-1,Math.floor((state.time-1e-8)/60))<0?0:Math.min(result.minutes.length-1,Math.floor((state.time-1e-8)/60))];bin.damage+=amount;bin[kind+'Damage']+=amount;state.targetHealth-=amount;if(cfg.encounter?.pack)state.targetHealth=cfg.encounter.pack.health;if(cfg.party){cfg.party.damage({key,nr:n,kind,amount,time:state.time});state.targetHealth=cfg.party.targetHealth;}if(state.targetHealth<=0)result.targetDeathAt=state.time;return amount;}
+ function heal(n,name,amount,targetKey=key){if(!(amount>0))return;let accepted;if(cfg.party)accepted=cfg.party.heal({sourceKey:key,targetKey,nr:n,amount,time:state.time});else{accepted=Math.max(0,Math.min(amount,stats().maxHealth-state.health));state.health+=accepted;}result.healing+=accepted;result.overhealing+=amount-accepted;ledger(n,name,'skill').healing+=accepted;}
  function healFromAttack(s,dealt){for(const e of s.effects??[]){if(e.type!=='heal'||e.target!=='self')continue;let n=val(e.valueScaling,s.maxSkillLv)??e.value??0;if(e.unit==='fraction')n*=e.reference==='damageDealt'?dealt:stats().maxHealth;heal(s.nr,s.skillName_de,n);}}
  function costs(s){const r=stats(),c={mana:0,health:0,rage:0,souls:0};for(const e of s.resourceCosts??[]){let amount=val(e.scaling,s.maxSkillLv)??0;if(e.unit==='fraction')amount*=e.reference==='currentMana'?state.mana:e.reference==='maxHealth'?r.maxHealth:e.resource==='rage'?100:r.maxMana;c[{soulFragments:'souls'}[e.resource]??e.resource]+=amount;}
  if(s.nr===237)c.mana=0;if(pre.includedSkills.includes(67))c.mana*=0.97;
@@ -127,35 +158,47 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  return o;}
  function scopedBonus(s){return (scopedPassiveBonuses.get(s.nr)??0)+(cfg.enableOwnBuffs?scopedSkillDamageBonus(s.nr,state.buffs.filter(b=>b.until>state.time+1e-8).map(b=>get(b.nr))):0);}
  function initialHit(s,weight=1){const r=skillStats(),o=attackOptions(s);const report=evaluateDamageSkill(s,r,o);const amount=report.initialDamage*weight;
- damage(s.nr,s.skillName_de,'skill',amount);healFromAttack(s,amount);return amount;}
+ const dealt=damage(s.nr,s.skillName_de,'skill',amount);healFromAttack(s,dealt);return dealt;}
  function periodicHit(s,e){if(state.dead)return;const r=skillStats(),o=attackOptions(s);let amount;
  if(e.initialCalculatedDamageFraction!==undefined){const bonus=scopedBonus(s);amount=evaluateDamageSkill(s,r,{...o,extraFlatDamage:o.extraFlatDamage-bonus}).initialDamage*e.initialCalculatedDamageFraction+bonus*o.totalMultiplier*(e.damageTypes?.includes('physical')?o.physicalMultiplier:o.magicalMultiplier);}
  else{amount=(val(e.valueScaling,s.maxSkillLv)??e.value??0)+(e.addsCasterMagicalAttack===true?casterAttackForDamage(s,r,'matk'):0);amount*=totalMultiplier(s);}
  if(e.initialCalculatedDamageFraction===undefined){const mod=modifiers(s);amount*=e.damageTypes?.includes('physical')&&!e.damageTypes.includes('magical')?(mod.physicalDamageMultiplier??1):(mod.magicalDamageMultiplier??1);}
- damage(s.nr,s.skillName_de,'skill',amount);
+ const dealt=damage(s.nr,s.skillName_de,'skill',amount);
  // Healing linked to damage belongs to the damaging action; self as primary recipient is a test convention.
- for(const h of s.effects??[])if(h.type==='heal'&&h.damageSourceEffectKey===e.key&&h.healingFromDamage){heal(s.nr,s.skillName_de,amount*h.healingFromDamage.primaryTargetFraction);warn('Ätherregen: Anwender als primäres Heilziel angenommen; keine Gruppe simuliert.');}
+ for(const h of s.effects??[])if(h.type==='heal'&&h.damageSourceEffectKey===e.key&&h.healingFromDamage){heal(s.nr,s.skillName_de,dealt*h.healingFromDamage.primaryTargetFraction);warn('Ätherregen: Anwender als primäres Heilziel angenommen; keine Gruppe simuliert.');}
  }
  function finish(s){
  state.lastSkillFinishedAt=state.time;
+ if(cfg.party)cfg.party.applyDebuffs({key,skill:s,time:state.time});
  state.nextAutoAllowed=cfg.skillToAutoSeconds==='attackInterval'?0:round(state.time+cfg.skillToAutoSeconds);
  if(![104,185,186].includes(s.nr))state.nextSkill=round(state.time+cfg.reactionSeconds);
  if(s.nr===161){state.rage=Math.min(100,state.rage+cfg.initialRageOnEnergyActivation);applyBuff(s,cfg.energyOfWrathDurationSeconds??end(s));return;}
  if(s.nr===185){state.markEnd=round(state.time+5);state.points=0;state.chainPending=true;result.burstCounts.soulCollectionWindows=(result.burstCounts.soulCollectionWindows??0)+1;return;}
  if(s.nr===188){state.stealthEnd=state.time+end(s);state.revealEnd=-1;state.trapUsed=false;return;}
  if(cfg.enableOwnBuffs&&ownBuffNumbers.has(s.nr)){installOwnBuff(s);return;}
+ if(cfg.encounter?.selfHealNumbers?.includes(s.nr)||cfg.party?.healingNumbers?.[key]?.includes(s.nr)){
+  const healTarget=state.healTargetKey??key;
+  for(const effect of s.effects??[]){
+   if(effect.type!=='heal'||(!cfg.party&&(effect.excludesCaster||!['self','alliesInArea','ownGroup'].includes(effect.target))))continue;
+   const apply=()=>{if(state.dead||state.targetHealth<=0||cfg.party?.targetHealth<=0)return;const targets=cfg.party?cfg.party.healRecipients(key,healTarget,effect):[key];for(const target of targets){let amount=val(effect.valueScaling,s.maxSkillLv)??effect.value??0;if(effect.healingFromSpentMana)amount+=state.lastSacrificedMana*effect.healingFromSpentMana.multiplier;if(effect.unit==='fraction')amount*=cfg.party?cfg.party.maxHealth(target):stats().maxHealth;heal(s.nr,s.skillName_de,amount,target);}};
+   if(effect.intervalSeconds){const duration=val(effect.durationScaling,s.maxSkillLv)??effect.durationSeconds;for(let delay=effect.firstTickAfterSeconds??effect.intervalSeconds;delay<=duration+1e-8;delay+=effect.intervalSeconds)event(state.time+delay,apply);}
+   else if(effect.applicationDelaySeconds)event(state.time+effect.applicationDelaySeconds,apply);else apply();
+  }
+  return;
+ }
+
  if([226,237,244].includes(s.nr)){const dur=s.nr===237?300:360;state.summons=state.summons.filter(p=>p.nr!==s.nr);state.summons.push({nr:s.nr,until:state.time+dur,next:state.time+1/summonRate(s.nr)});if(s.nr===237){const intelligence=s.effects?.find(e=>e.stat==='int')?.value??0;const d={maxHealth:-500};for(const [attribute,amount]of Object.entries({wisdom:5,intelligence}))for(const [stat,value]of Object.entries(conversionDelta(model,key,attribute,amount)))d[stat]=(d[stat]??0)+value;state.buffs.push({nr:237,until:state.time+dur,delta:d,attributeBonuses:{wisdom:5,intelligence},intelligenceBonus:intelligence});state.health=Math.min(state.health,stats().maxHealth);}return;}
  if(s.nr===47){state.explosive=3;return;}
  const exec=s.attackExecution??{},report=evaluateDamageSkill(s,skillStats(),attackOptions(s));
  const sequence=exec.meteorWaveSequence??exec.hitSequence;
  if(exec.damagePhases?.length){
- for(const phase of exec.damagePhases){if(s.maxSkillLv<(phase.minimumSkillLevel??1))continue;const hit=()=>{const mult=attackOptions(s);const amount=evaluateDamagePhase(s,skillStats(),phase)*(phase.stat==='patk'?(mult.physicalMultiplier??1):(mult.magicalMultiplier??1))*totalMultiplier(s);damage(s.nr,s.skillName_de,'skill',amount);healFromAttack(s,amount);};const delay=phase.offsetSeconds??(phase.timing==='afterSkillDuration'?end(s):0);if(delay)event(state.time+delay,hit);else hit();}
+ for(const phase of exec.damagePhases){if(s.maxSkillLv<(phase.minimumSkillLevel??1))continue;const hit=()=>{const mult=attackOptions(s);const amount=evaluateDamagePhase(s,skillStats(),phase)*(phase.stat==='patk'?(mult.physicalMultiplier??1):(mult.magicalMultiplier??1))*totalMultiplier(s);const dealt=damage(s.nr,s.skillName_de,'skill',amount,phase.stat==='patk'?'physical':'magical');healFromAttack(s,dealt);};const delay=phase.offsetSeconds??(phase.timing==='afterSkillDuration'?end(s):0);if(delay)event(state.time+delay,hit);else hit();}
  }
  else if(sequence?.length){const weights=sequence.map(x=>x.damageFraction??x.damageMultiplier);const sum=weights.reduce((a,b)=>a+b,0);let rageGranted=false;sequence.forEach((h,i)=>event(state.time+h.offsetSeconds,()=>{
   if(!exec.sequenceScalesSkillBaseOnly){initialHit(s,weights[i]/sum);return;}
   if(state.dead||state.targetHealth<=0)return;
   const amount=evaluateSequenceHit(s,skillStats(),h,attackOptions(s));
-  damage(s.nr,s.skillName_de,'skill',amount);healFromAttack(s,amount);
+  const dealt=damage(s.nr,s.skillName_de,'skill',amount);healFromAttack(s,dealt);
   if(amount>0&&!rageGranted){for(const e of s.effects??[])if(e.type==='resourceGain'&&e.resource==='rage'&&e.gainTrigger==='ownSkillDamage'&&e.oncePerSkillApplication){state.rage=Math.min(100,state.rage+(val(e.valueScaling,s.maxSkillLv)??e.value??0));rageGranted=true;}}
  }));}
  else{let delay=exec.explosionDelayAfterCreationSeconds??(exec.damageTiming==='afterSkillDuration'?end(s):0);if(s.nr===110)delay=0.5;if(s.nr===99)delay=2;
@@ -164,10 +207,10 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  if(s.nr===13){const effect=s.effects?.find(e=>e.key==='rage-outburst-strength');const strength=val(effect?.valueScaling,s.maxSkillLv)??effect?.value??0;const duration=val(effect?.durationScaling,s.maxSkillLv)??effect?.durationSeconds??end(s);state.buffs=state.buffs.filter(b=>b.nr!==13);state.buffs.push({nr:13,until:state.time+duration,delta:conversionDelta(model,key,'strength',strength)});result.burstCounts.rageOutbursts=(result.burstCounts.rageOutbursts??0)+1;}
  if(s.nr===233)state.buffs.push({nr:233,until:state.time+2.8,delta:{attackSpeed:0.2}});
  if(s.nr===101){const effect=s.effects?.find(e=>e.type==='statModifier'&&e.stat==='int');if(effect){const intelligence=val(effect.valueScaling,s.maxSkillLv)??effect.value;state.buffs=state.buffs.filter(b=>b.nr!==101);state.buffs.push({nr:101,until:state.time+end(s),delta:conversionDelta(model,key,'intelligence',intelligence),attributeBonuses:{intelligence},intelligenceBonus:intelligence});}}
- if(s.nr===40)state.buffs.push({nr:40,until:state.time+end(s),delta:{magicalAttack:37.5}});
+ if(s.nr===40&&!cfg.party)state.buffs.push({nr:40,until:state.time+end(s),delta:{magicalAttack:37.5}});
  if([56,218].includes(s.nr))state.buffs.push({nr:s.nr,until:state.time+end(s),delta:{}});
  if(s.nr===48)state.souls=Math.min(100,state.souls+1);
- if(s.nr===103){state.shackleEnd=round(state.time+3);state.torments=0;state.harvestPending=true;result.burstCounts.soulShackles=(result.burstCounts.soulShackles??0)+1;}
+ if(s.nr===103&&!cfg.encounter?.controlImmunities?.includes('stun')){state.shackleEnd=round(state.time+3);state.torments=0;state.harvestPending=true;result.burstCounts.soulShackles=(result.burstCounts.soulShackles??0)+1;}
  if(s.nr===104)state.torments++;
  if(s.nr===105){state.souls=Math.min(100,state.souls+(state.torments>=12?2:state.torments>=5?1:0));state.harvestPending=false;result.burstCounts.soulHarvests=(result.burstCounts.soulHarvests??0)+1;}
  if(s.nr===186)state.points++;
@@ -176,7 +219,7 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  if(s.nr===90)state.stealthEnd=-1;
  if(key==='villian'&&state.time<state.stealthEnd&&![91,92].includes(s.nr)&&s.nr!==188)state.stealthEnd=-1;
  }
- function start(s){const manaBefore=state.mana;const c=costs(s);state.lastSacrificedMana=c.mana;state.mana=Math.max(0,state.mana-c.mana);state.rage=Math.max(0,state.rage-c.rage);state.souls-=c.souls;state.health-=c.health;result.manaSpent+=c.mana;result.healthCosts+=c.health;if(state.mana<=1e-8){result.firstEmptyManaAt??=state.time;if(manaBefore>1e-8)result.emptyManaEvents.push({time:state.time,skill:s.nr});}
+ function start(s){cfg.party?.skillActivated?.({key,skill:s,time:state.time});if(cfg.party?.healingNumbers?.[key]?.includes(s.nr))state.healTargetKey=cfg.party.healingTarget(key);const manaBefore=state.mana;const c=costs(s);state.lastSacrificedMana=c.mana;state.mana=Math.max(0,state.mana-c.mana);state.rage=Math.max(0,state.rage-c.rage);state.souls-=c.souls;state.health-=c.health;result.manaSpent+=c.mana;result.healthCosts+=c.health;if(state.mana<=1e-8){result.firstEmptyManaAt??=state.time;if(manaBefore>1e-8)result.emptyManaEvents.push({time:state.time,skill:s.nr});}
  if(cfg.recordActionTimeline)result.actionTimeline.push({time:state.time,nr:s.nr,name:s.skillName_de,manaBefore,manaAfter:state.mana});
  const row=ledger(s.nr,s.skillName_de,[226,237,244].includes(s.nr)?'summon':'skill');row.applications++;row.manaSpent+=c.mana;row.firstUse??=state.time;row.lastUse=state.time;row.useTimes.push(state.time);
  if(cfg.enableOwnBuffs&&ownBuffNumbers.has(s.nr))result.buffManaSpent+=c.mana;
@@ -190,11 +233,15 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  if(cast>0)state.cast={end:round(state.time+cast),skill:s};else finish(s);
  }
  const attacks=(cfg.attackMode==='autoOnly'?[]:attackNumbers).map(get).filter(s=>s&&s.nr!==185&&s.nr!==226&&s.nr!==244&&!(cfg.attackMode==='skillsOnly'&&s.nr===47));
- const rank=s=>{if(cfg.skillPriorityScores?.[s.nr]!==undefined)return cfg.skillPriorityScores[s.nr];if(s.nr===219)return -1;return evaluateDamageSkill(s,skillStats(),{...(s.nr===229?{baseMultiplier:1.15}:{}),...(key==='ritualist'?{totalMultiplier:1.01}: {})}).damage;};
+ let priorityStats;const priorityScores=new Map();
+ const rank=s=>{if(cfg.skillPriorityScores?.[s.nr]!==undefined)return cfg.skillPriorityScores[s.nr];if(s.nr===219)return -1;const current=skillStats();if(cfg.cacheCombatStats){if(current!==priorityStats){priorityStats=current;priorityScores.clear();}if(priorityScores.has(s.nr))return priorityScores.get(s.nr);}const score=evaluateDamageSkill(s,current,{...(s.nr===229?{baseMultiplier:1.15}:{}),...(key==='ritualist'?{totalMultiplier:1.01}: {})}).damage;if(cfg.cacheCombatStats)priorityScores.set(s.nr,score);return score;};
  const setupNumbers=[];if(cfg.attackMode!=='autoOnly'){if(key==='gladiator')setupNumbers.push(161);if(key==='summoner')setupNumbers.push(185);if(key==='villian')setupNumbers.push(188);}if(key==='druid')setupNumbers.push(244);if(key==='hunter')setupNumbers.push(226);if(key==='ritualist')setupNumbers.push(237);
  // Optional search control: disabling setup actions lets a policy genuinely omit a combo.
  for(let i=setupNumbers.length-1;i>=0;i--)if(cfg.disabledSetupSkillNumbers?.includes(setupNumbers[i]))setupNumbers.splice(i,1);
  function priorities(){
+ const partyHeal=cfg.party?.healingTarget(key);
+ const heals=partyHeal?(cfg.party.healingNumbers[key]??[]).map(get).filter(s=>s&&ready(s)&&affordable(s)):cfg.encounter&&state.health/stats().maxHealth<=(cfg.encounter.healBelowFraction??0.6)?(cfg.encounter.selfHealNumbers??[]).map(get).filter(s=>s&&ready(s)&&affordable(s)):[];
+ const support=cfg.party?(cfg.party.supportNumbers[key]??[]).map(get).filter(s=>s&&ready(s)&&!cfg.party.debuffActive(s.nr,state.time)):[];
  const allowed=attacks.filter(s=>legal(s)).sort((a,b)=>{const ac=(val(a.cooldownScaling,a.maxSkillLv)??a.cd??0)<=5,bc=(val(b.cooldownScaling,b.maxSkillLv)??b.cd??0)<=5;return (cfg.skillPriorityScores?0:Number(ac)-Number(bc))||rank(b)-rank(a)||a.nr-b.nr;});
  if(key==='ritualist'){
   if(state.harvestPending&&state.time<=state.shackleEnd+1.5){const a=get(104),h=get(105);if(state.torments<15&&legal(a)&&affordable(a))return [a];if(state.time<state.shackleEnd&&state.torments<15)return [];if(legal(h)&&affordable(h))return [h];}
@@ -210,19 +257,40 @@ export function simulateClass({pre,skills,model,attackNumbers,config={}}){
  const setups=setupNumbers.map(get).filter(s=>ready(s)&&([226,237,244].includes(s.nr)?!state.summons.some(p=>p.nr===s.nr&&p.until>state.time):s.nr===185?!state.chainPending||state.time>state.markEnd+1.5:s.nr===188?state.time>=state.stealthEnd&&[90,91,92].some(n=>ready(get(n))):cfg.maintainEnergyOfWrath||(!active(161)&&state.rage<55)));
  const pets=setups.filter(s=>[226,237,244].includes(s.nr));const marks=setups.filter(s=>[185,188].includes(s.nr));
  const ownBuffs=cfg.enableOwnBuffs?[...ownBuffNumbers].map(get).filter(s=>{if(!s||!ready(s)||active(s.nr)||(s.nr===150&&!state.summons.some(p=>p.nr!==237&&p.until>state.time)))return false;if([158,240].includes(s.nr)){const drain=s.effects.find(e=>e.type==='resourceDrain');return state.mana>=(val(drain.valueScaling,s.maxSkillLv)??drain.value);}return true;}).sort((a,b)=>{const score=s=>(skillValue(s,'manaRegen')>0?100000:0)+(skillValue(s,'wis')>0?10000:0)+Math.min(end(s),1800);return score(b)-score(a)||a.nr-b.nr;}):[];
- return [...ownBuffs,...pets,...marks,...(cfg.maintainEnergyOfWrath?setups.filter(s=>s.nr===161):[]),...allowed,...(cfg.maintainEnergyOfWrath?[]:setups.filter(s=>s.nr===161))];
+ return [...heals,...support,...ownBuffs,...pets,...marks,...(cfg.maintainEnergyOfWrath?setups.filter(s=>s.nr===161):[]),...allowed,...(cfg.maintainEnergyOfWrath?[]:setups.filter(s=>s.nr===161))];
  }
- if(key==='ritualist')event(1.5,function drain(){if(state.dead)return;state.health-=72;result.healthCosts+=72;if(state.health<=0){state.dead=true;result.deathAt=state.time;return;}event(state.time+1.5,drain);});
+ const burnDrain=get(214)?.effects?.find(e=>e.type==='resourceDrain'&&e.resource==='health');
+ if(key==='ritualist'&&burnDrain){const interval=burnDrain.intervalSeconds,amount=val(burnDrain.valueScaling,get(214).maxSkillLv)??burnDrain.value;event(interval,function drain(){if(state.dead)return;state.health-=amount;result.healthCosts+=amount;if(state.health<=0){state.dead=true;result.deathAt=state.time;return;}event(state.time+interval,drain);});}
  if((cfg.prebuffOwnBuffs||cfg.preparedBuffNumbers?.length)&&cfg.enableOwnBuffs){
   for(const nr of cfg.preparedBuffNumbers??ownBuffNumbers){const s=get(nr);if(!s)continue;installOwnBuff(s);state.ready[nr]=Math.max(0,val(s.cooldownScaling,s.maxSkillLv)??s.cd??0);}
   const r=stats();state.mana=r.maxMana;state.health=r.maxHealth;result.initialMana=state.mana;result.initialHealth=state.health;
  }
+ let nextEnemyHit=cfg.encounter?.enemyAttackInterval??Infinity;
+ if(cfg.encounter){
+  const e=cfg.encounter;
+  if(!(e.playerLevel>0&&e.enemyLevel>0&&e.enemyAttackInterval>0&&Number.isFinite(e.enemyAttackInterval)))throw new RangeError('Invalid encounter settings');
+  for(const field of ['physicalAttack','physicalDefense','magicalDefense'])if(!Number.isFinite(e.enemy[field])||e.enemy[field]<0)throw new RangeError('Invalid enemy stats');
+  result.incomingDamage=0;result.enemyHits=0;result.minimumHealth=state.health;
+ }
  for(let i=0;i<=Math.round(cfg.duration/cfg.step);i++){
- state.time=round(i*cfg.step);state.buffs=state.buffs.filter(b=>b.until>state.time+1e-8);state.summons=state.summons.filter(p=>p.until>state.time+1e-8);
+ state.time=round(i*cfg.step);
+ if(cfg.party){yield {key,time:state.time,state,stats,result};state.targetHealth=cfg.party.targetHealth;if(state.health<=1e-8){state.dead=true;result.deathAt??=state.time;}if(cfg.party.stopped)break;}
+ if(state.buffs.some(b=>b.until<=state.time+1e-8))state.buffs=state.buffs.filter(b=>b.until>state.time+1e-8);state.summons=state.summons.filter(p=>p.until>state.time+1e-8);
  if(state.dead||state.targetHealth<=0)break;
  if(i>0&&Math.abs(state.time/(cfg.manaRegenInterval??cfg.regenInterval)-Math.round(state.time/(cfg.manaRegenInterval??cfg.regenInterval)))<1e-7){const r=stats(),mp=Math.min(r.manaRegen,Math.max(0,r.maxMana-state.mana));state.mana+=mp;result.manaRegenerated+=mp;}
  if(cfg.enableOwnBuffs&&!cfg.permanentPrebuffs&&i>0&&Math.abs(state.time/(cfg.manaRegenInterval??cfg.regenInterval)-Math.round(state.time/(cfg.manaRegenInterval??cfg.regenInterval)))<1e-7)drainOwnBuffs();
- if(i>0&&Math.abs(state.time/cfg.regenInterval-Math.round(state.time/cfg.regenInterval))<1e-7){const r=stats(),hp=Math.min(r.healthRegen,Math.max(0,r.maxHealth-state.health));state.health+=hp;result.healthRegenerated+=hp;}
+ if((!cfg.encounter||cfg.encounter.healthRegenerationInCombat===true)&&i>0&&Math.abs(state.time/cfg.regenInterval-Math.round(state.time/cfg.regenInterval))<1e-7){const r=stats(),hp=Math.min(r.healthRegen,Math.max(0,r.maxHealth-state.health));state.health+=hp;result.healthRegenerated+=hp;}
+ if(cfg.encounter&&!cfg.party){
+  const attackers=cfg.encounter.pack?cfg.encounter.pack.dueAttackers(state.time):state.time+1e-8>=nextEnemyHit?[{stats:cfg.encounter.enemy}]:[];
+  for(const attacker of attackers){
+   const reduction=playerArmorReduction(stats().physicalDefense,cfg.encounter.enemyLevel,'physical');
+   const amount=attacker.stats.physicalAttack*(1-reduction);
+   state.health=Math.max(0,state.health-amount);result.incomingDamage+=amount;result.enemyHits++;result.minimumHealth=Math.min(result.minimumHealth,state.health);
+   if(!cfg.encounter.pack)nextEnemyHit+=cfg.encounter.enemyAttackInterval;
+   if(state.health<=1e-8){state.health=0;state.dead=true;result.deathAt=state.time;break;}
+  }
+  if(state.dead)break;
+ }
  const due=state.events.filter(e=>e.at<=state.time+1e-8);state.events=state.events.filter(e=>e.at>state.time+1e-8);for(const e of due)e.fn();
  if(state.cast&&state.cast.end<=state.time+1e-8){const s=state.cast.skill;state.cast=null;finish(s);}
  // Process same-time delayed impacts scheduled by a completed cast.

@@ -16,8 +16,8 @@ Eine feine, elfenbeinfarbene Robe. Silberne Nähte zeichnen entlang des Saums di
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 65 |
-| M-Abwehr | 106 |
+| P-Abwehr | 57 |
+| M-Abwehr | 104 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -31,8 +31,8 @@ Ein weich fallendes Beinkleid aus dichtem, hellem Gewebe. Die aufwendigen Nähte
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 56 |
-| M-Abwehr | 92 |
+| P-Abwehr | 50 |
+| M-Abwehr | 90 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -46,8 +46,8 @@ Eine leichte Haube mit einem Netz aus feinen Silberfäden. Über der Stirn liegt
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 34 |
-| M-Abwehr | 57 |
+| P-Abwehr | 31 |
+| M-Abwehr | 55 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -61,8 +61,8 @@ Geschmeidige Handschuhe mit sorgsam verstärkten Handflächen. Blasse Blütenmus
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 34 |
-| M-Abwehr | 57 |
+| P-Abwehr | 31 |
+| M-Abwehr | 55 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -76,8 +76,8 @@ Weiche Schuhe mit hellen Stoffschäften und silbergesäumten Laschen. Ihre Form 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 26 |
-| M-Abwehr | 42 |
+| P-Abwehr | 23 |
+| M-Abwehr | 41 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -112,8 +112,8 @@ Eine dunkelviolette Robe mit rauchgrauem Futter. Verschlungene Stickereien führ
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 70 |
-| M-Abwehr | 93 |
+| P-Abwehr | 57 |
+| M-Abwehr | 59 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -127,8 +127,8 @@ Eine aschgraue Seidenhose mit dunklen Seitenbahnen. Ihre feinen Muster werden er
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 61 |
-| M-Abwehr | 80 |
+| P-Abwehr | 49 |
+| M-Abwehr | 51 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -142,8 +142,8 @@ Eine tief geschnittene Haube aus mattem, grauem Stoff. Violette Fäden bilden am
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 38 |
-| M-Abwehr | 50 |
+| P-Abwehr | 30 |
+| M-Abwehr | 32 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -157,8 +157,8 @@ Lange, eng anliegende Handschuhe mit dunklen Fadenwicklungen über den Fingern. 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 38 |
-| M-Abwehr | 49 |
+| P-Abwehr | 30 |
+| M-Abwehr | 32 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -172,8 +172,8 @@ Dunkle Schuhe mit flachen Schnallen und sorgfältig vernähten Stoffeinsätzen. 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 28 |
-| M-Abwehr | 37 |
+| P-Abwehr | 23 |
+| M-Abwehr | 24 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -208,8 +208,8 @@ Eine körpernah geschnittene Lederweste mit kleinen, mattschwarzen Schuppen. Unt
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 81 |
-| M-Abwehr | 59 |
+| P-Abwehr | 51 |
+| M-Abwehr | 57 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -223,8 +223,8 @@ Eine dunkle Lederhose mit verstärkten Knien und verdeckten Nähten. Schmale vio
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 70 |
-| M-Abwehr | 52 |
+| P-Abwehr | 44 |
+| M-Abwehr | 50 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -238,8 +238,8 @@ Eine weit vorgezogene Kapuze mit einem weichen Innenfutter. Die Dämmerblüte is
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 43 |
-| M-Abwehr | 32 |
+| P-Abwehr | 27 |
+| M-Abwehr | 31 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -253,8 +253,8 @@ Bewegliche Lederhandschuhe mit schwarzen Schuppen auf Handrücken und Knöcheln.
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 43 |
-| M-Abwehr | 32 |
+| P-Abwehr | 27 |
+| M-Abwehr | 31 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -268,8 +268,8 @@ Dunkle Stiefel mit weichen Schäften, flachen Verschlüssen und mehrlagigen Sohl
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 32 |
-| M-Abwehr | 24 |
+| P-Abwehr | 21 |
+| M-Abwehr | 23 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -304,8 +304,8 @@ Eine feste Lederweste mit schmalen Schwarzstahlplatten vor Brust und Rippen. Die
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 93 |
-| M-Abwehr | 44 |
+| P-Abwehr | 59 |
+| M-Abwehr | 43 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -319,8 +319,8 @@ Eine robuste Lederhose mit einzeln befestigten Schwarzstahlschienen vor Schienbe
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 80 |
-| M-Abwehr | 39 |
+| P-Abwehr | 51 |
+| M-Abwehr | 38 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -334,8 +334,8 @@ Eine offene Maske aus mattem Schwarzstahl, die Stirn und Wangen einfasst.
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 50 |
-| M-Abwehr | 24 |
+| P-Abwehr | 31 |
+| M-Abwehr | 23 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -349,8 +349,8 @@ Kräftige Lederwickel mit kleinen Schwarzstahlplatten über Knöcheln und Handr�
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 49 |
-| M-Abwehr | 24 |
+| P-Abwehr | 31 |
+| M-Abwehr | 23 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -364,8 +364,8 @@ Feste Lederstiefel mit Schwarzstahlkappen und beweglichen Verstärkungen an den 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 37 |
-| M-Abwehr | 18 |
+| P-Abwehr | 24 |
+| M-Abwehr | 17 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -400,8 +400,8 @@ Ein schwerer Brustpanzer aus überlappenden Schwarzstahlplatten mit breiten, ver
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 106 |
-| M-Abwehr | 37 |
+| P-Abwehr | 86 |
+| M-Abwehr | 42 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -415,8 +415,8 @@ Gehärtete Beinplatten aus Schwarzstahl, die über kräftigen Lederriemen getrag
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 92 |
-| M-Abwehr | 32 |
+| P-Abwehr | 75 |
+| M-Abwehr | 37 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -430,8 +430,8 @@ Ein massiver Schwarzstahlhelm mit markantem Stirngrat und breiten Sichtschlitzen
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 57 |
-| M-Abwehr | 20 |
+| P-Abwehr | 46 |
+| M-Abwehr | 22 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -445,8 +445,8 @@ Schwere Faustschützer mit schwarzen Metallplatten auf Handrücken und Manschett
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 57 |
-| M-Abwehr | 19 |
+| P-Abwehr | 46 |
+| M-Abwehr | 22 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -460,8 +460,8 @@ Hohe Kampfstiefel mit kräftigen Schwarzstahlschienen und breiten Metallkappen.
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 42 |
-| M-Abwehr | 15 |
+| P-Abwehr | 34 |
+| M-Abwehr | 17 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -496,8 +496,8 @@ Ein geschlossener Schwarzstahlharnisch mit hohem Kragen und breiten Schulterplat
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 133 |
-| M-Abwehr | 86 |
+| P-Abwehr | 102 |
+| M-Abwehr | 87 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -511,8 +511,8 @@ Ein vollständiger Beinschutz aus überlappenden Schwarzstahlplatten, der Hüfte
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 115 |
-| M-Abwehr | 75 |
+| P-Abwehr | 88 |
+| M-Abwehr | 76 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -526,8 +526,8 @@ Ein geschlossener Helm aus Schwarzstahl mit beweglichem Visier und schmalem Sehs
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 71 |
-| M-Abwehr | 46 |
+| P-Abwehr | 54 |
+| M-Abwehr | 47 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -541,7 +541,7 @@ Gegliederte Panzerhandschuhe aus Schwarzstahl mit langen, schützenden Manschett
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 71 |
+| P-Abwehr | 54 |
 | M-Abwehr | 46 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
@@ -556,7 +556,7 @@ Geschlossene Panzerschuhe aus gegliederten Schwarzstahlplatten mit verstärkten 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 53 |
+| P-Abwehr | 41 |
 | M-Abwehr | 35 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
@@ -592,8 +592,8 @@ Ein dicht gewebtes Gewand mit weichen Lederbesätzen. Gestickte Ahnenzeichen sä
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 83 |
-| M-Abwehr | 74 |
+| P-Abwehr | 75 |
+| M-Abwehr | 64 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -607,8 +607,8 @@ Eine robuste Stoffhose mit verstärkten Knien. Rote und blaue Bänder sind in di
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 72 |
-| M-Abwehr | 64 |
+| P-Abwehr | 65 |
+| M-Abwehr | 55 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -622,8 +622,8 @@ Eine geschnitzte Holzmaske mit ledernem Innenband. Geschwungene Kerben stellen d
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 44 |
-| M-Abwehr | 40 |
+| P-Abwehr | 40 |
+| M-Abwehr | 34 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -637,8 +637,8 @@ Handwickel aus dunklem Stoff mit ledernen Handflächen. Ihre roten Nähte bilden
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 44 |
-| M-Abwehr | 39 |
+| P-Abwehr | 40 |
+| M-Abwehr | 34 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -652,8 +652,8 @@ Weiche Lederstiefel mit geflochtenen Verschlüssen. Erdige Stoffeinsätze und kl
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 33 |
-| M-Abwehr | 30 |
+| P-Abwehr | 30 |
+| M-Abwehr | 25 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -688,8 +688,8 @@ Ein Gewand aus fein verflochtenen Rindenfasern mit einem weichen Lederfutter. Bl
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 87 |
-| M-Abwehr | 70 |
+| P-Abwehr | 73 |
+| M-Abwehr | 63 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -703,8 +703,8 @@ Eine geschmeidige Hose aus dichtem Fasergewebe. Weiches Leder verstärkt die Kni
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 76 |
-| M-Abwehr | 61 |
+| P-Abwehr | 63 |
+| M-Abwehr | 54 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -718,8 +718,8 @@ Ein offener Kopfreif aus sorgsam gebogenen Weidenzweigen. Kleine geschnitzte Bl�
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 47 |
-| M-Abwehr | 38 |
+| P-Abwehr | 39 |
+| M-Abwehr | 33 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -733,8 +733,8 @@ Handschuhe aus weichem Leder, über deren Rücken dünne Wurzelfasern geflochten
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 46 |
-| M-Abwehr | 38 |
+| P-Abwehr | 39 |
+| M-Abwehr | 33 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -748,8 +748,8 @@ Lederstiefel mit weichem Faserfutter und blattförmigen Schaftlaschen. Moosgrün
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 35 |
-| M-Abwehr | 28 |
+| P-Abwehr | 29 |
+| M-Abwehr | 25 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -784,8 +784,8 @@ Eine aschfahle Robe aus dichtem Stoff mit einem verwaschen roséfarbenen Innenfu
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 80 |
-| M-Abwehr | 63 |
+| P-Abwehr | 69 |
+| M-Abwehr | 57 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -799,8 +799,8 @@ Eine Hose aus aschgrauem Leinen mit weichen Lederbesätzen an den Knien. Kleine 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 69 |
-| M-Abwehr | 55 |
+| P-Abwehr | 59 |
+| M-Abwehr | 50 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -814,8 +814,8 @@ Eine leichte Stoffkapuze mit einem dünnen, zurückschlagbaren Schleier. Blasse 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 43 |
-| M-Abwehr | 34 |
+| P-Abwehr | 37 |
+| M-Abwehr | 30 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -829,8 +829,8 @@ Geschmeidige Arbeitshandschuhe mit sorgfältig verstärkten Handflächen. An den
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 43 |
-| M-Abwehr | 34 |
+| P-Abwehr | 37 |
+| M-Abwehr | 30 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -844,8 +844,8 @@ Robuste Lederstiefel mit aschgrauen Stoffschäften und flachen Verschlüssen. Ve
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 32 |
-| M-Abwehr | 25 |
+| P-Abwehr | 27 |
+| M-Abwehr | 23 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -880,8 +880,8 @@ Ein dunkel gefärbter Lederharnisch mit schmalen Schuppen über Brust und Schult
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 59 |
-| M-Abwehr | 57 |
+| P-Abwehr | 58 |
+| M-Abwehr | 55 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -895,8 +895,8 @@ Eine geschmeidige Jagdhose mit verstärkten Knien und verdeckten Nähten. Blasse
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 52 |
-| M-Abwehr | 50 |
+| P-Abwehr | 50 |
+| M-Abwehr | 48 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -910,8 +910,8 @@ Eine tief geschnittene Kapuze mit einem schmalen, zurückschlagbaren Gesichtstuc
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 32 |
-| M-Abwehr | 30 |
+| P-Abwehr | 31 |
+| M-Abwehr | 29 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -925,8 +925,8 @@ Eng anliegende Lederhandschuhe mit schuppenbesetzten Handrücken. An den Mansche
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 32 |
-| M-Abwehr | 30 |
+| P-Abwehr | 31 |
+| M-Abwehr | 29 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -940,8 +940,8 @@ Dunkle Jagdstiefel mit weichen Schäften und flachen Verschlüssen. Schmale Lede
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 24 |
-| M-Abwehr | 23 |
+| P-Abwehr | 23 |
+| M-Abwehr | 22 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -976,8 +976,8 @@ Ein robuster Lederharnisch mit überlappenden, blaugrünen Seeschlangenschuppen 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 91 |
-| M-Abwehr | 56 |
+| P-Abwehr | 82 |
+| M-Abwehr | 52 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -991,8 +991,8 @@ Ein beweglicher Beinschutz aus kräftigem Leder, mit einzelnen Schuppenbahnen ü
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 79 |
-| M-Abwehr | 48 |
+| P-Abwehr | 71 |
+| M-Abwehr | 45 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1006,8 +1006,8 @@ Ein schmaler Stirnreif mit einer länglichen, blaugrünen Schuppe in seiner Mitt
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 48 |
-| M-Abwehr | 30 |
+| P-Abwehr | 44 |
+| M-Abwehr | 27 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1021,8 +1021,8 @@ Feste Lederhandschuhe mit kleinen Schuppen auf den Handrücken. Die abgeriebenen
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 48 |
-| M-Abwehr | 30 |
+| P-Abwehr | 43 |
+| M-Abwehr | 27 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1036,8 +1036,8 @@ Hohe Reisestiefel aus dunklem Leder mit schuppenbesetzten Schäften. Verblasste 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 36 |
-| M-Abwehr | 22 |
+| P-Abwehr | 33 |
+| M-Abwehr | 21 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1074,8 +1074,8 @@ Ein kräftiges Jagdwams aus dickem Feroxleder. Goldrötliche Fellbesätze liegen
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 76 |
-| M-Abwehr | 63 |
+| P-Abwehr | 61 |
+| M-Abwehr | 60 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1089,8 +1089,8 @@ Eine Hose aus dichtem Feroxleder mit überlappenden Verstärkungen an Knien und 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 66 |
-| M-Abwehr | 55 |
+| P-Abwehr | 53 |
+| M-Abwehr | 52 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1104,8 +1104,8 @@ Eine lederne Jagdkapuze mit einem dichten, goldrötlichen Fellkragen. Einzelne b
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 41 |
-| M-Abwehr | 34 |
+| P-Abwehr | 32 |
+| M-Abwehr | 32 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1119,8 +1119,8 @@ Kräftige Jagdhandschuhe aus Feroxleder mit fellbesetzten Handrücken. Die Handf
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 41 |
-| M-Abwehr | 34 |
+| P-Abwehr | 32 |
+| M-Abwehr | 32 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1134,8 +1134,8 @@ Hohe Stiefel aus dickem Feroxleder mit rotgoldenem Fell an den Schäften. Breite
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 30 |
-| M-Abwehr | 25 |
+| P-Abwehr | 24 |
+| M-Abwehr | 24 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1176,8 +1176,8 @@ Eine feine Robe mit weich fallenden Stoffbahnen und einem dicht gewebten Innenfu
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 54 |
-| M-Abwehr | 133 |
+| P-Abwehr | 44 |
+| M-Abwehr | 102 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1191,8 +1191,8 @@ Eine geschmeidige Stoffhose mit flachen Nähten und sorgfältig verstärkten Kni
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 47 |
-| M-Abwehr | 115 |
+| P-Abwehr | 38 |
+| M-Abwehr | 89 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1206,8 +1206,8 @@ Eine leichte Haube mit weichem Innenband. Schmale, gestickte Linien fassen die S
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 29 |
-| M-Abwehr | 71 |
+| P-Abwehr | 23 |
+| M-Abwehr | 54 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1221,8 +1221,8 @@ Feine Handschuhe mit geschmeidigen Fingern und verstärkten Handflächen. Lange 
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 29 |
-| M-Abwehr | 71 |
+| P-Abwehr | 23 |
+| M-Abwehr | 54 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |
@@ -1236,8 +1236,8 @@ Leichte Schuhe mit weichen Stoffschäften und festen Ledersohlen. Kleine Sticker
 
 | Wert | Belegung |
 | --- | --- |
-| P-Abwehr | 21 |
-| M-Abwehr | 53 |
+| P-Abwehr | 17 |
+| M-Abwehr | 41 |
 | Bonusplatz 1 | |
 | Bonusplatz 2 | |
 | Bonusplatz 3 | |

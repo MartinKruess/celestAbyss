@@ -1,0 +1,172 @@
+{
+  "status": "appliedAndVerified",
+  "generatedAt": "2026-10-21T13:26:35.541Z",
+  "backup": "data/balancing/history/before-taming-multiplier-1792589195491",
+  "formula": "creatureVariantBaseChance * (1 + 0.1 * (effectiveSkillLevel - 1))",
+  "learnedMultipliers": [
+    1,
+    1.1,
+    1.2
+  ],
+  "runtimeStatus": "Skill definition and progression updated; legacy taming controller is not a completed gameplay implementation.",
+  "skill": {
+    "_id": "6acc1c7e4826525c70d04be8",
+    "skillName_eng": "Tame",
+    "__v": 0,
+    "category": "creature",
+    "cd": 60,
+    "charClass": [
+      "Abenteuer",
+      "Butcher",
+      "Destroyer",
+      "Gladiator",
+      "Berserker",
+      "Knife",
+      "Templar",
+      "Herbalist",
+      "Witcher",
+      "Archer",
+      "Hunter",
+      "Druide",
+      "Alchemist",
+      "Summoner",
+      "Soulseeker",
+      "Bloodmage",
+      "Luminet",
+      "Lightmage",
+      "Healer",
+      "Priest",
+      "Ritualist",
+      "Shamane",
+      "High Elves",
+      "Villian",
+      "Shadowwarrior"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen.",
+    "description_eng": "Attempts to tame a creature. Requires a taming card matching the creature variant. The base chance belongs to the specific creature variant. Tame multiplies this chance by 1.0 at level 1, 1.1 at level 2 and 1.2 at level 3; it adds no percentage points and supplies no fixed base success chance. A 1 percent base chance becomes 1 / 1.1 / 1.2 percent per attempt. The formula continues by 0.1 per additional effective level when separately authorized. The definition still has three learnable levels: ordinary classes are capped at level 1 and the Adventurer at level 3; a second specialist remains undefined. Mana is 100 / 125 / 150, cast time 3 / 2.5 / 2 seconds and cooldown 60 / 50 / 40 seconds. No damage or subsequent effect duration. Creature base chances, card mappings, item consumption, target distance and interruption conditions remain to be defined.",
+    "dmgType": "spell",
+    "maxSkillLv": 3,
+    "maxUpgradeLv": 10,
+    "nr": 133,
+    "skillName_de": "Tamen",
+    "skillpoints": 1,
+    "castTimeScaling": {
+      "type": "linear",
+      "base": 3,
+      "perLevel": -0.5
+    },
+    "castTimeSeconds": 3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 60,
+      "perLevel": -10
+    },
+    "mana": 100,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 100,
+          "perLevel": 25
+        }
+      }
+    ],
+    "taming": {
+      "requiresMatchingItem": true,
+      "itemConsumptionStatus": "pending",
+      "baseChanceSource": "creatureVariant",
+      "chanceFormula": "baseChanceTimesSkillMultiplier",
+      "chanceMultiplierScaling": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 0.1
+      }
+    },
+    "learningLimits": {
+      "defaultMaxLevel": 1,
+      "classOverrides": {
+        "Abenteuer": 3,
+        "Gladiator": 1,
+        "Berserker": 1
+      },
+      "status": "secondSpecialistPending"
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "castTimeScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 3,
+              "perLevel": -0.5
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 60,
+              "perLevel": -10
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 100,
+              "perLevel": 25
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "taming",
+            "chanceMultiplierScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 0.1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "learningRequirements": {
+      "minimumCharacterLevel": 4,
+      "status": "defined",
+      "furtherSkillLevelsStatus": "pending"
+    },
+    "classificationVersion": 1,
+    "type": "skill"
+  }
+}

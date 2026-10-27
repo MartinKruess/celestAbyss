@@ -1,0 +1,3 @@
+# Catalog snapshots are hashed byte-for-byte by audit scripts and regression tests.
+# Keep their committed LF representation on Windows checkouts as well.
+data/**/*.json text eol=lf

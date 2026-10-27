@@ -29,7 +29,19 @@
       "percent": 12
     }
   ],
-  "rounding": "Largest remainder, ties in slot order; preserve each class/rank defense total exactly.",
+  "rounding": "Half up after every backwards step, integer hundredths; totals sum the rounded parts.",
+  "rankProgression": {
+    "mode": "weaponCurveFromRank6Parts",
+    "anchorRank": 6,
+    "growthPercentages": [
+      77,
+      75,
+      73,
+      71,
+      69
+    ],
+    "decimalPlaces": 2
+  },
   "additionalStats": "Removed until later assignment: direct HP/MP, vitality and wisdom. Six empty bonus slots per item.",
   "correctedSourceExceptions": [
     {
@@ -1614,20 +1626,59 @@
       "magicalDefense": 186
     }
   },
+  "physicalCalibration": {
+    "rounding": "Ceil physical set totals to ensure effective level never falls below target; tolerate 1e-9 floating point noise",
+    "anchorRank": 4,
+    "anchorLevel": 60,
+    "changedRanks": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "specialAnchor": {
+      "class": "Gladiator",
+      "physicalDefense": 169,
+      "reduction": 35
+    },
+    "preservedRanks": [],
+    "magicalDefense": "unchanged",
+    "rule": "Override final physical set totals after historical scaling; each class calibrated independently. R2 through R6 calibrated; R1 independently reduced by the approved whole-point starter adjustment.",
+    "status": "historicalSupersededByRankProgression"
+  },
+  "magicalCalibration": {
+    "anchorRank": 4,
+    "anchorLevel": 60,
+    "changedRanks": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "preservedRanks": [
+      1,
+      4
+    ],
+    "physicalDefense": "unchanged",
+    "baseDefense": "unchanged",
+    "level1": "Unarmored class baseline only; no R1 gear included",
+    "rounding": "Ceil aggregate magical defense target, tolerate 1e-9 floating point noise, then distribute whole points across five slots",
+    "status": "historicalSupersededByRankProgression"
+  },
   "sets": [
     {
       "name": "Butcher",
       "rank": 1,
       "row": 3,
       "raw": {
-        "physicalDefense": 31,
-        "magicalDefense": 15
+        "physicalDefense": 12.65,
+        "magicalDefense": 9.3
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 31,
-        "magicalDefense": 15
+        "physicalDefense": 12.65,
+        "magicalDefense": 9.3
       },
       "partIds": [
         "armor-butcher-r1-chest",
@@ -1642,14 +1693,14 @@
       "rank": 2,
       "row": 4,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 31
+        "physicalDefense": 22.39,
+        "magicalDefense": 16.45
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 44,
-        "magicalDefense": 31
+        "physicalDefense": 22.39,
+        "magicalDefense": 16.45
       },
       "partIds": [
         "armor-butcher-r2-chest",
@@ -1664,14 +1715,14 @@
       "rank": 3,
       "row": 5,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 46
+        "physicalDefense": 39.2,
+        "magicalDefense": 28.8
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 59,
-        "magicalDefense": 46
+        "physicalDefense": 39.2,
+        "magicalDefense": 28.8
       },
       "partIds": [
         "armor-butcher-r3-chest",
@@ -1686,14 +1737,14 @@
       "rank": 4,
       "row": 6,
       "raw": {
-        "physicalDefense": 116,
-        "magicalDefense": 84
+        "physicalDefense": 67.83,
+        "magicalDefense": 49.83
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 116,
-        "magicalDefense": 84
+        "physicalDefense": 67.83,
+        "magicalDefense": 49.83
       },
       "partIds": [
         "armor-butcher-r4-chest",
@@ -1708,14 +1759,14 @@
       "rank": 5,
       "row": 7,
       "raw": {
-        "physicalDefense": 196,
-        "magicalDefense": 118
+        "physicalDefense": 115.97,
+        "magicalDefense": 85.21
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 196,
-        "magicalDefense": 118
+        "physicalDefense": 115.97,
+        "magicalDefense": 85.21
       },
       "partIds": [
         "armor-butcher-r5-chest",
@@ -1730,14 +1781,14 @@
       "rank": 6,
       "row": 8,
       "raw": {
-        "physicalDefense": 309,
-        "magicalDefense": 149
+        "physicalDefense": 196,
+        "magicalDefense": 144
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 309,
-        "magicalDefense": 149
+        "physicalDefense": 196,
+        "magicalDefense": 144
       },
       "partIds": [
         "armor-butcher-r6-chest",
@@ -1752,14 +1803,14 @@
       "rank": 1,
       "row": 11,
       "raw": {
-        "physicalDefense": 36,
-        "magicalDefense": 12
+        "physicalDefense": 18.53,
+        "magicalDefense": 9.04
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 36,
-        "magicalDefense": 12
+        "physicalDefense": 18.53,
+        "magicalDefense": 9.04
       },
       "partIds": [
         "armor-gladiator-r1-chest",
@@ -1774,14 +1825,14 @@
       "rank": 2,
       "row": 12,
       "raw": {
-        "physicalDefense": 72,
-        "magicalDefense": 25
+        "physicalDefense": 32.81,
+        "magicalDefense": 15.99
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 72,
-        "magicalDefense": 25
+        "physicalDefense": 32.81,
+        "magicalDefense": 15.99
       },
       "partIds": [
         "armor-gladiator-r2-chest",
@@ -1796,14 +1847,14 @@
       "rank": 3,
       "row": 13,
       "raw": {
-        "physicalDefense": 145,
-        "magicalDefense": 47
+        "physicalDefense": 57.4,
+        "magicalDefense": 28
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 145,
-        "magicalDefense": 47
+        "physicalDefense": 57.4,
+        "magicalDefense": 28
       },
       "partIds": [
         "armor-gladiator-r3-chest",
@@ -1818,14 +1869,14 @@
       "rank": 4,
       "row": 14,
       "raw": {
-        "physicalDefense": 204,
-        "magicalDefense": 83
+        "physicalDefense": 99.32,
+        "magicalDefense": 48.43
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 204,
-        "magicalDefense": 83
+        "physicalDefense": 99.32,
+        "magicalDefense": 48.43
       },
       "partIds": [
         "armor-gladiator-r4-chest",
@@ -1840,14 +1891,14 @@
       "rank": 5,
       "row": 15,
       "raw": {
-        "physicalDefense": 253,
-        "magicalDefense": 102
+        "physicalDefense": 169.83,
+        "magicalDefense": 82.84
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 253,
-        "magicalDefense": 102
+        "physicalDefense": 169.83,
+        "magicalDefense": 82.84
       },
       "partIds": [
         "armor-gladiator-r5-chest",
@@ -1862,14 +1913,14 @@
       "rank": 6,
       "row": 16,
       "raw": {
-        "physicalDefense": 354,
-        "magicalDefense": 123
+        "physicalDefense": 287,
+        "magicalDefense": 140
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 354,
-        "magicalDefense": 123
+        "physicalDefense": 287,
+        "magicalDefense": 140
       },
       "partIds": [
         "armor-gladiator-r6-chest",
@@ -1884,14 +1935,14 @@
       "rank": 1,
       "row": 19,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 29
+        "physicalDefense": 21.9,
+        "magicalDefense": 18.79
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 44,
-        "magicalDefense": 29
+        "physicalDefense": 21.9,
+        "magicalDefense": 18.79
       },
       "partIds": [
         "armor-tank-r1-chest",
@@ -1906,14 +1957,14 @@
       "rank": 2,
       "row": 20,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 56
+        "physicalDefense": 38.75,
+        "magicalDefense": 33.26
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 59,
-        "magicalDefense": 56
+        "physicalDefense": 38.75,
+        "magicalDefense": 33.26
       },
       "partIds": [
         "armor-tank-r2-chest",
@@ -1928,14 +1979,14 @@
       "rank": 3,
       "row": 21,
       "raw": {
-        "physicalDefense": 119,
-        "magicalDefense": 84
+        "physicalDefense": 67.8,
+        "magicalDefense": 58.2
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 119,
-        "magicalDefense": 84
+        "physicalDefense": 67.8,
+        "magicalDefense": 58.2
       },
       "partIds": [
         "armor-tank-r3-chest",
@@ -1950,14 +2001,14 @@
       "rank": 4,
       "row": 22,
       "raw": {
-        "physicalDefense": 199,
-        "magicalDefense": 171
+        "physicalDefense": 117.3,
+        "magicalDefense": 100.7
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 199,
-        "magicalDefense": 171
+        "physicalDefense": 117.3,
+        "magicalDefense": 100.7
       },
       "partIds": [
         "armor-tank-r4-chest",
@@ -1972,14 +2023,14 @@
       "rank": 5,
       "row": 23,
       "raw": {
-        "physicalDefense": 318,
-        "magicalDefense": 206
+        "physicalDefense": 200.59,
+        "magicalDefense": 172.19
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 318,
-        "magicalDefense": 206
+        "physicalDefense": 200.59,
+        "magicalDefense": 172.19
       },
       "partIds": [
         "armor-tank-r5-chest",
@@ -1994,14 +2045,14 @@
       "rank": 6,
       "row": 24,
       "raw": {
-        "physicalDefense": 443,
-        "magicalDefense": 288
+        "physicalDefense": 339,
+        "magicalDefense": 291
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 443,
-        "magicalDefense": 288
+        "physicalDefense": 339,
+        "magicalDefense": 291
       },
       "partIds": [
         "armor-tank-r6-chest",
@@ -2016,14 +2067,14 @@
       "rank": 1,
       "row": 27,
       "raw": {
-        "physicalDefense": 27,
-        "magicalDefense": 20
+        "physicalDefense": 10.99,
+        "magicalDefense": 12.4
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 27,
-        "magicalDefense": 20
+        "physicalDefense": 10.99,
+        "magicalDefense": 12.4
       },
       "partIds": [
         "armor-villain-r1-chest",
@@ -2038,14 +2089,14 @@
       "rank": 2,
       "row": 28,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 41
+        "physicalDefense": 19.44,
+        "magicalDefense": 21.93
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 44,
-        "magicalDefense": 41
+        "physicalDefense": 19.44,
+        "magicalDefense": 21.93
       },
       "partIds": [
         "armor-villain-r2-chest",
@@ -2060,14 +2111,14 @@
       "rank": 3,
       "row": 29,
       "raw": {
-        "physicalDefense": 56,
-        "magicalDefense": 62
+        "physicalDefense": 34,
+        "magicalDefense": 38.4
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 56,
-        "magicalDefense": 62
+        "physicalDefense": 34,
+        "magicalDefense": 38.4
       },
       "partIds": [
         "armor-villain-r3-chest",
@@ -2082,14 +2133,14 @@
       "rank": 4,
       "row": 30,
       "raw": {
-        "physicalDefense": 100,
-        "magicalDefense": 112
+        "physicalDefense": 58.85,
+        "magicalDefense": 66.45
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 100,
-        "magicalDefense": 112
+        "physicalDefense": 58.85,
+        "magicalDefense": 66.45
       },
       "partIds": [
         "armor-villain-r4-chest",
@@ -2104,14 +2155,14 @@
       "rank": 5,
       "row": 31,
       "raw": {
-        "physicalDefense": 162,
-        "magicalDefense": 157
+        "physicalDefense": 100.61,
+        "magicalDefense": 113.61
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 162,
-        "magicalDefense": 157
+        "physicalDefense": 100.61,
+        "magicalDefense": 113.61
       },
       "partIds": [
         "armor-villain-r5-chest",
@@ -2126,14 +2177,14 @@
       "rank": 6,
       "row": 32,
       "raw": {
-        "physicalDefense": 269,
-        "magicalDefense": 199
+        "physicalDefense": 170,
+        "magicalDefense": 192
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 269,
-        "magicalDefense": 199
+        "physicalDefense": 170,
+        "magicalDefense": 192
       },
       "partIds": [
         "armor-villain-r6-chest",
@@ -2148,14 +2199,14 @@
       "rank": 1,
       "row": 35,
       "raw": {
-        "physicalDefense": 23,
-        "magicalDefense": 31
+        "physicalDefense": 12.21,
+        "magicalDefense": 12.79
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 23,
-        "magicalDefense": 31
+        "physicalDefense": 12.21,
+        "magicalDefense": 12.79
       },
       "partIds": [
         "armor-bloodmage-r1-chest",
@@ -2170,14 +2221,14 @@
       "rank": 2,
       "row": 36,
       "raw": {
-        "physicalDefense": 41,
-        "magicalDefense": 44
+        "physicalDefense": 21.6,
+        "magicalDefense": 22.63
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 41,
-        "magicalDefense": 44
+        "physicalDefense": 21.6,
+        "magicalDefense": 22.63
       },
       "partIds": [
         "armor-bloodmage-r2-chest",
@@ -2192,14 +2243,14 @@
       "rank": 3,
       "row": 37,
       "raw": {
-        "physicalDefense": 72,
-        "magicalDefense": 59
+        "physicalDefense": 37.8,
+        "magicalDefense": 39.6
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 72,
-        "magicalDefense": 59
+        "physicalDefense": 37.8,
+        "magicalDefense": 39.6
       },
       "partIds": [
         "armor-bloodmage-r3-chest",
@@ -2214,14 +2265,14 @@
       "rank": 4,
       "row": 38,
       "raw": {
-        "physicalDefense": 112,
-        "magicalDefense": 116
+        "physicalDefense": 65.4,
+        "magicalDefense": 68.51
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 112,
-        "magicalDefense": 116
+        "physicalDefense": 65.4,
+        "magicalDefense": 68.51
       },
       "partIds": [
         "armor-bloodmage-r4-chest",
@@ -2236,14 +2287,14 @@
       "rank": 5,
       "row": 39,
       "raw": {
-        "physicalDefense": 164,
-        "magicalDefense": 196
+        "physicalDefense": 111.83,
+        "magicalDefense": 117.15
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 164,
-        "magicalDefense": 196
+        "physicalDefense": 111.83,
+        "magicalDefense": 117.15
       },
       "partIds": [
         "armor-bloodmage-r5-chest",
@@ -2258,14 +2309,14 @@
       "rank": 6,
       "row": 40,
       "raw": {
-        "physicalDefense": 235,
-        "magicalDefense": 309
+        "physicalDefense": 189,
+        "magicalDefense": 198
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 235,
-        "magicalDefense": 309
+        "physicalDefense": 189,
+        "magicalDefense": 198
       },
       "partIds": [
         "armor-bloodmage-r6-chest",
@@ -2280,14 +2331,14 @@
       "rank": 1,
       "row": 43,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 44
+        "physicalDefense": 9.37,
+        "magicalDefense": 21.97
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 18,
-        "magicalDefense": 44
+        "physicalDefense": 9.37,
+        "magicalDefense": 21.97
       },
       "partIds": [
         "armor-healer-r1-chest",
@@ -2302,14 +2353,14 @@
       "rank": 2,
       "row": 44,
       "raw": {
-        "physicalDefense": 28,
-        "magicalDefense": 59
+        "physicalDefense": 16.57,
+        "magicalDefense": 38.86
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 28,
-        "magicalDefense": 59
+        "physicalDefense": 16.57,
+        "magicalDefense": 38.86
       },
       "partIds": [
         "armor-healer-r2-chest",
@@ -2324,14 +2375,14 @@
       "rank": 3,
       "row": 45,
       "raw": {
-        "physicalDefense": 47,
-        "magicalDefense": 119
+        "physicalDefense": 29,
+        "magicalDefense": 68
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 47,
-        "magicalDefense": 119
+        "physicalDefense": 29,
+        "magicalDefense": 68
       },
       "partIds": [
         "armor-healer-r3-chest",
@@ -2346,14 +2397,14 @@
       "rank": 4,
       "row": 46,
       "raw": {
-        "physicalDefense": 86,
-        "magicalDefense": 199
+        "physicalDefense": 50.18,
+        "magicalDefense": 117.65
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 86,
-        "magicalDefense": 199
+        "physicalDefense": 50.18,
+        "magicalDefense": 117.65
       },
       "partIds": [
         "armor-healer-r4-chest",
@@ -2368,14 +2419,14 @@
       "rank": 5,
       "row": 47,
       "raw": {
-        "physicalDefense": 130,
-        "magicalDefense": 318
+        "physicalDefense": 85.81,
+        "magicalDefense": 201.18
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 130,
-        "magicalDefense": 318
+        "physicalDefense": 85.81,
+        "magicalDefense": 201.18
       },
       "partIds": [
         "armor-healer-r5-chest",
@@ -2390,14 +2441,14 @@
       "rank": 6,
       "row": 48,
       "raw": {
-        "physicalDefense": 180,
-        "magicalDefense": 443
+        "physicalDefense": 145,
+        "magicalDefense": 340
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 180,
-        "magicalDefense": 443
+        "physicalDefense": 145,
+        "magicalDefense": 340
       },
       "partIds": [
         "armor-healer-r6-chest",
@@ -2412,14 +2463,14 @@
       "rank": 1,
       "row": 51,
       "raw": {
-        "physicalDefense": 21,
-        "magicalDefense": 36
+        "physicalDefense": 12.4,
+        "magicalDefense": 22.28
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 21,
-        "magicalDefense": 36
+        "physicalDefense": 12.4,
+        "magicalDefense": 22.28
       },
       "partIds": [
         "armor-lightmage-r1-chest",
@@ -2434,14 +2485,14 @@
       "rank": 2,
       "row": 52,
       "raw": {
-        "physicalDefense": 36,
-        "magicalDefense": 72
+        "physicalDefense": 21.93,
+        "magicalDefense": 39.45
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 36,
-        "magicalDefense": 72
+        "physicalDefense": 21.93,
+        "magicalDefense": 39.45
       },
       "partIds": [
         "armor-lightmage-r2-chest",
@@ -2456,14 +2507,14 @@
       "rank": 3,
       "row": 53,
       "raw": {
-        "physicalDefense": 66,
-        "magicalDefense": 145
+        "physicalDefense": 38.4,
+        "magicalDefense": 69
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 66,
-        "magicalDefense": 145
+        "physicalDefense": 38.4,
+        "magicalDefense": 69
       },
       "partIds": [
         "armor-lightmage-r3-chest",
@@ -2478,14 +2529,14 @@
       "rank": 4,
       "row": 54,
       "raw": {
-        "physicalDefense": 114,
-        "magicalDefense": 204
+        "physicalDefense": 66.45,
+        "magicalDefense": 119.38
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 114,
-        "magicalDefense": 204
+        "physicalDefense": 66.45,
+        "magicalDefense": 119.38
       },
       "partIds": [
         "armor-lightmage-r4-chest",
@@ -2500,14 +2551,14 @@
       "rank": 5,
       "row": 55,
       "raw": {
-        "physicalDefense": 162,
-        "magicalDefense": 253
+        "physicalDefense": 113.61,
+        "magicalDefense": 204.13
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 162,
-        "magicalDefense": 253
+        "physicalDefense": 113.61,
+        "magicalDefense": 204.13
       },
       "partIds": [
         "armor-lightmage-r5-chest",
@@ -2522,14 +2573,14 @@
       "rank": 6,
       "row": 56,
       "raw": {
-        "physicalDefense": 215,
-        "magicalDefense": 354
+        "physicalDefense": 192,
+        "magicalDefense": 345
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 215,
-        "magicalDefense": 354
+        "physicalDefense": 192,
+        "magicalDefense": 345
       },
       "partIds": [
         "armor-lightmage-r6-chest",
@@ -2544,14 +2595,14 @@
       "rank": 1,
       "row": 59,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 21
+        "physicalDefense": 14.8,
+        "magicalDefense": 12.28
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 26,
-        "magicalDefense": 21
+        "physicalDefense": 14.8,
+        "magicalDefense": 12.28
       },
       "partIds": [
         "armor-kräuterkundler-r1-chest",
@@ -2566,14 +2617,14 @@
       "rank": 2,
       "row": 60,
       "raw": {
-        "physicalDefense": 49,
-        "magicalDefense": 36
+        "physicalDefense": 26.18,
+        "magicalDefense": 21.71
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 49,
-        "magicalDefense": 36
+        "physicalDefense": 26.18,
+        "magicalDefense": 21.71
       },
       "partIds": [
         "armor-kräuterkundler-r2-chest",
@@ -2588,14 +2639,14 @@
       "rank": 3,
       "row": 61,
       "raw": {
-        "physicalDefense": 86,
-        "magicalDefense": 62
+        "physicalDefense": 45.8,
+        "magicalDefense": 38
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 86,
-        "magicalDefense": 62
+        "physicalDefense": 45.8,
+        "magicalDefense": 38
       },
       "partIds": [
         "armor-kräuterkundler-r3-chest",
@@ -2610,14 +2661,14 @@
       "rank": 4,
       "row": 62,
       "raw": {
-        "physicalDefense": 135,
-        "magicalDefense": 112
+        "physicalDefense": 79.25,
+        "magicalDefense": 65.75
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 135,
-        "magicalDefense": 112
+        "physicalDefense": 79.25,
+        "magicalDefense": 65.75
       },
       "partIds": [
         "armor-kräuterkundler-r4-chest",
@@ -2632,14 +2683,14 @@
       "rank": 5,
       "row": 63,
       "raw": {
-        "physicalDefense": 197,
-        "magicalDefense": 162
+        "physicalDefense": 135.5,
+        "magicalDefense": 112.43
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 197,
-        "magicalDefense": 162
+        "physicalDefense": 135.5,
+        "magicalDefense": 112.43
       },
       "partIds": [
         "armor-kräuterkundler-r5-chest",
@@ -2654,14 +2705,14 @@
       "rank": 6,
       "row": 64,
       "raw": {
-        "physicalDefense": 267,
-        "magicalDefense": 211
+        "physicalDefense": 229,
+        "magicalDefense": 190
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 267,
-        "magicalDefense": 211
+        "physicalDefense": 229,
+        "magicalDefense": 190
       },
       "partIds": [
         "armor-kräuterkundler-r6-chest",
@@ -2676,14 +2727,14 @@
       "rank": 1,
       "row": 71,
       "raw": {
-        "physicalDefense": 25,
-        "magicalDefense": 26
+        "physicalDefense": 13.05,
+        "magicalDefense": 12.93
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 25,
-        "magicalDefense": 26
+        "physicalDefense": 13.05,
+        "magicalDefense": 12.93
       },
       "partIds": [
         "armor-archer-r1-chest",
@@ -2698,14 +2749,14 @@
       "rank": 2,
       "row": 72,
       "raw": {
-        "physicalDefense": 42,
-        "magicalDefense": 49
+        "physicalDefense": 23.09,
+        "magicalDefense": 22.86
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 42,
-        "magicalDefense": 49
+        "physicalDefense": 23.09,
+        "magicalDefense": 22.86
       },
       "partIds": [
         "armor-archer-r2-chest",
@@ -2720,14 +2771,14 @@
       "rank": 3,
       "row": 73,
       "raw": {
-        "physicalDefense": 70,
-        "magicalDefense": 65
+        "physicalDefense": 40.4,
+        "magicalDefense": 40
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 70,
-        "magicalDefense": 65
+        "physicalDefense": 40.4,
+        "magicalDefense": 40
       },
       "partIds": [
         "armor-archer-r3-chest",
@@ -2742,14 +2793,14 @@
       "rank": 4,
       "row": 74,
       "raw": {
-        "physicalDefense": 119,
-        "magicalDefense": 117
+        "physicalDefense": 69.89,
+        "magicalDefense": 69.19
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 119,
-        "magicalDefense": 117
+        "physicalDefense": 69.89,
+        "magicalDefense": 69.19
       },
       "partIds": [
         "armor-archer-r4-chest",
@@ -2764,14 +2815,14 @@
       "rank": 5,
       "row": 75,
       "raw": {
-        "physicalDefense": 170,
-        "magicalDefense": 164
+        "physicalDefense": 119.51,
+        "magicalDefense": 118.33
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 170,
-        "magicalDefense": 164
+        "physicalDefense": 119.51,
+        "magicalDefense": 118.33
       },
       "partIds": [
         "armor-archer-r5-chest",
@@ -2786,14 +2837,14 @@
       "rank": 6,
       "row": 76,
       "raw": {
-        "physicalDefense": 254,
-        "magicalDefense": 211
+        "physicalDefense": 202,
+        "magicalDefense": 200
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 254,
-        "magicalDefense": 211
+        "physicalDefense": 202,
+        "magicalDefense": 200
       },
       "partIds": [
         "armor-archer-r6-chest",
@@ -2808,14 +2859,14 @@
       "rank": 1,
       "row": 79,
       "raw": {
-        "physicalDefense": 27,
-        "magicalDefense": 24
+        "physicalDefense": 16.14,
+        "magicalDefense": 13.7
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 27,
-        "magicalDefense": 24
+        "physicalDefense": 16.14,
+        "magicalDefense": 13.7
       },
       "partIds": [
         "armor-shamane-r1-chest",
@@ -2830,14 +2881,14 @@
       "rank": 2,
       "row": 80,
       "raw": {
-        "physicalDefense": 52,
-        "magicalDefense": 46
+        "physicalDefense": 28.57,
+        "magicalDefense": 24.24
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 52,
-        "magicalDefense": 46
+        "physicalDefense": 28.57,
+        "magicalDefense": 24.24
       },
       "partIds": [
         "armor-shamane-r2-chest",
@@ -2852,14 +2903,14 @@
       "rank": 3,
       "row": 81,
       "raw": {
-        "physicalDefense": 100,
-        "magicalDefense": 88
+        "physicalDefense": 50,
+        "magicalDefense": 42.4
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 100,
-        "magicalDefense": 88
+        "physicalDefense": 50,
+        "magicalDefense": 42.4
       },
       "partIds": [
         "armor-shamane-r3-chest",
@@ -2874,14 +2925,14 @@
       "rank": 4,
       "row": 82,
       "raw": {
-        "physicalDefense": 148,
-        "magicalDefense": 126
+        "physicalDefense": 86.5,
+        "magicalDefense": 73.37
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 148,
-        "magicalDefense": 126
+        "physicalDefense": 86.5,
+        "magicalDefense": 73.37
       },
       "partIds": [
         "armor-shamane-r4-chest",
@@ -2896,14 +2947,14 @@
       "rank": 5,
       "row": 83,
       "raw": {
-        "physicalDefense": 200,
-        "magicalDefense": 181
+        "physicalDefense": 147.93,
+        "magicalDefense": 125.44
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 200,
-        "magicalDefense": 181
+        "physicalDefense": 147.93,
+        "magicalDefense": 125.44
       },
       "partIds": [
         "armor-shamane-r5-chest",
@@ -2918,14 +2969,14 @@
       "rank": 6,
       "row": 84,
       "raw": {
-        "physicalDefense": 276,
-        "magicalDefense": 247
+        "physicalDefense": 250,
+        "magicalDefense": 212
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 276,
-        "magicalDefense": 247
+        "physicalDefense": 250,
+        "magicalDefense": 212
       },
       "partIds": [
         "armor-shamane-r6-chest",
@@ -2940,14 +2991,14 @@
       "rank": 1,
       "row": 87,
       "raw": {
-        "physicalDefense": 29,
-        "magicalDefense": 23
+        "physicalDefense": 15.69,
+        "magicalDefense": 13.44
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 29,
-        "magicalDefense": 23
+        "physicalDefense": 15.69,
+        "magicalDefense": 13.44
       },
       "partIds": [
         "armor-druid-r1-chest",
@@ -2962,14 +3013,14 @@
       "rank": 2,
       "row": 88,
       "raw": {
-        "physicalDefense": 56,
-        "magicalDefense": 44
+        "physicalDefense": 27.77,
+        "magicalDefense": 23.77
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 56,
-        "magicalDefense": 44
+        "physicalDefense": 27.77,
+        "magicalDefense": 23.77
       },
       "partIds": [
         "armor-druid-r2-chest",
@@ -2984,14 +3035,14 @@
       "rank": 3,
       "row": 89,
       "raw": {
-        "physicalDefense": 100,
-        "magicalDefense": 78
+        "physicalDefense": 48.6,
+        "magicalDefense": 41.6
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 100,
-        "magicalDefense": 78
+        "physicalDefense": 48.6,
+        "magicalDefense": 41.6
       },
       "partIds": [
         "armor-druid-r3-chest",
@@ -3006,14 +3057,14 @@
       "rank": 4,
       "row": 90,
       "raw": {
-        "physicalDefense": 144,
-        "magicalDefense": 123
+        "physicalDefense": 84.1,
+        "magicalDefense": 71.97
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 144,
-        "magicalDefense": 123
+        "physicalDefense": 84.1,
+        "magicalDefense": 71.97
       },
       "partIds": [
         "armor-druid-r4-chest",
@@ -3028,14 +3079,14 @@
       "rank": 5,
       "row": 91,
       "raw": {
-        "physicalDefense": 212,
-        "magicalDefense": 174
+        "physicalDefense": 143.8,
+        "magicalDefense": 123.08
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 212,
-        "magicalDefense": 174
+        "physicalDefense": 143.8,
+        "magicalDefense": 123.08
       },
       "partIds": [
         "armor-druid-r5-chest",
@@ -3050,14 +3101,14 @@
       "rank": 6,
       "row": 92,
       "raw": {
-        "physicalDefense": 291,
-        "magicalDefense": 235
+        "physicalDefense": 243,
+        "magicalDefense": 208
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 291,
-        "magicalDefense": 235
+        "physicalDefense": 243,
+        "magicalDefense": 208
       },
       "partIds": [
         "armor-druid-r6-chest",
@@ -3072,14 +3123,14 @@
       "rank": 1,
       "row": 95,
       "raw": {
-        "physicalDefense": 20,
-        "magicalDefense": 19
+        "physicalDefense": 12.47,
+        "magicalDefense": 11.81
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 20,
-        "magicalDefense": 19
+        "physicalDefense": 12.47,
+        "magicalDefense": 11.81
       },
       "partIds": [
         "armor-seelenjäger-r1-chest",
@@ -3094,14 +3145,14 @@
       "rank": 2,
       "row": 96,
       "raw": {
-        "physicalDefense": 35,
-        "magicalDefense": 33
+        "physicalDefense": 22.05,
+        "magicalDefense": 20.91
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 35,
-        "magicalDefense": 33
+        "physicalDefense": 22.05,
+        "magicalDefense": 20.91
       },
       "partIds": [
         "armor-seelenjäger-r2-chest",
@@ -3116,14 +3167,14 @@
       "rank": 3,
       "row": 97,
       "raw": {
-        "physicalDefense": 65,
-        "magicalDefense": 62
+        "physicalDefense": 38.6,
+        "magicalDefense": 36.6
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 65,
-        "magicalDefense": 62
+        "physicalDefense": 38.6,
+        "magicalDefense": 36.6
       },
       "partIds": [
         "armor-seelenjäger-r3-chest",
@@ -3138,14 +3189,14 @@
       "rank": 4,
       "row": 98,
       "raw": {
-        "physicalDefense": 114,
-        "magicalDefense": 106
+        "physicalDefense": 66.79,
+        "magicalDefense": 63.33
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 114,
-        "magicalDefense": 106
+        "physicalDefense": 66.79,
+        "magicalDefense": 63.33
       },
       "partIds": [
         "armor-seelenjäger-r4-chest",
@@ -3160,14 +3211,14 @@
       "rank": 5,
       "row": 99,
       "raw": {
-        "physicalDefense": 157,
-        "magicalDefense": 148
+        "physicalDefense": 114.2,
+        "magicalDefense": 108.28
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 157,
-        "magicalDefense": 148
+        "physicalDefense": 114.2,
+        "magicalDefense": 108.28
       },
       "partIds": [
         "armor-seelenjäger-r5-chest",
@@ -3182,14 +3233,14 @@
       "rank": 6,
       "row": 100,
       "raw": {
-        "physicalDefense": 199,
-        "magicalDefense": 190
+        "physicalDefense": 193,
+        "magicalDefense": 183
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 199,
-        "magicalDefense": 190
+        "physicalDefense": 193,
+        "magicalDefense": 183
       },
       "partIds": [
         "armor-seelenjäger-r6-chest",
@@ -3204,14 +3255,14 @@
       "rank": 1,
       "row": 103,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 19
+        "physicalDefense": 17.61,
+        "magicalDefense": 11.12
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 30,
-        "magicalDefense": 19
+        "physicalDefense": 17.61,
+        "magicalDefense": 11.12
       },
       "partIds": [
         "armor-adventure-r1-chest",
@@ -3226,14 +3277,14 @@
       "rank": 2,
       "row": 104,
       "raw": {
-        "physicalDefense": 54,
-        "magicalDefense": 32
+        "physicalDefense": 31.19,
+        "magicalDefense": 19.66
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 54,
-        "magicalDefense": 32
+        "physicalDefense": 31.19,
+        "magicalDefense": 19.66
       },
       "partIds": [
         "armor-adventure-r2-chest",
@@ -3248,14 +3299,14 @@
       "rank": 3,
       "row": 105,
       "raw": {
-        "physicalDefense": 99,
-        "magicalDefense": 58
+        "physicalDefense": 54.6,
+        "magicalDefense": 34.4
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 99,
-        "magicalDefense": 58
+        "physicalDefense": 54.6,
+        "magicalDefense": 34.4
       },
       "partIds": [
         "armor-adventure-r3-chest",
@@ -3270,14 +3321,14 @@
       "rank": 4,
       "row": 106,
       "raw": {
-        "physicalDefense": 161,
-        "magicalDefense": 100
+        "physicalDefense": 94.47,
+        "magicalDefense": 59.53
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 161,
-        "magicalDefense": 100
+        "physicalDefense": 94.47,
+        "magicalDefense": 59.53
       },
       "partIds": [
         "armor-adventure-r4-chest",
@@ -3292,14 +3343,14 @@
       "rank": 5,
       "row": 107,
       "raw": {
-        "physicalDefense": 228,
-        "magicalDefense": 149
+        "physicalDefense": 161.54,
+        "magicalDefense": 101.79
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 228,
-        "magicalDefense": 149
+        "physicalDefense": 161.54,
+        "magicalDefense": 101.79
       },
       "partIds": [
         "armor-adventure-r5-chest",
@@ -3314,14 +3365,14 @@
       "rank": 6,
       "row": 108,
       "raw": {
-        "physicalDefense": 302,
-        "magicalDefense": 186
+        "physicalDefense": 273,
+        "magicalDefense": 172
       },
       "converted": {
         "health": 0,
         "mana": 0,
-        "physicalDefense": 302,
-        "magicalDefense": 186
+        "physicalDefense": 273,
+        "magicalDefense": 172
       },
       "partIds": [
         "armor-adventure-r6-chest",
@@ -3344,8 +3395,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 5
+        "physicalDefense": 3.81,
+        "magicalDefense": 2.77
       },
       "bonusSlots": [
         null,
@@ -3368,8 +3419,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 4
+        "physicalDefense": 3.29,
+        "magicalDefense": 2.45
       },
       "bonusSlots": [
         null,
@@ -3392,8 +3443,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 2
+        "physicalDefense": 2,
+        "magicalDefense": 1.49
       },
       "bonusSlots": [
         null,
@@ -3416,8 +3467,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 2
+        "physicalDefense": 2,
+        "magicalDefense": 1.49
       },
       "bonusSlots": [
         null,
@@ -3440,8 +3491,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 2
+        "physicalDefense": 1.55,
+        "magicalDefense": 1.1
       },
       "bonusSlots": [
         null,
@@ -3464,8 +3515,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 13,
-        "magicalDefense": 9
+        "physicalDefense": 6.74,
+        "magicalDefense": 4.91
       },
       "bonusSlots": [
         null,
@@ -3488,8 +3539,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 8
+        "physicalDefense": 5.83,
+        "magicalDefense": 4.34
       },
       "bonusSlots": [
         null,
@@ -3512,8 +3563,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 5
+        "physicalDefense": 3.54,
+        "magicalDefense": 2.63
       },
       "bonusSlots": [
         null,
@@ -3536,8 +3587,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 5
+        "physicalDefense": 3.54,
+        "magicalDefense": 2.63
       },
       "bonusSlots": [
         null,
@@ -3560,8 +3611,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 4
+        "physicalDefense": 2.74,
+        "magicalDefense": 1.94
       },
       "bonusSlots": [
         null,
@@ -3584,8 +3635,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 14
+        "physicalDefense": 11.8,
+        "magicalDefense": 8.6
       },
       "bonusSlots": [
         null,
@@ -3608,8 +3659,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 15,
-        "magicalDefense": 12
+        "physicalDefense": 10.2,
+        "magicalDefense": 7.6
       },
       "bonusSlots": [
         null,
@@ -3632,8 +3683,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 7
+        "physicalDefense": 6.2,
+        "magicalDefense": 4.6
       },
       "bonusSlots": [
         null,
@@ -3656,8 +3707,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 7
+        "physicalDefense": 6.2,
+        "magicalDefense": 4.6
       },
       "bonusSlots": [
         null,
@@ -3680,8 +3731,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 6
+        "physicalDefense": 4.8,
+        "magicalDefense": 3.4
       },
       "bonusSlots": [
         null,
@@ -3704,8 +3755,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 35,
-        "magicalDefense": 25
+        "physicalDefense": 20.42,
+        "magicalDefense": 14.88
       },
       "bonusSlots": [
         null,
@@ -3728,8 +3779,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 22
+        "physicalDefense": 17.65,
+        "magicalDefense": 13.15
       },
       "bonusSlots": [
         null,
@@ -3752,8 +3803,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 14
+        "physicalDefense": 10.73,
+        "magicalDefense": 7.96
       },
       "bonusSlots": [
         null,
@@ -3776,8 +3827,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 13
+        "physicalDefense": 10.73,
+        "magicalDefense": 7.96
       },
       "bonusSlots": [
         null,
@@ -3800,8 +3851,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 10
+        "physicalDefense": 8.3,
+        "magicalDefense": 5.88
       },
       "bonusSlots": [
         null,
@@ -3824,8 +3875,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 35
+        "physicalDefense": 34.91,
+        "magicalDefense": 25.44
       },
       "bonusSlots": [
         null,
@@ -3848,8 +3899,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 51,
-        "magicalDefense": 31
+        "physicalDefense": 30.18,
+        "magicalDefense": 22.49
       },
       "bonusSlots": [
         null,
@@ -3872,8 +3923,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 31,
-        "magicalDefense": 19
+        "physicalDefense": 18.34,
+        "magicalDefense": 13.61
       },
       "bonusSlots": [
         null,
@@ -3896,8 +3947,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 31,
-        "magicalDefense": 19
+        "physicalDefense": 18.34,
+        "magicalDefense": 13.61
       },
       "bonusSlots": [
         null,
@@ -3920,8 +3971,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 14
+        "physicalDefense": 14.2,
+        "magicalDefense": 10.06
       },
       "bonusSlots": [
         null,
@@ -3946,8 +3997,8 @@
       "description_de": "Eine feste Lederweste mit schmalen Schwarzstahlplatten vor Brust und Rippen. Die Arme bleiben frei.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 93,
-        "magicalDefense": 44
+        "physicalDefense": 59,
+        "magicalDefense": 43
       },
       "bonusSlots": [
         null,
@@ -3972,8 +4023,8 @@
       "description_de": "Eine robuste Lederhose mit einzeln befestigten Schwarzstahlschienen vor Schienbeinen und Oberschenkeln.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 80,
-        "magicalDefense": 39
+        "physicalDefense": 51,
+        "magicalDefense": 38
       },
       "bonusSlots": [
         null,
@@ -3998,8 +4049,8 @@
       "description_de": "Eine offene Maske aus mattem Schwarzstahl, die Stirn und Wangen einfasst.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 50,
-        "magicalDefense": 24
+        "physicalDefense": 31,
+        "magicalDefense": 23
       },
       "bonusSlots": [
         null,
@@ -4024,8 +4075,8 @@
       "description_de": "Kräftige Lederwickel mit kleinen Schwarzstahlplatten über Knöcheln und Handrücken.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 49,
-        "magicalDefense": 24
+        "physicalDefense": 31,
+        "magicalDefense": 23
       },
       "bonusSlots": [
         null,
@@ -4050,8 +4101,8 @@
       "description_de": "Feste Lederstiefel mit Schwarzstahlkappen und beweglichen Verstärkungen an den Schäften.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 37,
-        "magicalDefense": 18
+        "physicalDefense": 24,
+        "magicalDefense": 17
       },
       "bonusSlots": [
         null,
@@ -4074,8 +4125,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 4
+        "physicalDefense": 5.55,
+        "magicalDefense": 2.71
       },
       "bonusSlots": [
         null,
@@ -4098,8 +4149,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 3
+        "physicalDefense": 4.84,
+        "magicalDefense": 2.39
       },
       "bonusSlots": [
         null,
@@ -4122,8 +4173,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 2
+        "physicalDefense": 2.97,
+        "magicalDefense": 1.42
       },
       "bonusSlots": [
         null,
@@ -4146,8 +4197,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 2
+        "physicalDefense": 2.97,
+        "magicalDefense": 1.42
       },
       "bonusSlots": [
         null,
@@ -4170,8 +4221,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 1
+        "physicalDefense": 2.2,
+        "magicalDefense": 1.1
       },
       "bonusSlots": [
         null,
@@ -4194,8 +4245,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 22,
-        "magicalDefense": 8
+        "physicalDefense": 9.83,
+        "magicalDefense": 4.8
       },
       "bonusSlots": [
         null,
@@ -4218,8 +4269,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 6
+        "physicalDefense": 8.57,
+        "magicalDefense": 4.23
       },
       "bonusSlots": [
         null,
@@ -4242,8 +4293,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 4
+        "physicalDefense": 5.26,
+        "magicalDefense": 2.51
       },
       "bonusSlots": [
         null,
@@ -4266,8 +4317,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 4
+        "physicalDefense": 5.26,
+        "magicalDefense": 2.51
       },
       "bonusSlots": [
         null,
@@ -4290,8 +4341,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 3
+        "physicalDefense": 3.89,
+        "magicalDefense": 1.94
       },
       "bonusSlots": [
         null,
@@ -4314,8 +4365,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 14
+        "physicalDefense": 17.2,
+        "magicalDefense": 8.4
       },
       "bonusSlots": [
         null,
@@ -4338,8 +4389,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 38,
-        "magicalDefense": 12
+        "physicalDefense": 15,
+        "magicalDefense": 7.4
       },
       "bonusSlots": [
         null,
@@ -4362,8 +4413,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 23,
-        "magicalDefense": 8
+        "physicalDefense": 9.2,
+        "magicalDefense": 4.4
       },
       "bonusSlots": [
         null,
@@ -4386,8 +4437,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 23,
-        "magicalDefense": 7
+        "physicalDefense": 9.2,
+        "magicalDefense": 4.4
       },
       "bonusSlots": [
         null,
@@ -4410,8 +4461,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 17,
-        "magicalDefense": 6
+        "physicalDefense": 6.8,
+        "magicalDefense": 3.4
       },
       "bonusSlots": [
         null,
@@ -4434,8 +4485,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 61,
-        "magicalDefense": 25
+        "physicalDefense": 29.76,
+        "magicalDefense": 14.53
       },
       "bonusSlots": [
         null,
@@ -4458,8 +4509,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 53,
-        "magicalDefense": 22
+        "physicalDefense": 25.95,
+        "magicalDefense": 12.8
       },
       "bonusSlots": [
         null,
@@ -4482,8 +4533,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 33,
-        "magicalDefense": 13
+        "physicalDefense": 15.92,
+        "magicalDefense": 7.61
       },
       "bonusSlots": [
         null,
@@ -4506,8 +4557,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 33,
-        "magicalDefense": 13
+        "physicalDefense": 15.92,
+        "magicalDefense": 7.61
       },
       "bonusSlots": [
         null,
@@ -4530,8 +4581,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 10
+        "physicalDefense": 11.77,
+        "magicalDefense": 5.88
       },
       "bonusSlots": [
         null,
@@ -4554,8 +4605,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 76,
-        "magicalDefense": 31
+        "physicalDefense": 50.89,
+        "magicalDefense": 24.85
       },
       "bonusSlots": [
         null,
@@ -4578,8 +4629,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 66,
-        "magicalDefense": 27
+        "physicalDefense": 44.38,
+        "magicalDefense": 21.89
       },
       "bonusSlots": [
         null,
@@ -4602,8 +4653,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 41,
-        "magicalDefense": 16
+        "physicalDefense": 27.22,
+        "magicalDefense": 13.02
       },
       "bonusSlots": [
         null,
@@ -4626,8 +4677,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 40,
-        "magicalDefense": 16
+        "physicalDefense": 27.22,
+        "magicalDefense": 13.02
       },
       "bonusSlots": [
         null,
@@ -4650,8 +4701,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 12
+        "physicalDefense": 20.12,
+        "magicalDefense": 10.06
       },
       "bonusSlots": [
         null,
@@ -4676,8 +4727,8 @@
       "description_de": "Ein schwerer Brustpanzer aus überlappenden Schwarzstahlplatten mit breiten, vernieteten Schulterstücken.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 106,
-        "magicalDefense": 37
+        "physicalDefense": 86,
+        "magicalDefense": 42
       },
       "bonusSlots": [
         null,
@@ -4702,8 +4753,8 @@
       "description_de": "Gehärtete Beinplatten aus Schwarzstahl, die über kräftigen Lederriemen getragen werden.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 92,
-        "magicalDefense": 32
+        "physicalDefense": 75,
+        "magicalDefense": 37
       },
       "bonusSlots": [
         null,
@@ -4728,8 +4779,8 @@
       "description_de": "Ein massiver Schwarzstahlhelm mit markantem Stirngrat und breiten Sichtschlitzen.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 57,
-        "magicalDefense": 20
+        "physicalDefense": 46,
+        "magicalDefense": 22
       },
       "bonusSlots": [
         null,
@@ -4754,8 +4805,8 @@
       "description_de": "Schwere Faustschützer mit schwarzen Metallplatten auf Handrücken und Manschetten.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 57,
-        "magicalDefense": 19
+        "physicalDefense": 46,
+        "magicalDefense": 22
       },
       "bonusSlots": [
         null,
@@ -4780,8 +4831,8 @@
       "description_de": "Hohe Kampfstiefel mit kräftigen Schwarzstahlschienen und breiten Metallkappen.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 42,
-        "magicalDefense": 15
+        "physicalDefense": 34,
+        "magicalDefense": 17
       },
       "bonusSlots": [
         null,
@@ -4804,8 +4855,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 13,
-        "magicalDefense": 9
+        "physicalDefense": 6.59,
+        "magicalDefense": 5.62
       },
       "bonusSlots": [
         null,
@@ -4828,8 +4879,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 7
+        "physicalDefense": 5.68,
+        "magicalDefense": 4.91
       },
       "bonusSlots": [
         null,
@@ -4852,8 +4903,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 5
+        "physicalDefense": 3.49,
+        "magicalDefense": 3.03
       },
       "bonusSlots": [
         null,
@@ -4876,8 +4927,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 5
+        "physicalDefense": 3.49,
+        "magicalDefense": 2.97
       },
       "bonusSlots": [
         null,
@@ -4900,8 +4951,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 3
+        "physicalDefense": 2.65,
+        "magicalDefense": 2.26
       },
       "bonusSlots": [
         null,
@@ -4924,8 +4975,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 17
+        "physicalDefense": 11.66,
+        "magicalDefense": 9.94
       },
       "bonusSlots": [
         null,
@@ -4948,8 +4999,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 15,
-        "magicalDefense": 14
+        "physicalDefense": 10.06,
+        "magicalDefense": 8.69
       },
       "bonusSlots": [
         null,
@@ -4972,8 +5023,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 9
+        "physicalDefense": 6.17,
+        "magicalDefense": 5.37
       },
       "bonusSlots": [
         null,
@@ -4996,8 +5047,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 9
+        "physicalDefense": 6.17,
+        "magicalDefense": 5.26
       },
       "bonusSlots": [
         null,
@@ -5020,8 +5071,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 7
+        "physicalDefense": 4.69,
+        "magicalDefense": 4
       },
       "bonusSlots": [
         null,
@@ -5044,8 +5095,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 36,
-        "magicalDefense": 25
+        "physicalDefense": 20.4,
+        "magicalDefense": 17.4
       },
       "bonusSlots": [
         null,
@@ -5068,8 +5119,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 31,
-        "magicalDefense": 22
+        "physicalDefense": 17.6,
+        "magicalDefense": 15.2
       },
       "bonusSlots": [
         null,
@@ -5092,8 +5143,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 14
+        "physicalDefense": 10.8,
+        "magicalDefense": 9.4
       },
       "bonusSlots": [
         null,
@@ -5116,8 +5167,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 13
+        "physicalDefense": 10.8,
+        "magicalDefense": 9.2
       },
       "bonusSlots": [
         null,
@@ -5140,8 +5191,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 10
+        "physicalDefense": 8.2,
+        "magicalDefense": 7
       },
       "bonusSlots": [
         null,
@@ -5164,8 +5215,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 51
+        "physicalDefense": 35.3,
+        "magicalDefense": 30.11
       },
       "bonusSlots": [
         null,
@@ -5188,8 +5239,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 52,
-        "magicalDefense": 45
+        "physicalDefense": 30.45,
+        "magicalDefense": 26.3
       },
       "bonusSlots": [
         null,
@@ -5212,8 +5263,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 27
+        "physicalDefense": 18.68,
+        "magicalDefense": 16.26
       },
       "bonusSlots": [
         null,
@@ -5236,8 +5287,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 27
+        "physicalDefense": 18.68,
+        "magicalDefense": 15.92
       },
       "bonusSlots": [
         null,
@@ -5260,8 +5311,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 21
+        "physicalDefense": 14.19,
+        "magicalDefense": 12.11
       },
       "bonusSlots": [
         null,
@@ -5284,8 +5335,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 95,
-        "magicalDefense": 62
+        "physicalDefense": 60.36,
+        "magicalDefense": 51.48
       },
       "bonusSlots": [
         null,
@@ -5308,8 +5359,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 83,
-        "magicalDefense": 53
+        "physicalDefense": 52.07,
+        "magicalDefense": 44.97
       },
       "bonusSlots": [
         null,
@@ -5332,8 +5383,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 51,
-        "magicalDefense": 33
+        "physicalDefense": 31.95,
+        "magicalDefense": 27.81
       },
       "bonusSlots": [
         null,
@@ -5356,8 +5407,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 51,
-        "magicalDefense": 33
+        "physicalDefense": 31.95,
+        "magicalDefense": 27.22
       },
       "bonusSlots": [
         null,
@@ -5380,8 +5431,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 38,
-        "magicalDefense": 25
+        "physicalDefense": 24.26,
+        "magicalDefense": 20.71
       },
       "bonusSlots": [
         null,
@@ -5406,8 +5457,8 @@
       "description_de": "Ein geschlossener Schwarzstahlharnisch mit hohem Kragen und breiten Schulterplatten.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 133,
-        "magicalDefense": 86
+        "physicalDefense": 102,
+        "magicalDefense": 87
       },
       "bonusSlots": [
         null,
@@ -5432,8 +5483,8 @@
       "description_de": "Ein vollständiger Beinschutz aus überlappenden Schwarzstahlplatten, der Hüfte, Knie und Schienbeine einfasst.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 115,
-        "magicalDefense": 75
+        "physicalDefense": 88,
+        "magicalDefense": 76
       },
       "bonusSlots": [
         null,
@@ -5458,8 +5509,8 @@
       "description_de": "Ein geschlossener Helm aus Schwarzstahl mit beweglichem Visier und schmalem Sehschlitz.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 71,
-        "magicalDefense": 46
+        "physicalDefense": 54,
+        "magicalDefense": 47
       },
       "bonusSlots": [
         null,
@@ -5484,7 +5535,7 @@
       "description_de": "Gegliederte Panzerhandschuhe aus Schwarzstahl mit langen, schützenden Manschetten.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 71,
+        "physicalDefense": 54,
         "magicalDefense": 46
       },
       "bonusSlots": [
@@ -5510,7 +5561,7 @@
       "description_de": "Geschlossene Panzerschuhe aus gegliederten Schwarzstahlplatten mit verstärkten Fersen.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 53,
+        "physicalDefense": 41,
         "magicalDefense": 35
       },
       "bonusSlots": [
@@ -5534,8 +5585,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 6
+        "physicalDefense": 3.29,
+        "magicalDefense": 3.68
       },
       "bonusSlots": [
         null,
@@ -5558,8 +5609,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 5
+        "physicalDefense": 2.84,
+        "magicalDefense": 3.23
       },
       "bonusSlots": [
         null,
@@ -5582,8 +5633,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 3
+        "physicalDefense": 1.75,
+        "magicalDefense": 2
       },
       "bonusSlots": [
         null,
@@ -5606,8 +5657,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 3
+        "physicalDefense": 1.75,
+        "magicalDefense": 2
       },
       "bonusSlots": [
         null,
@@ -5630,8 +5681,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 1.36,
+        "magicalDefense": 1.49
       },
       "bonusSlots": [
         null,
@@ -5654,8 +5705,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 13,
-        "magicalDefense": 12
+        "physicalDefense": 5.83,
+        "magicalDefense": 6.51
       },
       "bonusSlots": [
         null,
@@ -5678,8 +5729,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 11
+        "physicalDefense": 5.03,
+        "magicalDefense": 5.71
       },
       "bonusSlots": [
         null,
@@ -5702,8 +5753,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 7
+        "physicalDefense": 3.09,
+        "magicalDefense": 3.54
       },
       "bonusSlots": [
         null,
@@ -5726,8 +5777,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 6
+        "physicalDefense": 3.09,
+        "magicalDefense": 3.54
       },
       "bonusSlots": [
         null,
@@ -5750,8 +5801,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 5
+        "physicalDefense": 2.4,
+        "magicalDefense": 2.63
       },
       "bonusSlots": [
         null,
@@ -5774,8 +5825,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 17,
-        "magicalDefense": 19
+        "physicalDefense": 10.2,
+        "magicalDefense": 11.4
       },
       "bonusSlots": [
         null,
@@ -5798,8 +5849,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 16
+        "physicalDefense": 8.8,
+        "magicalDefense": 10
       },
       "bonusSlots": [
         null,
@@ -5822,8 +5873,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 10
+        "physicalDefense": 5.4,
+        "magicalDefense": 6.2
       },
       "bonusSlots": [
         null,
@@ -5846,8 +5897,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 10
+        "physicalDefense": 5.4,
+        "magicalDefense": 6.2
       },
       "bonusSlots": [
         null,
@@ -5870,8 +5921,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 7
+        "physicalDefense": 4.2,
+        "magicalDefense": 4.6
       },
       "bonusSlots": [
         null,
@@ -5894,8 +5945,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 34
+        "physicalDefense": 17.65,
+        "magicalDefense": 19.73
       },
       "bonusSlots": [
         null,
@@ -5918,8 +5969,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 29
+        "physicalDefense": 15.23,
+        "magicalDefense": 17.3
       },
       "bonusSlots": [
         null,
@@ -5942,8 +5993,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 18
+        "physicalDefense": 9.35,
+        "magicalDefense": 10.73
       },
       "bonusSlots": [
         null,
@@ -5966,8 +6017,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 18
+        "physicalDefense": 9.35,
+        "magicalDefense": 10.73
       },
       "bonusSlots": [
         null,
@@ -5990,8 +6041,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 13
+        "physicalDefense": 7.27,
+        "magicalDefense": 7.96
       },
       "bonusSlots": [
         null,
@@ -6014,8 +6065,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 49,
-        "magicalDefense": 47
+        "physicalDefense": 30.18,
+        "magicalDefense": 33.73
       },
       "bonusSlots": [
         null,
@@ -6038,8 +6089,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 42,
-        "magicalDefense": 41
+        "physicalDefense": 26.04,
+        "magicalDefense": 29.59
       },
       "bonusSlots": [
         null,
@@ -6062,8 +6113,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 25
+        "physicalDefense": 15.98,
+        "magicalDefense": 18.34
       },
       "bonusSlots": [
         null,
@@ -6086,8 +6137,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 25
+        "physicalDefense": 15.98,
+        "magicalDefense": 18.34
       },
       "bonusSlots": [
         null,
@@ -6110,8 +6161,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 19
+        "physicalDefense": 12.43,
+        "magicalDefense": 13.61
       },
       "bonusSlots": [
         null,
@@ -6136,8 +6187,8 @@
       "description_de": "Eine körpernah geschnittene Lederweste mit kleinen, mattschwarzen Schuppen. Unter dem Kragen verbirgt sich das Zeichen einer Dämmerblüte.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 81,
-        "magicalDefense": 59
+        "physicalDefense": 51,
+        "magicalDefense": 57
       },
       "bonusSlots": [
         null,
@@ -6162,8 +6213,8 @@
       "description_de": "Eine dunkle Lederhose mit verstärkten Knien und verdeckten Nähten. Schmale violette Einfassungen unterbrechen das Schwarz.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 70,
-        "magicalDefense": 52
+        "physicalDefense": 44,
+        "magicalDefense": 50
       },
       "bonusSlots": [
         null,
@@ -6188,8 +6239,8 @@
       "description_de": "Eine weit vorgezogene Kapuze mit einem weichen Innenfutter. Die Dämmerblüte ist nur auf der Innenseite des Saums zu sehen.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 43,
-        "magicalDefense": 32
+        "physicalDefense": 27,
+        "magicalDefense": 31
       },
       "bonusSlots": [
         null,
@@ -6214,8 +6265,8 @@
       "description_de": "Bewegliche Lederhandschuhe mit schwarzen Schuppen auf Handrücken und Knöcheln. Die Finger bleiben von den Plättchen frei.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 43,
-        "magicalDefense": 32
+        "physicalDefense": 27,
+        "magicalDefense": 31
       },
       "bonusSlots": [
         null,
@@ -6240,8 +6291,8 @@
       "description_de": "Dunkle Stiefel mit weichen Schäften, flachen Verschlüssen und mehrlagigen Sohlen. Ein kleines Blütenzeichen liegt unter jeder Schnalle.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 24
+        "physicalDefense": 21,
+        "magicalDefense": 23
       },
       "bonusSlots": [
         null,
@@ -6264,8 +6315,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 9
+        "physicalDefense": 3.68,
+        "magicalDefense": 3.81
       },
       "bonusSlots": [
         null,
@@ -6288,8 +6339,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 8
+        "physicalDefense": 3.16,
+        "magicalDefense": 3.29
       },
       "bonusSlots": [
         null,
@@ -6312,8 +6363,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 5
+        "physicalDefense": 1.94,
+        "magicalDefense": 2.07
       },
       "bonusSlots": [
         null,
@@ -6336,8 +6387,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 5
+        "physicalDefense": 1.94,
+        "magicalDefense": 2.07
       },
       "bonusSlots": [
         null,
@@ -6360,8 +6411,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 4
+        "physicalDefense": 1.49,
+        "magicalDefense": 1.55
       },
       "bonusSlots": [
         null,
@@ -6384,8 +6435,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 13
+        "physicalDefense": 6.51,
+        "magicalDefense": 6.74
       },
       "bonusSlots": [
         null,
@@ -6408,8 +6459,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 12
+        "physicalDefense": 5.6,
+        "magicalDefense": 5.83
       },
       "bonusSlots": [
         null,
@@ -6432,8 +6483,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 7
+        "physicalDefense": 3.43,
+        "magicalDefense": 3.66
       },
       "bonusSlots": [
         null,
@@ -6456,8 +6507,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 7
+        "physicalDefense": 3.43,
+        "magicalDefense": 3.66
       },
       "bonusSlots": [
         null,
@@ -6480,8 +6531,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 5
+        "physicalDefense": 2.63,
+        "magicalDefense": 2.74
       },
       "bonusSlots": [
         null,
@@ -6504,8 +6555,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 22,
-        "magicalDefense": 18
+        "physicalDefense": 11.4,
+        "magicalDefense": 11.8
       },
       "bonusSlots": [
         null,
@@ -6528,8 +6579,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 15
+        "physicalDefense": 9.8,
+        "magicalDefense": 10.2
       },
       "bonusSlots": [
         null,
@@ -6552,8 +6603,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 10
+        "physicalDefense": 6,
+        "magicalDefense": 6.4
       },
       "bonusSlots": [
         null,
@@ -6576,8 +6627,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 9
+        "physicalDefense": 6,
+        "magicalDefense": 6.4
       },
       "bonusSlots": [
         null,
@@ -6600,8 +6651,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 7
+        "physicalDefense": 4.6,
+        "magicalDefense": 4.8
       },
       "bonusSlots": [
         null,
@@ -6624,8 +6675,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 35
+        "physicalDefense": 19.73,
+        "magicalDefense": 20.42
       },
       "bonusSlots": [
         null,
@@ -6648,8 +6699,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 29,
-        "magicalDefense": 30
+        "physicalDefense": 16.95,
+        "magicalDefense": 17.65
       },
       "bonusSlots": [
         null,
@@ -6672,8 +6723,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 19
+        "physicalDefense": 10.38,
+        "magicalDefense": 11.07
       },
       "bonusSlots": [
         null,
@@ -6696,8 +6747,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 18
+        "physicalDefense": 10.38,
+        "magicalDefense": 11.07
       },
       "bonusSlots": [
         null,
@@ -6720,8 +6771,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 13,
-        "magicalDefense": 14
+        "physicalDefense": 7.96,
+        "magicalDefense": 8.3
       },
       "bonusSlots": [
         null,
@@ -6744,8 +6795,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 49,
-        "magicalDefense": 59
+        "physicalDefense": 33.73,
+        "magicalDefense": 34.91
       },
       "bonusSlots": [
         null,
@@ -6768,8 +6819,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 43,
-        "magicalDefense": 51
+        "physicalDefense": 28.99,
+        "magicalDefense": 30.18
       },
       "bonusSlots": [
         null,
@@ -6792,8 +6843,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 31
+        "physicalDefense": 17.75,
+        "magicalDefense": 18.93
       },
       "bonusSlots": [
         null,
@@ -6816,8 +6867,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 31
+        "physicalDefense": 17.75,
+        "magicalDefense": 18.93
       },
       "bonusSlots": [
         null,
@@ -6840,8 +6891,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 20,
-        "magicalDefense": 24
+        "physicalDefense": 13.61,
+        "magicalDefense": 14.2
       },
       "bonusSlots": [
         null,
@@ -6866,8 +6917,8 @@
       "description_de": "Eine dunkelviolette Robe mit rauchgrauem Futter. Verschlungene Stickereien führen am Saum zu einer halb geschlossenen Dämmerblüte.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 70,
-        "magicalDefense": 93
+        "physicalDefense": 57,
+        "magicalDefense": 59
       },
       "bonusSlots": [
         null,
@@ -6892,8 +6943,8 @@
       "description_de": "Eine aschgraue Seidenhose mit dunklen Seitenbahnen. Ihre feinen Muster werden erst aus der Nähe sichtbar.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 61,
-        "magicalDefense": 80
+        "physicalDefense": 49,
+        "magicalDefense": 51
       },
       "bonusSlots": [
         null,
@@ -6918,8 +6969,8 @@
       "description_de": "Eine tief geschnittene Haube aus mattem, grauem Stoff. Violette Fäden bilden am Rand die schmalen Blätter einer Dämmerblüte.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 38,
-        "magicalDefense": 50
+        "physicalDefense": 30,
+        "magicalDefense": 32
       },
       "bonusSlots": [
         null,
@@ -6944,8 +6995,8 @@
       "description_de": "Lange, eng anliegende Handschuhe mit dunklen Fadenwicklungen über den Fingern. Kleine Blütenzeichen sind in die Handrücken gestickt.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 38,
-        "magicalDefense": 49
+        "physicalDefense": 30,
+        "magicalDefense": 32
       },
       "bonusSlots": [
         null,
@@ -6970,8 +7021,8 @@
       "description_de": "Dunkle Schuhe mit flachen Schnallen und sorgfältig vernähten Stoffeinsätzen. Ihre violetten Ziernähte wiederholen die Linien alter Ritualkreise.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 28,
-        "magicalDefense": 37
+        "physicalDefense": 23,
+        "magicalDefense": 24
       },
       "bonusSlots": [
         null,
@@ -6994,8 +7045,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 13
+        "physicalDefense": 2.84,
+        "magicalDefense": 6.59
       },
       "bonusSlots": [
         null,
@@ -7018,8 +7069,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 12
+        "physicalDefense": 2.45,
+        "magicalDefense": 5.75
       },
       "bonusSlots": [
         null,
@@ -7042,8 +7093,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 7
+        "physicalDefense": 1.49,
+        "magicalDefense": 3.49
       },
       "bonusSlots": [
         null,
@@ -7066,8 +7117,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 7
+        "physicalDefense": 1.49,
+        "magicalDefense": 3.49
       },
       "bonusSlots": [
         null,
@@ -7090,8 +7141,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 2,
-        "magicalDefense": 5
+        "physicalDefense": 1.1,
+        "magicalDefense": 2.65
       },
       "bonusSlots": [
         null,
@@ -7114,8 +7165,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 18
+        "physicalDefense": 5.03,
+        "magicalDefense": 11.66
       },
       "bonusSlots": [
         null,
@@ -7138,8 +7189,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 15
+        "physicalDefense": 4.34,
+        "magicalDefense": 10.17
       },
       "bonusSlots": [
         null,
@@ -7162,8 +7213,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 10
+        "physicalDefense": 2.63,
+        "magicalDefense": 6.17
       },
       "bonusSlots": [
         null,
@@ -7186,8 +7237,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 9
+        "physicalDefense": 2.63,
+        "magicalDefense": 6.17
       },
       "bonusSlots": [
         null,
@@ -7210,8 +7261,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 7
+        "physicalDefense": 1.94,
+        "magicalDefense": 4.69
       },
       "bonusSlots": [
         null,
@@ -7234,8 +7285,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 36
+        "physicalDefense": 8.8,
+        "magicalDefense": 20.4
       },
       "bonusSlots": [
         null,
@@ -7258,8 +7309,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 31
+        "physicalDefense": 7.6,
+        "magicalDefense": 17.8
       },
       "bonusSlots": [
         null,
@@ -7282,8 +7333,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 19
+        "physicalDefense": 4.6,
+        "magicalDefense": 10.8
       },
       "bonusSlots": [
         null,
@@ -7306,8 +7357,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 19
+        "physicalDefense": 4.6,
+        "magicalDefense": 10.8
       },
       "bonusSlots": [
         null,
@@ -7330,8 +7381,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 14
+        "physicalDefense": 3.4,
+        "magicalDefense": 8.2
       },
       "bonusSlots": [
         null,
@@ -7354,8 +7405,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 59
+        "physicalDefense": 15.23,
+        "magicalDefense": 35.3
       },
       "bonusSlots": [
         null,
@@ -7378,8 +7429,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 22,
-        "magicalDefense": 52
+        "physicalDefense": 13.15,
+        "magicalDefense": 30.8
       },
       "bonusSlots": [
         null,
@@ -7402,8 +7453,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 32
+        "physicalDefense": 7.96,
+        "magicalDefense": 18.68
       },
       "bonusSlots": [
         null,
@@ -7426,8 +7477,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 32
+        "physicalDefense": 7.96,
+        "magicalDefense": 18.68
       },
       "bonusSlots": [
         null,
@@ -7450,8 +7501,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 24
+        "physicalDefense": 5.88,
+        "magicalDefense": 14.19
       },
       "bonusSlots": [
         null,
@@ -7474,8 +7525,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 39,
-        "magicalDefense": 95
+        "physicalDefense": 26.04,
+        "magicalDefense": 60.36
       },
       "bonusSlots": [
         null,
@@ -7498,8 +7549,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 83
+        "physicalDefense": 22.49,
+        "magicalDefense": 52.66
       },
       "bonusSlots": [
         null,
@@ -7522,8 +7573,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 21,
-        "magicalDefense": 51
+        "physicalDefense": 13.61,
+        "magicalDefense": 31.95
       },
       "bonusSlots": [
         null,
@@ -7546,8 +7597,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 21,
-        "magicalDefense": 51
+        "physicalDefense": 13.61,
+        "magicalDefense": 31.95
       },
       "bonusSlots": [
         null,
@@ -7570,8 +7621,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 15,
-        "magicalDefense": 38
+        "physicalDefense": 10.06,
+        "magicalDefense": 24.26
       },
       "bonusSlots": [
         null,
@@ -7596,8 +7647,8 @@
       "description_de": "Eine feine Robe mit weich fallenden Stoffbahnen und einem dicht gewebten Innenfutter. Dezente Stickereien begleiten den Kragen und den langen Saum.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 54,
-        "magicalDefense": 133
+        "physicalDefense": 44,
+        "magicalDefense": 102
       },
       "bonusSlots": [
         null,
@@ -7622,8 +7673,8 @@
       "description_de": "Eine geschmeidige Stoffhose mit flachen Nähten und sorgfältig verstärkten Knien. Die Säume tragen dieselben feinen Muster wie die Robe.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 47,
-        "magicalDefense": 115
+        "physicalDefense": 38,
+        "magicalDefense": 89
       },
       "bonusSlots": [
         null,
@@ -7648,8 +7699,8 @@
       "description_de": "Eine leichte Haube mit weichem Innenband. Schmale, gestickte Linien fassen die Stirnpartie und die zurückfallenden Stoffseiten ein.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 29,
-        "magicalDefense": 71
+        "physicalDefense": 23,
+        "magicalDefense": 54
       },
       "bonusSlots": [
         null,
@@ -7674,8 +7725,8 @@
       "description_de": "Feine Handschuhe mit geschmeidigen Fingern und verstärkten Handflächen. Lange Manschetten schließen bündig an die Ärmel der Robe an.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 29,
-        "magicalDefense": 71
+        "physicalDefense": 23,
+        "magicalDefense": 54
       },
       "bonusSlots": [
         null,
@@ -7700,8 +7751,8 @@
       "description_de": "Leichte Schuhe mit weichen Stoffschäften und festen Ledersohlen. Kleine Stickereien an den Laschen greifen die Muster der übrigen Teile auf.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 21,
-        "magicalDefense": 53
+        "physicalDefense": 17,
+        "magicalDefense": 41
       },
       "bonusSlots": [
         null,
@@ -7724,8 +7775,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 11
+        "physicalDefense": 3.68,
+        "magicalDefense": 6.72
       },
       "bonusSlots": [
         null,
@@ -7748,8 +7799,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 9
+        "physicalDefense": 3.23,
+        "magicalDefense": 5.81
       },
       "bonusSlots": [
         null,
@@ -7772,8 +7823,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 6
+        "physicalDefense": 2,
+        "magicalDefense": 3.55
       },
       "bonusSlots": [
         null,
@@ -7796,8 +7847,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 6
+        "physicalDefense": 2,
+        "magicalDefense": 3.55
       },
       "bonusSlots": [
         null,
@@ -7820,8 +7871,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 4
+        "physicalDefense": 1.49,
+        "magicalDefense": 2.65
       },
       "bonusSlots": [
         null,
@@ -7844,8 +7895,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 22
+        "physicalDefense": 6.51,
+        "magicalDefense": 11.89
       },
       "bonusSlots": [
         null,
@@ -7868,8 +7919,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 19
+        "physicalDefense": 5.71,
+        "magicalDefense": 10.29
       },
       "bonusSlots": [
         null,
@@ -7892,8 +7943,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 11
+        "physicalDefense": 3.54,
+        "magicalDefense": 6.29
       },
       "bonusSlots": [
         null,
@@ -7916,8 +7967,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 11
+        "physicalDefense": 3.54,
+        "magicalDefense": 6.29
       },
       "bonusSlots": [
         null,
@@ -7940,8 +7991,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 9
+        "physicalDefense": 2.63,
+        "magicalDefense": 4.69
       },
       "bonusSlots": [
         null,
@@ -7964,8 +8015,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 20,
-        "magicalDefense": 44
+        "physicalDefense": 11.4,
+        "magicalDefense": 20.8
       },
       "bonusSlots": [
         null,
@@ -7988,8 +8039,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 17,
-        "magicalDefense": 38
+        "physicalDefense": 10,
+        "magicalDefense": 18
       },
       "bonusSlots": [
         null,
@@ -8012,8 +8063,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 23
+        "physicalDefense": 6.2,
+        "magicalDefense": 11
       },
       "bonusSlots": [
         null,
@@ -8036,8 +8087,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 23
+        "physicalDefense": 6.2,
+        "magicalDefense": 11
       },
       "bonusSlots": [
         null,
@@ -8060,8 +8111,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 17
+        "physicalDefense": 4.6,
+        "magicalDefense": 8.2
       },
       "bonusSlots": [
         null,
@@ -8084,8 +8135,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 61
+        "physicalDefense": 19.73,
+        "magicalDefense": 35.99
       },
       "bonusSlots": [
         null,
@@ -8108,8 +8159,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 53
+        "physicalDefense": 17.3,
+        "magicalDefense": 31.14
       },
       "bonusSlots": [
         null,
@@ -8132,8 +8183,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 33
+        "physicalDefense": 10.73,
+        "magicalDefense": 19.03
       },
       "bonusSlots": [
         null,
@@ -8156,8 +8207,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 33
+        "physicalDefense": 10.73,
+        "magicalDefense": 19.03
       },
       "bonusSlots": [
         null,
@@ -8180,8 +8231,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 24
+        "physicalDefense": 7.96,
+        "magicalDefense": 14.19
       },
       "bonusSlots": [
         null,
@@ -8204,8 +8255,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 49,
-        "magicalDefense": 76
+        "physicalDefense": 33.73,
+        "magicalDefense": 61.54
       },
       "bonusSlots": [
         null,
@@ -8228,8 +8279,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 42,
-        "magicalDefense": 66
+        "physicalDefense": 29.59,
+        "magicalDefense": 53.25
       },
       "bonusSlots": [
         null,
@@ -8252,8 +8303,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 41
+        "physicalDefense": 18.34,
+        "magicalDefense": 32.54
       },
       "bonusSlots": [
         null,
@@ -8276,8 +8327,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 40
+        "physicalDefense": 18.34,
+        "magicalDefense": 32.54
       },
       "bonusSlots": [
         null,
@@ -8300,8 +8351,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 30
+        "physicalDefense": 13.61,
+        "magicalDefense": 24.26
       },
       "bonusSlots": [
         null,
@@ -8326,8 +8377,8 @@
       "description_de": "Eine feine, elfenbeinfarbene Robe. Silberne Nähte zeichnen entlang des Saums die geöffneten Blätter einer Morgenblüte nach.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 65,
-        "magicalDefense": 106
+        "physicalDefense": 57,
+        "magicalDefense": 104
       },
       "bonusSlots": [
         null,
@@ -8352,8 +8403,8 @@
       "description_de": "Ein weich fallendes Beinkleid aus dichtem, hellem Gewebe. Die aufwendigen Nähte liegen verborgen auf der Innenseite.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 56,
-        "magicalDefense": 92
+        "physicalDefense": 50,
+        "magicalDefense": 90
       },
       "bonusSlots": [
         null,
@@ -8378,8 +8429,8 @@
       "description_de": "Eine leichte Haube mit einem Netz aus feinen Silberfäden. Über der Stirn liegt eine kleine Stickerei in Form einer Morgenblüte.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 57
+        "physicalDefense": 31,
+        "magicalDefense": 55
       },
       "bonusSlots": [
         null,
@@ -8404,8 +8455,8 @@
       "description_de": "Geschmeidige Handschuhe mit sorgsam verstärkten Handflächen. Blasse Blütenmuster zieren die langen Manschetten.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 57
+        "physicalDefense": 31,
+        "magicalDefense": 55
       },
       "bonusSlots": [
         null,
@@ -8430,8 +8481,8 @@
       "description_de": "Weiche Schuhe mit hellen Stoffschäften und silbergesäumten Laschen. Ihre Form ist auf lange Wege und sicheren Stand ausgelegt.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 42
+        "physicalDefense": 23,
+        "magicalDefense": 41
       },
       "bonusSlots": [
         null,
@@ -8454,8 +8505,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 6
+        "physicalDefense": 4.46,
+        "magicalDefense": 3.68
       },
       "bonusSlots": [
         null,
@@ -8478,8 +8529,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 6
+        "physicalDefense": 3.81,
+        "magicalDefense": 3.23
       },
       "bonusSlots": [
         null,
@@ -8502,8 +8553,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 3
+        "physicalDefense": 2.39,
+        "magicalDefense": 1.94
       },
       "bonusSlots": [
         null,
@@ -8526,8 +8577,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 3
+        "physicalDefense": 2.39,
+        "magicalDefense": 1.94
       },
       "bonusSlots": [
         null,
@@ -8550,8 +8601,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 1.75,
+        "magicalDefense": 1.49
       },
       "bonusSlots": [
         null,
@@ -8574,8 +8625,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 11
+        "physicalDefense": 7.89,
+        "magicalDefense": 6.51
       },
       "bonusSlots": [
         null,
@@ -8598,8 +8649,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 13,
-        "magicalDefense": 9
+        "physicalDefense": 6.74,
+        "magicalDefense": 5.71
       },
       "bonusSlots": [
         null,
@@ -8622,8 +8673,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 6
+        "physicalDefense": 4.23,
+        "magicalDefense": 3.43
       },
       "bonusSlots": [
         null,
@@ -8646,8 +8697,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 6
+        "physicalDefense": 4.23,
+        "magicalDefense": 3.43
       },
       "bonusSlots": [
         null,
@@ -8670,8 +8721,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 4
+        "physicalDefense": 3.09,
+        "magicalDefense": 2.63
       },
       "bonusSlots": [
         null,
@@ -8694,8 +8745,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 19
+        "physicalDefense": 13.8,
+        "magicalDefense": 11.4
       },
       "bonusSlots": [
         null,
@@ -8718,8 +8769,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 22,
-        "magicalDefense": 16
+        "physicalDefense": 11.8,
+        "magicalDefense": 10
       },
       "bonusSlots": [
         null,
@@ -8742,8 +8793,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 10
+        "physicalDefense": 7.4,
+        "magicalDefense": 6
       },
       "bonusSlots": [
         null,
@@ -8766,8 +8817,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 10
+        "physicalDefense": 7.4,
+        "magicalDefense": 6
       },
       "bonusSlots": [
         null,
@@ -8790,8 +8841,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 7
+        "physicalDefense": 5.4,
+        "magicalDefense": 4.6
       },
       "bonusSlots": [
         null,
@@ -8814,8 +8865,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 40,
-        "magicalDefense": 34
+        "physicalDefense": 23.88,
+        "magicalDefense": 19.73
       },
       "bonusSlots": [
         null,
@@ -8838,8 +8889,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 35,
-        "magicalDefense": 29
+        "physicalDefense": 20.42,
+        "magicalDefense": 17.3
       },
       "bonusSlots": [
         null,
@@ -8862,8 +8913,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 22,
-        "magicalDefense": 18
+        "physicalDefense": 12.8,
+        "magicalDefense": 10.38
       },
       "bonusSlots": [
         null,
@@ -8886,8 +8937,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 22,
-        "magicalDefense": 18
+        "physicalDefense": 12.8,
+        "magicalDefense": 10.38
       },
       "bonusSlots": [
         null,
@@ -8910,8 +8961,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 13
+        "physicalDefense": 9.35,
+        "magicalDefense": 7.96
       },
       "bonusSlots": [
         null,
@@ -8934,8 +8985,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 49
+        "physicalDefense": 40.83,
+        "magicalDefense": 33.73
       },
       "bonusSlots": [
         null,
@@ -8958,8 +9009,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 51,
-        "magicalDefense": 42
+        "physicalDefense": 34.91,
+        "magicalDefense": 29.59
       },
       "bonusSlots": [
         null,
@@ -8982,8 +9033,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 26
+        "physicalDefense": 21.89,
+        "magicalDefense": 17.75
       },
       "bonusSlots": [
         null,
@@ -9006,8 +9057,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 31,
-        "magicalDefense": 26
+        "physicalDefense": 21.89,
+        "magicalDefense": 17.75
       },
       "bonusSlots": [
         null,
@@ -9030,8 +9081,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 19
+        "physicalDefense": 15.98,
+        "magicalDefense": 13.61
       },
       "bonusSlots": [
         null,
@@ -9056,8 +9107,8 @@
       "description_de": "Eine aschfahle Robe aus dichtem Stoff mit einem verwaschen roséfarbenen Innenfutter. Feine Stickereien auf Brust und Saum zeigen die blassen Blüten der Geisterrose.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 80,
-        "magicalDefense": 63
+        "physicalDefense": 69,
+        "magicalDefense": 57
       },
       "bonusSlots": [
         null,
@@ -9082,8 +9133,8 @@
       "description_de": "Eine Hose aus aschgrauem Leinen mit weichen Lederbesätzen an den Knien. Kleine Blütenmuster sind zwischen die verstärkten Nähte gestickt.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 69,
-        "magicalDefense": 55
+        "physicalDefense": 59,
+        "magicalDefense": 50
       },
       "bonusSlots": [
         null,
@@ -9108,8 +9159,8 @@
       "description_de": "Eine leichte Stoffkapuze mit einem dünnen, zurückschlagbaren Schleier. Blasse Rosenstickereien und graue Fäden fassen die Ränder ein.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 43,
-        "magicalDefense": 34
+        "physicalDefense": 37,
+        "magicalDefense": 30
       },
       "bonusSlots": [
         null,
@@ -9134,8 +9185,8 @@
       "description_de": "Geschmeidige Arbeitshandschuhe mit sorgfältig verstärkten Handflächen. An den langen Manschetten sind die Umrisse von Geisterrosen eingestickt.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 43,
-        "magicalDefense": 34
+        "physicalDefense": 37,
+        "magicalDefense": 30
       },
       "bonusSlots": [
         null,
@@ -9160,8 +9211,8 @@
       "description_de": "Robuste Lederstiefel mit aschgrauen Stoffschäften und flachen Verschlüssen. Verblasste roséfarbene Nähte verlaufen um die Schaftkanten.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 25
+        "physicalDefense": 27,
+        "magicalDefense": 23
       },
       "bonusSlots": [
         null,
@@ -9184,8 +9235,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 8
+        "physicalDefense": 3.94,
+        "magicalDefense": 3.88
       },
       "bonusSlots": [
         null,
@@ -9208,8 +9259,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 7
+        "physicalDefense": 3.42,
+        "magicalDefense": 3.36
       },
       "bonusSlots": [
         null,
@@ -9232,8 +9283,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 4
+        "physicalDefense": 2.07,
+        "magicalDefense": 2.07
       },
       "bonusSlots": [
         null,
@@ -9256,8 +9307,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 4
+        "physicalDefense": 2.07,
+        "magicalDefense": 2.07
       },
       "bonusSlots": [
         null,
@@ -9280,8 +9331,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 1.55,
+        "magicalDefense": 1.55
       },
       "bonusSlots": [
         null,
@@ -9304,8 +9355,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 14
+        "physicalDefense": 6.97,
+        "magicalDefense": 6.86
       },
       "bonusSlots": [
         null,
@@ -9328,8 +9379,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 13
+        "physicalDefense": 6.06,
+        "magicalDefense": 5.94
       },
       "bonusSlots": [
         null,
@@ -9352,8 +9403,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 8
+        "physicalDefense": 3.66,
+        "magicalDefense": 3.66
       },
       "bonusSlots": [
         null,
@@ -9376,8 +9427,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 8
+        "physicalDefense": 3.66,
+        "magicalDefense": 3.66
       },
       "bonusSlots": [
         null,
@@ -9400,8 +9451,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 6
+        "physicalDefense": 2.74,
+        "magicalDefense": 2.74
       },
       "bonusSlots": [
         null,
@@ -9424,8 +9475,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 21,
-        "magicalDefense": 20
+        "physicalDefense": 12.2,
+        "magicalDefense": 12
       },
       "bonusSlots": [
         null,
@@ -9448,8 +9499,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 17
+        "physicalDefense": 10.6,
+        "magicalDefense": 10.4
       },
       "bonusSlots": [
         null,
@@ -9472,8 +9523,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 10
+        "physicalDefense": 6.4,
+        "magicalDefense": 6.4
       },
       "bonusSlots": [
         null,
@@ -9496,8 +9547,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 11,
-        "magicalDefense": 10
+        "physicalDefense": 6.4,
+        "magicalDefense": 6.4
       },
       "bonusSlots": [
         null,
@@ -9520,8 +9571,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 8
+        "physicalDefense": 4.8,
+        "magicalDefense": 4.8
       },
       "bonusSlots": [
         null,
@@ -9544,8 +9595,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 36,
-        "magicalDefense": 35
+        "physicalDefense": 21.11,
+        "magicalDefense": 20.76
       },
       "bonusSlots": [
         null,
@@ -9568,8 +9619,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 31,
-        "magicalDefense": 30
+        "physicalDefense": 18.34,
+        "magicalDefense": 17.99
       },
       "bonusSlots": [
         null,
@@ -9592,8 +9643,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 19
+        "physicalDefense": 11.07,
+        "magicalDefense": 11.07
       },
       "bonusSlots": [
         null,
@@ -9616,8 +9667,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 19
+        "physicalDefense": 11.07,
+        "magicalDefense": 11.07
       },
       "bonusSlots": [
         null,
@@ -9640,8 +9691,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 14
+        "physicalDefense": 8.3,
+        "magicalDefense": 8.3
       },
       "bonusSlots": [
         null,
@@ -9664,8 +9715,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 51,
-        "magicalDefense": 49
+        "physicalDefense": 36.09,
+        "magicalDefense": 35.5
       },
       "bonusSlots": [
         null,
@@ -9688,8 +9739,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 43
+        "physicalDefense": 31.36,
+        "magicalDefense": 30.77
       },
       "bonusSlots": [
         null,
@@ -9712,8 +9763,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 27,
-        "magicalDefense": 26
+        "physicalDefense": 18.93,
+        "magicalDefense": 18.93
       },
       "bonusSlots": [
         null,
@@ -9736,8 +9787,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 27,
-        "magicalDefense": 26
+        "physicalDefense": 18.93,
+        "magicalDefense": 18.93
       },
       "bonusSlots": [
         null,
@@ -9760,8 +9811,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 21,
-        "magicalDefense": 20
+        "physicalDefense": 14.2,
+        "magicalDefense": 14.2
       },
       "bonusSlots": [
         null,
@@ -9786,8 +9837,8 @@
       "description_de": "Ein kräftiges Jagdwams aus dickem Feroxleder. Goldrötliche Fellbesätze liegen über den Schultern; unregelmäßige Narben bleiben als Spuren der wilden Bestie sichtbar.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 76,
-        "magicalDefense": 63
+        "physicalDefense": 61,
+        "magicalDefense": 60
       },
       "bonusSlots": [
         null,
@@ -9812,8 +9863,8 @@
       "description_de": "Eine Hose aus dichtem Feroxleder mit überlappenden Verstärkungen an Knien und Oberschenkeln. Schmale Fellstreifen säumen die Außenseiten.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 66,
-        "magicalDefense": 55
+        "physicalDefense": 53,
+        "magicalDefense": 52
       },
       "bonusSlots": [
         null,
@@ -9838,8 +9889,8 @@
       "description_de": "Eine lederne Jagdkapuze mit einem dichten, goldrötlichen Fellkragen. Einzelne besonders helle Partien schimmern gelblich weiß wie das Innere einer Flamme.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 41,
-        "magicalDefense": 34
+        "physicalDefense": 32,
+        "magicalDefense": 32
       },
       "bonusSlots": [
         null,
@@ -9864,8 +9915,8 @@
       "description_de": "Kräftige Jagdhandschuhe aus Feroxleder mit fellbesetzten Handrücken. Die Handflächen sind sorgfältig gearbeitet, damit die Finger trotz des dicken Materials beweglich bleiben.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 41,
-        "magicalDefense": 34
+        "physicalDefense": 32,
+        "magicalDefense": 32
       },
       "bonusSlots": [
         null,
@@ -9890,8 +9941,8 @@
       "description_de": "Hohe Stiefel aus dickem Feroxleder mit rotgoldenem Fell an den Schäften. Breite Lederriemen halten die verstärkten Partien eng am Bein.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 25
+        "physicalDefense": 24,
+        "magicalDefense": 24
       },
       "bonusSlots": [
         null,
@@ -9914,8 +9965,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 7
+        "physicalDefense": 4.84,
+        "magicalDefense": 4.13
       },
       "bonusSlots": [
         null,
@@ -9938,8 +9989,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 6
+        "physicalDefense": 4.2,
+        "magicalDefense": 3.55
       },
       "bonusSlots": [
         null,
@@ -9962,8 +10013,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 4
+        "physicalDefense": 2.58,
+        "magicalDefense": 2.2
       },
       "bonusSlots": [
         null,
@@ -9986,8 +10037,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 4
+        "physicalDefense": 2.58,
+        "magicalDefense": 2.2
       },
       "bonusSlots": [
         null,
@@ -10010,8 +10061,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 1.94,
+        "magicalDefense": 1.62
       },
       "bonusSlots": [
         null,
@@ -10034,8 +10085,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 14
+        "physicalDefense": 8.57,
+        "magicalDefense": 7.31
       },
       "bonusSlots": [
         null,
@@ -10058,8 +10109,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 12
+        "physicalDefense": 7.43,
+        "magicalDefense": 6.29
       },
       "bonusSlots": [
         null,
@@ -10082,8 +10133,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 7
+        "physicalDefense": 4.57,
+        "magicalDefense": 3.89
       },
       "bonusSlots": [
         null,
@@ -10106,8 +10157,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 7
+        "physicalDefense": 4.57,
+        "magicalDefense": 3.89
       },
       "bonusSlots": [
         null,
@@ -10130,8 +10181,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 6
+        "physicalDefense": 3.43,
+        "magicalDefense": 2.86
       },
       "bonusSlots": [
         null,
@@ -10154,8 +10205,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 26
+        "physicalDefense": 15,
+        "magicalDefense": 12.8
       },
       "bonusSlots": [
         null,
@@ -10178,8 +10229,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 23
+        "physicalDefense": 13,
+        "magicalDefense": 11
       },
       "bonusSlots": [
         null,
@@ -10202,8 +10253,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 14
+        "physicalDefense": 8,
+        "magicalDefense": 6.8
       },
       "bonusSlots": [
         null,
@@ -10226,8 +10277,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 14
+        "physicalDefense": 8,
+        "magicalDefense": 6.8
       },
       "bonusSlots": [
         null,
@@ -10250,8 +10301,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 11
+        "physicalDefense": 6,
+        "magicalDefense": 5
       },
       "bonusSlots": [
         null,
@@ -10274,8 +10325,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 38
+        "physicalDefense": 25.95,
+        "magicalDefense": 22.15
       },
       "bonusSlots": [
         null,
@@ -10298,8 +10349,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 38,
-        "magicalDefense": 33
+        "physicalDefense": 22.49,
+        "magicalDefense": 19.03
       },
       "bonusSlots": [
         null,
@@ -10322,8 +10373,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 20
+        "physicalDefense": 13.84,
+        "magicalDefense": 11.77
       },
       "bonusSlots": [
         null,
@@ -10346,8 +10397,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 20
+        "physicalDefense": 13.84,
+        "magicalDefense": 11.77
       },
       "bonusSlots": [
         null,
@@ -10370,8 +10421,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 15
+        "physicalDefense": 10.38,
+        "magicalDefense": 8.65
       },
       "bonusSlots": [
         null,
@@ -10394,8 +10445,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 60,
-        "magicalDefense": 54
+        "physicalDefense": 44.38,
+        "magicalDefense": 37.87
       },
       "bonusSlots": [
         null,
@@ -10418,8 +10469,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 52,
-        "magicalDefense": 47
+        "physicalDefense": 38.46,
+        "magicalDefense": 32.54
       },
       "bonusSlots": [
         null,
@@ -10442,8 +10493,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 29
+        "physicalDefense": 23.67,
+        "magicalDefense": 20.12
       },
       "bonusSlots": [
         null,
@@ -10466,8 +10517,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 29
+        "physicalDefense": 23.67,
+        "magicalDefense": 20.12
       },
       "bonusSlots": [
         null,
@@ -10490,8 +10541,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 22
+        "physicalDefense": 17.75,
+        "magicalDefense": 14.79
       },
       "bonusSlots": [
         null,
@@ -10516,8 +10567,8 @@
       "description_de": "Ein dicht gewebtes Gewand mit weichen Lederbesätzen. Gestickte Ahnenzeichen säumen Brust und Schultern; gefärbte Bänder hängen an den Seiten.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 83,
-        "magicalDefense": 74
+        "physicalDefense": 75,
+        "magicalDefense": 64
       },
       "bonusSlots": [
         null,
@@ -10542,8 +10593,8 @@
       "description_de": "Eine robuste Stoffhose mit verstärkten Knien. Rote und blaue Bänder sind in die seitlichen Nähte eingearbeitet.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 72,
-        "magicalDefense": 64
+        "physicalDefense": 65,
+        "magicalDefense": 55
       },
       "bonusSlots": [
         null,
@@ -10568,8 +10619,8 @@
       "description_de": "Eine geschnitzte Holzmaske mit ledernem Innenband. Geschwungene Kerben stellen die Wege des Windes dar.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 40
+        "physicalDefense": 40,
+        "magicalDefense": 34
       },
       "bonusSlots": [
         null,
@@ -10594,8 +10645,8 @@
       "description_de": "Handwickel aus dunklem Stoff mit ledernen Handflächen. Ihre roten Nähte bilden die überlieferten Zeichen der Glut.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 44,
-        "magicalDefense": 39
+        "physicalDefense": 40,
+        "magicalDefense": 34
       },
       "bonusSlots": [
         null,
@@ -10620,8 +10671,8 @@
       "description_de": "Weiche Lederstiefel mit geflochtenen Verschlüssen. Erdige Stoffeinsätze und kleine Ahnenzeichen schmücken die Schäfte.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 33,
-        "magicalDefense": 30
+        "physicalDefense": 30,
+        "magicalDefense": 25
       },
       "bonusSlots": [
         null,
@@ -10644,8 +10695,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 7
+        "physicalDefense": 4.71,
+        "magicalDefense": 4.07
       },
       "bonusSlots": [
         null,
@@ -10668,8 +10719,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 6
+        "physicalDefense": 4.07,
+        "magicalDefense": 3.49
       },
       "bonusSlots": [
         null,
@@ -10692,8 +10743,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 4
+        "physicalDefense": 2.52,
+        "magicalDefense": 2.13
       },
       "bonusSlots": [
         null,
@@ -10716,8 +10767,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 3
+        "physicalDefense": 2.52,
+        "magicalDefense": 2.13
       },
       "bonusSlots": [
         null,
@@ -10740,8 +10791,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 1.87,
+        "magicalDefense": 1.62
       },
       "bonusSlots": [
         null,
@@ -10764,8 +10815,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 17,
-        "magicalDefense": 13
+        "physicalDefense": 8.34,
+        "magicalDefense": 7.2
       },
       "bonusSlots": [
         null,
@@ -10788,8 +10839,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 12
+        "physicalDefense": 7.2,
+        "magicalDefense": 6.17
       },
       "bonusSlots": [
         null,
@@ -10812,8 +10863,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 7
+        "physicalDefense": 4.46,
+        "magicalDefense": 3.77
       },
       "bonusSlots": [
         null,
@@ -10836,8 +10887,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 7
+        "physicalDefense": 4.46,
+        "magicalDefense": 3.77
       },
       "bonusSlots": [
         null,
@@ -10860,8 +10911,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 7,
-        "magicalDefense": 5
+        "physicalDefense": 3.31,
+        "magicalDefense": 2.86
       },
       "bonusSlots": [
         null,
@@ -10884,8 +10935,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 23
+        "physicalDefense": 14.6,
+        "magicalDefense": 12.6
       },
       "bonusSlots": [
         null,
@@ -10908,8 +10959,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 20
+        "physicalDefense": 12.6,
+        "magicalDefense": 10.8
       },
       "bonusSlots": [
         null,
@@ -10932,8 +10983,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 13
+        "physicalDefense": 7.8,
+        "magicalDefense": 6.6
       },
       "bonusSlots": [
         null,
@@ -10956,8 +11007,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 13
+        "physicalDefense": 7.8,
+        "magicalDefense": 6.6
       },
       "bonusSlots": [
         null,
@@ -10980,8 +11031,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 9
+        "physicalDefense": 5.8,
+        "magicalDefense": 5
       },
       "bonusSlots": [
         null,
@@ -11004,8 +11055,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 43,
-        "magicalDefense": 37
+        "physicalDefense": 25.26,
+        "magicalDefense": 21.8
       },
       "bonusSlots": [
         null,
@@ -11028,8 +11079,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 38,
-        "magicalDefense": 32
+        "physicalDefense": 21.8,
+        "magicalDefense": 18.68
       },
       "bonusSlots": [
         null,
@@ -11052,8 +11103,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 23,
-        "magicalDefense": 20
+        "physicalDefense": 13.5,
+        "magicalDefense": 11.42
       },
       "bonusSlots": [
         null,
@@ -11076,8 +11127,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 23,
-        "magicalDefense": 19
+        "physicalDefense": 13.5,
+        "magicalDefense": 11.42
       },
       "bonusSlots": [
         null,
@@ -11100,8 +11151,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 17,
-        "magicalDefense": 15
+        "physicalDefense": 10.04,
+        "magicalDefense": 8.65
       },
       "bonusSlots": [
         null,
@@ -11124,8 +11175,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 64,
-        "magicalDefense": 52
+        "physicalDefense": 43.2,
+        "magicalDefense": 37.28
       },
       "bonusSlots": [
         null,
@@ -11148,8 +11199,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 55,
-        "magicalDefense": 45
+        "physicalDefense": 37.28,
+        "magicalDefense": 31.95
       },
       "bonusSlots": [
         null,
@@ -11172,8 +11223,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 28
+        "physicalDefense": 23.08,
+        "magicalDefense": 19.53
       },
       "bonusSlots": [
         null,
@@ -11196,8 +11247,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 28
+        "physicalDefense": 23.08,
+        "magicalDefense": 19.53
       },
       "bonusSlots": [
         null,
@@ -11220,8 +11271,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 25,
-        "magicalDefense": 21
+        "physicalDefense": 17.16,
+        "magicalDefense": 14.79
       },
       "bonusSlots": [
         null,
@@ -11246,8 +11297,8 @@
       "description_de": "Ein Gewand aus fein verflochtenen Rindenfasern mit einem weichen Lederfutter. Blattförmige Überlappungen bedecken Schultern und Brust.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 87,
-        "magicalDefense": 70
+        "physicalDefense": 73,
+        "magicalDefense": 63
       },
       "bonusSlots": [
         null,
@@ -11272,8 +11323,8 @@
       "description_de": "Eine geschmeidige Hose aus dichtem Fasergewebe. Weiches Leder verstärkt die Knie, während geflochtene Bänder die Säume einfassen.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 76,
-        "magicalDefense": 61
+        "physicalDefense": 63,
+        "magicalDefense": 54
       },
       "bonusSlots": [
         null,
@@ -11298,8 +11349,8 @@
       "description_de": "Ein offener Kopfreif aus sorgsam gebogenen Weidenzweigen. Kleine geschnitzte Blätter sitzen zwischen den Flechtungen.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 47,
-        "magicalDefense": 38
+        "physicalDefense": 39,
+        "magicalDefense": 33
       },
       "bonusSlots": [
         null,
@@ -11324,8 +11375,8 @@
       "description_de": "Handschuhe aus weichem Leder, über deren Rücken dünne Wurzelfasern geflochten sind. Die Fingerspitzen bleiben frei.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 46,
-        "magicalDefense": 38
+        "physicalDefense": 39,
+        "magicalDefense": 33
       },
       "bonusSlots": [
         null,
@@ -11350,8 +11401,8 @@
       "description_de": "Lederstiefel mit weichem Faserfutter und blattförmigen Schaftlaschen. Moosgrüne Nähte ziehen sich bis zu den Fersen.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 35,
-        "magicalDefense": 28
+        "physicalDefense": 29,
+        "magicalDefense": 25
       },
       "bonusSlots": [
         null,
@@ -11374,8 +11425,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 6
+        "physicalDefense": 3.75,
+        "magicalDefense": 3.55
       },
       "bonusSlots": [
         null,
@@ -11398,8 +11449,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 5
+        "physicalDefense": 3.23,
+        "magicalDefense": 3.1
       },
       "bonusSlots": [
         null,
@@ -11422,8 +11473,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 2,
+        "magicalDefense": 1.87
       },
       "bonusSlots": [
         null,
@@ -11446,8 +11497,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 3
+        "physicalDefense": 2,
+        "magicalDefense": 1.87
       },
       "bonusSlots": [
         null,
@@ -11470,8 +11521,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 2
+        "physicalDefense": 1.49,
+        "magicalDefense": 1.42
       },
       "bonusSlots": [
         null,
@@ -11494,8 +11545,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 10
+        "physicalDefense": 6.63,
+        "magicalDefense": 6.29
       },
       "bonusSlots": [
         null,
@@ -11518,8 +11569,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 9
+        "physicalDefense": 5.71,
+        "magicalDefense": 5.49
       },
       "bonusSlots": [
         null,
@@ -11542,8 +11593,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 5
+        "physicalDefense": 3.54,
+        "magicalDefense": 3.31
       },
       "bonusSlots": [
         null,
@@ -11566,8 +11617,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 5
+        "physicalDefense": 3.54,
+        "magicalDefense": 3.31
       },
       "bonusSlots": [
         null,
@@ -11590,8 +11641,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 4,
-        "magicalDefense": 4
+        "physicalDefense": 2.63,
+        "magicalDefense": 2.51
       },
       "bonusSlots": [
         null,
@@ -11614,8 +11665,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 20,
-        "magicalDefense": 19
+        "physicalDefense": 11.6,
+        "magicalDefense": 11
       },
       "bonusSlots": [
         null,
@@ -11638,8 +11689,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 17,
-        "magicalDefense": 16
+        "physicalDefense": 10,
+        "magicalDefense": 9.6
       },
       "bonusSlots": [
         null,
@@ -11662,8 +11713,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 10
+        "physicalDefense": 6.2,
+        "magicalDefense": 5.8
       },
       "bonusSlots": [
         null,
@@ -11686,8 +11737,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 10,
-        "magicalDefense": 10
+        "physicalDefense": 6.2,
+        "magicalDefense": 5.8
       },
       "bonusSlots": [
         null,
@@ -11710,8 +11761,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 7
+        "physicalDefense": 4.6,
+        "magicalDefense": 4.4
       },
       "bonusSlots": [
         null,
@@ -11734,8 +11785,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 34,
-        "magicalDefense": 32
+        "physicalDefense": 20.07,
+        "magicalDefense": 19.03
       },
       "bonusSlots": [
         null,
@@ -11758,8 +11809,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 30,
-        "magicalDefense": 27
+        "physicalDefense": 17.3,
+        "magicalDefense": 16.61
       },
       "bonusSlots": [
         null,
@@ -11782,8 +11833,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 17
+        "physicalDefense": 10.73,
+        "magicalDefense": 10.04
       },
       "bonusSlots": [
         null,
@@ -11806,8 +11857,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 18,
-        "magicalDefense": 17
+        "physicalDefense": 10.73,
+        "magicalDefense": 10.04
       },
       "bonusSlots": [
         null,
@@ -11830,8 +11881,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 13
+        "physicalDefense": 7.96,
+        "magicalDefense": 7.61
       },
       "bonusSlots": [
         null,
@@ -11854,8 +11905,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 47,
-        "magicalDefense": 44
+        "physicalDefense": 34.32,
+        "magicalDefense": 32.54
       },
       "bonusSlots": [
         null,
@@ -11878,8 +11929,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 41,
-        "magicalDefense": 38
+        "physicalDefense": 29.59,
+        "magicalDefense": 28.4
       },
       "bonusSlots": [
         null,
@@ -11902,8 +11953,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 25,
-        "magicalDefense": 24
+        "physicalDefense": 18.34,
+        "magicalDefense": 17.16
       },
       "bonusSlots": [
         null,
@@ -11926,8 +11977,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 25,
-        "magicalDefense": 24
+        "physicalDefense": 18.34,
+        "magicalDefense": 17.16
       },
       "bonusSlots": [
         null,
@@ -11950,8 +12001,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 18
+        "physicalDefense": 13.61,
+        "magicalDefense": 13.02
       },
       "bonusSlots": [
         null,
@@ -11976,8 +12027,8 @@
       "description_de": "Ein dunkel gefärbter Lederharnisch mit schmalen Schuppen über Brust und Schultern. Rauchgraue Linien zeichnen die Umrisse einer kaum erkennbaren Gestalt nach.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 57
+        "physicalDefense": 58,
+        "magicalDefense": 55
       },
       "bonusSlots": [
         null,
@@ -12002,8 +12053,8 @@
       "description_de": "Eine geschmeidige Jagdhose mit verstärkten Knien und verdeckten Nähten. Blasse Fährtenmuster verschwinden zwischen den dunklen Lederbahnen.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 52,
-        "magicalDefense": 50
+        "physicalDefense": 50,
+        "magicalDefense": 48
       },
       "bonusSlots": [
         null,
@@ -12028,8 +12079,8 @@
       "description_de": "Eine tief geschnittene Kapuze mit einem schmalen, zurückschlagbaren Gesichtstuch. Graue Stickereien brechen die Konturen ihres dunklen Stoffes.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 30
+        "physicalDefense": 31,
+        "magicalDefense": 29
       },
       "bonusSlots": [
         null,
@@ -12054,8 +12105,8 @@
       "description_de": "Eng anliegende Lederhandschuhe mit schuppenbesetzten Handrücken. An den Manschetten ziehen sich feine, rauchgraue Fäden wie flüchtige Schemen entlang.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 32,
-        "magicalDefense": 30
+        "physicalDefense": 31,
+        "magicalDefense": 29
       },
       "bonusSlots": [
         null,
@@ -12080,8 +12131,8 @@
       "description_de": "Dunkle Jagdstiefel mit weichen Schäften und flachen Verschlüssen. Schmale Lederbänder verdecken die Übergänge zwischen den einzelnen Verstärkungen.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 24,
-        "magicalDefense": 23
+        "physicalDefense": 23,
+        "magicalDefense": 22
       },
       "bonusSlots": [
         null,
@@ -12104,8 +12155,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 6
+        "physicalDefense": 5.29,
+        "magicalDefense": 3.36
       },
       "bonusSlots": [
         null,
@@ -12128,8 +12179,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 8,
-        "magicalDefense": 5
+        "physicalDefense": 4.58,
+        "magicalDefense": 2.9
       },
       "bonusSlots": [
         null,
@@ -12152,8 +12203,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 3
+        "physicalDefense": 2.84,
+        "magicalDefense": 1.75
       },
       "bonusSlots": [
         null,
@@ -12176,8 +12227,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 5,
-        "magicalDefense": 3
+        "physicalDefense": 2.77,
+        "magicalDefense": 1.75
       },
       "bonusSlots": [
         null,
@@ -12200,8 +12251,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 3,
-        "magicalDefense": 2
+        "physicalDefense": 2.13,
+        "magicalDefense": 1.36
       },
       "bonusSlots": [
         null,
@@ -12224,8 +12275,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 10
+        "physicalDefense": 9.37,
+        "magicalDefense": 5.94
       },
       "bonusSlots": [
         null,
@@ -12248,8 +12299,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 14,
-        "magicalDefense": 8
+        "physicalDefense": 8.11,
+        "magicalDefense": 5.14
       },
       "bonusSlots": [
         null,
@@ -12272,8 +12323,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 5
+        "physicalDefense": 5.03,
+        "magicalDefense": 3.09
       },
       "bonusSlots": [
         null,
@@ -12296,8 +12347,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 9,
-        "magicalDefense": 5
+        "physicalDefense": 4.91,
+        "magicalDefense": 3.09
       },
       "bonusSlots": [
         null,
@@ -12320,8 +12371,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 6,
-        "magicalDefense": 4
+        "physicalDefense": 3.77,
+        "magicalDefense": 2.4
       },
       "bonusSlots": [
         null,
@@ -12344,8 +12395,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 29,
-        "magicalDefense": 18
+        "physicalDefense": 16.4,
+        "magicalDefense": 10.4
       },
       "bonusSlots": [
         null,
@@ -12368,8 +12419,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 15
+        "physicalDefense": 14.2,
+        "magicalDefense": 9
       },
       "bonusSlots": [
         null,
@@ -12392,8 +12443,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 9
+        "physicalDefense": 8.8,
+        "magicalDefense": 5.4
       },
       "bonusSlots": [
         null,
@@ -12416,8 +12467,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 16,
-        "magicalDefense": 9
+        "physicalDefense": 8.6,
+        "magicalDefense": 5.4
       },
       "bonusSlots": [
         null,
@@ -12440,8 +12491,8 @@
       "nameStatus": "Materialnamen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 12,
-        "magicalDefense": 7
+        "physicalDefense": 6.6,
+        "magicalDefense": 4.2
       },
       "bonusSlots": [
         null,
@@ -12464,8 +12515,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 48,
-        "magicalDefense": 30
+        "physicalDefense": 28.37,
+        "magicalDefense": 17.99
       },
       "bonusSlots": [
         null,
@@ -12488,8 +12539,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 42,
-        "magicalDefense": 26
+        "physicalDefense": 24.57,
+        "magicalDefense": 15.57
       },
       "bonusSlots": [
         null,
@@ -12512,8 +12563,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 16
+        "physicalDefense": 15.23,
+        "magicalDefense": 9.35
       },
       "bonusSlots": [
         null,
@@ -12536,8 +12587,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 26,
-        "magicalDefense": 16
+        "physicalDefense": 14.88,
+        "magicalDefense": 9.35
       },
       "bonusSlots": [
         null,
@@ -12560,8 +12611,8 @@
       "nameStatus": "Übernommene Namensvorschläge",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 19,
-        "magicalDefense": 12
+        "physicalDefense": 11.42,
+        "magicalDefense": 7.27
       },
       "bonusSlots": [
         null,
@@ -12584,8 +12635,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 68,
-        "magicalDefense": 44
+        "physicalDefense": 48.52,
+        "magicalDefense": 30.77
       },
       "bonusSlots": [
         null,
@@ -12608,8 +12659,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 59,
-        "magicalDefense": 39
+        "physicalDefense": 42.01,
+        "magicalDefense": 26.63
       },
       "bonusSlots": [
         null,
@@ -12632,8 +12683,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 37,
-        "magicalDefense": 24
+        "physicalDefense": 26.04,
+        "magicalDefense": 15.98
       },
       "bonusSlots": [
         null,
@@ -12656,8 +12707,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 37,
-        "magicalDefense": 24
+        "physicalDefense": 25.44,
+        "magicalDefense": 15.98
       },
       "bonusSlots": [
         null,
@@ -12680,8 +12731,8 @@
       "nameStatus": "Arbeitsnamen, noch offen",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 27,
-        "magicalDefense": 18
+        "physicalDefense": 19.53,
+        "magicalDefense": 12.43
       },
       "bonusSlots": [
         null,
@@ -12706,8 +12757,8 @@
       "description_de": "Ein robuster Lederharnisch mit überlappenden, blaugrünen Seeschlangenschuppen auf Brust und Schultern. Helle Nähte fassen die unregelmäßigen Schuppenfelder ein.",
       "allocationPercent": 30,
       "raw": {
-        "physicalDefense": 91,
-        "magicalDefense": 56
+        "physicalDefense": 82,
+        "magicalDefense": 52
       },
       "bonusSlots": [
         null,
@@ -12732,8 +12783,8 @@
       "description_de": "Ein beweglicher Beinschutz aus kräftigem Leder, mit einzelnen Schuppenbahnen über Knien und Schienbeinen. Breite Riemen halten die Verstärkungen zusammen.",
       "allocationPercent": 26,
       "raw": {
-        "physicalDefense": 79,
-        "magicalDefense": 48
+        "physicalDefense": 71,
+        "magicalDefense": 45
       },
       "bonusSlots": [
         null,
@@ -12758,8 +12809,8 @@
       "description_de": "Ein schmaler Stirnreif mit einer länglichen, blaugrünen Schuppe in seiner Mitte. Die seitlichen Gravuren erinnern an die Wellen einer tiefen See.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 48,
-        "magicalDefense": 30
+        "physicalDefense": 44,
+        "magicalDefense": 27
       },
       "bonusSlots": [
         null,
@@ -12784,8 +12835,8 @@
       "description_de": "Feste Lederhandschuhe mit kleinen Schuppen auf den Handrücken. Die abgeriebenen Manschetten tragen helle, wellenförmige Ziernähte.",
       "allocationPercent": 16,
       "raw": {
-        "physicalDefense": 48,
-        "magicalDefense": 30
+        "physicalDefense": 43,
+        "magicalDefense": 27
       },
       "bonusSlots": [
         null,
@@ -12810,8 +12861,8 @@
       "description_de": "Hohe Reisestiefel aus dunklem Leder mit schuppenbesetzten Schäften. Verblasste Nähte und erneuerte Schnallen erzählen von langen Wegen entlang fremder Küsten.",
       "allocationPercent": 12,
       "raw": {
-        "physicalDefense": 36,
-        "magicalDefense": 22
+        "physicalDefense": 33,
+        "magicalDefense": 21
       },
       "bonusSlots": [
         null,

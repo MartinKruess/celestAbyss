@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "status": "attributeStoneValuesSocketLimitsAndTutorialCapacityDefined",
+  "scope": "Gem/soulstone sockets are separate from random-affix slots. No runtime or database equipment modified.",
+  "access": {
+    "firstStoneDropsLevelApprox": [
+      22,
+      28
+    ],
+    "tutorialTrigger": "First capital visit; typically around level 30, later if story entry is delayed",
+    "craftingIntroducedByTutorial": true,
+    "rank2Equipment": "No natural sockets. Tutorial grants exactly one slot on one chosen weapon item and one slot on one chosen armor item; choices remain equipment-group-specific.",
+    "naturalSocketsFromEquipmentLevel": 40,
+    "tutorialSocketGrant": {
+      "weaponSlots": 1,
+      "armorSlots": 1,
+      "scope": "one chosen weapon item plus one chosen armor item",
+      "armorSlotChoice": "playerChoiceWithinArmor",
+      "weaponSlotChoice": "playerChoiceWithinWeapons",
+      "bonusPerRank2AttributeStone": 2,
+      "oneTimeGrantNotPerEquippedItem": true
+    }
+  },
+  "naturalSlotsByEquipmentLevel": {
+    "40": {
+      "chest": 1,
+      "pants": 1,
+      "gloves": 1,
+      "helmet": 1,
+      "boots": 1,
+      "oneHandWeapon": 1,
+      "twoHandWeapon": 2,
+      "shield": 1
+    },
+    "60": {
+      "chest": 2,
+      "pants": 1,
+      "gloves": 1,
+      "helmet": 1,
+      "boots": 1,
+      "oneHandWeapon": 1,
+      "twoHandWeapon": 2,
+      "shield": 1
+    },
+    "80": {
+      "chest": 2,
+      "pants": 2,
+      "gloves": 1,
+      "helmet": 1,
+      "boots": 1,
+      "oneHandWeapon": 1,
+      "twoHandWeapon": 3,
+      "shield": 1
+    },
+    "100": {
+      "chest": 2,
+      "pants": 2,
+      "gloves": 1,
+      "helmet": 1,
+      "boots": 1,
+      "oneHandWeapon": 1,
+      "twoHandWeapon": 3,
+      "shield": 1
+    }
+  },
+  "craftedAdditionalSlots": [
+    {
+      "equipmentTypes": [
+        "oneHandWeapon",
+        "twoHandWeapon",
+        "shield"
+      ],
+      "minimumEquipmentLevel": 80,
+      "additionalSlots": 1,
+      "requiresLearnedSmithing": true,
+      "appliesAtEquipmentLevels": [
+        80,
+        100
+      ],
+      "status": "specified_level80_availability_provisional"
+    },
+    {
+      "equipmentTypes": [
+        "chest"
+      ],
+      "minimumEquipmentLevel": 100,
+      "additionalSlots": 1,
+      "requiresLearnedSmithing": true,
+      "totalSlotsAfterCrafting": 3
+    },
+    {
+      "equipmentTypes": [
+        "gloves"
+      ],
+      "minimumEquipmentLevel": null,
+      "additionalSlots": 1,
+      "requiresLearnedSmithing": true,
+      "totalSlotsAfterCrafting": 2,
+      "unlockStatus": "Craftable extra confirmed; exact first equipment level not explicitly resolved"
+    },
+    {
+      "equipmentTypes": [
+        "helmet"
+      ],
+      "minimumEquipmentLevel": null,
+      "additionalSlots": 1,
+      "requiresLearnedSmithing": true,
+      "availability": "Earlier high-end example; exact tier and unlock pending"
+    }
+  ],
+  "itemCounting": {
+    "gloves": "One item for the pair, one shared natural socket, not one socket per hand",
+    "dualWield": "Each one-hand weapon is its own item with its own slots",
+    "swordAndShield": "Sword and shield each have one natural slot, each can receive one extra under the level-80+ smithing rule"
+  },
+  "statRestrictions": {
+    "primaryAttributes": {
+      "attributes": [
+        "strength",
+        "vitality",
+        "intelligence",
+        "wisdom",
+        "dexterity",
+        "agility"
+      ],
+      "luckExcluded": true,
+      "equipment": "all socketable equipment unless a later explicit restriction is defined"
+    },
+    "attackSpeed": {
+      "equipment": [
+        "weapon"
+      ],
+      "directStoneStrongerThanAgilityAttackSpeedContribution": true,
+      "shieldEligibility": "pending"
+    },
+    "movementSpeed": {
+      "equipment": [
+        "boots"
+      ]
+    },
+    "block": {
+      "equipment": [
+        "shield"
+      ]
+    },
+    "penetration": {
+      "equipment": [
+        "weapon"
+      ],
+      "shieldEligibility": "pending"
+    },
+    "dodge": {
+      "status": "deferred"
+    },
+    "accuracy": {
+      "status": "deferred"
+    }
+  },
+  "pending": [
+    "New direct-stat stone values and quality/drop availability; existing attribute values are now defined",
+    "Exact gloves extra-socket unlock level",
+    "Rank-2 tutorial costs, eligible-item details and repeatability after the one-time two-slot grant",
+    "Other high-end exceptions, helmet unlock, additional restrictions and stone stacking rules",
+    "Jewelry slots, attributes and socket eligibility",
+    "Weapon/shield eligibility for attack-speed and penetration stones; shield slot count does not itself settle stone eligibility"
+  ],
+  "rules": [
+    "Crafting adds to natural slots; do not count crafted sockets as natural sockets or add the same crafted slot twice.",
+    "Counts are capacities, not proof that the player owns or has filled every socket.",
+    "Earlier wording of a natural third level-100 chest socket is superseded: natural chest count remains two, crafting enables the third.",
+    "Earlier level-100 gloves increase is superseded: natural gloves count remains one; one craftable addition yields two for the pair."
+  ],
+  "stoneValues": {
+    "status": "normalAttributeRanksAdjustedInItemSource",
+    "source": "data/balancing/soulstone-value-decision.json",
+    "bonusByRank": {
+      "2": 2,
+      "3": 4,
+      "4": 8,
+      "5": 10,
+      "6": 16,
+      "7": 18
+    },
+    "luckExcluded": true,
+    "newDirectCombatStoneValues": "pending"
+  },
+  "sameStoneLimit": {
+    "maxFraction": 0.5,
+    "scope": "perItem",
+    "identity": "Same stone type; rank variants must not bypass the per-type limit.",
+    "oddSlotRounding": "floor",
+    "singleSlotItemException": {
+      "status": "confirmed",
+      "allowedCount": 1,
+      "equipmentEligibilityStillRequired": true
+    },
+    "capacityBasis": "Number of unlocked usable sockets on this item; empty sockets still count toward capacity.",
+    "formulaForTwoOrMoreSlots": "floor(unlockedSocketCount * 0.5)",
+    "independentEquipmentItems": true,
+    "examples": [
+      {
+        "slots": 1,
+        "sameStoneMaximum": 1,
+        "valid": [
+          "one equipment-eligible stone"
+        ],
+        "bootsExample": "One movement-speed stone is allowed in a boots socket."
+      },
+      {
+        "slots": 4,
+        "sameStoneMaximum": 2,
+        "valid": [
+          "strength",
+          "strength",
+          "vitality",
+          "vitality"
+        ],
+        "invalid": [
+          "strength",
+          "strength",
+          "strength",
+          "vitality"
+        ]
+      },
+      {
+        "slots": 3,
+        "sameStoneMaximum": 1,
+        "valid": [
+          "strength",
+          "vitality",
+          "agility"
+        ],
+        "invalid": [
+          "strength",
+          "strength",
+          "vitality"
+        ]
+      },
+      {
+        "slots": 2,
+        "sameStoneMaximum": 1,
+        "valid": [
+          "strength",
+          "vitality"
+        ],
+        "dualWield": "Each one-hand axe may independently contain one strength stone and one different stone."
+      }
+    ],
+    "implementationStatus": "designSpecifiedNoRuntimeSocketInsertionYet",
+    "formula": "socketCount == 0 ? 0 : socketCount == 1 ? 1 : floor(socketCount * 0.5)"
+  }
+}

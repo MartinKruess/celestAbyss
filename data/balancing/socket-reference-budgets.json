@@ -1,0 +1,1121 @@
+{
+  "status": "referenceSocketBudgetsNotAppliedToClassStats",
+  "level30": {
+    "rank": 2,
+    "bonusPerStone": 2,
+    "slotCount": 2,
+    "items": [
+      {
+        "itemGroup": "weapon",
+        "slotCount": 1,
+        "sameTypeLimit": 1
+      },
+      {
+        "itemGroup": "armor",
+        "slotCount": 1,
+        "sameTypeLimit": 1
+      }
+    ],
+    "maxSameTypeStones": 2,
+    "maxSingleAttributeBonus": 4,
+    "status": "tutorialCapacityConfirmed",
+    "condition": "After capital tutorial; equipment choices restricted to one weapon item and one armor item. No automatic grant to both hands or every armor piece."
+  },
+  "notes": [
+    "All chosen items are fully equipped and their available sockets filled for this optimum reference.",
+    "Maximum for one basic attribute is an individual bound, not simultaneous maxima for all attributes.",
+    "Uses natural slots plus explicitly level-defined smithing additions. Extra glove/helmet slots have unresolved unlock levels and are excluded from total slot counts. They would not increase same-type capacity when changing one slot to two.",
+    "Each separate one-slot item can hold one matching attribute stone; per-item exceptions mean the whole-loadout same-type cap need not be half of all sockets.",
+    "Normal primary attributes are used here, excluding Luck and legacy special attributes. Attack-speed/movement/block/penetration stone bonuses are still not assigned."
+  ],
+  "rows": [
+    {
+      "level": 40,
+      "rank": 3,
+      "bonusPerStone": 4,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 7,
+      "maxSameTypeStones": 6,
+      "maxSingleAttributeBonus": 24
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "bonusPerStone": 4,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 7,
+      "maxSameTypeStones": 6,
+      "maxSingleAttributeBonus": 24
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "bonusPerStone": 4,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 7,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 28
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "bonusPerStone": 4,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 7,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 28
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "bonusPerStone": 4,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 7,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 28
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "bonusPerStone": 4,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 7,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 28
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "bonusPerStone": 8,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 8,
+      "maxSameTypeStones": 6,
+      "maxSingleAttributeBonus": 48
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "bonusPerStone": 8,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 8,
+      "maxSameTypeStones": 6,
+      "maxSingleAttributeBonus": 48
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "bonusPerStone": 8,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 8,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 56
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "bonusPerStone": 8,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 8,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 56
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "bonusPerStone": 8,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 8,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 56
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "bonusPerStone": 8,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 8,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 56
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "bonusPerStone": 10,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 3,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 10,
+      "maxSameTypeStones": 6,
+      "maxSingleAttributeBonus": 60
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "bonusPerStone": 10,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 4,
+          "sameTypeLimit": 2
+        }
+      ],
+      "totalSlots": 11,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 70
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "bonusPerStone": 10,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 9,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 70
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "bonusPerStone": 10,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 11,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 70
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "bonusPerStone": 10,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 9,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 70
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "bonusPerStone": 10,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 11,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 70
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "bonusPerStone": 16,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 3,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 10,
+      "maxSameTypeStones": 6,
+      "maxSingleAttributeBonus": 96
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "bonusPerStone": 16,
+      "loadout": "twoHandWeapon",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 3,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "twoHandWeapon-5",
+          "slotCount": 4,
+          "sameTypeLimit": 2
+        }
+      ],
+      "totalSlots": 12,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 112
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "bonusPerStone": 16,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 9,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 112
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "bonusPerStone": 16,
+      "loadout": "dualWield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 3,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-6",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 12,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 112
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "bonusPerStone": 16,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": false,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 9,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 112
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "bonusPerStone": 16,
+      "loadout": "swordAndShield",
+      "definedSmithingAdditionsIncluded": true,
+      "items": [
+        {
+          "id": "chest-0",
+          "slotCount": 3,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "pants-1",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "gloves-2",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "helmet-3",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "boots-4",
+          "slotCount": 1,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "oneHandWeapon-5",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        },
+        {
+          "id": "shield-6",
+          "slotCount": 2,
+          "sameTypeLimit": 1
+        }
+      ],
+      "totalSlots": 12,
+      "maxSameTypeStones": 7,
+      "maxSingleAttributeBonus": 112
+    }
+  ]
+}

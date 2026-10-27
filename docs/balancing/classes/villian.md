@@ -125,7 +125,7 @@ Aktuell **22** unterschiedliche Skills für Grundklasse und Weiterentwicklung zu
 | 115 | Überschallklinge | Offensiv | 5 |
 | 126 | Wirbelnde Klinge | Offensiv | 10 |
 | 146 | List des Schurken | Eigenbuff | 10 |
-| 148 | Scharfer Instinkte | Eigenbuff | 10 |
+| 148 | Scharfer Instinkt | Eigenbuff | 10 |
 | 188 | Dunkler Schleier | Eigenbuff | 2 |
 | 189 | Herz des Verräters | Eigenbuff | 5 |
 | 191 | Flinke Füße | Gruppen-/Begleiterbuff | 3 |

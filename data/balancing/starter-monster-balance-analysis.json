@@ -1,0 +1,1925 @@
+{
+  "generatedAt": "2026-10-23T18:55:38.201Z",
+  "status": "analysisOnlyNotApplied",
+  "assumptions": [
+    "Nur lesende Analyse; keine Monster-, Spieler- oder Ausrüstungswerte geändert.",
+    "Level 1 ohne Rüstung, Schild, Skills, Buffs oder Pets. Treffer sind physisch, treffen garantiert und kriten nicht. Treffer bis zum Tod ohne Heilung/Regeneration. Keine Aussage über Kampfdauer, da verbindliche Monster-Angriffsintervalle noch fehlen.",
+    "37 Angriff ist eine Prüfzahl des Benutzers, kein bestätigter Monster-Zielwert. Die Werte 10,55 und 26,37 sind gerundete Vergleichswerte des aktuellen Grauwolf-Welpen beziehungsweise erwachsenen Grauwolfs auf Level 1.",
+    "Die Levelkurvenprobe erhöht die bisherigen Attribute gemäß existierender Klassenumrechnung. Keine noch nicht zugeordneten Startattribute werden zusätzlich erfunden. Frühe Skills und Passive sind nicht enthalten.",
+    "Für die Kurvenprobe wird ein hypothetischer Gegner mit 37 Startangriff und der vorhandenen +4-%-Angriffskurve geprüft. Er ist keine neu angelegte Kreatur.",
+    "Frühestmögliche R1-Fundprobe: Armschutz ab 3, Schuhe ab 5, Helm ab 8, Hose ab 11, Brust ab 13. Spätere Teilzuordnungen/Dropzeitpunkte sind illustrative Annahmen innerhalb der besprochenen Bereiche, keine garantierten Funde.",
+    "Die Monster-Abwehrprüfung verwendet die unveränderte aktuelle Formel ohne Penetration. Einige aktuelle auf Level 1 zurückskalierte erwachsene Varianten erreichen damit 100 % Schadensreduktion. Vor einem endgültigen Zwei-Wege-Kampftest muss der verwendete Starter-Gegnertyp beziehungsweise seine Abwehrkurve geklärt werden."
+  ],
+  "inputHashes": {
+    "data/balancing/class-baselines.json": "d60d8a39ae9d6b2aa75d73b5e3b39ef85308da38d69f0907ddaa753bf886df9b",
+    "data/balancing/attribute-model.json": "163a30637a8c2fdc52d49b140a871c4e2a3293d08193fdc47887884606e7eb5f",
+    "data/balancing/armor-parts.json": "e8c505b2644f73a4f1d4326de7d40c3b5095950385e48a2492d8d32b10912f29",
+    "data/creatures/world-variant-preview.json": "3edf9d1ec458052af5bd05e9b19ea019670158ac78b772172b11a863145e82cc",
+    "data/balancing/level-one-character-reference.json": "517bbae39b2ac212ba134051d234a5e23f381585ad324cb85bf32cd343827aad",
+    "services/combatDefense.js": "3db486c4fc238debda27f2054c613d3f2508acb18cd74eef246abd8ad4565f4d"
+  },
+  "levelOne": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "health": 172,
+      "defense": 7,
+      "physicalReduction": 0.7665714285714286,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 2.462671428571429,
+          "fractionOfMaxHealthPerHit": 0.014317857142857144,
+          "hitsToDefeat": 70
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 6.155511428571429,
+          "fractionOfMaxHealthPerHit": 0.03578785714285714,
+          "hitsToDefeat": 28
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 8.636857142857142,
+          "fractionOfMaxHealthPerHit": 0.05021428571428571,
+          "hitsToDefeat": 20
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "health": 221,
+      "defense": 4,
+      "physicalReduction": 0.5915,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 4.309675,
+          "fractionOfMaxHealthPerHit": 0.019500791855203623,
+          "hitsToDefeat": 52
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 10.772145,
+          "fractionOfMaxHealthPerHit": 0.04874273755656108,
+          "hitsToDefeat": 21
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 15.1145,
+          "fractionOfMaxHealthPerHit": 0.06839140271493213,
+          "hitsToDefeat": 15
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "health": 183,
+      "defense": 5,
+      "physicalReduction": 0.6732,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 3.44774,
+          "fractionOfMaxHealthPerHit": 0.018840109289617487,
+          "hitsToDefeat": 54
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 8.617716,
+          "fractionOfMaxHealthPerHit": 0.04709134426229508,
+          "hitsToDefeat": 22
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 12.0916,
+          "fractionOfMaxHealthPerHit": 0.06607431693989071,
+          "hitsToDefeat": 16
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "health": 212,
+      "defense": 9,
+      "physicalReduction": 0.8184444444444444,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 1.9154111111111116,
+          "fractionOfMaxHealthPerHit": 0.00903495807127883,
+          "hitsToDefeat": 111
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 4.78762,
+          "fractionOfMaxHealthPerHit": 0.022583113207547172,
+          "hitsToDefeat": 45
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 6.717555555555556,
+          "fractionOfMaxHealthPerHit": 0.031686582809224324,
+          "hitsToDefeat": 32
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "health": 153,
+      "defense": 3,
+      "physicalReduction": 0.45533333333333337,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 5.7462333333333335,
+          "fractionOfMaxHealthPerHit": 0.03755708061002179,
+          "hitsToDefeat": 27
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 14.36286,
+          "fractionOfMaxHealthPerHit": 0.09387490196078431,
+          "hitsToDefeat": 11
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 20.152666666666665,
+          "fractionOfMaxHealthPerHit": 0.13171677559912853,
+          "hitsToDefeat": 8
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "health": 176,
+      "defense": 6,
+      "physicalReduction": 0.7276666666666667,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 2.8731166666666668,
+          "fractionOfMaxHealthPerHit": 0.016324526515151514,
+          "hitsToDefeat": 62
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 7.18143,
+          "fractionOfMaxHealthPerHit": 0.04080357954545454,
+          "hitsToDefeat": 25
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 10.076333333333332,
+          "fractionOfMaxHealthPerHit": 0.057251893939393936,
+          "hitsToDefeat": 18
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "health": 184,
+      "defense": 6,
+      "physicalReduction": 0.7276666666666667,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 2.8731166666666668,
+          "fractionOfMaxHealthPerHit": 0.015614764492753624,
+          "hitsToDefeat": 65
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 7.18143,
+          "fractionOfMaxHealthPerHit": 0.039029510869565215,
+          "hitsToDefeat": 26
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 10.076333333333332,
+          "fractionOfMaxHealthPerHit": 0.05476268115942028,
+          "hitsToDefeat": 19
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "health": 231,
+      "defense": 11,
+      "physicalReduction": 0.8514545454545455,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 1.5671545454545455,
+          "fractionOfMaxHealthPerHit": 0.006784218811491539,
+          "hitsToDefeat": 148
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 3.9171436363636363,
+          "fractionOfMaxHealthPerHit": 0.01695733175914994,
+          "hitsToDefeat": 59
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 5.496181818181817,
+          "fractionOfMaxHealthPerHit": 0.023792994883903972,
+          "hitsToDefeat": 43
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "health": 171,
+      "defense": 4,
+      "physicalReduction": 0.5915,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 4.309675,
+          "fractionOfMaxHealthPerHit": 0.02520277777777778,
+          "hitsToDefeat": 40
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 10.772145,
+          "fractionOfMaxHealthPerHit": 0.062995,
+          "hitsToDefeat": 16
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 15.1145,
+          "fractionOfMaxHealthPerHit": 0.08838888888888889,
+          "hitsToDefeat": 12
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "health": 169,
+      "defense": 4,
+      "physicalReduction": 0.5915,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 4.309675,
+          "fractionOfMaxHealthPerHit": 0.025501035502958583,
+          "hitsToDefeat": 40
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 10.772145,
+          "fractionOfMaxHealthPerHit": 0.06374050295857989,
+          "hitsToDefeat": 16
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 15.1145,
+          "fractionOfMaxHealthPerHit": 0.08943491124260355,
+          "hitsToDefeat": 12
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "health": 192,
+      "defense": 6,
+      "physicalReduction": 0.7276666666666667,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 2.8731166666666668,
+          "fractionOfMaxHealthPerHit": 0.014964149305555556,
+          "hitsToDefeat": 67
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 7.18143,
+          "fractionOfMaxHealthPerHit": 0.037403281249999996,
+          "hitsToDefeat": 27
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 10.076333333333332,
+          "fractionOfMaxHealthPerHit": 0.052480902777777776,
+          "hitsToDefeat": 20
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "health": 175,
+      "defense": 5,
+      "physicalReduction": 0.6732,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 3.44774,
+          "fractionOfMaxHealthPerHit": 0.019701371428571427,
+          "hitsToDefeat": 51
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 8.617716,
+          "fractionOfMaxHealthPerHit": 0.049244091428571425,
+          "hitsToDefeat": 21
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 12.0916,
+          "fractionOfMaxHealthPerHit": 0.06909485714285714,
+          "hitsToDefeat": 15
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "health": 166,
+      "defense": 5,
+      "physicalReduction": 0.6732,
+      "probes": [
+        {
+          "attack": 10.55,
+          "damagePerHit": 3.44774,
+          "fractionOfMaxHealthPerHit": 0.020769518072289158,
+          "hitsToDefeat": 49
+        },
+        {
+          "attack": 26.37,
+          "damagePerHit": 8.617716,
+          "fractionOfMaxHealthPerHit": 0.051913951807228916,
+          "hitsToDefeat": 20
+        },
+        {
+          "attack": 37,
+          "damagePerHit": 12.0916,
+          "fractionOfMaxHealthPerHit": 0.07284096385542169,
+          "hitsToDefeat": 14
+        }
+      ]
+    }
+  ],
+  "monsterRows": [
+    {
+      "key": "world-grim-forest-wolf",
+      "name": "Grimmiger Waldwolf",
+      "health": 135,
+      "physicalAttack": 30.321596109663428,
+      "physicalDefense": 10.986085546979504,
+      "physicalReductionAgainstLevel1": 1
+    },
+    {
+      "key": "world-gray-wolf",
+      "name": "Gewöhnlicher Grauwolf",
+      "health": 127,
+      "physicalAttack": 26.366605312750806,
+      "physicalDefense": 8.788868437583604,
+      "physicalReductionAgainstLevel1": 1
+    },
+    {
+      "key": "world-gray-wolf-young",
+      "name": "Grauwolf – Jungtier",
+      "health": 63,
+      "physicalAttack": 13.183302656375403,
+      "physicalDefense": 4.394434218791802,
+      "physicalReductionAgainstLevel1": 0.3546642125100325
+    },
+    {
+      "key": "world-gray-wolf-pup",
+      "name": "Grauwolf – Welpe",
+      "health": 51,
+      "physicalAttack": 10.546642125100322,
+      "physicalDefense": 3.5155473750334414,
+      "physicalReductionAgainstLevel1": 0.2687462740016052
+    }
+  ],
+  "illustrativeDropUnlocks": {
+    "gloves": 3,
+    "boots": 5,
+    "helmet": 8,
+    "pants": 11,
+    "chest": 13
+  },
+  "checkpoints": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 172,
+      "totalPhysicalDefense": 7,
+      "physicalReduction": 0.7665714285714286,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 8.636857142857142,
+      "hitsToDefeat": 20
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2.77,
+      "maxHealth": 232,
+      "totalPhysicalDefense": 12.17,
+      "physicalReduction": 0.5972062448644208,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 16.119483845521774,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.9,
+      "maxHealth": 292,
+      "totalPhysicalDefense": 16.700000000000003,
+      "physicalReduction": 0.5107784431137725,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 21.17584096421557,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 7.74,
+      "maxHealth": 382,
+      "totalPhysicalDefense": 23.14,
+      "physicalReduction": 0.4350907519446846,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 27.50513518030784,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 7.74,
+      "maxHealth": 442,
+      "totalPhysicalDefense": 25.54,
+      "physicalReduction": 0.3602192638997651,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 33.69247672489355,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 17.61,
+      "maxHealth": 532,
+      "totalPhysicalDefense": 39.01,
+      "physicalReduction": 0.45547295565239687,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 32.25679764963198,
+      "hitsToDefeat": 17
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 17.61,
+      "maxHealth": 592,
+      "totalPhysicalDefense": 41.41,
+      "physicalReduction": 0.40811398212992034,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 37.923337842008095,
+      "hitsToDefeat": 16
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 221,
+      "totalPhysicalDefense": 4,
+      "physicalReduction": 0.5915,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 15.1145,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2,
+      "maxHealth": 281,
+      "totalPhysicalDefense": 8.4,
+      "physicalReduction": 0.4164285714285716,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 23.35406171428571,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 3.55,
+      "maxHealth": 341,
+      "totalPhysicalDefense": 12.350000000000001,
+      "physicalReduction": 0.3384615384615386,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 28.634537983999998,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.55,
+      "maxHealth": 431,
+      "totalPhysicalDefense": 17.95,
+      "physicalReduction": 0.2717548746518106,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 35.457873430213006,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.55,
+      "maxHealth": 491,
+      "totalPhysicalDefense": 20.349999999999998,
+      "physicalReduction": 0.19705159705159703,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 42.28530002721285,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.65,
+      "maxHealth": 581,
+      "totalPhysicalDefense": 31.049999999999997,
+      "physicalReduction": 0.31587761674718196,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 40.52617315014955,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.65,
+      "maxHealth": 641,
+      "totalPhysicalDefense": 33.45,
+      "physicalReduction": 0.26726457399103154,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 46.94784514312571,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 183,
+      "totalPhysicalDefense": 5,
+      "physicalReduction": 0.6732,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 12.0916,
+      "hitsToDefeat": 16
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2.52,
+      "maxHealth": 243,
+      "totalPhysicalDefense": 9.92,
+      "physicalReduction": 0.5058467741935484,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 19.77561677419355,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.39,
+      "maxHealth": 303,
+      "totalPhysicalDefense": 14.190000000000001,
+      "physicalReduction": 0.4242424242424243,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 24.921532353939394,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 6.91,
+      "maxHealth": 393,
+      "totalPhysicalDefense": 20.310000000000002,
+      "physicalReduction": 0.3563761693746924,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 31.337706945953883,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 6.91,
+      "maxHealth": 453,
+      "totalPhysicalDefense": 22.71,
+      "physicalReduction": 0.28049317481285785,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 37.89105484604938,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 15.69,
+      "maxHealth": 543,
+      "totalPhysicalDefense": 35.089999999999996,
+      "physicalReduction": 0.3946423482473639,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 35.860292855860465,
+      "hitsToDefeat": 16
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 15.69,
+      "maxHealth": 603,
+      "totalPhysicalDefense": 37.49,
+      "physicalReduction": 0.34622566017604706,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 41.88864817384783,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 212,
+      "totalPhysicalDefense": 9,
+      "physicalReduction": 0.8184444444444444,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 6.717555555555556,
+      "hitsToDefeat": 32
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2.97,
+      "maxHealth": 275,
+      "totalPhysicalDefense": 14.49,
+      "physicalReduction": 0.6616977225672878,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 13.5385865010352,
+      "hitsToDefeat": 21
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.17,
+      "maxHealth": 338,
+      "totalPhysicalDefense": 19.21,
+      "physicalReduction": 0.5747006767308693,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 18.408981993878193,
+      "hitsToDefeat": 19
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 8.14,
+      "maxHealth": 432.5,
+      "totalPhysicalDefense": 25.96,
+      "physicalReduction": 0.49645608628659477,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 24.51728921696161,
+      "hitsToDefeat": 18
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 8.14,
+      "maxHealth": 495.5,
+      "totalPhysicalDefense": 28.48,
+      "physicalReduction": 0.4262640449438202,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 30.21439099556817,
+      "hitsToDefeat": 17
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 18.53,
+      "maxHealth": 590,
+      "totalPhysicalDefense": 42.650000000000006,
+      "physicalReduction": 0.5019460726846425,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 29.50381421599398,
+      "hitsToDefeat": 20
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 18.53,
+      "maxHealth": 653,
+      "totalPhysicalDefense": 45.17,
+      "physicalReduction": 0.45738321895063105,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 34.76655789323788,
+      "hitsToDefeat": 19
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 153,
+      "totalPhysicalDefense": 3,
+      "physicalReduction": 0.45533333333333337,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 20.152666666666665,
+      "hitsToDefeat": 8
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 1.49,
+      "maxHealth": 213,
+      "totalPhysicalDefense": 6.890000000000001,
+      "physicalReduction": 0.2885341074020321,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 28.4722958490566,
+      "hitsToDefeat": 8
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 2.59,
+      "maxHealth": 273,
+      "totalPhysicalDefense": 10.39,
+      "physicalReduction": 0.2136669874879693,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 34.036241010818095,
+      "hitsToDefeat": 9
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.08,
+      "maxHealth": 363,
+      "totalPhysicalDefense": 15.48,
+      "physicalReduction": 0.15555555555555567,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 41.11555736901314,
+      "hitsToDefeat": 9
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.08,
+      "maxHealth": 423,
+      "totalPhysicalDefense": 17.88,
+      "physicalReduction": 0.08612975391498878,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 48.126725702113056,
+      "hitsToDefeat": 9
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 9.37,
+      "maxHealth": 513,
+      "totalPhysicalDefense": 26.769999999999996,
+      "physicalReduction": 0.20649981322375788,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 47.005516485324755,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 9.37,
+      "maxHealth": 573,
+      "totalPhysicalDefense": 29.17,
+      "physicalReduction": 0.15975317106616393,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 53.836318821993665,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 176,
+      "totalPhysicalDefense": 6,
+      "physicalReduction": 0.7276666666666667,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 10.076333333333332,
+      "hitsToDefeat": 18
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2.39,
+      "maxHealth": 236,
+      "totalPhysicalDefense": 10.790000000000001,
+      "physicalReduction": 0.5456904541241892,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 18.181104578313253,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.14,
+      "maxHealth": 296,
+      "totalPhysicalDefense": 14.940000000000001,
+      "physicalReduction": 0.45314591700133877,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 23.670451412476574,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 6.53,
+      "maxHealth": 386,
+      "totalPhysicalDefense": 20.93,
+      "physicalReduction": 0.37544194935499287,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 30.409404112390035,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 6.53,
+      "maxHealth": 446,
+      "totalPhysicalDefense": 23.33,
+      "physicalReduction": 0.299614230604372,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 36.88409153681018,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 14.8,
+      "maxHealth": 536,
+      "totalPhysicalDefense": 35.2,
+      "physicalReduction": 0.3965340909090911,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 35.74822944068588,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 14.8,
+      "maxHealth": 596,
+      "totalPhysicalDefense": 37.6,
+      "physicalReduction": 0.3481382978723405,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 41.76610159674349,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 184,
+      "totalPhysicalDefense": 6,
+      "physicalReduction": 0.7276666666666667,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 10.076333333333332,
+      "hitsToDefeat": 19
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2.07,
+      "maxHealth": 244,
+      "totalPhysicalDefense": 10.47,
+      "physicalReduction": 0.5318051575931233,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 18.736783037249282,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 3.62,
+      "maxHealth": 304,
+      "totalPhysicalDefense": 14.420000000000002,
+      "physicalReduction": 0.43342579750346744,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 24.524032184632457,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.69,
+      "maxHealth": 394,
+      "totalPhysicalDefense": 20.09,
+      "physicalReduction": 0.34932802389248385,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 31.680877455068366,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.69,
+      "maxHealth": 454,
+      "totalPhysicalDefense": 22.49,
+      "physicalReduction": 0.27345486883059134,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 38.26170989567726,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 13.05,
+      "maxHealth": 544,
+      "totalPhysicalDefense": 33.45,
+      "physicalReduction": 0.36496263079222735,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 37.61846565955585,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 13.05,
+      "maxHealth": 604,
+      "totalPhysicalDefense": 35.85,
+      "physicalReduction": 0.3163179916317993,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 43.80489316701688,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 231,
+      "totalPhysicalDefense": 11,
+      "physicalReduction": 0.8514545454545455,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 5.496181818181817,
+      "hitsToDefeat": 43
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 3.49,
+      "maxHealth": 297,
+      "totalPhysicalDefense": 17.009999999999998,
+      "physicalReduction": 0.7118165784832451,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 11.53286998236332,
+      "hitsToDefeat": 26
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 6.14,
+      "maxHealth": 363,
+      "totalPhysicalDefense": 22.18,
+      "physicalReduction": 0.6316501352569883,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 15.943937966744816,
+      "hitsToDefeat": 23
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 9.63,
+      "maxHealth": 462,
+      "totalPhysicalDefense": 29.450000000000003,
+      "physicalReduction": 0.5561290322580645,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 21.61184475627584,
+      "hitsToDefeat": 22
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 9.63,
+      "maxHealth": 528,
+      "totalPhysicalDefense": 31.97,
+      "physicalReduction": 0.4888958398498592,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 26.91604177521994,
+      "hitsToDefeat": 20
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 21.9,
+      "maxHealth": 627,
+      "totalPhysicalDefense": 48.019999999999996,
+      "physicalReduction": 0.5576426488962932,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 26.204449735779747,
+      "hitsToDefeat": 24
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 21.9,
+      "maxHealth": 693,
+      "totalPhysicalDefense": 50.54,
+      "physicalReduction": 0.5150375939849625,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 31.072525129354077,
+      "hitsToDefeat": 23
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 171,
+      "totalPhysicalDefense": 4,
+      "physicalReduction": 0.5915,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 15.1145,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2,
+      "maxHealth": 231,
+      "totalPhysicalDefense": 8.4,
+      "physicalReduction": 0.4164285714285716,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 23.35406171428571,
+      "hitsToDefeat": 10
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 3.49,
+      "maxHealth": 291,
+      "totalPhysicalDefense": 12.290000000000001,
+      "physicalReduction": 0.3352318958502848,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 28.77433231101709,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.49,
+      "maxHealth": 381,
+      "totalPhysicalDefense": 17.89,
+      "physicalReduction": 0.26931246506428175,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 35.57679307279617,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.49,
+      "maxHealth": 441,
+      "totalPhysicalDefense": 20.29,
+      "physicalReduction": 0.19467718087727948,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 42.41034280698775,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.4,
+      "maxHealth": 531,
+      "totalPhysicalDefense": 30.799999999999997,
+      "physicalReduction": 0.31032467532467534,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 40.85511936078388,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.4,
+      "maxHealth": 591,
+      "totalPhysicalDefense": 33.2,
+      "physicalReduction": 0.2617469879518074,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 47.30136807342033,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 169,
+      "totalPhysicalDefense": 4,
+      "physicalReduction": 0.5915,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 15.1145,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 1.94,
+      "maxHealth": 229,
+      "totalPhysicalDefense": 8.34,
+      "physicalReduction": 0.4122302158273382,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 23.52207654676259,
+      "hitsToDefeat": 10
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 3.43,
+      "maxHealth": 289,
+      "totalPhysicalDefense": 12.23,
+      "physicalReduction": 0.3319705641864269,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 28.91549829128373,
+      "hitsToDefeat": 10
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.37,
+      "maxHealth": 379,
+      "totalPhysicalDefense": 17.77,
+      "physicalReduction": 0.26437816544738324,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 35.817041534739644,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.37,
+      "maxHealth": 439,
+      "totalPhysicalDefense": 20.169999999999998,
+      "physicalReduction": 0.1898859692612791,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 42.66266016627573,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.21,
+      "maxHealth": 529,
+      "totalPhysicalDefense": 30.61,
+      "physicalReduction": 0.30604377654361326,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 41.108712065081455,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.21,
+      "maxHealth": 589,
+      "totalPhysicalDefense": 33.010000000000005,
+      "physicalReduction": 0.25749772796122405,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 47.57362678090139,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 192,
+      "totalPhysicalDefense": 6,
+      "physicalReduction": 0.7276666666666667,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 10.076333333333332,
+      "hitsToDefeat": 20
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2.58,
+      "maxHealth": 252,
+      "totalPhysicalDefense": 10.98,
+      "physicalReduction": 0.5535519125683062,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 17.866495300546443,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.52,
+      "maxHealth": 312,
+      "totalPhysicalDefense": 15.32,
+      "physicalReduction": 0.466710182767624,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 23.083325333054834,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 7.1,
+      "maxHealth": 402,
+      "totalPhysicalDefense": 21.5,
+      "physicalReduction": 0.392,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 29.603201305689463,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 7.1,
+      "maxHealth": 462,
+      "totalPhysicalDefense": 23.9,
+      "physicalReduction": 0.3163179916317991,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 36.00442910266868,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 16.14,
+      "maxHealth": 552,
+      "totalPhysicalDefense": 36.54,
+      "physicalReduction": 0.418664477285167,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 34.43726536158028,
+      "hitsToDefeat": 17
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 16.14,
+      "maxHealth": 612,
+      "totalPhysicalDefense": 38.94,
+      "physicalReduction": 0.3705701078582435,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 40.32885002664497,
+      "hitsToDefeat": 16
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 175,
+      "totalPhysicalDefense": 5,
+      "physicalReduction": 0.6732,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 12.0916,
+      "hitsToDefeat": 15
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 2,
+      "maxHealth": 235,
+      "totalPhysicalDefense": 9.4,
+      "physicalReduction": 0.47851063829787244,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 20.869587063829787,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 3.49,
+      "maxHealth": 295,
+      "totalPhysicalDefense": 13.290000000000001,
+      "physicalReduction": 0.38525206922498123,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 26.6092207751994,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.49,
+      "maxHealth": 385,
+      "totalPhysicalDefense": 18.89,
+      "physicalReduction": 0.307993647432504,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 33.69342657873602,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 5.49,
+      "maxHealth": 445,
+      "totalPhysicalDefense": 21.29,
+      "physicalReduction": 0.23250352278064812,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 40.41831167467269,
+      "hitsToDefeat": 12
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.47,
+      "maxHealth": 535,
+      "totalPhysicalDefense": 31.869999999999997,
+      "physicalReduction": 0.3334797615312206,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 39.48345391628941,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 12.47,
+      "maxHealth": 595,
+      "totalPhysicalDefense": 34.27,
+      "physicalReduction": 0.28479719871607834,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 45.824494310987895,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 1,
+      "parts": [],
+      "armorDefense": 0,
+      "maxHealth": 166,
+      "totalPhysicalDefense": 5,
+      "physicalReduction": 0.6732,
+      "illustrativeMonsterAttack": 37,
+      "damagePerHit": 12.0916,
+      "hitsToDefeat": 14
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 3,
+      "parts": [
+        "gloves"
+      ],
+      "armorDefense": 1.75,
+      "maxHealth": 226,
+      "totalPhysicalDefense": 9.15,
+      "physicalReduction": 0.46426229508196737,
+      "illustrativeMonsterAttack": 40.019200000000005,
+      "damagePerHit": 21.439794360655736,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 5,
+      "parts": [
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 3.11,
+      "maxHealth": 286,
+      "totalPhysicalDefense": 12.91,
+      "physicalReduction": 0.36715724244771497,
+      "illustrativeMonsterAttack": 43.28476672000001,
+      "damagePerHit": 27.39245113109218,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 8,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.86,
+      "maxHealth": 376,
+      "totalPhysicalDefense": 18.26,
+      "physicalReduction": 0.2841182913472071,
+      "illustrativeMonsterAttack": 48.68947583172609,
+      "damagePerHit": 34.85590515182494,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 10,
+      "parts": [
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 4.86,
+      "maxHealth": 436,
+      "totalPhysicalDefense": 20.66,
+      "physicalReduction": 0.2090997095837367,
+      "illustrativeMonsterAttack": 52.662537059594946,
+      "damagePerHit": 41.65081585449087,
+      "hitsToDefeat": 11
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 13,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 10.99,
+      "maxHealth": 526,
+      "totalPhysicalDefense": 30.39,
+      "physicalReduction": 0.3010200723922344,
+      "illustrativeMonsterAttack": 59.238192087004215,
+      "damagePerHit": 41.40630721658912,
+      "hitsToDefeat": 13
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 15,
+      "parts": [
+        "chest",
+        "pants",
+        "helmet",
+        "gloves",
+        "boots"
+      ],
+      "armorDefense": 10.99,
+      "maxHealth": 586,
+      "totalPhysicalDefense": 32.79,
+      "physicalReduction": 0.25251601097895704,
+      "illustrativeMonsterAttack": 64.07202856130377,
+      "damagePerHit": 47.89281549367354,
+      "hitsToDefeat": 13
+    }
+  ]
+}

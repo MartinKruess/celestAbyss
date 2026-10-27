@@ -575,6 +575,7 @@ const skillSchema = mongoose.Schema({
     classCombatOverrides: {type: mongoose.Schema.Types.Mixed, default: undefined},
     learningRequirements: {
         minimumCharacterLevel: { type: Number, min: 1, validate: Number.isInteger },
+        classOverrides: { type: Map, of: {type: Number, min: 1, validate: Number.isInteger} },
         status: { type: String, enum: ['defined'] },
         furtherSkillLevelsStatus: { type: String, enum: ['pending', 'defined'] },
     },
@@ -630,6 +631,13 @@ const skillSchema = mongoose.Schema({
     },
     taming: {
         requiresMatchingItem: Boolean,
+        baseChanceSource: { type: String, enum: ['creatureVariant'] },
+        chanceFormula: { type: String, enum: ['baseChanceTimesSkillMultiplier'] },
+        chanceMultiplierScaling: {
+            type: { type: String, enum: ['linear', 'fixed'] },
+            base: { type: Number, min: 0 },
+            perLevel: Number,
+        },
         itemConsumptionStatus: { type: String, enum: ['pending', 'defined'] },
         creatureCounterStatus: { type: String, enum: ['pending', 'defined'] },
         baseSuccessChance: { type: Number, min: 0, max: 1 },
@@ -958,6 +966,14 @@ const skillSchema = mongoose.Schema({
                 type: String,
             }
         }),
+    },
+    skillPointCosts: {
+        rankCosts: {type: [Number], default: undefined, validate: values => values === undefined || values.every(v => Number.isSafeInteger(v) && v > 0)},
+        classRankCosts: {type: Map, of: [Number]},
+        firstLevel: {type: Number, min: 0, validate: Number.isSafeInteger},
+        classOverrides: {type: Map, of: {type: Number, min: 0, validate: Number.isSafeInteger}},
+        furtherLevelsStatus: {type: String, enum: ['pending', 'defined']},
+        version: {type: Number, min: 1, validate: Number.isInteger},
     },
     skillpoints: {
         type: Number,

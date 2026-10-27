@@ -6,6 +6,29 @@ Waffentraining, Ausdauertraining und Rüstungstraining werden einmal gemeinsam g
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 2 |
+| skillPointCosts.rankCosts.2 | 4 |
+| skillPointCosts.rankCosts.3 | 5 |
+| skillPointCosts.rankCosts.4 | 7 |
+| skillPointCosts.rankCosts.5 | 8 |
+| skillPointCosts.rankCosts.6 | 10 |
+| skillPointCosts.rankCosts.7 | 11 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 19 |
+| skillPointCosts.rankCosts.13 | 20 |
+| skillPointCosts.rankCosts.14 | 22 |
+| skillPointCosts.rankCosts.15 | 23 |
+| skillPointCosts.rankCosts.16 | 25 |
+| skillPointCosts.rankCosts.17 | 26 |
+| skillPointCosts.rankCosts.18 | 28 |
+| skillPointCosts.rankCosts.19 | 29 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
 | skillName_eng | Endurance Training |
 | category | passive |
 | charClass[0] | Abenteuer |
@@ -78,6 +101,22 @@ Festgelegt und gespeichert: je gelerntem Level +1 Vita, +1 Wisdom, +4 P-Defense 
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 7 |
+| skillPointCosts.rankCosts.2 | 14 |
+| skillPointCosts.rankCosts.3 | 20 |
+| skillPointCosts.rankCosts.4 | 27 |
+| skillPointCosts.rankCosts.5 | 33 |
+| skillPointCosts.rankCosts.6 | 40 |
+| skillPointCosts.rankCosts.7 | 46 |
+| skillPointCosts.rankCosts.8 | 53 |
+| skillPointCosts.rankCosts.9 | 59 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Armor Training |
 | category | passive |
 | charClass[0] | Abenteuer |
@@ -138,9 +177,6 @@ Festgelegt und gespeichert: je gelerntem Level +1 Vita, +1 Wisdom, +4 P-Defense 
 | levelProgression.rules[1].rule.perLevel | 6 |
 | levelProgression.rules[1].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 2 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | passive |
 
@@ -150,6 +186,32 @@ Festgelegt und gespeichert: je gelerntem Level +6 P-Defense und +6 M-Defense. Ma
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 2 |
+| skillPointCosts.rankCosts.2 | 4 |
+| skillPointCosts.rankCosts.3 | 5 |
+| skillPointCosts.rankCosts.4 | 7 |
+| skillPointCosts.rankCosts.5 | 8 |
+| skillPointCosts.rankCosts.6 | 10 |
+| skillPointCosts.rankCosts.7 | 11 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 19 |
+| skillPointCosts.rankCosts.13 | 20 |
+| skillPointCosts.rankCosts.14 | 22 |
+| skillPointCosts.rankCosts.15 | 23 |
+| skillPointCosts.rankCosts.16 | 25 |
+| skillPointCosts.rankCosts.17 | 26 |
+| skillPointCosts.rankCosts.18 | 28 |
+| skillPointCosts.rankCosts.19 | 29 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 2 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Weapon Training |
 | category | passive |
 | charClass[0] | Abenteuer |
@@ -211,9 +273,6 @@ Festgelegt und gespeichert: je gelerntem Level +6 P-Defense und +6 M-Defense. Ma
 | levelProgression.rules[1].rule.perLevel | 1 |
 | levelProgression.rules[1].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 2 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | passive |
 

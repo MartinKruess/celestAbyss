@@ -55,6 +55,8 @@ md=md.replace(/\*\*\d+ unterschiedliche zugeordnete Skills[\s\S]*?\*\*/,`**${ski
 md=md.replace('\n\n','\n\nEinteilung: `type` bezeichnet Skill, Passive, Selbstbuff oder Buff; `damageType` bezeichnet physisch, magisch oder gemischt. Bewegung ist ein selbstgerichteter Buff. `dmgType` wird nur noch als Altformat für bestehende Werkzeuge mitgeführt.\n\n').replaceAll('| dmgType |','| dmgType (Altformat) |');
 const pointSummary=JSON.parse(await fs.readFile('data/balancing/class-skill-points.json','utf8')).classes.find(c=>c.key==='gladiator');
 md=md.replace('\n\n',`\n\n**${skills.length} Skills, ${pointSummary.sp} Skillpunkte.** Glück des Narrens hat fünf Stufen mit Glück 1/3/6/8/10 und jeweils fünf kritischen Trefferpunkten pro Stufe, maximal 25. Die Verringerung von zehn auf fünf Stufen spart fünf Skillpunkte und reduziert die bisherigen Maximalboni von 11 auf 10 Glück sowie von 50 auf 25 kritische Trefferpunkte.\n\n`);
-await fs.writeFile('docs/balancing/classes/gladiator-skills.md',md);
+const {withSkillLearningOverview} = await import('../services/skillLearningOverview.js');
+const existingLearningNotes = await fs.readFile('docs/balancing/classes/gladiator-skills.md', 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+await fs.writeFile('docs/balancing/classes/gladiator-skills.md',withSkillLearningOverview(md,{skills,classKey:'gladiator',existingMarkdown:existingLearningNotes}));
 await fs.writeFile('data/balancing/gladiator-skill-review.json',JSON.stringify({classKey:'gladiator',total:count.total,active:count.total-count.passive,passive:count.passive,skillNumbers:skills.map(s=>s.nr),skills,source:'Current database-exported skill catalog',equipment:'Original rank values; proposed strength changes not applied'},null,2)+'\n');
 console.log(`Review updated: ${skills.length} skills, ${reviewActiveCount} active, ${reviewPassiveCount} passive.`);

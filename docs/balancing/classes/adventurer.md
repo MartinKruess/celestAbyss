@@ -135,7 +135,7 @@ Aktuell **33** unterschiedliche Skills für Grundklasse und Weiterentwicklung zu
 | 144 | Rüstungstraining | Passiv | 10 |
 | 145 | Durchhalten | Passiv | 10 |
 | 147 | Erweckung der Leidenschaft | Gruppen-/Begleiterbuff | 5 |
-| 148 | Scharfer Instinkte | Eigenbuff | 10 |
+| 148 | Scharfer Instinkt | Eigenbuff | 10 |
 | 149 | Macht der Wildnis | Eigenbuff | 3 |
 | 150 | Macht des Begleiters | Gruppen-/Begleiterbuff | 10 |
 | 151 | Für die Ehre | Eigenbuff | 10 |

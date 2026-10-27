@@ -50,7 +50,7 @@ export function resolveSkillAtLevel(definition,learnedLevel,{classKey,bonusLevel
 
 // Called with trusted character state, never a client-authorized level grant.
 export function resolveCharacterSkillLevels({catalog,classKey,learnedSkills,forgottenSpellTargetId}){
- const classes={druid:['Druide','Alchemist'],shaman:['Shamane','High Elves'],healer:['Healer','Priest'],gladiator:['Gladiator','Berserker'],butcher:['Butcher','Destroyer'],knight:['Knife','Templar','Ritter','Tempelritter'],adventurer:['Adventure','Adventurer','Abenteuer','Scout'],hunter:['Hunter','Archer'],summoner:['Summoner','Soulseeker'],villian:['Villian','Shadowwarrior'],herbalist:['Herbalist','Witcher'],luminet:['Luminet','Lightmage'],ritualist:['Ritualist','Bloodmage']};
+ const classes={druid:['Druide','Alchemist'],shaman:['Shamane','High Elves'],healer:['Healer','Priest'],gladiator:['Gladiator','Berserker'],butcher:['Butcher','Destroyer'],knight:['Knight','Templar','Ritter','Tempelritter'],adventurer:['Adventure','Adventurer','Abenteuer','Scout'],hunter:['Hunter','Archer'],summoner:['Summoner','Soulseeker'],villian:['Villian','Shadowwarrior'],herbalist:['Herbalist','Witcher'],luminet:['Luminet','Lightmage'],ritualist:['Ritualist','Bloodmage']};
  if(!classes[classKey])throw Error('Unknown class');
  const records=new Map();
  for(const state of learnedSkills){const definition=catalog.find(s=>String(s._id)===String(state.skillId));if(!definition||records.has(String(state.skillId)))throw Error('Unknown or duplicate learned skill');if(!definition.charClass.some(c=>classes[classKey].includes(c)))throw Error('Skill not allowed for class');records.set(String(state.skillId),{definition,level:state.level});}

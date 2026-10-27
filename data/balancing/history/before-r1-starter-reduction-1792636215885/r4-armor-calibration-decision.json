@@ -1,0 +1,403 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-r4-physical-calibration-1792635950806",
+  "scope": {
+    "rounding": "Ceil physical set totals to ensure effective level never falls below target; tolerate 1e-9 floating point noise",
+    "anchorRank": 4,
+    "anchorLevel": 60,
+    "changedRanks": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "specialAnchor": {
+      "class": "Gladiator",
+      "physicalDefense": 169,
+      "reduction": 35
+    },
+    "preservedRanks": [
+      1
+    ],
+    "magicalDefense": "unchanged",
+    "rule": "Override final physical set totals after historical scaling; each class calibrated independently. R2 through R6 calibrated; R1 retained as starter exception."
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Adventure",
+      "anchorArmor": 161,
+      "divisor": 3.98,
+      "targets": {
+        "2": 50,
+        "3": 106,
+        "5": 217,
+        "6": 273
+      },
+      "before": {
+        "1": 30,
+        "2": 50,
+        "3": 105,
+        "4": 161,
+        "5": 217,
+        "6": 272
+      },
+      "after": {
+        "1": 30,
+        "2": 50,
+        "3": 106,
+        "4": 161,
+        "5": 217,
+        "6": 273
+      }
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "anchorArmor": 116,
+      "divisor": 3.18,
+      "targets": {
+        "2": 37,
+        "3": 77,
+        "5": 156,
+        "6": 196
+      },
+      "before": {
+        "1": 31,
+        "2": 37,
+        "3": 76,
+        "4": 116,
+        "5": 156,
+        "6": 195
+      },
+      "after": {
+        "1": 31,
+        "2": 37,
+        "3": 77,
+        "4": 116,
+        "5": 156,
+        "6": 196
+      }
+    },
+    {
+      "key": "druid",
+      "name": "Druid",
+      "anchorArmor": 144,
+      "divisor": 3.6633333333333336,
+      "targets": {
+        "2": 46,
+        "3": 95,
+        "5": 194,
+        "6": 243
+      },
+      "before": {
+        "1": 29,
+        "2": 45,
+        "3": 95,
+        "4": 144,
+        "5": 193,
+        "6": 243
+      },
+      "after": {
+        "1": 29,
+        "2": 46,
+        "3": 95,
+        "4": 144,
+        "5": 194,
+        "6": 243
+      }
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "anchorArmor": 169,
+      "divisor": 4.205666666666667,
+      "targets": {
+        "2": 52,
+        "3": 111,
+        "4": 169,
+        "5": 228,
+        "6": 287
+      },
+      "before": {
+        "1": 36,
+        "2": 51,
+        "3": 110,
+        "4": 169,
+        "5": 228,
+        "6": 287
+      },
+      "after": {
+        "1": 36,
+        "2": 52,
+        "3": 111,
+        "4": 169,
+        "5": 228,
+        "6": 287
+      }
+    },
+    {
+      "key": "healer",
+      "name": "Healer",
+      "anchorArmor": 86,
+      "divisor": 2.6633333333333336,
+      "targets": {
+        "2": 28,
+        "3": 57,
+        "5": 116,
+        "6": 145
+      },
+      "before": {
+        "1": 18,
+        "2": 27,
+        "3": 57,
+        "4": 86,
+        "5": 115,
+        "6": 145
+      },
+      "after": {
+        "1": 18,
+        "2": 28,
+        "3": 57,
+        "4": 86,
+        "5": 116,
+        "6": 145
+      }
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "anchorArmor": 135,
+      "divisor": 3.5300000000000002,
+      "targets": {
+        "2": 42,
+        "3": 89,
+        "5": 182,
+        "6": 229
+      },
+      "before": {
+        "1": 26,
+        "2": 42,
+        "3": 88,
+        "4": 135,
+        "5": 182,
+        "6": 228
+      },
+      "after": {
+        "1": 26,
+        "2": 42,
+        "3": 89,
+        "4": 135,
+        "5": 182,
+        "6": 229
+      }
+    },
+    {
+      "key": "hunter",
+      "name": "Archer",
+      "anchorArmor": 119,
+      "divisor": 3.2633333333333336,
+      "targets": {
+        "2": 37,
+        "3": 78,
+        "5": 161,
+        "6": 202
+      },
+      "before": {
+        "1": 25,
+        "2": 36,
+        "3": 78,
+        "4": 119,
+        "5": 160,
+        "6": 202
+      },
+      "after": {
+        "1": 25,
+        "2": 37,
+        "3": 78,
+        "4": 119,
+        "5": 161,
+        "6": 202
+      }
+    },
+    {
+      "key": "knight",
+      "name": "Tank",
+      "anchorArmor": 199,
+      "divisor": 4.739000000000001,
+      "targets": {
+        "2": 60,
+        "3": 130,
+        "5": 269,
+        "6": 339
+      },
+      "before": {
+        "1": 44,
+        "2": 60,
+        "3": 129,
+        "4": 199,
+        "5": 269,
+        "6": 338
+      },
+      "after": {
+        "1": 44,
+        "2": 60,
+        "3": 130,
+        "4": 199,
+        "5": 269,
+        "6": 339
+      }
+    },
+    {
+      "key": "luminet",
+      "name": "Lightmage",
+      "anchorArmor": 114,
+      "divisor": 3.146666666666667,
+      "targets": {
+        "2": 37,
+        "3": 76,
+        "5": 153,
+        "6": 192
+      },
+      "before": {
+        "1": 21,
+        "2": 36,
+        "3": 75,
+        "4": 114,
+        "5": 153,
+        "6": 192
+      },
+      "after": {
+        "1": 21,
+        "2": 37,
+        "3": 76,
+        "4": 114,
+        "5": 153,
+        "6": 192
+      }
+    },
+    {
+      "key": "ritualist",
+      "name": "Bloodmage",
+      "anchorArmor": 112,
+      "divisor": 3.1133333333333337,
+      "targets": {
+        "2": 36,
+        "3": 74,
+        "5": 151,
+        "6": 189
+      },
+      "before": {
+        "1": 23,
+        "2": 35,
+        "3": 74,
+        "4": 112,
+        "5": 150,
+        "6": 189
+      },
+      "after": {
+        "1": 23,
+        "2": 36,
+        "3": 74,
+        "4": 112,
+        "5": 151,
+        "6": 189
+      }
+    },
+    {
+      "key": "shaman",
+      "name": "Shamane",
+      "anchorArmor": 148,
+      "divisor": 3.746666666666667,
+      "targets": {
+        "2": 47,
+        "3": 98,
+        "5": 199,
+        "6": 250
+      },
+      "before": {
+        "1": 27,
+        "2": 46,
+        "3": 97,
+        "4": 148,
+        "5": 199,
+        "6": 250
+      },
+      "after": {
+        "1": 27,
+        "2": 47,
+        "3": 98,
+        "4": 148,
+        "5": 199,
+        "6": 250
+      }
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "anchorArmor": 114,
+      "divisor": 3.1633333333333336,
+      "targets": {
+        "2": 36,
+        "3": 75,
+        "5": 154,
+        "6": 193
+      },
+      "before": {
+        "1": 20,
+        "2": 35,
+        "3": 75,
+        "4": 114,
+        "5": 153,
+        "6": 193
+      },
+      "after": {
+        "1": 20,
+        "2": 36,
+        "3": 75,
+        "4": 114,
+        "5": 154,
+        "6": 193
+      }
+    },
+    {
+      "key": "villian",
+      "name": "Villain",
+      "anchorArmor": 100,
+      "divisor": 2.93,
+      "targets": {
+        "2": 31,
+        "3": 66,
+        "5": 135,
+        "6": 170
+      },
+      "before": {
+        "1": 27,
+        "2": 31,
+        "3": 65,
+        "4": 100,
+        "5": 135,
+        "6": 169
+      },
+      "after": {
+        "1": 27,
+        "2": 31,
+        "3": 66,
+        "4": 100,
+        "5": 135,
+        "6": 170
+      }
+    }
+  ],
+  "inputHash": "0b0eef59cc98a3513bb6acced8d7540f9653e1db379b9c7c4acfe442516783a0",
+  "databaseManifest": "data/balancing/armor-database-manifest.json",
+  "validation": {
+    "classes": 13,
+    "parts": 390,
+    "raisedSets": 26,
+    "additionalDefensePerRaisedSet": 1,
+    "minimumTargetsMet": true,
+    "r1AndR4Unchanged": true,
+    "otherPartPropertiesUnchanged": true
+  }
+}

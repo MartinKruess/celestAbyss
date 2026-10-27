@@ -1,0 +1,3859 @@
+{
+  "status": "proposalOnlyNoGameChanges",
+  "scope": "Physical armor defense only; per-class level-60 R4 anchor. Existing operative class baseline and level contributions included once. No weapons, shield, skills, buffs, affixes, upgrades or gems. Magical defense unchanged and not calibrated by this proposal.",
+  "inputHashes": {
+    "data/balancing/class-baselines.json": "d60d8a39ae9d6b2aa75d73b5e3b39ef85308da38d69f0907ddaa753bf886df9b",
+    "data/balancing/attribute-model.json": "163a30637a8c2fdc52d49b140a871c4e2a3293d08193fdc47887884606e7eb5f",
+    "data/balancing/armor-parts.json": "14ec6defc6fefe93a988f166d56fb392ce44fed9be61c8c121758c112267c979",
+    "data/balancing/ranked-equipment.json": "96d5d19ada867e92f4530bae28d91e85af26254275ae524b9f68eab70828acca"
+  },
+  "anchor": {
+    "level": 60,
+    "rank": 4,
+    "rule": "Per-class divisor = total physical defense at 60 / 60"
+  },
+  "starterRule": {
+    "status": "proposal",
+    "rule": "Retain current R1 physical defense as separate starter protection; do not force level-1 total onto the linear curve.",
+    "reason": "Existing R1 is below every proposed R2 total and yields effective armor levels about 8 to 12 at level 1. These values are a starting proposal, not combat-validated."
+  },
+  "rounding": "Nearest integer set total, largest-remainder allocation 30/26/16/16/12 to five slots",
+  "maxLevelDeviation": 0.17521902377972864,
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "divisor": 3.98,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 30,
+          "proposedArmor": 30,
+          "change": 0,
+          "nakedDefense": 7,
+          "total": 37,
+          "effectiveLevel": 9.296482412060302,
+          "levelDeviation": 8.296482412060302,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 9,
+              "value": 9
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 7.8,
+              "value": 8
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.8,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.8,
+              "value": 5
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.6,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 54,
+          "proposedArmor": 50,
+          "change": -4,
+          "nakedDefense": 29.8,
+          "total": 79.8,
+          "effectiveLevel": 20.050251256281406,
+          "levelDeviation": 0.05025125628140614,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 15,
+              "value": 15
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 13,
+              "value": 13
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 8,
+              "value": 8
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 8,
+              "value": 8
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 6,
+              "value": 6
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 99,
+          "proposedArmor": 105,
+          "change": 6,
+          "nakedDefense": 53.8,
+          "total": 158.8,
+          "effectiveLevel": 39.89949748743719,
+          "levelDeviation": -0.10050251256281229,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 31.5,
+              "value": 31
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 27.3,
+              "value": 27
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 16.8,
+              "value": 17
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 16.8,
+              "value": 17
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 12.6,
+              "value": 13
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 161,
+          "proposedArmor": 161,
+          "change": 0,
+          "nakedDefense": 77.8,
+          "total": 238.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 48.3,
+              "value": 48
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 41.86,
+              "value": 42
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 25.76,
+              "value": 26
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 25.76,
+              "value": 26
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 19.32,
+              "value": 19
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 228,
+          "proposedArmor": 217,
+          "change": -11,
+          "nakedDefense": 101.8,
+          "total": 318.8,
+          "effectiveLevel": 80.10050251256281,
+          "levelDeviation": 0.10050251256281229,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 65.1,
+              "value": 65
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 56.42,
+              "value": 56
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 34.72,
+              "value": 35
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 34.72,
+              "value": 35
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 26.04,
+              "value": 26
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 302,
+          "proposedArmor": 272,
+          "change": -30,
+          "nakedDefense": 125.8,
+          "total": 397.8,
+          "effectiveLevel": 99.9497487437186,
+          "levelDeviation": -0.05025125628139904,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 81.6,
+              "value": 82
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 70.72,
+              "value": 71
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 43.52,
+              "value": 43
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 43.52,
+              "value": 43
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 32.64,
+              "value": 33
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "divisor": 3.18,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 31,
+          "proposedArmor": 31,
+          "change": 0,
+          "nakedDefense": 4,
+          "total": 35,
+          "effectiveLevel": 11.0062893081761,
+          "levelDeviation": 10.0062893081761,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 9.3,
+              "value": 9
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 8.06,
+              "value": 8
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.96,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.96,
+              "value": 5
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.72,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 44,
+          "proposedArmor": 37,
+          "change": -7,
+          "nakedDefense": 26.8,
+          "total": 63.8,
+          "effectiveLevel": 20.062893081761004,
+          "levelDeviation": 0.06289308176100405,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 11.1,
+              "value": 11
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 9.62,
+              "value": 10
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 5.92,
+              "value": 6
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 5.92,
+              "value": 6
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 4.44,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 59,
+          "proposedArmor": 76,
+          "change": 17,
+          "nakedDefense": 50.8,
+          "total": 126.8,
+          "effectiveLevel": 39.874213836477985,
+          "levelDeviation": -0.12578616352201522,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 22.8,
+              "value": 23
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 19.76,
+              "value": 20
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 12.16,
+              "value": 12
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 12.16,
+              "value": 12
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 9.12,
+              "value": 9
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 116,
+          "proposedArmor": 116,
+          "change": 0,
+          "nakedDefense": 74.8,
+          "total": 190.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 34.8,
+              "value": 35
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 30.16,
+              "value": 30
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 18.56,
+              "value": 19
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 18.56,
+              "value": 18
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 13.92,
+              "value": 14
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 196,
+          "proposedArmor": 156,
+          "change": -40,
+          "nakedDefense": 98.8,
+          "total": 254.8,
+          "effectiveLevel": 80.12578616352201,
+          "levelDeviation": 0.1257861635220081,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 46.8,
+              "value": 47
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 40.56,
+              "value": 40
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 24.96,
+              "value": 25
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 24.96,
+              "value": 25
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 18.72,
+              "value": 19
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 309,
+          "proposedArmor": 195,
+          "change": -114,
+          "nakedDefense": 122.8,
+          "total": 317.8,
+          "effectiveLevel": 99.937106918239,
+          "levelDeviation": -0.06289308176100405,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 58.5,
+              "value": 59
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 50.7,
+              "value": 51
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 31.2,
+              "value": 31
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 31.2,
+              "value": 31
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 23.4,
+              "value": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "divisor": 3.6633333333333336,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 29,
+          "proposedArmor": 29,
+          "change": 0,
+          "nakedDefense": 5,
+          "total": 34,
+          "effectiveLevel": 9.281164695177434,
+          "levelDeviation": 8.281164695177434,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 8.7,
+              "value": 9
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 7.54,
+              "value": 7
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.64,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.64,
+              "value": 5
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.48,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 56,
+          "proposedArmor": 45,
+          "change": -11,
+          "nakedDefense": 27.8,
+          "total": 72.8,
+          "effectiveLevel": 19.872611464968152,
+          "levelDeviation": -0.127388535031848,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 13.5,
+              "value": 14
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 11.7,
+              "value": 12
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 7.2,
+              "value": 7
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 7.2,
+              "value": 7
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 5.4,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 100,
+          "proposedArmor": 95,
+          "change": -5,
+          "nakedDefense": 51.8,
+          "total": 146.8,
+          "effectiveLevel": 40.07279344858963,
+          "levelDeviation": 0.07279344858962844,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 28.5,
+              "value": 29
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 24.7,
+              "value": 25
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 15.2,
+              "value": 15
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 15.2,
+              "value": 15
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 11.4,
+              "value": 11
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 144,
+          "proposedArmor": 144,
+          "change": 0,
+          "nakedDefense": 75.8,
+          "total": 219.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 43.2,
+              "value": 43
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 37.44,
+              "value": 38
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 23.04,
+              "value": 23
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 23.04,
+              "value": 23
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 17.28,
+              "value": 17
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 212,
+          "proposedArmor": 193,
+          "change": -19,
+          "nakedDefense": 99.8,
+          "total": 292.8,
+          "effectiveLevel": 79.92720655141036,
+          "levelDeviation": -0.07279344858963555,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 57.9,
+              "value": 58
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 50.18,
+              "value": 50
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 30.88,
+              "value": 31
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 30.88,
+              "value": 31
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 23.16,
+              "value": 23
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 291,
+          "proposedArmor": 243,
+          "change": -48,
+          "nakedDefense": 123.8,
+          "total": 366.8,
+          "effectiveLevel": 100.12738853503184,
+          "levelDeviation": 0.1273885350318409,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 72.9,
+              "value": 73
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 63.18,
+              "value": 63
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 38.88,
+              "value": 39
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 38.88,
+              "value": 39
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 29.16,
+              "value": 29
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "divisor": 4.789000000000001,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 36,
+          "proposedArmor": 36,
+          "change": 0,
+          "nakedDefense": 9,
+          "total": 45,
+          "effectiveLevel": 9.396533723115471,
+          "levelDeviation": 8.396533723115471,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 10.8,
+              "value": 11
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 9.36,
+              "value": 9
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 5.76,
+              "value": 6
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 5.76,
+              "value": 6
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 4.32,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 72,
+          "proposedArmor": 63,
+          "change": -9,
+          "nakedDefense": 32.94,
+          "total": 95.94,
+          "effectiveLevel": 20.033409897682187,
+          "levelDeviation": 0.03340989768218705,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 18.9,
+              "value": 19
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 16.38,
+              "value": 16
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 10.08,
+              "value": 10
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 10.08,
+              "value": 10
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 7.56,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 145,
+          "proposedArmor": 133,
+          "change": -12,
+          "nakedDefense": 58.14,
+          "total": 191.14,
+          "effectiveLevel": 39.91229901858425,
+          "levelDeviation": -0.08770098141575033,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 39.9,
+              "value": 40
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 34.58,
+              "value": 35
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 21.28,
+              "value": 21
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 21.28,
+              "value": 21
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 15.96,
+              "value": 16
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 204,
+          "proposedArmor": 204,
+          "change": 0,
+          "nakedDefense": 83.34,
+          "total": 287.34000000000003,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 61.2,
+              "value": 61
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 53.04,
+              "value": 53
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 32.64,
+              "value": 33
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 32.64,
+              "value": 33
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 24.48,
+              "value": 24
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 253,
+          "proposedArmor": 275,
+          "change": 22,
+          "nakedDefense": 108.54,
+          "total": 383.54,
+          "effectiveLevel": 80.08770098141574,
+          "levelDeviation": 0.08770098141573612,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 82.5,
+              "value": 83
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 71.5,
+              "value": 71
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 44,
+              "value": 44
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 44,
+              "value": 44
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 33,
+              "value": 33
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 354,
+          "proposedArmor": 345,
+          "change": -9,
+          "nakedDefense": 133.74,
+          "total": 478.74,
+          "effectiveLevel": 99.9665901023178,
+          "levelDeviation": -0.033409897682204814,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 103.5,
+              "value": 104
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 89.7,
+              "value": 90
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 55.2,
+              "value": 55
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 55.2,
+              "value": 55
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 41.4,
+              "value": 41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "divisor": 2.6633333333333336,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 18,
+          "proposedArmor": 18,
+          "change": 0,
+          "nakedDefense": 3,
+          "total": 21,
+          "effectiveLevel": 7.884856070087609,
+          "levelDeviation": 6.884856070087609,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 5.4,
+              "value": 5
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 4.68,
+              "value": 5
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 2.88,
+              "value": 3
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 2.88,
+              "value": 3
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 2.16,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 28,
+          "proposedArmor": 27,
+          "change": -1,
+          "nakedDefense": 25.8,
+          "total": 52.8,
+          "effectiveLevel": 19.82478097622027,
+          "levelDeviation": -0.17521902377972864,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 8.1,
+              "value": 8
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 7.02,
+              "value": 7
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.32,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.32,
+              "value": 4
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.24,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 47,
+          "proposedArmor": 57,
+          "change": 10,
+          "nakedDefense": 49.8,
+          "total": 106.8,
+          "effectiveLevel": 40.10012515644555,
+          "levelDeviation": 0.10012515644555009,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 17.1,
+              "value": 17
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 14.82,
+              "value": 15
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 9.12,
+              "value": 9
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 9.12,
+              "value": 9
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 6.84,
+              "value": 7
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 86,
+          "proposedArmor": 86,
+          "change": 0,
+          "nakedDefense": 73.8,
+          "total": 159.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 25.8,
+              "value": 26
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 22.36,
+              "value": 22
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 13.76,
+              "value": 14
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 13.76,
+              "value": 14
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 10.32,
+              "value": 10
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 130,
+          "proposedArmor": 115,
+          "change": -15,
+          "nakedDefense": 97.8,
+          "total": 212.8,
+          "effectiveLevel": 79.89987484355444,
+          "levelDeviation": -0.1001251564455572,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 34.5,
+              "value": 35
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 29.9,
+              "value": 30
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 18.4,
+              "value": 18
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 18.4,
+              "value": 18
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 13.8,
+              "value": 14
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 180,
+          "proposedArmor": 145,
+          "change": -35,
+          "nakedDefense": 121.8,
+          "total": 266.8,
+          "effectiveLevel": 100.17521902377972,
+          "levelDeviation": 0.175219023779718,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 43.5,
+              "value": 44
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 37.7,
+              "value": 38
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 23.2,
+              "value": 23
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 23.2,
+              "value": 23
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 17.4,
+              "value": 17
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "divisor": 3.5300000000000002,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 26,
+          "proposedArmor": 26,
+          "change": 0,
+          "nakedDefense": 6,
+          "total": 32,
+          "effectiveLevel": 9.06515580736544,
+          "levelDeviation": 8.06515580736544,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 7.8,
+              "value": 8
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 6.76,
+              "value": 7
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.16,
+              "value": 4
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.16,
+              "value": 4
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.12,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 49,
+          "proposedArmor": 42,
+          "change": -7,
+          "nakedDefense": 28.8,
+          "total": 70.8,
+          "effectiveLevel": 20.05665722379603,
+          "levelDeviation": 0.05665722379603011,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 12.6,
+              "value": 12
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 10.92,
+              "value": 11
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 6.72,
+              "value": 7
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 6.72,
+              "value": 7
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 5.04,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 86,
+          "proposedArmor": 88,
+          "change": 2,
+          "nakedDefense": 52.8,
+          "total": 140.8,
+          "effectiveLevel": 39.88668555240793,
+          "levelDeviation": -0.11331444759206732,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 26.4,
+              "value": 26
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 22.88,
+              "value": 23
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 14.08,
+              "value": 14
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 14.08,
+              "value": 14
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 10.56,
+              "value": 11
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 135,
+          "proposedArmor": 135,
+          "change": 0,
+          "nakedDefense": 76.8,
+          "total": 211.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 40.5,
+              "value": 40
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 35.1,
+              "value": 35
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 21.6,
+              "value": 22
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 21.6,
+              "value": 22
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 16.2,
+              "value": 16
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 197,
+          "proposedArmor": 182,
+          "change": -15,
+          "nakedDefense": 100.8,
+          "total": 282.8,
+          "effectiveLevel": 80.11331444759206,
+          "levelDeviation": 0.11331444759206022,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 54.6,
+              "value": 55
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 47.32,
+              "value": 47
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 29.12,
+              "value": 29
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 29.12,
+              "value": 29
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 21.84,
+              "value": 22
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 267,
+          "proposedArmor": 228,
+          "change": -39,
+          "nakedDefense": 124.8,
+          "total": 352.8,
+          "effectiveLevel": 99.94334277620396,
+          "levelDeviation": -0.056657223796037215,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 68.4,
+              "value": 68
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 59.28,
+              "value": 59
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 36.48,
+              "value": 37
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 36.48,
+              "value": 37
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 27.36,
+              "value": 27
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "divisor": 3.2633333333333336,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 25,
+          "proposedArmor": 25,
+          "change": 0,
+          "nakedDefense": 6,
+          "total": 31,
+          "effectiveLevel": 9.499489274770173,
+          "levelDeviation": 8.499489274770173,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 7.5,
+              "value": 8
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 6.5,
+              "value": 6
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4,
+              "value": 4
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4,
+              "value": 4
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 42,
+          "proposedArmor": 36,
+          "change": -6,
+          "nakedDefense": 28.8,
+          "total": 64.8,
+          "effectiveLevel": 19.856996935648617,
+          "levelDeviation": -0.1430030643513831,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 10.8,
+              "value": 11
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 9.36,
+              "value": 9
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 5.76,
+              "value": 6
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 5.76,
+              "value": 6
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 4.32,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 70,
+          "proposedArmor": 78,
+          "change": 8,
+          "nakedDefense": 52.8,
+          "total": 130.8,
+          "effectiveLevel": 40.081716036772214,
+          "levelDeviation": 0.08171603677221384,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 23.4,
+              "value": 23
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 20.28,
+              "value": 20
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 12.48,
+              "value": 13
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 12.48,
+              "value": 13
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 9.36,
+              "value": 9
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 119,
+          "proposedArmor": 119,
+          "change": 0,
+          "nakedDefense": 76.8,
+          "total": 195.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 35.7,
+              "value": 36
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 30.94,
+              "value": 31
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 19.04,
+              "value": 19
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 19.04,
+              "value": 19
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 14.28,
+              "value": 14
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 170,
+          "proposedArmor": 160,
+          "change": -10,
+          "nakedDefense": 100.8,
+          "total": 260.8,
+          "effectiveLevel": 79.91828396322778,
+          "levelDeviation": -0.08171603677222095,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 48,
+              "value": 48
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 41.6,
+              "value": 42
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 25.6,
+              "value": 26
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 25.6,
+              "value": 25
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 19.2,
+              "value": 19
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 254,
+          "proposedArmor": 202,
+          "change": -52,
+          "nakedDefense": 124.8,
+          "total": 326.8,
+          "effectiveLevel": 100.14300306435138,
+          "levelDeviation": 0.143003064351376,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 60.6,
+              "value": 61
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 52.52,
+              "value": 53
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 32.32,
+              "value": 32
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 32.32,
+              "value": 32
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 24.24,
+              "value": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "divisor": 4.739000000000001,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 44,
+          "proposedArmor": 44,
+          "change": 0,
+          "nakedDefense": 11,
+          "total": 55,
+          "effectiveLevel": 11.605824013504957,
+          "levelDeviation": 10.605824013504957,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 13.2,
+              "value": 13
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 11.44,
+              "value": 12
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 7.04,
+              "value": 7
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 7.04,
+              "value": 7
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 5.28,
+              "value": 5
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 59,
+          "proposedArmor": 60,
+          "change": 1,
+          "nakedDefense": 34.94,
+          "total": 94.94,
+          "effectiveLevel": 20.033762397130193,
+          "levelDeviation": 0.03376239713019302,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 18,
+              "value": 18
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 15.6,
+              "value": 16
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 9.6,
+              "value": 10
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 9.6,
+              "value": 9
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 7.2,
+              "value": 7
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 119,
+          "proposedArmor": 129,
+          "change": 10,
+          "nakedDefense": 60.14,
+          "total": 189.14,
+          "effectiveLevel": 39.91137370753322,
+          "levelDeviation": -0.08862629246677756,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 38.7,
+              "value": 39
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 33.54,
+              "value": 33
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 20.64,
+              "value": 21
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 20.64,
+              "value": 21
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 15.48,
+              "value": 15
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 199,
+          "proposedArmor": 199,
+          "change": 0,
+          "nakedDefense": 85.34,
+          "total": 284.34000000000003,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 59.7,
+              "value": 59
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 51.74,
+              "value": 52
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 31.84,
+              "value": 32
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 31.84,
+              "value": 32
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 23.88,
+              "value": 24
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 318,
+          "proposedArmor": 269,
+          "change": -49,
+          "nakedDefense": 110.54,
+          "total": 379.54,
+          "effectiveLevel": 80.08862629246676,
+          "levelDeviation": 0.08862629246675624,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 80.7,
+              "value": 81
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 69.94,
+              "value": 70
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 43.04,
+              "value": 43
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 43.04,
+              "value": 43
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 32.28,
+              "value": 32
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 443,
+          "proposedArmor": 338,
+          "change": -105,
+          "nakedDefense": 135.74,
+          "total": 473.74,
+          "effectiveLevel": 99.9662376028698,
+          "levelDeviation": -0.03376239713020368,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 101.4,
+              "value": 101
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 87.88,
+              "value": 88
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 54.08,
+              "value": 54
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 54.08,
+              "value": 54
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 40.56,
+              "value": 41
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "divisor": 3.146666666666667,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 21,
+          "proposedArmor": 21,
+          "change": 0,
+          "nakedDefense": 4,
+          "total": 25,
+          "effectiveLevel": 7.944915254237287,
+          "levelDeviation": 6.944915254237287,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 6.3,
+              "value": 6
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 5.46,
+              "value": 6
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 3.36,
+              "value": 3
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 3.36,
+              "value": 3
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 2.52,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 36,
+          "proposedArmor": 36,
+          "change": 0,
+          "nakedDefense": 26.8,
+          "total": 62.8,
+          "effectiveLevel": 19.957627118644066,
+          "levelDeviation": -0.04237288135593431,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 10.8,
+              "value": 11
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 9.36,
+              "value": 9
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 5.76,
+              "value": 6
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 5.76,
+              "value": 6
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 4.32,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 66,
+          "proposedArmor": 75,
+          "change": 9,
+          "nakedDefense": 50.8,
+          "total": 125.8,
+          "effectiveLevel": 39.97881355932203,
+          "levelDeviation": -0.021186440677972485,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 22.5,
+              "value": 23
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 19.5,
+              "value": 19
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 12,
+              "value": 12
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 12,
+              "value": 12
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 9,
+              "value": 9
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 114,
+          "proposedArmor": 114,
+          "change": 0,
+          "nakedDefense": 74.8,
+          "total": 188.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 34.2,
+              "value": 34
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 29.64,
+              "value": 30
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 18.24,
+              "value": 18
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 18.24,
+              "value": 18
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 13.68,
+              "value": 14
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 162,
+          "proposedArmor": 153,
+          "change": -9,
+          "nakedDefense": 98.8,
+          "total": 251.8,
+          "effectiveLevel": 80.02118644067797,
+          "levelDeviation": 0.02118644067796538,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 45.9,
+              "value": 46
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 39.78,
+              "value": 40
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 24.48,
+              "value": 25
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 24.48,
+              "value": 24
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 18.36,
+              "value": 18
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 215,
+          "proposedArmor": 192,
+          "change": -23,
+          "nakedDefense": 122.8,
+          "total": 314.8,
+          "effectiveLevel": 100.04237288135593,
+          "levelDeviation": 0.04237288135593076,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 57.6,
+              "value": 57
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 49.92,
+              "value": 50
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 30.72,
+              "value": 31
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 30.72,
+              "value": 31
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 23.04,
+              "value": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "divisor": 3.1133333333333337,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 23,
+          "proposedArmor": 23,
+          "change": 0,
+          "nakedDefense": 4,
+          "total": 27,
+          "effectiveLevel": 8.672376873661669,
+          "levelDeviation": 7.672376873661669,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 6.9,
+              "value": 7
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 5.98,
+              "value": 6
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 3.68,
+              "value": 4
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 3.68,
+              "value": 3
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 2.76,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 41,
+          "proposedArmor": 35,
+          "change": -6,
+          "nakedDefense": 26.8,
+          "total": 61.8,
+          "effectiveLevel": 19.850107066381153,
+          "levelDeviation": -0.14989293361884748,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 10.5,
+              "value": 10
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 9.1,
+              "value": 9
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 5.6,
+              "value": 6
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 5.6,
+              "value": 6
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 4.2,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 72,
+          "proposedArmor": 74,
+          "change": 2,
+          "nakedDefense": 50.8,
+          "total": 124.8,
+          "effectiveLevel": 40.08565310492505,
+          "levelDeviation": 0.08565310492505063,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 22.2,
+              "value": 22
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 19.24,
+              "value": 19
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 11.84,
+              "value": 12
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 11.84,
+              "value": 12
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 8.88,
+              "value": 9
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 112,
+          "proposedArmor": 112,
+          "change": 0,
+          "nakedDefense": 74.8,
+          "total": 186.8,
+          "effectiveLevel": 59.99999999999999,
+          "levelDeviation": -7.105427357601002e-15,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 33.6,
+              "value": 34
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 29.12,
+              "value": 29
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 17.92,
+              "value": 18
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 17.92,
+              "value": 18
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 13.44,
+              "value": 13
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 164,
+          "proposedArmor": 150,
+          "change": -14,
+          "nakedDefense": 98.8,
+          "total": 248.8,
+          "effectiveLevel": 79.91434689507494,
+          "levelDeviation": -0.08565310492505773,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 45,
+              "value": 45
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 39,
+              "value": 39
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 24,
+              "value": 24
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 24,
+              "value": 24
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 18,
+              "value": 18
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 235,
+          "proposedArmor": 189,
+          "change": -46,
+          "nakedDefense": 122.8,
+          "total": 311.8,
+          "effectiveLevel": 100.14989293361883,
+          "levelDeviation": 0.14989293361882972,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 56.7,
+              "value": 57
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 49.14,
+              "value": 49
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 30.24,
+              "value": 30
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 30.24,
+              "value": 30
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 22.68,
+              "value": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "divisor": 3.746666666666667,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 27,
+          "proposedArmor": 27,
+          "change": 0,
+          "nakedDefense": 6,
+          "total": 33,
+          "effectiveLevel": 8.807829181494661,
+          "levelDeviation": 7.807829181494661,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 8.1,
+              "value": 8
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 7.02,
+              "value": 7
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.32,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.32,
+              "value": 4
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.24,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 52,
+          "proposedArmor": 46,
+          "change": -6,
+          "nakedDefense": 28.8,
+          "total": 74.8,
+          "effectiveLevel": 19.9644128113879,
+          "levelDeviation": -0.03558718861210153,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 13.8,
+              "value": 14
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 11.96,
+              "value": 12
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 7.36,
+              "value": 7
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 7.36,
+              "value": 7
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 5.52,
+              "value": 6
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 100,
+          "proposedArmor": 97,
+          "change": -3,
+          "nakedDefense": 52.8,
+          "total": 149.8,
+          "effectiveLevel": 39.98220640569395,
+          "levelDeviation": -0.017793594306048988,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 29.1,
+              "value": 29
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 25.22,
+              "value": 25
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 15.52,
+              "value": 16
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 15.52,
+              "value": 15
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 11.64,
+              "value": 12
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 148,
+          "proposedArmor": 148,
+          "change": 0,
+          "nakedDefense": 76.8,
+          "total": 224.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 44.4,
+              "value": 44
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 38.48,
+              "value": 38
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 23.68,
+              "value": 24
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 23.68,
+              "value": 24
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 17.76,
+              "value": 18
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 200,
+          "proposedArmor": 199,
+          "change": -1,
+          "nakedDefense": 100.8,
+          "total": 299.8,
+          "effectiveLevel": 80.01779359430604,
+          "levelDeviation": 0.017793594306041882,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 59.7,
+              "value": 59
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 51.74,
+              "value": 52
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 31.84,
+              "value": 32
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 31.84,
+              "value": 32
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 23.88,
+              "value": 24
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 276,
+          "proposedArmor": 250,
+          "change": -26,
+          "nakedDefense": 124.8,
+          "total": 374.8,
+          "effectiveLevel": 100.0355871886121,
+          "levelDeviation": 0.035587188612097975,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 75,
+              "value": 75
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 65,
+              "value": 65
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 40,
+              "value": 40
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 40,
+              "value": 40
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 30,
+              "value": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "divisor": 3.1633333333333336,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 20,
+          "proposedArmor": 20,
+          "change": 0,
+          "nakedDefense": 5,
+          "total": 25,
+          "effectiveLevel": 7.903055848261327,
+          "levelDeviation": 6.903055848261327,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 6,
+              "value": 6
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 5.2,
+              "value": 5
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 3.2,
+              "value": 3
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 3.2,
+              "value": 3
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 2.4,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 35,
+          "proposedArmor": 35,
+          "change": 0,
+          "nakedDefense": 27.8,
+          "total": 62.8,
+          "effectiveLevel": 19.852476290832453,
+          "levelDeviation": -0.14752370916754742,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 10.5,
+              "value": 10
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 9.1,
+              "value": 9
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 5.6,
+              "value": 6
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 5.6,
+              "value": 6
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 4.2,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 65,
+          "proposedArmor": 75,
+          "change": 10,
+          "nakedDefense": 51.8,
+          "total": 126.8,
+          "effectiveLevel": 40.08429926238145,
+          "levelDeviation": 0.08429926238144958,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 22.5,
+              "value": 23
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 19.5,
+              "value": 19
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 12,
+              "value": 12
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 12,
+              "value": 12
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 9,
+              "value": 9
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 114,
+          "proposedArmor": 114,
+          "change": 0,
+          "nakedDefense": 75.8,
+          "total": 189.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 34.2,
+              "value": 34
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 29.64,
+              "value": 30
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 18.24,
+              "value": 18
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 18.24,
+              "value": 18
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 13.68,
+              "value": 14
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 157,
+          "proposedArmor": 153,
+          "change": -4,
+          "nakedDefense": 99.8,
+          "total": 252.8,
+          "effectiveLevel": 79.91570073761855,
+          "levelDeviation": -0.08429926238144958,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 45.9,
+              "value": 46
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 39.78,
+              "value": 40
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 24.48,
+              "value": 25
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 24.48,
+              "value": 24
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 18.36,
+              "value": 18
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 199,
+          "proposedArmor": 193,
+          "change": -6,
+          "nakedDefense": 123.8,
+          "total": 316.8,
+          "effectiveLevel": 100.14752370916754,
+          "levelDeviation": 0.14752370916754387,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 57.9,
+              "value": 58
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 50.18,
+              "value": 50
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 30.88,
+              "value": 31
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 30.88,
+              "value": 31
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 23.16,
+              "value": 23
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "divisor": 2.93,
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "currentArmor": 27,
+          "proposedArmor": 27,
+          "change": 0,
+          "nakedDefense": 5,
+          "total": 32,
+          "effectiveLevel": 10.92150170648464,
+          "levelDeviation": 9.92150170648464,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 8.1,
+              "value": 8
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 7.02,
+              "value": 7
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.32,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.32,
+              "value": 4
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.24,
+              "value": 3
+            }
+          ]
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "currentArmor": 44,
+          "proposedArmor": 31,
+          "change": -13,
+          "nakedDefense": 27.8,
+          "total": 58.8,
+          "effectiveLevel": 20.068259385665527,
+          "levelDeviation": 0.06825938566552736,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 9.3,
+              "value": 9
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 8.06,
+              "value": 8
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 4.96,
+              "value": 5
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 4.96,
+              "value": 5
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 3.72,
+              "value": 4
+            }
+          ]
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "currentArmor": 56,
+          "proposedArmor": 65,
+          "change": 9,
+          "nakedDefense": 51.8,
+          "total": 116.8,
+          "effectiveLevel": 39.86348122866894,
+          "levelDeviation": -0.13651877133106183,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 19.5,
+              "value": 20
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 16.9,
+              "value": 17
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 10.4,
+              "value": 10
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 10.4,
+              "value": 10
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 7.8,
+              "value": 8
+            }
+          ]
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "currentArmor": 100,
+          "proposedArmor": 100,
+          "change": 0,
+          "nakedDefense": 75.8,
+          "total": 175.8,
+          "effectiveLevel": 60,
+          "levelDeviation": 0,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 30,
+              "value": 30
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 26,
+              "value": 26
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 16,
+              "value": 16
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 16,
+              "value": 16
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 12,
+              "value": 12
+            }
+          ]
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "currentArmor": 162,
+          "proposedArmor": 135,
+          "change": -27,
+          "nakedDefense": 99.8,
+          "total": 234.8,
+          "effectiveLevel": 80.13651877133105,
+          "levelDeviation": 0.13651877133105472,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 40.5,
+              "value": 40
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 35.1,
+              "value": 35
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 21.6,
+              "value": 22
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 21.6,
+              "value": 22
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 16.2,
+              "value": 16
+            }
+          ]
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "currentArmor": 269,
+          "proposedArmor": 169,
+          "change": -100,
+          "nakedDefense": 123.8,
+          "total": 292.8,
+          "effectiveLevel": 99.93174061433447,
+          "levelDeviation": -0.06825938566552736,
+          "parts": [
+            {
+              "key": "chest",
+              "name": "Brust",
+              "percent": 30,
+              "exact": 50.7,
+              "value": 51
+            },
+            {
+              "key": "pants",
+              "name": "Hose",
+              "percent": 26,
+              "exact": 43.94,
+              "value": 44
+            },
+            {
+              "key": "helmet",
+              "name": "Helm",
+              "percent": 16,
+              "exact": 27.04,
+              "value": 27
+            },
+            {
+              "key": "gloves",
+              "name": "Handschuhe",
+              "percent": 16,
+              "exact": 27.04,
+              "value": 27
+            },
+            {
+              "key": "boots",
+              "name": "Schuhe",
+              "percent": 12,
+              "exact": 20.28,
+              "value": 20
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

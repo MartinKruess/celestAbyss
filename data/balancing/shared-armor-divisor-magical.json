@@ -1,0 +1,1097 @@
+{
+  "status": "analysisOnlyNoGameChanges",
+  "defenseField": "magicalDefense",
+  "scope": "One shared divisor from the median across 13 equally weighted classes at level 100 with five R6 +0 armor pieces. Defense field as specified, from class operative base and +1 corresponding attribute per additional level only. Level 1 unarmored. No weapons, shield, passives, buffs, affixes, upgrades, gems or cloak.",
+  "inputHashes": {
+    "data/balancing/armor-parts.json": "b2d1145cd1c121283273c33ee6dfaac53148ce8c6d4e6725090a7febd78bf29f",
+    "data/balancing/class-baselines.json": "d60d8a39ae9d6b2aa75d73b5e3b39ef85308da38d69f0907ddaa753bf886df9b",
+    "data/balancing/attribute-model.json": "163a30637a8c2fdc52d49b140a871c4e2a3293d08193fdc47887884606e7eb5f"
+  },
+  "anchorMedian": 324.8,
+  "divisor": 3.248,
+  "checkpoints": [
+    {
+      "level": 1,
+      "rank": null
+    },
+    {
+      "level": 20,
+      "rank": 2
+    },
+    {
+      "level": 40,
+      "rank": 3
+    },
+    {
+      "level": 60,
+      "rank": 4
+    },
+    {
+      "level": 80,
+      "rank": 5
+    },
+    {
+      "level": 100,
+      "rank": 6
+    }
+  ],
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "individualDivisor": 2.996666666666667,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 9,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 9,
+          "individualEffectiveLevel": 3.0033370411568407,
+          "effectiveLevel": 2.770935960591133
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 9,
+          "levelDefense": 22.8,
+          "armorDefense": 29,
+          "totalDefense": 60.8,
+          "individualEffectiveLevel": 20.28921023359288,
+          "targetArmor": 29,
+          "armorCorrection": 0,
+          "effectiveLevel": 18.719211822660096
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 9,
+          "levelDefense": 46.8,
+          "armorDefense": 65,
+          "totalDefense": 120.8,
+          "individualEffectiveLevel": 40.311457174638484,
+          "targetArmor": 65,
+          "armorCorrection": 0,
+          "effectiveLevel": 37.19211822660098
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 9,
+          "levelDefense": 70.8,
+          "armorDefense": 100,
+          "totalDefense": 179.8,
+          "individualEffectiveLevel": 59.99999999999999,
+          "targetArmor": 100,
+          "armorCorrection": 0,
+          "effectiveLevel": 55.357142857142854
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 9,
+          "levelDefense": 94.8,
+          "armorDefense": 136,
+          "totalDefense": 239.8,
+          "individualEffectiveLevel": 80.0222469410456,
+          "targetArmor": 136,
+          "armorCorrection": 0,
+          "effectiveLevel": 73.83004926108374
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 9,
+          "levelDefense": 118.8,
+          "armorDefense": 172,
+          "totalDefense": 299.8,
+          "individualEffectiveLevel": 100.0444938820912,
+          "targetArmor": 172,
+          "armorCorrection": 0,
+          "effectiveLevel": 92.30295566502463
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "individualDivisor": 2.68,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 6,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 6,
+          "individualEffectiveLevel": 2.2388059701492535,
+          "effectiveLevel": 1.8472906403940885
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 6,
+          "levelDefense": 22.8,
+          "armorDefense": 25,
+          "totalDefense": 53.8,
+          "individualEffectiveLevel": 20.07462686567164,
+          "targetArmor": 25,
+          "armorCorrection": 0,
+          "effectiveLevel": 16.564039408866993
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 6,
+          "levelDefense": 46.8,
+          "armorDefense": 55,
+          "totalDefense": 107.8,
+          "individualEffectiveLevel": 40.22388059701492,
+          "targetArmor": 55,
+          "armorCorrection": 0,
+          "effectiveLevel": 33.18965517241379
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 6,
+          "levelDefense": 70.8,
+          "armorDefense": 84,
+          "totalDefense": 160.8,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 84,
+          "armorCorrection": 0,
+          "effectiveLevel": 49.50738916256157
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 6,
+          "levelDefense": 94.8,
+          "armorDefense": 114,
+          "totalDefense": 214.8,
+          "individualEffectiveLevel": 80.14925373134328,
+          "targetArmor": 114,
+          "armorCorrection": 0,
+          "effectiveLevel": 66.13300492610837
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 6,
+          "levelDefense": 118.8,
+          "armorDefense": 144,
+          "totalDefense": 268.8,
+          "individualEffectiveLevel": 100.29850746268657,
+          "targetArmor": 144,
+          "armorCorrection": 0,
+          "effectiveLevel": 82.75862068965517
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "individualDivisor": 3.3133333333333335,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 5,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 5,
+          "individualEffectiveLevel": 1.5090543259557343,
+          "effectiveLevel": 1.5394088669950738
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 5,
+          "levelDefense": 22.8,
+          "armorDefense": 39,
+          "totalDefense": 66.8,
+          "individualEffectiveLevel": 20.16096579476861,
+          "targetArmor": 39,
+          "armorCorrection": 0,
+          "effectiveLevel": 20.566502463054185
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 5,
+          "levelDefense": 46.8,
+          "armorDefense": 81,
+          "totalDefense": 132.8,
+          "individualEffectiveLevel": 40.08048289738431,
+          "targetArmor": 81,
+          "armorCorrection": 0,
+          "effectiveLevel": 40.88669950738916
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 5,
+          "levelDefense": 70.8,
+          "armorDefense": 123,
+          "totalDefense": 198.8,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 123,
+          "armorCorrection": 0,
+          "effectiveLevel": 61.206896551724135
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 5,
+          "levelDefense": 94.8,
+          "armorDefense": 166,
+          "totalDefense": 265.8,
+          "individualEffectiveLevel": 80.22132796780684,
+          "targetArmor": 166,
+          "armorCorrection": 0,
+          "effectiveLevel": 81.83497536945812
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 5,
+          "levelDefense": 118.8,
+          "armorDefense": 208,
+          "totalDefense": 331.8,
+          "individualEffectiveLevel": 100.14084507042253,
+          "targetArmor": 208,
+          "armorCorrection": 0,
+          "effectiveLevel": 102.1551724137931
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "individualDivisor": 2.6133333333333337,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 3,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 3,
+          "individualEffectiveLevel": 1.1479591836734693,
+          "effectiveLevel": 0.9236453201970443
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 3,
+          "levelDefense": 22.8,
+          "armorDefense": 27,
+          "totalDefense": 52.8,
+          "individualEffectiveLevel": 20.204081632653057,
+          "targetArmor": 27,
+          "armorCorrection": 0,
+          "effectiveLevel": 16.25615763546798
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 3,
+          "levelDefense": 46.8,
+          "armorDefense": 55,
+          "totalDefense": 104.8,
+          "individualEffectiveLevel": 40.10204081632652,
+          "targetArmor": 55,
+          "armorCorrection": 0,
+          "effectiveLevel": 32.26600985221675
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 3,
+          "levelDefense": 70.8,
+          "armorDefense": 83,
+          "totalDefense": 156.8,
+          "individualEffectiveLevel": 59.99999999999999,
+          "targetArmor": 83,
+          "armorCorrection": 0,
+          "effectiveLevel": 48.275862068965516
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 3,
+          "levelDefense": 94.8,
+          "armorDefense": 112,
+          "totalDefense": 209.8,
+          "individualEffectiveLevel": 80.28061224489795,
+          "targetArmor": 112,
+          "armorCorrection": 0,
+          "effectiveLevel": 64.5935960591133
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 3,
+          "levelDefense": 118.8,
+          "armorDefense": 140,
+          "totalDefense": 261.8,
+          "individualEffectiveLevel": 100.17857142857142,
+          "targetArmor": 140,
+          "armorCorrection": 0,
+          "effectiveLevel": 80.60344827586206
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "individualDivisor": 4.713333333333334,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 13,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 13,
+          "individualEffectiveLevel": 2.7581329561527577,
+          "effectiveLevel": 4.002463054187192
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 13,
+          "levelDefense": 22.8,
+          "armorDefense": 59,
+          "totalDefense": 94.8,
+          "individualEffectiveLevel": 20.11315417256011,
+          "targetArmor": 59,
+          "armorCorrection": 0,
+          "effectiveLevel": 29.187192118226598
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 13,
+          "levelDefense": 46.8,
+          "armorDefense": 129,
+          "totalDefense": 188.8,
+          "individualEffectiveLevel": 40.05657708628006,
+          "targetArmor": 129,
+          "armorCorrection": 0,
+          "effectiveLevel": 58.12807881773399
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 13,
+          "levelDefense": 70.8,
+          "armorDefense": 199,
+          "totalDefense": 282.8,
+          "individualEffectiveLevel": 59.99999999999999,
+          "targetArmor": 199,
+          "armorCorrection": 0,
+          "effectiveLevel": 87.06896551724138
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 13,
+          "levelDefense": 94.8,
+          "armorDefense": 270,
+          "totalDefense": 377.8,
+          "individualEffectiveLevel": 80.15558698727015,
+          "targetArmor": 270,
+          "armorCorrection": 0,
+          "effectiveLevel": 116.31773399014777
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 13,
+          "levelDefense": 118.8,
+          "armorDefense": 340,
+          "totalDefense": 471.8,
+          "individualEffectiveLevel": 100.0990099009901,
+          "targetArmor": 340,
+          "armorCorrection": 0,
+          "effectiveLevel": 145.25862068965517
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "individualDivisor": 3.2056666666666667,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 6,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 6,
+          "individualEffectiveLevel": 1.8716855568264532,
+          "effectiveLevel": 1.8472906403940885
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 6,
+          "levelDefense": 23.94,
+          "armorDefense": 35,
+          "totalDefense": 64.94,
+          "individualEffectiveLevel": 20.25787667671831,
+          "targetArmor": 35,
+          "armorCorrection": 0,
+          "effectiveLevel": 19.993842364532018
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 6,
+          "levelDefense": 49.14,
+          "armorDefense": 74,
+          "totalDefense": 129.14,
+          "individualEffectiveLevel": 40.284912134761356,
+          "targetArmor": 74,
+          "armorCorrection": 0,
+          "effectiveLevel": 39.75985221674876
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 6,
+          "levelDefense": 74.34,
+          "armorDefense": 112,
+          "totalDefense": 192.34,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 112,
+          "armorCorrection": 0,
+          "effectiveLevel": 59.2179802955665
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 6,
+          "levelDefense": 99.54,
+          "armorDefense": 151,
+          "totalDefense": 256.54,
+          "individualEffectiveLevel": 80.02703545804306,
+          "targetArmor": 151,
+          "armorCorrection": 0,
+          "effectiveLevel": 78.98399014778325
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 6,
+          "levelDefense": 124.74,
+          "armorDefense": 190,
+          "totalDefense": 320.74,
+          "individualEffectiveLevel": 100.0540709160861,
+          "targetArmor": 190,
+          "armorCorrection": 0,
+          "effectiveLevel": 98.75
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "individualDivisor": 3.381333333333333,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 8,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 8,
+          "individualEffectiveLevel": 2.3659305993690856,
+          "effectiveLevel": 2.463054187192118
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 8,
+          "levelDefense": 25.080000000000002,
+          "armorDefense": 35,
+          "totalDefense": 68.08,
+          "individualEffectiveLevel": 20.134069400630917,
+          "targetArmor": 35,
+          "armorCorrection": 0,
+          "effectiveLevel": 20.960591133004925
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 8,
+          "levelDefense": 51.480000000000004,
+          "armorDefense": 76,
+          "totalDefense": 135.48000000000002,
+          "individualEffectiveLevel": 40.06703470031547,
+          "targetArmor": 76,
+          "armorCorrection": 0,
+          "effectiveLevel": 41.71182266009853
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 8,
+          "levelDefense": 77.88000000000001,
+          "armorDefense": 117,
+          "totalDefense": 202.88,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 117,
+          "armorCorrection": 0,
+          "effectiveLevel": 62.463054187192114
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 8,
+          "levelDefense": 104.28,
+          "armorDefense": 159,
+          "totalDefense": 271.28,
+          "individualEffectiveLevel": 80.22870662460568,
+          "targetArmor": 159,
+          "armorCorrection": 0,
+          "effectiveLevel": 83.52216748768471
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 8,
+          "levelDefense": 130.68,
+          "armorDefense": 200,
+          "totalDefense": 338.68,
+          "individualEffectiveLevel": 100.16167192429023,
+          "targetArmor": 200,
+          "armorCorrection": 0,
+          "effectiveLevel": 104.27339901477832
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "individualDivisor": 4.2556666666666665,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 10,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 10,
+          "individualEffectiveLevel": 2.349808099005248,
+          "effectiveLevel": 3.0788177339901477
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 10,
+          "levelDefense": 23.94,
+          "armorDefense": 52,
+          "totalDefense": 85.94,
+          "individualEffectiveLevel": 20.1942508028511,
+          "targetArmor": 52,
+          "armorCorrection": 0,
+          "effectiveLevel": 26.459359605911327
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 10,
+          "levelDefense": 49.14,
+          "armorDefense": 112,
+          "totalDefense": 171.14,
+          "individualEffectiveLevel": 40.21461580637581,
+          "targetArmor": 112,
+          "armorCorrection": 0,
+          "effectiveLevel": 52.69088669950738
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 10,
+          "levelDefense": 74.34,
+          "armorDefense": 171,
+          "totalDefense": 255.34,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 171,
+          "armorCorrection": 0,
+          "effectiveLevel": 78.61453201970443
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 10,
+          "levelDefense": 99.54,
+          "armorDefense": 231,
+          "totalDefense": 340.54,
+          "individualEffectiveLevel": 80.02036500352472,
+          "targetArmor": 231,
+          "armorCorrection": 0,
+          "effectiveLevel": 104.8460591133005
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 10,
+          "levelDefense": 124.74,
+          "armorDefense": 291,
+          "totalDefense": 425.74,
+          "individualEffectiveLevel": 100.04073000704943,
+          "targetArmor": 291,
+          "armorCorrection": 0,
+          "effectiveLevel": 131.07758620689654
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "individualDivisor": 4.713333333333334,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 8,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 8,
+          "individualEffectiveLevel": 1.697312588401697,
+          "effectiveLevel": 2.463054187192118
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 8,
+          "levelDefense": 22.8,
+          "armorDefense": 64,
+          "totalDefense": 94.8,
+          "individualEffectiveLevel": 20.11315417256011,
+          "targetArmor": 64,
+          "armorCorrection": 0,
+          "effectiveLevel": 29.187192118226598
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 8,
+          "levelDefense": 46.8,
+          "armorDefense": 134,
+          "totalDefense": 188.8,
+          "individualEffectiveLevel": 40.05657708628006,
+          "targetArmor": 134,
+          "armorCorrection": 0,
+          "effectiveLevel": 58.12807881773399
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 8,
+          "levelDefense": 70.8,
+          "armorDefense": 204,
+          "totalDefense": 282.8,
+          "individualEffectiveLevel": 59.99999999999999,
+          "targetArmor": 204,
+          "armorCorrection": 0,
+          "effectiveLevel": 87.06896551724138
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 8,
+          "levelDefense": 94.8,
+          "armorDefense": 275,
+          "totalDefense": 377.8,
+          "individualEffectiveLevel": 80.15558698727015,
+          "targetArmor": 275,
+          "armorCorrection": 0,
+          "effectiveLevel": 116.31773399014777
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 8,
+          "levelDefense": 118.8,
+          "armorDefense": 345,
+          "totalDefense": 471.8,
+          "individualEffectiveLevel": 100.0990099009901,
+          "targetArmor": 345,
+          "armorCorrection": 0,
+          "effectiveLevel": 145.25862068965517
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "individualDivisor": 3.246666666666667,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 8,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 8,
+          "individualEffectiveLevel": 2.464065708418891,
+          "effectiveLevel": 2.463054187192118
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 8,
+          "levelDefense": 22.8,
+          "armorDefense": 35,
+          "totalDefense": 65.8,
+          "individualEffectiveLevel": 20.266940451745377,
+          "targetArmor": 35,
+          "armorCorrection": 0,
+          "effectiveLevel": 20.25862068965517
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 8,
+          "levelDefense": 46.8,
+          "armorDefense": 76,
+          "totalDefense": 130.8,
+          "individualEffectiveLevel": 40.28747433264887,
+          "targetArmor": 76,
+          "armorCorrection": 0,
+          "effectiveLevel": 40.27093596059113
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 8,
+          "levelDefense": 70.8,
+          "armorDefense": 116,
+          "totalDefense": 194.8,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 116,
+          "armorCorrection": 0,
+          "effectiveLevel": 59.97536945812808
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 8,
+          "levelDefense": 94.8,
+          "armorDefense": 157,
+          "totalDefense": 259.8,
+          "individualEffectiveLevel": 80.02053388090349,
+          "targetArmor": 157,
+          "armorCorrection": 0,
+          "effectiveLevel": 79.98768472906404
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 8,
+          "levelDefense": 118.8,
+          "armorDefense": 198,
+          "totalDefense": 324.8,
+          "individualEffectiveLevel": 100.04106776180697,
+          "targetArmor": 198,
+          "armorCorrection": 0,
+          "effectiveLevel": 100
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "individualDivisor": 3.3466666666666667,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 4,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 4,
+          "individualEffectiveLevel": 1.1952191235059761,
+          "effectiveLevel": 1.231527093596059
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 4,
+          "levelDefense": 22.8,
+          "armorDefense": 41,
+          "totalDefense": 67.8,
+          "individualEffectiveLevel": 20.258964143426294,
+          "targetArmor": 41,
+          "armorCorrection": 0,
+          "effectiveLevel": 20.8743842364532
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 4,
+          "levelDefense": 46.8,
+          "armorDefense": 84,
+          "totalDefense": 134.8,
+          "individualEffectiveLevel": 40.278884462151396,
+          "targetArmor": 84,
+          "armorCorrection": 0,
+          "effectiveLevel": 41.502463054187196
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 4,
+          "levelDefense": 70.8,
+          "armorDefense": 126,
+          "totalDefense": 200.8,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 126,
+          "armorCorrection": 0,
+          "effectiveLevel": 61.822660098522164
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 4,
+          "levelDefense": 94.8,
+          "armorDefense": 169,
+          "totalDefense": 267.8,
+          "individualEffectiveLevel": 80.0199203187251,
+          "targetArmor": 169,
+          "armorCorrection": 0,
+          "effectiveLevel": 82.45073891625616
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 4,
+          "levelDefense": 118.8,
+          "armorDefense": 212,
+          "totalDefense": 334.8,
+          "individualEffectiveLevel": 100.0398406374502,
+          "targetArmor": 212,
+          "armorCorrection": 0,
+          "effectiveLevel": 103.07881773399015
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "individualDivisor": 3.1723333333333334,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 10,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 10,
+          "individualEffectiveLevel": 3.1522538615109803,
+          "effectiveLevel": 3.0788177339901477
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 10,
+          "levelDefense": 23.94,
+          "armorDefense": 30,
+          "totalDefense": 63.94,
+          "individualEffectiveLevel": 20.15551119050121,
+          "targetArmor": 30,
+          "armorCorrection": 0,
+          "effectiveLevel": 19.685960591133004
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 10,
+          "levelDefense": 49.14,
+          "armorDefense": 68,
+          "totalDefense": 127.14,
+          "individualEffectiveLevel": 40.0777555952506,
+          "targetArmor": 68,
+          "armorCorrection": 0,
+          "effectiveLevel": 39.14408866995073
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 10,
+          "levelDefense": 74.34,
+          "armorDefense": 106,
+          "totalDefense": 190.34,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 106,
+          "armorCorrection": 0,
+          "effectiveLevel": 58.60221674876847
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 10,
+          "levelDefense": 99.54,
+          "armorDefense": 145,
+          "totalDefense": 254.54000000000002,
+          "individualEffectiveLevel": 80.23746979090049,
+          "targetArmor": 145,
+          "armorCorrection": 0,
+          "effectiveLevel": 78.36822660098522
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 10,
+          "levelDefense": 124.74,
+          "armorDefense": 183,
+          "totalDefense": 317.74,
+          "individualEffectiveLevel": 100.15971419564988,
+          "targetArmor": 183,
+          "armorCorrection": 0,
+          "effectiveLevel": 97.82635467980295
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "individualDivisor": 3.18,
+      "points": [
+        {
+          "level": 1,
+          "rank": null,
+          "baseDefense": 8,
+          "levelDefense": 0,
+          "armorDefense": 0,
+          "totalDefense": 8,
+          "individualEffectiveLevel": 2.5157232704402515,
+          "effectiveLevel": 2.463054187192118
+        },
+        {
+          "level": 20,
+          "rank": 2,
+          "baseDefense": 8,
+          "levelDefense": 22.8,
+          "armorDefense": 33,
+          "totalDefense": 63.8,
+          "individualEffectiveLevel": 20.062893081761004,
+          "targetArmor": 33,
+          "armorCorrection": 0,
+          "effectiveLevel": 19.642857142857142
+        },
+        {
+          "level": 40,
+          "rank": 3,
+          "baseDefense": 8,
+          "levelDefense": 46.8,
+          "armorDefense": 73,
+          "totalDefense": 127.8,
+          "individualEffectiveLevel": 40.18867924528302,
+          "targetArmor": 73,
+          "armorCorrection": 0,
+          "effectiveLevel": 39.347290640394085
+        },
+        {
+          "level": 60,
+          "rank": 4,
+          "baseDefense": 8,
+          "levelDefense": 70.8,
+          "armorDefense": 112,
+          "totalDefense": 190.8,
+          "individualEffectiveLevel": 60,
+          "targetArmor": 112,
+          "armorCorrection": 0,
+          "effectiveLevel": 58.74384236453202
+        },
+        {
+          "level": 80,
+          "rank": 5,
+          "baseDefense": 8,
+          "levelDefense": 94.8,
+          "armorDefense": 152,
+          "totalDefense": 254.8,
+          "individualEffectiveLevel": 80.12578616352201,
+          "targetArmor": 152,
+          "armorCorrection": 0,
+          "effectiveLevel": 78.44827586206897
+        },
+        {
+          "level": 100,
+          "rank": 6,
+          "baseDefense": 8,
+          "levelDefense": 118.8,
+          "armorDefense": 192,
+          "totalDefense": 318.8,
+          "individualEffectiveLevel": 100.25157232704403,
+          "targetArmor": 192,
+          "armorCorrection": 0,
+          "effectiveLevel": 98.15270935960591
+        }
+      ]
+    }
+  ],
+  "medians": [
+    {
+      "level": 1,
+      "rank": null,
+      "defenseMedian": 8,
+      "effectiveLevel": 2.463054187192118,
+      "levelDeviation": 1.4630541871921179,
+      "relativeDeviationPercent": 146.3054187192118,
+      "localMedianDivisor": 8
+    },
+    {
+      "level": 20,
+      "rank": 2,
+      "defenseMedian": 65.8,
+      "effectiveLevel": 20.25862068965517,
+      "levelDeviation": 0.2586206896551708,
+      "relativeDeviationPercent": 1.2931034482758452,
+      "localMedianDivisor": 3.29
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "defenseMedian": 130.8,
+      "effectiveLevel": 40.27093596059113,
+      "levelDeviation": 0.2709359605911317,
+      "relativeDeviationPercent": 0.6773399014778247,
+      "localMedianDivisor": 3.2700000000000005
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "defenseMedian": 194.8,
+      "effectiveLevel": 59.97536945812808,
+      "levelDeviation": -0.024630541871921707,
+      "relativeDeviationPercent": -0.04105090311986581,
+      "localMedianDivisor": 3.246666666666667
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "defenseMedian": 259.8,
+      "effectiveLevel": 79.98768472906404,
+      "levelDeviation": -0.012315270935957301,
+      "relativeDeviationPercent": -0.015394088669951067,
+      "localMedianDivisor": 3.2475
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "defenseMedian": 324.8,
+      "effectiveLevel": 100,
+      "levelDeviation": 0,
+      "relativeDeviationPercent": 0,
+      "localMedianDivisor": 3.248
+    }
+  ]
+}

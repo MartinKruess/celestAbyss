@@ -144,7 +144,7 @@
     "description": "An explicit class or skill conversion replaces the default conversion of the affected attribute; it does not add the replaced default attack bonus. Unrelated attributes remain unchanged.",
     "classIndividualizationStatus": "pending"
   },
-  "regenerationUnits": "HP or Mana per regeneration tick; Mana tick every 3 seconds; HP interval remains unchanged (simulation: 2 seconds).",
+  "regenerationUnits": "HP or Mana per server regeneration tick, every 3 seconds",
   "attributeDisplayNames": {
     "vitality": "Vita",
     "wisdom": "Willenskraft",
@@ -170,19 +170,56 @@
     "nonMatchingAttributeFactor": 0,
     "activation": "Internal class calculation, not a learnable skill; no SP cost or additional skill count.",
     "confirmedMatchingAttributes": {
-      "hunter": [
-        "dexterity"
+      "gladiator": [
+        "strength",
+        "intelligence"
       ],
-      "summoner": [
-        "dexterity"
+      "herbalist": [
+        "strength",
+        "intelligence"
+      ],
+      "adventurer": [
+        "strength",
+        "intelligence"
+      ],
+      "butcher": [
+        "strength",
+        "intelligence"
       ],
       "villian": [
-        "strength"
+        "strength",
+        "intelligence"
+      ],
+      "summoner": [
+        "dexterity",
+        "intelligence"
       ],
       "ritualist": [
+        "strength",
+        "intelligence"
+      ],
+      "druid": [
+        "strength",
+        "intelligence"
+      ],
+      "healer": [
+        "strength",
+        "intelligence"
+      ],
+      "shaman": [
+        "strength",
         "intelligence"
       ],
       "luminet": [
+        "strength",
+        "intelligence"
+      ],
+      "knight": [
+        "strength",
+        "intelligence"
+      ],
+      "hunter": [
+        "dexterity",
         "intelligence"
       ]
     },
@@ -193,48 +230,15 @@
         "summoner"
       ]
     },
-    "pendingClassComparisonAttributes": {
-      "adventurer": [
-        "strength",
-        "intelligence"
-      ],
-      "butcher": [
-        "strength"
-      ],
-      "druid": [
-        "strength",
-        "intelligence"
-      ],
-      "gladiator": [
-        "strength"
-      ],
-      "healer": [
-        "intelligence"
-      ],
-      "herbalist": [
-        "intelligence"
-      ],
-      "knight": [
-        "strength"
-      ],
-      "luminet": [
-        "intelligence"
-      ],
-      "ritualist": [
-        "intelligence"
-      ],
-      "shaman": [
-        "strength",
-        "intelligence"
-      ],
-      "villian": [
-        "strength"
-      ]
-    },
-    "unassignedClasses": "pendingClassReview",
+    "pendingClassComparisonAttributes": {},
+    "unassignedClasses": "allExistingClassesConfirmed",
     "targetRule": "Use the attack target defined by the attribute conversion; this rule changes its factor, not its damage type.",
-    "scope": "Only attack conversion; other effects such as Dexterity accuracy or skill-granted Mana remain unchanged.",
-    "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking."
+    "scope": "Every class gains magical attack from Intelligence. Physical attack uses Dexterity for Hunter/Summoner and Strength for every other existing class, including casters. Other attribute effects remain unchanged.",
+    "precedence": "An explicit skill or class conversion overrides the matching/non-matching default and replaces that attack conversion without stacking.",
+    "strengthAttackExcludedClasses": [
+      "hunter",
+      "summoner"
+    ]
   },
   "operativeDisplayNames": {
     "critChanceRating": "Kritische Treffer",
@@ -368,7 +372,8 @@
   },
   "regenerationTiming": {
     "manaTickIntervalSeconds": 3,
-    "healthTickIntervalStatus": "unchangedPending",
-    "simulationHealthTickIntervalSeconds": 2
+    "healthTickIntervalStatus": "confirmed",
+    "simulationHealthTickIntervalSeconds": 3,
+    "healthTickIntervalSeconds": 3
   }
 }

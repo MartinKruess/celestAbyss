@@ -1,0 +1,122 @@
+{
+  "_id": "6acc1c7e4826525c70d04bf7",
+  "skillName_eng": "Sharp Instincts",
+  "__v": 0,
+  "amb": 2,
+  "atkSpeed": 0,
+  "category": "active",
+  "cd": 60,
+  "charClass": [
+    "Summoner",
+    "Soulseeker",
+    "Abenteuer"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriffsgeschwindigkeitspunkt über zehn Stufen. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.",
+  "description_eng": "Self buff lasting 300 seconds. Grants 2 to 11 Ambush and 0 to 1 flat attack-speed rating point across ten levels. Cooldown 60 seconds. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 167 at level 10, before discounts. Ongoing Mana drain is calculated separately.",
+  "dmgType": "selfbuff",
+  "dur": 300,
+  "maxSkillLv": 10,
+  "maxUpgradeLv": 10,
+  "nr": 148,
+  "skillName_de": "Scharfer Instinkte",
+  "skillpoints": 1,
+  "animationDurationRangeSeconds": {
+    "min": 0.2,
+    "max": 0.3
+  },
+  "animationTimingStatus": "provisional",
+  "castTimeSeconds": 0.1,
+  "mana": 50,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 50,
+        "perLevel": 13
+      }
+    }
+  ],
+  "statBonusUnits": {
+    "amb": "flat",
+    "atkSpeed": "fraction"
+  },
+  "statScaling": {
+    "amb": {
+      "type": "linear",
+      "base": 2,
+      "perLevel": 1
+    },
+    "atkSpeed": {
+      "type": "linear",
+      "base": 0,
+      "perLevel": 0.0011111111111111111
+    }
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 50,
+            "perLevel": 13
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "amb"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 2,
+          "perLevel": 1
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "statScaling",
+          "atkSpeed"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 0,
+          "perLevel": 0.0011111111111111111
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "castTimeStatus": "defined",
+  "timingModifiers": {
+    "castTimeIsFixed": true,
+    "affectedByAttackSpeed": false,
+    "affectedByCastSpeed": false
+  },
+  "manaPricing": {
+    "category": "selfbuff",
+    "basis": "skillLevel",
+    "usesCharacterAttack": false,
+    "version": 1
+  },
+  "classificationVersion": 1,
+  "target": "self",
+  "type": "selfBuff"
+}

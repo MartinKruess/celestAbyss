@@ -1,0 +1,729 @@
+{
+  "generatedAt": "2026-10-21T20:01:45.639Z",
+  "status": "health-only-test-not-a-complete-duel",
+  "assumptions": [
+    "Level 60 characters with R3 or R4 class weapon and five armor pieces, +0; no random affixes, jewelry or stones.",
+    "Existing permanent passives and skill levels retained; no active self/group buffs or ordinary pets.",
+    "Druid nature-spirit summon remains in the existing rotation; Adventurer has no pets.",
+    "Fresh resources and cooldowns for every encounter; existing mixed skill/auto priority, not a newly optimized farming rotation.",
+    "Enemy HP only: no enemy defense, attacks, crit/miss rolls or level-difference modifier. Does not measure survival.",
+    "R3/R4 are requested test loadouts, not a finalized rank-by-level requirement. No database or canonical growth changes.",
+    "Separate raw incoming-damage estimate: bird uses physical auto-attacks only, no defenses or player healing, illustrative base rate 1.3 times inherited 0.7 speed; first bird hit after a full interval. This estimate is not integrated into the outgoing simulator and does not decide a complete duel."
+  ],
+  "results": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "rank": 3,
+      "playerLevel": 60,
+      "enemyLevel": 100,
+      "enemy": "Rotkammreißer",
+      "targetHealth": 92508,
+      "seconds": 172.03,
+      "damage": 96165.19999999966,
+      "overkill": 3657.1999999996624,
+      "skillDamage": 52905.19999999999,
+      "autoDamage": 43259.99999999994,
+      "summonDamage": 0,
+      "manaSpent": 9784.4191,
+      "stats": {
+        "maxHealth": 3292,
+        "maxMana": 3101,
+        "physicalAttack": 247.20000000000005,
+        "magicalAttack": 132.2,
+        "physicalDefense": 260.8,
+        "magicalDefense": 245.8,
+        "attackSpeed": 0.8536,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 17.6,
+        "dodge": 9,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 141,
+        "healthRegen": 438,
+        "manaRegen": 124.10000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "enemyStats": {
+        "maxHealth": 92508,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 1493.8314496488729,
+        "magicalAttack": 0,
+        "physicalDefense": 469.48988417536015,
+        "magicalDefense": 362.78763777186913,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "rawBirdHitsToDefeatPlayer": 3,
+      "rawBirdAutoOnlyDeathSeconds": 3.296703296703297,
+      "usedSkills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 175,
+          "damage": 43259.99999999994
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "applications": 4,
+          "damage": 16784
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff",
+          "applications": 4,
+          "damage": 13784.8
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "applications": 6,
+          "damage": 9824.4
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "applications": 5,
+          "damage": 9266
+        },
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "applications": 5,
+          "damage": 3246
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "rank": 3,
+      "playerLevel": 60,
+      "enemyLevel": 100,
+      "enemy": "Rotkammreißer",
+      "targetHealth": 92508,
+      "seconds": 114.95,
+      "damage": 92608.34499999988,
+      "overkill": 100.34499999988475,
+      "skillDamage": 57372.744999999995,
+      "autoDamage": 15831.59999999998,
+      "summonDamage": 19404,
+      "manaSpent": 8062.2,
+      "stats": {
+        "maxHealth": 2703,
+        "maxMana": 4136,
+        "physicalAttack": 200.40000000000003,
+        "magicalAttack": 270,
+        "physicalDefense": 235.8,
+        "magicalDefense": 267.8,
+        "attackSpeed": 0.85,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 16,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 117,
+        "healthRegen": 348,
+        "manaRegen": 138.60000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "enemyStats": {
+        "maxHealth": 92508,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 1493.8314496488729,
+        "magicalAttack": 0,
+        "physicalDefense": 469.48988417536015,
+        "magicalDefense": 362.78763777186913,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "rawBirdHitsToDefeatPlayer": 2,
+      "rawBirdAutoOnlyDeathSeconds": 2.197802197802198,
+      "usedSkills": [
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "applications": 1,
+          "damage": 19404
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "applications": 44,
+          "damage": 16500
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 79,
+          "damage": 15831.59999999998
+        },
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "applications": 1,
+          "damage": 13414.32
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "applications": 2,
+          "damage": 7161.84
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "applications": 1,
+          "damage": 4908
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "applications": 5,
+          "damage": 4510
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "applications": 3,
+          "damage": 3751.6499999999996
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "applications": 4,
+          "damage": 3355.8
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "applications": 3,
+          "damage": 2694
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "applications": 1,
+          "damage": 653.135
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "applications": 1,
+          "damage": 424
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "rank": 3,
+      "playerLevel": 60,
+      "enemyLevel": 100,
+      "enemy": "Rotkammreißer",
+      "targetHealth": 92508,
+      "seconds": 181.74,
+      "damage": 92758.47000000002,
+      "overkill": 250.47000000001572,
+      "skillDamage": 70472.97000000002,
+      "autoDamage": 22285.5,
+      "summonDamage": 0,
+      "manaSpent": 8857,
+      "stats": {
+        "maxHealth": 2523,
+        "maxMana": 3722,
+        "physicalAttack": 22,
+        "magicalAttack": 307,
+        "physicalDefense": 174.8,
+        "magicalDefense": 375.6,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 16,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 328,
+        "manaRegen": 191.20000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "enemyStats": {
+        "maxHealth": 92508,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 1493.8314496488729,
+        "magicalAttack": 0,
+        "physicalDefense": 469.48988417536015,
+        "magicalDefense": 362.78763777186913,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "rawBirdHitsToDefeatPlayer": 2,
+      "rawBirdAutoOnlyDeathSeconds": 2.197802197802198,
+      "usedSkills": [
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "applications": 75,
+          "damage": 32065.5
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 69,
+          "damage": 22285.5
+        },
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "applications": 5,
+          "damage": 13388.010000000004
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "applications": 8,
+          "damage": 7669.5
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "applications": 7,
+          "damage": 5033.7
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "applications": 5,
+          "damage": 4832.76
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "applications": 3,
+          "damage": 4008
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "applications": 2,
+          "damage": 3475.5
+        }
+      ]
+    },
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "rank": 4,
+      "playerLevel": 60,
+      "enemyLevel": 100,
+      "enemy": "Rotkammreißer",
+      "targetHealth": 92508,
+      "seconds": 163.18,
+      "damage": 92546.99999999972,
+      "overkill": 38.999999999723514,
+      "skillDamage": 48132.59999999999,
+      "autoDamage": 44414.39999999994,
+      "summonDamage": 0,
+      "manaSpent": 8724.024799999997,
+      "stats": {
+        "maxHealth": 3292,
+        "maxMana": 3101,
+        "physicalAttack": 292.20000000000005,
+        "magicalAttack": 132.2,
+        "physicalDefense": 322.8,
+        "magicalDefense": 287.8,
+        "attackSpeed": 0.7742000000000001,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 17.6,
+        "dodge": 10.5,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 148.5,
+        "healthRegen": 438,
+        "manaRegen": 124.10000000000001,
+        "criticalDamageBonus": 0.8
+      },
+      "enemyStats": {
+        "maxHealth": 92508,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 1493.8314496488729,
+        "magicalAttack": 0,
+        "physicalDefense": 469.48988417536015,
+        "magicalDefense": 362.78763777186913,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "rawBirdHitsToDefeatPlayer": 3,
+      "rawBirdAutoOnlyDeathSeconds": 3.296703296703297,
+      "usedSkills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 152,
+          "damage": 44414.39999999994
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff",
+          "applications": 4,
+          "damage": 13964.8
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "applications": 3,
+          "damage": 13263
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "applications": 5,
+          "damage": 9491
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "applications": 5,
+          "damage": 8637
+        },
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "applications": 4,
+          "damage": 2776.8
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "rank": 4,
+      "playerLevel": 60,
+      "enemyLevel": 100,
+      "enemy": "Rotkammreißer",
+      "targetHealth": 92508,
+      "seconds": 109.45,
+      "damage": 92893.45500000006,
+      "overkill": 385.45500000005995,
+      "skillDamage": 58818.77499999994,
+      "autoDamage": 15663.000000000002,
+      "summonDamage": 18411.679999999986,
+      "manaSpent": 7958.2,
+      "stats": {
+        "maxHealth": 2703,
+        "maxMana": 4136,
+        "physicalAttack": 227.00000000000006,
+        "magicalAttack": 313.56,
+        "physicalDefense": 279.8,
+        "magicalDefense": 312.8,
+        "attackSpeed": 0.77,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 16,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 120,
+        "healthRegen": 348,
+        "manaRegen": 138.60000000000002,
+        "criticalDamageBonus": 0.8
+      },
+      "enemyStats": {
+        "maxHealth": 92508,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 1493.8314496488729,
+        "magicalAttack": 0,
+        "physicalDefense": 469.48988417536015,
+        "magicalDefense": 362.78763777186913,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "rawBirdHitsToDefeatPlayer": 2,
+      "rawBirdAutoOnlyDeathSeconds": 2.197802197802198,
+      "usedSkills": [
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "applications": 1,
+          "damage": 18411.679999999986
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "applications": 40,
+          "damage": 16742.399999999994
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 69,
+          "damage": 15663.000000000002
+        },
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "applications": 1,
+          "damage": 13540.608
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "applications": 2,
+          "damage": 7309.1759999999995
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "applications": 1,
+          "damage": 5082.24
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "applications": 5,
+          "damage": 4727.799999999999
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "applications": 3,
+          "damage": 3888.864
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "applications": 4,
+          "damage": 3538.752
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "applications": 3,
+          "damage": 2824.68
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "applications": 1,
+          "damage": 696.6949999999999
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "applications": 1,
+          "damage": 467.56
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "rank": 4,
+      "playerLevel": 60,
+      "enemyLevel": 100,
+      "enemy": "Rotkammreißer",
+      "targetHealth": 92508,
+      "seconds": 161.3,
+      "damage": 92589.0379999999,
+      "overkill": 81.0379999998986,
+      "skillDamage": 70124.33800000008,
+      "autoDamage": 22464.70000000001,
+      "summonDamage": 0,
+      "manaSpent": 7952,
+      "stats": {
+        "maxHealth": 2523,
+        "maxMana": 3782,
+        "physicalAttack": 22,
+        "magicalAttack": 369.40000000000003,
+        "physicalDefense": 213.8,
+        "magicalDefense": 458.00000000000006,
+        "attackSpeed": 0.7,
+        "movementSpeed": 1,
+        "maxStamina": 1,
+        "accuracy": 16,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "block": 0,
+        "penetration": 88.5,
+        "healthRegen": 328,
+        "manaRegen": 193,
+        "criticalDamageBonus": 0.8
+      },
+      "enemyStats": {
+        "maxHealth": 92508,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 1493.8314496488729,
+        "magicalAttack": 0,
+        "physicalDefense": 469.48988417536015,
+        "magicalDefense": 362.78763777186913,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "rawBirdHitsToDefeatPlayer": 2,
+      "rawBirdAutoOnlyDeathSeconds": 2.197802197802198,
+      "usedSkills": [
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "applications": 67,
+          "damage": 32981.80000000004
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "applications": 58,
+          "damage": 22464.70000000001
+        },
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "applications": 4,
+          "damage": 13481.85
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "applications": 8,
+          "damage": 8036.699999999999
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "applications": 7,
+          "damage": 5479.236000000001
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "applications": 3,
+          "damage": 4195.200000000001
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "applications": 4,
+          "damage": 4133.652
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "applications": 2,
+          "damage": 1815.9
+        }
+      ]
+    }
+  ]
+}

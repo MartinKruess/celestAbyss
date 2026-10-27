@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "status": "correctedTwoApproachesUnderDiscussion",
+  "scope": "Growth design discussion; active runtime curve and existing numerical anchors are unchanged. No new global curve selected.",
+  "segments": [
+    {
+      "fromLevel": 1,
+      "toLevel": 5,
+      "multiplierPerLevel": 1.25,
+      "steps": 4,
+      "status": "stronger_early_segment_still_part_of_user_option_A_not_discarded"
+    },
+    {
+      "fromLevel": 5,
+      "toLevel": 15,
+      "multiplierPerLevel": 1.1,
+      "steps": 10,
+      "status": "stronger_early_segment_still_part_of_user_option_A_not_discarded"
+    }
+  ],
+  "continuation": {
+    "fromLevel": 15,
+    "candidates": [
+      1.02,
+      1.03,
+      1.04
+    ],
+    "selected": null,
+    "status": "historicalComparisonNotApplied"
+  },
+  "reference": {
+    "name": "Waldgoblin-Krieger",
+    "level1PhysicalDefense": 8
+  },
+  "rows": [
+    {
+      "level": 5,
+      "continuation": 1.02,
+      "physicalDefense": 19.53125,
+      "physicalSweetspot": 4.6875,
+      "reductionAgainstEqualLevel": 0.2875
+    },
+    {
+      "level": 5,
+      "continuation": 1.04,
+      "physicalDefense": 19.53125,
+      "physicalSweetspot": 4.6875,
+      "reductionAgainstEqualLevel": 0.2875
+    },
+    {
+      "level": 15,
+      "continuation": 1.02,
+      "physicalDefense": 50.65903242382817,
+      "physicalSweetspot": 12.15816778171876,
+      "reductionAgainstEqualLevel": 0.2621089037562502
+    },
+    {
+      "level": 15,
+      "continuation": 1.04,
+      "physicalDefense": 50.65903242382817,
+      "physicalSweetspot": 12.15816778171876,
+      "reductionAgainstEqualLevel": 0.2621089037562502
+    },
+    {
+      "level": 20,
+      "continuation": 1.02,
+      "physicalDefense": 55.93166520783505,
+      "physicalSweetspot": 13.423599649880412,
+      "reductionAgainstEqualLevel": 0.2342359964988041
+    },
+    {
+      "level": 20,
+      "continuation": 1.04,
+      "physicalDefense": 61.63445883122626,
+      "physicalSweetspot": 14.792270119494301,
+      "reductionAgainstEqualLevel": 0.24792270119494303
+    },
+    {
+      "level": 40,
+      "continuation": 1.02,
+      "physicalDefense": 83.11151226831565,
+      "physicalSweetspot": 19.946762944395754,
+      "reductionAgainstEqualLevel": 0.1997338147219788
+    },
+    {
+      "level": 40,
+      "continuation": 1.04,
+      "physicalDefense": 135.04868915344045,
+      "physicalSweetspot": 32.4116853968257,
+      "reductionAgainstEqualLevel": 0.2620584269841285
+    },
+    {
+      "level": 60,
+      "continuation": 1.02,
+      "physicalDefense": 123.49933523092675,
+      "physicalSweetspot": 29.639840455422416,
+      "reductionAgainstEqualLevel": 0.1987994681847414
+    },
+    {
+      "level": 60,
+      "continuation": 1.04,
+      "physicalDefense": 295.90830824042996,
+      "physicalSweetspot": 71.01799397770318,
+      "reductionAgainstEqualLevel": 0.48363323296171984
+    },
+    {
+      "level": 90,
+      "continuation": 1.02,
+      "physicalDefense": 223.70195149960267,
+      "physicalSweetspot": 53.68846835990464,
+      "reductionAgainstEqualLevel": 0.21930770746645478
+    },
+    {
+      "level": 90,
+      "continuation": 1.04,
+      "physicalDefense": 959.7482701434726,
+      "physicalSweetspot": 230.33958483443342,
+      "reductionAgainstEqualLevel": 1
+    },
+    {
+      "level": 100,
+      "continuation": 1.02,
+      "physicalDefense": 272.69143061995356,
+      "physicalSweetspot": 65.44594334878884,
+      "reductionAgainstEqualLevel": 0.2308918866975777
+    },
+    {
+      "level": 100,
+      "continuation": 1.04,
+      "physicalDefense": 1420.6618918401427,
+      "physicalSweetspot": 340.95885404163425,
+      "reductionAgainstEqualLevel": 1
+    }
+  ],
+  "level60Comparison": {
+    "status": "comparison_not_selected",
+    "interpretation": "Candidate 1.03 from level 15 through 60, then 1.02 through 100, compared to 1.02 throughout from 15.",
+    "rows": [
+      {
+        "name": "1.02 ab 15",
+        "level": 15,
+        "factor": 6.3323790529785215,
+        "pdef": 50.65903242382817,
+        "sweetspot": 12.15816778171876,
+        "reduction": 26.210890375625016
+      },
+      {
+        "name": "1.03 bis 60, danach 1.02",
+        "level": 15,
+        "factor": 6.3323790529785215,
+        "pdef": 50.65903242382817,
+        "sweetspot": 12.15816778171876,
+        "reduction": 26.210890375625016
+      },
+      {
+        "name": "1.02 ab 15",
+        "level": 20,
+        "factor": 6.991458150979382,
+        "pdef": 55.93166520783505,
+        "sweetspot": 13.423599649880412,
+        "reduction": 23.423599649880412
+      },
+      {
+        "name": "1.03 bis 60, danach 1.02",
+        "level": 20,
+        "factor": 7.340962864758387,
+        "pdef": 58.727702918067095,
+        "sweetspot": 14.094648700336101,
+        "reduction": 24.0946487003361
+      },
+      {
+        "name": "1.02 ab 15",
+        "level": 40,
+        "factor": 10.388939033539456,
+        "pdef": 83.11151226831565,
+        "sweetspot": 19.946762944395754,
+        "reduction": 19.97338147219788
+      },
+      {
+        "name": "1.03 bis 60, danach 1.02",
+        "level": 40,
+        "factor": 13.258595503331094,
+        "pdef": 106.06876402664875,
+        "sweetspot": 25.456503366395697,
+        "reduction": 22.72825168319785
+      },
+      {
+        "name": "1.02 ab 15",
+        "level": 60,
+        "factor": 15.437416903865843,
+        "pdef": 123.49933523092675,
+        "sweetspot": 29.639840455422416,
+        "reduction": 19.87994681847414
+      },
+      {
+        "name": "1.03 bis 60, danach 1.02",
+        "level": 60,
+        "factor": 23.946498294503673,
+        "pdef": 191.57198635602938,
+        "sweetspot": 45.97727672544705,
+        "reduction": 25.325758908482353
+      },
+      {
+        "name": "1.02 ab 15",
+        "level": 90,
+        "factor": 27.96274393745034,
+        "pdef": 223.70195149960273,
+        "sweetspot": 53.688468359904654,
+        "reduction": 21.93077074664548
+      },
+      {
+        "name": "1.03 bis 60, danach 1.02",
+        "level": 90,
+        "factor": 43.375767084460456,
+        "pdef": 347.00613667568365,
+        "sweetspot": 83.28147280216407,
+        "reduction": 28.506993956036464
+      },
+      {
+        "name": "1.02 ab 15",
+        "level": 100,
+        "factor": 34.08642882749419,
+        "pdef": 272.6914306199535,
+        "sweetspot": 65.44594334878883,
+        "reduction": 23.089188669757764
+      },
+      {
+        "name": "1.03 bis 60, danach 1.02",
+        "level": 100,
+        "factor": 52.874818038949556,
+        "pdef": 422.99854431159645,
+        "sweetspot": 101.51965063478313,
+        "reduction": 31.51965063478314
+      }
+    ]
+  },
+  "selectedProfile": null,
+  "decisionNotes": [
+    "Correction: previous interpretation that the user selected uniform 1.04 from level 1 was wrong.",
+    "Do not discard the stronger starting segments from option A.",
+    "Family-specific reference levels are an alternative now under discussion, not authorization to silently relabel level-1 numbers as level-3 or level-10 numbers.",
+    "Socketing, affixes, upgrades and class advancement remain part of the player progression reference.",
+    "No active growth, monster values, health or database records changed by this clarification."
+  ],
+  "approaches": {
+    "segmentedGlobal": {
+      "status": "user_clarified_option",
+      "segments": [
+        {
+          "fromLevel": 1,
+          "toLevel": 5,
+          "factor": 1.25
+        },
+        {
+          "fromLevel": 5,
+          "toLevel": 15,
+          "factor": 1.1
+        },
+        {
+          "fromLevel": 15,
+          "factor": 1.04
+        }
+      ],
+      "note": "User did not mean uniform 1.04 from level 1. This candidate has not been applied."
+    },
+    "familyReferenceLevel": {
+      "status": "user_proposed_alternative_not_selected",
+      "principle": "Calibrate each family at its actual first encounter level and intended range; scale relative to that reference, without requiring a fictional level-1 spawn.",
+      "families": [
+        {
+          "family": "wolves",
+          "offspringFirstLevel": 1,
+          "adultEarlyLevels": [
+            1,
+            2,
+            3
+          ],
+          "laterAppearance": "Around level 20; level-60 wolves may be different variants, not necessarily the same starter wolves."
+        },
+        {
+          "family": "goblins",
+          "firstEncounterRange": [
+            3,
+            5
+          ],
+          "candidateReferenceLevel": 3,
+          "typicalRangeApprox": [
+            3,
+            30
+          ],
+          "calibration": "Test levels 3–5 first, then around 20–30; later reuse only as needed."
+        },
+        {
+          "family": "ogres",
+          "earliestPlayerEncounterLevelApprox": 10,
+          "candidateReferenceLevel": 10,
+          "calibration": "Assign and test a level-10 starting profile before deriving higher levels."
+        }
+      ],
+      "numericalAnchors": "Not yet rebased: existing values labeled level 1 remain level 1 until explicit recalibration.",
+      "spawnVsReference": "A reference level is a numerical anchor; it does not itself implement a spawner or require every variant to spawn at that level."
+    }
+  }
+}

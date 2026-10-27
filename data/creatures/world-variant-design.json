@@ -1,0 +1,466 @@
+{
+  "version": 1,
+  "status": "initialWorldMonsterDraftForUnrealTesting",
+  "referenceLevel": 63,
+  "displayLevels": [
+    1,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    63,
+    80,
+    100
+  ],
+  "growthFactors": {
+    "maxHealth": 1.065,
+    "physicalAttack": 1.04,
+    "physicalDefense": 1.04,
+    "magicalDefense": 1.04
+  },
+  "notes": [
+    "User-specified HP bands at reference level 63: wolves 6300–7000; both bird groups 7000–9000.",
+    "Per-variant distribution, attacks, defenses and shared growth rates are initial proposals, not combat-validated values.",
+    "HP and attack are independent: high-HP variants may also have high attack.",
+    "Numbers describe world monsters, not captured pets. Pet scaling and capture/reset rules are pending.",
+    "Felsenflügel and Mondvariante remain working names; neither earlier name suggestion is silently finalized.",
+    "No rarity, taming permissions, drops, final XP rewards or new creature abilities are assigned.",
+    "Golems use a provisional level-60 anchor: 9800 HP, 350 physical attack, 250 physical and magical defense. The old golem dummy defined HP only; attack and defenses are new proposals.",
+    "Ice golem starts with the same numerical profile as stone; ice behavior remains open. Giants multiply HP, physical attack and both defenses by 1.10; volcanic golem by 1.25. Attack/movement speed and rewards are not increased.",
+    "Volcanic golem is a small miniboss concept; final basalt/obsidian material, distinct behavior and abilities remain open.",
+    "Wolf group 2 contains offspring and pack leaders. Pack leaders exist for all seven adult wolf variants, with 1.10 HP, physical attack and both defenses at the same level. Tempo is unchanged.",
+    "Young and pups only for forest wolf, gray wolf and frostclaw wolf. Young use 0.50 at their own level and spawn 2 levels below local adults; pups use 0.40 and spawn 4 levels below adults. Clamp placement to level 1. Placement is design metadata, not an implemented spawner. Never apply level difference twice.",
+    "Wolf group 2 is the user-defined logical grouping for offspring and leaders; concrete Unreal models remain open. Both bird groups preserve their collected names."
+  ],
+  "families": [
+    {
+      "key": "world-wolves",
+      "name": "Wölfe – gemeinsame Zahlenfamilie",
+      "bodyTemplateKey": null
+    },
+    {
+      "key": "world-birds-1",
+      "name": "Vogelgruppe 1",
+      "bodyTemplateKey": "bird-body-1"
+    },
+    {
+      "key": "world-birds-2",
+      "name": "Vogelgruppe 2",
+      "bodyTemplateKey": "bird-body-2"
+    },
+    {
+      "key": "world-golems",
+      "name": "Golems",
+      "bodyTemplateKey": null
+    },
+    {
+      "key": "world-wolves-2",
+      "name": "Wolfsgruppe 2 – Nachwuchs und Rudelführer",
+      "bodyTemplateKey": "wolf-body-2"
+    }
+  ],
+  "variants": [
+    {
+      "key": "grim-forest-wolf",
+      "name": "Grimmiger Waldwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 6700,
+        "physicalAttack": 345,
+        "physicalDefense": 125,
+        "magicalDefense": 80
+      }
+    },
+    {
+      "key": "frostclaw-wolf",
+      "name": "Frostklauenwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 7000,
+        "physicalAttack": 330,
+        "physicalDefense": 140,
+        "magicalDefense": 110
+      }
+    },
+    {
+      "key": "shadow-wolf",
+      "name": "Schattenwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 6400,
+        "physicalAttack": 350,
+        "physicalDefense": 105,
+        "magicalDefense": 95
+      }
+    },
+    {
+      "key": "sunfur-wolf",
+      "name": "Sonnenfellwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 6800,
+        "physicalAttack": 320,
+        "physicalDefense": 120,
+        "magicalDefense": 120
+      }
+    },
+    {
+      "key": "gray-wolf",
+      "name": "Gewöhnlicher Grauwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 6300,
+        "physicalAttack": 300,
+        "physicalDefense": 100,
+        "magicalDefense": 70
+      }
+    },
+    {
+      "key": "redmane-wolf",
+      "name": "Rotmähnenwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 6600,
+        "physicalAttack": 340,
+        "physicalDefense": 115,
+        "magicalDefense": 75
+      }
+    },
+    {
+      "key": "mist-wolf",
+      "name": "Nebelwolf",
+      "familyKey": "world-wolves",
+      "targets": {
+        "maxHealth": 6500,
+        "physicalAttack": 310,
+        "physicalDefense": 105,
+        "magicalDefense": 115
+      }
+    },
+    {
+      "key": "silverwing-crane",
+      "name": "Silberschwingenkranich",
+      "familyKey": "world-birds-1",
+      "targets": {
+        "maxHealth": 8200,
+        "physicalAttack": 270,
+        "physicalDefense": 90,
+        "magicalDefense": 130
+      }
+    },
+    {
+      "key": "redcrest-ripper",
+      "name": "Rotkammreißer",
+      "familyKey": "world-birds-1",
+      "targets": {
+        "maxHealth": 9000,
+        "physicalAttack": 350,
+        "physicalDefense": 110,
+        "magicalDefense": 85
+      }
+    },
+    {
+      "key": "bluefeather",
+      "name": "Blaufederkolben",
+      "familyKey": "world-birds-1",
+      "targets": {
+        "maxHealth": 7900,
+        "physicalAttack": 250,
+        "physicalDefense": 85,
+        "magicalDefense": 125
+      }
+    },
+    {
+      "key": "forest-runner",
+      "name": "Waldheinläufer",
+      "familyKey": "world-birds-1",
+      "targets": {
+        "maxHealth": 7400,
+        "physicalAttack": 280,
+        "physicalDefense": 95,
+        "magicalDefense": 80
+      }
+    },
+    {
+      "key": "darkcrow-runner",
+      "name": "Düsterkrähenläufer",
+      "familyKey": "world-birds-1",
+      "targets": {
+        "maxHealth": 8500,
+        "physicalAttack": 310,
+        "physicalDefense": 100,
+        "magicalDefense": 120
+      }
+    },
+    {
+      "key": "sky-falcon",
+      "name": "Himmelsfalk",
+      "familyKey": "world-birds-2",
+      "targets": {
+        "maxHealth": 7600,
+        "physicalAttack": 310,
+        "physicalDefense": 75,
+        "magicalDefense": 90
+      }
+    },
+    {
+      "key": "redcrown-glider",
+      "name": "Rotscheitelgleiter",
+      "familyKey": "world-birds-2",
+      "targets": {
+        "maxHealth": 8000,
+        "physicalAttack": 320,
+        "physicalDefense": 85,
+        "magicalDefense": 85
+      }
+    },
+    {
+      "key": "forestcrown",
+      "name": "Waldkronenschreiher",
+      "familyKey": "world-birds-2",
+      "targets": {
+        "maxHealth": 7000,
+        "physicalAttack": 260,
+        "physicalDefense": 70,
+        "magicalDefense": 100
+      }
+    },
+    {
+      "key": "shadowtip",
+      "name": "Schattenspitz",
+      "familyKey": "world-birds-2",
+      "targets": {
+        "maxHealth": 7800,
+        "physicalAttack": 340,
+        "physicalDefense": 80,
+        "magicalDefense": 110
+      }
+    },
+    {
+      "key": "rockwing",
+      "name": "Felsenflügel",
+      "namePending": true,
+      "familyKey": "world-birds-2",
+      "targets": {
+        "maxHealth": 9000,
+        "physicalAttack": 360,
+        "physicalDefense": 125,
+        "magicalDefense": 80
+      }
+    },
+    {
+      "key": "moon-falcon",
+      "name": "Mondvariante",
+      "namePending": true,
+      "familyKey": "world-birds-2",
+      "targets": {
+        "maxHealth": 8400,
+        "physicalAttack": 290,
+        "physicalDefense": 80,
+        "magicalDefense": 140
+      }
+    },
+    {
+      "key": "stone-golem",
+      "name": "Steingolem",
+      "familyKey": "world-golems",
+      "referenceLevel": 60,
+      "targets": {
+        "maxHealth": 9800,
+        "physicalAttack": 350,
+        "physicalDefense": 250,
+        "magicalDefense": 250
+      }
+    },
+    {
+      "key": "giant-stone-golem",
+      "name": "Gigantischer Steingolem",
+      "familyKey": "world-golems",
+      "referenceLevel": 60,
+      "scaleFrom": "stone-golem",
+      "statFactor": 1.1
+    },
+    {
+      "key": "ice-golem",
+      "name": "Eisgolem",
+      "familyKey": "world-golems",
+      "referenceLevel": 60,
+      "targets": {
+        "maxHealth": 9800,
+        "physicalAttack": 350,
+        "physicalDefense": 250,
+        "magicalDefense": 250
+      },
+      "pending": [
+        "Ice-specific behavior and abilities not yet defined"
+      ]
+    },
+    {
+      "key": "giant-ice-golem",
+      "name": "Gigantischer Eisgolem",
+      "familyKey": "world-golems",
+      "referenceLevel": 60,
+      "scaleFrom": "ice-golem",
+      "statFactor": 1.1,
+      "pending": [
+        "Ice-specific behavior and abilities not yet defined"
+      ]
+    },
+    {
+      "key": "volcanic-golem",
+      "name": "Vulkangolem",
+      "namePending": true,
+      "familyKey": "world-golems",
+      "referenceLevel": 60,
+      "scaleFrom": "stone-golem",
+      "statFactor": 1.25,
+      "pending": [
+        "Small miniboss; distinct behavior and abilities pending",
+        "Basalt or obsidian material and final name remain open"
+      ]
+    },
+    {
+      "key": "grim-forest-wolf-pack-leader",
+      "name": "Rudelführer – Grimmiger Waldwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "grim-forest-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "frostclaw-wolf-pack-leader",
+      "name": "Rudelführer – Frostklauenwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "frostclaw-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "shadow-wolf-pack-leader",
+      "name": "Rudelführer – Schattenwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "shadow-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "sunfur-wolf-pack-leader",
+      "name": "Rudelführer – Sonnenfellwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "sunfur-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "gray-wolf-pack-leader",
+      "name": "Rudelführer – Gewöhnlicher Grauwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "gray-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "redmane-wolf-pack-leader",
+      "name": "Rudelführer – Rotmähnenwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "redmane-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "mist-wolf-pack-leader",
+      "name": "Rudelführer – Nebelwolf",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "mist-wolf",
+      "statFactor": 1.1,
+      "role": "packLeader",
+      "areaLevelOffset": 0
+    },
+    {
+      "key": "grim-forest-wolf-young",
+      "name": "Waldwolf – Jungtier",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "grim-forest-wolf",
+      "statFactor": 0.5,
+      "role": "young",
+      "areaLevelOffset": -2
+    },
+    {
+      "key": "grim-forest-wolf-pup",
+      "name": "Waldwolf – Welpe",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "grim-forest-wolf",
+      "statFactor": 0.4,
+      "role": "pup",
+      "areaLevelOffset": -4
+    },
+    {
+      "key": "gray-wolf-young",
+      "name": "Grauwolf – Jungtier",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "gray-wolf",
+      "statFactor": 0.5,
+      "role": "young",
+      "areaLevelOffset": -2
+    },
+    {
+      "key": "gray-wolf-pup",
+      "name": "Grauwolf – Welpe",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "gray-wolf",
+      "statFactor": 0.4,
+      "role": "pup",
+      "areaLevelOffset": -4
+    },
+    {
+      "key": "frostclaw-wolf-young",
+      "name": "Frostklauenwolf – Jungtier",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "frostclaw-wolf",
+      "statFactor": 0.5,
+      "role": "young",
+      "areaLevelOffset": -2
+    },
+    {
+      "key": "frostclaw-wolf-pup",
+      "name": "Frostklauenwolf – Welpe",
+      "familyKey": "world-wolves-2",
+      "scaleFrom": "frostclaw-wolf",
+      "statFactor": 0.4,
+      "role": "pup",
+      "areaLevelOffset": -4
+    }
+  ],
+  "encounterGroups": [
+    {
+      "key": "gray-wolf-pack",
+      "name": "Grauwolfrudel",
+      "alwaysTogether": true,
+      "engageTogether": true,
+      "sameLevel": true,
+      "members": [
+        {
+          "variantKey": "world-gray-wolf-pack-leader",
+          "count": 1,
+          "leader": true
+        },
+        {
+          "variantKey": "world-gray-wolf",
+          "count": 2,
+          "leader": false
+        }
+      ],
+      "notes": [
+        "User rule: gray wolf pack leader is encountered only with two normal gray wolves. No monster skills yet. Actual spawner and aggro-link runtime implementation remain pending."
+      ]
+    }
+  ]
+}

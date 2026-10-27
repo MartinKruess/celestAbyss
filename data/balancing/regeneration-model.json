@@ -2,8 +2,9 @@
   "regeneration": {
     "baseManaPerTick": 25,
     "baseHealthPerTick": 12,
-    "tickIntervalSeconds": null,
-    "status": "intervalPending"
+    "tickIntervalSeconds": 3,
+    "status": "defined",
+    "manaTickIntervalSeconds": 3
   },
   "wisdomManaPerTick": {
     "factor": 3,
@@ -19,7 +20,7 @@
     "status": "factorPending",
     "scope": "Healer / Priest / Erzbischof only"
   },
-  "note": "Definitions only, no runtime ticker implemented; 12 HP and 25 Mana are per tick, not per second.",
+  "note": "12 HP and 25 Mana are base amounts per server tick, every 3 seconds. Attribute conversion factors remain defined by attribute-model.json.",
   "vitalityHealthPerTick": {
     "factor": 4,
     "status": "confirmedFactor"

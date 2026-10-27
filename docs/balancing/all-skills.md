@@ -1,6 +1,6 @@
 # Alle Skills – vollständige Gesamtliste
 
-263 Skilldefinitionen aus dem aktuellen Datenbankexport vom 2026-10-21T12:27:14.623Z. Aktive Skills, Passive und Reserve-Skills sind enthalten. Klassenbezeichnungen entsprechen den gespeicherten Zuordnungen einschließlich Aufstiegsklassen; Lernbegrenzungen und Klassenspezialisierungen stehen im vollständigen Datensatz.
+263 Skilldefinitionen aus dem aktuellen Datenbankexport vom 2026-10-24T02:21:03.984Z. Aktive Skills, Passive und Reserve-Skills sind enthalten. Klassenbezeichnungen entsprechen den gespeicherten Zuordnungen einschließlich Aufstiegsklassen; Lernbegrenzungen und Klassenspezialisierungen stehen im vollständigen Datensatz.
 
 Die Wertetabellen zeigen den auf der jeweiligen Stufe aufgelösten direkten Wert. Einheiten, Auslöser, abgeleitete Boni und Bedingungen sind in der Beschreibung und im vollständigen Datensatz angegeben. Unvollständige Definitionen werden unverändert dargestellt.
 
@@ -153,7 +153,7 @@ Die Wertetabellen zeigen den auf der jeweiligen Stufe aufgelösten direkten Wert
 | 145 | [Durchhalten](#skill-145) | passive | 10 | Gladiator, Berserker, Abenteuer |
 | 146 | [List des Schurken](#skill-146) | selfBuff | 10 | Villian, Shadowwarrior |
 | 147 | [Erweckung der Leidenschaft](#skill-147) | buff | 5 | Summoner, Soulseeker, Abenteuer |
-| 148 | [Scharfer Instinkte](#skill-148) | selfBuff | 10 | Summoner, Soulseeker, Abenteuer |
+| 148 | [Scharfer Instinkt](#skill-148) | selfBuff | 10 | Summoner, Soulseeker, Abenteuer |
 | 149 | [Macht der Wildnis](#skill-149) | selfBuff | 3 | Shamane, High Elves, Abenteuer |
 | 150 | [Macht des Begleiters](#skill-150) | buff | 10 | Hunter, Archer, Abenteuer |
 | 151 | [Für die Ehre](#skill-151) | selfBuff | 10 |  |
@@ -407,7 +407,35 @@ Permanenter passiver Aurora-Grundskill mit 20 Stufen. Je gelernter Stufe +0,5 In
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26,
+      28,
+      29
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -584,7 +612,35 @@ Permanenter passiver Umbra-Grundskill mit 20 Stufen. Je gelernter Stufe +0,5 St�
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26,
+      28,
+      29
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -700,7 +756,30 @@ Trifft zwei bis drei Gegner in deiner Nähe. Der physische Grundangriffswert ste
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -797,7 +876,25 @@ Dauerhafter Attributanteil: je gelernter Stufe +2,5 Intelligenz, +0,5 Willenskra
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -956,7 +1053,35 @@ Permanenter passiver Menschen-Grundskill mit 20 Stufen. Je gelernter Stufe +0,5 
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26,
+      28,
+      29
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -1101,7 +1226,25 @@ Eigene Angriffe können Adrenalin mit 5 Prozent Wahrscheinlichkeit auslösen, we
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -1226,7 +1369,30 @@ Permanentes Armbrusttraining mit zehn Stufen. Beginnt mit +1 Agilität und +1 Ge
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -1364,6 +1530,24 @@ Erschafft ein Abbild deiner selbst, das durch die Gegner fliegt, ihnen Schaden z
   "attackExecution": {
     "hitCount": 1,
     "maxHitsPerTargetPerActivation": 1
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -1708,6 +1892,29 @@ Beschwört ein Ätherfeld, das alle 2 Sekunden Gegnern magischen Schaden zufügt
     "geometryStatus": "pending",
     "maxTargetsFrom": "ownGroupMembersCurrentlyInAreaIncludingCaster",
     "targetSelectionTiming": "eachTick"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -1800,7 +2007,25 @@ Dauerhafter Attributanteil: je gelernter Stufe +1,6 Geschick, +0,2 Agilität; au
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -1926,7 +2151,35 @@ Führt einen aufgeladenen physischen Schlag aus. Der Grundangriffswert steigt vo
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -2088,7 +2341,21 @@ Aktiver Eigenbuff mit einer einzigen lernbaren Stufe. Gewährt für 15 Sekunden 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -2262,7 +2529,25 @@ Entfesselt bei mindestens 55 Wutpunkten einen einmaligen physischen Angriff und 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -2398,7 +2683,22 @@ Weiche mit einer Rolle aus. Auf Skilllevel 1 verbraucht sie 15 Prozent deiner ma
   "classificationVersion": 1,
   "effectKind": "movement",
   "target": "self",
-  "type": "buff"
+  "type": "buff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 8,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 130,
+    "rankCosts": [
+      130,
+      170
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -2649,7 +2949,40 @@ Schmettert deine Waffe auf den Boden und erzeugt ein Beben, das getroffene Gegne
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 10,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -2833,6 +3166,44 @@ Erschafft Wasserfesseln, die ein Ziel festhalten und einmalig magischen Schaden 
       "base": 47,
       "perLevel": 21
     }
+  },
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "herbalist": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {
+      "herbalist": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -3013,7 +3384,30 @@ Verursacht einmalig physischen Schaden und heilt dich um 2 Prozent des tatsächl
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -3092,7 +3486,30 @@ Permanentes Bogenschießtraining mit zehn Stufen. Auf Stufe 1 +2 Geschicklichkei
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -3287,7 +3704,30 @@ Trifft den Gegner mit einem Schildangriff und senkt seine physische Verteidigung
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -3448,7 +3888,30 @@ Führt zwei schnelle physische Angriffe aus. Der Grundschaden je Treffer steigt 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -3705,7 +4168,30 @@ Rutsche schnell in eine Richtung. Mit höheren Skillstufen sinken Ausdauerkosten
   "classificationVersion": 1,
   "effectKind": "movement",
   "target": "self",
-  "type": "buff"
+  "type": "buff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 8,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -3828,7 +4314,30 @@ Permanentes Dolchtraining mit zehn Stufen. Spiegelt die Attributverteilung des D
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -3959,7 +4468,35 @@ Erschafft eine Aura um dein Schwert oder deinen Streitkolben und stürmt zum Geg
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -4104,7 +4641,30 @@ Schießt zwei Pfeile schnell hintereinander auf ein Ziel. Jeder Treffer verursac
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -4281,7 +4841,30 @@ Ein zusätzlicher Sprung lässt dich höher springen und erhöhte Stellen erreic
   "classificationVersion": 1,
   "effectKind": "movement",
   "target": "self",
-  "type": "buff"
+  "type": "buff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 8,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -4404,7 +4987,30 @@ Verbessert dauerhaft deine Fertigkeiten im Kampf mit zwei Einhandäxten. Auf Ski
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -4628,7 +5234,65 @@ Greift unmittelbar aus den Schatten an und verursacht einmalig physischen Schade
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "villian": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {
+      "villian": [
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        18,
+        18
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -4743,7 +5407,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +0,5 Vitalität; auf Stufe 10 ins
   },
   "classificationVersion": 1,
   "type": "passive",
-  "mdef": 1
+  "mdef": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -4889,7 +5576,30 @@ Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung f�
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -5113,7 +5823,30 @@ Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer veru
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 10,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -5423,7 +6156,25 @@ Erzeugt ein kreisförmiges elektrisches Feld auf dem Boden. Vorläufig werden di
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -5575,7 +6326,25 @@ Permanenter passiver Skill mit automatischem Kampfeffekt. Jeder dritte eigene An
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -5672,7 +6441,30 @@ Erhöht dauerhaft deinen physischen Angriff um 3 und deinen magischen Angriff um
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -6020,7 +6812,30 @@ Erzeugt einen Schild gegen physischen und magischen Schaden mit einer Kapazität
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -6145,7 +6960,30 @@ Entlädt nach 0,4 Sekunden Cast Time Energie und trifft Gegner in einem kreisfö
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -6418,7 +7256,66 @@ Wirft einen Ball aus purem Licht auf dein Ziel und verursacht einmalig magischen
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "druid": 6,
+      "healer": 6,
+      "luminet": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {
+      "druid": [
+        12,
+        36,
+        60,
+        84,
+        108
+      ],
+      "healer": [
+        12,
+        36,
+        60,
+        84,
+        108
+      ],
+      "luminet": [
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        18,
+        18
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -6560,7 +7457,30 @@ Verursacht einmalig physischen Schaden und heilt dich um einen festen Lebensbetr
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -6740,7 +7660,30 @@ Erzeugt ein Erdbeben in einem kreisförmigen Bereich mit 5 Metern Radius um dich
   },
   "classificationVersion": 1,
   "damageType": "mixed",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -6879,7 +7822,30 @@ Bricht den Boden auf und schleudert nahe Gegner zurück. Mächtiger einmaliger p
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -7189,7 +8155,30 @@ Erschafft ein heiliges Feld, das deine Aggro auf Gegner erhöht. Beim Setzen tri
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -7342,7 +8331,25 @@ Heilt dich nach einer Cast Time von 0,2 Sekunden sofort um 50 Lebenspunkte. Je w
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -7450,7 +8457,30 @@ Ein eigener Angriff unter 30 Prozent Leben aktiviert Erwachen, sofern der Skill 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -7586,13 +8616,31 @@ Permanenter passiver Bonus mit zehn Stufen. Je gelernter Stufe +1 Agilität, +1 
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 3,
+    "minimumCharacterLevel": 9,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
   "type": "passive",
-  "wis": 0.5
+  "wis": 0.5,
+  "skillPointCosts": {
+    "firstLevel": 12,
+    "rankCosts": [
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -7792,12 +8840,30 @@ Permanenter passiver Bonus mit zehn Stufen. Intelligenz, Willenskraft und Geschi
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 3,
+    "minimumCharacterLevel": 9,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 12,
+    "rankCosts": [
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -7992,12 +9058,30 @@ Permanenter passiver Bonus mit zehn Stufen. Stärke, Vitalität und Willenskraft
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 3,
+    "minimumCharacterLevel": 9,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 12,
+    "rankCosts": [
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -8235,7 +9319,30 @@ Eis fliegt aus mehreren Richtungen auf einen Gegner zu und verfolgt dessen Beweg
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -8389,7 +9496,30 @@ Die nächsten drei Pfeile verursachen jeweils 2 Sekunden nach dem Auftreffen zus
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -8653,7 +9783,25 @@ Erzeugt ein Feld aus bläulich-schwarzen, astral wirkenden Flammen um das anvisi
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -8864,7 +10012,65 @@ Schleudert einen Feuerball auf dein Ziel und verursacht einmalig magischen Schad
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "ritualist": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {
+      "ritualist": [
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        18,
+        18
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -9011,7 +10217,30 @@ Erschafft eine Feuerlanze, die einen Gegner einmalig durchbohrt. Der magische Gr
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -9189,7 +10418,88 @@ Schießt einen brennenden Pfeil auf dein Ziel. Verursacht einmalig physischen Gr
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "hunter": 6,
+      "summoner": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {
+      "hunter": [
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        18,
+        18
+      ],
+      "summoner": [
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        18,
+        18
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -9290,7 +10600,25 @@ Permanente Passive mit fünf Stufen. Glück steigt ganzzahlig von 1 auf 10: je S
   },
   "critChanceRating": 5,
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -9463,7 +10791,30 @@ Dein Charakter hüpft zunächst nach links und schießt einen Seilpfeil über de
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -9641,7 +10992,30 @@ Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -9840,7 +11214,30 @@ Ein mächtiger Schildstoß verursacht einmalig physischen Schaden. Physischer Sk
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -10089,7 +11486,30 @@ Erzeugt geladenen Nebel. Magischer Skill-Grundschaden 177 auf Stufe 1, plus 63 j
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -10230,7 +11650,25 @@ Schleudert einen gezielten Blitzschlag auf einen Gegner und verursacht einmalig 
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -10447,7 +11885,26 @@ Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 27,
+    "rankCosts": [
+      27,
+      43,
+      59,
+      75,
+      90,
+      106
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -10579,7 +12036,21 @@ Aktiver Schutzskill mit einer einzigen lernbaren Stufe. Du rammst deinen Schild 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 400,
+    "rankCosts": [
+      400
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -10709,7 +12180,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +0,6 Intelligenz, +0,4 Willenskra
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -10899,7 +12393,65 @@ Führt einen mächtigen Schlag aus einem Sprung heraus aus. Der physische Grunds
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "gladiator": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {
+      "gladiator": [
+        12,
+        12,
+        13,
+        13,
+        13,
+        14,
+        14,
+        14,
+        15,
+        15,
+        15,
+        15,
+        16,
+        16,
+        16,
+        17,
+        17,
+        17,
+        18,
+        18
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -11105,7 +12657,25 @@ Erzeugt einen Zyklon aus Höllenfeuer im betroffenen Gebiet. Der bisherige magis
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -11302,7 +12872,25 @@ Ein Pfeil verbindet dich über ein Seil oder Energieband mit dem Ziel. Auf Stufe
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -11556,7 +13144,40 @@ Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 2
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -11712,7 +13333,30 @@ Führt vier physische Treffer gegen Gegner vor dir aus. Der Grundschaden je Tref
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -11849,7 +13493,30 @@ Ein gezielter Schuss auf einen Gegner, der garantiert kritisch trifft. Physische
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -11997,7 +13664,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +1 Geschick, +0,5 Agilität; auf 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -12138,7 +13828,30 @@ Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmali
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -12279,7 +13992,25 @@ Verursacht einmalig magischen Skill-Grundschaden von 398 auf Stufe 1, plus 143 j
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -12467,7 +14198,25 @@ Kunai-Angriff mit fünf Skillstufen und ganzzahligem physischem Grundschaden von
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 10,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -12604,7 +14353,20 @@ Erwecke die Lebensessenz eines Verbündeten oder Begleiters und heile ihn auf Sk
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -12837,7 +14599,30 @@ Greift einen Gegner einmalig magisch an und heilt den Anwender. Magischer Skill-
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -12900,7 +14685,20 @@ Erhöht dauerhaft deinen Crit-Chance-Wert um 10 Punkte je gelerntem Skilllevel, 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13051,7 +14849,30 @@ Selbstbuff des Lumineten. Gewährt je Skillstufe 3 Intelligenz und senkt währen
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13194,7 +15015,30 @@ Gruppenbuff für dich, Gruppenmitglieder und Begleiter. Je Stufe +1 Stärke und 
   "classificationVersion": 1,
   "target": "group",
   "type": "buff",
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13360,7 +15204,35 @@ Entzündet Flammen um deine beiden Einhand-Streitkolben und führt zwei aufeinan
   },
   "classificationVersion": 1,
   "damageType": "mixed",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13483,7 +15355,43 @@ Trifft den Gegner nach 0,2 Sekunden Aufladen mit einem mächtigen Hieb. Der phys
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "minimumCharacterLevel": 10
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {
+      "knight": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13688,7 +15596,30 @@ Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Met
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13797,7 +15728,25 @@ Erhöht deinen magischen Angriff für 300 Sekunden um 60 auf Skilllevel 1. Je we
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -13981,7 +15930,30 @@ Eigenbuff für 20 bis 24,5 Sekunden. Bewegungsgeschwindigkeit steigt von 1 Proze
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14069,7 +16041,16 @@ Dauerhafter Attributanteil: je gelernter Stufe +5 Intelligenz, +5 Vitalität; au
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14211,7 +16192,30 @@ Eigenbuff, der physische und magische Verteidigung für 15 Sekunden auf Stufe 1 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14301,7 +16305,30 @@ Permanenter passiver Skill. Bei jeder eigenen Angriffsskill-Anwendung werden je 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14383,7 +16410,25 @@ Passiver automatischer Effekt. Jeder eigene elektrische Angriff prüft bei berei
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14442,7 +16487,25 @@ Verbanne einen Gegner in die Dunkelheit. Dieser erleitet mehr Schaden durch Dunk
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14702,7 +16765,35 @@ Ein gezielter Schuss, der garantiert kritisch trifft. Physischer Skill-Grundscha
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 8,
+    "rankCosts": [
+      8,
+      11,
+      13,
+      16,
+      19,
+      21,
+      24,
+      27,
+      29,
+      32,
+      35,
+      37,
+      40,
+      43,
+      45
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -14843,7 +16934,45 @@ Führt einen rotierenden physischen Hieb aus. Der Grundangriffswert steigt von 3
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "classOverrides": {
+      "butcher": 6
+    }
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {
+      "butcher": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36,
+        40,
+        44,
+        48
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15011,7 +17140,25 @@ Schießt mehrere Wellen aus jeweils gleichzeitig abgefeuerten Pfeilen. Stufe 1: 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15186,7 +17333,30 @@ Trifft einen einzelnen Gegner physisch und macht ihn kurz benommen. Der Grundang
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15322,7 +17492,35 @@ Nur während der Tarnung einsetzbar. Stürme aus maximal 3 Metern Entfernung auf
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15483,7 +17681,30 @@ Nur während der Tarnung einsetzbar. Platziere eine für dich sichtbare und für
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15613,7 +17834,30 @@ Nur während der Tarnung einsetzbar. Verursacht einmalig physischen Grundschaden
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15705,7 +17949,25 @@ Verbessert dauerhaft deine Fertigkeiten im Kampf mit dem Schild. Stärke und Vit
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -15854,7 +18116,40 @@ Stößt mit dem Schild gegen den Gegner und verursacht einmalig physischen Grund
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -16036,7 +18331,40 @@ Stürmt mit dem Schild auf den Gegner zu und verursacht einmalig physischen Scha
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -16157,7 +18485,30 @@ Mit roher Gewalt schlägst du auf deinen Gegner ein und verursachst dabei große
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -16320,7 +18671,30 @@ Schießt einen Pfeil auf deinen Gegner. Physischer Skill-Grundschaden 236, plus 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -16485,7 +18859,30 @@ Erzeugt nach 1 Sekunde Cast Time eine Schockwelle, die Gegner im Umkreis physisc
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 35,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -16693,7 +19090,26 @@ Opfert 25 Prozent des maximalen Lebens. Nur aktivierbar, wenn das aktuelle Leben
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 20,
+    "rankCosts": [
+      20,
+      32,
+      44,
+      56,
+      68,
+      80
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -16934,7 +19350,40 @@ Zwanzig Skillstufen mit unveränderter Start- und Maximalwirkung. Opfert gemäß
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -17149,7 +19598,30 @@ Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -17255,7 +19727,25 @@ Permanentes Schwerttraining des Ritters mit fünf Stufen. Stärke je Stufe 2/3/4
   },
   "classificationVersion": 1,
   "type": "passive",
-  "vita": 1
+  "vita": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -17556,7 +20046,40 @@ Verbraucht 1 Seelenfragment und lässt zwei seelenhafte Hände aus dem Boden den
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -17722,7 +20245,30 @@ Einmaliger magischer Angriff, nur solange Seelenfessel auf dem Ziel wirkt. Kein 
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -17916,7 +20462,25 @@ Manueller Abschluss der Kombination Seelenfessel → Seelenqual → Seelenernte.
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -18073,7 +20637,30 @@ Springt senkrecht hoch und schlägt mit der Waffe auf den Boden. Trifft Gegner i
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -18197,6 +20784,20 @@ Verstärkt verbündete Spieler in der Nähe um 80 physische und 60 magische Vert
       "base": 60,
       "perLevel": 60
     }
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 35,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -18410,7 +21011,30 @@ Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -18575,7 +21199,30 @@ Kann nur eingesetzt werden, solange der Stärke-Buff von Ausbruch der Wut aktiv 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -18728,7 +21375,30 @@ Erzeugt um das anvisierte Ziel eine anfangs unauffällige kreisförmige brennend
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -18875,7 +21545,30 @@ Führt einen besonders wuchtigen Angriff mit beiden Dolchen gegen einen einzelne
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -19104,7 +21797,25 @@ Eine Gewitterwolke bedeckt einen kreisförmigen Bereich mit 16 Metern Durchmesse
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -19285,7 +21996,30 @@ Springt zum Gegner und flitzt zwischen ausreichend nahen Gegnern hin und her. Tr
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -19428,7 +22162,25 @@ Eigene Angriffe können Überlebenswille auslösen, wenn der Skill bereit ist: u
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -19623,7 +22375,30 @@ Führt nach 0,1 Sekunden Castzeit einen einzelnen physischen Treffer aus. Zehn S
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "minimumCharacterLevel": 42
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -19756,7 +22531,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +1 Vitalität; auf Stufe 10 insge
   },
   "classificationVersion": 1,
   "type": "passive",
-  "vita": 1
+  "vita": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -19885,7 +22683,25 @@ Ruft einen Strahl vom Himmel herab, der Gegner im betroffenen Bereich zuerst mit
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20119,7 +22935,25 @@ Nach 0,4 Sekunden Castzeit trifft ausschließlich das anvisierte Ziel ein physis
   },
   "classificationVersion": 1,
   "damageType": "mixed",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20234,7 +23068,30 @@ Verbessert dauerhaft dein Nachladen. Gewährt 2 physischen Angriff je gelerntem 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20303,7 +23160,30 @@ Reaper: permanente Passive mit zehn Stufen, ausschließlich Seelenspeicher. Kapa
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20449,7 +23329,40 @@ Verstärke deinen Pfeil und füge einem Gegner einmalig physischen Schaden zu. S
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20578,7 +23491,30 @@ Erhöht dauerhaft die Durchschlagskraft deiner Pfeile. Je gelerntem Skilllevel e
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20654,7 +23590,18 @@ Reduziert als passiver Bonus den Cooldown deiner Skills auf Skilllevel 1 um 5 Se
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -20980,7 +23927,40 @@ Heilt ein einzelnes anvisiertes verbündetes Ziel über Zeit. 20 lernbare Stufen
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21213,7 +24193,35 @@ Trifft den Gegner einmalig mit Windmagie und verlangsamt sein Angriffstempo. 15 
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21371,7 +24379,30 @@ Führt fünf physische Treffer im Bereich bis 3 Meter vor dir aus, ohne nach vor
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21500,7 +24531,30 @@ Kann nur eingesetzt werden, solange der Buff Ausbruch der Wut aktiv ist. Verursa
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 50,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21641,7 +24695,30 @@ Kann nur eingesetzt werden, solange der Buff Ausbruch der Wut aktiv ist. Trifft 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 35,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21682,7 +24759,25 @@ Deine Verderbnis ist so stark, dass sie sich in deinen Angriffen widerspiegelt. 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21845,7 +24940,30 @@ Dieser gezielte Schuss kann nicht daneben gehen. Verursacht einmalig physischen 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -21924,7 +25042,30 @@ Verbessert dauerhaft deinen Umgang mit zweihändigen Äxten. Auf Skilllevel 1 er
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22047,7 +25188,30 @@ Verbessert dauerhaft deinen Umgang mit zweihändigen Streitkolben. Auf Skillleve
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22061,7 +25225,7 @@ Verbessert dauerhaft deinen Umgang mit zweihändigen Streitkolben. Auf Skillleve
 
 **Zuordnung:** Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Priest, Ritualist, Shamane, High Elves, Villian, Shadowwarrior
 
-Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt.
+Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen.
 
 | Stufe | Mana | Cooldown |
 | ---: | ---: | ---: |
@@ -22107,8 +25271,8 @@ Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item 
   ],
   "currentSkillLv": 0,
   "currentUpgradeLv": 0,
-  "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt.",
-  "description_eng": "Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined. The definition contains three levels; normal other classes are capped at learned level 1. The Adventurer may learn level 3; a second specialist remains undefined.",
+  "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen.",
+  "description_eng": "Attempts to tame a creature. Requires a taming card matching the creature variant. The base chance belongs to the specific creature variant. Tame multiplies this chance by 1.0 at level 1, 1.1 at level 2 and 1.2 at level 3; it adds no percentage points and supplies no fixed base success chance. A 1 percent base chance becomes 1 / 1.1 / 1.2 percent per attempt. The formula continues by 0.1 per additional effective level when separately authorized. The definition still has three learnable levels: ordinary classes are capped at level 1 and the Adventurer at level 3; a second specialist remains undefined. Mana is 100 / 125 / 150, cast time 3 / 2.5 / 2 seconds and cooldown 60 / 50 / 40 seconds. No damage or subsequent effect duration. Creature base chances, card mappings, item consumption, target distance and interruption conditions remain to be defined.",
   "dmgType": "spell",
   "maxSkillLv": 3,
   "maxUpgradeLv": 10,
@@ -22142,12 +25306,12 @@ Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item 
   "taming": {
     "requiresMatchingItem": true,
     "itemConsumptionStatus": "pending",
-    "creatureCounterStatus": "pending",
-    "baseSuccessChance": 0.5,
-    "successChanceScaling": {
+    "baseChanceSource": "creatureVariant",
+    "chanceFormula": "baseChanceTimesSkillMultiplier",
+    "chanceMultiplierScaling": {
       "type": "linear",
-      "base": 0.5,
-      "perLevel": 0.15
+      "base": 1,
+      "perLevel": 0.1
     }
   },
   "learningLimits": {
@@ -22212,12 +25376,12 @@ Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item 
       {
         "path": [
           "taming",
-          "successChanceScaling"
+          "chanceMultiplierScaling"
         ],
         "rule": {
           "kind": "linear",
-          "base": 0.5,
-          "perLevel": 0.15
+          "base": 1,
+          "perLevel": 0.1
         },
         "source": "storedFormula"
       }
@@ -22225,12 +25389,27 @@ Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item 
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 4,
+    "minimumCharacterLevel": 5,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10
+    ],
+    "classRankCosts": {
+      "adventurer": [
+        10,
+        11,
+        12
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22421,12 +25600,27 @@ Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweil
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 6,
+    "minimumCharacterLevel": 4,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6
+    ],
+    "classRankCosts": {
+      "adventurer": [
+        6,
+        7,
+        8
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22440,7 +25634,7 @@ Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweil
 
 **Zuordnung:** Abenteuer, Butcher, Destroyer, Gladiator, Berserker, Knife, Templar, Herbalist, Witcher, Archer, Hunter, Druide, Alchemist, Summoner, Soulseeker, Bloodmage, Luminet, Lightmage, Healer, Priest, Ritualist, Shamane, High Elves, Villian, Shadowwarrior
 
-Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.
+Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 4. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.
 
 <details>
 <summary>Vollständiger aktueller Datensatz einschließlich Effekten, Lernregeln und Klassenspezialisierungen</summary>
@@ -22479,7 +25673,7 @@ Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzah
   ],
   "currentSkillLv": 0,
   "currentUpgradeLv": 0,
-  "description_de": "Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.",
+  "description_de": "Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 4. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.",
   "description_eng": "Permanent passive creature skill. The learned skill level determines the number of simultaneously controlled creatures: one at level 1, two at level 2. All other classes can learn up to level 1; only the Adventurer and its advancement can learn up to level 2 and control two creatures simultaneously. First unlock at character level 5; the character-level requirement for skill rank 2 remains pending.",
   "dmgType": "passive",
   "maxSkillLv": 2,
@@ -22505,7 +25699,7 @@ Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzah
     ]
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 5,
+    "minimumCharacterLevel": 4,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
@@ -22516,6 +25710,20 @@ Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzah
       1,
       2
     ]
+  },
+  "skillPointCosts": {
+    "firstLevel": 4,
+    "rankCosts": [
+      4
+    ],
+    "classRankCosts": {
+      "adventurer": [
+        4,
+        5
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -22618,12 +25826,21 @@ Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und h
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 6,
+    "minimumCharacterLevel": 5,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22725,12 +25942,21 @@ Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Ke
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 6,
+    "minimumCharacterLevel": 5,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22837,12 +26063,27 @@ Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält di
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 7,
+    "minimumCharacterLevel": 4,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5
+    ],
+    "classRankCosts": {
+      "adventurer": [
+        5,
+        6,
+        7
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -22977,7 +26218,35 @@ Permanentes Ausdauertraining mit 20 Stufen für alle Klassen. Je gelerntem Skill
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26,
+      28,
+      29
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23078,7 +26347,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +1 Vitalität, +0,5 Willenskraft;
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23200,7 +26492,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +0,3 Stärke; auf Stufe 10 insges
   },
   "classificationVersion": 1,
   "type": "passive",
-  "str": 0.3
+  "str": 0.3,
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23304,7 +26619,25 @@ Permanentes passives Ausweichtraining. Gewährt 1 Agilität und 0,5 Geschicklich
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23450,7 +26783,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +0,5 Intelligenz, +0,5 Willenskra
   },
   "classificationVersion": 1,
   "type": "passive",
-  "int": 0.5
+  "int": 0.5,
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23570,12 +26926,30 @@ Permanentes Rüstungstraining mit zehn Stufen für alle Klassen. Je gelernter St
     "extensionNeedsDefinition": []
   },
   "learningRequirements": {
-    "minimumCharacterLevel": 2,
+    "minimumCharacterLevel": 4,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1,
+      7,
+      14,
+      20,
+      27,
+      33,
+      40,
+      46,
+      53,
+      59
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23672,7 +27046,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +0,8 Stärke, +0,5 Vitalität; au
       "perLevel": 0.5
     }
   },
-  "str": 0.8
+  "str": 0.8,
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23814,7 +27211,30 @@ Eigenbuff für 300 Sekunden. Glück startet bei 1 und steigt um 0,5 je weiterer 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23950,7 +27370,25 @@ Erweckt die Leidenschaft und erhöht deine Geschicklichkeit und Agilität sowie 
   },
   "classificationVersion": 1,
   "target": "group",
-  "type": "buff"
+  "type": "buff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -23958,7 +27396,7 @@ Erweckt die Leidenschaft und erhöht deine Geschicklichkeit und Agilität sowie 
 
 <a id="skill-148"></a>
 
-## 148: Scharfer Instinkte
+## 148: Scharfer Instinkt
 
 **Typ:** selfBuff · **Stufen:** 10
 
@@ -24004,7 +27442,7 @@ Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriff
   "maxSkillLv": 10,
   "maxUpgradeLv": 10,
   "nr": 148,
-  "skillName_de": "Scharfer Instinkte",
+  "skillName_de": "Scharfer Instinkt",
   "skillpoints": 1,
   "animationDurationRangeSeconds": {
     "min": 0.2,
@@ -24102,7 +27540,30 @@ Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriff
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -24336,6 +27797,22 @@ Eigenbuff für Abenteurer und Schamane, Dauer 1200 Sekunden. Stärke 3 +1 je wei
       "description_de": "Abenteurer-Variante: P-Angriff 20/30/40 statt 30/45/60; Stärke unverändert 3/4/5. Dauer 1200 Sekunden, Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden. Mana 50/63/76 vor Rabatten. Der Schamane behält seine bisherigen Werte.",
       "description_eng": "Adventurer variant: physical attack 20/30/40 instead of 30/45/60; Strength remains 3/4/5. Duration 1200 seconds, cooldown 60 seconds, fixed 0.1-second cast. Mana 50/63/76 before discounts. Shaman keeps its existing values."
     }
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -24496,6 +27973,29 @@ Verstärkt ausschließlich Gruppenbegleiter, keine Spieler. Je Stufe +2 Geschick
     "dex": "flat",
     "vita": "flat",
     "wis": "flat"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -24641,7 +28141,25 @@ Stärkt dich selbst für 600 Sekunden. Auf Skilllevel 1 erhältst du 1 Agilität
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -24813,7 +28331,30 @@ Eigenbuff mit zehn Skillstufen für 600 Sekunden. Jeder eigene erfolgreich treff
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -24969,7 +28510,30 @@ Eigenbuff für 600 Sekunden. Gewährt 1,2 Geschicklichkeit je Skillstufe bis 12 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -25180,7 +28744,30 @@ Eigenbuff für 600 Sekunden. Gewährt 1 P-Angriff je Skillstufe, maximal 10. Gen
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -25302,7 +28889,20 @@ Eigenbuff für 600 Sekunden. Gewährt 1 Glück je gelerntem Skilllevel, bis zu 5
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -25435,7 +29035,21 @@ Eigenbuff mit einer einzigen Skillstufe für 600 Sekunden. Gewährt +2 Agilität
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 400,
+    "rankCosts": [
+      400
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -25578,7 +29192,30 @@ Eigenbuff für 12 Sekunden, gebunden an den bei Aktivierung anvisierten Gegner. 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -25708,7 +29345,26 @@ Aktivierbarer Toggle mit zwei lernbaren Stufen. Gladiator/Berserker können Stuf
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 130,
+    "rankCosts": [
+      130,
+      170
+    ],
+    "classRankCosts": {
+      "gladiator": [
+        300
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -25842,7 +29498,20 @@ Eigenbuff, der deinen Glückswert auf Stufe 1 um 1 erhöht. Je weiterer Stufe ko
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -26022,7 +29691,30 @@ Selbstbuff. Gewährt je Skillstufe +1 Stärke und +1 Vitalität, bis zu jeweils 
   "str": 1,
   "vita": 1,
   "mdef": 35,
-  "patk": 35
+  "patk": 35,
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -26314,7 +30006,30 @@ Eigenbuff, der deinen physischen Angriff auf allen Skillstufen um 85 erhöht. W�
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 35,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -26541,7 +30256,35 @@ Eigenbuff mit 15 Skillstufen für 600 Sekunden. Stärke je Stufe: 2/3/5/6/7/8/10
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 6,
+    "rankCosts": [
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -26734,7 +30477,23 @@ Eigenbuff mit drei Stufen; vereint Volles Potential und Kritische Schläge. Max-
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 107,
+    "rankCosts": [
+      107,
+      133,
+      160
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -26913,7 +30672,25 @@ Eigenbuff für 600 Sekunden. Physische und magische Verteidigung starten bei jew
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -27079,6 +30856,24 @@ Eigenbuff für Kräuterkundler und Luminet, Dauer 180 Sekunden. Reduziert die du
     "minimumCharacterLevel": 22,
     "status": "defined",
     "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -27218,7 +31013,25 @@ Gruppenbuff: je Stufe +1 Intelligenz und +1 Willenskraft, auf Stufe 10 jeweils +
     "int": "flat",
     "wis": "flat"
   },
-  "wis": 1
+  "wis": 1,
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -27386,7 +31199,25 @@ Eigenbuff gegen neue Vergiftungen. Wenn eine Vergiftung angewendet werden würde
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -27443,7 +31274,25 @@ Stelle ein Gebräu her, dass die magischen Fähigkeiten verstärkt indem es den 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -27628,7 +31477,25 @@ Eigenbuff mit wechselndem magischem Schadensbonus. Für jede eigene magische Ski
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -27755,7 +31622,25 @@ Eigenbuff, der maximales Leben auf Stufe 1 direkt um 400 und zusätzlich Vitalit
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -27898,7 +31783,30 @@ Schneller Eigenbuff, der physische und magische Verteidigung auf Stufe 1 jeweils
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -28038,7 +31946,30 @@ Aktiver Eigenbuff mit zehn Stufen für 600 Sekunden. Erhöht physischen Skillsch
       "durationSeconds": 600
     }
   ],
-  "effectsVersion": 1
+  "effectsVersion": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -28186,6 +32117,29 @@ Aktiver Eigenbuff des Butchers mit zehn Stufen. Gewährt je Stufe +2 P-Angriff u
   },
   "statBonusUnits": {
     "patk": "flat"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -28335,6 +32289,29 @@ Aktiver Eigenbuff mit zehn Stufen für 60 Sekunden. Gewährt +2 P-Angriff je Ski
   "patk": 2,
   "statBonusTargets": {
     "patk": "self"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -28499,7 +32476,30 @@ Eigenbuff für 15 Sekunden. Erhöht das Angriffstempo auf allen Stufen um 15 Pro
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -28613,7 +32613,30 @@ Eigene Angriffe haben unter 15 Prozent Leben eine Chance von 80 Prozent, Ewiger 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -28903,7 +32926,30 @@ Dauerhafter Bonus: +3 physischer Skillschaden je gelernter Stufe, auf Stufe 10 i
       "perLevel": 1
     }
   },
-  "wis": 1
+  "wis": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29047,7 +33093,30 @@ Aktiver Eigenbuff des Ritualisten mit zehn Stufen für 300 Sekunden. Gewährt ei
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29107,7 +33176,25 @@ Unzugewiesener Reserve-Gruppenbuff mit zehn Definitionsstufen. Erhöht den magis
   "target": "group",
   "type": "buff",
   "castTimeSeconds": 0.2,
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29277,7 +33364,30 @@ Unabhängiger einmaliger magischer Flächenangriff in einem rechteckigen Bereich
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29374,7 +33484,30 @@ Permanente Passive mit zehn Stufen. Gewährt +1 Vitalität je Stufe, maximal +10
   },
   "classificationVersion": 1,
   "type": "passive",
-  "vita": 1
+  "vita": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29429,7 +33562,25 @@ Wandle Victim in magische Angriffskraft um.
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29566,7 +33717,30 @@ Eigenbuff für 600 Sekunden. Gewährt 1 Agilität je gelerntem Skilllevel, bis z
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -29739,7 +33913,30 @@ Ein Trickschuss markiert bei einem Treffer den Gegner. Auf Skilllevel 1 beträgt
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30118,7 +34315,30 @@ Markiert einen Gegner für 5 Sekunden und eröffnet das Seelensammler-Fenster. V
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30254,7 +34474,30 @@ Nur gegen ein mit Seelenschuss markiertes Ziel einsetzbar. Verursacht einmalig p
   "mana": 0,
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30354,7 +34597,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +1,4 Geschick; auf Stufe 10 insge
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30520,7 +34786,22 @@ Tarnt dich auf Stufe 1 für 5 Sekunden und auf Stufe 2 für 8 Sekunden. Während
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 130,
+    "rankCosts": [
+      130,
+      170
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30680,7 +34961,25 @@ Eigenbuff für 600 Sekunden. Gewährt 0 bis 5 Punkte Angriffsgeschwindigkeit üb
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30822,7 +35121,30 @@ Aktiver Eigenbuff für 600 Sekunden mit zehn Stufen. Gewährt 0,8 Geschick je Sk
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -30939,7 +35261,23 @@ Gruppenbuff: Laufgeschwindigkeitspunkte je Stufe 1 / 5,5 / 10. Das sind additive
   "classificationVersion": 1,
   "target": "group",
   "type": "buff",
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31084,7 +35422,30 @@ Erhöht die physische Verteidigung deiner Gruppe einschließlich dir selbst um 1
   "classificationVersion": 1,
   "target": "group",
   "type": "buff",
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31230,7 +35591,30 @@ Gruppenbuff: +15 direkte MP-Regeneration je Tick auf Stufe 1, +5 je weiterer Stu
       "durationSeconds": 1800
     }
   ],
-  "effectsVersion": 1
+  "effectsVersion": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31456,7 +35840,30 @@ Eigenbuff mit zehn Stufen für 600 Sekunden. Stärke, Vitalität und Willenskraf
   "target": "self",
   "type": "selfBuff",
   "vita": 1,
-  "wis": 1
+  "wis": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 35,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31516,7 +35923,25 @@ Erhöhe den physischen Angriff aller Waffen. Castzeit 0,3 Sekunden. Cooldown 60 
   "target": "group",
   "type": "buff",
   "castTimeSeconds": 0.3,
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31576,7 +36001,25 @@ Erhöhe die Verteidigung aller Rüstungen. Castzeit 0,3 Sekunden. Cooldown 60 Se
   "target": "group",
   "type": "buff",
   "castTimeSeconds": 0.3,
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31767,7 +36210,30 @@ Aurora-Segen vereint die bisherigen Angriffs-, Mentalitäts- und Verteidigungsse
   "classificationVersion": 1,
   "target": "group",
   "type": "buff",
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -31888,7 +36354,25 @@ Erhöht die Mana-Regeneration aller Gruppenmitglieder um 18 sowie ihre Intellige
   "target": "group",
   "type": "buff",
   "castTimeSeconds": 0.3,
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -32009,7 +36493,25 @@ Erhöht die physische und magische Verteidigung aller Gruppenmitglieder um jewei
   "target": "group",
   "type": "buff",
   "castTimeSeconds": 0.3,
-  "castTimeStatus": "defined"
+  "castTimeStatus": "defined",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -32144,7 +36646,25 @@ Wandelt eigenes Leben in Mana um. Je gelerntem Skilllevel opferst du 50 HP und e
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -32282,7 +36802,35 @@ Permanentes allgemeines Waffentraining mit 20 Stufen für alle Klassen. Je geler
     "furtherSkillLevelsStatus": "pending"
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "skillPointCosts": {
+    "firstLevel": 1,
+    "rankCosts": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      10,
+      11,
+      13,
+      14,
+      16,
+      17,
+      19,
+      20,
+      22,
+      23,
+      25,
+      26,
+      28,
+      29
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -32451,7 +36999,25 @@ Lässt einen Gegner für 10 Sekunden brennen: zehn magische Schadensticks, einer
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 30,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -32602,7 +37168,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +1 Stärke, +0,5 Vitalität, +0,8
   "int": 0.8,
   "str": 1,
   "vita": 0.5,
-  "wis": 0.5
+  "wis": 0.5,
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -32830,7 +37419,25 @@ Erschafft ein Verstärkungsfeld für Gruppenmitglieder der Völker Aurora. Im Fe
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -33060,7 +37667,20 @@ Erschafft ein Verstärkungsfeld für Gruppenmitglieder der Völker Menschen und 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -33234,6 +37854,23 @@ Belebt einen verstorbenen Verbündeten wieder. Vier Skillstufen: Das Ziel wird m
     "type": "linear",
     "base": 100,
     "perLevel": -10
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 45,
+    "rankCosts": [
+      45,
+      65,
+      85,
+      105
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -33325,7 +37962,21 @@ Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/
       "areaCenter": "caster"
     }
   ],
-  "effectsVersion": 1
+  "effectsVersion": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -33424,7 +38075,30 @@ Dauerhafter Attributanteil: je gelernter Stufe +1,4 Intelligenz, +0,6 Willenskra
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -33510,7 +38184,30 @@ Permanenter passiver Skill mit zehn Stufen. Erhöht den direkten magischen Skill
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -33686,7 +38383,35 @@ Schleudert einen grellen Lichtblitz auf den Gegner. Einmaliger magischer Angriff
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -33843,7 +38568,30 @@ Beschwört eine Welle aus Licht, die durch eine größere Fläche fliegt. In der
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -34093,7 +38841,40 @@ Trifft zweimal mit kombiniertem physischem und magischem Schaden. 20 Skillstufen
   },
   "classificationVersion": 1,
   "damageType": "mixed",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 7,
+    "rankCosts": [
+      7,
+      8,
+      10,
+      11,
+      12,
+      14,
+      15,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      25,
+      26,
+      28,
+      29,
+      30,
+      32,
+      33
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -34275,7 +39056,30 @@ Ein Licht so rein, dass es die Dunkelheit vertreibt und geschundene Seelen reini
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -34382,7 +39186,30 @@ Verstärkt deine Blutmagie auf Skilllevel 1 um 4 magischen Angriff. Solange die 
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -34526,7 +39353,30 @@ Erschafft ein heiliges Kreuz, schleudert es nach vorne und lässt es explodieren
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 21,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -34695,7 +39545,30 @@ Schleudert drei Lichtspeere auf einen Gegner. Jeder Speer verursacht den vollen 
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -34912,7 +39785,30 @@ Im Zielgebiet um den anvisierten Gegner entsteht eine Lichtkugel. Nach 2 Sekunde
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 25,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -35147,7 +40043,23 @@ Erschafft ein kristallenes Gefängnis aus Licht, das den Gegner auf der Stelle f
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -35272,7 +40184,30 @@ Opfert dein gesamtes aktuell verfügbares Mana für eine gewaltige einmalige Exp
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -35468,7 +40403,30 @@ Belegt den Gegner mit einem Bann, der das Wirken von Spells für 3 Sekunden unte
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -35842,6 +40800,52 @@ Schneidet deine Feinde mit Klingen aus Wind. Der magische Grundschaden des Skill
       "Witcher": 10
     },
     "status": "defined"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 22,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {
+      "druid": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -36049,6 +41053,21 @@ Permanente Passive mit zwei Stufen. Erhöht genau einen ausgewählten, bereits g
       "base": -20,
       "perLevel": 5
     }
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 173,
+    "rankCosts": [
+      173,
+      227
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -36187,6 +41206,22 @@ Gruppenbuff über drei Stufen: Angriffsgeschwindigkeitspunkte 5 / 7,5 / 10 und L
   "statBonusTargets": {
     "atkSpeed": "selfAndAllies",
     "movementSpeed": "selfAndAllies"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -36344,7 +41379,30 @@ Gruppenbuff: +18 körperlicher Skillschaden je Stufe, maximal +180. Zusätzlich 
       "durationSeconds": 1800
     }
   ],
-  "effectsVersion": 1
+  "effectsVersion": 1,
+  "learningRequirements": {
+    "minimumCharacterLevel": 23,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -36460,6 +41518,29 @@ Gruppenbuff: +18 magische Verteidigung je Stufe, auf Stufe 10 +180. Kein zusätz
   "castTimeStatus": "defined",
   "statBonusUnits": {
     "mdef": "flat"
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
   }
 }
 ```
@@ -36575,7 +41656,21 @@ Beschwört einen Seelenbegleiter für maximal 360 Sekunden (6 Minuten), sofern e
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -36715,7 +41810,23 @@ Schlägt auf den Boden vor dir und erzeugt eine Schockwelle, die Gegner in einem
   },
   "classificationVersion": 1,
   "damageType": "mixed",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -36817,7 +41928,16 @@ Erschafft für 9 Sekunden eine schützende Barriere mit 4 Metern Radius um dich.
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -36936,7 +42056,21 @@ Triff ein markiertes Ziel und entfessle die Macht der mit Seelensammler gesammel
   },
   "classificationVersion": 1,
   "damageType": "mixed",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 400,
+    "rankCosts": [
+      400
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -37127,7 +42261,30 @@ Wirft eine Axt auf das Hauptziel, stürmt kurz hinterher und schlägt mit der zw
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -37292,7 +42449,30 @@ Sendet einen Lichtimpuls auf das Ziel und verursacht einmalig magischen Schaden.
   "mana": 11,
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "minimumCharacterLevel": 17
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -37455,7 +42635,30 @@ Sendet einen Impuls der Dunkelheit aus und verursacht einmalig magischen Schaden
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -37638,7 +42841,30 @@ Stürmt auf den Gegner zu und stößt ihn zurück. Verursacht einmalig physische
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending",
+    "minimumCharacterLevel": 47
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -37782,7 +43008,25 @@ Führe einen tödlichen Hieb aus, der schweren Schaden verursacht und eine hohe 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -37970,7 +43214,23 @@ Vorläufig beibehaltener Flächenangriff: Meteoritenschauer über einer Fläche 
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 47,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -38123,7 +43383,23 @@ Aktiver Eigenbuff für 600 Sekunden. Je Skillstufe +2 Intelligenz, +3 Willenskra
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -38245,7 +43521,21 @@ Einstufige passive Verbesserung der questgebundenen Morrak-Beschwörung. Der Rit
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 300,
+    "rankCosts": [
+      300
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -38426,7 +43716,30 @@ Eigenbuff mit zehn Stufen. Gewährt 0 bis 10 % zusätzliche Angriffsgeschwindigk
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -38737,7 +44050,30 @@ Erzeugt eisigen Regen um das anvisierte Ziel in 5 Metern Radius. Jeder Tick trif
   },
   "classificationVersion": 1,
   "damageType": "magical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -38991,7 +44327,23 @@ Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt a
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39118,7 +44470,21 @@ Permanenter passiver Vorratsbonus mit einer lernbaren Stufe. Je volle zehn aktue
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 400,
+    "rankCosts": [
+      400
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39328,7 +44694,25 @@ Eigenbuff für 600 Sekunden (10 Minuten). Erhöht das maximale Mana auf Stufe 1 
   },
   "classificationVersion": 1,
   "target": "self",
-  "type": "selfBuff"
+  "type": "selfBuff",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39498,7 +44882,24 @@ Dauerhafter Attributanteil: je gelernter Stufe +3,25 Stärke; auf Stufe 4 insges
       "perLevel": 3.25
     }
   },
-  "str": 3.25
+  "str": 3.25,
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 60,
+    "rankCosts": [
+      60,
+      87,
+      113,
+      140
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39707,7 +45108,22 @@ Beschwört einen Naturgeist, der mit kleinen Wirbelstürmen magischen Windschade
         ]
       }
     }
-  ]
+  ],
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 130,
+    "rankCosts": [
+      130,
+      170
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39785,7 +45201,30 @@ Permanentes Breitschwert-Training des Abenteurers für seine zweihändige Schwer
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39848,7 +45287,21 @@ Permanente Passive mit einer einzigen Skillstufe. Bei 100 % Vertrauen erhält da
     ]
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 400,
+    "rankCosts": [
+      400
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -39911,7 +45364,25 @@ Nach einem erlittenen kritischen Treffer: 25 % Chance auf 15 Sekunden Beharrlich
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 20,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -40063,7 +45534,30 @@ Zwei aufeinanderfolgende physische Hiebe. Erster Hieb: 27 Grundschaden, +56 je w
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 10,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -40239,7 +45733,40 @@ Rudelangriff, 20 Stufen. Der Abenteurer springt zurück, gibt bis zu zwei verfü
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 27,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -40483,7 +46010,40 @@ Lebenstransfer: 20 Stufen, 0,8 Sekunden Castzeit. Vier unterbrechbare Heilimpuls
     ]
   },
   "classificationVersion": 1,
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 12,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -40647,7 +46207,26 @@ Horizontaler physischer Schwerthieb: 117 Grundschaden, +57 je weiterer Stufe bis
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 20,
+    "rankCosts": [
+      20,
+      32,
+      44,
+      56,
+      68,
+      80
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -40770,7 +46349,30 @@ Ermöglicht das Führen von zwei Einhand-Streitkolben. Permanentes Waffentrainin
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 15,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -41203,7 +46805,30 @@ Die Gunst der Sylphen verbessert deine Windkontrolle. Zehn Stufen. Wirkt ausschl
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -41621,7 +47246,25 @@ Permanente Passive mit fünf Stufen. Erhöht den physischen Schaden von Beben, E
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -41800,7 +47443,40 @@ Lässt große, überkreuzte Felsspitzen um das anvisierte Ziel aus dem Boden sch
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 37,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 5,
+    "rankCosts": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42014,7 +47690,35 @@ Hebt Felsplatten aus dem Boden und schleudert sie auf ein Hauptziel. Zwei Platte
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 65,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 8,
+    "rankCosts": [
+      8,
+      11,
+      13,
+      16,
+      19,
+      21,
+      24,
+      27,
+      29,
+      32,
+      35,
+      37,
+      40,
+      43,
+      45
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42169,7 +47873,30 @@ Bei weniger als 50 Prozent deines maximalen Manas können erfolgreiche eigene Au
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 42,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42375,7 +48102,30 @@ Hebt unter dir eine steinerne Säule aus dem Boden und trägt dich mit nach oben
   },
   "classificationVersion": 1,
   "damageType": "physical",
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 8,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42515,7 +48265,25 @@ Dauerhafter Attributanteil: je gelernter Stufe +2 Stärke, +1,6 Vitalität, +2 I
   },
   "classificationVersion": 1,
   "type": "passive",
-  "vita": 1.6
+  "vita": 1.6,
+  "learningRequirements": {
+    "minimumCharacterLevel": 60,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 40,
+    "rankCosts": [
+      40,
+      60,
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42646,7 +48414,30 @@ Permanente Passive. Je Skillstufe erleidest du 1 Prozent weniger Giftschaden und
     "extensionNeedsDefinition": []
   },
   "classificationVersion": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 10,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 10,
+    "rankCosts": [
+      10,
+      14,
+      19,
+      23,
+      28,
+      32,
+      37,
+      41,
+      46,
+      50
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42725,7 +48516,25 @@ Permanente passive Spezialisierung mit 5 Stufen, nur für Druide und seine Weite
   "skillName_de": "Dornige Rose",
   "skillName_eng": "Thorned Rose",
   "skillpoints": 1,
-  "type": "passive"
+  "type": "passive",
+  "learningRequirements": {
+    "minimumCharacterLevel": 33,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 30,
+    "rankCosts": [
+      30,
+      45,
+      60,
+      75,
+      90
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -42860,7 +48669,30 @@ Ein gezielter Schuss mit erhöhter Durchdringung. Verursacht einmalig physischen
       "perLevel": 61
     }
   },
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 55,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 13,
+    "rankCosts": [
+      13,
+      19,
+      25,
+      31,
+      37,
+      43,
+      49,
+      55,
+      61,
+      67
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 
@@ -43026,7 +48858,23 @@ Trifft ein gegnerisches Ziel einmal mit magischem Schaden: 143/219/295 Skill-Gru
       "perLevel": 76
     }
   },
-  "type": "skill"
+  "type": "skill",
+  "learningRequirements": {
+    "minimumCharacterLevel": 17,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "skillPointCosts": {
+    "firstLevel": 80,
+    "rankCosts": [
+      80,
+      100,
+      120
+    ],
+    "classRankCosts": {},
+    "furtherLevelsStatus": "defined",
+    "version": 2
+  }
 }
 ```
 

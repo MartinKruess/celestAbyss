@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {ARMOR_SLOTS,allocateArmorTotal} from '../services/armorAllocation.js';
+import {armorRanksFromAnchor,sumArmorDefense} from '../services/armorRankProgression.js';
 
 const read = async path => JSON.parse(await fs.readFile(path, 'utf8'));
 const audit = await read('data/balancing/armor-source-audit.json');
@@ -10,6 +11,7 @@ const r6 = await read('data/balancing/r6-equipment.json');
 const names = await read('data/balancing/armor-names.json');
 const defenseModel=await read('data/balancing/armor-defense-model.json');
 const defenseScale=defenseModel.scaleNumerator/defenseModel.scaleDenominator;
+const rankCurve=defenseModel.rankProgression?.mode==='weaponCurveFromRank6Parts'?defenseModel.rankProgression:null;
 assert.ok(defenseScale>0&&defenseScale<=1);
 assert.equal(audit.rows.find(r=>r.sourceClass===defenseModel.anchor.sourceClass&&r.rank===defenseModel.anchor.rank).raw[defenseModel.anchor.field],defenseModel.anchor.original);
 assert.equal(Math.round(defenseModel.anchor.original*defenseScale),defenseModel.anchor.target);
@@ -41,8 +43,23 @@ for(const row of audit.rows) {
     raw[field]=Math.round(raw[field]*target/baselineRank6);
     if(row.rank===6)assert.equal(raw[field],target);
   }
-  const physical = allocate(raw.physicalDefense);
-  const magical = allocate(raw.magicalDefense);
+  const physicalTarget=defenseModel.physicalDefenseByClassAndRank?.[row.sourceClass]?.[row.rank];
+  if(physicalTarget!==undefined){
+    assert.ok(Number.isFinite(physicalTarget)&&physicalTarget>=0);
+    raw.physicalDefense=physicalTarget;
+  }
+  const magicalTarget=defenseModel.magicalDefenseByClassAndRank?.[row.sourceClass]?.[row.rank];
+  if(magicalTarget!==undefined){
+    assert.ok(Number.isFinite(magicalTarget)&&magicalTarget>=0);
+    raw.magicalDefense=magicalTarget;
+  }
+  const curveParts=rankCurve?slots.map(slot=>{
+    const anchor=rankCurve.anchors.find(a=>a.sourceClass===row.sourceClass&&a.slot===slot.key);
+    assert.ok(anchor,'Missing R6 anchor');
+    return armorRanksFromAnchor(anchor.raw,rankCurve.growthPercentages)[row.rank-1];
+  }):null;
+  const physical = curveParts?curveParts.map(p=>p.physicalDefense):allocate(raw.physicalDefense);
+  const magical = curveParts?curveParts.map(p=>p.magicalDefense):allocate(raw.magicalDefense);
   const setParts = slots.map((slot,i) => ({
     id:`armor-${row.sourceClass.toLowerCase()}-r${row.rank}-${slot.key}`,
     sourceClass:row.sourceClass, className:row.className, rank:row.rank,
@@ -57,6 +74,7 @@ for(const row of audit.rows) {
     bonusSlots:Array.from({length:6},()=>null),bonusSlotLimit:defenseModel.bonusSlotRules.availableByRank[row.rank],
   }));
   parts.push(...setParts);
+  if(rankCurve)for(const field of ['physicalDefense','magicalDefense'])raw[field]=sumArmorDefense(setParts,field);
   sets.push({name:row.sourceClass,rank:row.rank,row:row.row,raw,
     converted:{health:0,mana:0,...raw},partIds:setParts.map(p=>p.id)});
 }
@@ -79,7 +97,7 @@ if(previousParts) for(const part of parts) {
 }
 for(const set of sets){
  const selected=parts.filter(p=>set.partIds.includes(p.id));
- for(const key of ['physicalDefense','magicalDefense'])assert.equal(selected.reduce((n,p)=>n+p.raw[key],0),set.raw[key]);
+ for(const key of ['physicalDefense','magicalDefense'])assert.equal(sumArmorDefense(selected,key),set.raw[key]);
  if(set.rank>1){const prior=sets.find(s=>s.name===set.name&&s.rank===set.rank-1);for(const key of ['physicalDefense','magicalDefense'])assert.ok(set.raw[key]>=prior.raw[key]);}
 }
 const backup = `data/balancing/history/before-five-slot-armor-${Date.now()}`;
@@ -97,11 +115,14 @@ r6.assumptions='Armor: five slots, P/M defense only, no additional attributes or
 assert.equal(JSON.stringify(ranked.weapons),weaponsBefore);
 const definition={schemaVersion:1,source:'data/source/Questsystem.ods',
   status:'Local armor definitions; not imported into MongoDB',
-  allocation:slots,rounding:'Largest remainder, ties in slot order; preserve each class/rank defense total exactly.',
+  allocation:slots,rounding:rankCurve?rankCurve.rounding:'Largest remainder, ties in slot order; preserve each class/rank defense total exactly.',
+  ...(rankCurve?{rankProgression:{mode:rankCurve.mode,anchorRank:6,growthPercentages:rankCurve.growthPercentages,decimalPlaces:2}}:{}),
   additionalStats:'Removed until later assignment: direct HP/MP, vitality and wisdom. Six empty bonus slots per item.',
   correctedSourceExceptions:audit.sumErrors,
   namingDefinition:'data/balancing/armor-names.json',bonusSlotRules:defenseModel.bonusSlotRules,
   defenseModel:'data/balancing/armor-defense-model.json',defenseScale,rank6Targets:defenseModel.rank6Targets??{},
+  ...(defenseModel.physicalCalibration?{physicalCalibration:defenseModel.physicalCalibration}:{}),
+  ...(defenseModel.magicalCalibration?{magicalCalibration:defenseModel.magicalCalibration}:{}),
   sets,parts};
 definition.armorSets=Object.entries(names.rank6Sets??{}).map(([sourceClass,set])=>({
   id:set.id,name:set.name,description_de:set.description,sourceClass,className:audit.aliases[sourceClass],rank:6,
@@ -191,6 +212,15 @@ if(defenseModel.bonusSlotRules.randomSelection){
  for(const entry of defenseModel.bonusSlotRules.randomSelection.pool.filter(e=>e.rollRangeByRank))md+=`| ${entry.name} | ${Array.from({length:6},(_,i)=>{const range=entry.rollRangeByRank[String(i+1)];if(!range)return '—';return range.min===range.max?String(range.min):`${range.min}–${range.max} (Schritt ${range.step})`;}).join(' | ')} |\n`;
  if(defenseModel.bonusSlotRules.randomSelection.futureSmithingDesign)md+='\n### Späterer Schmiedeausbau – Entwurfsrichtung\n\nDie Grundabwehr steigt mit dem Rang; die Zusatzwertwürfe bestimmen zusätzlich die Qualität des einzelnen Fundstücks. Gezieltes Schmieden soll einzelne vorhandene Zusatzwerte mit passenden Materialien und einer Erfolgschance bis zum normalen Rangmaximum verbessern können. Danach ist Meisterschmiedearbeit mit selteneren Spezialmaterialien vorgesehen, beispielsweise für Hauptattribute von R6-Maximum 8 auf bis zu 10. Drop-Maxima bleiben unverändert. Noch keine Umsetzung: Materialkosten, Erfolgschancen, Fehlschläge, zulässige Werte/Ränge und endgültige Meistergrenzen sind offen.\n';
 
+}
+if(defenseModel.physicalCalibration)md=md.replace('\n\n','\n\nAktuelle physische Kalibrierung: R2, R3, R5 und R6 sind pro Klasse aus R4 auf Level 60 abgeleitet. Gladiator R4 wurde auf 169 P-Abwehr gekürzt. R1 bleibt unverändert. Diese expliziten P-Abwehrsummen überschreiben die historische Skalierung; M-Abwehr bleibt unverändert.\n\n');
+if(defenseModel.r1StarterAdjustment)md=md.replace('R1 bleibt unverändert.','R1 wurde separat um die festgelegten ganzen Abwehrpunkte gekürzt; keine Kalibrierung auf Rüstungslevel 1.');
+if(defenseModel.magicalCalibration)md=md.replace('M-Abwehr bleibt unverändert.','Auch die M-Abwehr von R2, R3, R5 und R6 ist je Klasse am unveränderten magischen R4-Anker kalibriert und aufgerundet. M-Abwehr von R1 bleibt unverändert; auf Level 1 wird ohne Rüstung geprüft.');
+if(rankCurve){
+ md='# Rüstungsteile – gemeinsame Waffen-Rangkurve\n\nAlle 65 R6-Einzelteile bleiben unverändert. R1–R5 werden pro Teil und Abwehrart rückwärts berechnet: R1→R2 +77 %, R2→R3 +75 %, R3→R4 +73 %, R4→R5 +71 %, R5→R6 +69 %. Nach jedem Schritt kaufmännisch auf zwei Nachkommastellen runden, intern mit ganzzahligen Hundertsteln rechnen. Setwerte sind die exakte Summe der fünf Teile. Die Spielanzeige darf ganze Zahlen zeigen; diese Anzeige darf nicht als Berechnungsgrundlage zurückfließen.\n\nNur direkte P-/M-Abwehr; Charakterwerte, Attribute, Passive, Steine, Zufallsboni und Schild werden separat addiert. Umhänge bleiben ohne festgelegte Abwehr. R1 ist nicht verbesserbar. Zusatzwertplätze und Sockel sind getrennte Systeme.\n\n'+(databaseVerified?'Aktuelle Definitionen gegen MongoDB geprüft.':'Lokale Definitionen aktualisiert; der Datenbankabgleich für diese Kurve steht noch aus.')+'\n\n'+md.slice(md.indexOf('## Gesamtwerte auf einen Blick'));
+ const allocationStart=md.indexOf('## Verteilungsregel für neue Rüstungen');
+ const allocationEnd=md.indexOf('\n## ',allocationStart+4);
+ md=md.slice(0,allocationStart)+'## Verteilungsregel für neue Rüstungen\n\nR6 behält seine bisherigen ganzzahligen Einzelteile und damit die bestehende Verteilung Brust 30 %, Hose 26 %, Helm 16 %, Handschuhe 16 %, Schuhe 12 % einschließlich historischer Rundung. Niedrigere Ränge werden direkt aus diesen Teilen zurückgerechnet, statt Setwerte erneut ganzzahlig zu verteilen. Gemeinsame Berechnung: `services/armorRankProgression.js`.\n\n'+md.slice(allocationEnd);
 }
 await fs.writeFile('docs/balancing/armor-parts.md',md);
 let setMd='# Rang-6-Rüstungssets – Morgenblüte und Dämmerblüte\n\nVier benannte Sets mit jeweils fünf Teilen. Die Beschreibungen erläutern das Aussehen; daraus entstehen keine zusätzlichen Spielwirkungen. Abwehrwerte entsprechen der aktuellen Fünf-Teile-Verteilung. Je Teil bleiben sechs Bonusplätze leer. Setboni, Herstellungsrezepte und Materialmengen sind noch offen. Lokale Definitionen, noch keine Datenbank-Items.\n\nDie Silberweberhaube war zuvor ein Namensvorschlag im Gespräch. In den gespeicherten Rang-4- und Rang-5-Teilen ist sie nicht vergeben; die Heilerhaube in Rang 4 heißt „Haube des Morgenlichts“.\n\n';

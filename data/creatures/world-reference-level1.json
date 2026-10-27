@@ -1,0 +1,28 @@
+{
+  "key": "world-reference-level1",
+  "name_de": "World-Monster – obere Level-1-Referenz",
+  "name_eng": "World Monster – Upper Level-One Reference",
+  "kind": "profile",
+  "parentKey": "base-creature",
+  "version": 1,
+  "status": "draft",
+  "spawnable": false,
+  "description_de": "Unverdoppelte 60-Prozent-Referenz aus Level-1-Charakteren mit einer Rang-1-Klassenwaffe, ohne Rüstung und Skillboni. Obere Orientierung für gewöhnliche Level-1-World-Monster, keine garantierte leichte Begegnung für jede Klasse. Die zuvor getestete Verdopplung ist verworfen. Physischer und magischer Angriff sind alternative Referenzen für entsprechende Kreaturen; daraus folgt keine automatische Verwendung beider Angriffsarten.",
+  "description_eng": "Undoubled 60th-percentile reference from level-one characters with one rank-one class weapon, without armor or skill bonuses. Upper guideline for ordinary level-one world monsters, not a guaranteed easy encounter for every class. The previously tested doubling is discarded. Physical and magical attack are alternative references for corresponding creatures, not automatic dual attack types.",
+  "statMultipliers": {
+    "maxHealth": 183.2,
+    "maxMana": 151.4,
+    "physicalAttack": 31.6,
+    "magicalAttack": 38.6,
+    "physicalDefense": 6,
+    "magicalDefense": 8
+  },
+  "pending": [
+    "Level growth remains unconfigured and is inherited from the base",
+    "Actual starter monsters may use weaker role or variant modifiers",
+    "Attack type, skills, model and actual base attack frequency depend on the creature",
+    "Physical attack percentile uses physical classes only; magical attack percentile uses mages only; hybrids require separate review",
+    "Source: data/balancing/level-one-character-reference.json; quantile uses linear interpolation at index (n-1)*0.6",
+    "Health and Mana keep their fractional reference internally and are rounded only after resolution"
+  ]
+}

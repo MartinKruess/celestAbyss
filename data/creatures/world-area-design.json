@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "status": "provisionalAreaDesignNotImplementedSpawner",
+  "notes": [
+    "Level ranges are approximate planning, not hard progression gates or fixed quests.",
+    "Level-60 comparisons normalize monster types for comparison; they do not assign their intended spawn level.",
+    "Existing gray wolf leader always appears with two normal gray wolves.",
+    "No Wald-Oger or Wald-Zyklop added. Hobgoblins in open forest are tentative and conflict with earlier cave/mountain-only assignment; confirm before spawning."
+  ],
+  "areas": [
+    {
+      "key": "starter-village-outskirts",
+      "levelRange": [
+        1,
+        3
+      ],
+      "monsters": [
+        {
+          "family": "wolves",
+          "role": "offspring",
+          "levels": [
+            1
+          ]
+        },
+        {
+          "family": "wolves",
+          "role": "adult",
+          "levels": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "family": "slimes",
+          "levelRange": [
+            1,
+            3
+          ],
+          "status": "planned_values_pending"
+        }
+      ]
+    },
+    {
+      "key": "early-forest",
+      "levelRange": [
+        3,
+        7
+      ],
+      "monsters": [
+        {
+          "family": "goblins",
+          "habitat": "forest",
+          "firstAppearanceRange": [
+            3,
+            5
+          ]
+        },
+        {
+          "family": "wolves",
+          "levelRange": [
+            5,
+            7
+          ]
+        },
+        {
+          "family": "goblins",
+          "habitat": "forest",
+          "levelRange": [
+            5,
+            7
+          ]
+        },
+        {
+          "family": "orcs",
+          "habitat": "forest",
+          "levelRange": [
+            5,
+            7
+          ],
+          "grouping": "single_or_small_groups"
+        },
+        {
+          "family": "slimes",
+          "status": "recurring"
+        }
+      ]
+    },
+    {
+      "key": "next-city-and-surrounding-forest",
+      "arrivalLevelApprox": 10,
+      "postEarlyQuestsLevelApprox": [
+        13,
+        14
+      ],
+      "goblinContentLevelApprox": [
+        13,
+        20
+      ],
+      "distanceRule": "Stronger enemies farther from city",
+      "monsters": [
+        {
+          "family": "wolves"
+        },
+        {
+          "family": "goblins",
+          "habitat": "forest"
+        },
+        {
+          "family": "orcs",
+          "habitat": "forest"
+        },
+        {
+          "family": "birds"
+        },
+        {
+          "family": "slimes"
+        },
+        {
+          "family": "hobgoblins",
+          "status": "tentative_open_forest_presence_needs_habitat_confirmation"
+        }
+      ]
+    },
+    {
+      "key": "forest-cave",
+      "monsters": [
+        {
+          "family": "goblins",
+          "habitat": "cave",
+          "strength": "initially_lower_level"
+        },
+        {
+          "family": "slimes"
+        }
+      ],
+      "otherCreatures": "pending"
+    },
+    {
+      "key": "deep-forest",
+      "rareEncounters": [
+        {
+          "family": "trolls",
+          "variant": "Waldtroll",
+          "levelRangeApprox": [
+            20,
+            30
+          ],
+          "rarity": "very_rare"
+        }
+      ]
+    },
+    {
+      "key": "mountains-and-caves",
+      "monsters": [
+        {
+          "family": "mountain_and_cave_creatures",
+          "specificSpawnLevels": "pending"
+        },
+        {
+          "family": "ogres",
+          "habitats": [
+            "mountain",
+            "cave"
+          ],
+          "earliestPlayerEncounterLevelApprox": 10
+        },
+        {
+          "family": "cyclopes",
+          "variant": "Bergzyklop",
+          "habitat": "mountain"
+        }
+      ]
+    }
+  ]
+}

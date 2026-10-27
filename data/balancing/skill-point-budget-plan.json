@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "status": "appliedToSkillCostsAndDevelopmentDatabase",
+  "regularSkillTotal": 300,
+  "lateSkillFirstCharacterLevel": 55,
+  "lateSkillSurchargeTotal": 100,
+  "lateSkillTotal": 400,
+  "referenceClassSkillCount": 32,
+  "referenceLateSkillCount": 4,
+  "referenceClassTotal": 10000,
+  "interpretation": "The surcharge is 100 SP for the entire skill, not per learned rank. Threshold uses the character level of the first unlock.",
+  "distribution": "Increasing positive integer costs across learned ranks; last rank most expensive. Preserve approved inexpensive starter unlocks wherever compatible. Further-rank character-level gates remain to be planned.",
+  "starterExceptions": "Taming retains existing first costs and increases by one SP per further rank. Other approved starter first costs are preserved within the 300/400 total. Actual class totals are stored in full-skill-point-costs-by-class.json.",
+  "playerLevelAwards": "data/balancing/player-skill-point-progression.json",
+  "futureSkills": {
+    "countPerClassApproximate": [3, 5],
+    "firstUnlockRangeApproximate": [70, 150],
+    "alternativeStartLevel": 75,
+    "assignment": "Wait for the user's skill list and required order, then distribute unlocks within the requested range while preserving that order.",
+    "budget": "Additional to the current class budget; no new skills or unlocks generated now."
+  },
+  "overworldSkillPointRewards": "Not yet priced; no final lifetime cap of 10000 earned points."
+}

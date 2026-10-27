@@ -1,0 +1,59 @@
+{
+  "status": "analysisOnlyNoGameChanges",
+  "excluded": [
+    "R1 starter exception",
+    "Anchor rank itself"
+  ],
+  "scores": [
+    {
+      "anchorRank": 2,
+      "anchorLevel": 20,
+      "total": 52,
+      "exact": 0,
+      "within1": 6,
+      "within2": 11,
+      "within5": 31,
+      "meanAbsoluteDeviation": 5.272521633490768
+    },
+    {
+      "anchorRank": 3,
+      "anchorLevel": 40,
+      "total": 52,
+      "exact": 0,
+      "within1": 3,
+      "within2": 10,
+      "within5": 25,
+      "meanAbsoluteDeviation": 9.17046480986012
+    },
+    {
+      "anchorRank": 4,
+      "anchorLevel": 60,
+      "total": 52,
+      "exact": 0,
+      "within1": 8,
+      "within2": 17,
+      "within5": 35,
+      "meanAbsoluteDeviation": 5.835035914409617
+    },
+    {
+      "anchorRank": 5,
+      "anchorLevel": 80,
+      "total": 52,
+      "exact": 0,
+      "within1": 11,
+      "within2": 16,
+      "within5": 35,
+      "meanAbsoluteDeviation": 4.327749026036619
+    },
+    {
+      "anchorRank": 6,
+      "anchorLevel": 100,
+      "total": 52,
+      "exact": 0,
+      "within1": 6,
+      "within2": 15,
+      "within5": 31,
+      "meanAbsoluteDeviation": 5.179438235301702
+    }
+  ]
+}

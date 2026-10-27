@@ -1,0 +1,1374 @@
+{
+  "status": "shortFightDiagnosticNotAppliedToMonsters",
+  "sourcePath": "data/balancing/progression-dps-calibration.json",
+  "sourceSha256": "0b035dd6d1f62b41330a041c9706a96b3aaae8a7b4c29c34a40ec664179bbe18",
+  "notes": [
+    "Same builds, costs, class caps, buff providers and armor as the600-second calibration. Normal, non-attacking dummy; no passive HP regeneration or outside healing.",
+    "Five-second HP reference=(mean damage in the first5seconds+median damage in the first5seconds)/2 across eleven damage classes. This is separate from sustained DPS times5.",
+    "A fresh fight starts with full resources and prepared buffs. All cooldowns start in the same state as in the source calibration; skill hits at the5-second boundary count.",
+    "One common HP cannot enforce a narrow kill-time band for all classes. Report actual kill times and controls instead of assuming it.",
+    "The20/30 full-skill upper bounds are not progression baselines. Level120 reuses R6 gear/stones. Undefined item upgrades and other future bonuses remain excluded."
+  ],
+  "stages": [
+    {
+      "level": 1,
+      "rank": 1,
+      "status": "starterAutoAttackReference",
+      "monsterDefense": 4.166666666666667,
+      "sustainedReferenceDps": 22.101863636363504,
+      "sustainedFiveSecondHp": 110.50931818181752,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 118.6181818181818,
+        "median": 126,
+        "reference": 122.3090909090909,
+        "min": 75.6,
+        "max": 168
+      },
+      "freshFiveSecondHp": 122.3090909090909,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.4363636363636365,
+        "median": 4.55,
+        "reference": 4.993181818181818,
+        "min": 3.41,
+        "max": 8.15
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 100.79999999999998,
+          "sustainedHpKillTime": 5.43,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.34,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 168,
+          "sustainedHpKillTime": 2.89,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.85,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 79.8,
+          "sustainedHpKillTime": 7.24,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 8.15,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 105,
+          "sustainedHpKillTime": 5.13,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.13,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 129.5,
+          "sustainedHpKillTime": 4.55,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.55,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 129.5,
+          "sustainedHpKillTime": 4.55,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.55,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 154,
+          "sustainedHpKillTime": 3.41,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.41,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 71.39999999999999,
+          "sustainedHpKillTime": 7.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 8.55,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 136.5,
+          "sustainedHpKillTime": 4.55,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.55,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 136.5,
+          "sustainedHpKillTime": 4.55,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.55,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 75.6,
+          "sustainedHpKillTime": 6.84,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.7,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 126,
+          "sustainedHpKillTime": 4.28,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.28,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 93.1,
+          "sustainedHpKillTime": 6.48,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.29,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 20,
+      "rank": 2,
+      "status": "maxSkillUpperBoundNotLegalProgressionClaim",
+      "monsterDefense": 83.33333333333334,
+      "sustainedReferenceDps": 300.7660653865539,
+      "sustainedFiveSecondHp": 1503.8303269327696,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 8019.38777340909,
+        "median": 7602.700000000002,
+        "reference": 7811.043886704546,
+        "min": 3685.555999999999,
+        "max": 11919.8128
+      },
+      "freshFiveSecondHp": 7811.043886704546,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.384545454545454,
+        "median": 5.4,
+        "reference": 5.3922727272727276,
+        "min": 1.7,
+        "max": 11.89
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 7580.020000000001,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.68,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 10031.6286,
+          "sustainedHpKillTime": 0.2,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 1.7,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 5919.052299999999,
+          "sustainedHpKillTime": 1.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 11919.8128,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 5437.971000000001,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 12.95,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 3685.555999999999,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 11.89,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 8389.975999999999,
+          "sustainedHpKillTime": 0.9,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.12,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 7021.461999999999,
+          "sustainedHpKillTime": 0,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.07,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 8711.500000000002,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 10892.162767500002,
+          "sustainedHpKillTime": 1.6,
+          "sustainedRawDeathAt": 28.5,
+          "sustainedArmoredDeathAt": 28.5,
+          "freshHpKillTime": 3.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 6725.857039999998,
+          "sustainedHpKillTime": 0.5,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 8.4,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 6754.999999999997,
+          "sustainedHpKillTime": 1.2,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.4,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 7602.700000000002,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.94,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 30,
+      "rank": 2,
+      "status": "maxSkillUpperBoundNotLegalProgressionClaim",
+      "monsterDefense": 125.00000000000001,
+      "sustainedReferenceDps": 330.08174972897814,
+      "sustainedFiveSecondHp": 1650.4087486448907,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 9442.146125681817,
+        "median": 9509.555999999999,
+        "reference": 9475.851062840908,
+        "min": 4689.132,
+        "max": 13332.7712
+      },
+      "freshFiveSecondHp": 9475.851062840908,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.569999999999999,
+        "median": 4.84,
+        "reference": 5.205,
+        "min": 1.9,
+        "max": 11.8
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 8937.599999999997,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 8.24,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 11180.553999999998,
+          "sustainedHpKillTime": 0.2,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 1.9,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 11138.568,
+          "sustainedHpKillTime": 1.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.6,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 13332.7712,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 2.4,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 5616.134999999999,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 20,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 4689.132,
+          "sustainedHpKillTime": 1.5,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 11.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 9509.555999999999,
+          "sustainedHpKillTime": 0.9,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.84,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 7705.1799999999985,
+          "sustainedHpKillTime": 0,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 15.07,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 10024.28,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 11334.2818575,
+          "sustainedHpKillTime": 1.6,
+          "sustainedRawDeathAt": 31.5,
+          "sustainedArmoredDeathAt": 31.5,
+          "freshHpKillTime": 4.05,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 7916.184324999998,
+          "sustainedHpKillTime": 0.5,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 8.04,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 6754.999999999997,
+          "sustainedHpKillTime": 1.4,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 9045.680000000002,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.1,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 40,
+      "rank": 3,
+      "status": "provisionalMaximumRollReference",
+      "monsterDefense": 166.66666666666669,
+      "sustainedReferenceDps": 416.0367012679958,
+      "sustainedFiveSecondHp": 2080.183506339979,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 10552.799009772725,
+        "median": 9882.319999999998,
+        "reference": 10217.559504886362,
+        "min": 7057.429119999999,
+        "max": 15257.939199999999
+      },
+      "freshFiveSecondHp": 10217.559504886362,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 4.983636363636363,
+        "median": 5.6,
+        "reference": 5.291818181818181,
+        "min": 0.7,
+        "max": 8.86
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 9882.319999999998,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.46,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 9322.5664,
+          "sustainedHpKillTime": 0.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 13013.355599999999,
+          "sustainedHpKillTime": 1.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.6,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 15257.939199999999,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 2.4,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 6460.433000000001,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 15.3,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 7057.429119999999,
+          "sustainedHpKillTime": 1.5,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 8.86,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 11347.336000000001,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.4,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 8406.02,
+          "sustainedHpKillTime": 0,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 12.19,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 12384.82,
+          "sustainedHpKillTime": 1.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 8095.327187499999,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": 31.5,
+          "sustainedArmoredDeathAt": 31.5,
+          "freshHpKillTime": 6.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 9444.545599999998,
+          "sustainedHpKillTime": 0.5,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 7776.999999999999,
+          "sustainedHpKillTime": 1.4,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.6,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 12498.149999999996,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 0.7,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 60,
+      "rank": 4,
+      "status": "provisionalMaximumRollReference",
+      "monsterDefense": 250.00000000000003,
+      "sustainedReferenceDps": 792.3908743638244,
+      "sustainedFiveSecondHp": 3961.954371819122,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 17991.461728863636,
+        "median": 18197.523399999995,
+        "reference": 18094.492564431814,
+        "min": 12157.16656,
+        "max": 24581.312
+      },
+      "freshFiveSecondHp": 18094.492564431814,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.863636363636363,
+        "median": 4.95,
+        "reference": 5.406818181818181,
+        "min": 0.8,
+        "max": 15.8
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 13585.880000000001,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 15.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 21058.904999999995,
+          "sustainedHpKillTime": 0.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 18197.523399999995,
+          "sustainedHpKillTime": 1.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 4.95,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 22674.4868,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 9193.555,
+          "sustainedHpKillTime": 2.9,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 21.13,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 12157.16656,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 9.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 16360.315999999999,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.64,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 11104.240000000003,
+          "sustainedHpKillTime": 0.2,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 20.66,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 14763.209999999997,
+          "sustainedHpKillTime": 1.4,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 20640.9452375,
+          "sustainedHpKillTime": 2.6,
+          "sustainedRawDeathAt": 72,
+          "sustainedArmoredDeathAt": 70.5,
+          "freshHpKillTime": 4.75,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 20824.334020000002,
+          "sustainedHpKillTime": 0.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 2.46,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 13061.999999999993,
+          "sustainedHpKillTime": 1.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.9,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 24581.312,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 0.8,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 80,
+      "rank": 5,
+      "status": "provisionalMaximumRollReference",
+      "monsterDefense": 333.33333333333337,
+      "sustainedReferenceDps": 950.8640422100373,
+      "sustainedFiveSecondHp": 4754.320211050186,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 20765.68344931818,
+        "median": 19518.041199999992,
+        "reference": 20141.862324659087,
+        "min": 13939.39792,
+        "max": 27888.54599999999
+      },
+      "freshFiveSecondHp": 20141.862324659087,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.57090909090909,
+        "median": 5.5,
+        "reference": 5.535454545454545,
+        "min": 0.8,
+        "max": 13.19
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 15387.96,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 13.19,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 26041.864799999992,
+          "sustainedHpKillTime": 0.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.4,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 19518.041199999992,
+          "sustainedHpKillTime": 1.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 24615.047799999997,
+          "sustainedHpKillTime": 0.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 10773.132999999998,
+          "sustainedHpKillTime": 2.9,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 17.65,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 13939.39792,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 9.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 18577.775999999998,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.64,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 12254.2,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 19.7,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 16563.190000000002,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 23843.029787500003,
+          "sustainedHpKillTime": 2.6,
+          "sustainedRawDeathAt": 76.5,
+          "sustainedArmoredDeathAt": 76.5,
+          "freshHpKillTime": 4.75,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 26868.164435,
+          "sustainedHpKillTime": 0.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 1.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 15179.500000000005,
+          "sustainedHpKillTime": 1.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.9,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 27888.54599999999,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 0.8,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 100,
+      "rank": 6,
+      "status": "provisionalMaximumRollReference",
+      "monsterDefense": 416.6666666666667,
+      "sustainedReferenceDps": 1204.0697749486749,
+      "sustainedFiveSecondHp": 6020.348874743375,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 24327.205940227268,
+        "median": 21930.916000000005,
+        "reference": 23129.060970113635,
+        "min": 16573.641280000003,
+        "max": 33379.822
+      },
+      "freshFiveSecondHp": 23129.060970113635,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.170909090909091,
+        "median": 5.5,
+        "reference": 5.335454545454546,
+        "min": 0.6,
+        "max": 11.45
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 18075.96,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 11.45,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 29333.253599999993,
+          "sustainedHpKillTime": 0.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 21442.085,
+          "sustainedHpKillTime": 1.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 27789.157199999994,
+          "sustainedHpKillTime": 1.4,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 13116.270999999999,
+          "sustainedHpKillTime": 2.9,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 15.3,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 16573.641280000003,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 21930.916000000005,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.53,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 14108.08,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 17.84,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 19276.04,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 28808.037982499987,
+          "sustainedHpKillTime": 2.8,
+          "sustainedRawDeathAt": 96,
+          "sustainedArmoredDeathAt": 96,
+          "freshHpKillTime": 4.7,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 32464.85227999999,
+          "sustainedHpKillTime": 0.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 1.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 18525.5,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.9,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 33379.822,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 0.6,
+          "remainingTargetHealth": 0
+        }
+      ]
+    },
+    {
+      "level": 120,
+      "rank": 6,
+      "status": "R6EquipmentExtensionNotR7",
+      "monsterDefense": 500.00000000000006,
+      "sustainedReferenceDps": 1233.8437927255716,
+      "sustainedFiveSecondHp": 6169.218963627858,
+      "firstFiveSecondDamage": {
+        "count": 11,
+        "mean": 24676.220022045458,
+        "median": 21930.916000000005,
+        "reference": 23303.568011022733,
+        "min": 16865.759680000003,
+        "max": 34130.782
+      },
+      "freshFiveSecondHp": 23303.568011022733,
+      "actualFreshFightTimes": {
+        "count": 11,
+        "mean": 5.092727272727273,
+        "median": 5.5,
+        "reference": 5.296363636363637,
+        "min": 0.6,
+        "max": 10.59
+      },
+      "actors": [
+        {
+          "key": "adventurer",
+          "name": "Abenteurer",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 18428.76,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 10.59,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "butcher",
+          "name": "Butcher",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 29699.1576,
+          "sustainedHpKillTime": 0.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "druid",
+          "name": "Druide",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 21735.539000000004,
+          "sustainedHpKillTime": 1.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "gladiator",
+          "name": "Gladiator",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 28135.783199999998,
+          "sustainedHpKillTime": 1.4,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 3.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "healer",
+          "name": "Heiler",
+          "cohort": "control",
+          "firstFiveSecondDamage": 13370.791,
+          "sustainedHpKillTime": 2.9,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 14.08,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "herbalist",
+          "name": "Kräuterkundler",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 16865.759680000003,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 7.8,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "hunter",
+          "name": "Jäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 21930.916000000005,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.53,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "knight",
+          "name": "Ritter",
+          "cohort": "control",
+          "firstFiveSecondDamage": 14385.28,
+          "sustainedHpKillTime": 0.7,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 16.88,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "luminet",
+          "name": "Luminet",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 19565.84,
+          "sustainedHpKillTime": 2.3,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 6.2,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "ritualist",
+          "name": "Ritualist",
+          "cohort": "magical",
+          "firstFiveSecondDamage": 29426.60768249999,
+          "sustainedHpKillTime": 2.8,
+          "sustainedRawDeathAt": 96,
+          "sustainedArmoredDeathAt": 96,
+          "freshHpKillTime": 4.7,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "shaman",
+          "name": "Schamane",
+          "cohort": "hybrid",
+          "firstFiveSecondDamage": 32993.77507999999,
+          "sustainedHpKillTime": 0.6,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 1.5,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "summoner",
+          "name": "Seelenjäger",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 18525.5,
+          "sustainedHpKillTime": 1.8,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 5.9,
+          "remainingTargetHealth": 0
+        },
+        {
+          "key": "villian",
+          "name": "Schurke",
+          "cohort": "physical",
+          "firstFiveSecondDamage": 34130.782,
+          "sustainedHpKillTime": 0.1,
+          "sustainedRawDeathAt": null,
+          "sustainedArmoredDeathAt": null,
+          "freshHpKillTime": 0.6,
+          "remainingTargetHealth": 0
+        }
+      ]
+    }
+  ]
+}

@@ -8,10 +8,12 @@ import { moderationService, moderationEvents } from '../moderation/service.js';
 export function attachChat(server, { authenticate = authenticateChat, store = chatStore,
   events = sessionEvents, isReady = () => true, origins = '*', authTimeoutMs = 5000,
   recheckMs = 30000, heartbeatMs = 30000, sendLimit = 5, sendWindowMs = 10000,
-  maxBufferedBytes = 1024 * 1024, moderation = moderationService, moderationSignals = moderationEvents } = {}) {
+  maxBufferedBytes = 1024 * 1024, moderation = moderationService, moderationSignals = moderationEvents,
+  deliveryRetryMs = 1000, logger = console } = {}) {
   const wss = new WebSocketServer({ noServer: true, maxPayload: 16384, perMessageDeflate: false });
   const peers = new Map(), subscribers = new Set(), addresses = new Map(), sendBuckets = new Map(), reportBuckets = new Map(), attempts = new Map();
-  let stopping = false, publication = Promise.resolve(), pendingPublications = 0, revocationVersion = 0;
+  const commands = new Set();
+  let accepting = true, stopping = false, publication = Promise.resolve(), pendingPublications = 0, revocationVersion = 0;
   const fail = (peer, code, reason) => peer.ws.close(code, reason);
   const send = (peer, data) => {
     if (peer.ws.readyState !== WebSocket.OPEN) return false;
@@ -21,10 +23,12 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
   };
   const live = (peer, message) => {
     if (!peer.subscribed || !peer.identity || peer.identity.expiresAt <= Date.now()) return;
+    if (message.sequence <= peer.deliveredThrough) return;
     if (peer.syncing) {
+      if (peer.buffer.some(entry => entry.id === message.id)) return;
       if (peer.buffer.length >= 100) return fail(peer, 1013, 'History synchronization overloaded');
       peer.buffer.push(message);
-    } else send(peer, { type: 'message', message });
+    } else if (send(peer, { type: 'message', message })) peer.deliveredThrough = message.sequence;
   };
   const publish = task => {
     if (pendingPublications >= 1000) throw chatError('CHAT_BUSY');
@@ -32,6 +36,20 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
     const operation = publication.then(task);
     publication = operation.catch(() => {}).finally(() => pendingPublications--);
     return operation;
+  };
+  let deliveryFailed = false, retryRunning = false;
+  const drainDeliveries = async () => {
+    try {
+      for (const message of await store.pendingDeliveries()) {
+        for (const recipient of subscribers) live(recipient, message);
+        await store.markDispatched(message.id);
+      }
+      if (deliveryFailed) logger.log('Chat delivery recovered; pending messages processed.');
+      deliveryFailed = false;
+    } catch {
+      if (!deliveryFailed) logger.error('Chat delivery incomplete; durable pending messages will be retried.');
+      deliveryFailed = true;
+    }
   };
   const setIdentity = (peer, identity, token) => {
     if (peer.identity && (peer.identity.accountID !== identity.accountID || peer.identity.sessionID !== identity.sessionID)) throw chatError('SESSION_SWITCH_NOT_ALLOWED');
@@ -71,7 +89,9 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
       try {
         const page = await store.history({ limit: 50 });
         if (send(peer, { type: 'subscribed', requestID: command.requestID, ...page })) {
-          for (const message of peer.buffer) if (message.sequence > page.highWater) send(peer, { type: 'message', message });
+          peer.deliveredThrough = Math.max(peer.deliveredThrough, page.highWater);
+          peer.syncing = false;
+          for (const message of peer.buffer) live(peer, message);
         }
       } catch (error) { peer.subscribed = false; subscribers.delete(peer); throw error; }
       finally { peer.syncing = false; peer.buffer = []; }
@@ -113,11 +133,12 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
         if (stopping || peer.ws.readyState !== WebSocket.OPEN) return;
         await verified(peer.token);
         if (peer.ws.readyState !== WebSocket.OPEN) return;
-        const result = await store.append({ identity: peer.identity, clientMessageID: command.clientMessageID, text: decision.text, originalText: command.text });
-        await moderation.published?.({ caseID: decision.caseID, message: result.message });
+        const result = await store.append({ identity: peer.identity, clientMessageID: command.clientMessageID,
+          text: decision.text, originalText: command.text,
+          onStored: ({ message, session }) => moderation.published?.({ caseID: decision.caseID, message, session }) });
         // Persistence precedes both acknowledgement and distribution.
         send(peer, { type: 'sent', requestID: command.requestID, duplicate: !result.created, message: result.message });
-        if (result.created) for (const recipient of subscribers) live(recipient, result.message);
+        await drainDeliveries();
       });
     }
   };
@@ -138,7 +159,7 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
     socket.on('error', () => {});
     // No credentials in URLs. Native clients may omit Origin.
     if (request.url !== '/chat') return rejectUpgrade(socket, 404, 'Not Found');
-    if (stopping || !isReady()) return rejectUpgrade(socket, 503, 'Unavailable');
+    if (!accepting || !isReady()) return rejectUpgrade(socket, 503, 'Unavailable');
     if (request.headers.origin && origins !== '*' && !origins.includes(request.headers.origin)) return rejectUpgrade(socket, 403, 'Forbidden');
     const address = socket.remoteAddress || 'unknown';
     let bucket = attempts.get(address);
@@ -152,7 +173,7 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
   server.on('upgrade', upgrade);
   wss.on('error', () => {});
   wss.on('connection', (ws, address) => {
-    const peer = { ws, identity: null, subscribed: false, syncing: false, buffer: [], pending: 0, queue: Promise.resolve(), alive: true,
+    const peer = { ws, identity: null, subscribed: false, syncing: false, buffer: [], deliveredThrough: 0, pending: 0, queue: Promise.resolve(), alive: true,
       commandCount: 0, commandReset: Date.now() + 60000 };
     peers.set(ws, peer); addresses.set(address, (addresses.get(address) || 0) + 1);
     peer.authTimer = setTimeout(() => fail(peer, 4001, 'Authentication timeout'), authTimeoutMs);
@@ -160,12 +181,13 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
     const recheck = async () => {
       try { if (peer.identity) await verified(peer.token); }
       catch { fail(peer, 4001, 'Session expired or revoked'); }
-      if (peers.has(ws)) { peer.recheckTimer = setTimeout(recheck, recheckMs); peer.recheckTimer.unref(); }
+      if (accepting && peers.has(ws)) { peer.recheckTimer = setTimeout(recheck, recheckMs); peer.recheckTimer.unref(); }
     };
     peer.recheckTimer = setTimeout(recheck, recheckMs + Math.random() * recheckMs); peer.recheckTimer.unref();
     ws.on('error', () => {});
     ws.on('pong', () => { peer.alive = true; });
     ws.on('message', (data, binary) => {
+      if (!accepting) return;
       if (Date.now() >= peer.commandReset) { peer.commandCount = 0; peer.commandReset = Date.now() + 60000; }
       if (++peer.commandCount > 60 || peer.pending >= 16) return fail(peer, 1008, 'Too many commands');
       let command;
@@ -175,6 +197,9 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
       peer.queue = peer.queue.then(() => processCommand(peer, command)).catch(error => {
         send(peer, { type: 'error', requestID: command.requestID, error: error.publicCode || 'CHAT_OPERATION_FAILED' });
       }).finally(() => peer.pending--);
+      const operation = peer.queue;
+      commands.add(operation);
+      operation.then(() => commands.delete(operation), () => commands.delete(operation));
     });
     ws.on('close', () => {
       peers.delete(ws);
@@ -193,13 +218,24 @@ export function attachChat(server, { authenticate = authenticateChat, store = ch
     for (const map of [attempts, sendBuckets, reportBuckets]) for (const [key, value] of map) if (value.reset <= Date.now()) map.delete(key);
   }, heartbeatMs);
   heartbeat.unref();
+  const deliveryRetry = setInterval(() => {
+    if (!accepting || !isReady() || retryRunning) return;
+    retryRunning = true;
+    try {
+      publish(drainDeliveries).catch(() => {}).finally(() => { retryRunning = false; });
+    } catch { retryRunning = false; }
+  }, deliveryRetryMs);
+  deliveryRetry.unref();
   return { wss, stop: async () => {
-    stopping = true; clearInterval(heartbeat); events.off('revoked', onRevoked); moderationSignals.off('resolved', onResolved);
+    accepting = false; clearInterval(heartbeat); clearInterval(deliveryRetry);
     // Keep the upgrade handler in place to explicitly reject new connections.
-    const queues = [...peers.values()].map(peer => {
+    for (const peer of peers.values()) {
       clearTimeout(peer.authTimer); clearTimeout(peer.expiryTimer); clearTimeout(peer.recheckTimer);
-      fail(peer, 1001, 'Server shutting down'); return peer.queue;
-    });
-    await Promise.allSettled(queues); await publication;
+    }
+    // A disconnected peer can still have a moderation or persistence operation in flight.
+    while (commands.size) await Promise.allSettled([...commands]);
+    await publication;
+    stopping = true; events.off('revoked', onRevoked); moderationSignals.off('resolved', onResolved);
+    for (const peer of peers.values()) fail(peer, 1001, 'Server shutting down');
   } };
 }

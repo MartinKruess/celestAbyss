@@ -6,18 +6,26 @@ Tamen, Bindung, Kontrolle, Beschwören, Zurückrufen und Zucht werden einmal gem
 
 Festgelegte Stufen:
 
-| Level | Mana | Cast Time | Cooldown | Grunderfolg |
+| Level | Mana | Castzeit | Cooldown | Chancenfaktor |
 | ---: | ---: | ---: | ---: | ---: |
-| 1 | 100 | 3 s | 60 s | 50 % |
-| 2 | 125 | 2,5 s | 50 s | 65 % |
-| 3 | 150 | 2 s | 40 s | 80 % |
+| 1 | 100 | 3 s | 60 s | ×1,0 |
+| 2 | 125 | 2,5 s | 50 s | ×1,1 |
+| 3 | 150 | 2 s | 40 s | ×1,2 |
 
-Passendes Taming-Item erforderlich. Kein Schaden und keine anschließende Effektdauer. Noch offen: Berechnung mit dem Kreaturen-Gegenwert, Itemverbrauch, gültige Zieldistanz und Bedingungen für einen Cast-Abbruch.
+Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen.
 
-Kosten, Cast Time, Cooldown und Grunderfolg festgelegt; Kreaturen-Gegenwert, Itemverbrauch und Abbruchregeln offen.
-
-| Gespeichertes Feld | Wert |
+| Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.classRankCosts.adventurer.0 | 10 |
+| skillPointCosts.classRankCosts.adventurer.1 | 11 |
+| skillPointCosts.classRankCosts.adventurer.2 | 12 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 5 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Tame |
 | category | creature |
 | cd | 60 |
@@ -48,8 +56,8 @@ Kosten, Cast Time, Cooldown und Grunderfolg festgelegt; Kreaturen-Gegenwert, Ite
 | charClass[24] | Shadowwarrior |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt. |
-| description_eng | Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined. The definition contains three levels; normal other classes are capped at learned level 1. The Adventurer may learn level 3; a second specialist remains undefined. |
+| description_de | Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen. |
+| description_eng | Attempts to tame a creature. Requires a taming card matching the creature variant. The base chance belongs to the specific creature variant. Tame multiplies this chance by 1.0 at level 1, 1.1 at level 2 and 1.2 at level 3; it adds no percentage points and supplies no fixed base success chance. A 1 percent base chance becomes 1 / 1.1 / 1.2 percent per attempt. The formula continues by 0.1 per additional effective level when separately authorized. The definition still has three learnable levels: ordinary classes are capped at level 1 and the Adventurer at level 3; a second specialist remains undefined. Mana is 100 / 125 / 150, cast time 3 / 2.5 / 2 seconds and cooldown 60 / 50 / 40 seconds. No damage or subsequent effect duration. Creature base chances, card mappings, item consumption, target distance and interruption conditions remain to be defined. |
 | dmgType | spell |
 | maxSkillLv | 3 |
 | maxUpgradeLv | 10 |
@@ -72,11 +80,11 @@ Kosten, Cast Time, Cooldown und Grunderfolg festgelegt; Kreaturen-Gegenwert, Ite
 | resourceCosts[0].scaling.perLevel | 25 |
 | taming.requiresMatchingItem | true |
 | taming.itemConsumptionStatus | pending |
-| taming.creatureCounterStatus | pending |
-| taming.baseSuccessChance | 0,5 |
-| taming.successChanceScaling.type | linear |
-| taming.successChanceScaling.base | 0,5 |
-| taming.successChanceScaling.perLevel | 0,15 |
+| taming.baseChanceSource | creatureVariant |
+| taming.chanceFormula | baseChanceTimesSkillMultiplier |
+| taming.chanceMultiplierScaling.type | linear |
+| taming.chanceMultiplierScaling.base | 1 |
+| taming.chanceMultiplierScaling.perLevel | 0,1 |
 | learningLimits.defaultMaxLevel | 1 |
 | learningLimits.classOverrides.Abenteuer | 3 |
 | learningLimits.classOverrides.Gladiator | 1 |
@@ -107,19 +115,13 @@ Kosten, Cast Time, Cooldown und Grunderfolg festgelegt; Kreaturen-Gegenwert, Ite
 | levelProgression.rules[2].rule.rule.perLevel | 25 |
 | levelProgression.rules[2].source | storedFormula |
 | levelProgression.rules[3].path[0] | taming |
-| levelProgression.rules[3].path[1] | successChanceScaling |
+| levelProgression.rules[3].path[1] | chanceMultiplierScaling |
 | levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 0,5 |
-| levelProgression.rules[3].rule.perLevel | 0,15 |
+| levelProgression.rules[3].rule.base | 1 |
+| levelProgression.rules[3].rule.perLevel | 0,1 |
 | levelProgression.rules[3].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 4 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | skill |
-
-Lernvoraussetzungen und allgemeine Kreaturenlimits später prüfen.
 
 ## 134: Bindung
 
@@ -137,6 +139,16 @@ Boni nur für die Kreatur: je 10/15/20 Stärke, Vita, Intelligenz und Wisdom. No
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 6 |
+| skillPointCosts.rankCosts.0 | 6 |
+| skillPointCosts.classRankCosts.adventurer.0 | 6 |
+| skillPointCosts.classRankCosts.adventurer.1 | 7 |
+| skillPointCosts.classRankCosts.adventurer.2 | 8 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Bond |
 | category | creature |
 | charClass[0] | Abenteuer |
@@ -253,9 +265,6 @@ Boni nur für die Kreatur: je 10/15/20 Stärke, Vita, Intelligenz und Wisdom. No
 | levelProgression.rules[3].rule.perLevel | 5 |
 | levelProgression.rules[3].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 6 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | passive |
 
@@ -267,6 +276,15 @@ Konkrete Wirkung, Levelskalierung und Spezialistengrenzen noch offen.
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 4 |
+| skillPointCosts.rankCosts.0 | 4 |
+| skillPointCosts.classRankCosts.adventurer.0 | 4 |
+| skillPointCosts.classRankCosts.adventurer.1 | 5 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Control |
 | category | creature |
 | charClass[0] | Abenteuer |
@@ -296,7 +314,7 @@ Konkrete Wirkung, Levelskalierung und Spezialistengrenzen noch offen.
 | charClass[24] | Shadowwarrior |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen. |
+| description_de | Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 4. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen. |
 | description_eng | Permanent passive creature skill. The learned skill level determines the number of simultaneously controlled creatures: one at level 1, two at level 2. All other classes can learn up to level 1; only the Adventurer and its advancement can learn up to level 2 and control two creatures simultaneously. First unlock at character level 5; the character-level requirement for skill rank 2 remains pending. |
 | dmgType | passive |
 | maxSkillLv | 2 |
@@ -313,9 +331,6 @@ Konkrete Wirkung, Levelskalierung und Spezialistengrenzen noch offen.
 | levelProgression.version | 1 |
 | levelProgression.rules | [] |
 | levelProgression.extensionNeedsDefinition[0] | companionControlSettings.maximumControlledCreaturesByLevel |
-| learningRequirements.minimumCharacterLevel | 5 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | passive |
 | companionControlSettings.maximumControlledCreaturesByLevel[0] | 1 |
@@ -329,6 +344,13 @@ Festgelegt: 5 Mana, 5 Sekunden Cooldown, 1 Sekunde Cast Time, keine anschließen
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 5 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Summon |
 | category | creature |
 | cd | 5 |
@@ -384,9 +406,6 @@ Festgelegt: 5 Mana, 5 Sekunden Cooldown, 1 Sekunde Cast Time, keine anschließen
 | levelProgression.rules[0].rule.rule.value | 5 |
 | levelProgression.rules[0].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 6 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | skill |
 
@@ -398,6 +417,13 @@ Festgelegt: 5 Mana, 5 Sekunden Cooldown, sofort, keine anschließende Effektdaue
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 5 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Recall |
 | category | creature |
 | cd | 5 |
@@ -453,9 +479,6 @@ Festgelegt: 5 Mana, 5 Sekunden Cooldown, sofort, keine anschließende Effektdaue
 | levelProgression.rules[0].rule.rule.value | 5 |
 | levelProgression.rules[0].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 6 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | skill |
 
@@ -467,6 +490,16 @@ Festgelegt: Kreatur erhält Spieler-EP plus 10/20/30 Prozent auf Level 1/2/3. Pe
 
 | Gespeichertes Feld | Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 5 |
+| skillPointCosts.rankCosts.0 | 5 |
+| skillPointCosts.classRankCosts.adventurer.0 | 5 |
+| skillPointCosts.classRankCosts.adventurer.1 | 6 |
+| skillPointCosts.classRankCosts.adventurer.2 | 7 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Breed |
 | category | creature |
 | charClass[0] | Abenteuer |
@@ -529,9 +562,6 @@ Festgelegt: Kreatur erhält Spieler-EP plus 10/20/30 Prozent auf Level 1/2/3. Pe
 | levelProgression.rules[0].rule.perLevel | 0,1 |
 | levelProgression.rules[0].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 7 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
 | classificationVersion | 1 |
 | type | passive |
 

@@ -138,7 +138,35 @@
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 1,
+        "rankCosts": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          28,
+          29
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04b6b",
@@ -250,6 +278,24 @@
       "attackExecution": {
         "hitCount": 1,
         "maxHitsPerTargetPerActivation": 1
+      },
+      "learningRequirements": {
+        "minimumCharacterLevel": 47,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 30,
+        "rankCosts": [
+          30,
+          45,
+          60,
+          75,
+          90
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
       }
     },
     {
@@ -563,6 +609,29 @@
         "geometryStatus": "pending",
         "maxTargetsFrom": "ownGroupMembersCurrentlyInAreaIncludingCaster",
         "targetSelectionTiming": "eachTick"
+      },
+      "learningRequirements": {
+        "minimumCharacterLevel": 30,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
       }
     },
     {
@@ -678,7 +747,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 12,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04b87",
@@ -939,7 +1031,67 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending",
+        "classOverrides": {
+          "druid": 6,
+          "healer": 6,
+          "luminet": 6
+        },
+        "minimumCharacterLevel": 6
+      },
+      "skillPointCosts": {
+        "firstLevel": 30,
+        "rankCosts": [
+          30,
+          45,
+          60,
+          75,
+          90
+        ],
+        "classRankCosts": {
+          "druid": [
+            12,
+            36,
+            60,
+            84,
+            108
+          ],
+          "healer": [
+            12,
+            36,
+            60,
+            84,
+            108
+          ],
+          "luminet": [
+            12,
+            12,
+            13,
+            13,
+            13,
+            14,
+            14,
+            14,
+            15,
+            15,
+            15,
+            15,
+            16,
+            16,
+            16,
+            17,
+            17,
+            17,
+            18,
+            18
+          ]
+        },
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04b8c",
@@ -1061,7 +1213,25 @@
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "skill"
+      "type": "skill",
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04b8f",
@@ -1230,12 +1400,30 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 3,
+        "minimumCharacterLevel": 9,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 12,
+        "rankCosts": [
+          12,
+          16,
+          20,
+          24,
+          28,
+          32,
+          36,
+          40,
+          44,
+          48
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04b9f",
@@ -1334,7 +1522,30 @@
         "extensionNeedsDefinition": []
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "learningRequirements": {
+        "minimumCharacterLevel": 20,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bad",
@@ -1454,7 +1665,30 @@
       },
       "classificationVersion": 1,
       "target": "self",
-      "type": "selfBuff"
+      "type": "selfBuff",
+      "learningRequirements": {
+        "minimumCharacterLevel": 60,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 13,
+        "rankCosts": [
+          13,
+          19,
+          25,
+          31,
+          37,
+          43,
+          49,
+          55,
+          61,
+          67
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bc8",
@@ -1638,7 +1872,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 65,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 13,
+        "rankCosts": [
+          13,
+          19,
+          25,
+          31,
+          37,
+          43,
+          49,
+          55,
+          61,
+          67
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bd7",
@@ -1740,7 +1997,30 @@
       },
       "classificationVersion": 1,
       "type": "passive",
-      "vita": 1
+      "vita": 1,
+      "learningRequirements": {
+        "minimumCharacterLevel": 33,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bd8",
@@ -1843,7 +2123,25 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 42,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 30,
+        "rankCosts": [
+          30,
+          45,
+          60,
+          75,
+          90
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04be8",
@@ -1879,8 +2177,8 @@
       ],
       "currentSkillLv": 0,
       "currentUpgradeLv": 0,
-      "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt.",
-      "description_eng": "Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined. The definition contains three levels; normal other classes are capped at learned level 1. The Adventurer may learn level 3; a second specialist remains undefined.",
+      "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen.",
+      "description_eng": "Attempts to tame a creature. Requires a taming card matching the creature variant. The base chance belongs to the specific creature variant. Tame multiplies this chance by 1.0 at level 1, 1.1 at level 2 and 1.2 at level 3; it adds no percentage points and supplies no fixed base success chance. A 1 percent base chance becomes 1 / 1.1 / 1.2 percent per attempt. The formula continues by 0.1 per additional effective level when separately authorized. The definition still has three learnable levels: ordinary classes are capped at level 1 and the Adventurer at level 3; a second specialist remains undefined. Mana is 100 / 125 / 150, cast time 3 / 2.5 / 2 seconds and cooldown 60 / 50 / 40 seconds. No damage or subsequent effect duration. Creature base chances, card mappings, item consumption, target distance and interruption conditions remain to be defined.",
       "dmgType": "spell",
       "maxSkillLv": 3,
       "maxUpgradeLv": 10,
@@ -1914,12 +2212,12 @@
       "taming": {
         "requiresMatchingItem": true,
         "itemConsumptionStatus": "pending",
-        "creatureCounterStatus": "pending",
-        "baseSuccessChance": 0.5,
-        "successChanceScaling": {
+        "baseChanceSource": "creatureVariant",
+        "chanceFormula": "baseChanceTimesSkillMultiplier",
+        "chanceMultiplierScaling": {
           "type": "linear",
-          "base": 0.5,
-          "perLevel": 0.15
+          "base": 1,
+          "perLevel": 0.1
         }
       },
       "learningLimits": {
@@ -1984,12 +2282,12 @@
           {
             "path": [
               "taming",
-              "successChanceScaling"
+              "chanceMultiplierScaling"
             ],
             "rule": {
               "kind": "linear",
-              "base": 0.5,
-              "perLevel": 0.15
+              "base": 1,
+              "perLevel": 0.1
             },
             "source": "storedFormula"
           }
@@ -1997,12 +2295,27 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 4,
+        "minimumCharacterLevel": 5,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "skill"
+      "type": "skill",
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10
+        ],
+        "classRankCosts": {
+          "adventurer": [
+            10,
+            11,
+            12
+          ]
+        },
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04be9",
@@ -2175,12 +2488,27 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 6,
+        "minimumCharacterLevel": 4,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 6,
+        "rankCosts": [
+          6
+        ],
+        "classRankCosts": {
+          "adventurer": [
+            6,
+            7,
+            8
+          ]
+        },
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bea",
@@ -2215,7 +2543,7 @@
       ],
       "currentSkillLv": 0,
       "currentUpgradeLv": 0,
-      "description_de": "Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.",
+      "description_de": "Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 4. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.",
       "description_eng": "Permanent passive creature skill. The learned skill level determines the number of simultaneously controlled creatures: one at level 1, two at level 2. All other classes can learn up to level 1; only the Adventurer and its advancement can learn up to level 2 and control two creatures simultaneously. First unlock at character level 5; the character-level requirement for skill rank 2 remains pending.",
       "dmgType": "passive",
       "maxSkillLv": 2,
@@ -2241,7 +2569,7 @@
         ]
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 5,
+        "minimumCharacterLevel": 4,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
@@ -2252,6 +2580,20 @@
           1,
           2
         ]
+      },
+      "skillPointCosts": {
+        "firstLevel": 4,
+        "rankCosts": [
+          4
+        ],
+        "classRankCosts": {
+          "adventurer": [
+            4,
+            5
+          ]
+        },
+        "furtherLevelsStatus": "defined",
+        "version": 2
       }
     },
     {
@@ -2332,12 +2674,21 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 6,
+        "minimumCharacterLevel": 5,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "skill"
+      "type": "skill",
+      "skillPointCosts": {
+        "firstLevel": 1,
+        "rankCosts": [
+          1
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bec",
@@ -2417,12 +2768,21 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 6,
+        "minimumCharacterLevel": 5,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "skill"
+      "type": "skill",
+      "skillPointCosts": {
+        "firstLevel": 1,
+        "rankCosts": [
+          1
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bed",
@@ -2511,12 +2871,27 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 7,
+        "minimumCharacterLevel": 4,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 5,
+        "rankCosts": [
+          5
+        ],
+        "classRankCosts": {
+          "adventurer": [
+            5,
+            6,
+            7
+          ]
+        },
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bee",
@@ -2610,7 +2985,35 @@
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 1,
+        "rankCosts": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          28,
+          29
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04bf3",
@@ -2699,12 +3102,30 @@
         "extensionNeedsDefinition": []
       },
       "learningRequirements": {
-        "minimumCharacterLevel": 2,
+        "minimumCharacterLevel": 4,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 1,
+        "rankCosts": [
+          1,
+          7,
+          14,
+          20,
+          27,
+          33,
+          40,
+          46,
+          53,
+          59
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c08",
@@ -2839,6 +3260,24 @@
         "minimumCharacterLevel": 22,
         "status": "defined",
         "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
       }
     },
     {
@@ -2936,7 +3375,35 @@
         "furtherSkillLevelsStatus": "pending"
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "skillPointCosts": {
+        "firstLevel": 1,
+        "rankCosts": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          19,
+          20,
+          22,
+          23,
+          25,
+          26,
+          28,
+          29
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c33",
@@ -3004,7 +3471,30 @@
         "extensionNeedsDefinition": []
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "learningRequirements": {
+        "minimumCharacterLevel": 60,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 13,
+        "rankCosts": [
+          13,
+          19,
+          25,
+          31,
+          37,
+          43,
+          49,
+          55,
+          61,
+          67
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c36",
@@ -3130,7 +3620,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 55,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 13,
+        "rankCosts": [
+          13,
+          19,
+          25,
+          31,
+          37,
+          43,
+          49,
+          55,
+          61,
+          67
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c38",
@@ -3281,7 +3794,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 42,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c3a",
@@ -3394,7 +3930,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 21,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c3b",
@@ -3532,7 +4091,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 23,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c3c",
@@ -3718,7 +4300,30 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 25,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c3d",
@@ -3929,7 +4534,23 @@
       },
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "minimumCharacterLevel": 27,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 80,
+        "rankCosts": [
+          80,
+          100,
+          120
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c47",
@@ -4009,7 +4630,21 @@
         "extensionNeedsDefinition": []
       },
       "classificationVersion": 1,
-      "type": "skill"
+      "type": "skill",
+      "skillPointCosts": {
+        "firstLevel": 300,
+        "rankCosts": [
+          300
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      },
+      "learningRequirements": {
+        "minimumCharacterLevel": 37,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      }
     },
     {
       "_id": "6acc1c7e4826525c70d04c4a",
@@ -4143,7 +4778,30 @@
       "mana": 11,
       "classificationVersion": 1,
       "damageType": "magical",
-      "type": "skill"
+      "type": "skill",
+      "learningRequirements": {
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending",
+        "minimumCharacterLevel": 17
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     },
     {
       "_id": "6ad607c72acbb73ee0623fe3",
@@ -4256,7 +4914,30 @@
         "extensionNeedsDefinition": []
       },
       "classificationVersion": 1,
-      "type": "passive"
+      "type": "passive",
+      "learningRequirements": {
+        "minimumCharacterLevel": 10,
+        "status": "defined",
+        "furtherSkillLevelsStatus": "pending"
+      },
+      "skillPointCosts": {
+        "firstLevel": 10,
+        "rankCosts": [
+          10,
+          14,
+          19,
+          23,
+          28,
+          32,
+          37,
+          41,
+          46,
+          50
+        ],
+        "classRankCosts": {},
+        "furtherLevelsStatus": "defined",
+        "version": 2
+      }
     }
   ],
   "source": "Current database-exported skill catalog",

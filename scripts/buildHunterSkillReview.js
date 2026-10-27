@@ -56,7 +56,9 @@ md=md.replace(/\*\*\d+ unterschiedliche zugeordnete Skills[\s\S]*?\*\*/,`**${ski
 md=md.replace('\n\n','\n\nEinteilung: `type` bezeichnet Skill, Passive, Selbstbuff oder Buff; `damageType` bezeichnet physisch, magisch oder gemischt. Bewegung ist ein selbstgerichteter Buff. `dmgType` wird nur noch als Altformat für bestehende Werkzeuge mitgeführt.\n\n').replaceAll('| dmgType |','| dmgType (Altformat) |');
 const pointSummary=JSON.parse(await fs.readFile('data/balancing/class-skill-points.json','utf8')).classes.find(c=>c.key==='hunter');
 md=md.replace('\n\n',`\n\n**${skills.length} Skills, ${pointSummary.sp} Skillpunkte.** Giftpfeil hat zehn statt zwanzig Stufen bei unveränderten Start- und Maximalwerten: 3 bis 60 Giftschaden je Sekunde, drei Sekunden Vergiftung, 3 % Chance je treffendem Pfeil, einmalig 50 bis 297 Mana. Waldläufer hat eine statt drei Stufen: +2 Agilität, +3 Geschicklichkeit, kein direkter P-Angriffsbonus, fest 54 Mana. Beide Buffs dauern 600 Sekunden, haben 60 Sekunden Cooldown und feste Castzeit 0,1 Sekunden. Zusammen entfallen zwölf Skillpunkte.\n\n`);
-await fs.writeFile('docs/balancing/classes/hunter-skills.md',md);
+const {withSkillLearningOverview} = await import('../services/skillLearningOverview.js');
+const existingLearningNotes = await fs.readFile('docs/balancing/classes/hunter-skills.md', 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+await fs.writeFile('docs/balancing/classes/hunter-skills.md',withSkillLearningOverview(md,{skills,classKey:'hunter',existingMarkdown:existingLearningNotes}));
 await fs.writeFile('data/balancing/hunter-skill-review.json',JSON.stringify({classKey:'hunter',total:count.total,active:count.total-count.passive,passive:count.passive,skillNumbers:skills.map(s=>s.nr),skills,source:'Current database-exported skill catalog',equipment:'Original rank values; proposed strength changes not applied'},null,2)+'\n');
 console.log(`Review updated: ${skills.length} skills, ${reviewActiveCount} active, ${reviewPassiveCount} passive.`);
 

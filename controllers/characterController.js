@@ -1,9 +1,15 @@
 import { characterService } from '../services/characters.js';
+import { classRaces } from '../services/characterPolicy.js';
 
 export function createCharacterControllers(service = characterService) {
   const failure = (error, res) => res.status(error.code === 11000 ? 409 : error.status || 500)
     .json({ error: error.code === 11000 ? 'CHARACTER_NAME_EXISTS' : error.status ? error.message : 'CHARACTER_OPERATION_FAILED' });
   return {
+    list: async (req, res) => {
+      try {
+        return res.json({ characters: await service.list({ accountID: req.auth.accountID }), classes: Object.keys(classRaces) });
+      } catch (error) { return failure(error, res); }
+    },
     get: async (req, res) => {
       try {
         const character = await service.get({ accountID: req.auth.accountID, characterID: req.params.id });
@@ -25,6 +31,7 @@ export function createCharacterControllers(service = characterService) {
   };
 }
 const controllers = createCharacterControllers();
+export const listCharacters = controllers.list;
 export const getCharData = controllers.get;
 export const newCharData = controllers.create;
 export const deleteCharacter = controllers.remove;

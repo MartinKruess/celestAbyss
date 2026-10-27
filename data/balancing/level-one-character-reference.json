@@ -1,0 +1,726 @@
+{
+  "generatedAt": "2026-10-21T16:44:59.994Z",
+  "status": "calculatedReferenceNotConfirmedStartingLoadouts",
+  "scope": "Level 1 operative baseline plus one existing rank-one class weapon at +0. No armor, shield, second weapon, learned skill bonuses, buffs, pets, jewelry, affixes, gems or attribute level gains. Existing starting operative stats are used once; unknown starting primary attributes and ratings are not invented. Starting equipment grants and unlock times are not yet defined.",
+  "inputHashes": {
+    "data/balancing/class-baselines.json": "d60d8a39ae9d6b2aa75d73b5e3b39ef85308da38d69f0907ddaa753bf886df9b",
+    "data/balancing/ranked-equipment.json": "96d5d19ada867e92f4530bae28d91e85af26254275ae524b9f68eab70828acca",
+    "data/balancing/class-comparison-level60.json": "04940e2c070e8a341b4b29a8fe3a8b135cd7caf9283658e4d70398806b3c8f58"
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "level": 1,
+      "weapon": {
+        "name": "2H Schwert",
+        "itemName": "Longsword",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "ATK Speed",
+            "value": -15,
+            "column": 7
+          },
+          {
+            "label": "P.Ang",
+            "value": 16,
+            "column": 4
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 172,
+        "maxMana": 131,
+        "physicalAttack": 8,
+        "magicalAttack": 6,
+        "physicalDefense": 7,
+        "magicalDefense": 9,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 172,
+        "maxMana": 131,
+        "physicalAttack": 24,
+        "magicalAttack": 6,
+        "physicalDefense": 7,
+        "magicalDefense": 9,
+        "attackSpeed": 0.85,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "level": 1,
+      "weapon": {
+        "name": "2H Axt",
+        "itemName": "Battleaxe",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 27,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -20,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 221,
+        "maxMana": 121,
+        "physicalAttack": 13,
+        "magicalAttack": 7,
+        "physicalDefense": 4,
+        "magicalDefense": 6,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 221,
+        "maxMana": 121,
+        "physicalAttack": 40,
+        "magicalAttack": 7,
+        "physicalDefense": 4,
+        "magicalDefense": 6,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "level": 1,
+      "weapon": {
+        "name": "2H Mace",
+        "itemName": "Big Mace",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "ATK Speed",
+            "value": -15
+          },
+          {
+            "label": "P.Ang",
+            "value": 10
+          },
+          {
+            "label": "M.Ang",
+            "value": 16
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 183,
+        "maxMana": 151,
+        "physicalAttack": 9,
+        "magicalAttack": 11,
+        "physicalDefense": 5,
+        "magicalDefense": 5,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 183,
+        "maxMana": 151,
+        "physicalAttack": 19,
+        "magicalAttack": 27,
+        "physicalDefense": 5,
+        "magicalDefense": 5,
+        "attackSpeed": 0.85,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "level": 1,
+      "weapon": {
+        "name": "1H Axt",
+        "itemName": "Small Battleax",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 13,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -10,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [
+        "1H Axt"
+      ],
+      "nakedStats": {
+        "maxHealth": 212,
+        "maxMana": 137,
+        "physicalAttack": 12,
+        "magicalAttack": 6,
+        "physicalDefense": 9,
+        "magicalDefense": 3,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 212,
+        "maxMana": 137,
+        "physicalAttack": 25,
+        "magicalAttack": 6,
+        "physicalDefense": 9,
+        "magicalDefense": 3,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "level": 1,
+      "weapon": {
+        "name": "Wand",
+        "itemName": "Simple Wand",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "M.Ang",
+            "value": 25,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -20,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 153,
+        "maxMana": 182,
+        "physicalAttack": 2,
+        "magicalAttack": 12,
+        "physicalDefense": 3,
+        "magicalDefense": 13,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 153,
+        "maxMana": 182,
+        "physicalAttack": 2,
+        "magicalAttack": 37,
+        "physicalDefense": 3,
+        "magicalDefense": 13,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "level": 1,
+      "weapon": {
+        "name": "Wand",
+        "itemName": "Simple Wand",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "M.Ang",
+            "value": 25,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -20,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 176,
+        "maxMana": 163,
+        "physicalAttack": 6,
+        "magicalAttack": 12,
+        "physicalDefense": 6,
+        "magicalDefense": 6,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 176,
+        "maxMana": 163,
+        "physicalAttack": 6,
+        "magicalAttack": 37,
+        "physicalDefense": 6,
+        "magicalDefense": 6,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "level": 1,
+      "weapon": {
+        "name": "Bow",
+        "itemName": "Small Wooden Bow",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 31,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -20,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 184,
+        "maxMana": 111,
+        "physicalAttack": 13,
+        "magicalAttack": 3,
+        "physicalDefense": 6,
+        "magicalDefense": 8,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 184,
+        "maxMana": 111,
+        "physicalAttack": 44,
+        "magicalAttack": 3,
+        "physicalDefense": 6,
+        "magicalDefense": 8,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "level": 1,
+      "weapon": {
+        "name": "Sword",
+        "itemName": "Iron Sword",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 12,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -10,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [
+        "Shield"
+      ],
+      "nakedStats": {
+        "maxHealth": 231,
+        "maxMana": 133,
+        "physicalAttack": 5,
+        "magicalAttack": 4,
+        "physicalDefense": 11,
+        "magicalDefense": 10,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 231,
+        "maxMana": 133,
+        "physicalAttack": 17,
+        "magicalAttack": 4,
+        "physicalDefense": 11,
+        "magicalDefense": 10,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "level": 1,
+      "weapon": {
+        "name": "Lichtstab",
+        "itemName": "Staff of the Brightness",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "M.Ang",
+            "value": 25,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -20,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 171,
+        "maxMana": 167,
+        "physicalAttack": 4,
+        "magicalAttack": 14,
+        "physicalDefense": 4,
+        "magicalDefense": 8,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 171,
+        "maxMana": 167,
+        "physicalAttack": 4,
+        "magicalAttack": 39,
+        "physicalDefense": 4,
+        "magicalDefense": 8,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "level": 1,
+      "weapon": {
+        "name": "Victim-Stab",
+        "itemName": "Staff of Obsession",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "M.Ang",
+            "value": 25,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -20,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 169,
+        "maxMana": 167,
+        "physicalAttack": 4,
+        "magicalAttack": 14,
+        "physicalDefense": 4,
+        "magicalDefense": 8,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 169,
+        "maxMana": 167,
+        "physicalAttack": 4,
+        "magicalAttack": 39,
+        "physicalDefense": 4,
+        "magicalDefense": 8,
+        "attackSpeed": 0.8,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "level": 1,
+      "weapon": {
+        "name": "Mace",
+        "itemName": "Little Mace",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 8
+          },
+          {
+            "label": "M.Ang",
+            "value": 5
+          },
+          {
+            "label": "ATK Speed",
+            "value": -10
+          }
+        ]
+      },
+      "excludedUsualOffhand": [
+        "Mace"
+      ],
+      "nakedStats": {
+        "maxHealth": 192,
+        "maxMana": 153,
+        "physicalAttack": 10,
+        "magicalAttack": 10,
+        "physicalDefense": 6,
+        "magicalDefense": 4,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 192,
+        "maxMana": 153,
+        "physicalAttack": 18,
+        "magicalAttack": 15,
+        "physicalDefense": 6,
+        "magicalDefense": 4,
+        "attackSpeed": 0.9,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "level": 1,
+      "weapon": {
+        "name": "Crossbow",
+        "itemName": "Light Crossbow",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 24,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -15,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [],
+      "nakedStats": {
+        "maxHealth": 175,
+        "maxMana": 139,
+        "physicalAttack": 12,
+        "magicalAttack": 3,
+        "physicalDefense": 5,
+        "magicalDefense": 10,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 175,
+        "maxMana": 139,
+        "physicalAttack": 36,
+        "magicalAttack": 3,
+        "physicalDefense": 5,
+        "magicalDefense": 10,
+        "attackSpeed": 0.85,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "level": 1,
+      "weapon": {
+        "name": "Dagger",
+        "itemName": "Shark Tooth Dagger",
+        "rank": 1,
+        "upgrade": 0,
+        "raw": [
+          {
+            "label": "P.Ang",
+            "value": 8,
+            "column": 4
+          },
+          {
+            "label": "ATK Speed",
+            "value": -5,
+            "column": 7
+          }
+        ]
+      },
+      "excludedUsualOffhand": [
+        "Dagger"
+      ],
+      "nakedStats": {
+        "maxHealth": 166,
+        "maxMana": 134,
+        "physicalAttack": 11,
+        "magicalAttack": 6,
+        "physicalDefense": 5,
+        "magicalDefense": 8,
+        "attackSpeed": 1,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "weaponOnlyStats": {
+        "maxHealth": 166,
+        "maxMana": 134,
+        "physicalAttack": 19,
+        "magicalAttack": 6,
+        "physicalDefense": 5,
+        "magicalDefense": 8,
+        "attackSpeed": 0.95,
+        "movementSpeed": 1,
+        "maxStamina": 1
+      },
+      "regeneration": {
+        "baseManaPerTick": 25,
+        "baseHealthPerTick": 12,
+        "tickIntervalSeconds": null,
+        "status": "intervalPending",
+        "manaTickIntervalSeconds": 3
+      },
+      "unresolved": []
+    }
+  ]
+}

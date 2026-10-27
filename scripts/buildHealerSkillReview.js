@@ -61,7 +61,9 @@ md=md.replace(/\*\*\d+ unterschiedliche zugeordnete Skills[\s\S]*?\*\*/,`**${ski
 md=md.replace('\n\n','\n\nEinteilung: `type` bezeichnet Skill, Passive, Selbstbuff oder Buff; `damageType` bezeichnet physisch, magisch oder gemischt. Bewegung ist ein selbstgerichteter Buff. `dmgType` wird nur noch als Altformat für bestehende Werkzeuge mitgeführt.\n\n').replaceAll('| dmgType |','| dmgType (Altformat) |');
 const pointSummary=JSON.parse(await fs.readFile('data/balancing/class-skill-points.json','utf8')).classes.find(c=>c.key==='healer');
 md=md.replace('\n\n',`\n\n**${skills.length} Skills, ${pointSummary.sp} Skillpunkte.** Lunare Inkanation hat vier lernbare Stufen. Wiederbelebungsleben des Ziels: 80/160/320/640 HP. Mana-Kosten des Heilers: 120/180/240/300. Vorhandenes Ziel-Mana bleibt erhalten. Cooldown je Stufe: 100/90/80/70 Sekunden. Castzeit bleibt eine Sekunde. Die drei zusätzlichen Lernstufen bringen den Heiler auf 280 Punkte.\n\n`);
-await fs.writeFile('docs/balancing/classes/healer-skills.md',md);
+const {withSkillLearningOverview} = await import('../services/skillLearningOverview.js');
+const existingLearningNotes = await fs.readFile('docs/balancing/classes/healer-skills.md', 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+await fs.writeFile('docs/balancing/classes/healer-skills.md',withSkillLearningOverview(md,{skills,classKey:'healer',existingMarkdown:existingLearningNotes}));
 await fs.writeFile('data/balancing/healer-skill-review.json',JSON.stringify({classKey:'healer',total:count.total,active:count.total-count.passive,passive:count.passive,skillNumbers:skills.map(s=>s.nr),skills,source:'Current database-exported skill catalog',equipment:'Original rank values; proposed strength changes not applied'},null,2)+'\n');
 console.log(`Review updated: ${skills.length} skills, ${reviewActiveCount} active, ${reviewPassiveCount} passive.`);
 

@@ -1,0 +1,1216 @@
+{
+  "version": 1,
+  "status": "qualitativeCombatDesignAwaitingNumericalValues",
+  "referenceTestLevel": 60,
+  "scope": "World monster design decisions. No numeric runtime templates, database import, skills or new simulations generated from this catalog yet.",
+  "rules": {
+    "basicAttackIsSeparateFromFutureSkills": true,
+    "unassignedValuesStayPending": true,
+    "noAutomaticImmunityFromDefenseDescription": true,
+    "noUnspecifiedPhysicalMagicalDamageSplit": true,
+    "poisonSchoolDoesNotAutomaticallyGrantDamageOverTime": true,
+    "attackRounding": {
+      "mode": "nearestWholeHalfUp",
+      "order": "Round each derived rank before using it as the next reference. Kings use rounded captains; trolls copy rounded Orc captains; Cyclops uses rounded mountain troll.",
+      "scope": "Currently assigned physical attack values; no new HP or defense values assigned."
+    }
+  },
+  "taxonomy": {
+    "Naturwesen": {
+      "Pflanzenwesen": [
+        "Baumwesen / Treants",
+        "Piranhidia",
+        "Floranova"
+      ],
+      "Feenwesen": [
+        "Nymphen",
+        "Sylphen",
+        "Pixies",
+        "Wisps",
+        "Undinen"
+      ]
+    },
+    "removed": [
+      "Sprites"
+    ]
+  },
+  "families": [
+    {
+      "key": "ents",
+      "name": "Ents",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Baumwesen / Treants",
+      "profile": {
+        "health": "moderate_normal",
+        "defense": "somewhat_above_average_exact_channels_pending",
+        "attack": "below_average",
+        "mobility": "mobile_exact_speed_pending"
+      },
+      "variants": [
+        {
+          "key": "ent",
+          "name": "Normaler Ent",
+          "basicAttack": {
+            "damageType": "physical",
+            "style": "branch_claw_swipes"
+          }
+        },
+        {
+          "key": "wise-ent",
+          "name": "Weiser Ent",
+          "basicAttack": {
+            "damageType": "magical",
+            "school": "wind"
+          }
+        },
+        {
+          "key": "ent-sapling",
+          "name": "Ent-Setzling",
+          "scaleFrom": "ent",
+          "statFactor": 0.5,
+          "scaledStats": [
+            "maxHealth",
+            "physicalAttack",
+            "magicalAttack",
+            "physicalDefense",
+            "magicalDefense"
+          ],
+          "factorReference": "adult profile at the saplings own level",
+          "areaLevelOffset": -2,
+          "minimumAreaLevel": 1,
+          "mobility": "faster_than_adult_factor_pending",
+          "basicAttack": {
+            "damageType": "physical",
+            "style": "branch_claw_swipes"
+          }
+        }
+      ]
+    },
+    {
+      "key": "treants",
+      "name": "Treants",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Baumwesen / Treants",
+      "variants": [
+        {
+          "key": "corrupted-treant",
+          "name": "Verdorbener Treant",
+          "attackTypes": [
+            "magical"
+          ],
+          "school": "curse",
+          "attackDeliveryPending": true,
+          "plannedSkills": [
+            "curse_magic_not_implemented"
+          ]
+        },
+        {
+          "key": "plagued-treant",
+          "name": "Verseuchter Treant",
+          "basicAttack": {
+            "damageType": "magical",
+            "school": "poison",
+            "style": "small_poison_pokes"
+          }
+        },
+        {
+          "key": "ancient-treant",
+          "name": "Ur-Treant",
+          "currentCombatProfile": "pending_spoken_name_confirmation"
+        }
+      ],
+      "unresolvedReferences": [
+        {
+          "spokenName": "Grimmiger Tree Ent",
+          "basicAttack": {
+            "damageType": "physical"
+          },
+          "identityStatus": "reintroduced_after_previous_renaming_needs_confirmation"
+        },
+        {
+          "spokenName": "Wood Trend",
+          "basicAttack": {
+            "damageType": "physical"
+          },
+          "plannedSkills": [
+            "magical_attacks_later"
+          ],
+          "identityStatus": "possible_Ur_Treant_but_not_confirmed"
+        }
+      ]
+    },
+    {
+      "key": "piranhidia",
+      "name": "Piranhidia",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Pflanzenwesen",
+      "profile": {
+        "healthAndDurability": "relatively_fragile",
+        "attack": "above_average",
+        "mobility": "mobile",
+        "physicalDefense": "below_average_but_nonzero",
+        "magicalDefense": "moderately_high"
+      },
+      "variants": [
+        {
+          "key": "thorny-piranhidia",
+          "name": "Dornige Piranhidia",
+          "basicAttack": {
+            "damageType": "physical"
+          },
+          "relativeStrength": "slightly_stronger_than_poison_variant",
+          "attack": "higher_than_poison_variant"
+        },
+        {
+          "key": "poison-piranhidia",
+          "name": "Giftige Piranhidia",
+          "basicAttack": {
+            "damageType": "physical"
+          },
+          "plannedSkills": [
+            "poison_cloud_not_implemented"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "floranova",
+      "name": "Floranova",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Pflanzenwesen",
+      "profile": {
+        "physicalDefense": "below_average_but_nonzero",
+        "magicalDefense": "moderately_high"
+      },
+      "variants": [
+        {
+          "key": "dangerous-novania",
+          "name": "Gefährliche Novania",
+          "mobility": "immobile",
+          "basicAttack": {
+            "targetMode": "enemiesInRadius",
+            "radiusMeters": 4,
+            "damageTypeStatus": "pending",
+            "maxTargetsStatus": "pending"
+          }
+        },
+        {
+          "key": "threatening-sleep-rose",
+          "name": "Bedrohliche Schlafrose",
+          "namePending": true,
+          "mobility": "immobile",
+          "basicAttack": {
+            "targetMode": "enemiesInRadius",
+            "radiusMeters": 6,
+            "damageTypeStatus": "pending",
+            "maxTargetsStatus": "pending"
+          }
+        }
+      ]
+    },
+    {
+      "key": "pixies",
+      "name": "Pixies",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Feenwesen",
+      "profile": {
+        "physicalDefense": "low_relative_to_magical",
+        "magicalDefense": "much_higher_than_physical",
+        "basicAttack": {
+          "damageType": "magical",
+          "style": "generic_magic_attack_not_elemental_fireball"
+        }
+      },
+      "variants": [
+        {
+          "key": "fire-pixie",
+          "name": "Feuerpixie",
+          "plannedSkills": [
+            "fire_skills"
+          ]
+        },
+        {
+          "key": "water-pixie",
+          "name": "Wasserpixie",
+          "nameSuggestions": [
+            "Quellpixie",
+            "Heilpixie"
+          ],
+          "plannedSkills": [
+            "water_skills",
+            "healing_ownership_pending"
+          ]
+        },
+        {
+          "key": "wind-pixie",
+          "name": "Windpixie",
+          "plannedSkills": [
+            "two_or_three_wind_skills"
+          ]
+        }
+      ],
+      "skillUseIntent": {
+        "nonHealingSkills": "automatic_once_defined",
+        "healingTrigger": "pending"
+      },
+      "unconfirmedIdeas": [
+        "Separate holy or light healing Pixie; not a confirmed fourth variant"
+      ]
+    },
+    {
+      "key": "nymphs",
+      "name": "Nymphen",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Feenwesen",
+      "variants": [
+        {
+          "name": "Najaden",
+          "theme": "Quellen"
+        },
+        {
+          "name": "Dryaden",
+          "theme": "Bäume"
+        },
+        {
+          "name": "Nereiden",
+          "theme": "Meer"
+        }
+      ]
+    },
+    {
+      "key": "sylphs",
+      "name": "Sylphen",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Feenwesen",
+      "variants": [
+        {
+          "name": "Bergsylphen"
+        },
+        {
+          "name": "Windsylphen"
+        }
+      ]
+    },
+    {
+      "key": "wisps",
+      "name": "Wisps",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Feenwesen",
+      "variants": [],
+      "intentionallyEmpty": true
+    },
+    {
+      "key": "undines",
+      "name": "Undinen",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "parent": "Feenwesen",
+      "variants": [],
+      "intentionallyEmpty": true
+    },
+    {
+      "key": "orcs",
+      "name": "Orcs",
+      "numbersStatus": "partial_level1_attack_and_defense_including_shaman_health_pending",
+      "skillsStatus": "deferred",
+      "types": [
+        "Wald-Orc",
+        "Berg-Orc",
+        "Höhlen-Orc"
+      ],
+      "profile": {
+        "physicalDefense": "higher_than_magical",
+        "magicalDefense": "present_mixed_protection"
+      },
+      "roles": [
+        {
+          "name": "Krieger",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Schütze",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Hauptmann",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "König",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Schamane",
+          "basicAttack": {
+            "damageType": "magical"
+          }
+        }
+      ],
+      "statDesign": {
+        "referenceLevel": 1,
+        "referenceLevelBasis": "Inferred from immediately preceding level-1 wolf/golem comparison; no level-growth curve newly assigned.",
+        "physicalAttackByHabitat": {
+          "forest": 28,
+          "cave": 30,
+          "mountain": 33
+        },
+        "warriorAndArcherSameAttack": true,
+        "rankRules": {
+          "captain": {
+            "sourceRole": "warrior",
+            "factor": 1.1
+          },
+          "king": {
+            "sourceRole": "captain",
+            "factor": 1.3,
+            "role": "smallMiniboss"
+          }
+        },
+        "rankScaledStats": [
+          "maxHealth",
+          "physicalAttack",
+          "magicalAttack",
+          "physicalDefense",
+          "magicalDefense"
+        ],
+        "timingAndMovementScaling": "not_defined",
+        "healthAndDefenseBases": "health_pending; forest defenses explicitly supplied, other habitats provisionally derived",
+        "forestDefenseOverrides": {
+          "warrior": {
+            "physicalDefense": 9,
+            "magicalDefense": 5
+          },
+          "archer": {
+            "physicalDefense": 5,
+            "magicalDefense": 9
+          },
+          "captain": {
+            "physicalDefense": 13,
+            "magicalDefense": 10
+          },
+          "king": {
+            "physicalDefense": 23,
+            "magicalDefense": 21
+          }
+        },
+        "defenseHabitatScaling": {
+          "sourceHabitat": "forest",
+          "ratioBasis": "matching habitat warrior physical attack / forest warrior physical attack",
+          "method": "Scale each forest role independently; round once to nearest whole number (half up). Archer swaps physical and magical warrior defenses.",
+          "status": "provisional_extrapolation",
+          "genericRankRulesOverriddenFor": [
+            "physicalDefense",
+            "magicalDefense"
+          ]
+        },
+        "archerDefenseRule": "Swap physical and magical defense of the matching habitat warrior; attack remains identical.",
+        "shaman": {
+          "attackType": "magical",
+          "attackSourceRole": "warrior",
+          "attackFlatBonus": 1,
+          "defenseRule": "Swap physical and magical defenses of matching normal fighter; matches archer defenses where an archer exists.",
+          "scope": "No new Goblin/Hobgoblin shamans or Ogre archers introduced."
+        }
+      },
+      "derivedLevelOneAttack": {
+        "forest": {
+          "warrior": 28,
+          "archer": 28,
+          "captain": 31,
+          "king": 40,
+          "shamanMagicalAttack": 29
+        },
+        "cave": {
+          "warrior": 30,
+          "archer": 30,
+          "captain": 33,
+          "king": 43,
+          "shamanMagicalAttack": 31
+        },
+        "mountain": {
+          "warrior": 33,
+          "archer": 33,
+          "captain": 36,
+          "king": 47,
+          "shamanMagicalAttack": 34
+        }
+      },
+      "derivedLevelOneDefense": {
+        "forest": {
+          "warrior": {
+            "physicalDefense": 9,
+            "magicalDefense": 5
+          },
+          "archer": {
+            "physicalDefense": 5,
+            "magicalDefense": 9
+          },
+          "captain": {
+            "physicalDefense": 13,
+            "magicalDefense": 10
+          },
+          "king": {
+            "physicalDefense": 23,
+            "magicalDefense": 21
+          },
+          "shaman": {
+            "physicalDefense": 5,
+            "magicalDefense": 9
+          }
+        },
+        "cave": {
+          "warrior": {
+            "physicalDefense": 10,
+            "magicalDefense": 5
+          },
+          "archer": {
+            "physicalDefense": 5,
+            "magicalDefense": 10
+          },
+          "captain": {
+            "physicalDefense": 14,
+            "magicalDefense": 11
+          },
+          "king": {
+            "physicalDefense": 25,
+            "magicalDefense": 23
+          },
+          "shaman": {
+            "physicalDefense": 5,
+            "magicalDefense": 10
+          }
+        },
+        "mountain": {
+          "warrior": {
+            "physicalDefense": 11,
+            "magicalDefense": 6
+          },
+          "archer": {
+            "physicalDefense": 6,
+            "magicalDefense": 11
+          },
+          "captain": {
+            "physicalDefense": 15,
+            "magicalDefense": 12
+          },
+          "king": {
+            "physicalDefense": 27,
+            "magicalDefense": 25
+          },
+          "shaman": {
+            "physicalDefense": 6,
+            "magicalDefense": 11
+          }
+        }
+      }
+    },
+    {
+      "key": "goblins",
+      "name": "Goblins",
+      "numbersStatus": "partial_level1_attack_and_defense_health_pending",
+      "skillsStatus": "deferred",
+      "types": [
+        "Waldgoblin",
+        "Höhlengoblin",
+        "Berggoblin"
+      ],
+      "profile": {
+        "physicalDefense": "primary_defense",
+        "magicalDefense": "very_low"
+      },
+      "roles": [
+        {
+          "name": "Krieger",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Schütze",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Hauptmann",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "König",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        }
+      ],
+      "statDesign": {
+        "referenceLevel": 1,
+        "referenceLevelBasis": "Inferred from immediately preceding level-1 wolf/golem comparison; no level-growth curve newly assigned.",
+        "physicalAttackByHabitat": {
+          "forest": 24,
+          "cave": 28,
+          "mountain": 30
+        },
+        "warriorAndArcherSameAttack": true,
+        "rankRules": {
+          "captain": {
+            "sourceRole": "warrior",
+            "factor": 1.1
+          },
+          "king": {
+            "sourceRole": "captain",
+            "factor": 1.3,
+            "role": "smallMiniboss"
+          }
+        },
+        "rankScaledStats": [
+          "maxHealth",
+          "physicalAttack",
+          "magicalAttack",
+          "physicalDefense",
+          "magicalDefense"
+        ],
+        "timingAndMovementScaling": "not_defined",
+        "healthAndDefenseBases": "health_pending; forest defenses explicitly supplied, other habitats provisionally derived",
+        "forestDefenseOverrides": {
+          "warrior": {
+            "physicalDefense": 8,
+            "magicalDefense": 5
+          },
+          "archer": {
+            "physicalDefense": 5,
+            "magicalDefense": 8
+          },
+          "captain": {
+            "physicalDefense": 10,
+            "magicalDefense": 7
+          },
+          "king": {
+            "physicalDefense": 17,
+            "magicalDefense": 15
+          }
+        },
+        "defenseHabitatScaling": {
+          "sourceHabitat": "forest",
+          "ratioBasis": "matching habitat warrior physical attack / forest warrior physical attack",
+          "method": "Scale each explicitly supplied forest role independently, then round once to nearest integer (half up). Do not chain generic captain/king rank multipliers for defense.",
+          "status": "provisional_extrapolation",
+          "genericRankRulesOverriddenFor": [
+            "physicalDefense",
+            "magicalDefense"
+          ]
+        },
+        "archerDefenseRule": "Swap physical and magical defense of the matching habitat warrior; attack remains identical."
+      },
+      "derivedLevelOneAttack": {
+        "forest": {
+          "warrior": 24,
+          "archer": 24,
+          "captain": 26,
+          "king": 34
+        },
+        "cave": {
+          "warrior": 28,
+          "archer": 28,
+          "captain": 31,
+          "king": 40
+        },
+        "mountain": {
+          "warrior": 30,
+          "archer": 30,
+          "captain": 33,
+          "king": 43
+        }
+      },
+      "roleNaming": {
+        "captain": "Haupt-Goblin"
+      },
+      "derivedLevelOneDefense": {
+        "forest": {
+          "warrior": {
+            "physicalDefense": 8,
+            "magicalDefense": 5
+          },
+          "archer": {
+            "physicalDefense": 5,
+            "magicalDefense": 8
+          },
+          "captain": {
+            "physicalDefense": 10,
+            "magicalDefense": 7
+          },
+          "king": {
+            "physicalDefense": 17,
+            "magicalDefense": 15
+          }
+        },
+        "cave": {
+          "warrior": {
+            "physicalDefense": 9,
+            "magicalDefense": 6
+          },
+          "archer": {
+            "physicalDefense": 6,
+            "magicalDefense": 9
+          },
+          "captain": {
+            "physicalDefense": 12,
+            "magicalDefense": 8
+          },
+          "king": {
+            "physicalDefense": 20,
+            "magicalDefense": 18
+          }
+        },
+        "mountain": {
+          "warrior": {
+            "physicalDefense": 10,
+            "magicalDefense": 6
+          },
+          "archer": {
+            "physicalDefense": 6,
+            "magicalDefense": 10
+          },
+          "captain": {
+            "physicalDefense": 13,
+            "magicalDefense": 9
+          },
+          "king": {
+            "physicalDefense": 21,
+            "magicalDefense": 19
+          }
+        }
+      }
+    },
+    {
+      "key": "hobgoblins",
+      "name": "Hobgoblins",
+      "numbersStatus": "level1_attack_and_defense_assigned_health_pending",
+      "skillsStatus": "deferred",
+      "parent": "Goblins",
+      "basicAttack": {
+        "damageType": "physical"
+      },
+      "defenseProfile": "pending_separate_confirmation",
+      "types": [
+        "Höhlen-Hobgoblin",
+        "Berg-Hobgoblin"
+      ],
+      "roles": [
+        {
+          "name": "Kämpfer",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Kommandant",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "König",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        }
+      ],
+      "statDesign": {
+        "referenceLevel": 1,
+        "warriorAttack": {
+          "sourceFamily": "goblins",
+          "sourceRole": "warrior",
+          "matchingHabitat": true,
+          "flatBonus": 3
+        },
+        "commander": {
+          "sourceRole": "warrior",
+          "factor": 1.1,
+          "scaledStats": [
+            "maxHealth",
+            "physicalAttack",
+            "magicalAttack",
+            "physicalDefense",
+            "magicalDefense"
+          ]
+        },
+        "king": {
+          "attackType": "physical",
+          "cave": {
+            "physicalAttack": 42,
+            "physicalDefense": 21,
+            "magicalDefense": 17
+          },
+          "mountain": {
+            "sourceHabitat": "cave",
+            "physicalAttackBonus": 2,
+            "physicalDefenseBonus": 1,
+            "magicalDefenseBonus": 1
+          },
+          "status": "explicit_user_values"
+        },
+        "healthAndDefenseBases": "attack_and_defense_assigned; health_pending",
+        "defenseRules": {
+          "cave": "Explicit user values per role",
+          "mountain": "Matching cave role +1 physical defense and +1 magical defense",
+          "king": "Cave king explicit 21 P / 17 M; mountain king +1 to each"
+        }
+      },
+      "derivedLevelOneAttack": {
+        "cave": {
+          "warrior": 31,
+          "commander": 34,
+          "king": 42
+        },
+        "mountain": {
+          "warrior": 33,
+          "commander": 36,
+          "king": 44
+        }
+      },
+      "derivedLevelOneDefense": {
+        "cave": {
+          "warrior": {
+            "physicalDefense": 12,
+            "magicalDefense": 7
+          },
+          "commander": {
+            "physicalDefense": 14,
+            "magicalDefense": 13
+          },
+          "king": {
+            "physicalDefense": 21,
+            "magicalDefense": 17
+          }
+        },
+        "mountain": {
+          "warrior": {
+            "physicalDefense": 13,
+            "magicalDefense": 8
+          },
+          "commander": {
+            "physicalDefense": 15,
+            "magicalDefense": 14
+          },
+          "king": {
+            "physicalDefense": 22,
+            "magicalDefense": 18
+          }
+        }
+      }
+    },
+    {
+      "key": "ogres",
+      "name": "Oger",
+      "numbersStatus": "level1_attack_and_defense_assigned_health_pending",
+      "skillsStatus": "deferred",
+      "types": [
+        "Berg-Oger",
+        "Höhlen-Oger"
+      ],
+      "profile": {
+        "physicalDefense": "relatively_good",
+        "magicalDefense": "very_low"
+      },
+      "roles": [
+        {
+          "name": "Kämpfer",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Häuptling",
+          "basicAttack": {
+            "damageType": "physical"
+          }
+        },
+        {
+          "name": "Schamane",
+          "basicAttack": {
+            "damageType": "magical"
+          }
+        }
+      ],
+      "statDesign": {
+        "referenceLevel": 1,
+        "fighterAttack": {
+          "sourceFamily": "hobgoblins",
+          "sourceRole": "warrior",
+          "matchingHabitat": true,
+          "factor": 1
+        },
+        "health": "higher_than_matching_hobgoblin_amount_pending",
+        "defense": "Fighter, shaman and chief defenses assigned",
+        "chiefAndShamanStats": "chief_and_shaman_attack_and_defense_assigned; health_pending",
+        "shaman": {
+          "attackType": "magical",
+          "attackSourceRole": "fighter",
+          "attackFlatBonus": 1,
+          "defenseRule": "Explicit override: cave 7 physical / 12 magical; mountain 10 physical / 14 magical",
+          "scope": "No new Goblin/Hobgoblin shamans or Ogre archers introduced."
+        },
+        "defenseRules": {
+          "caveFighter": "Cave Hobgoblin fighter +3 physical and +3 magical defense",
+          "mountainFighter": "Cave Ogre fighter +1 physical and +1 magical defense",
+          "shaman": "Explicit cave 7/12 and mountain 10/14 override earlier generic swap rule; never infer fighter defense from shaman.",
+          "chief": "Cave explicit 31 P (not 41) / 28 M; mountain +2 to each"
+        },
+        "chief": {
+          "attackType": "physical",
+          "cave": {
+            "physicalAttack": 43,
+            "physicalDefense": 31,
+            "magicalDefense": 28
+          },
+          "mountain": {
+            "physicalAttack": 45,
+            "sourceHabitat": "cave",
+            "physicalDefenseBonus": 2,
+            "magicalDefenseBonus": 2
+          },
+          "status": "explicit_user_values"
+        }
+      },
+      "derivedLevelOneAttack": {
+        "cave": {
+          "fighter": 31,
+          "shamanMagicalAttack": 32,
+          "chief": 43
+        },
+        "mountain": {
+          "fighter": 33,
+          "shamanMagicalAttack": 34,
+          "chief": 45
+        }
+      },
+      "derivedLevelOneDefense": {
+        "cave": {
+          "fighter": {
+            "physicalDefense": 15,
+            "magicalDefense": 10
+          },
+          "shaman": {
+            "physicalDefense": 7,
+            "magicalDefense": 12
+          },
+          "chief": {
+            "physicalDefense": 31,
+            "magicalDefense": 28
+          }
+        },
+        "mountain": {
+          "fighter": {
+            "physicalDefense": 16,
+            "magicalDefense": 11
+          },
+          "shaman": {
+            "physicalDefense": 10,
+            "magicalDefense": 14
+          },
+          "chief": {
+            "physicalDefense": 33,
+            "magicalDefense": 30
+          }
+        }
+      }
+    },
+    {
+      "key": "trolls",
+      "name": "Trolle",
+      "numbersStatus": "partial_level1_attack_and_defense_health_pending",
+      "skillsStatus": "deferred",
+      "types": [
+        "Waldtroll",
+        "Höhlentroll",
+        "Bergtroll",
+        "Frosttroll"
+      ],
+      "basicAttack": {
+        "damageType": "physical"
+      },
+      "profile": {
+        "physicalDefense": "particularly_high",
+        "magicalDefense": "particularly_high"
+      },
+      "statDesign": {
+        "referenceLevel": 1,
+        "physicalAttack": {
+          "sourceFamily": "orcs",
+          "sourceRole": "captain",
+          "matchingHabitat": true
+        },
+        "healthAndDefenses": {
+          "sourceFamily": "orcs",
+          "sourceRole": "king",
+          "matchingHabitat": true,
+          "status": "defenses_derived_from_orc_kings; health_waiting_for_orc_health_bases"
+        },
+        "frost": {
+          "factor": 1.25,
+          "sourceTroll": "mountain",
+          "status": "factor_user_supplied_reference_mountain_assumed",
+          "scaledStats": [
+            "maxHealth",
+            "physicalAttack",
+            "physicalDefense",
+            "magicalDefense"
+          ],
+          "rounding": "nearestWholeHalfUp"
+        },
+        "note": "User later mentioned 25% in the troll explanation; do not silently replace the explicit final king rule of +30% over captain."
+      },
+      "derivedLevelOneAttack": {
+        "forest": {
+          "physicalAttack": 31
+        },
+        "cave": {
+          "physicalAttack": 33
+        },
+        "mountain": {
+          "physicalAttack": 36
+        },
+        "frost": {
+          "physicalAttack": 45
+        }
+      },
+      "derivedLevelOneDefense": {
+        "forest": {
+          "physicalDefense": 23,
+          "magicalDefense": 21
+        },
+        "cave": {
+          "physicalDefense": 25,
+          "magicalDefense": 23
+        },
+        "mountain": {
+          "physicalDefense": 27,
+          "magicalDefense": 25
+        },
+        "frost": {
+          "physicalDefense": 34,
+          "magicalDefense": 31
+        }
+      }
+    },
+    {
+      "key": "cyclopes",
+      "name": "Zyklopen",
+      "numbersStatus": "partial_level1_attack_relative_profile",
+      "skillsStatus": "deferred",
+      "variants": [
+        {
+          "name": "Bergzyklop"
+        }
+      ],
+      "basicAttack": {
+        "damageType": "physical"
+      },
+      "profile": {
+        "physicalDefense": "very_high",
+        "magicalDefense": "very_low"
+      },
+      "plannedSkills": [
+        "one_or_two_magical_attacks"
+      ],
+      "statDesign": {
+        "referenceLevel": 1,
+        "sourceFamily": "trolls",
+        "sourceHabitat": "mountain",
+        "factor": 1.1,
+        "scaledStats": [
+          "maxHealth",
+          "physicalAttack",
+          "magicalAttack",
+          "physicalDefense",
+          "magicalDefense"
+        ],
+        "defenseChannelDistribution": "Earlier very high physical / very low magical defense intent remains; resolve against troll reference when defense values are assigned."
+      },
+      "derivedLevelOneAttack": {
+        "mountain": {
+          "physicalAttack": 40
+        }
+      }
+    },
+    {
+      "key": "minotaurs",
+      "name": "Minotauren",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "variants": [
+        {
+          "name": "Minotaurus-Wächter"
+        },
+        {
+          "name": "Minotaurus-Kommandant"
+        },
+        {
+          "name": "Minotaurus-Krieger"
+        }
+      ],
+      "basicAttack": {
+        "damageType": "physical",
+        "strength": "strong"
+      },
+      "profile": {
+        "physicalDefense": "high",
+        "magicalDefense": "high",
+        "immune": false
+      }
+    },
+    {
+      "key": "mountain-lions",
+      "name": "Berglöwen",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "variants": [
+        {
+          "name": "Tödlicher Berglöwe"
+        },
+        {
+          "name": "Imposanter Berglöwe"
+        }
+      ],
+      "basicAttack": {
+        "damageType": "physical"
+      },
+      "profile": {
+        "physicalDefense": "somewhat_higher_than_magical",
+        "magicalDefense": "present"
+      },
+      "statDesign": {
+        "strengthReference": "wolf pack leader at matching level",
+        "referenceWolfSpecies": "pending",
+        "factor": 1,
+        "earlierPlus10PercentSuggestion": "withdrawn_by_user",
+        "spawnIntent": "solitary",
+        "variants": {
+          "deadly": {
+            "physicalAttack": "2_or_3_points_higher_than_imposing_exact_delta_pending"
+          },
+          "imposing": {
+            "maxHealth": "higher_than_deadly_amount_pending",
+            "maxMana": "higher_than_deadly_amount_pending"
+          }
+        }
+      }
+    },
+    {
+      "key": "basilisks",
+      "name": "Basilisken",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "variants": [
+        {
+          "name": "Basilisk"
+        }
+      ],
+      "attackTypes": [
+        "physical",
+        "magical"
+      ],
+      "attackDistributionStatus": "pending_basic_vs_skill_and_damage_split",
+      "profile": {
+        "physicalDefense": "high",
+        "magicalDefense": "high",
+        "immune": false
+      }
+    },
+    {
+      "key": "wyverns",
+      "name": "Wyvern",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "variants": [
+        {
+          "name": "Feuerwyvern"
+        },
+        {
+          "name": "Giftwyvern"
+        },
+        {
+          "name": "Eiswyvern"
+        },
+        {
+          "name": "Schattenwyvern"
+        }
+      ]
+    },
+    {
+      "key": "ground-dragons",
+      "name": "Bodendrachen",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "biology": "Flightless dragon-like lizards, not true dragons",
+      "variants": [
+        {
+          "name": "Drakania",
+          "role": "regularMonster"
+        },
+        {
+          "name": "Drakania – Der Witwenmacher",
+          "role": "specialWorldEventBoss",
+          "killable": false,
+          "victory": "force_retreat_by_damage",
+          "damageThresholdStatus": "pending",
+          "event": {
+            "unlockLevelStatus": "pending",
+            "recurrence": "irregular",
+            "target": "one_of_three_cities_near_mountains"
+          }
+        }
+      ]
+    },
+    {
+      "key": "slimes",
+      "name": "Slimes",
+      "numbersStatus": "pending",
+      "skillsStatus": "deferred",
+      "variants": [
+        {
+          "name": "Slime",
+          "status": "planned_no_values"
+        }
+      ],
+      "distribution": "Starter area levels 1–3; recurring in forest and caves. Exact later levels pending."
+    }
+  ],
+  "openQuestions": [
+    "Grimmiger Treant was mentioned again after the earlier correction to Verdorbener and Verseuchter Treant: keep the reference pending rather than silently deleting or adding a finished variant.",
+    "The spoken name Wood Trend has not been confirmed as Ur-Treant or as a separate variant.",
+    "Final name of Bedrohliche Schlafrose and Wasser-/Quellpixie; whether a separate holy healing Pixie exists.",
+    "Area basic attack damage channels, attack intervals and target limits for Floranova are not specified.",
+    "Reconcile the earlier very low Cyclops magical defense intent with a general +10% mountain troll reference before assigning its defenses.",
+    "HP bases and level growth remain pending for the new profiles. Mountain lion reference wolf species remains open. Hobgoblin king and Ogre chief attacks and defenses are now explicitly assigned."
+  ],
+  "growthDesign": {
+    "status": "underDiscussion_previous_uniform104_selection_retracted",
+    "existingLevel60ProbeFactor": 1.04,
+    "existingNumberReferenceLevel": 1,
+    "options": [
+      "Stronger early segments then 1.04 from level 15",
+      "Calibrate each family at first encounter reference level"
+    ],
+    "decisionSource": "data/creatures/world-growth-segment-design.json",
+    "health": "pending_separate_assignment"
+  }
+}

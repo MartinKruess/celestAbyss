@@ -54,7 +54,9 @@ for(const s of skills){md+=`\n### ${s.nr}: ${s.skillName_de}\n\n${s.description_
 md+='\n## Gemeinsame Blöcke\n\n[Kreaturenskills](../shared-creature-skills.md) und [Trainingsskills](../shared-training-skills.md) werden einmal gemeinsam geprüft. Die normale Lerngrenze für Bindung und Zucht ist bereits 1. Die zweite Kreaturen-Spezialklasse und ihre Lerngrenzen sind noch zu bestätigen.\n\n## Reihenfolge\n\nDie Grundwerte dieser Klassenrunde sind bearbeitet und in der Datenbank gespeichert. Permanente Passive sind im Klassenvergleich enthalten. Der 33. gemeinsame Mana-Skill mit dem Schurken sowie die ausdrücklich offenen Detailregeln bleiben für die nächste Runde.\n';
 md=md.replace(/\*\*\d+ unterschiedliche zugeordnete Skills[\s\S]*?\*\*/,`**${skills.length} unterschiedliche zugeordnete Skills: ${reviewActiveCount} aktive und ${reviewPassiveCount} passive.**`);
 md=md.replace('\n\n','\n\nEinteilung: `type` bezeichnet Skill, Passive, Selbstbuff oder Buff; `damageType` bezeichnet physisch, magisch oder gemischt. Bewegung ist ein selbstgerichteter Buff. `dmgType` wird nur noch als Altformat für bestehende Werkzeuge mitgeführt.\n\n').replaceAll('| dmgType |','| dmgType (Altformat) |');
-await fs.writeFile('docs/balancing/classes/summoner-skills.md',md);
+const {withSkillLearningOverview} = await import('../services/skillLearningOverview.js');
+const existingLearningNotes = await fs.readFile('docs/balancing/classes/summoner-skills.md', 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+await fs.writeFile('docs/balancing/classes/summoner-skills.md',withSkillLearningOverview(md,{skills,classKey:'summoner',existingMarkdown:existingLearningNotes}));
 await fs.writeFile('data/balancing/summoner-skill-review.json',JSON.stringify({classKey:'summoner',total:count.total,active:count.total-count.passive,passive:count.passive,skillNumbers:skills.map(s=>s.nr),skills,source:'Current database-exported skill catalog',equipment:'Original rank values; proposed strength changes not applied'},null,2)+'\n');
 console.log(`Review updated: ${skills.length} skills, ${reviewActiveCount} active, ${reviewPassiveCount} passive.`);
 

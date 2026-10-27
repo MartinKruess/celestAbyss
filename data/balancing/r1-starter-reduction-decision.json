@@ -1,0 +1,124 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-r1-starter-reduction-1792636215885",
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "sourceClass": "Adventure",
+      "before": 30,
+      "reduction": 3,
+      "after": 27,
+      "effectiveLevel": 8.542713567839195
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "sourceClass": "Butcher",
+      "before": 31,
+      "reduction": 0,
+      "after": 31,
+      "effectiveLevel": 11.0062893081761
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "sourceClass": "Druid",
+      "before": 29,
+      "reduction": 1,
+      "after": 28,
+      "effectiveLevel": 9.008189262966333
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "sourceClass": "Gladiator",
+      "before": 36,
+      "reduction": 4,
+      "after": 32,
+      "effectiveLevel": 9.748751684235556
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "sourceClass": "Healer",
+      "before": 18,
+      "reduction": 0,
+      "after": 18,
+      "effectiveLevel": 7.884856070087609
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "sourceClass": "Kräuterkundler",
+      "before": 26,
+      "reduction": 2,
+      "after": 24,
+      "effectiveLevel": 8.498583569405099
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "sourceClass": "Archer",
+      "before": 25,
+      "reduction": 2,
+      "after": 23,
+      "effectiveLevel": 8.886618998978548
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "sourceClass": "Tank",
+      "before": 44,
+      "reduction": 6,
+      "after": 38,
+      "effectiveLevel": 10.339734121122598
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "sourceClass": "Lightmage",
+      "before": 21,
+      "reduction": 0,
+      "after": 21,
+      "effectiveLevel": 7.944915254237287
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "sourceClass": "Bloodmage",
+      "before": 23,
+      "reduction": 0,
+      "after": 23,
+      "effectiveLevel": 8.672376873661669
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "sourceClass": "Shamane",
+      "before": 27,
+      "reduction": 2,
+      "after": 25,
+      "effectiveLevel": 8.274021352313166
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "sourceClass": "Seelenjäger",
+      "before": 20,
+      "reduction": 1,
+      "after": 19,
+      "effectiveLevel": 7.586933614330874
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "sourceClass": "Villain",
+      "before": 27,
+      "reduction": 2,
+      "after": 25,
+      "effectiveLevel": 10.238907849829351
+    }
+  ],
+  "databaseManifest": "data/balancing/armor-database-manifest.json"
+}

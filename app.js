@@ -8,6 +8,7 @@ import { itemRouter } from './routes/itemRoutes.js';
 import { characterRouter } from './routes/characterRoutes.js';
 import { moderationRouter } from './routes/moderationRoutes.js';
 import { classRouter } from './routes/classRoutes.js';
+import { createPlayRouters } from './routes/playRoutes.js';
 
 export function createApp({ isReady = () => false, corsConfig = corsOptions() } = {}) {
   const app = express();
@@ -20,6 +21,7 @@ export function createApp({ isReady = () => false, corsConfig = corsOptions() } 
   // Authentication requests never need world-save sized payloads.
   app.use('/user', express.json({ limit: '16kb' }));
   app.use('/moderation', express.json({ limit: '16kb' }));
+  app.use('/dedicated', express.json({ limit: '16kb' }));
   app.use(express.json({ limit: '50mb' }));
 
 
@@ -29,6 +31,9 @@ export function createApp({ isReady = () => false, corsConfig = corsOptions() } 
 
   // Account and Character Routes
   app.use('/user', userRouter);
+  const play = createPlayRouters();
+  app.use('/characters', play.player);
+  app.use('/dedicated', play.dedicated);
   app.use('/characters', authenticate, characterRouter);
   app.use('/classes', authenticate, classRouter);
   app.use('/moderation', moderationRouter);

@@ -4,7 +4,12 @@ import { attachChat } from './chat/server.js';
 import { initializeChatStore } from './chat/store.js';
 import { createApp } from './app.js';
 import { SessionModel } from './models/sessionSchema.js';
+import { PlayTicketModel } from './models/playTicketSchema.js';
 import { initializeModeration, moderationService } from './moderation/service.js';
+import { pendingWork } from './services/pendingWork.js';
+import { PlaySaveReceiptModel } from './models/playSaveReceiptSchema.js';
+import { DedicatedRuntimeModel } from './models/dedicatedRuntimeSchema.js';
+import { ensureIdentityIndexes } from './services/identityIndexes.js';
 
 const listen = (server, port, host) => new Promise((resolve, reject) => {
   const failed = error => { server.off('listening', ready); reject(error); };
@@ -19,7 +24,7 @@ const close = server => new Promise(resolve => {
   server.closeIdleConnections?.();
 });
 
-export async function startBackend(config, { database = mongoose, logger = console, chatOptions = {} } = {}) {
+export async function startBackend(config, { database = mongoose, logger = console, chatOptions = {}, work = pendingWork } = {}) {
   let stopping = false, stopPromise;
   let http, wsHttp, wss, chat, cleanup, cleanupTask;
   const isReady = () => !stopping && database.connection.readyState === 1;
@@ -28,22 +33,26 @@ export async function startBackend(config, { database = mongoose, logger = conso
     stopping = true;
     clearInterval(cleanup);
     stopPromise = (async () => {
-      const deadline = setTimeout(() => {
-        http?.closeAllConnections(); wsHttp?.closeAllConnections();
-        wss?.clients.forEach(client => client.terminate());
-      }, 5000);
-      try {
-        const wsClosed = wss ? new Promise(resolve => wss.close(resolve)) : Promise.resolve();
-        wss?.clients.forEach(client => client.close(1001, 'Server shutting down'));
-        await Promise.all([close(http), close(wsHttp), wsClosed, chat?.stop(), cleanupTask?.catch(() => {})]);
-        await database.disconnect();
-      } finally { clearTimeout(deadline); }
+      logger.log('Shutdown: draining accepted HTTP, chat and database work.');
+      await Promise.all([close(http), close(wsHttp), chat?.stop(), cleanupTask?.catch(() => {})]);
+      await work.drain();
+      if (wss) {
+        const wsClosed = new Promise(resolve => wss.close(resolve));
+        // All accepted commands have completed; transport cleanup cannot lose writes now.
+        wss.clients.forEach(client => client.terminate());
+        await wsClosed;
+      }
+      await database.disconnect();
     })();
     return stopPromise;
   };
   try {
     await database.connect(config.uri, { dbName: config.dbName, serverSelectionTimeoutMS: 10000, autoIndex: false });
+    if (database === mongoose) await ensureIdentityIndexes();
     if (database === mongoose) await SessionModel.createIndexes();
+    if (database === mongoose) await PlayTicketModel.createIndexes();
+    if (database === mongoose) await PlaySaveReceiptModel.createIndexes();
+    if (database === mongoose) await DedicatedRuntimeModel.createCollection();
     if (database === mongoose) await initializeChatStore();
     if (database === mongoose) {
       await initializeModeration();
@@ -58,7 +67,7 @@ export async function startBackend(config, { database = mongoose, logger = conso
     }
     http = createServer(createApp({ isReady, corsConfig: config.cors }));
     wsHttp = createServer((req, res) => { res.writeHead(404); res.end(); });
-    chat = attachChat(wsHttp, { ...chatOptions, isReady, origins: config.cors.origin });
+    chat = attachChat(wsHttp, { ...chatOptions, isReady: () => database.connection.readyState === 1, origins: config.cors.origin });
     wss = chat.wss;
     await listen(http, config.port, config.host);
     await listen(wsHttp, config.wsPort, config.host);

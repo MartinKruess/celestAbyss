@@ -129,7 +129,7 @@ Aktuell **33** unterschiedliche Skills für Grundklasse und Weiterentwicklung zu
 | 142 | Ausweichtraining | Passiv | 10 |
 | 144 | Rüstungstraining | Passiv | 10 |
 | 147 | Erweckung der Leidenschaft | Gruppen-/Begleiterbuff | 5 |
-| 148 | Scharfer Instinkte | Eigenbuff | 10 |
+| 148 | Scharfer Instinkt | Eigenbuff | 10 |
 | 151 | Für die Ehre | Eigenbuff | 10 |
 | 183 | Gute Reflexe | Eigenbuff | 10 |
 | 184 | Hinterhältige Falle | Offensiv | 10 |

@@ -30,19 +30,19 @@ Interne Klassenumrechnung: fremde normale Angriffsattribute geben 0 Angriff. Sch
 
 | Klasse | Leben | Mana | P-Angriff | M-Angriff | P-DEF | M-DEF | Genauigkeit* | Ausweichen* | Kritische Treffer* | Krit. Schaden | Block* | Penetration* | Angriffstempo† | Lauftempo† | HP-Reg./Tick* | MP-Reg./Tick* |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Abenteurer | 1.942 | 1.901 | 398 | 112 | 380 | 266 | 4,8 | 10,5 | 0 | 80 % | 0 | 118,5 | 77,42 Punkte | 100 Punkte | 248 | 78,1 |
-| Butcher | 1.991 | 1.891 | 607 | 7 | 384 | 226 | 0 | 0 | 0 | 80 % | 0 | 133,5 | 70 Punkte | 100 Punkte | 248 | 78,1 |
-| Druide | 1.953 | 1.921 | 288 | 401 | 367 | 311 | 0 | 0 | 0 | 80 % | 0 | 103,5 | 77 Punkte | 100 Punkte | 248 | 78,1 |
-| Gladiator | 2.071 | 1.907 | 562 | 6 | 437 | 197 | 0 | 0 | 0 | 80 % | 0 | 133,5 | 70 Punkte | 100 Punkte | 259,8 | 78,1 |
-| Heiler | 1.923 | 2.312 | 2 | 538 | 254 | 541 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 88,9 |
-| Kräuterkundler | 1.946 | 2.293 | 6 | 545 | 344 | 306 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 88,9 |
-| Jäger | 1.954 | 1.881 | 538 | 3 | 331 | 297 | 40 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 78,1 |
-| Ritter | 2.838 | 1.903 | 333 | 4 | 678 | 372 | 0 | 0 | 0 | 80 % | 0 | 118,5 | 70 Punkte | 100 Punkte | 359,6 | 78,1 |
-| Luminet | 1.941 | 2.237 | 4 | 543 | 290 | 445 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 87,1 |
-| Ritualist | 2.179 | 1.937 | 4 | 547 | 319 | 388 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 280 | 78,1 |
-| Schamane | 1.962 | 1.923 | 400 | 288 | 353 | 322 | 0 | 0 | 0 | 80 % | 0 | 112,5 | 70 Punkte | 100 Punkte | 248 | 78,1 |
-| Seelenjäger | 1.945 | 1.998 | 423 | 3 | 275 | 274 | 22,4 | 16,5 | 0 | 80 % | 0 | 88,5 | 80,66 Punkte | 100 Punkte | 248 | 78,1 |
-| Schurke | 1.936 | 1.993 | 382 | 6 | 345 | 278 | 0 | 24 | 0 | 80 % | 0 | 88,5 | 80,96 Punkte | 100 Punkte | 248 | 78,1 |
+| Abenteurer | 1.942 | 1.901 | 398 | 112 | 351 | 252 | 4,8 | 10,5 | 0 | 80 % | 0 | 118,5 | 77,42 Punkte | 100 Punkte | 248 | 78,1 |
+| Butcher | 1.991 | 1.891 | 607 | 7 | 271 | 221 | 0 | 0 | 0 | 80 % | 0 | 133,5 | 70 Punkte | 100 Punkte | 248 | 78,1 |
+| Druide | 1.953 | 1.921 | 288 | 401 | 319 | 284 | 0 | 0 | 0 | 80 % | 0 | 103,5 | 77 Punkte | 100 Punkte | 248 | 78,1 |
+| Gladiator | 2.071 | 1.907 | 562 | 6 | 370 | 214 | 0 | 0 | 0 | 80 % | 0 | 133,5 | 70 Punkte | 100 Punkte | 259,8 | 78,1 |
+| Heiler | 1.923 | 2.312 | 2 | 538 | 219 | 438 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 88,9 |
+| Kräuterkundler | 1.946 | 2.293 | 6 | 545 | 306 | 285 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 88,9 |
+| Jäger | 1.954 | 1.881 | 538 | 3 | 279 | 286 | 40 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 78,1 |
+| Ritter | 2.838 | 1.903 | 333 | 4 | 574 | 375 | 0 | 0 | 0 | 80 % | 0 | 118,5 | 70 Punkte | 100 Punkte | 359,6 | 78,1 |
+| Luminet | 1.941 | 2.237 | 4 | 543 | 267 | 436 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 248 | 87,1 |
+| Ritualist | 2.179 | 1.937 | 4 | 547 | 273 | 277 | 0 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 280 | 78,1 |
+| Schamane | 1.962 | 1.923 | 400 | 288 | 327 | 287 | 0 | 0 | 0 | 80 % | 0 | 112,5 | 70 Punkte | 100 Punkte | 248 | 78,1 |
+| Seelenjäger | 1.945 | 1.998 | 423 | 3 | 269 | 267 | 22,4 | 16,5 | 0 | 80 % | 0 | 88,5 | 80,66 Punkte | 100 Punkte | 248 | 78,1 |
+| Schurke | 1.936 | 1.993 | 382 | 6 | 246 | 271 | 0 | 24 | 0 | 80 % | 0 | 88,5 | 80,96 Punkte | 100 Punkte | 248 | 78,1 |
 
 ## Vergleich mit permanenten Passiven vor dem Kampf
 
@@ -52,23 +52,23 @@ Jede der 13 Klassen zählt einmal: Bei mehreren Waffen-/Seelenspeicher-Varianten
 
 | Klasse | Leben | Mana | P-Angriff | M-Angriff | P-DEF | M-DEF | Genauigkeit* | Ausweichen* | Kritische Treffer* | Krit. Schaden | Block* | Penetration* | Angriffstempo† | Lauftempo† | HP-Reg./Tick* | MP-Reg./Tick* |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Abenteurer | 🟡 3.292 | 🟡 3.101 | 🟡 472 | 🟡 132 | 🟢 464 | 🔴 374 | 20,8 | 18 | 0 | 80 % | 0 | 163,5 | 77,72 Punkte | 100 Punkte | 🟢 438 | 🔴 124,1 |
-| Butcher | 🟡 3.191 | 🟡 3.241 | 🟢 691 | 🔴 27 | 🟢 462 | 🔴 340 | 8 | 7,5 | 0 | 80 % | 0 | 181,5 | 70,3 Punkte | 100 Punkte | 🟡 418 | 🟡 128,6 |
-| Druide | 🟡 2.703 | 🟢 4.136 | 🔴 335 | 🟢 487 | 🟡 427 | 🟡 425 | 16 | 0 | 0 | 80 % | 0 | 126 | 77 Punkte | 100 Punkte | 🔴 348 | 🟡 138,6 |
-| Gladiator | 🟢 3.803 | 🟡 3.257 | 🟢 629 | 🔴 26 | 🟢 537 | 🔴 311 | 0 | 7,5 | 41 | 80 % | 0 | 171 | 70,3 Punkte | 100 Punkte | 🟢 500,8 | 🟡 128,6 |
-| Heiler | 🟡 2.523 | 🟢 3.962 | 🔴 22 | 🟢 639 | 🔴 308 | 🟢 709 | 16 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 🔴 328 | 🟢 198,4 |
-| Kräuterkundler | 🟡 2.996 | 🟡 3.643 | 🔴 26 | 🟢 640 | 🟡 416 | 🟡 423 | 16 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 🟡 398 | 🟡 139,4 |
-| Jäger | 🟡 3.004 | 🟡 2.931 | 🟢 628 | 🔴 23 | 🟡 403 | 🟡 403 | 102,4 | 31,5 | 4,8 | 80 % | 0 | 118,5 | 71,26 Punkte | 100 Punkte | 🟡 398 | 🔴 119,6 |
-| Ritter | 🟢 4.488 | 🟡 3.253 | 🟡 421 | 🔴 24 | 🟢 771 | 🟢 499 | 0 | 0 | 0 | 80 % | 30 | 175,35 | 70 Punkte | 100 Punkte | 🟢 579,6 | 🟡 138,6 |
-| Luminet | 🟡 2.841 | 🟡 3.737 | 🔴 24 | 🟢 655 | 🔴 356 | 🟢 565 | 16 | 0 | 4,8 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 🟡 368 | 🟢 192,1 |
-| Ritualist / Magiewaffe, leerer Seelenspeicher | 🟡 3.079 | 🟡 2.837 | 🔴 24 | 🟢 585 | 🟡 385 | 🟢 484 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 🟡 410 | 🟡 139,1 |
-| Ritualist / Magiewaffe, 100 Seelen | 🟡 3.079 | 🟡 2.837 | 🔴 24 | 🟢 615 | 🟡 385 | 🟢 484 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 🟡 410 | 🟡 139,1 |
-| Schamane | 🟡 2.802 | 🟡 3.123 | 🟡 482 | 🟢 391 | 🟡 416 | 🟡 430 | 16 | 0 | 0 | 80 % | 0 | 138 | 70 Punkte | 100 Punkte | 🟡 360 | 🟡 138,12 |
-| Seelenjäger | 🟡 2.695 | 🟡 2.785 | 🟢 535 | 🔴 23 | 🔴 335 | 🔴 366 | 86,4 | 61,5 | 0 | 80 % | 0 | 103,5 | 92,46 Punkte | 100 Punkte | 🔴 358 | 🔴 110,6 |
-| Schurke | 🟡 2.686 | 🟡 2.880 | 🟡 452 | 🔴 26 | 🟡 405 | 🔴 368 | 40 | 64,5 | 0 | 80 % | 0 | 130,5 | 82,58 Punkte | 100 Punkte | 🔴 358 | 🔴 110,6 |
-| **Median** | 2.996 | 3.241 | 452 | 132 | 416 | 423 | — | — | — | — | — | — | — | — | 398 | 138,12 |
-| **Arithmetischer Mittelwert** | 3.085 | 3.299 | 365 | 284 | 437 | 438 | — | — | — | — | — | — | — | — | 404,8 | 138,96 |
-| **Gelber Bereich: ±** | 500 | 500 | 45 | 13 | 42 | 42 | — | — | — | — | — | — | — | — | 39,8 | 13,81 |
+| Abenteurer | 🟡 3.292 | 🟡 3.101 | 🟡 472 | 🟡 132 | 🟢 435 | 🟡 360 | 20,8 | 18 | 0 | 80 % | 0 | 163,5 | 77,72 Punkte | 100 Punkte | 🟢 438 | 🔴 124,1 |
+| Butcher | 🟡 3.191 | 🟡 3.241 | 🟢 691 | 🔴 27 | 🟡 349 | 🔴 335 | 8 | 7,5 | 0 | 80 % | 0 | 181,5 | 70,3 Punkte | 100 Punkte | 🟡 418 | 🟡 128,6 |
+| Druide | 🟡 2.703 | 🟢 4.136 | 🔴 335 | 🟢 487 | 🟡 379 | 🟡 398 | 16 | 0 | 0 | 80 % | 0 | 126 | 77 Punkte | 100 Punkte | 🔴 348 | 🟡 138,6 |
+| Gladiator | 🟢 3.803 | 🟡 3.257 | 🟢 629 | 🔴 26 | 🟢 470 | 🔴 328 | 0 | 7,5 | 41 | 80 % | 0 | 171 | 70,3 Punkte | 100 Punkte | 🟢 500,8 | 🟡 128,6 |
+| Heiler | 🟡 2.523 | 🟢 3.962 | 🔴 22 | 🟢 639 | 🔴 273 | 🟢 606 | 16 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 🔴 328 | 🟢 198,4 |
+| Kräuterkundler | 🟡 2.996 | 🟡 3.643 | 🔴 26 | 🟢 640 | 🟡 378 | 🟡 402 | 16 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 🟡 398 | 🟡 139,4 |
+| Jäger | 🟡 3.004 | 🟡 2.931 | 🟢 628 | 🔴 23 | 🟡 351 | 🟡 392 | 102,4 | 31,5 | 4,8 | 80 % | 0 | 118,5 | 71,26 Punkte | 100 Punkte | 🟡 398 | 🔴 119,6 |
+| Ritter | 🟢 4.488 | 🟡 3.253 | 🟡 421 | 🔴 24 | 🟢 667 | 🟢 502 | 0 | 0 | 0 | 80 % | 30 | 175,35 | 70 Punkte | 100 Punkte | 🟢 579,6 | 🟡 138,6 |
+| Luminet | 🟡 2.841 | 🟡 3.737 | 🔴 24 | 🟢 655 | 🟡 333 | 🟢 556 | 16 | 0 | 4,8 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 🟡 368 | 🟢 192,1 |
+| Ritualist / Magiewaffe, leerer Seelenspeicher | 🟡 3.079 | 🟡 2.837 | 🔴 24 | 🟢 585 | 🟡 339 | 🟡 373 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 🟡 410 | 🟡 139,1 |
+| Ritualist / Magiewaffe, 100 Seelen | 🟡 3.079 | 🟡 2.837 | 🔴 24 | 🟢 615 | 🟡 339 | 🟡 373 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 🟡 410 | 🟡 139,1 |
+| Schamane | 🟡 2.802 | 🟡 3.123 | 🟡 482 | 🟢 391 | 🟢 390 | 🟡 395 | 16 | 0 | 0 | 80 % | 0 | 138 | 70 Punkte | 100 Punkte | 🟡 360 | 🟡 138,12 |
+| Seelenjäger | 🟡 2.695 | 🟡 2.785 | 🟢 535 | 🔴 23 | 🟡 329 | 🟡 359 | 86,4 | 61,5 | 0 | 80 % | 0 | 103,5 | 92,46 Punkte | 100 Punkte | 🔴 358 | 🔴 110,6 |
+| Schurke | 🟡 2.686 | 🟡 2.880 | 🟡 452 | 🔴 26 | 🔴 306 | 🟡 361 | 40 | 64,5 | 0 | 80 % | 0 | 130,5 | 82,58 Punkte | 100 Punkte | 🔴 358 | 🔴 110,6 |
+| **Median** | 2.996 | 3.241 | 452 | 132 | 351 | 392 | — | — | — | — | — | — | — | — | 398 | 138,12 |
+| **Arithmetischer Mittelwert** | 3.085 | 3.299 | 365 | 284 | 384 | 413 | — | — | — | — | — | — | — | — | 404,8 | 138,96 |
+| **Gelber Bereich: ±** | 500 | 500 | 45 | 13 | 35 | 39 | — | — | — | — | — | — | — | — | 39,8 | 13,81 |
 
 ## Vergleich mit permanenten Passiven und eigenen Buffs
 
@@ -76,20 +76,20 @@ R6-Momentaufnahme mit gleichzeitig aktiven eigenen Buffs auf der maximal lernbar
 
 | Klasse | Leben | Mana | P-Angriff | M-Angriff | P-DEF | M-DEF | Genauigkeit* | Ausweichen* | Kritische Treffer* | Krit. Schaden | Block* | Penetration* | Angriffstempo† | Lauftempo† | HP-Reg./Tick* | MP-Reg./Tick* |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Abenteurer | 3.592 | 3.101 | 539 | 132 | 476 | 374 | 36,8 | 33 | 0 | 80 % | 0 | 186 | 79,32 Punkte | 100 Punkte | 478 | 124,1 |
-| Butcher | 3.674 | 3.241 | 834 | 27 | 472 | 340 | 8 | 7,5 | 0 | 80 % | 0 | 199,35 | 95,3 Punkte | 100 Punkte | 450,4 | 128,6 |
-| Druide | 2.853 | 4.286 | 344 | 525 | 433 | 611 | 16 | 0 | 0 | 80 % | 0 | 133,5 | 77 Punkte | 100 Punkte | 368 | 203,1 |
-| Gladiator | 5.183 | 3.457 | 771 | 26 | 562 | 311 | 0 | 7,5 | 45,8 | 81 % | 0 | 251 | 70,3 Punkte | 100 Punkte | 584,8 | 128,6 |
-| Heiler | 3.123 | 4.862 | 22 | 675 | 332 | 733 | 16 | 0 | 0 | 80 % | 0 | 118,5 | 70 Punkte | 100 Punkte | 408 | 261,4 |
-| Kräuterkundler | 2.996 | 4.303 | 26 | 682 | 458 | 493 | 16 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 398 | 159,2 |
-| Jäger | 3.004 | 2.931 | 665 | 23 | 403 | 403 | 150,4 | 54,5 | 20,8 | 80 % | 0 | 118,5 | 71,38 Punkte | 100 Punkte | 398 | 119,6 |
-| Ritter | 5.148 | 3.253 | 496 | 24 | 2.129 | 1.867 | 0 | 0 | 0 | 80 % | 40 | 208,35 | 70 Punkte | 100 Punkte | 667,6 | 138,6 |
-| Luminet | 2.841 | 3.437 | 24 | 731 | 356 | 553 | 16 | 0 | 4,8 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 368 | 183,1 |
-| Ritualist / Magiewaffe, leerer Seelenspeicher | 3.529 | 3.107 | 24 | 596 | 403 | 495 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 470 | 147,2 |
-| Ritualist / Magiewaffe, 100 Seelen | 3.529 | 3.107 | 24 | 626 | 403 | 495 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 470 | 147,2 |
-| Schamane | 2.952 | 3.123 | 551 | 391 | 602 | 430 | 16 | 0 | 0 | 80 % | 0 | 145,5 | 80 Punkte | 105 Punkte | 380 | 138,12 |
-| Seelenjäger | 2.695 | 2.785 | 608 | 23 | 335 | 366 | 115,2 | 99 | 0 | 80 % | 0 | 103,5 | 94,96 Punkte | 120 Punkte | 358 | 110,6 |
-| Schurke | 2.686 | 2.880 | 479 | 26 | 405 | 368 | 40 | 72 | 8,8 | 80 % | 0 | 130,5 | 97,88 Punkte | 130 Punkte | 358 | 110,6 |
+| Abenteurer | 3.592 | 3.101 | 539 | 132 | 447 | 360 | 36,8 | 33 | 0 | 80 % | 0 | 186 | 79,32 Punkte | 100 Punkte | 478 | 124,1 |
+| Butcher | 3.674 | 3.241 | 834 | 27 | 359 | 335 | 8 | 7,5 | 0 | 80 % | 0 | 199,35 | 95,3 Punkte | 100 Punkte | 450,4 | 128,6 |
+| Druide | 2.853 | 4.286 | 344 | 525 | 385 | 584 | 16 | 0 | 0 | 80 % | 0 | 133,5 | 77 Punkte | 100 Punkte | 368 | 203,1 |
+| Gladiator | 5.183 | 3.457 | 771 | 26 | 495 | 328 | 0 | 7,5 | 45,8 | 81 % | 0 | 251 | 70,3 Punkte | 100 Punkte | 584,8 | 128,6 |
+| Heiler | 3.123 | 4.862 | 22 | 675 | 297 | 630 | 16 | 0 | 0 | 80 % | 0 | 118,5 | 70 Punkte | 100 Punkte | 408 | 261,4 |
+| Kräuterkundler | 2.996 | 4.303 | 26 | 682 | 420 | 472 | 16 | 0 | 0 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 398 | 159,2 |
+| Jäger | 3.004 | 2.931 | 665 | 23 | 351 | 392 | 150,4 | 54,5 | 20,8 | 80 % | 0 | 118,5 | 71,38 Punkte | 100 Punkte | 398 | 119,6 |
+| Ritter | 5.148 | 3.253 | 496 | 24 | 2.025 | 1.870 | 0 | 0 | 0 | 80 % | 40 | 208,35 | 70 Punkte | 100 Punkte | 667,6 | 138,6 |
+| Luminet | 2.841 | 3.437 | 24 | 731 | 333 | 544 | 16 | 0 | 4,8 | 80 % | 0 | 88,5 | 70 Punkte | 100 Punkte | 368 | 183,1 |
+| Ritualist / Magiewaffe, leerer Seelenspeicher | 3.529 | 3.107 | 24 | 596 | 357 | 384 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 470 | 147,2 |
+| Ritualist / Magiewaffe, 100 Seelen | 3.529 | 3.107 | 24 | 626 | 357 | 384 | 24 | 7,5 | 0 | 80 % | 0 | 103,5 | 70,3 Punkte | 100 Punkte | 470 | 147,2 |
+| Schamane | 2.952 | 3.123 | 551 | 391 | 576 | 395 | 16 | 0 | 0 | 80 % | 0 | 145,5 | 80 Punkte | 105 Punkte | 380 | 138,12 |
+| Seelenjäger | 2.695 | 2.785 | 608 | 23 | 329 | 359 | 115,2 | 99 | 0 | 80 % | 0 | 103,5 | 94,96 Punkte | 120 Punkte | 358 | 110,6 |
+| Schurke | 2.686 | 2.880 | 479 | 26 | 306 | 361 | 40 | 72 | 8,8 | 80 % | 0 | 130,5 | 97,88 Punkte | 130 Punkte | 358 | 110,6 |
 
 Die MP-Regeneration ist der Bruttowert je 3-Sekunden-Tick. Aktivierungskosten und laufende Toggle-Kosten ändern die angezeigte Max-Mana-Kapazität oder Brutto-Regeneration nicht. Max-Leben-/Max-Mana-Boni sind keine sofortige Heilung oder Mana-Wiederherstellung. Keine Beschwörungen, Kampf-Procs, zufälligen Zusatzschäden oder erst durch Angriffe/Felder aktivierten Buffs. Nur Ambush nutzt die R6-Freischaltannahme. Luminet und Ritualist verwenden Intelligenz.
 
@@ -97,7 +97,7 @@ Die MP-Regeneration ist der Bruttowert je 3-Sekunden-Tick. Aktivierungskosten un
 
 | Klasse | Eigene Buffs (maximale Dauer) | Separate Effekte / Annahmen |
 | --- | --- | --- |
-| Abenteurer | Verstärkung des Körpers (600 s); Erweckung der Leidenschaft (600 s); Scharfer Instinkte (300 s); Macht der Wildnis (1200 s) | Macht des Begleiters: Nur Begleiter, keine Spieler. |
+| Abenteurer | Verstärkung des Körpers (600 s); Erweckung der Leidenschaft (600 s); Scharfer Instinkt (300 s); Macht der Wildnis (1200 s) | Macht des Begleiters: Nur Begleiter, keine Spieler. |
 | Butcher | Aufladung (15 s); Kampfinstinkt (600 s); Geist des Kriegers (300 s); Blutrausch (60 s); Bis in den Tot (15 s) | Bis in den Tot: zuletzt aktiviert; 11.90 vitality vorübergehend in strength getauscht.; Kampfinstinkt: +80 Körperlicher Zusatzschaden für Skills; nicht zum allgemeinen Angriff addiert; kein Bonus für normale Auto-Attacks |
 | Druide | Macht des Wassers (1800 s); Herr der Elemente (600 s); Macht des Geistes (1800 s) | Macht des Wassers: +81 Magischer Zusatzschaden für Skills; nicht zum allgemeinen Angriff addiert; kein Bonus für normale Auto-Attacks |
 | Gladiator | Energieausbruch (20 s); Verstärkung des Körpers (600 s); Provozieren (Dauer offen); Energie der Wut (60 s); Innere Kraft (600 s); Volles Potential (600 s) | Energieausbruch: Separater Schild: 15 % Max-Leben; kein zusätzliches Max-Leben; Energieausbruch: Zusatzschaden für die definierte Angriffsart; nicht zum allgemeinen Angriff addiert; Energieausbruch: Verbrauch: 1 % Max-Mana je MP-Tick; nicht von der Brutto-Regeneration abgezogen; Provozieren: Aggro-Faktor 2; kein Charakterattribut; Provozieren: Verbrauch: 25 Mana je MP-Tick; nicht von der Brutto-Regeneration abgezogen; Energie der Wut: resourceGain: kein allgemeiner Tabellenwert |
@@ -109,7 +109,7 @@ Die MP-Regeneration ist der Bruttowert je 3-Sekunden-Tick. Aktivierungskosten un
 | Ritualist / Magiewaffe, leerer Seelenspeicher | Geist des Feuers (300 s); Teufelspakt (600 s) | Geist des Feuers: +65 Zusatzschaden für Skills; nicht zum allgemeinen Angriff addiert; kein Bonus für normale Auto-Attacks |
 | Ritualist / Magiewaffe, 100 Seelen | Geist des Feuers (300 s); Teufelspakt (600 s) | Geist des Feuers: +65 Zusatzschaden für Skills; nicht zum allgemeinen Angriff addiert; kein Bonus für normale Auto-Attacks |
 | Schamane | Macht der Wildnis (1200 s); Macht des Felsens (1800 s); Geschwindigkeit der Dox (1800 s); Macht des Feuers (1800 s) | Macht des Feuers: +180 Körperlicher Zusatzschaden für Skills; nicht zum allgemeinen Angriff addiert; kein Bonus für normale Auto-Attacks; Macht des Feuers: +81 Magischer Zusatzschaden für Skills; nicht zum allgemeinen Angriff addiert; kein Bonus für normale Auto-Attacks |
-| Seelenjäger | Beweglichkeit (24.5 s); Erweckung der Leidenschaft (600 s); Scharfer Instinkte (300 s); Gute Reflexe (600 s); Keine Gnade (600 s); Flinke Füße (600 s) | Gute Reflexe: resourceCostReduction: kein allgemeiner Tabellenwert |
+| Seelenjäger | Beweglichkeit (24.5 s); Erweckung der Leidenschaft (600 s); Scharfer Instinkt (300 s); Gute Reflexe (600 s); Keine Gnade (600 s); Flinke Füße (600 s) | Gute Reflexe: resourceCostReduction: kein allgemeiner Tabellenwert |
 | Schurke | Beweglichkeit (24.5 s); List des Schurken (300 s); Dunkler Schleier (8 s); Herz des Verräters (600 s); Flinke Füße (600 s); Attentäter (20 s) | Herz des Verräters: 12 Mana je eigenem Auto-Attack bei erfüllten Buffbedingungen; kein MP-Tick-Bonus |
 
 Ritualist: leerer und voller Seelenspeicher separat; Ausbrennen als Kampfzustand ausgeschlossen. Technische Perfektion beim Schurken enthalten. Keine Änderung an Skillzuweisungen oder Ausrüstungsdefinitionen.

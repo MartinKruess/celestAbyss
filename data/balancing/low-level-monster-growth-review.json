@@ -1,0 +1,155 @@
+{
+  "status": "readOnlyGrowthProbeNotCombatOrSpawnBalance",
+  "growthFactor": 1.04,
+  "formula": "level1 stat * 1.04^(level-1)",
+  "assumptions": [
+    "Not a prediction of soloability: HP, animations and skills absent.",
+    "Forest troll defenses match forest Orc king; same armor figures apply."
+  ],
+  "rows": [
+    {
+      "family": "Goblins",
+      "role": "warrior",
+      "level": 5,
+      "attack": 28.076605440000005,
+      "pdef": 9.358868480000002,
+      "mdef": 5.849292800000001,
+      "pSweetspot": 2.2461284352,
+      "mSweetspot": 1.403830272,
+      "physicalReduction": 0.18984513740800002,
+      "magicalReduction": 0.15615321088
+    },
+    {
+      "family": "Goblins",
+      "role": "warrior",
+      "level": 13,
+      "attack": 38.42477324562436,
+      "pdef": 12.808257748541452,
+      "mdef": 8.005161092838408,
+      "pSweetspot": 3.0739818596499484,
+      "mSweetspot": 1.9212386622812179,
+      "physicalReduction": 0.1472920286099992,
+      "magicalReduction": 0.12955751788124953
+    },
+    {
+      "family": "Goblins",
+      "role": "warrior",
+      "level": 20,
+      "attack": 50.564380223848175,
+      "pdef": 16.85479340794939,
+      "mdef": 10.534245879968369,
+      "pSweetspot": 4.045150417907854,
+      "mSweetspot": 2.5282190111924083,
+      "physicalReduction": 0.14045150417907853,
+      "magicalReduction": 0.1252821901119241
+    },
+    {
+      "family": "Goblins",
+      "role": "king",
+      "level": 5,
+      "attack": 39.77519104000001,
+      "pdef": 19.887595520000005,
+      "mdef": 17.547878400000002,
+      "pSweetspot": 4.773022924800001,
+      "mSweetspot": 4.211490816,
+      "physicalReduction": 0.29092091699200007,
+      "magicalReduction": 0.26845963264000006
+    },
+    {
+      "family": "Goblins",
+      "role": "king",
+      "level": 13,
+      "attack": 54.43509543130117,
+      "pdef": 27.217547715650586,
+      "mdef": 24.015483278515223,
+      "pSweetspot": 6.53221145175614,
+      "mSweetspot": 5.763715986843653,
+      "physicalReduction": 0.2004955607962483,
+      "magicalReduction": 0.18867255364374852
+    },
+    {
+      "family": "Goblins",
+      "role": "king",
+      "level": 20,
+      "attack": 71.63287198378491,
+      "pdef": 35.816435991892455,
+      "mdef": 31.602737639905108,
+      "pSweetspot": 8.595944638054188,
+      "mSweetspot": 7.584657033577225,
+      "physicalReduction": 0.1859594463805419,
+      "magicalReduction": 0.17584657033577228
+    },
+    {
+      "family": "Orcs",
+      "role": "warrior",
+      "level": 5,
+      "attack": 32.75603968000001,
+      "pdef": 10.528727040000001,
+      "mdef": 5.849292800000001,
+      "pSweetspot": 2.5268944896,
+      "mSweetspot": 1.403830272,
+      "physicalReduction": 0.20107577958400003,
+      "magicalReduction": 0.15615321088
+    },
+    {
+      "family": "Orcs",
+      "role": "warrior",
+      "level": 13,
+      "attack": 44.82890211989508,
+      "pdef": 14.409289967109133,
+      "mdef": 8.005161092838408,
+      "pSweetspot": 3.458229592106192,
+      "mSweetspot": 1.9212386622812179,
+      "physicalReduction": 0.1532035321862491,
+      "magicalReduction": 0.12955751788124953
+    },
+    {
+      "family": "Orcs",
+      "role": "warrior",
+      "level": 20,
+      "attack": 58.99177692782287,
+      "pdef": 18.961642583943064,
+      "mdef": 10.534245879968369,
+      "pSweetspot": 4.550794220146335,
+      "mSweetspot": 2.5282190111924083,
+      "physicalReduction": 0.14550794220146335,
+      "magicalReduction": 0.1252821901119241
+    },
+    {
+      "family": "Orcs",
+      "role": "king",
+      "level": 5,
+      "attack": 46.794342400000005,
+      "pdef": 26.906746880000004,
+      "mdef": 24.567029760000004,
+      "pSweetspot": 6.457619251200001,
+      "mSweetspot": 5.896087142400001,
+      "physicalReduction": 0.5915238502400002,
+      "magicalReduction": 0.4792174284800001
+    },
+    {
+      "family": "Orcs",
+      "role": "king",
+      "level": 13,
+      "attack": 64.04128874270727,
+      "pdef": 36.82374102705668,
+      "mdef": 33.621676589921314,
+      "pSweetspot": 8.837697846493603,
+      "mSweetspot": 8.069202381581114,
+      "physicalReduction": 0.23596458225374772,
+      "magicalReduction": 0.2241415751012479
+    },
+    {
+      "family": "Orcs",
+      "role": "king",
+      "level": 20,
+      "attack": 84.27396703974695,
+      "pdef": 48.457531047854495,
+      "mdef": 44.24383269586715,
+      "pSweetspot": 11.629807451485078,
+      "mSweetspot": 10.618519847008114,
+      "physicalReduction": 0.2162980745148508,
+      "magicalReduction": 0.20618519847008115
+    }
+  ]
+}
