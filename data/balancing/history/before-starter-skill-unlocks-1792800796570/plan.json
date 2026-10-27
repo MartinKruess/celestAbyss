@@ -1,0 +1,187 @@
+{
+  "status": "definedFirstUnlocksAppliedToCatalogAndDatabase",
+  "scope": "First character-level unlock only; further skill ranks remain undefined",
+  "sharedFirstUnlocks": {
+    "3": 23,
+    "6": 25,
+    "7": 15,
+    "9": 30,
+    "11": 22,
+    "12": 42,
+    "13": 60,
+    "18": 15,
+    "22": 15,
+    "26": 15,
+    "29": 12,
+    "30": 10,
+    "34": 25,
+    "35": 27,
+    "38": 12,
+    "39": 21,
+    "43": 9,
+    "44": 9,
+    "45": 9,
+    "52": 60,
+    "75": 22,
+    "77": 10,
+    "89": 55,
+    "93": 15,
+    "96": 17,
+    "98": 35,
+    "102": 15,
+    "106": 21,
+    "109": 37,
+    "114": 42,
+    "118": 65,
+    "125": 17,
+    "128": 35,
+    "131": 15,
+    "132": 15,
+    "133": 5,
+    "134": 4,
+    "135": 4,
+    "136": 5,
+    "137": 5,
+    "138": 4,
+    "140": 20,
+    "144": 4,
+    "145": 30,
+    "158": 12,
+    "161": 35,
+    "162": 33,
+    "163": 55,
+    "172": 37,
+    "173": 33,
+    "174": 60,
+    "175": 25,
+    "176": 30,
+    "177": 60,
+    "193": 20,
+    "194": 35,
+    "197": 20,
+    "201": 2,
+    "203": 37,
+    "204": 47,
+    "212": 60,
+    "219": 23,
+    "220": 27,
+    "221": 22,
+    "222": 60,
+    "225": 20,
+    "226": 42,
+    "227": 47,
+    "230": 65,
+    "233": 47,
+    "234": 65,
+    "237": 42,
+    "244": 42,
+    "245": 15,
+    "252": 15,
+    "253": 55,
+    "261": 33
+  },
+  "sharedNotes": "Racial starting skills retain L1. Body, Mind and Senses expansion counterparts planned for L9. Endurance Training (139) has not been rescheduled; current L2 remains visible.",
+  "classFirstAttacks": {
+    "adventurer": null,
+    "butcher": {
+      "nr": 87,
+      "level": 6
+    },
+    "druid": {
+      "nr": 36,
+      "level": 6
+    },
+    "gladiator": {
+      "nr": 61,
+      "level": 6
+    },
+    "healer": {
+      "nr": 36,
+      "level": 6
+    },
+    "herbalist": {
+      "nr": 16,
+      "level": 6
+    },
+    "hunter": {
+      "nr": 51,
+      "level": 6
+    },
+    "knight": {
+      "nr": 77,
+      "level": 10
+    },
+    "luminet": {
+      "nr": 36,
+      "level": 6
+    },
+    "ritualist": {
+      "nr": 49,
+      "level": 6
+    },
+    "shaman": null,
+    "summoner": {
+      "nr": 51,
+      "level": 6
+    },
+    "rogue": {
+      "nr": 27,
+      "level": 6
+    }
+  },
+  "withdrawnFirstUnlocks": {
+    "233": 65
+  },
+  "replacedFirstAttacks": [
+    {
+      "classKey": "luminet",
+      "nr": 231,
+      "replacementNr": 36,
+      "previousLevel": 6
+    }
+  ],
+  "movementWindows": {
+    "hunter": {
+      "skillNumbers": [
+        14,
+        25
+      ],
+      "levelRange": [
+        7,
+        8
+      ]
+    },
+    "summoner": {
+      "skillNumbers": [
+        21
+      ],
+      "levelRange": [
+        7,
+        8
+      ]
+    },
+    "adventurer": {
+      "skillNumbers": [
+        14,
+        21,
+        25
+      ],
+      "levelRange": [
+        7,
+        8
+      ]
+    }
+  },
+  "pending": {
+    "adventurerFirstAttack": {
+      "candidateNr": 248,
+      "candidateName": "Kreuzhieb",
+      "targetLevel": 6,
+      "reason": "User requested checking initial strength before selecting; skill rank 1 hits twice with 27 and 108 base damage, adding current physical attack on each hit. No nerf authorized."
+    },
+    "shamanFirstAttack": "Not yet named. Current class has neither Rotier Schlag nor Energieschlag. Beben and Felszähne are existing physical candidates, not selected.",
+    "movementExactLevels": "User specified L7 or L8; exact assignment within the window remains open.",
+    "enduranceTrainingFirstUnlock": "Not yet changed from current L2."
+  },
+  "databaseDecision": "data/balancing/starter-skill-unlocks-decision.json"
+}

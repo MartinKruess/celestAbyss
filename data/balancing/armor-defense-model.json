@@ -11,7 +11,7 @@
   },
   "scaleNumerator": 354,
   "scaleDenominator": 554,
-  "rounding": "Round scaled aggregate to nearest integer, then allocate integer parts by largest remainder",
+  "rounding": "Half up after every backwards step, integer hundredths; totals sum the rounded parts.",
   "cloakDefense": "Unassigned; additional to the five-part defense allocation",
   "rank6Targets": {
     "Gladiator": {
@@ -1551,5 +1551,916 @@
       "scope": "Random bonus slots on weapons including shields, separate from gem sockets",
       "duplicatesAllowed": false
     }
+  },
+  "physicalDefenseByClassAndRank": {
+    "Adventure": {
+      "1": 17.61,
+      "2": 31.19,
+      "3": 54.6,
+      "4": 94.47,
+      "5": 161.54,
+      "6": 273
+    },
+    "Butcher": {
+      "1": 12.65,
+      "2": 22.39,
+      "3": 39.2,
+      "4": 67.83,
+      "5": 115.97,
+      "6": 196
+    },
+    "Druid": {
+      "1": 15.69,
+      "2": 27.77,
+      "3": 48.6,
+      "4": 84.1,
+      "5": 143.8,
+      "6": 243
+    },
+    "Gladiator": {
+      "1": 18.53,
+      "2": 32.81,
+      "3": 57.4,
+      "4": 99.32,
+      "5": 169.83,
+      "6": 287
+    },
+    "Healer": {
+      "1": 9.37,
+      "2": 16.57,
+      "3": 29,
+      "4": 50.18,
+      "5": 85.81,
+      "6": 145
+    },
+    "Archer": {
+      "1": 13.05,
+      "2": 23.09,
+      "3": 40.4,
+      "4": 69.89,
+      "5": 119.51,
+      "6": 202
+    },
+    "Kräuterkundler": {
+      "1": 14.8,
+      "2": 26.18,
+      "3": 45.8,
+      "4": 79.25,
+      "5": 135.5,
+      "6": 229
+    },
+    "Lightmage": {
+      "1": 12.4,
+      "2": 21.93,
+      "3": 38.4,
+      "4": 66.45,
+      "5": 113.61,
+      "6": 192
+    },
+    "Seelenjäger": {
+      "1": 12.47,
+      "2": 22.05,
+      "3": 38.6,
+      "4": 66.79,
+      "5": 114.2,
+      "6": 193
+    },
+    "Tank": {
+      "1": 21.9,
+      "2": 38.75,
+      "3": 67.8,
+      "4": 117.3,
+      "5": 200.59,
+      "6": 339
+    },
+    "Bloodmage": {
+      "1": 12.21,
+      "2": 21.6,
+      "3": 37.8,
+      "4": 65.4,
+      "5": 111.83,
+      "6": 189
+    },
+    "Shamane": {
+      "1": 16.14,
+      "2": 28.57,
+      "3": 50,
+      "4": 86.5,
+      "5": 147.93,
+      "6": 250
+    },
+    "Villain": {
+      "1": 10.99,
+      "2": 19.44,
+      "3": 34,
+      "4": 58.85,
+      "5": 100.61,
+      "6": 170
+    }
+  },
+  "physicalCalibration": {
+    "rounding": "Ceil physical set totals to ensure effective level never falls below target; tolerate 1e-9 floating point noise",
+    "anchorRank": 4,
+    "anchorLevel": 60,
+    "changedRanks": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "specialAnchor": {
+      "class": "Gladiator",
+      "physicalDefense": 169,
+      "reduction": 35
+    },
+    "preservedRanks": [],
+    "magicalDefense": "unchanged",
+    "rule": "Override final physical set totals after historical scaling; each class calibrated independently. R2 through R6 calibrated; R1 independently reduced by the approved whole-point starter adjustment.",
+    "status": "historicalSupersededByRankProgression"
+  },
+  "r1StarterAdjustment": {
+    "rule": "Subtract only the whole-number magnitude of the previously calculated negative level-1 armor target from existing R1 armor; magnitudes below 1 unchanged. This does not calibrate effective armor level to 1.",
+    "rows": [
+      {
+        "key": "adventurer",
+        "name": "Abenteurer",
+        "sourceClass": "Adventure",
+        "before": 30,
+        "reduction": 3,
+        "after": 27,
+        "effectiveLevel": 8.542713567839195
+      },
+      {
+        "key": "butcher",
+        "name": "Butcher",
+        "sourceClass": "Butcher",
+        "before": 31,
+        "reduction": 0,
+        "after": 31,
+        "effectiveLevel": 11.0062893081761
+      },
+      {
+        "key": "druid",
+        "name": "Druide",
+        "sourceClass": "Druid",
+        "before": 29,
+        "reduction": 1,
+        "after": 28,
+        "effectiveLevel": 9.008189262966333
+      },
+      {
+        "key": "gladiator",
+        "name": "Gladiator",
+        "sourceClass": "Gladiator",
+        "before": 36,
+        "reduction": 4,
+        "after": 32,
+        "effectiveLevel": 9.748751684235556
+      },
+      {
+        "key": "healer",
+        "name": "Heiler",
+        "sourceClass": "Healer",
+        "before": 18,
+        "reduction": 0,
+        "after": 18,
+        "effectiveLevel": 7.884856070087609
+      },
+      {
+        "key": "herbalist",
+        "name": "Kräuterkundler",
+        "sourceClass": "Kräuterkundler",
+        "before": 26,
+        "reduction": 2,
+        "after": 24,
+        "effectiveLevel": 8.498583569405099
+      },
+      {
+        "key": "hunter",
+        "name": "Jäger",
+        "sourceClass": "Archer",
+        "before": 25,
+        "reduction": 2,
+        "after": 23,
+        "effectiveLevel": 8.886618998978548
+      },
+      {
+        "key": "knight",
+        "name": "Ritter",
+        "sourceClass": "Tank",
+        "before": 44,
+        "reduction": 6,
+        "after": 38,
+        "effectiveLevel": 10.339734121122598
+      },
+      {
+        "key": "luminet",
+        "name": "Luminet",
+        "sourceClass": "Lightmage",
+        "before": 21,
+        "reduction": 0,
+        "after": 21,
+        "effectiveLevel": 7.944915254237287
+      },
+      {
+        "key": "ritualist",
+        "name": "Ritualist",
+        "sourceClass": "Bloodmage",
+        "before": 23,
+        "reduction": 0,
+        "after": 23,
+        "effectiveLevel": 8.672376873661669
+      },
+      {
+        "key": "shaman",
+        "name": "Schamane",
+        "sourceClass": "Shamane",
+        "before": 27,
+        "reduction": 2,
+        "after": 25,
+        "effectiveLevel": 8.274021352313166
+      },
+      {
+        "key": "summoner",
+        "name": "Seelenjäger",
+        "sourceClass": "Seelenjäger",
+        "before": 20,
+        "reduction": 1,
+        "after": 19,
+        "effectiveLevel": 7.586933614330874
+      },
+      {
+        "key": "villian",
+        "name": "Schurke",
+        "sourceClass": "Villain",
+        "before": 27,
+        "reduction": 2,
+        "after": 25,
+        "effectiveLevel": 10.238907849829351
+      }
+    ],
+    "status": "historicalSupersededByRankProgression"
+  },
+  "magicalDefenseByClassAndRank": {
+    "Adventure": {
+      "1": 11.12,
+      "2": 19.66,
+      "3": 34.4,
+      "4": 59.53,
+      "5": 101.79,
+      "6": 172
+    },
+    "Butcher": {
+      "1": 9.3,
+      "2": 16.45,
+      "3": 28.8,
+      "4": 49.83,
+      "5": 85.21,
+      "6": 144
+    },
+    "Druid": {
+      "1": 13.44,
+      "2": 23.77,
+      "3": 41.6,
+      "4": 71.97,
+      "5": 123.08,
+      "6": 208
+    },
+    "Gladiator": {
+      "1": 9.04,
+      "2": 15.99,
+      "3": 28,
+      "4": 48.43,
+      "5": 82.84,
+      "6": 140
+    },
+    "Healer": {
+      "1": 21.97,
+      "2": 38.86,
+      "3": 68,
+      "4": 117.65,
+      "5": 201.18,
+      "6": 340
+    },
+    "Archer": {
+      "1": 12.93,
+      "2": 22.86,
+      "3": 40,
+      "4": 69.19,
+      "5": 118.33,
+      "6": 200
+    },
+    "Kräuterkundler": {
+      "1": 12.28,
+      "2": 21.71,
+      "3": 38,
+      "4": 65.75,
+      "5": 112.43,
+      "6": 190
+    },
+    "Lightmage": {
+      "1": 22.28,
+      "2": 39.45,
+      "3": 69,
+      "4": 119.38,
+      "5": 204.13,
+      "6": 345
+    },
+    "Seelenjäger": {
+      "1": 11.81,
+      "2": 20.91,
+      "3": 36.6,
+      "4": 63.33,
+      "5": 108.28,
+      "6": 183
+    },
+    "Tank": {
+      "1": 18.79,
+      "2": 33.26,
+      "3": 58.2,
+      "4": 100.7,
+      "5": 172.19,
+      "6": 291
+    },
+    "Bloodmage": {
+      "1": 12.79,
+      "2": 22.63,
+      "3": 39.6,
+      "4": 68.51,
+      "5": 117.15,
+      "6": 198
+    },
+    "Shamane": {
+      "1": 13.7,
+      "2": 24.24,
+      "3": 42.4,
+      "4": 73.37,
+      "5": 125.44,
+      "6": 212
+    },
+    "Villain": {
+      "1": 12.4,
+      "2": 21.93,
+      "3": 38.4,
+      "4": 66.45,
+      "5": 113.61,
+      "6": 192
+    }
+  },
+  "magicalCalibration": {
+    "anchorRank": 4,
+    "anchorLevel": 60,
+    "changedRanks": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "preservedRanks": [
+      1,
+      4
+    ],
+    "physicalDefense": "unchanged",
+    "baseDefense": "unchanged",
+    "level1": "Unarmored class baseline only; no R1 gear included",
+    "rounding": "Ceil aggregate magical defense target, tolerate 1e-9 floating point noise, then distribute whole points across five slots",
+    "status": "historicalSupersededByRankProgression"
+  },
+  "rankProgression": {
+    "mode": "weaponCurveFromRank6Parts",
+    "anchorRank": 6,
+    "decimalPlaces": 2,
+    "growthPercentages": [
+      77,
+      75,
+      73,
+      71,
+      69
+    ],
+    "rounding": "Half up after every backwards step, integer hundredths; totals sum the rounded parts.",
+    "anchors": [
+      {
+        "sourceClass": "Butcher",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 59,
+          "magicalDefense": 43
+        }
+      },
+      {
+        "sourceClass": "Butcher",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 51,
+          "magicalDefense": 38
+        }
+      },
+      {
+        "sourceClass": "Butcher",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 31,
+          "magicalDefense": 23
+        }
+      },
+      {
+        "sourceClass": "Butcher",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 31,
+          "magicalDefense": 23
+        }
+      },
+      {
+        "sourceClass": "Butcher",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 24,
+          "magicalDefense": 17
+        }
+      },
+      {
+        "sourceClass": "Gladiator",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 86,
+          "magicalDefense": 42
+        }
+      },
+      {
+        "sourceClass": "Gladiator",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 75,
+          "magicalDefense": 37
+        }
+      },
+      {
+        "sourceClass": "Gladiator",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 46,
+          "magicalDefense": 22
+        }
+      },
+      {
+        "sourceClass": "Gladiator",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 46,
+          "magicalDefense": 22
+        }
+      },
+      {
+        "sourceClass": "Gladiator",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 34,
+          "magicalDefense": 17
+        }
+      },
+      {
+        "sourceClass": "Tank",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 102,
+          "magicalDefense": 87
+        }
+      },
+      {
+        "sourceClass": "Tank",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 88,
+          "magicalDefense": 76
+        }
+      },
+      {
+        "sourceClass": "Tank",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 54,
+          "magicalDefense": 47
+        }
+      },
+      {
+        "sourceClass": "Tank",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 54,
+          "magicalDefense": 46
+        }
+      },
+      {
+        "sourceClass": "Tank",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 41,
+          "magicalDefense": 35
+        }
+      },
+      {
+        "sourceClass": "Villain",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 51,
+          "magicalDefense": 57
+        }
+      },
+      {
+        "sourceClass": "Villain",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 44,
+          "magicalDefense": 50
+        }
+      },
+      {
+        "sourceClass": "Villain",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 27,
+          "magicalDefense": 31
+        }
+      },
+      {
+        "sourceClass": "Villain",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 27,
+          "magicalDefense": 31
+        }
+      },
+      {
+        "sourceClass": "Villain",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 21,
+          "magicalDefense": 23
+        }
+      },
+      {
+        "sourceClass": "Bloodmage",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 57,
+          "magicalDefense": 59
+        }
+      },
+      {
+        "sourceClass": "Bloodmage",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 49,
+          "magicalDefense": 51
+        }
+      },
+      {
+        "sourceClass": "Bloodmage",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 30,
+          "magicalDefense": 32
+        }
+      },
+      {
+        "sourceClass": "Bloodmage",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 30,
+          "magicalDefense": 32
+        }
+      },
+      {
+        "sourceClass": "Bloodmage",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 23,
+          "magicalDefense": 24
+        }
+      },
+      {
+        "sourceClass": "Healer",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 44,
+          "magicalDefense": 102
+        }
+      },
+      {
+        "sourceClass": "Healer",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 38,
+          "magicalDefense": 89
+        }
+      },
+      {
+        "sourceClass": "Healer",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 23,
+          "magicalDefense": 54
+        }
+      },
+      {
+        "sourceClass": "Healer",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 23,
+          "magicalDefense": 54
+        }
+      },
+      {
+        "sourceClass": "Healer",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 17,
+          "magicalDefense": 41
+        }
+      },
+      {
+        "sourceClass": "Lightmage",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 57,
+          "magicalDefense": 104
+        }
+      },
+      {
+        "sourceClass": "Lightmage",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 50,
+          "magicalDefense": 90
+        }
+      },
+      {
+        "sourceClass": "Lightmage",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 31,
+          "magicalDefense": 55
+        }
+      },
+      {
+        "sourceClass": "Lightmage",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 31,
+          "magicalDefense": 55
+        }
+      },
+      {
+        "sourceClass": "Lightmage",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 23,
+          "magicalDefense": 41
+        }
+      },
+      {
+        "sourceClass": "Kräuterkundler",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 69,
+          "magicalDefense": 57
+        }
+      },
+      {
+        "sourceClass": "Kräuterkundler",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 59,
+          "magicalDefense": 50
+        }
+      },
+      {
+        "sourceClass": "Kräuterkundler",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 37,
+          "magicalDefense": 30
+        }
+      },
+      {
+        "sourceClass": "Kräuterkundler",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 37,
+          "magicalDefense": 30
+        }
+      },
+      {
+        "sourceClass": "Kräuterkundler",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 27,
+          "magicalDefense": 23
+        }
+      },
+      {
+        "sourceClass": "Archer",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 61,
+          "magicalDefense": 60
+        }
+      },
+      {
+        "sourceClass": "Archer",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 53,
+          "magicalDefense": 52
+        }
+      },
+      {
+        "sourceClass": "Archer",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 32,
+          "magicalDefense": 32
+        }
+      },
+      {
+        "sourceClass": "Archer",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 32,
+          "magicalDefense": 32
+        }
+      },
+      {
+        "sourceClass": "Archer",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 24,
+          "magicalDefense": 24
+        }
+      },
+      {
+        "sourceClass": "Shamane",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 75,
+          "magicalDefense": 64
+        }
+      },
+      {
+        "sourceClass": "Shamane",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 65,
+          "magicalDefense": 55
+        }
+      },
+      {
+        "sourceClass": "Shamane",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 40,
+          "magicalDefense": 34
+        }
+      },
+      {
+        "sourceClass": "Shamane",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 40,
+          "magicalDefense": 34
+        }
+      },
+      {
+        "sourceClass": "Shamane",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 30,
+          "magicalDefense": 25
+        }
+      },
+      {
+        "sourceClass": "Druid",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 73,
+          "magicalDefense": 63
+        }
+      },
+      {
+        "sourceClass": "Druid",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 63,
+          "magicalDefense": 54
+        }
+      },
+      {
+        "sourceClass": "Druid",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 39,
+          "magicalDefense": 33
+        }
+      },
+      {
+        "sourceClass": "Druid",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 39,
+          "magicalDefense": 33
+        }
+      },
+      {
+        "sourceClass": "Druid",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 29,
+          "magicalDefense": 25
+        }
+      },
+      {
+        "sourceClass": "Seelenjäger",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 58,
+          "magicalDefense": 55
+        }
+      },
+      {
+        "sourceClass": "Seelenjäger",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 50,
+          "magicalDefense": 48
+        }
+      },
+      {
+        "sourceClass": "Seelenjäger",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 31,
+          "magicalDefense": 29
+        }
+      },
+      {
+        "sourceClass": "Seelenjäger",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 31,
+          "magicalDefense": 29
+        }
+      },
+      {
+        "sourceClass": "Seelenjäger",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 23,
+          "magicalDefense": 22
+        }
+      },
+      {
+        "sourceClass": "Adventure",
+        "slot": "chest",
+        "raw": {
+          "physicalDefense": 82,
+          "magicalDefense": 52
+        }
+      },
+      {
+        "sourceClass": "Adventure",
+        "slot": "pants",
+        "raw": {
+          "physicalDefense": 71,
+          "magicalDefense": 45
+        }
+      },
+      {
+        "sourceClass": "Adventure",
+        "slot": "helmet",
+        "raw": {
+          "physicalDefense": 44,
+          "magicalDefense": 27
+        }
+      },
+      {
+        "sourceClass": "Adventure",
+        "slot": "gloves",
+        "raw": {
+          "physicalDefense": 43,
+          "magicalDefense": 27
+        }
+      },
+      {
+        "sourceClass": "Adventure",
+        "slot": "boots",
+        "raw": {
+          "physicalDefense": 33,
+          "magicalDefense": 21
+        }
+      }
+    ],
+    "decision": "User approved applying the all-class preview; preserve every R6 part.",
+    "backup": "data/balancing/history/before-weapon-curve-armor-1792779169616"
   }
 }

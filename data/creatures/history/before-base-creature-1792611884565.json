@@ -1,0 +1,122 @@
+{
+  "_id": "6ad8f42f5b67364caa457169",
+  "key": "base-creature",
+  "baseStats": {
+    "maxHealth": 1,
+    "maxMana": 1,
+    "maxStamina": 1,
+    "physicalAttack": 1,
+    "magicalAttack": 1,
+    "physicalDefense": 1,
+    "magicalDefense": 1,
+    "strength": 1,
+    "vitality": 1,
+    "intelligence": 1,
+    "wisdom": 1,
+    "dexterity": 1,
+    "agility": 1,
+    "luck": 1,
+    "attackSpeed": 0.7,
+    "movementSpeed": 0.95,
+    "accuracy": 1,
+    "dodge": 1,
+    "critChanceRating": 1,
+    "criticalDamageBonus": 1,
+    "block": 1,
+    "penetration": 1,
+    "healthRegen": 0.1,
+    "manaRegen": 0,
+    "physicalSkillDamageBonus": 1,
+    "magicalSkillDamageBonus": 1
+  },
+  "bodyTemplateKey": null,
+  "capabilities": {
+    "tamable": false,
+    "mountable": false
+  },
+  "description_de": "Gemeinsame Zahlenbasis aller Kreaturenfamilien. Grundkampfwerte und Attribute beginnen bei 1; Angriffstempo 0,7, Lauftempo 0,95. Außerhalb des Kampfes und während der Rückkehr 10 Prozent Max-Leben alle 3 Sekunden, keine HP-Regeneration im aktiven Kampf. Standardmäßig keine Manakosten; Skills bleiben durch Cooldowns begrenzt. Noch keine gespawnte oder ausbalancierte Kreatur.",
+  "description_eng": "Shared numerical foundation for creature families. Core stats and attributes start at 1; attack speed is 0.7 and movement speed 0.95. Recover 10 percent maximum Health every 3 seconds out of combat and while returning; no Health regeneration during active combat. Skills use no Mana by default but retain cooldowns. Not a spawned or balanced creature.",
+  "enabledStats": {
+    "accuracy": false,
+    "dodge": false,
+    "critChanceRating": false,
+    "criticalDamageBonus": false,
+    "block": false,
+    "penetration": false,
+    "healthRegen": true,
+    "manaRegen": false,
+    "physicalSkillDamageBonus": false,
+    "magicalSkillDamageBonus": false
+  },
+  "kind": "base",
+  "levelGrowth": {
+    "mode": "compoundPerLevel",
+    "referenceLevel": 1,
+    "maximumPreviewLevel": 100,
+    "status": "unconfigured",
+    "statFactors": {}
+  },
+  "name_de": "Grundkreatur",
+  "name_eng": "Base Creature",
+  "parentKey": null,
+  "pending": [
+    "Shared per-stat level growth factors; absent factors mean no growth",
+    "Family, role and variant modifiers",
+    "Model, skeleton, animations and any saddle attachment",
+    "Base attack frequency and movement speed in world units",
+    "Creature abilities and behavior",
+    "Rarity, taming base chance and required binding stone",
+    "Optional attribute-to-combat-stat conversions",
+    "AI must enter returning state at leash/reset and retain it despite incoming hits; combat reset delay and home arrival rules remain to be defined",
+    "Actual boss-specific instant resets and pet-specific resource overrides are not configured"
+  ],
+  "skillNumbers": [],
+  "spawnable": false,
+  "statMultipliers": {},
+  "statResolution": "independentValuesNoAutomaticAttributeConversion",
+  "statUnits": {
+    "maxHealth": "flat",
+    "maxMana": "flat",
+    "maxStamina": "flat",
+    "physicalAttack": "flat",
+    "magicalAttack": "flat",
+    "physicalDefense": "flat",
+    "magicalDefense": "flat",
+    "strength": "flat",
+    "vitality": "flat",
+    "intelligence": "flat",
+    "wisdom": "flat",
+    "dexterity": "flat",
+    "agility": "flat",
+    "luck": "flat",
+    "attackSpeed": "fractionOfBaseSpeed",
+    "movementSpeed": "fractionOfBaseSpeed",
+    "accuracy": "ratingPoints",
+    "dodge": "ratingPoints",
+    "critChanceRating": "ratingPoints",
+    "criticalDamageBonus": "percentagePoints",
+    "block": "ratingPoints",
+    "penetration": "ratingPoints",
+    "healthRegen": "fractionOfMaxPerTick",
+    "manaRegen": "fractionOfMaxPerTick",
+    "physicalSkillDamageBonus": "flat",
+    "magicalSkillDamageBonus": "flat"
+  },
+  "status": "draft",
+  "version": 2,
+  "regenerationRules": {
+    "tickIntervalSeconds": 3,
+    "healthInCombat": false,
+    "healthWhileReturning": true,
+    "returnInterruptedByIncomingHits": false
+  },
+  "resourceRules": {
+    "mana": {
+      "mode": "cooldownOnly"
+    },
+    "stamina": {
+      "mode": "unused",
+      "sprintStatus": "pending"
+    }
+  }
+}

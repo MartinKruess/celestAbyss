@@ -1,0 +1,865 @@
+{
+  "status": "appliedAndVerified",
+  "backup": "data/balancing/history/before-r4-magical-calibration-1792664114957",
+  "scope": {
+    "anchorRank": 4,
+    "anchorLevel": 60,
+    "changedRanks": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "preservedRanks": [
+      1,
+      4
+    ],
+    "physicalDefense": "unchanged",
+    "baseDefense": "unchanged",
+    "level1": "Unarmored class baseline only; no R1 gear included",
+    "rounding": "Ceil aggregate magical defense target, tolerate 1e-9 floating point noise, then distribute whole points across five slots"
+  },
+  "rows": [
+    {
+      "key": "adventurer",
+      "name": "Adventure",
+      "anchorArmor": 100,
+      "base": 9,
+      "factor": 1.2,
+      "divisor": 2.996666666666667,
+      "targets": {
+        "2": 29,
+        "3": 65,
+        "5": 136,
+        "6": 172
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 19,
+          "after": 19,
+          "delta": 0,
+          "effectiveLevel": 3.0033370411568407
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 32,
+          "after": 29,
+          "delta": -3,
+          "effectiveLevel": 20.28921023359288
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 58,
+          "after": 65,
+          "delta": 7,
+          "effectiveLevel": 40.311457174638484
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 100,
+          "after": 100,
+          "delta": 0,
+          "effectiveLevel": 59.99999999999999
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 149,
+          "after": 136,
+          "delta": -13,
+          "effectiveLevel": 80.0222469410456
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 186,
+          "after": 172,
+          "delta": -14,
+          "effectiveLevel": 100.0444938820912
+        }
+      ]
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "anchorArmor": 84,
+      "base": 6,
+      "factor": 1.2,
+      "divisor": 2.68,
+      "targets": {
+        "2": 25,
+        "3": 55,
+        "5": 114,
+        "6": 144
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 15,
+          "after": 15,
+          "delta": 0,
+          "effectiveLevel": 2.2388059701492535
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 31,
+          "after": 25,
+          "delta": -6,
+          "effectiveLevel": 20.07462686567164
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 46,
+          "after": 55,
+          "delta": 9,
+          "effectiveLevel": 40.22388059701492
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 84,
+          "after": 84,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 118,
+          "after": 114,
+          "delta": -4,
+          "effectiveLevel": 80.14925373134328
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 149,
+          "after": 144,
+          "delta": -5,
+          "effectiveLevel": 100.29850746268657
+        }
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druid",
+      "anchorArmor": 123,
+      "base": 5,
+      "factor": 1.2,
+      "divisor": 3.3133333333333335,
+      "targets": {
+        "2": 39,
+        "3": 81,
+        "5": 166,
+        "6": 208
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 23,
+          "after": 23,
+          "delta": 0,
+          "effectiveLevel": 1.5090543259557343
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 44,
+          "after": 39,
+          "delta": -5,
+          "effectiveLevel": 20.16096579476861
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 78,
+          "after": 81,
+          "delta": 3,
+          "effectiveLevel": 40.08048289738431
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 123,
+          "after": 123,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 174,
+          "after": 166,
+          "delta": -8,
+          "effectiveLevel": 80.22132796780684
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 235,
+          "after": 208,
+          "delta": -27,
+          "effectiveLevel": 100.14084507042253
+        }
+      ]
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "anchorArmor": 83,
+      "base": 3,
+      "factor": 1.2,
+      "divisor": 2.6133333333333337,
+      "targets": {
+        "2": 27,
+        "3": 55,
+        "5": 112,
+        "6": 140
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 12,
+          "after": 12,
+          "delta": 0,
+          "effectiveLevel": 1.1479591836734693
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 25,
+          "after": 27,
+          "delta": 2,
+          "effectiveLevel": 20.204081632653057
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 47,
+          "after": 55,
+          "delta": 8,
+          "effectiveLevel": 40.10204081632652
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 83,
+          "after": 83,
+          "delta": 0,
+          "effectiveLevel": 59.99999999999999
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 102,
+          "after": 112,
+          "delta": 10,
+          "effectiveLevel": 80.28061224489795
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 123,
+          "after": 140,
+          "delta": 17,
+          "effectiveLevel": 100.17857142857142
+        }
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Healer",
+      "anchorArmor": 199,
+      "base": 13,
+      "factor": 1.2,
+      "divisor": 4.713333333333334,
+      "targets": {
+        "2": 59,
+        "3": 129,
+        "5": 270,
+        "6": 340
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 44,
+          "after": 44,
+          "delta": 0,
+          "effectiveLevel": 2.7581329561527577
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 59,
+          "after": 59,
+          "delta": 0,
+          "effectiveLevel": 20.11315417256011
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 119,
+          "after": 129,
+          "delta": 10,
+          "effectiveLevel": 40.05657708628006
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 199,
+          "after": 199,
+          "delta": 0,
+          "effectiveLevel": 59.99999999999999
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 318,
+          "after": 270,
+          "delta": -48,
+          "effectiveLevel": 80.15558698727015
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 443,
+          "after": 340,
+          "delta": -103,
+          "effectiveLevel": 100.0990099009901
+        }
+      ]
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "anchorArmor": 112,
+      "base": 6,
+      "factor": 1.26,
+      "divisor": 3.2056666666666667,
+      "targets": {
+        "2": 35,
+        "3": 74,
+        "5": 151,
+        "6": 190
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 21,
+          "after": 21,
+          "delta": 0,
+          "effectiveLevel": 1.8716855568264532
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 36,
+          "after": 35,
+          "delta": -1,
+          "effectiveLevel": 20.25787667671831
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 62,
+          "after": 74,
+          "delta": 12,
+          "effectiveLevel": 40.284912134761356
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 112,
+          "after": 112,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 162,
+          "after": 151,
+          "delta": -11,
+          "effectiveLevel": 80.02703545804306
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 211,
+          "after": 190,
+          "delta": -21,
+          "effectiveLevel": 100.0540709160861
+        }
+      ]
+    },
+    {
+      "key": "hunter",
+      "name": "Archer",
+      "anchorArmor": 117,
+      "base": 8,
+      "factor": 1.32,
+      "divisor": 3.381333333333333,
+      "targets": {
+        "2": 35,
+        "3": 76,
+        "5": 159,
+        "6": 200
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 26,
+          "after": 26,
+          "delta": 0,
+          "effectiveLevel": 2.3659305993690856
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 49,
+          "after": 35,
+          "delta": -14,
+          "effectiveLevel": 20.134069400630917
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 65,
+          "after": 76,
+          "delta": 11,
+          "effectiveLevel": 40.06703470031547
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 117,
+          "after": 117,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 164,
+          "after": 159,
+          "delta": -5,
+          "effectiveLevel": 80.22870662460568
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 211,
+          "after": 200,
+          "delta": -11,
+          "effectiveLevel": 100.16167192429023
+        }
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Tank",
+      "anchorArmor": 171,
+      "base": 10,
+      "factor": 1.26,
+      "divisor": 4.2556666666666665,
+      "targets": {
+        "2": 52,
+        "3": 112,
+        "5": 231,
+        "6": 291
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 29,
+          "after": 29,
+          "delta": 0,
+          "effectiveLevel": 2.349808099005248
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 56,
+          "after": 52,
+          "delta": -4,
+          "effectiveLevel": 20.1942508028511
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 84,
+          "after": 112,
+          "delta": 28,
+          "effectiveLevel": 40.21461580637581
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 171,
+          "after": 171,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 206,
+          "after": 231,
+          "delta": 25,
+          "effectiveLevel": 80.02036500352472
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 288,
+          "after": 291,
+          "delta": 3,
+          "effectiveLevel": 100.04073000704943
+        }
+      ]
+    },
+    {
+      "key": "luminet",
+      "name": "Lightmage",
+      "anchorArmor": 204,
+      "base": 8,
+      "factor": 1.2,
+      "divisor": 4.713333333333334,
+      "targets": {
+        "2": 64,
+        "3": 134,
+        "5": 275,
+        "6": 345
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 36,
+          "after": 36,
+          "delta": 0,
+          "effectiveLevel": 1.697312588401697
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 72,
+          "after": 64,
+          "delta": -8,
+          "effectiveLevel": 20.11315417256011
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 145,
+          "after": 134,
+          "delta": -11,
+          "effectiveLevel": 40.05657708628006
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 204,
+          "after": 204,
+          "delta": 0,
+          "effectiveLevel": 59.99999999999999
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 253,
+          "after": 275,
+          "delta": 22,
+          "effectiveLevel": 80.15558698727015
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 354,
+          "after": 345,
+          "delta": -9,
+          "effectiveLevel": 100.0990099009901
+        }
+      ]
+    },
+    {
+      "key": "ritualist",
+      "name": "Bloodmage",
+      "anchorArmor": 116,
+      "base": 8,
+      "factor": 1.2,
+      "divisor": 3.246666666666667,
+      "targets": {
+        "2": 35,
+        "3": 76,
+        "5": 157,
+        "6": 198
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 31,
+          "after": 31,
+          "delta": 0,
+          "effectiveLevel": 2.464065708418891
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 44,
+          "after": 35,
+          "delta": -9,
+          "effectiveLevel": 20.266940451745377
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 59,
+          "after": 76,
+          "delta": 17,
+          "effectiveLevel": 40.28747433264887
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 116,
+          "after": 116,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 196,
+          "after": 157,
+          "delta": -39,
+          "effectiveLevel": 80.02053388090349
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 309,
+          "after": 198,
+          "delta": -111,
+          "effectiveLevel": 100.04106776180697
+        }
+      ]
+    },
+    {
+      "key": "shaman",
+      "name": "Shamane",
+      "anchorArmor": 126,
+      "base": 4,
+      "factor": 1.2,
+      "divisor": 3.3466666666666667,
+      "targets": {
+        "2": 41,
+        "3": 84,
+        "5": 169,
+        "6": 212
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 24,
+          "after": 24,
+          "delta": 0,
+          "effectiveLevel": 1.1952191235059761
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 46,
+          "after": 41,
+          "delta": -5,
+          "effectiveLevel": 20.258964143426294
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 88,
+          "after": 84,
+          "delta": -4,
+          "effectiveLevel": 40.278884462151396
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 126,
+          "after": 126,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 181,
+          "after": 169,
+          "delta": -12,
+          "effectiveLevel": 80.0199203187251
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 247,
+          "after": 212,
+          "delta": -35,
+          "effectiveLevel": 100.0398406374502
+        }
+      ]
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "anchorArmor": 106,
+      "base": 10,
+      "factor": 1.26,
+      "divisor": 3.1723333333333334,
+      "targets": {
+        "2": 30,
+        "3": 68,
+        "5": 145,
+        "6": 183
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 19,
+          "after": 19,
+          "delta": 0,
+          "effectiveLevel": 3.1522538615109803
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 33,
+          "after": 30,
+          "delta": -3,
+          "effectiveLevel": 20.15551119050121
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 62,
+          "after": 68,
+          "delta": 6,
+          "effectiveLevel": 40.0777555952506
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 106,
+          "after": 106,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 148,
+          "after": 145,
+          "delta": -3,
+          "effectiveLevel": 80.23746979090049
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 190,
+          "after": 183,
+          "delta": -7,
+          "effectiveLevel": 100.15971419564988
+        }
+      ]
+    },
+    {
+      "key": "villian",
+      "name": "Villain",
+      "anchorArmor": 112,
+      "base": 8,
+      "factor": 1.2,
+      "divisor": 3.18,
+      "targets": {
+        "2": 33,
+        "3": 73,
+        "5": 152,
+        "6": 192
+      },
+      "points": [
+        {
+          "rank": 1,
+          "level": 1,
+          "before": 20,
+          "after": 20,
+          "delta": 0,
+          "effectiveLevel": 2.5157232704402515
+        },
+        {
+          "rank": 2,
+          "level": 20,
+          "before": 41,
+          "after": 33,
+          "delta": -8,
+          "effectiveLevel": 20.062893081761004
+        },
+        {
+          "rank": 3,
+          "level": 40,
+          "before": 62,
+          "after": 73,
+          "delta": 11,
+          "effectiveLevel": 40.18867924528302
+        },
+        {
+          "rank": 4,
+          "level": 60,
+          "before": 112,
+          "after": 112,
+          "delta": 0,
+          "effectiveLevel": 60
+        },
+        {
+          "rank": 5,
+          "level": 80,
+          "before": 157,
+          "after": 152,
+          "delta": -5,
+          "effectiveLevel": 80.12578616352201
+        },
+        {
+          "rank": 6,
+          "level": 100,
+          "before": 199,
+          "after": 192,
+          "delta": -7,
+          "effectiveLevel": 100.25157232704403
+        }
+      ]
+    }
+  ],
+  "databaseManifest": "data/balancing/armor-database-manifest.json",
+  "validation": {
+    "classes": 13,
+    "sets": 78,
+    "parts": 390,
+    "physicalDefenseAndOtherPartPropertiesUnchanged": true,
+    "r1AndR4MagicalDefenseUnchanged": true,
+    "sharedMagicalDivisor": 3.248
+  }
+}

@@ -1,0 +1,1216 @@
+{
+  "status": "provisionalScalingNotCombatSimulation",
+  "level": 60,
+  "factor": 10.115026353896976,
+  "monsterDivisor": 4.166666666666667,
+  "assumptions": [
+    "Read-only level-60 scaling probe; no runtime templates or database values changed.",
+    "Three requested combat values interpreted as attack plus physical and magical defense. P and M label attack type; shamans use magical attack.",
+    "New profiles use their integer level-1 values and the existing provisional 1.04 compound growth: value(60) = value(1) × 1.04^59. This growth is a test assumption, not newly confirmed balance.",
+    "Reference wolf/bird/golem use their actual existing level-60 previews, whose original level-1 coefficients were not rounded. No stealth rounding or recalibration of these references.",
+    "Physical and magical sweetspots are independent: monster defense / (25/6). Sweetspot means the player level at which this monster blocks 30% of that damage type. Enemy level itself does not set outgoing player damage reduction.",
+    "Health, fight duration, player survivability, party size and boss soloability are not evaluated. No buffs, debuffs, armor penetration, movement or skills applied.",
+    "Family blocks remain together; within each family habitats follow forest/cave/mountain/frost and roles are sorted by attack. This is no overall difficulty ranking.",
+    "Mountain Cyclops defense is still unassigned; no 10% troll-defense inheritance applied because its low magical-defense intent remains unresolved.",
+    "Frosttroll uses the explicitly stated provisional mountain-troll reference, with already-rounded level-1 values 45 / 34 / 31."
+  ],
+  "inputHashes": {
+    "data/creatures/family-combat-design.json": "f41e178e5130e210732ce2d5fc960c80ef2dcff0d924293014397f3d2d4ee6d2",
+    "data/creatures/world-variant-preview.json": "3edf9d1ec458052af5bd05e9b19ea019670158ac78b772172b11a863145e82cc",
+    "data/creatures/world-variant-design.json": "08d7aacb80670800e9bc357d306bd8bc97ea9ef055d8d55e5eb6bedc30189ede"
+  },
+  "rows": [
+    {
+      "name": "Gewöhnlicher Grauwolf",
+      "family": "Referenzen",
+      "level": 60,
+      "attack": 266.6989076012744,
+      "attackType": "physical",
+      "physicalDefense": 88.89963586709149,
+      "magicalDefense": 62.22974510696404,
+      "physical": {
+        "sweetspot": 21.335912608101957,
+        "reductionAgainstLevel60": 0.1711197086936732
+      },
+      "magical": {
+        "sweetspot": 14.935138825671368,
+        "reductionAgainstLevel60": 0.14978379608557124
+      },
+      "source": "Existing level-60 preview, with original unrounded level-1 coefficients"
+    },
+    {
+      "name": "Silberschwingenkranich",
+      "family": "Referenzen",
+      "level": 60,
+      "attack": 240.02901684114698,
+      "attackType": "physical",
+      "physicalDefense": 80.00967228038235,
+      "magicalDefense": 115.56952662721893,
+      "physical": {
+        "sweetspot": 19.20232134729176,
+        "reductionAgainstLevel60": 0.1640077378243059
+      },
+      "magical": {
+        "sweetspot": 27.736686390532544,
+        "reductionAgainstLevel60": 0.19245562130177515
+      },
+      "source": "Existing level-60 preview, with original unrounded level-1 coefficients"
+    },
+    {
+      "name": "Steingolem",
+      "family": "Referenzen",
+      "level": 60,
+      "attack": 350,
+      "attackType": "physical",
+      "physicalDefense": 250,
+      "magicalDefense": 250,
+      "physical": {
+        "sweetspot": 59.99999999999999,
+        "reductionAgainstLevel60": 0.3
+      },
+      "magical": {
+        "sweetspot": 59.99999999999999,
+        "reductionAgainstLevel60": 0.3
+      },
+      "source": "Existing level-60 preview, with original unrounded level-1 coefficients"
+    },
+    {
+      "name": "Waldgoblin-Krieger",
+      "family": "Goblins",
+      "habitat": "forest",
+      "role": "warrior",
+      "level": 60,
+      "attack": 242.76063249352742,
+      "attackType": "physical",
+      "physicalDefense": 80.92021083117581,
+      "magicalDefense": 50.575131769484884,
+      "physical": {
+        "sweetspot": 19.420850599482193,
+        "reductionAgainstLevel60": 0.16473616866494065
+      },
+      "magical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 24,
+        "physicalDefense": 8,
+        "magicalDefense": 5,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Waldgoblin-Schütze",
+      "family": "Goblins",
+      "habitat": "forest",
+      "role": "archer",
+      "level": 60,
+      "attack": 242.76063249352742,
+      "attackType": "physical",
+      "physicalDefense": 50.575131769484884,
+      "magicalDefense": 80.92021083117581,
+      "physical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "magical": {
+        "sweetspot": 19.420850599482193,
+        "reductionAgainstLevel60": 0.16473616866494065
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 24,
+        "physicalDefense": 5,
+        "magicalDefense": 8,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Wald-Haupt-Goblin",
+      "family": "Goblins",
+      "habitat": "forest",
+      "role": "captain",
+      "level": 60,
+      "attack": 262.99068520132136,
+      "attackType": "physical",
+      "physicalDefense": 101.15026353896977,
+      "magicalDefense": 70.80518447727883,
+      "physical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "magical": {
+        "sweetspot": 16.993244274546917,
+        "reductionAgainstLevel60": 0.15664414758182307
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 26,
+        "physicalDefense": 10,
+        "magicalDefense": 7,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Waldgoblin-König",
+      "family": "Goblins",
+      "habitat": "forest",
+      "role": "king",
+      "level": 60,
+      "attack": 343.9108960324972,
+      "attackType": "physical",
+      "physicalDefense": 171.9554480162486,
+      "magicalDefense": 151.72539530845464,
+      "physical": {
+        "sweetspot": 41.26930752389966,
+        "reductionAgainstLevel60": 0.2375643584129989
+      },
+      "magical": {
+        "sweetspot": 36.41409487402911,
+        "reductionAgainstLevel60": 0.22138031624676371
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 34,
+        "physicalDefense": 17,
+        "magicalDefense": 15,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlengoblin-Krieger",
+      "family": "Goblins",
+      "habitat": "cave",
+      "role": "warrior",
+      "level": 60,
+      "attack": 283.2207379091153,
+      "attackType": "physical",
+      "physicalDefense": 91.03523718507279,
+      "magicalDefense": 60.690158123381856,
+      "physical": {
+        "sweetspot": 21.848456924417466,
+        "reductionAgainstLevel60": 0.17282818974805822
+      },
+      "magical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 28,
+        "physicalDefense": 9,
+        "magicalDefense": 6,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlengoblin-Schütze",
+      "family": "Goblins",
+      "habitat": "cave",
+      "role": "archer",
+      "level": 60,
+      "attack": 283.2207379091153,
+      "attackType": "physical",
+      "physicalDefense": 60.690158123381856,
+      "magicalDefense": 91.03523718507279,
+      "physical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "magical": {
+        "sweetspot": 21.848456924417466,
+        "reductionAgainstLevel60": 0.17282818974805822
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 28,
+        "physicalDefense": 6,
+        "magicalDefense": 9,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Haupt-Goblin",
+      "family": "Goblins",
+      "habitat": "cave",
+      "role": "captain",
+      "level": 60,
+      "attack": 313.5658169708063,
+      "attackType": "physical",
+      "physicalDefense": 121.38031624676371,
+      "magicalDefense": 80.92021083117581,
+      "physical": {
+        "sweetspot": 29.13127589922329,
+        "reductionAgainstLevel60": 0.19710425299741097
+      },
+      "magical": {
+        "sweetspot": 19.420850599482193,
+        "reductionAgainstLevel60": 0.16473616866494065
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 31,
+        "physicalDefense": 12,
+        "magicalDefense": 8,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlengoblin-König",
+      "family": "Goblins",
+      "habitat": "cave",
+      "role": "king",
+      "level": 60,
+      "attack": 404.60105415587907,
+      "attackType": "physical",
+      "physicalDefense": 202.30052707793953,
+      "magicalDefense": 182.07047437014558,
+      "physical": {
+        "sweetspot": 48.55212649870548,
+        "reductionAgainstLevel60": 0.26184042166235166
+      },
+      "magical": {
+        "sweetspot": 43.69691384883493,
+        "reductionAgainstLevel60": 0.24565637949611643
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 40,
+        "physicalDefense": 20,
+        "magicalDefense": 18,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berggoblin-Krieger",
+      "family": "Goblins",
+      "habitat": "mountain",
+      "role": "warrior",
+      "level": 60,
+      "attack": 303.4507906169093,
+      "attackType": "physical",
+      "physicalDefense": 101.15026353896977,
+      "magicalDefense": 60.690158123381856,
+      "physical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "magical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 30,
+        "physicalDefense": 10,
+        "magicalDefense": 6,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berggoblin-Schütze",
+      "family": "Goblins",
+      "habitat": "mountain",
+      "role": "archer",
+      "level": 60,
+      "attack": 303.4507906169093,
+      "attackType": "physical",
+      "physicalDefense": 60.690158123381856,
+      "magicalDefense": 101.15026353896977,
+      "physical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "magical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 30,
+        "physicalDefense": 6,
+        "magicalDefense": 10,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Haupt-Goblin",
+      "family": "Goblins",
+      "habitat": "mountain",
+      "role": "captain",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 131.49534260066068,
+      "magicalDefense": 91.03523718507279,
+      "physical": {
+        "sweetspot": 31.55888222415856,
+        "reductionAgainstLevel60": 0.20519627408052854
+      },
+      "magical": {
+        "sweetspot": 21.848456924417466,
+        "reductionAgainstLevel60": 0.17282818974805822
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 13,
+        "magicalDefense": 9,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berggoblin-König",
+      "family": "Goblins",
+      "habitat": "mountain",
+      "role": "king",
+      "level": 60,
+      "attack": 434.94613321757,
+      "attackType": "physical",
+      "physicalDefense": 212.41555343183649,
+      "magicalDefense": 192.18550072404256,
+      "physical": {
+        "sweetspot": 50.97973282364075,
+        "reductionAgainstLevel60": 0.2699324427454692
+      },
+      "magical": {
+        "sweetspot": 46.12452017377021,
+        "reductionAgainstLevel60": 0.25374840057923403
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 43,
+        "physicalDefense": 21,
+        "magicalDefense": 19,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Wald-Orc-Krieger",
+      "family": "Orcs",
+      "habitat": "forest",
+      "role": "warrior",
+      "level": 60,
+      "attack": 283.2207379091153,
+      "attackType": "physical",
+      "physicalDefense": 91.03523718507279,
+      "magicalDefense": 50.575131769484884,
+      "physical": {
+        "sweetspot": 21.848456924417466,
+        "reductionAgainstLevel60": 0.17282818974805822
+      },
+      "magical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 28,
+        "physicalDefense": 9,
+        "magicalDefense": 5,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Wald-Orc-Schütze",
+      "family": "Orcs",
+      "habitat": "forest",
+      "role": "archer",
+      "level": 60,
+      "attack": 283.2207379091153,
+      "attackType": "physical",
+      "physicalDefense": 50.575131769484884,
+      "magicalDefense": 91.03523718507279,
+      "physical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "magical": {
+        "sweetspot": 21.848456924417466,
+        "reductionAgainstLevel60": 0.17282818974805822
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 28,
+        "physicalDefense": 5,
+        "magicalDefense": 9,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Wald-Orc-Schamane",
+      "family": "Orcs",
+      "habitat": "forest",
+      "role": "shamanMagicalAttack",
+      "level": 60,
+      "attack": 293.3357642630123,
+      "attackType": "magical",
+      "physicalDefense": 50.575131769484884,
+      "magicalDefense": 91.03523718507279,
+      "physical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "magical": {
+        "sweetspot": 21.848456924417466,
+        "reductionAgainstLevel60": 0.17282818974805822
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 29,
+        "physicalDefense": 5,
+        "magicalDefense": 9,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Wald-Orc-Hauptmann",
+      "family": "Orcs",
+      "habitat": "forest",
+      "role": "captain",
+      "level": 60,
+      "attack": 313.5658169708063,
+      "attackType": "physical",
+      "physicalDefense": 131.49534260066068,
+      "magicalDefense": 101.15026353896977,
+      "physical": {
+        "sweetspot": 31.55888222415856,
+        "reductionAgainstLevel60": 0.20519627408052854
+      },
+      "magical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 31,
+        "physicalDefense": 13,
+        "magicalDefense": 10,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Wald-Orc-König",
+      "family": "Orcs",
+      "habitat": "forest",
+      "role": "king",
+      "level": 60,
+      "attack": 404.60105415587907,
+      "attackType": "physical",
+      "physicalDefense": 232.64560613963044,
+      "magicalDefense": 212.41555343183649,
+      "physical": {
+        "sweetspot": 55.834945473511304,
+        "reductionAgainstLevel60": 0.2861164849117044
+      },
+      "magical": {
+        "sweetspot": 50.97973282364075,
+        "reductionAgainstLevel60": 0.2699324427454692
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 40,
+        "physicalDefense": 23,
+        "magicalDefense": 21,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Orc-Krieger",
+      "family": "Orcs",
+      "habitat": "cave",
+      "role": "warrior",
+      "level": 60,
+      "attack": 303.4507906169093,
+      "attackType": "physical",
+      "physicalDefense": 101.15026353896977,
+      "magicalDefense": 50.575131769484884,
+      "physical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "magical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 30,
+        "physicalDefense": 10,
+        "magicalDefense": 5,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Orc-Schütze",
+      "family": "Orcs",
+      "habitat": "cave",
+      "role": "archer",
+      "level": 60,
+      "attack": 303.4507906169093,
+      "attackType": "physical",
+      "physicalDefense": 50.575131769484884,
+      "magicalDefense": 101.15026353896977,
+      "physical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "magical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 30,
+        "physicalDefense": 5,
+        "magicalDefense": 10,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Orc-Schamane",
+      "family": "Orcs",
+      "habitat": "cave",
+      "role": "shamanMagicalAttack",
+      "level": 60,
+      "attack": 313.5658169708063,
+      "attackType": "magical",
+      "physicalDefense": 50.575131769484884,
+      "magicalDefense": 101.15026353896977,
+      "physical": {
+        "sweetspot": 12.13803162467637,
+        "reductionAgainstLevel60": 0.1404601054155879
+      },
+      "magical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 31,
+        "physicalDefense": 5,
+        "magicalDefense": 10,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Orc-Hauptmann",
+      "family": "Orcs",
+      "habitat": "cave",
+      "role": "captain",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 141.61036895455766,
+      "magicalDefense": 111.26528989286673,
+      "physical": {
+        "sweetspot": 33.986488549093835,
+        "reductionAgainstLevel60": 0.2132882951636461
+      },
+      "magical": {
+        "sweetspot": 26.703669574288014,
+        "reductionAgainstLevel60": 0.1890122319142934
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 14,
+        "magicalDefense": 11,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Orc-König",
+      "family": "Orcs",
+      "habitat": "cave",
+      "role": "king",
+      "level": 60,
+      "attack": 434.94613321757,
+      "attackType": "physical",
+      "physicalDefense": 252.8756588474244,
+      "magicalDefense": 232.64560613963044,
+      "physical": {
+        "sweetspot": 60.690158123381856,
+        "reductionAgainstLevel60": 0.31150263538969764
+      },
+      "magical": {
+        "sweetspot": 55.834945473511304,
+        "reductionAgainstLevel60": 0.2861164849117044
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 43,
+        "physicalDefense": 25,
+        "magicalDefense": 23,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Orc-Krieger",
+      "family": "Orcs",
+      "habitat": "mountain",
+      "role": "warrior",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 111.26528989286673,
+      "magicalDefense": 60.690158123381856,
+      "physical": {
+        "sweetspot": 26.703669574288014,
+        "reductionAgainstLevel60": 0.1890122319142934
+      },
+      "magical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 11,
+        "magicalDefense": 6,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Orc-Schütze",
+      "family": "Orcs",
+      "habitat": "mountain",
+      "role": "archer",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 60.690158123381856,
+      "magicalDefense": 111.26528989286673,
+      "physical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "magical": {
+        "sweetspot": 26.703669574288014,
+        "reductionAgainstLevel60": 0.1890122319142934
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 6,
+        "magicalDefense": 11,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Orc-Schamane",
+      "family": "Orcs",
+      "habitat": "mountain",
+      "role": "shamanMagicalAttack",
+      "level": 60,
+      "attack": 343.9108960324972,
+      "attackType": "magical",
+      "physicalDefense": 60.690158123381856,
+      "magicalDefense": 111.26528989286673,
+      "physical": {
+        "sweetspot": 14.565637949611645,
+        "reductionAgainstLevel60": 0.1485521264987055
+      },
+      "magical": {
+        "sweetspot": 26.703669574288014,
+        "reductionAgainstLevel60": 0.1890122319142934
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 34,
+        "physicalDefense": 6,
+        "magicalDefense": 11,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Orc-Hauptmann",
+      "family": "Orcs",
+      "habitat": "mountain",
+      "role": "captain",
+      "level": 60,
+      "attack": 364.14094874029115,
+      "attackType": "physical",
+      "physicalDefense": 151.72539530845464,
+      "magicalDefense": 121.38031624676371,
+      "physical": {
+        "sweetspot": 36.41409487402911,
+        "reductionAgainstLevel60": 0.22138031624676371
+      },
+      "magical": {
+        "sweetspot": 29.13127589922329,
+        "reductionAgainstLevel60": 0.19710425299741097
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 36,
+        "physicalDefense": 15,
+        "magicalDefense": 12,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Orc-König",
+      "family": "Orcs",
+      "habitat": "mountain",
+      "role": "king",
+      "level": 60,
+      "attack": 475.4062386331579,
+      "attackType": "physical",
+      "physicalDefense": 273.10571155521836,
+      "magicalDefense": 252.8756588474244,
+      "physical": {
+        "sweetspot": 65.5453707732524,
+        "reductionAgainstLevel60": 0.39242284622087337
+      },
+      "magical": {
+        "sweetspot": 60.690158123381856,
+        "reductionAgainstLevel60": 0.31150263538969764
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 47,
+        "physicalDefense": 27,
+        "magicalDefense": 25,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Hobgoblin-Kämpfer",
+      "family": "Hobgoblins",
+      "habitat": "cave",
+      "role": "warrior",
+      "level": 60,
+      "attack": 313.5658169708063,
+      "attackType": "physical",
+      "physicalDefense": 121.38031624676371,
+      "magicalDefense": 70.80518447727883,
+      "physical": {
+        "sweetspot": 29.13127589922329,
+        "reductionAgainstLevel60": 0.19710425299741097
+      },
+      "magical": {
+        "sweetspot": 16.993244274546917,
+        "reductionAgainstLevel60": 0.15664414758182307
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 31,
+        "physicalDefense": 12,
+        "magicalDefense": 7,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Hobgoblin-Kommandant",
+      "family": "Hobgoblins",
+      "habitat": "cave",
+      "role": "commander",
+      "level": 60,
+      "attack": 343.9108960324972,
+      "attackType": "physical",
+      "physicalDefense": 141.61036895455766,
+      "magicalDefense": 131.49534260066068,
+      "physical": {
+        "sweetspot": 33.986488549093835,
+        "reductionAgainstLevel60": 0.2132882951636461
+      },
+      "magical": {
+        "sweetspot": 31.55888222415856,
+        "reductionAgainstLevel60": 0.20519627408052854
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 34,
+        "physicalDefense": 14,
+        "magicalDefense": 13,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Hobgoblin-König",
+      "family": "Hobgoblins",
+      "habitat": "cave",
+      "role": "king",
+      "level": 60,
+      "attack": 424.83110686367297,
+      "attackType": "physical",
+      "physicalDefense": 212.41555343183649,
+      "magicalDefense": 171.9554480162486,
+      "physical": {
+        "sweetspot": 50.97973282364075,
+        "reductionAgainstLevel60": 0.2699324427454692
+      },
+      "magical": {
+        "sweetspot": 41.26930752389966,
+        "reductionAgainstLevel60": 0.2375643584129989
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 42,
+        "physicalDefense": 21,
+        "magicalDefense": 17,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Hobgoblin-Kämpfer",
+      "family": "Hobgoblins",
+      "habitat": "mountain",
+      "role": "warrior",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 131.49534260066068,
+      "magicalDefense": 80.92021083117581,
+      "physical": {
+        "sweetspot": 31.55888222415856,
+        "reductionAgainstLevel60": 0.20519627408052854
+      },
+      "magical": {
+        "sweetspot": 19.420850599482193,
+        "reductionAgainstLevel60": 0.16473616866494065
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 13,
+        "magicalDefense": 8,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Hobgoblin-Kommandant",
+      "family": "Hobgoblins",
+      "habitat": "mountain",
+      "role": "commander",
+      "level": 60,
+      "attack": 364.14094874029115,
+      "attackType": "physical",
+      "physicalDefense": 151.72539530845464,
+      "magicalDefense": 141.61036895455766,
+      "physical": {
+        "sweetspot": 36.41409487402911,
+        "reductionAgainstLevel60": 0.22138031624676371
+      },
+      "magical": {
+        "sweetspot": 33.986488549093835,
+        "reductionAgainstLevel60": 0.2132882951636461
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 36,
+        "physicalDefense": 15,
+        "magicalDefense": 14,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Hobgoblin-König",
+      "family": "Hobgoblins",
+      "habitat": "mountain",
+      "role": "king",
+      "level": 60,
+      "attack": 445.06115957146693,
+      "attackType": "physical",
+      "physicalDefense": 222.53057978573347,
+      "magicalDefense": 182.07047437014558,
+      "physical": {
+        "sweetspot": 53.40733914857603,
+        "reductionAgainstLevel60": 0.2780244638285868
+      },
+      "magical": {
+        "sweetspot": 43.69691384883493,
+        "reductionAgainstLevel60": 0.24565637949611643
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 44,
+        "physicalDefense": 22,
+        "magicalDefense": 18,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Oger-Kämpfer",
+      "family": "Oger",
+      "habitat": "cave",
+      "role": "fighter",
+      "level": 60,
+      "attack": 313.5658169708063,
+      "attackType": "physical",
+      "physicalDefense": 151.72539530845464,
+      "magicalDefense": 101.15026353896977,
+      "physical": {
+        "sweetspot": 36.41409487402911,
+        "reductionAgainstLevel60": 0.22138031624676371
+      },
+      "magical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 31,
+        "physicalDefense": 15,
+        "magicalDefense": 10,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Oger-Schamane",
+      "family": "Oger",
+      "habitat": "cave",
+      "role": "shamanMagicalAttack",
+      "level": 60,
+      "attack": 323.68084332470323,
+      "attackType": "magical",
+      "physicalDefense": 70.80518447727883,
+      "magicalDefense": 121.38031624676371,
+      "physical": {
+        "sweetspot": 16.993244274546917,
+        "reductionAgainstLevel60": 0.15664414758182307
+      },
+      "magical": {
+        "sweetspot": 29.13127589922329,
+        "reductionAgainstLevel60": 0.19710425299741097
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 32,
+        "physicalDefense": 7,
+        "magicalDefense": 12,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlen-Oger-Häuptling",
+      "family": "Oger",
+      "habitat": "cave",
+      "role": "chief",
+      "level": 60,
+      "attack": 434.94613321757,
+      "attackType": "physical",
+      "physicalDefense": 313.5658169708063,
+      "magicalDefense": 283.2207379091153,
+      "physical": {
+        "sweetspot": 75.2557960729935,
+        "reductionAgainstLevel60": 0.5542632678832251
+      },
+      "magical": {
+        "sweetspot": 67.97297709818767,
+        "reductionAgainstLevel60": 0.4328829516364611
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 43,
+        "physicalDefense": 31,
+        "magicalDefense": 28,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Oger-Kämpfer",
+      "family": "Oger",
+      "habitat": "mountain",
+      "role": "fighter",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 161.84042166235162,
+      "magicalDefense": 111.26528989286673,
+      "physical": {
+        "sweetspot": 38.84170119896439,
+        "reductionAgainstLevel60": 0.2294723373298813
+      },
+      "magical": {
+        "sweetspot": 26.703669574288014,
+        "reductionAgainstLevel60": 0.1890122319142934
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 16,
+        "magicalDefense": 11,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Oger-Schamane",
+      "family": "Oger",
+      "habitat": "mountain",
+      "role": "shamanMagicalAttack",
+      "level": 60,
+      "attack": 343.9108960324972,
+      "attackType": "magical",
+      "physicalDefense": 101.15026353896977,
+      "magicalDefense": 141.61036895455766,
+      "physical": {
+        "sweetspot": 24.27606324935274,
+        "reductionAgainstLevel60": 0.18092021083117582
+      },
+      "magical": {
+        "sweetspot": 33.986488549093835,
+        "reductionAgainstLevel60": 0.2132882951636461
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 34,
+        "physicalDefense": 10,
+        "magicalDefense": 14,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Berg-Oger-Häuptling",
+      "family": "Oger",
+      "habitat": "mountain",
+      "role": "chief",
+      "level": 60,
+      "attack": 455.17618592536394,
+      "attackType": "physical",
+      "physicalDefense": 333.7958696786002,
+      "magicalDefense": 303.4507906169093,
+      "physical": {
+        "sweetspot": 80.11100872286404,
+        "reductionAgainstLevel60": 0.6351834787144008
+      },
+      "magical": {
+        "sweetspot": 72.82818974805822,
+        "reductionAgainstLevel60": 0.5138031624676371
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 45,
+        "physicalDefense": 33,
+        "magicalDefense": 30,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Waldtroll",
+      "family": "Trolle",
+      "habitat": "forest",
+      "role": "physicalAttack",
+      "level": 60,
+      "attack": 313.5658169708063,
+      "attackType": "physical",
+      "physicalDefense": 232.64560613963044,
+      "magicalDefense": 212.41555343183649,
+      "physical": {
+        "sweetspot": 55.834945473511304,
+        "reductionAgainstLevel60": 0.2861164849117044
+      },
+      "magical": {
+        "sweetspot": 50.97973282364075,
+        "reductionAgainstLevel60": 0.2699324427454692
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 31,
+        "physicalDefense": 23,
+        "magicalDefense": 21,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Höhlentroll",
+      "family": "Trolle",
+      "habitat": "cave",
+      "role": "physicalAttack",
+      "level": 60,
+      "attack": 333.7958696786002,
+      "attackType": "physical",
+      "physicalDefense": 252.8756588474244,
+      "magicalDefense": 232.64560613963044,
+      "physical": {
+        "sweetspot": 60.690158123381856,
+        "reductionAgainstLevel60": 0.31150263538969764
+      },
+      "magical": {
+        "sweetspot": 55.834945473511304,
+        "reductionAgainstLevel60": 0.2861164849117044
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 33,
+        "physicalDefense": 25,
+        "magicalDefense": 23,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Bergtroll",
+      "family": "Trolle",
+      "habitat": "mountain",
+      "role": "physicalAttack",
+      "level": 60,
+      "attack": 364.14094874029115,
+      "attackType": "physical",
+      "physicalDefense": 273.10571155521836,
+      "magicalDefense": 252.8756588474244,
+      "physical": {
+        "sweetspot": 65.5453707732524,
+        "reductionAgainstLevel60": 0.39242284622087337
+      },
+      "magical": {
+        "sweetspot": 60.690158123381856,
+        "reductionAgainstLevel60": 0.31150263538969764
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 36,
+        "physicalDefense": 27,
+        "magicalDefense": 25,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Frosttroll",
+      "family": "Trolle",
+      "habitat": "frost",
+      "role": "physicalAttack",
+      "level": 60,
+      "attack": 455.17618592536394,
+      "attackType": "physical",
+      "physicalDefense": 343.9108960324972,
+      "magicalDefense": 313.5658169708063,
+      "physical": {
+        "sweetspot": 82.53861504779933,
+        "reductionAgainstLevel60": 0.6756435841299888
+      },
+      "magical": {
+        "sweetspot": 75.2557960729935,
+        "reductionAgainstLevel60": 0.5542632678832251
+      },
+      "source": {
+        "baseLevel": 1,
+        "attack": 45,
+        "physicalDefense": 34,
+        "magicalDefense": 31,
+        "factor": 10.115026353896976
+      }
+    },
+    {
+      "name": "Bergzyklop",
+      "family": "Zyklopen",
+      "habitat": "mountain",
+      "role": "physicalAttack",
+      "level": 60,
+      "attack": 404.60105415587907,
+      "attackType": "physical",
+      "physicalDefense": null,
+      "magicalDefense": null,
+      "physical": null,
+      "magical": null,
+      "source": {
+        "baseLevel": 1,
+        "attack": 40,
+        "physicalDefense": null,
+        "magicalDefense": null,
+        "factor": 10.115026353896976
+      }
+    }
+  ]
+}

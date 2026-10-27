@@ -50,10 +50,10 @@ Jeweils einen Buff ausgelassen, einschließlich seiner Kosten und Aktivierungsze
 | luminet | Aura Unterdrückung | -1.186 | -0.18 |
 | druid | Herr der Elemente | 10.872 | 1.82 |
 | summoner | Beweglichkeit | -8.016 | -1.55 |
-| summoner | Scharfer Instinkte | -1.903 | -0.37 |
+| summoner | Scharfer Instinkt | -1.903 | -0.37 |
 | summoner | Gute Reflexe | 1.051 | 0.20 |
 | summoner | Keine Gnade | 62.411 | 12.11 |
-| adventurer | Scharfer Instinkte | 3.788 | 0.84 |
+| adventurer | Scharfer Instinkt | 3.788 | 0.84 |
 | adventurer | Macht der Wildnis | 48.231 | 10.68 |
 | shaman | Macht der Wildnis | 36.567 | 7.40 |
 
@@ -115,7 +115,7 @@ Eigenbuff mit zehn Stufen für 600 Sekunden. Stärke, Vitalität und Willenskraf
 
 Eigenbuff für 20 bis 24,5 Sekunden. Bewegungsgeschwindigkeit steigt von 1 Prozent auf Stufe 1 um 1 Prozentpunkt je weiterer Stufe auf 10 Prozent auf Stufe 10. Agilität steigt gleichmäßig von 0 auf 5. Castzeit fest 0,1 Sekunden. Cooldown sinkt von 120 um 2 Sekunden je weiterer Stufe auf 102 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
 
-### summoner: Scharfer Instinkte (Stufe 10)
+### summoner: Scharfer Instinkt (Stufe 10)
 
 Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriffsgeschwindigkeitspunkt über zehn Stufen. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
 
@@ -127,7 +127,7 @@ Eigenbuff für 600 Sekunden. Gewährt 1 Agilität je gelerntem Skilllevel, bis z
 
 Eigenbuff für 600 Sekunden. Gewährt 1 Geschicklichkeit je Skillstufe bis 10. P-Angriff 15 +6 je weiterer Stufe bis 69 auf Stufe 10. Kein direkter Angriffsgeschwindigkeitsbonus. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
 
-### adventurer: Scharfer Instinkte (Stufe 10)
+### adventurer: Scharfer Instinkt (Stufe 10)
 
 Eigenbuff für 300 Sekunden. Gewährt 2 bis 11 Ambush und 0 bis 1 festen Angriffsgeschwindigkeitspunkt über zehn Stufen. Cooldown 60 Sekunden. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 167 auf Stufe 10, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
 

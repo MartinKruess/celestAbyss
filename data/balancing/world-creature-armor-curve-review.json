@@ -1,0 +1,3294 @@
+{
+  "status": "readOnlyAnalysisNoGameChanges",
+  "monsterDivisor": 4.166666666666667,
+  "curve": {
+    "variant": "A",
+    "ratio": "(monsterDefense / divisor) / playerLevel",
+    "below1": "10% + ratio * 20 percentage points",
+    "above1": "30% + (ratio - 1) * 100 percentage points",
+    "clamp": "10% through 100%",
+    "zeroArmor": "10% limiting floor used for this analysis; explicit game zero-armor exception not decided"
+  },
+  "existing": {
+    "referenceLevel": 63,
+    "defenseGrowthPerLevel": 1.04,
+    "earlyTest": "Level-60 players against HP-only level-63 placeholders; no enemy armor or attacks"
+  },
+  "hypothesis": {
+    "anchor": 60,
+    "preserveExistingLevel60Defense": true,
+    "normalCurve": "level * 25/6 from level 20",
+    "starterCurve": "Unapproved illustrative reference: 3*(level/10)^2 until 10, linearly from 3 at 10 to 83.333... at 20",
+    "variantProfile": "Each P/M defense independently uses existing level-60 armor / 250 as profile multiplier",
+    "limitations": [
+      "Preserving old level-60 armor preserves provisional protection strength, not validated balance.",
+      "Health and attack remain existing compound growth; this is not a two-way combat simulation.",
+      "No golem template exists in these world variants."
+    ]
+  },
+  "inputHashes": {
+    "data/creatures/base-creature.json": "63265714bb3e6bc012ed6bf8586265929a3255d9d285e2fb33416559a863d809",
+    "data/creatures/world-reference-level1.json": "f7da6b52bb6315482bb59387df67cefc1425183690484a16c16f3389cab012e2",
+    "data/creatures/world-variant-templates.json": "44de607c568f968a2630fdb3edb3a98fd35d50b22e851acc889c37d52f499ecf"
+  },
+  "rows": [
+    {
+      "key": "world-grim-forest-wolf",
+      "name": "Grimmiger Waldwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 135,
+          "physicalAttack": 30.321596109663428,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.986085546979504,
+              "currentSweetspot": 2.636660531275081,
+              "currentReduction": 1,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 0.013334945380063724,
+              "proposedSweetspot": 0.0032003868912152938,
+              "proposedReduction": 0.10064007737824307
+            },
+            "magicalDefense": {
+              "currentArmor": 7.031094750066882,
+              "currentSweetspot": 1.6874627400160516,
+              "currentReduction": 0.9874627400160516,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.008534365043240783,
+              "proposedSweetspot": 0.002048247610377788,
+              "proposedReduction": 0.10040964952207557
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 174,
+          "physicalAttack": 35.47197876175247,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.852166218026257,
+              "currentSweetspot": 3.0845198923263015,
+              "currentReduction": 0.22338079569305208,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 0.333373634501593,
+              "proposedSweetspot": 0.08000967228038232,
+              "proposedReduction": 0.1032003868912153
+            },
+            "magicalDefense": {
+              "currentArmor": 8.225386379536804,
+              "currentSweetspot": 1.9740927310888328,
+              "currentReduction": 0.17896370924355331,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.21335912608101953,
+              "proposedSweetspot": 0.05120619025944469,
+              "proposedReduction": 0.1020482476103778
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 238,
+          "physicalAttack": 43.1570859143573,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 15.63662533128888,
+              "currentSweetspot": 3.7527900795093307,
+              "currentReduction": 0.17505580159018663,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 1.333494538006372,
+              "proposedSweetspot": 0.3200386891215293,
+              "proposedReduction": 0.1064007737824306
+            },
+            "magicalDefense": {
+              "currentArmor": 10.007440212024882,
+              "currentSweetspot": 2.4017856508859716,
+              "currentReduction": 0.14803571301771945,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.8534365043240781,
+              "proposedSweetspot": 0.20482476103777875,
+              "proposedReduction": 0.10409649522075558
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 447,
+          "physicalAttack": 63.88302977845738,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 23.146025282049777,
+              "currentSweetspot": 5.555046067691946,
+              "currentReduction": 0.15555046067691947,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 37.041514944621454,
+              "proposedSweetspot": 8.889963586709149,
+              "proposedReduction": 0.1888996358670915
+            },
+            "magicalDefense": {
+              "currentArmor": 14.813456180511857,
+              "currentSweetspot": 3.5552294833228455,
+              "currentReduction": 0.13555229483322845,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 23.70656956455773,
+              "proposedSweetspot": 5.689576695493854,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5547,
+          "physicalAttack": 306.7037437414656,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 111.12454483386436,
+              "currentSweetspot": 26.669890760127444,
+              "currentReduction": 0.1888996358670915,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 111.12454483386436,
+              "proposedSweetspot": 26.669890760127444,
+              "proposedReduction": 0.1888996358670915
+            },
+            "magicalDefense": {
+              "currentArmor": 71.11970869367319,
+              "currentSweetspot": 17.068730086481565,
+              "currentReduction": 0.15689576695493856,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 71.11970869367319,
+              "proposedSweetspot": 17.068730086481565,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 6700,
+          "physicalAttack": 345,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 125.00000000000001,
+              "currentSweetspot": 30,
+              "currentReduction": 0.19523809523809524,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 116.68077207555756,
+              "proposedSweetspot": 28.00338529813381,
+              "proposedReduction": 0.18889963586709146
+            },
+            "magicalDefense": {
+              "currentArmor": 80,
+              "currentSweetspot": 19.2,
+              "currentReduction": 0.16095238095238096,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 74.67569412835684,
+              "proposedSweetspot": 17.92216659080564,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 68867,
+          "physicalAttack": 1472.4910003681746,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 533.5112320174546,
+              "currentSweetspot": 128.0426956841891,
+              "currentReduction": 0.5804269568418912,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 185.20757472310726,
+              "proposedSweetspot": 44.44981793354574,
+              "proposedReduction": 0.1888996358670915
+            },
+            "magicalDefense": {
+              "currentArmor": 341.44718849117095,
+              "currentSweetspot": 81.94732523788102,
+              "currentReduction": 0.26389465047576205,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 118.53284782278864,
+              "proposedSweetspot": 28.447883477469272,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-frostclaw-wolf",
+      "name": "Frostklauenwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 141,
+          "physicalAttack": 29.003265844025886,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.304415812617046,
+              "currentSweetspot": 2.953059795028091,
+              "currentReduction": 1,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 0.014935138825671372,
+              "proposedSweetspot": 0.003584433318161129,
+              "proposedReduction": 0.10071688666363224
+            },
+            "magicalDefense": {
+              "currentArmor": 9.667755281341963,
+              "currentSweetspot": 2.320261267522071,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 0.011734751934456078,
+              "proposedSweetspot": 0.0028163404642694585,
+              "proposedReduction": 0.1005632680928539
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 181,
+          "physicalAttack": 33.92971881558931,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 14.39442616418941,
+              "currentSweetspot": 3.4546622794054582,
+              "currentReduction": 0.23818649117621835,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 0.3733784706417842,
+              "proposedSweetspot": 0.0896108329540282,
+              "proposedReduction": 0.10358443331816114
+            },
+            "magicalDefense": {
+              "currentArmor": 11.309906271863106,
+              "currentSweetspot": 2.7143775052471453,
+              "currentReduction": 0.20857510020988582,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 0.2933687983614019,
+              "proposedSweetspot": 0.07040851160673645,
+              "proposedReduction": 0.10281634046426946
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 249,
+          "physicalAttack": 41.280690874602634,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 17.513020371043545,
+              "currentSweetspot": 4.203124889050451,
+              "currentReduction": 0.18406249778100903,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 1.4935138825671368,
+              "proposedSweetspot": 0.3584433318161128,
+              "proposedReduction": 0.10716886663632226
+            },
+            "magicalDefense": {
+              "currentArmor": 13.760230291534212,
+              "currentSweetspot": 3.3024552699682106,
+              "currentReduction": 0.16604910539936424,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 1.1734751934456076,
+              "proposedSweetspot": 0.2816340464269458,
+              "proposedReduction": 0.10563268092853892
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 467,
+          "physicalAttack": 61.105506744611404,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 25.923548315895754,
+              "currentSweetspot": 6.221651595814981,
+              "currentReduction": 0.16221651595814982,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 41.48649673797603,
+              "proposedSweetspot": 9.956759217114246,
+              "proposedReduction": 0.19956759217114248
+            },
+            "magicalDefense": {
+              "currentArmor": 20.368502248203804,
+              "currentSweetspot": 4.888440539568912,
+              "currentReduction": 0.14888440539568915,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 32.59653315126688,
+              "proposedSweetspot": 7.823167956304051,
+              "proposedReduction": 0.17823167956304053
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5795,
+          "physicalAttack": 293.36879836140184,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 124.45949021392809,
+              "currentSweetspot": 29.87027765134274,
+              "currentReduction": 0.19956759217114248,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 124.45949021392809,
+              "proposedSweetspot": 29.87027765134274,
+              "proposedReduction": 0.19956759217114248
+            },
+            "magicalDefense": {
+              "currentArmor": 97.78959945380063,
+              "currentSweetspot": 23.46950386891215,
+              "currentReduction": 0.1782316795630405,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 97.78959945380063,
+              "proposedSweetspot": 23.46950386891215,
+              "proposedReduction": 0.1782316795630405
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 7000,
+          "physicalAttack": 330,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 140.00000000000003,
+              "currentSweetspot": 33.6,
+              "currentReduction": 0.20666666666666667,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 130.68246472462448,
+              "proposedSweetspot": 31.363791533909872,
+              "proposedReduction": 0.19956759217114245
+            },
+            "magicalDefense": {
+              "currentArmor": 110,
+              "currentSweetspot": 26.4,
+              "currentReduction": 0.1838095238095238,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 102.67907942649066,
+              "proposedSweetspot": 24.642979062357757,
+              "proposedReduction": 0.1782316795630405
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 71950,
+          "physicalAttack": 1408.46965252608,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 597.5325798595493,
+              "currentSweetspot": 143.40781916629183,
+              "currentReduction": 0.7340781916629184,
+              "profileMultiplier": 0.4978379608557123,
+              "proposedArmor": 207.43248368988014,
+              "proposedSweetspot": 49.78379608557123,
+              "proposedReduction": 0.19956759217114248
+            },
+            "magicalDefense": {
+              "currentArmor": 469.48988417536003,
+              "currentSweetspot": 112.6775722020864,
+              "currentReduction": 0.42677572202086383,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 162.9826657563344,
+              "proposedSweetspot": 39.11583978152025,
+              "proposedReduction": 0.1782316795630405
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-shadow-wolf",
+      "name": "Schattenwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 129,
+          "physicalAttack": 30.761039531542608,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 9.228311859462783,
+              "currentSweetspot": 2.214794846271068,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 0.011201354119253527,
+              "proposedSweetspot": 0.0026883249886208464,
+              "proposedReduction": 0.10053766499772418
+            },
+            "magicalDefense": {
+              "currentArmor": 8.349425015704423,
+              "currentSweetspot": 2.0038620037690613,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 0.010134558488848429,
+              "proposedSweetspot": 0.0024322940373236227,
+              "proposedReduction": 0.10048645880746473
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 166,
+          "physicalAttack": 35.986065410473515,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.795819623142057,
+              "currentSweetspot": 2.5909967095540933,
+              "currentReduction": 0.20363986838216375,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 0.28003385298133815,
+              "proposedSweetspot": 0.06720812471552115,
+              "proposedReduction": 0.10268832498862085
+            },
+            "magicalDefense": {
+              "currentArmor": 9.767646325699955,
+              "currentSweetspot": 2.344235118167989,
+              "currentReduction": 0.19376940472671958,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 0.2533639622212107,
+              "proposedSweetspot": 0.060807350933090566,
+              "proposedReduction": 0.10243229403732362
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 227,
+          "physicalAttack": 43.78255092760885,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 13.134765278282659,
+              "currentSweetspot": 3.152343666787838,
+              "currentReduction": 0.16304687333575676,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 1.1201354119253526,
+              "proposedSweetspot": 0.2688324988620846,
+              "proposedReduction": 0.1053766499772417
+            },
+            "magicalDefense": {
+              "currentArmor": 11.883835251779548,
+              "currentSweetspot": 2.8521204604270913,
+              "currentReduction": 0.15704240920854184,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 1.0134558488848429,
+              "proposedSweetspot": 0.24322940373236226,
+              "proposedReduction": 0.10486458807464726
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 427,
+          "physicalAttack": 64.80887078973937,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 19.44266123692181,
+              "currentSweetspot": 4.666238696861234,
+              "currentReduction": 0.14666238696861236,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 31.11487255348202,
+              "proposedSweetspot": 7.467569412835684,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 17.59097921435783,
+              "currentSweetspot": 4.221835011445879,
+              "currentReduction": 0.1422183501144588,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 28.1515513579123,
+              "proposedSweetspot": 6.756372325898951,
+              "proposedReduction": 0.16756372325898952
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5298,
+          "physicalAttack": 311.1487255348202,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 93.34461766044606,
+              "currentSweetspot": 22.402708238507053,
+              "currentReduction": 0.17467569412835685,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 93.34461766044606,
+              "proposedSweetspot": 22.402708238507053,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 84.4546540737369,
+              "currentSweetspot": 20.269116977696857,
+              "currentReduction": 0.16756372325898955,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 84.4546540737369,
+              "proposedSweetspot": 20.269116977696857,
+              "proposedReduction": 0.16756372325898955
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 6400,
+          "physicalAttack": 350,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 105,
+              "currentSweetspot": 25.2,
+              "currentReduction": 0.18,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 98.01184854346835,
+              "proposedSweetspot": 23.522843650432403,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 95,
+              "currentSweetspot": 22.799999999999997,
+              "currentReduction": 0.17238095238095236,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 88.67738677742373,
+              "proposedSweetspot": 21.282572826581696,
+              "proposedReduction": 0.1675637232589895
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 65783,
+          "physicalAttack": 1493.8314496488729,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 448.1494348946619,
+              "currentSweetspot": 107.55586437471885,
+              "currentReduction": 0.37555864374718845,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 155.5743627674101,
+              "proposedSweetspot": 37.33784706417842,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 405.4685363332655,
+              "currentSweetspot": 97.3124487199837,
+              "currentReduction": 0.29462489743996745,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 140.7577567895615,
+              "proposedSweetspot": 33.78186162949476,
+              "proposedReduction": 0.16756372325898955
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-sunfur-wolf",
+      "name": "Sonnenfellwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 137,
+          "physicalAttack": 28.124379000267524,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.546642125100323,
+              "currentSweetspot": 2.5311941100240776,
+              "currentReduction": 1,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 0.012801547564861175,
+              "proposedSweetspot": 0.0030723714155666817,
+              "proposedReduction": 0.10061447428311335
+            },
+            "magicalDefense": {
+              "currentArmor": 10.546642125100323,
+              "currentSweetspot": 2.5311941100240776,
+              "currentReduction": 1,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 0.012801547564861175,
+              "proposedSweetspot": 0.0030723714155666817,
+              "proposedReduction": 0.10061447428311335
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 176,
+          "physicalAttack": 32.90154551814721,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.338079569305206,
+              "currentSweetspot": 2.961139096633249,
+              "currentReduction": 0.21844556386532998,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 0.32003868912152933,
+              "proposedSweetspot": 0.07680928538916704,
+              "proposedReduction": 0.10307237141556669
+            },
+            "magicalDefense": {
+              "currentArmor": 12.338079569305206,
+              "currentSweetspot": 2.961139096633249,
+              "currentReduction": 0.21844556386532998,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 0.32003868912152933,
+              "proposedSweetspot": 0.07680928538916704,
+              "proposedReduction": 0.10307237141556669
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 242,
+          "physicalAttack": 40.02976084809952,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 15.011160318037323,
+              "currentSweetspot": 3.602678476328957,
+              "currentReduction": 0.17205356952657913,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 1.2801547564861173,
+              "proposedSweetspot": 0.30723714155666815,
+              "proposedReduction": 0.10614474283113337
+            },
+            "magicalDefense": {
+              "currentArmor": 15.011160318037323,
+              "currentSweetspot": 3.602678476328957,
+              "currentReduction": 0.17205356952657913,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 1.2801547564861173,
+              "proposedSweetspot": 0.30723714155666815,
+              "proposedReduction": 0.10614474283113337
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 453,
+          "physicalAttack": 59.25382472204742,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 22.220184270767785,
+              "currentSweetspot": 5.332844224984268,
+              "currentReduction": 0.15332844224984268,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 35.559854346836595,
+              "proposedSweetspot": 8.534365043240783,
+              "proposedReduction": 0.18534365043240783
+            },
+            "magicalDefense": {
+              "currentArmor": 22.220184270767785,
+              "currentSweetspot": 5.332844224984268,
+              "currentReduction": 0.15332844224984268,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 35.559854346836595,
+              "proposedSweetspot": 8.534365043240783,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5629,
+          "physicalAttack": 284.4788347746927,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 106.67956304050978,
+              "currentSweetspot": 25.603095129722345,
+              "currentReduction": 0.18534365043240783,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 106.67956304050978,
+              "proposedSweetspot": 25.603095129722345,
+              "proposedReduction": 0.18534365043240783
+            },
+            "magicalDefense": {
+              "currentArmor": 106.67956304050978,
+              "currentSweetspot": 25.603095129722345,
+              "currentReduction": 0.18534365043240783,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 106.67956304050978,
+              "proposedSweetspot": 25.603095129722345,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 6800,
+          "physicalAttack": 319.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 120,
+              "currentSweetspot": 28.799999999999997,
+              "currentReduction": 0.19142857142857142,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 112.01354119253526,
+              "proposedSweetspot": 26.88324988620846,
+              "proposedReduction": 0.18534365043240783
+            },
+            "magicalDefense": {
+              "currentArmor": 120,
+              "currentSweetspot": 28.799999999999997,
+              "currentReduction": 0.19142857142857142,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 112.01354119253526,
+              "proposedSweetspot": 26.88324988620846,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 69895,
+          "physicalAttack": 1365.7887539646836,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 512.1707827367565,
+              "currentSweetspot": 122.92098785682154,
+              "currentReduction": 0.5292098785682156,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 177.79927173418295,
+              "proposedSweetspot": 42.67182521620391,
+              "proposedReduction": 0.18534365043240783
+            },
+            "magicalDefense": {
+              "currentArmor": 512.1707827367565,
+              "currentSweetspot": 122.92098785682154,
+              "currentReduction": 0.5292098785682156,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 177.79927173418295,
+              "proposedSweetspot": 42.67182521620391,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-gray-wolf",
+      "name": "Gewöhnlicher Grauwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 127,
+          "physicalAttack": 26.366605312750806,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.788868437583604,
+              "currentSweetspot": 2.109328425020065,
+              "currentReduction": 1,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 0.01066795630405098,
+              "proposedSweetspot": 0.002560309512972235,
+              "proposedReduction": 0.10051206190259446
+            },
+            "magicalDefense": {
+              "currentArmor": 6.152207906308522,
+              "currentSweetspot": 1.4765298975140453,
+              "currentReduction": 0.7765298975140453,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 0.007467569412835685,
+              "proposedSweetspot": 0.0017922166590805643,
+              "proposedReduction": 0.10035844333181612
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 163,
+          "physicalAttack": 30.845198923263013,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.281732974421006,
+              "currentSweetspot": 2.4676159138610414,
+              "currentReduction": 0.19870463655444168,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 0.26669890760127446,
+              "proposedSweetspot": 0.06400773782430587,
+              "proposedReduction": 0.10256030951297224
+            },
+            "magicalDefense": {
+              "currentArmor": 7.197213082094704,
+              "currentSweetspot": 1.727331139702729,
+              "currentReduction": 0.16909324558810918,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 0.1866892353208921,
+              "proposedSweetspot": 0.0448054164770141,
+              "proposedReduction": 0.10179221665908057
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 224,
+          "physicalAttack": 37.5279007950933,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.509300265031104,
+              "currentSweetspot": 3.002232063607465,
+              "currentReduction": 0.16004464127214932,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 1.0667956304050978,
+              "proposedSweetspot": 0.2560309512972235,
+              "proposedReduction": 0.10512061902594448
+            },
+            "magicalDefense": {
+              "currentArmor": 8.756510185521773,
+              "currentSweetspot": 2.1015624445252254,
+              "currentReduction": 0.1420312488905045,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 0.7467569412835684,
+              "proposedSweetspot": 0.1792216659080564,
+              "proposedReduction": 0.10358443331816114
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 420,
+          "physicalAttack": 55.55046067691946,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 18.516820225639822,
+              "currentSweetspot": 4.444036854153557,
+              "currentReduction": 0.14444036854153558,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 29.633211955697167,
+              "proposedSweetspot": 7.11197086936732,
+              "proposedReduction": 0.1711197086936732
+            },
+            "magicalDefense": {
+              "currentArmor": 12.961774157947875,
+              "currentSweetspot": 3.11082579790749,
+              "currentReduction": 0.1311082579790749,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 20.743248368988013,
+              "proposedSweetspot": 4.978379608557122,
+              "proposedReduction": 0.14978379608557124
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5215,
+          "physicalAttack": 266.6989076012744,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 88.89963586709149,
+              "currentSweetspot": 21.335912608101957,
+              "currentReduction": 0.1711197086936732,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 88.89963586709149,
+              "proposedSweetspot": 21.335912608101957,
+              "proposedReduction": 0.1711197086936732
+            },
+            "magicalDefense": {
+              "currentArmor": 62.22974510696404,
+              "currentSweetspot": 14.935138825671368,
+              "currentReduction": 0.14978379608557124,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 62.22974510696404,
+              "proposedSweetspot": 14.935138825671368,
+              "proposedReduction": 0.14978379608557124
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 6300,
+          "physicalAttack": 300,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 100.00000000000001,
+              "currentSweetspot": 24,
+              "currentReduction": 0.1761904761904762,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 93.34461766044606,
+              "proposedSweetspot": 22.402708238507053,
+              "proposedReduction": 0.17111970869367318
+            },
+            "magicalDefense": {
+              "currentArmor": 70,
+              "currentSweetspot": 16.799999999999997,
+              "currentReduction": 0.15333333333333332,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 65.34123236231223,
+              "proposedSweetspot": 15.681895766954932,
+              "proposedReduction": 0.1497837960855712
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 64755,
+          "physicalAttack": 1280.426956841891,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 426.8089856139637,
+              "currentSweetspot": 102.4341565473513,
+              "currentReduction": 0.32434156547351284,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 148.16605977848582,
+              "proposedSweetspot": 35.559854346836595,
+              "proposedReduction": 0.1711197086936732
+            },
+            "magicalDefense": {
+              "currentArmor": 298.7662899297746,
+              "currentSweetspot": 71.7039095831459,
+              "currentReduction": 0.2434078191662918,
+              "profileMultiplier": 0.24891898042785612,
+              "proposedArmor": 103.71624184494006,
+              "proposedSweetspot": 24.891898042785613,
+              "proposedReduction": 0.14978379608557124
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-redmane-wolf",
+      "name": "Rotmähnenwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 133,
+          "physicalAttack": 29.88215268778425,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.107198703221144,
+              "currentSweetspot": 2.4257276887730743,
+              "currentReduction": 1,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 0.012268149749658626,
+              "proposedSweetspot": 0.00294435593991807,
+              "proposedReduction": 0.10058887118798363
+            },
+            "magicalDefense": {
+              "currentArmor": 6.591651328187702,
+              "currentSweetspot": 1.5819963187650483,
+              "currentReduction": 0.8819963187650484,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 0.008000967228038234,
+              "proposedSweetspot": 0.001920232134729176,
+              "proposedReduction": 0.10038404642694584
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 171,
+          "physicalAttack": 34.95789211303142,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 11.823992920584157,
+              "currentSweetspot": 2.8377583009401977,
+              "currentReduction": 0.21351033203760791,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 0.3067037437414656,
+              "proposedSweetspot": 0.07360889849795174,
+              "proposedReduction": 0.10294435593991808
+            },
+            "magicalDefense": {
+              "currentArmor": 7.711299730815753,
+              "currentSweetspot": 1.8507119353957806,
+              "currentReduction": 0.17402847741583122,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 0.2000241807009558,
+              "proposedSweetspot": 0.048005803368229384,
+              "proposedReduction": 0.10192023213472919
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 234,
+          "physicalAttack": 42.53162090110575,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 14.385695304785768,
+              "currentSweetspot": 3.452566873148584,
+              "currentReduction": 0.16905133746297168,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 1.2268149749658623,
+              "proposedSweetspot": 0.29443559399180697,
+              "proposedReduction": 0.10588871187983614
+            },
+            "magicalDefense": {
+              "currentArmor": 9.381975198773326,
+              "currentSweetspot": 2.251674047705598,
+              "currentReduction": 0.14503348095411198,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 0.8000967228038232,
+              "proposedSweetspot": 0.19202321347291754,
+              "proposedReduction": 0.10384046426945835
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 440,
+          "physicalAttack": 62.95718876717539,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 21.294343259485796,
+              "currentSweetspot": 5.11064238227659,
+              "currentReduction": 0.1511064238227659,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 34.078193749051735,
+              "proposedSweetspot": 8.178766499772415,
+              "proposedReduction": 0.18178766499772417
+            },
+            "magicalDefense": {
+              "currentArmor": 13.887615169229864,
+              "currentSweetspot": 3.333027640615167,
+              "currentReduction": 0.1333302764061517,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 22.22490896677287,
+              "proposedSweetspot": 5.333978152025488,
+              "proposedReduction": 0.1533397815202549
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5464,
+          "physicalAttack": 302.25876194811104,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 102.2345812471552,
+              "currentSweetspot": 24.53629949931725,
+              "currentReduction": 0.18178766499772417,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 102.2345812471552,
+              "proposedSweetspot": 24.53629949931725,
+              "proposedReduction": 0.18178766499772417
+            },
+            "magicalDefense": {
+              "currentArmor": 66.6747269003186,
+              "currentSweetspot": 16.001934456076462,
+              "currentReduction": 0.15333978152025488,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 66.6747269003186,
+              "proposedSweetspot": 16.001934456076462,
+              "proposedReduction": 0.15333978152025488
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 6600,
+          "physicalAttack": 340,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 115.00000000000001,
+              "currentSweetspot": 27.6,
+              "currentReduction": 0.18761904761904763,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 107.34631030951294,
+              "proposedSweetspot": 25.763114474283103,
+              "proposedReduction": 0.18178766499772414
+            },
+            "magicalDefense": {
+              "currentArmor": 75,
+              "currentSweetspot": 18,
+              "currentReduction": 0.15714285714285714,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 70.00846324533453,
+              "proposedSweetspot": 16.802031178880284,
+              "proposedReduction": 0.15333978152025488
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 67839,
+          "physicalAttack": 1451.1505510874765,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 490.83033345605827,
+              "currentSweetspot": 117.79928002945398,
+              "currentReduction": 0.4779928002945399,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 170.39096874525865,
+              "proposedSweetspot": 40.893832498862075,
+              "proposedReduction": 0.18178766499772417
+            },
+            "magicalDefense": {
+              "currentArmor": 320.10673921047277,
+              "currentSweetspot": 76.82561741051346,
+              "currentReduction": 0.2536512348210269,
+              "profileMultiplier": 0.2666989076012744,
+              "proposedArmor": 111.12454483386433,
+              "proposedSweetspot": 26.669890760127437,
+              "proposedReduction": 0.15333978152025488
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-mist-wolf",
+      "name": "Nebelwolf",
+      "points": [
+        {
+          "level": 1,
+          "health": 131,
+          "physicalAttack": 27.245492156509165,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 9.228311859462783,
+              "currentSweetspot": 2.214794846271068,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 0.011201354119253527,
+              "proposedSweetspot": 0.0026883249886208464,
+              "proposedReduction": 0.10053766499772418
+            },
+            "magicalDefense": {
+              "currentArmor": 10.107198703221144,
+              "currentSweetspot": 2.4257276887730743,
+              "currentReduction": 1,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 0.012268149749658626,
+              "proposedSweetspot": 0.00294435593991807,
+              "proposedReduction": 0.10058887118798363
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 169,
+          "physicalAttack": 31.87337222070511,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.795819623142057,
+              "currentSweetspot": 2.5909967095540933,
+              "currentReduction": 0.20363986838216375,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 0.28003385298133815,
+              "proposedSweetspot": 0.06720812471552115,
+              "proposedReduction": 0.10268832498862085
+            },
+            "magicalDefense": {
+              "currentArmor": 11.823992920584157,
+              "currentSweetspot": 2.8377583009401977,
+              "currentReduction": 0.21351033203760791,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 0.3067037437414656,
+              "proposedSweetspot": 0.07360889849795174,
+              "proposedReduction": 0.10294435593991808
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 231,
+          "physicalAttack": 38.778830821596415,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 13.134765278282659,
+              "currentSweetspot": 3.152343666787838,
+              "currentReduction": 0.16304687333575676,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 1.1201354119253526,
+              "proposedSweetspot": 0.2688324988620846,
+              "proposedReduction": 0.1053766499772417
+            },
+            "magicalDefense": {
+              "currentArmor": 14.385695304785768,
+              "currentSweetspot": 3.452566873148584,
+              "currentReduction": 0.16905133746297168,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 1.2268149749658623,
+              "proposedSweetspot": 0.29443559399180697,
+              "proposedReduction": 0.10588871187983614
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 433,
+          "physicalAttack": 57.40214269948344,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 19.44266123692181,
+              "currentSweetspot": 4.666238696861234,
+              "currentReduction": 0.14666238696861236,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 31.11487255348202,
+              "proposedSweetspot": 7.467569412835684,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 21.294343259485796,
+              "currentSweetspot": 5.11064238227659,
+              "currentReduction": 0.1511064238227659,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 34.078193749051735,
+              "proposedSweetspot": 8.178766499772415,
+              "proposedReduction": 0.18178766499772417
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5381,
+          "physicalAttack": 275.58887118798356,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 93.34461766044606,
+              "currentSweetspot": 22.402708238507053,
+              "currentReduction": 0.17467569412835685,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 93.34461766044606,
+              "proposedSweetspot": 22.402708238507053,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 102.2345812471552,
+              "currentSweetspot": 24.53629949931725,
+              "currentReduction": 0.18178766499772417,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 102.2345812471552,
+              "proposedSweetspot": 24.53629949931725,
+              "proposedReduction": 0.18178766499772417
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 6500,
+          "physicalAttack": 309.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 105,
+              "currentSweetspot": 25.2,
+              "currentReduction": 0.18,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 98.01184854346835,
+              "proposedSweetspot": 23.522843650432403,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 115.00000000000001,
+              "currentSweetspot": 27.6,
+              "currentReduction": 0.18761904761904763,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 107.34631030951294,
+              "proposedSweetspot": 25.763114474283103,
+              "proposedReduction": 0.18178766499772414
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 66811,
+          "physicalAttack": 1323.1078554032872,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 448.1494348946619,
+              "currentSweetspot": 107.55586437471885,
+              "currentReduction": 0.37555864374718845,
+              "profileMultiplier": 0.3733784706417842,
+              "proposedArmor": 155.5743627674101,
+              "proposedSweetspot": 37.33784706417842,
+              "proposedReduction": 0.17467569412835685
+            },
+            "magicalDefense": {
+              "currentArmor": 490.83033345605827,
+              "currentSweetspot": 117.79928002945398,
+              "currentReduction": 0.4779928002945399,
+              "profileMultiplier": 0.40893832498862076,
+              "proposedArmor": 170.39096874525865,
+              "proposedSweetspot": 40.893832498862075,
+              "proposedReduction": 0.18178766499772417
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-silverwing-crane",
+      "name": "Silberschwingenkranich",
+      "points": [
+        {
+          "level": 1,
+          "health": 165,
+          "physicalAttack": 23.729944781475727,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.909981593825243,
+              "currentSweetspot": 1.8983955825180583,
+              "currentReduction": 1,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 0.009601160673645881,
+              "proposedSweetspot": 0.0023042785616750115,
+              "proposedReduction": 0.10046085571233501
+            },
+            "magicalDefense": {
+              "currentArmor": 11.425528968858684,
+              "currentSweetspot": 2.742126952526084,
+              "currentReduction": 1,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 0.013868343195266274,
+              "proposedSweetspot": 0.0033284023668639054,
+              "proposedReduction": 0.10066568047337279
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 213,
+          "physicalAttack": 27.760679030936714,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 9.253559676978906,
+              "currentSweetspot": 2.220854322474937,
+              "currentReduction": 0.1888341728989975,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 0.240029016841147,
+              "proposedSweetspot": 0.05760696404187528,
+              "proposedReduction": 0.10230427856167501
+            },
+            "magicalDefense": {
+              "currentArmor": 13.366252866747308,
+              "currentSweetspot": 3.2079006880193535,
+              "currentReduction": 0.22831602752077415,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 0.34670857988165676,
+              "proposedSweetspot": 0.08321005917159761,
+              "proposedReduction": 0.10332840236686391
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 291,
+          "physicalAttack": 33.77511071558398,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 11.258370238527993,
+              "currentSweetspot": 2.7020088572467182,
+              "currentReduction": 0.15404017714493437,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 0.960116067364588,
+              "proposedSweetspot": 0.2304278561675011,
+              "proposedReduction": 0.10460855712335003
+            },
+            "magicalDefense": {
+              "currentArmor": 16.262090344540432,
+              "currentSweetspot": 3.9029016826897034,
+              "currentReduction": 0.17805803365379408,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 1.386834319526627,
+              "proposedSweetspot": 0.33284023668639046,
+              "proposedReduction": 0.10665680473372781
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 547,
+          "physicalAttack": 49.99541460922752,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 16.66513820307584,
+              "currentSweetspot": 3.9996331687382014,
+              "currentReduction": 0.13999633168738201,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 26.669890760127448,
+              "proposedSweetspot": 6.400773782430587,
+              "proposedReduction": 0.1640077378243059
+            },
+            "magicalDefense": {
+              "currentArmor": 24.07186629333177,
+              "currentSweetspot": 5.777247910399624,
+              "currentReduction": 0.15777247910399625,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 38.523175542406314,
+              "proposedSweetspot": 9.245562130177515,
+              "proposedReduction": 0.19245562130177515
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6788,
+          "physicalAttack": 240.02901684114698,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 80.00967228038235,
+              "currentSweetspot": 19.20232134729176,
+              "currentReduction": 0.1640077378243059,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 80.00967228038235,
+              "proposedSweetspot": 19.20232134729176,
+              "proposedReduction": 0.1640077378243059
+            },
+            "magicalDefense": {
+              "currentArmor": 115.56952662721893,
+              "currentSweetspot": 27.736686390532544,
+              "currentReduction": 0.19245562130177515,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 115.56952662721893,
+              "proposedSweetspot": 27.736686390532544,
+              "proposedReduction": 0.19245562130177515
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 8200,
+          "physicalAttack": 270,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 90.00000000000001,
+              "currentSweetspot": 21.6,
+              "currentReduction": 0.1685714285714286,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 84.01015589440145,
+              "proposedSweetspot": 20.162437414656345,
+              "proposedReduction": 0.16400773782430586
+            },
+            "magicalDefense": {
+              "currentArmor": 130,
+              "currentSweetspot": 31.2,
+              "currentReduction": 0.19904761904761906,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 121.34800295857987,
+              "proposedSweetspot": 29.123520710059168,
+              "proposedReduction": 0.19245562130177515
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 84285,
+          "physicalAttack": 1152.384261157702,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 384.12808705256737,
+              "currentSweetspot": 92.19074089261616,
+              "currentReduction": 0.28438148178523237,
+              "profileMultiplier": 0.32003868912152933,
+              "proposedArmor": 133.34945380063724,
+              "proposedSweetspot": 32.00386891215293,
+              "proposedReduction": 0.1640077378243059
+            },
+            "magicalDefense": {
+              "currentArmor": 554.8516812981528,
+              "currentSweetspot": 133.16440351155666,
+              "currentReduction": 0.6316440351155665,
+              "profileMultiplier": 0.4622781065088757,
+              "proposedArmor": 192.61587771203153,
+              "proposedSweetspot": 46.22781065088756,
+              "proposedReduction": 0.19245562130177513
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-redcrest-ripper",
+      "name": "Rotkammreißer",
+      "points": [
+        {
+          "level": 1,
+          "health": 181,
+          "physicalAttack": 30.761039531542608,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 9.667755281341964,
+              "currentSweetspot": 2.3202612675220715,
+              "currentReduction": 1,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 0.011734751934456078,
+              "proposedSweetspot": 0.0028163404642694585,
+              "proposedReduction": 0.1005632680928539
+            },
+            "magicalDefense": {
+              "currentArmor": 7.470538171946062,
+              "currentSweetspot": 1.7929291612670548,
+              "currentReduction": 1,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.009067762858443332,
+              "proposedSweetspot": 0.0021762630860263994,
+              "proposedReduction": 0.10043525261720529
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 233,
+          "physicalAttack": 35.986065410473515,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 11.309906271863108,
+              "currentSweetspot": 2.7143775052471457,
+              "currentReduction": 0.20857510020988584,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 0.29336879836140195,
+              "proposedSweetspot": 0.07040851160673646,
+              "proposedReduction": 0.10281634046426946
+            },
+            "magicalDefense": {
+              "currentArmor": 8.739473028257855,
+              "currentSweetspot": 2.097473526781885,
+              "currentReduction": 0.1838989410712754,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.22669407146108328,
+              "proposedSweetspot": 0.05440657715065998,
+              "proposedReduction": 0.10217626308602641
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 320,
+          "physicalAttack": 43.78255092760885,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 13.760230291534215,
+              "currentSweetspot": 3.3024552699682115,
+              "currentReduction": 0.16604910539936424,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 1.1734751934456078,
+              "proposedSweetspot": 0.28163404642694584,
+              "proposedReduction": 0.10563268092853892
+            },
+            "magicalDefense": {
+              "currentArmor": 10.632905225276437,
+              "currentSweetspot": 2.5518972540663447,
+              "currentReduction": 0.1510379450813269,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.9067762858443331,
+              "proposedSweetspot": 0.21762630860263993,
+              "proposedReduction": 0.1043525261720528
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 600,
+          "physicalAttack": 64.80887078973937,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 20.368502248203807,
+              "currentSweetspot": 4.888440539568913,
+              "currentReduction": 0.14888440539568915,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 32.59653315126688,
+              "proposedSweetspot": 7.823167956304051,
+              "proposedReduction": 0.17823167956304053
+            },
+            "magicalDefense": {
+              "currentArmor": 15.739297191793847,
+              "currentSweetspot": 3.777431326030523,
+              "currentReduction": 0.13777431326030523,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 25.188230162342588,
+              "proposedSweetspot": 6.045175238962221,
+              "proposedReduction": 0.16045175238962223
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 7451,
+          "physicalAttack": 311.1487255348202,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 97.78959945380065,
+              "currentSweetspot": 23.469503868912152,
+              "currentReduction": 0.17823167956304053,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 97.78959945380065,
+              "proposedSweetspot": 23.469503868912152,
+              "proposedReduction": 0.17823167956304053
+            },
+            "magicalDefense": {
+              "currentArmor": 75.56469048702776,
+              "currentSweetspot": 18.13552571688666,
+              "currentReduction": 0.16045175238962223,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 75.56469048702776,
+              "proposedSweetspot": 18.13552571688666,
+              "proposedReduction": 0.16045175238962223
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 9000,
+          "physicalAttack": 350,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 110.00000000000001,
+              "currentSweetspot": 26.400000000000002,
+              "currentReduction": 0.1838095238095238,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 102.67907942649067,
+              "proposedSweetspot": 24.64297906235776,
+              "proposedReduction": 0.17823167956304053
+            },
+            "magicalDefense": {
+              "currentArmor": 85,
+              "currentSweetspot": 20.4,
+              "currentReduction": 0.16476190476190478,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 79.34292501137914,
+              "proposedSweetspot": 19.04230200273099,
+              "proposedReduction": 0.1604517523896222
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 92508,
+          "physicalAttack": 1493.8314496488729,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 469.48988417536015,
+              "currentSweetspot": 112.67757220208642,
+              "currentReduction": 0.4267757220208643,
+              "profileMultiplier": 0.39115839781520256,
+              "proposedArmor": 162.9826657563344,
+              "proposedSweetspot": 39.11583978152025,
+              "proposedReduction": 0.1782316795630405
+            },
+            "magicalDefense": {
+              "currentArmor": 362.78763777186913,
+              "currentSweetspot": 87.06903306524859,
+              "currentReduction": 0.2741380661304972,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 125.94115081171293,
+              "proposedSweetspot": 30.2258761948111,
+              "proposedReduction": 0.16045175238962223
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-bluefeather",
+      "name": "Blaufederkolben",
+      "points": [
+        {
+          "level": 1,
+          "health": 159,
+          "physicalAttack": 21.972171093959002,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.470538171946062,
+              "currentSweetspot": 1.7929291612670548,
+              "currentReduction": 1,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.009067762858443332,
+              "proposedSweetspot": 0.0021762630860263994,
+              "proposedReduction": 0.10043525261720529
+            },
+            "magicalDefense": {
+              "currentArmor": 10.986085546979503,
+              "currentSweetspot": 2.6366605312750804,
+              "currentReduction": 1,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 0.013334945380063723,
+              "proposedSweetspot": 0.0032003868912152933,
+              "proposedReduction": 0.10064007737824307
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 205,
+          "physicalAttack": 25.704332436052507,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.739473028257855,
+              "currentSweetspot": 2.097473526781885,
+              "currentReduction": 0.1838989410712754,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.22669407146108328,
+              "proposedSweetspot": 0.05440657715065998,
+              "proposedReduction": 0.10217626308602641
+            },
+            "magicalDefense": {
+              "currentArmor": 12.852166218026255,
+              "currentSweetspot": 3.084519892326301,
+              "currentReduction": 0.22338079569305205,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 0.33337363450159296,
+              "proposedSweetspot": 0.0800096722803823,
+              "proposedReduction": 0.1032003868912153
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 281,
+          "physicalAttack": 31.273250662577748,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.632905225276437,
+              "currentSweetspot": 2.5518972540663447,
+              "currentReduction": 0.1510379450813269,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.9067762858443331,
+              "proposedSweetspot": 0.21762630860263993,
+              "proposedReduction": 0.1043525261720528
+            },
+            "magicalDefense": {
+              "currentArmor": 15.636625331288878,
+              "currentSweetspot": 3.7527900795093303,
+              "currentReduction": 0.17505580159018663,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 1.3334945380063719,
+              "proposedSweetspot": 0.3200386891215292,
+              "proposedReduction": 0.1064007737824306
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 527,
+          "physicalAttack": 46.29205056409954,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 15.739297191793847,
+              "currentSweetspot": 3.777431326030523,
+              "currentReduction": 0.13777431326030523,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 25.188230162342588,
+              "proposedSweetspot": 6.045175238962221,
+              "proposedReduction": 0.16045175238962223
+            },
+            "magicalDefense": {
+              "currentArmor": 23.146025282049774,
+              "currentSweetspot": 5.555046067691945,
+              "currentReduction": 0.15555046067691947,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 37.04151494462145,
+              "proposedSweetspot": 8.889963586709147,
+              "proposedReduction": 0.18889963586709146
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6540,
+          "physicalAttack": 222.24908966772864,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 75.56469048702776,
+              "currentSweetspot": 18.13552571688666,
+              "currentReduction": 0.16045175238962223,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 75.56469048702776,
+              "proposedSweetspot": 18.13552571688666,
+              "proposedReduction": 0.16045175238962223
+            },
+            "magicalDefense": {
+              "currentArmor": 111.12454483386435,
+              "currentSweetspot": 26.66989076012744,
+              "currentReduction": 0.18889963586709146,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 111.12454483386435,
+              "proposedSweetspot": 26.66989076012744,
+              "proposedReduction": 0.18889963586709146
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 7900,
+          "physicalAttack": 249.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 85,
+              "currentSweetspot": 20.4,
+              "currentReduction": 0.16476190476190478,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 79.34292501137914,
+              "proposedSweetspot": 19.04230200273099,
+              "proposedReduction": 0.1604517523896222
+            },
+            "magicalDefense": {
+              "currentArmor": 124.99999999999999,
+              "currentSweetspot": 29.999999999999993,
+              "currentReduction": 0.1952380952380952,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 116.68077207555754,
+              "proposedSweetspot": 28.003385298133807,
+              "proposedReduction": 0.18889963586709146
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 81201,
+          "physicalAttack": 1067.022464034909,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 362.78763777186913,
+              "currentSweetspot": 87.06903306524859,
+              "currentReduction": 0.2741380661304972,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 125.94115081171293,
+              "proposedSweetspot": 30.2258761948111,
+              "proposedReduction": 0.16045175238962223
+            },
+            "magicalDefense": {
+              "currentArmor": 533.5112320174545,
+              "currentSweetspot": 128.04269568418908,
+              "currentReduction": 0.5804269568418909,
+              "profileMultiplier": 0.4444981793354573,
+              "proposedArmor": 185.20757472310723,
+              "proposedSweetspot": 44.44981793354573,
+              "proposedReduction": 0.18889963586709146
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-forest-runner",
+      "name": "Waldheinläufer",
+      "points": [
+        {
+          "level": 1,
+          "health": 149,
+          "physicalAttack": 24.608831625234085,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.349425015704423,
+              "currentSweetspot": 2.0038620037690613,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 0.010134558488848429,
+              "proposedSweetspot": 0.0024322940373236227,
+              "proposedReduction": 0.10048645880746473
+            },
+            "magicalDefense": {
+              "currentArmor": 7.031094750066882,
+              "currentSweetspot": 1.6874627400160516,
+              "currentReduction": 0.9874627400160516,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.008534365043240783,
+              "proposedSweetspot": 0.002048247610377788,
+              "proposedReduction": 0.10040964952207557
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 192,
+          "physicalAttack": 28.788852328378812,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 9.767646325699955,
+              "currentSweetspot": 2.344235118167989,
+              "currentReduction": 0.19376940472671958,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 0.2533639622212107,
+              "proposedSweetspot": 0.060807350933090566,
+              "proposedReduction": 0.10243229403732362
+            },
+            "magicalDefense": {
+              "currentArmor": 8.225386379536804,
+              "currentSweetspot": 1.9740927310888328,
+              "currentReduction": 0.17896370924355331,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.21335912608101953,
+              "proposedSweetspot": 0.05120619025944469,
+              "proposedReduction": 0.1020482476103778
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 263,
+          "physicalAttack": 35.02604074208708,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 11.883835251779548,
+              "currentSweetspot": 2.8521204604270913,
+              "currentReduction": 0.15704240920854184,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 1.0134558488848429,
+              "proposedSweetspot": 0.24322940373236226,
+              "proposedReduction": 0.10486458807464726
+            },
+            "magicalDefense": {
+              "currentArmor": 10.007440212024882,
+              "currentSweetspot": 2.4017856508859716,
+              "currentReduction": 0.14803571301771945,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.8534365043240781,
+              "proposedSweetspot": 0.20482476103777875,
+              "proposedReduction": 0.10409649522075558
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 493,
+          "physicalAttack": 51.847096631791494,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 17.59097921435783,
+              "currentSweetspot": 4.221835011445879,
+              "currentReduction": 0.1422183501144588,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 28.1515513579123,
+              "proposedSweetspot": 6.756372325898951,
+              "proposedReduction": 0.16756372325898952
+            },
+            "magicalDefense": {
+              "currentArmor": 14.813456180511857,
+              "currentSweetspot": 3.5552294833228455,
+              "currentReduction": 0.13555229483322845,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 23.70656956455773,
+              "proposedSweetspot": 5.689576695493854,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6126,
+          "physicalAttack": 248.91898042785613,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 84.4546540737369,
+              "currentSweetspot": 20.269116977696857,
+              "currentReduction": 0.16756372325898955,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 84.4546540737369,
+              "proposedSweetspot": 20.269116977696857,
+              "proposedReduction": 0.16756372325898955
+            },
+            "magicalDefense": {
+              "currentArmor": 71.11970869367319,
+              "currentSweetspot": 17.068730086481565,
+              "currentReduction": 0.15689576695493856,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 71.11970869367319,
+              "proposedSweetspot": 17.068730086481565,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 7400,
+          "physicalAttack": 280,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 95,
+              "currentSweetspot": 22.799999999999997,
+              "currentReduction": 0.17238095238095236,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 88.67738677742373,
+              "proposedSweetspot": 21.282572826581696,
+              "proposedReduction": 0.1675637232589895
+            },
+            "magicalDefense": {
+              "currentArmor": 80,
+              "currentSweetspot": 19.2,
+              "currentReduction": 0.16095238095238096,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 74.67569412835684,
+              "proposedSweetspot": 17.92216659080564,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 76062,
+          "physicalAttack": 1195.0651597190981,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 405.4685363332655,
+              "currentSweetspot": 97.3124487199837,
+              "currentReduction": 0.29462489743996745,
+              "profileMultiplier": 0.3378186162949476,
+              "proposedArmor": 140.7577567895615,
+              "proposedSweetspot": 33.78186162949476,
+              "proposedReduction": 0.16756372325898955
+            },
+            "magicalDefense": {
+              "currentArmor": 341.44718849117095,
+              "currentSweetspot": 81.94732523788102,
+              "currentReduction": 0.26389465047576205,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 118.53284782278864,
+              "proposedSweetspot": 28.447883477469272,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-darkcrow-runner",
+      "name": "Düsterkrähenläufer",
+      "points": [
+        {
+          "level": 1,
+          "health": 171,
+          "physicalAttack": 27.245492156509165,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.788868437583604,
+              "currentSweetspot": 2.109328425020065,
+              "currentReduction": 1,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 0.01066795630405098,
+              "proposedSweetspot": 0.002560309512972235,
+              "proposedReduction": 0.10051206190259446
+            },
+            "magicalDefense": {
+              "currentArmor": 10.546642125100323,
+              "currentSweetspot": 2.5311941100240776,
+              "currentReduction": 1,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 0.012801547564861175,
+              "proposedSweetspot": 0.0030723714155666817,
+              "proposedReduction": 0.10061447428311335
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 220,
+          "physicalAttack": 31.87337222070511,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.281732974421006,
+              "currentSweetspot": 2.4676159138610414,
+              "currentReduction": 0.19870463655444168,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 0.26669890760127446,
+              "proposedSweetspot": 0.06400773782430587,
+              "proposedReduction": 0.10256030951297224
+            },
+            "magicalDefense": {
+              "currentArmor": 12.338079569305206,
+              "currentSweetspot": 2.961139096633249,
+              "currentReduction": 0.21844556386532998,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 0.32003868912152933,
+              "proposedSweetspot": 0.07680928538916704,
+              "proposedReduction": 0.10307237141556669
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 302,
+          "physicalAttack": 38.778830821596415,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.509300265031104,
+              "currentSweetspot": 3.002232063607465,
+              "currentReduction": 0.16004464127214932,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 1.0667956304050978,
+              "proposedSweetspot": 0.2560309512972235,
+              "proposedReduction": 0.10512061902594448
+            },
+            "magicalDefense": {
+              "currentArmor": 15.011160318037323,
+              "currentSweetspot": 3.602678476328957,
+              "currentReduction": 0.17205356952657913,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 1.2801547564861173,
+              "proposedSweetspot": 0.30723714155666815,
+              "proposedReduction": 0.10614474283113337
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 567,
+          "physicalAttack": 57.40214269948344,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 18.516820225639822,
+              "currentSweetspot": 4.444036854153557,
+              "currentReduction": 0.14444036854153558,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 29.633211955697167,
+              "proposedSweetspot": 7.11197086936732,
+              "proposedReduction": 0.1711197086936732
+            },
+            "magicalDefense": {
+              "currentArmor": 22.220184270767785,
+              "currentSweetspot": 5.332844224984268,
+              "currentReduction": 0.15332844224984268,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 35.559854346836595,
+              "proposedSweetspot": 8.534365043240783,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 7037,
+          "physicalAttack": 275.58887118798356,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 88.89963586709149,
+              "currentSweetspot": 21.335912608101957,
+              "currentReduction": 0.1711197086936732,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 88.89963586709149,
+              "proposedSweetspot": 21.335912608101957,
+              "proposedReduction": 0.1711197086936732
+            },
+            "magicalDefense": {
+              "currentArmor": 106.67956304050978,
+              "currentSweetspot": 25.603095129722345,
+              "currentReduction": 0.18534365043240783,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 106.67956304050978,
+              "proposedSweetspot": 25.603095129722345,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 8500,
+          "physicalAttack": 309.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 100.00000000000001,
+              "currentSweetspot": 24,
+              "currentReduction": 0.1761904761904762,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 93.34461766044606,
+              "proposedSweetspot": 22.402708238507053,
+              "proposedReduction": 0.17111970869367318
+            },
+            "magicalDefense": {
+              "currentArmor": 120,
+              "currentSweetspot": 28.799999999999997,
+              "currentReduction": 0.19142857142857142,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 112.01354119253526,
+              "proposedSweetspot": 26.88324988620846,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 87368,
+          "physicalAttack": 1323.1078554032872,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 426.8089856139637,
+              "currentSweetspot": 102.4341565473513,
+              "currentReduction": 0.32434156547351284,
+              "profileMultiplier": 0.35559854346836595,
+              "proposedArmor": 148.16605977848582,
+              "proposedSweetspot": 35.559854346836595,
+              "proposedReduction": 0.1711197086936732
+            },
+            "magicalDefense": {
+              "currentArmor": 512.1707827367565,
+              "currentSweetspot": 122.92098785682154,
+              "currentReduction": 0.5292098785682156,
+              "profileMultiplier": 0.42671825216203907,
+              "proposedArmor": 177.79927173418295,
+              "proposedSweetspot": 42.67182521620391,
+              "proposedReduction": 0.18534365043240783
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-sky-falcon",
+      "name": "Himmelsfalk",
+      "points": [
+        {
+          "level": 1,
+          "health": 153,
+          "physicalAttack": 27.245492156509165,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 6.591651328187703,
+              "currentSweetspot": 1.5819963187650488,
+              "currentReduction": 0.8819963187650488,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 0.008000967228038235,
+              "proposedSweetspot": 0.0019202321347291764,
+              "proposedReduction": 0.10038404642694584
+            },
+            "magicalDefense": {
+              "currentArmor": 7.9099815938252425,
+              "currentSweetspot": 1.898395582518058,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 0.00960116067364588,
+              "proposedSweetspot": 0.002304278561675011,
+              "proposedReduction": 0.10046085571233501
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 197,
+          "physicalAttack": 31.87337222070511,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.711299730815756,
+              "currentSweetspot": 1.8507119353957813,
+              "currentReduction": 0.17402847741583127,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 0.20002418070095584,
+              "proposedSweetspot": 0.0480058033682294,
+              "proposedReduction": 0.10192023213472919
+            },
+            "magicalDefense": {
+              "currentArmor": 9.253559676978904,
+              "currentSweetspot": 2.2208543224749366,
+              "currentReduction": 0.18883417289899748,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 0.24002901684114697,
+              "proposedSweetspot": 0.05760696404187527,
+              "proposedReduction": 0.10230427856167501
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 270,
+          "physicalAttack": 38.778830821596415,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 9.381975198773329,
+              "currentSweetspot": 2.251674047705599,
+              "currentReduction": 0.145033480954112,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 0.8000967228038234,
+              "proposedSweetspot": 0.1920232134729176,
+              "proposedReduction": 0.10384046426945835
+            },
+            "magicalDefense": {
+              "currentArmor": 11.258370238527991,
+              "currentSweetspot": 2.702008857246718,
+              "currentReduction": 0.15404017714493437,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 0.9601160673645879,
+              "proposedSweetspot": 0.23042785616750108,
+              "proposedReduction": 0.10460855712335003
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 507,
+          "physicalAttack": 57.40214269948344,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 13.887615169229868,
+              "currentSweetspot": 3.333027640615168,
+              "currentReduction": 0.1333302764061517,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 22.224908966772873,
+              "proposedSweetspot": 5.333978152025489,
+              "proposedReduction": 0.1533397815202549
+            },
+            "magicalDefense": {
+              "currentArmor": 16.665138203075838,
+              "currentSweetspot": 3.999633168738201,
+              "currentReduction": 0.13999633168738201,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 26.669890760127444,
+              "proposedSweetspot": 6.400773782430586,
+              "proposedReduction": 0.1640077378243059
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6292,
+          "physicalAttack": 275.58887118798356,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 66.67472690031862,
+              "currentSweetspot": 16.001934456076466,
+              "currentReduction": 0.1533397815202549,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 66.67472690031862,
+              "proposedSweetspot": 16.001934456076466,
+              "proposedReduction": 0.1533397815202549
+            },
+            "magicalDefense": {
+              "currentArmor": 80.00967228038233,
+              "currentSweetspot": 19.202321347291758,
+              "currentReduction": 0.16400773782430586,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 80.00967228038233,
+              "proposedSweetspot": 19.202321347291758,
+              "proposedReduction": 0.16400773782430586
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 7600,
+          "physicalAttack": 309.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 75.00000000000001,
+              "currentSweetspot": 18.000000000000004,
+              "currentReduction": 0.15714285714285717,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 70.00846324533454,
+              "proposedSweetspot": 16.802031178880288,
+              "proposedReduction": 0.1533397815202549
+            },
+            "magicalDefense": {
+              "currentArmor": 90,
+              "currentSweetspot": 21.599999999999998,
+              "currentReduction": 0.16857142857142857,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 84.01015589440144,
+              "proposedSweetspot": 20.162437414656342,
+              "proposedReduction": 0.16400773782430583
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 78118,
+          "physicalAttack": 1323.1078554032872,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 320.1067392104728,
+              "currentSweetspot": 76.82561741051347,
+              "currentReduction": 0.2536512348210269,
+              "profileMultiplier": 0.26669890760127446,
+              "proposedArmor": 111.12454483386436,
+              "proposedSweetspot": 26.669890760127444,
+              "proposedReduction": 0.1533397815202549
+            },
+            "magicalDefense": {
+              "currentArmor": 384.1280870525673,
+              "currentSweetspot": 92.19074089261615,
+              "currentReduction": 0.2843814817852323,
+              "profileMultiplier": 0.3200386891215293,
+              "proposedArmor": 133.3494538006372,
+              "proposedSweetspot": 32.003868912152925,
+              "proposedReduction": 0.16400773782430583
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-redcrown-glider",
+      "name": "Rotscheitelgleiter",
+      "points": [
+        {
+          "level": 1,
+          "health": 161,
+          "physicalAttack": 28.124379000267524,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.470538171946062,
+              "currentSweetspot": 1.7929291612670548,
+              "currentReduction": 1,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.009067762858443332,
+              "proposedSweetspot": 0.0021762630860263994,
+              "proposedReduction": 0.10043525261720529
+            },
+            "magicalDefense": {
+              "currentArmor": 7.470538171946062,
+              "currentSweetspot": 1.7929291612670548,
+              "currentReduction": 1,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.009067762858443332,
+              "proposedSweetspot": 0.0021762630860263994,
+              "proposedReduction": 0.10043525261720529
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 207,
+          "physicalAttack": 32.90154551814721,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.739473028257855,
+              "currentSweetspot": 2.097473526781885,
+              "currentReduction": 0.1838989410712754,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.22669407146108328,
+              "proposedSweetspot": 0.05440657715065998,
+              "proposedReduction": 0.10217626308602641
+            },
+            "magicalDefense": {
+              "currentArmor": 8.739473028257855,
+              "currentSweetspot": 2.097473526781885,
+              "currentReduction": 0.1838989410712754,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.22669407146108328,
+              "proposedSweetspot": 0.05440657715065998,
+              "proposedReduction": 0.10217626308602641
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 284,
+          "physicalAttack": 40.02976084809952,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.632905225276437,
+              "currentSweetspot": 2.5518972540663447,
+              "currentReduction": 0.1510379450813269,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.9067762858443331,
+              "proposedSweetspot": 0.21762630860263993,
+              "proposedReduction": 0.1043525261720528
+            },
+            "magicalDefense": {
+              "currentArmor": 10.632905225276437,
+              "currentSweetspot": 2.5518972540663447,
+              "currentReduction": 0.1510379450813269,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 0.9067762858443331,
+              "proposedSweetspot": 0.21762630860263993,
+              "proposedReduction": 0.1043525261720528
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 533,
+          "physicalAttack": 59.25382472204742,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 15.739297191793847,
+              "currentSweetspot": 3.777431326030523,
+              "currentReduction": 0.13777431326030523,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 25.188230162342588,
+              "proposedSweetspot": 6.045175238962221,
+              "proposedReduction": 0.16045175238962223
+            },
+            "magicalDefense": {
+              "currentArmor": 15.739297191793847,
+              "currentSweetspot": 3.777431326030523,
+              "currentReduction": 0.13777431326030523,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 25.188230162342588,
+              "proposedSweetspot": 6.045175238962221,
+              "proposedReduction": 0.16045175238962223
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6623,
+          "physicalAttack": 284.4788347746927,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 75.56469048702776,
+              "currentSweetspot": 18.13552571688666,
+              "currentReduction": 0.16045175238962223,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 75.56469048702776,
+              "proposedSweetspot": 18.13552571688666,
+              "proposedReduction": 0.16045175238962223
+            },
+            "magicalDefense": {
+              "currentArmor": 75.56469048702776,
+              "currentSweetspot": 18.13552571688666,
+              "currentReduction": 0.16045175238962223,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 75.56469048702776,
+              "proposedSweetspot": 18.13552571688666,
+              "proposedReduction": 0.16045175238962223
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 8000,
+          "physicalAttack": 319.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 85,
+              "currentSweetspot": 20.4,
+              "currentReduction": 0.16476190476190478,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 79.34292501137914,
+              "proposedSweetspot": 19.04230200273099,
+              "proposedReduction": 0.1604517523896222
+            },
+            "magicalDefense": {
+              "currentArmor": 85,
+              "currentSweetspot": 20.4,
+              "currentReduction": 0.16476190476190478,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 79.34292501137914,
+              "proposedSweetspot": 19.04230200273099,
+              "proposedReduction": 0.1604517523896222
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 82229,
+          "physicalAttack": 1365.7887539646836,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 362.78763777186913,
+              "currentSweetspot": 87.06903306524859,
+              "currentReduction": 0.2741380661304972,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 125.94115081171293,
+              "proposedSweetspot": 30.2258761948111,
+              "proposedReduction": 0.16045175238962223
+            },
+            "magicalDefense": {
+              "currentArmor": 362.78763777186913,
+              "currentSweetspot": 87.06903306524859,
+              "currentReduction": 0.2741380661304972,
+              "profileMultiplier": 0.302258761948111,
+              "proposedArmor": 125.94115081171293,
+              "proposedSweetspot": 30.2258761948111,
+              "proposedReduction": 0.16045175238962223
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-forestcrown",
+      "name": "Waldkronenschreiher",
+      "points": [
+        {
+          "level": 1,
+          "health": 141,
+          "physicalAttack": 22.851057937717368,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 6.152207906308523,
+              "currentSweetspot": 1.4765298975140455,
+              "currentReduction": 0.7765298975140456,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 0.007467569412835686,
+              "proposedSweetspot": 0.0017922166590805646,
+              "proposedReduction": 0.10035844333181612
+            },
+            "magicalDefense": {
+              "currentArmor": 8.788868437583602,
+              "currentSweetspot": 2.1093284250200646,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 0.010667956304050978,
+              "proposedSweetspot": 0.0025603095129722348,
+              "proposedReduction": 0.10051206190259446
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 181,
+          "physicalAttack": 26.732505733494616,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.197213082094705,
+              "currentSweetspot": 1.7273311397027291,
+              "currentReduction": 0.16909324558810918,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 0.1866892353208921,
+              "proposedSweetspot": 0.0448054164770141,
+              "proposedReduction": 0.10179221665908057
+            },
+            "magicalDefense": {
+              "currentArmor": 10.281732974421004,
+              "currentSweetspot": 2.467615913861041,
+              "currentReduction": 0.19870463655444165,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 0.2666989076012744,
+              "proposedSweetspot": 0.06400773782430585,
+              "proposedReduction": 0.10256030951297224
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 249,
+          "physicalAttack": 32.524180689080865,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.756510185521773,
+              "currentSweetspot": 2.1015624445252254,
+              "currentReduction": 0.1420312488905045,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 0.7467569412835684,
+              "proposedSweetspot": 0.1792216659080564,
+              "proposedReduction": 0.10358443331816114
+            },
+            "magicalDefense": {
+              "currentArmor": 12.509300265031102,
+              "currentSweetspot": 3.0022320636074644,
+              "currentReduction": 0.1600446412721493,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 1.0667956304050976,
+              "proposedSweetspot": 0.2560309512972234,
+              "proposedReduction": 0.10512061902594447
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 467,
+          "physicalAttack": 48.14373258666354,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.961774157947877,
+              "currentSweetspot": 3.1108257979074905,
+              "currentReduction": 0.1311082579790749,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 20.743248368988016,
+              "proposedSweetspot": 4.978379608557123,
+              "proposedReduction": 0.14978379608557124
+            },
+            "magicalDefense": {
+              "currentArmor": 18.51682022563982,
+              "currentSweetspot": 4.444036854153556,
+              "currentReduction": 0.14444036854153558,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 29.63321195569716,
+              "proposedSweetspot": 7.111970869367318,
+              "proposedReduction": 0.17111970869367318
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 5795,
+          "physicalAttack": 231.13905325443787,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 62.229745106964046,
+              "currentSweetspot": 14.93513882567137,
+              "currentReduction": 0.14978379608557124,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 62.229745106964046,
+              "proposedSweetspot": 14.93513882567137,
+              "proposedReduction": 0.14978379608557124
+            },
+            "magicalDefense": {
+              "currentArmor": 88.89963586709148,
+              "currentSweetspot": 21.335912608101953,
+              "currentReduction": 0.17111970869367318,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 88.89963586709148,
+              "proposedSweetspot": 21.335912608101953,
+              "proposedReduction": 0.17111970869367318
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 7000,
+          "physicalAttack": 260,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 70.00000000000001,
+              "currentSweetspot": 16.8,
+              "currentReduction": 0.15333333333333335,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 65.34123236231224,
+              "proposedSweetspot": 15.681895766954936,
+              "proposedReduction": 0.14978379608557124
+            },
+            "magicalDefense": {
+              "currentArmor": 100,
+              "currentSweetspot": 24,
+              "currentReduction": 0.1761904761904762,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 93.34461766044605,
+              "proposedSweetspot": 22.40270823850705,
+              "proposedReduction": 0.17111970869367316
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 71950,
+          "physicalAttack": 1109.7033625963056,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 298.76628992977464,
+              "currentSweetspot": 71.70390958314592,
+              "currentReduction": 0.24340781916629184,
+              "profileMultiplier": 0.24891898042785615,
+              "proposedArmor": 103.71624184494007,
+              "proposedSweetspot": 24.891898042785616,
+              "proposedReduction": 0.14978379608557124
+            },
+            "magicalDefense": {
+              "currentArmor": 426.80898561396367,
+              "currentSweetspot": 102.43415654735128,
+              "currentReduction": 0.32434156547351284,
+              "profileMultiplier": 0.3555985434683659,
+              "proposedArmor": 148.1660597784858,
+              "proposedSweetspot": 35.55985434683659,
+              "proposedReduction": 0.17111970869367318
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-shadowtip",
+      "name": "Schattenspitz",
+      "points": [
+        {
+          "level": 1,
+          "health": 157,
+          "physicalAttack": 29.88215268778425,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.031094750066883,
+              "currentSweetspot": 1.6874627400160518,
+              "currentReduction": 0.9874627400160518,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.008534365043240783,
+              "proposedSweetspot": 0.002048247610377788,
+              "proposedReduction": 0.10040964952207557
+            },
+            "magicalDefense": {
+              "currentArmor": 9.667755281341963,
+              "currentSweetspot": 2.320261267522071,
+              "currentReduction": 1,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 0.011734751934456078,
+              "proposedSweetspot": 0.0028163404642694585,
+              "proposedReduction": 0.1005632680928539
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 202,
+          "physicalAttack": 34.95789211303142,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.225386379536804,
+              "currentSweetspot": 1.9740927310888328,
+              "currentReduction": 0.17896370924355331,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.21335912608101953,
+              "proposedSweetspot": 0.05120619025944469,
+              "proposedReduction": 0.1020482476103778
+            },
+            "magicalDefense": {
+              "currentArmor": 11.309906271863106,
+              "currentSweetspot": 2.7143775052471453,
+              "currentReduction": 0.20857510020988582,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 0.2933687983614019,
+              "proposedSweetspot": 0.07040851160673645,
+              "proposedReduction": 0.10281634046426946
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 277,
+          "physicalAttack": 42.53162090110575,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.007440212024882,
+              "currentSweetspot": 2.4017856508859716,
+              "currentReduction": 0.14803571301771945,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.8534365043240781,
+              "proposedSweetspot": 0.20482476103777875,
+              "proposedReduction": 0.10409649522075558
+            },
+            "magicalDefense": {
+              "currentArmor": 13.760230291534212,
+              "currentSweetspot": 3.3024552699682106,
+              "currentReduction": 0.16604910539936424,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 1.1734751934456076,
+              "proposedSweetspot": 0.2816340464269458,
+              "proposedReduction": 0.10563268092853892
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 520,
+          "physicalAttack": 62.95718876717539,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 14.813456180511858,
+              "currentSweetspot": 3.555229483322846,
+              "currentReduction": 0.13555229483322848,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 23.70656956455773,
+              "proposedSweetspot": 5.689576695493854,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 20.368502248203804,
+              "currentSweetspot": 4.888440539568912,
+              "currentReduction": 0.14888440539568915,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 32.59653315126688,
+              "proposedSweetspot": 7.823167956304051,
+              "proposedReduction": 0.17823167956304053
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6457,
+          "physicalAttack": 302.25876194811104,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 71.11970869367319,
+              "currentSweetspot": 17.068730086481565,
+              "currentReduction": 0.15689576695493856,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 71.11970869367319,
+              "proposedSweetspot": 17.068730086481565,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 97.78959945380063,
+              "currentSweetspot": 23.46950386891215,
+              "currentReduction": 0.1782316795630405,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 97.78959945380063,
+              "proposedSweetspot": 23.46950386891215,
+              "proposedReduction": 0.1782316795630405
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 7800,
+          "physicalAttack": 340,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 80.00000000000001,
+              "currentSweetspot": 19.200000000000003,
+              "currentReduction": 0.16095238095238096,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 74.67569412835684,
+              "proposedSweetspot": 17.92216659080564,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 110,
+              "currentSweetspot": 26.4,
+              "currentReduction": 0.1838095238095238,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 102.67907942649066,
+              "proposedSweetspot": 24.642979062357757,
+              "proposedReduction": 0.1782316795630405
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 80173,
+          "physicalAttack": 1451.1505510874765,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 341.44718849117095,
+              "currentSweetspot": 81.94732523788102,
+              "currentReduction": 0.26389465047576205,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 118.53284782278864,
+              "proposedSweetspot": 28.447883477469272,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 469.48988417536003,
+              "currentSweetspot": 112.6775722020864,
+              "currentReduction": 0.42677572202086383,
+              "profileMultiplier": 0.3911583978152025,
+              "proposedArmor": 162.9826657563344,
+              "proposedSweetspot": 39.11583978152025,
+              "proposedReduction": 0.1782316795630405
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-rockwing",
+      "name": "Felsenflügel",
+      "points": [
+        {
+          "level": 1,
+          "health": 181,
+          "physicalAttack": 31.639926375300963,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.986085546979504,
+              "currentSweetspot": 2.636660531275081,
+              "currentReduction": 1,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 0.013334945380063724,
+              "proposedSweetspot": 0.0032003868912152938,
+              "proposedReduction": 0.10064007737824307
+            },
+            "magicalDefense": {
+              "currentArmor": 7.031094750066882,
+              "currentSweetspot": 1.6874627400160516,
+              "currentReduction": 0.9874627400160516,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.008534365043240783,
+              "proposedSweetspot": 0.002048247610377788,
+              "proposedReduction": 0.10040964952207557
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 233,
+          "physicalAttack": 37.01423870791561,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 12.852166218026257,
+              "currentSweetspot": 3.0845198923263015,
+              "currentReduction": 0.22338079569305208,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 0.333373634501593,
+              "proposedSweetspot": 0.08000967228038232,
+              "proposedReduction": 0.1032003868912153
+            },
+            "magicalDefense": {
+              "currentArmor": 8.225386379536804,
+              "currentSweetspot": 1.9740927310888328,
+              "currentReduction": 0.17896370924355331,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.21335912608101953,
+              "proposedSweetspot": 0.05120619025944469,
+              "proposedReduction": 0.1020482476103778
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 320,
+          "physicalAttack": 45.03348095411196,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 15.63662533128888,
+              "currentSweetspot": 3.7527900795093307,
+              "currentReduction": 0.17505580159018663,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 1.333494538006372,
+              "proposedSweetspot": 0.3200386891215293,
+              "proposedReduction": 0.1064007737824306
+            },
+            "magicalDefense": {
+              "currentArmor": 10.007440212024882,
+              "currentSweetspot": 2.4017856508859716,
+              "currentReduction": 0.14803571301771945,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.8534365043240781,
+              "proposedSweetspot": 0.20482476103777875,
+              "proposedReduction": 0.10409649522075558
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 600,
+          "physicalAttack": 66.66055281230334,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 23.146025282049777,
+              "currentSweetspot": 5.555046067691946,
+              "currentReduction": 0.15555046067691947,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 37.041514944621454,
+              "proposedSweetspot": 8.889963586709149,
+              "proposedReduction": 0.1888996358670915
+            },
+            "magicalDefense": {
+              "currentArmor": 14.813456180511857,
+              "currentSweetspot": 3.5552294833228455,
+              "currentReduction": 0.13555229483322845,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 23.70656956455773,
+              "proposedSweetspot": 5.689576695493854,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 7451,
+          "physicalAttack": 320.0386891215293,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 111.12454483386436,
+              "currentSweetspot": 26.669890760127444,
+              "currentReduction": 0.1888996358670915,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 111.12454483386436,
+              "proposedSweetspot": 26.669890760127444,
+              "proposedReduction": 0.1888996358670915
+            },
+            "magicalDefense": {
+              "currentArmor": 71.11970869367319,
+              "currentSweetspot": 17.068730086481565,
+              "currentReduction": 0.15689576695493856,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 71.11970869367319,
+              "proposedSweetspot": 17.068730086481565,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 9000,
+          "physicalAttack": 359.99999999999994,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 125.00000000000001,
+              "currentSweetspot": 30,
+              "currentReduction": 0.19523809523809524,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 116.68077207555756,
+              "proposedSweetspot": 28.00338529813381,
+              "proposedReduction": 0.18889963586709146
+            },
+            "magicalDefense": {
+              "currentArmor": 80,
+              "currentSweetspot": 19.2,
+              "currentReduction": 0.16095238095238096,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 74.67569412835684,
+              "proposedSweetspot": 17.92216659080564,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 92508,
+          "physicalAttack": 1536.512348210269,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 533.5112320174546,
+              "currentSweetspot": 128.0426956841891,
+              "currentReduction": 0.5804269568418912,
+              "profileMultiplier": 0.4444981793354574,
+              "proposedArmor": 185.20757472310726,
+              "proposedSweetspot": 44.44981793354574,
+              "proposedReduction": 0.1888996358670915
+            },
+            "magicalDefense": {
+              "currentArmor": 341.44718849117095,
+              "currentSweetspot": 81.94732523788102,
+              "currentReduction": 0.26389465047576205,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 118.53284782278864,
+              "proposedSweetspot": 28.447883477469272,
+              "proposedReduction": 0.15689576695493856
+            }
+          }
+        }
+      ]
+    },
+    {
+      "key": "world-moon-falcon",
+      "name": "Mondvariante",
+      "points": [
+        {
+          "level": 1,
+          "health": 169,
+          "physicalAttack": 25.487718468992448,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 7.031094750066883,
+              "currentSweetspot": 1.6874627400160518,
+              "currentReduction": 0.9874627400160518,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.008534365043240783,
+              "proposedSweetspot": 0.002048247610377788,
+              "proposedReduction": 0.10040964952207557
+            },
+            "magicalDefense": {
+              "currentArmor": 12.304415812617044,
+              "currentSweetspot": 2.9530597950280906,
+              "currentReduction": 1,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 0.01493513882567137,
+              "proposedSweetspot": 0.0035844333181611287,
+              "proposedReduction": 0.10071688666363224
+            }
+          }
+        },
+        {
+          "level": 5,
+          "health": 218,
+          "physicalAttack": 29.817025625820914,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 8.225386379536804,
+              "currentSweetspot": 1.9740927310888328,
+              "currentReduction": 0.17896370924355331,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.21335912608101953,
+              "proposedSweetspot": 0.05120619025944469,
+              "proposedReduction": 0.1020482476103778
+            },
+            "magicalDefense": {
+              "currentArmor": 14.394426164189408,
+              "currentSweetspot": 3.454662279405458,
+              "currentReduction": 0.23818649117621832,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 0.3733784706417842,
+              "proposedSweetspot": 0.0896108329540282,
+              "proposedReduction": 0.10358443331816114
+            }
+          }
+        },
+        {
+          "level": 10,
+          "health": 298,
+          "physicalAttack": 36.276970768590196,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 10.007440212024882,
+              "currentSweetspot": 2.4017856508859716,
+              "currentReduction": 0.14803571301771945,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 0.8534365043240781,
+              "proposedSweetspot": 0.20482476103777875,
+              "proposedReduction": 0.10409649522075558
+            },
+            "magicalDefense": {
+              "currentArmor": 17.513020371043545,
+              "currentSweetspot": 4.203124889050451,
+              "currentReduction": 0.18406249778100903,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 1.4935138825671368,
+              "proposedSweetspot": 0.3584433318161128,
+              "proposedReduction": 0.10716886663632226
+            }
+          }
+        },
+        {
+          "level": 20,
+          "health": 560,
+          "physicalAttack": 53.69877865435548,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 14.813456180511858,
+              "currentSweetspot": 3.555229483322846,
+              "currentReduction": 0.13555229483322848,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 23.70656956455773,
+              "proposedSweetspot": 5.689576695493854,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 25.92354831589575,
+              "currentSweetspot": 6.22165159581498,
+              "currentReduction": 0.16221651595814982,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 41.486496737976026,
+              "proposedSweetspot": 9.956759217114245,
+              "proposedReduction": 0.19956759217114245
+            }
+          }
+        },
+        {
+          "level": 60,
+          "health": 6954,
+          "physicalAttack": 257.80894401456527,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 71.11970869367319,
+              "currentSweetspot": 17.068730086481565,
+              "currentReduction": 0.15689576695493856,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 71.11970869367319,
+              "proposedSweetspot": 17.068730086481565,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 124.45949021392808,
+              "currentSweetspot": 29.870277651342736,
+              "currentReduction": 0.19956759217114245,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 124.45949021392808,
+              "proposedSweetspot": 29.870277651342736,
+              "proposedReduction": 0.19956759217114245
+            }
+          }
+        },
+        {
+          "level": 63,
+          "health": 8400,
+          "physicalAttack": 290,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 80.00000000000001,
+              "currentSweetspot": 19.200000000000003,
+              "currentReduction": 0.16095238095238096,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 74.67569412835684,
+              "proposedSweetspot": 17.92216659080564,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 140,
+              "currentSweetspot": 33.599999999999994,
+              "currentReduction": 0.20666666666666667,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 130.68246472462445,
+              "proposedSweetspot": 31.363791533909865,
+              "proposedReduction": 0.19956759217114245
+            }
+          }
+        },
+        {
+          "level": 100,
+          "health": 86341,
+          "physicalAttack": 1237.7460582804947,
+          "defense": {
+            "physicalDefense": {
+              "currentArmor": 341.44718849117095,
+              "currentSweetspot": 81.94732523788102,
+              "currentReduction": 0.26389465047576205,
+              "profileMultiplier": 0.2844788347746927,
+              "proposedArmor": 118.53284782278864,
+              "proposedSweetspot": 28.447883477469272,
+              "proposedReduction": 0.15689576695493856
+            },
+            "magicalDefense": {
+              "currentArmor": 597.5325798595492,
+              "currentSweetspot": 143.4078191662918,
+              "currentReduction": 0.734078191662918,
+              "profileMultiplier": 0.49783796085571225,
+              "proposedArmor": 207.43248368988012,
+              "proposedSweetspot": 49.783796085571225,
+              "proposedReduction": 0.19956759217114245
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import { ModerationAttemptModel, ModerationCaseModel, PlayerReportModel } from '
 import { ChatMessageModel } from '../models/chatSchema.js';
 import { chatStore } from '../chat/store.js';
 import { chatError } from '../chat/protocol.js';
+import { createPublicationLink } from './publication.js';
 export const moderationEvents = new EventEmitter();
 const hash = text => createHash('sha256').update(text).digest('hex');
 const day = 86400000;
@@ -78,9 +79,7 @@ export const moderationService = {
     }
     } finally { pendingChecks--; }
   },
-  published: async ({ caseID, message }) => {
-    if (caseID) await ModerationCaseModel.updateOne({ _id: caseID }, { $set: { messageID: message.id, targetKey: `message:${message.id}` } });
-  },
+  published: createPublicationLink(),
   report: async ({ identity, messageID, reason, retry = false }) => {
     const visible = await chatStore.history();
     if (!visible.messages.some(message => message.id === messageID)) throw chatError('MESSAGE_NOT_REPORTABLE');

@@ -6,10 +6,12 @@ const read=path=>JSON.parse(fs.readFileSync(new URL('../'+path,import.meta.url),
 const audit=read('data/balancing/skill-description-audit.json');
 const before=read(audit.backup+'/local-catalog.json');
 const after=read('data/skills.json');
+const tamingDecision=read('data/balancing/taming-multiplier-decision.json');
 const mechanics=skill=>{
   const value=structuredClone(skill);
   delete value.description_de;
   delete value.description_eng;
+  delete value.__v;
   return value;
 };
 
@@ -17,9 +19,10 @@ test('audited text corrections preserve mechanics and identifiers of the correct
   assert.equal(after.length,before.length);
   for(const update of audit.updates){
     const skill=after.find(s=>s.nr===update.nr);
-    assert.deepEqual(mechanics(skill),mechanics(before.find(s=>s.nr===update.nr)));
-    assert.equal(skill.description_de,update.after.description_de);
-    assert.equal(skill.description_eng,update.after.description_eng);
+    const expected=update.nr===133?tamingDecision.skill:before.find(s=>s.nr===update.nr);
+    assert.deepEqual(mechanics(skill),mechanics(expected));
+    assert.equal(skill.description_de,update.nr===133?tamingDecision.skill.description_de:update.after.description_de);
+    assert.equal(skill.description_eng,update.nr===133?tamingDecision.skill.description_eng:update.after.description_eng);
   }
 });
 

@@ -75,7 +75,7 @@ for(const s of skills){
   if(s.nr===247)values='Nach erlittenem Crit: 25 % Proc-Chance; 15 s +10 P-Abwehr/+10 M-Abwehr/+5 Agilität; sofort 50 HP heilen';
   if(s.attackArea)values+=s.attackArea.shape==='frontal'?`<br>Bis ${format(s.attackArea.rangeMeters)} m vor Spieler; Bereichsbreite offen`:`<br>Kreis, ${format(s.attackArea.radiusMeters)} m Radius um Spieler; Gegner im Bereich`;
   if(s.triggerCondition?.healthThresholds?.length)values+='<br>Eigener Angriff: unter 30 % HP 5 %, unter 20 % 10 %, unter 10 % 30 % Proc-Chance';
-  if(s.taming)values=`Zähmversuch; passendes Item erforderlich; Grunderfolg ${format(s.taming.baseSuccessChance*100)} %`;
+  if(s.taming)values='Zähmversuch; passendes Item erforderlich; Grundchance der Kreaturenvariante × Skillfaktor';
   if(s.nr===138&&s.effects?.some(e=>e.type==='experienceBonus'))values='Kreatur kann leveln; Spieler-EP plus 10 % auf Level 1';
   if(s.effects?.length)values+='<br>'+s.effects.map(e=>e.type==='control'?`${e.controlKind}: ${format(e.durationSeconds)} s (${e.target})`:`${statLabels[e.stat]??e.type}: ${e.unit==='fraction'?format(e.value*100)+' %':format(e.value)} (${e.target}); Dauer ${e.durationStatus==='pending'?'offen':e.durationSeconds??'offen'} s`).join('<br>');
   const curves=Object.entries(s.statScaling??{}).map(([k,v])=>{
@@ -96,7 +96,7 @@ for(const s of skills){
   if(s.nr===251){values='Horizontaler Hieb: 117 P-Grundschaden + aktueller P-Angriff; Blutgeruch 12 s, kein Blutungs-/DoT-Schaden';scaling='+57 Grundschaden bis 402; Gruppenbegleiter gegen markiertes Ziel +0,5 Prozentpunkte je Stufe bis 3 %; keine Stapelung';}
   if(s.movement?.distanceScaling)scaling='Gestufte Reichweite, Dauer, Cooldown und Kosten; vollständige Leveltabelle unten';
   if(s.movement?.heightScaling){const h=s.movement.heightScaling;scaling=`Höhe ${format(h.base)} bis ${format(h.base+(s.maxSkillLv-1)*h.perLevel)} m; Kosten, Cooldown und Dauer linear über neun Steigerungen (vorläufig)`;}
-  if(s.taming)scaling='Grunderfolg 50 / 65 / 80 %; Cast Time 3 / 2,5 / 2 s; Mana und Cooldown siehe Spalten';
+  if(s.taming)scaling='Chancenfaktor ×1,0 / ×1,1 / ×1,2; Cast Time 3 / 2,5 / 2 s; Mana und Cooldown siehe Spalten';
   if(s.nr===134&&s.effects?.length)scaling='Je +5 Stärke/Vita/Intelligenz/Wisdom pro weiterer Stufe, nur Kreatur; Level 1/2/3 jeweils +10/+15/+20';
   if(s.nr===138&&s.effects?.some(e=>e.type==='experienceBonus'))scaling='Kreaturen-EP: 110 / 120 / 130 % der Spieler-EP';
   const gaps=[];
@@ -118,7 +118,7 @@ for(const s of skills){
   if(s.attackArea?.geometryStatus==='pending')gaps.push('Bereichsbreite; Bewegung während Ausführung');
   if(s.nr===126)gaps.push('Schurken-Zuordnung prüfen');
   if(s.castTimeStatus==='provisional')gaps.push('Cast Time vorläufig');
-  if(s.taming)gaps.push('Kreaturen-Gegenwert; Itemverbrauch');
+  if(s.taming)gaps.push('Kreaturen-Grundchancen; Itemverbrauch');
   if(s.learningLimits?.status==='secondSpecialistPending')gaps.push('Lerngrenze normal 1, Abenteurer 3; zweiter Spezialist offen');
   if(s.nr===201)gaps.push('Wirkung und Skalierung geklärt');
   if(commonTrainingNumbers.includes(s.nr)&&s.statScaling)gaps.push('Gemeinsame Wirkung und Skalierung gespeichert');
@@ -168,11 +168,11 @@ for(const s of skills.filter(s=>!sharedNumbers.includes(s.nr)&&!commonTrainingNu
   md+='\nNoch zu klären:\n\n'+open.map(x=>'- '+x).join('\n')+'\n';
 }
 let shared='# Gemeinsame Kreaturenskills\n\nTamen, Bindung, Kontrolle, Beschwören, Zurückrufen und Zucht werden einmal gemeinsam ausgearbeitet und zählen weiterhin zur Gesamtanzahl jeder Klasse. Geplant für alle Klassen; in den aktuellen Datenbankzuordnungen fehlen Schurke und Schattenkrieger noch bei diesen sechs Skills. Keine Zuordnungsänderung vorgenommen.\n\n';
-const sharedStatus={133:'Kosten, Cast Time, Cooldown und Grunderfolg festgelegt; Kreaturen-Gegenwert, Itemverbrauch und Abbruchregeln offen.',134:'Boni nur für die Kreatur: je 10/15/20 Stärke, Vita, Intelligenz und Wisdom. Normal maximal Level 1, Abenteurer 3, zweiter Spezialist offen.',135:'Konkrete Wirkung, Levelskalierung und Spezialistengrenzen noch offen.',136:'Festgelegt: 5 Mana, 5 Sekunden Cooldown, 1 Sekunde Cast Time, keine anschließende Effektdauer.',137:'Festgelegt: 5 Mana, 5 Sekunden Cooldown, sofort, keine anschließende Effektdauer.',138:'Festgelegt: Kreatur erhält Spieler-EP plus 10/20/30 Prozent auf Level 1/2/3. Permanent passiv ohne Kosten. Normal maximal Level 1, Abenteurer 3, zweiter Spezialist offen.'};
+const sharedStatus={133:'Kosten, Castzeit, Cooldown und Chancenfaktor festgelegt; Kreaturen-Grundchancen, Itemverbrauch und Abbruchregeln offen.',134:'Boni nur für die Kreatur: je 10/15/20 Stärke, Vita, Intelligenz und Wisdom. Normal maximal Level 1, Abenteurer 3, zweiter Spezialist offen.',135:'Konkrete Wirkung, Levelskalierung und Spezialistengrenzen noch offen.',136:'Festgelegt: 5 Mana, 5 Sekunden Cooldown, 1 Sekunde Cast Time, keine anschließende Effektdauer.',137:'Festgelegt: 5 Mana, 5 Sekunden Cooldown, sofort, keine anschließende Effektdauer.',138:'Festgelegt: Kreatur erhält Spieler-EP plus 10/20/30 Prozent auf Level 1/2/3. Permanent passiv ohne Kosten. Normal maximal Level 1, Abenteurer 3, zweiter Spezialist offen.'};
 for(const s of skills.filter(s=>sharedNumbers.includes(s.nr))){shared+=`## ${s.nr}: ${s.skillName_de}\n\n${sharedStatus[s.nr]}\n\n| Gespeichertes Feld | Wert |\n| --- | --- |\n`;for(const[k,v]of flatten(s).filter(([k])=>k!=='_id'))shared+=`| ${esc(k)} | ${esc(v)} |\n`;shared+='\nLernvoraussetzungen und allgemeine Kreaturenlimits später prüfen.\n\n';}
-shared=shared.replace('## 133: Tamen','## 133: Tamen\n\nFestgelegte Stufen:\n\n| Level | Mana | Cast Time | Cooldown | Grunderfolg |\n| ---: | ---: | ---: | ---: | ---: |\n| 1 | 100 | 3 s | 60 s | 50 % |\n| 2 | 125 | 2,5 s | 50 s | 65 % |\n| 3 | 150 | 2 s | 40 s | 80 % |\n\nPassendes Taming-Item erforderlich. Kein Schaden und keine anschließende Effektdauer. Noch offen: Berechnung mit dem Kreaturen-Gegenwert, Itemverbrauch, gültige Zieldistanz und Bedingungen für einen Cast-Abbruch.');
+shared=shared.replace('## 133: Tamen','## 133: Tamen\n\nFestgelegte Stufen:\n\n| Level | Mana | Cast Time | Cooldown | Chancenfaktor |\n| ---: | ---: | ---: | ---: | ---: |\n| 1 | 100 | 3 s | 60 s | ×1,0 |\n| 2 | 125 | 2,5 s | 50 s | ×1,1 |\n| 3 | 150 | 2 s | 40 s | ×1,2 |\n\nPassendes Taming-Item erforderlich. Kein Schaden und keine anschließende Effektdauer. Noch offen: Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, gültige Zieldistanz und Bedingungen für einen Cast-Abbruch.');
 shared=shared.replace('## 134: Bindung','## 134: Bindung\n\nNur die Kreatur erhält die Boni. Permanent passiv, keine Kosten oder Cooldown.\n\n| Level | Stärke | Vita | Intelligenz | Wisdom |\n| ---: | ---: | ---: | ---: | ---: |\n| 1 | +10 | +10 | +10 | +10 |\n| 2 | +15 | +15 | +15 | +15 |\n| 3 | +20 | +20 | +20 | +20 |\n\nLerngrenze: normale Klassen 1, Abenteurer 3. Zweiter Spezialist noch offen.');
-shared=shared.replace('Offen: konkrete Wirkung je Level, Kosten bei Aktivierung, Lernvoraussetzungen, Kreaturenlimits und gegebenenfalls Erfolgswahrscheinlichkeit. Fehlende Zahlen sind nicht automatisch null.', 'Kosten, Cast Time, Cooldown und Grunderfolg sind festgelegt. Offen bleiben die oben genannten Taming-Regeln und Lernvoraussetzungen.');
+shared=shared.replace('Offen: konkrete Wirkung je Level, Kosten bei Aktivierung, Lernvoraussetzungen, Kreaturenlimits und gegebenenfalls Erfolgswahrscheinlichkeit. Fehlende Zahlen sind nicht automatisch null.', 'Kosten, Cast Time, Cooldown und Chancenfaktor sind festgelegt. Offen bleiben die oben genannten Taming-Regeln und Lernvoraussetzungen.');
 await fs.writeFile('docs/balancing/shared-creature-skills.md',shared);
 let training='# Gemeinsame Trainingsskills\n\nWaffentraining, Ausdauertraining und Rüstungstraining werden einmal gemeinsam geprüft. Laut Planung gelten sie für alle Klassen. Aktuell fehlen Schurke und Schattenkrieger in ihren Datenbankzuordnungen; dies ist ein eigener Zuordnungspunkt, kein Grund, ihre Werte neu zu entscheiden. Keine Datenbankänderung vorgenommen.\n\n';
 for(const s of skills.filter(s=>commonTrainingNumbers.includes(s.nr))){
@@ -214,7 +214,9 @@ for(const nr of [246,247,248,249,250,251]){const s=skills.find(s=>s.nr===nr);if(
 md=md.replace('\n\n','\n\nEinteilung: `type` bezeichnet Skill, Passive, Selbstbuff oder Buff; `damageType` bezeichnet physisch, magisch oder gemischt. Bewegung ist ein selbstgerichteter Buff. `dmgType` wird nur noch als Altformat für bestehende Werkzeuge mitgeführt.\n\n').replaceAll('| dmgType |','| dmgType (Altformat) |');
 const pointSummary=(await read('data/balancing/class-skill-points.json')).classes.find(c=>c.key==='adventurer');
 md=md.replace('\n\n',`\n\n**${skills.length} Skills, ${pointSummary.sp} Skillpunkte.** Jede gelernte Stufe kostet einen Punkt, einschließlich Stufe 1. Wilde Bindung hat eine Stufe mit den bisherigen Maximalwerten (+20 % P-Angriff und jeweils +10 % P-/M-Verteidigung des Abenteurers für das Pet bei vollem Vertrauen). Kontrolle hat maximal zwei Stufen: eine gleichzeitig kontrollierbare Kreatur je gelernter Stufe, also maximal zwei beim Abenteurer und seiner Weiterentwicklung. Alle anderen Klassen bleiben bei Kontrolle Stufe 1 und einer Kreatur.\n\n`);
-await fs.writeFile('docs/balancing/classes/adventurer-skills.md',md);
+const {withSkillLearningOverview} = await import('../services/skillLearningOverview.js');
+const existingLearningNotes = await fs.readFile('docs/balancing/classes/adventurer-skills.md', 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+await fs.writeFile('docs/balancing/classes/adventurer-skills.md',withSkillLearningOverview(md,{skills,classKey:'adventurer',existingMarkdown:existingLearningNotes}));
 await fs.writeFile('data/balancing/adventurer-skill-review.json',JSON.stringify({classKey:'adventurer',total:skills.length,regeneration:regen,skills,sourceStatus:'Current local database-exported catalog; no skill mutations'},null,2)+'\n');
 console.log('Created adventurer review: current assigned skills, complete stored fields, seven comparison levels and confirmed two-handed sword. No skill values changed.');
 

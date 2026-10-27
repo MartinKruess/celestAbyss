@@ -1,0 +1,1821 @@
+{
+  "rulesVersion": 1,
+  "maximumLevel": 200,
+  "thresholdPolicy": "sameAsPlayer",
+  "gainPolicy": {
+    "status": "defined",
+    "thresholdPolicy": "sameAsPlayer",
+    "existingBreedSkillNumber": 138,
+    "requiresLearnedBreed": true,
+    "gainMultiplierByLearnedBreedLevel": {
+      "0": 0,
+      "1": 1.1,
+      "2": 1.2,
+      "3": 1.3
+    },
+    "learningLimitsSource": "Existing skill 138; normal classes cap 1, Adventurer cap 3. Second specialist and later learning unlocks remain pending.",
+    "fractionalXpPolicy": "retainHundredthsDoNotRoundEachAwardToWholeXp"
+  },
+  "levels": [
+    {
+      "level": 1,
+      "maximumLevel": false,
+      "neededXp": 6,
+      "cumulativeXp": 0,
+      "referenceHoursToNextLevel": 0.10399999999999998,
+      "referenceCumulativeHours": 0,
+      "rulesVersion": 1
+    },
+    {
+      "level": 2,
+      "maximumLevel": false,
+      "neededXp": 12,
+      "cumulativeXp": 6,
+      "referenceHoursToNextLevel": 0.18749879999999994,
+      "referenceCumulativeHours": 0.10399999999999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 3,
+      "maximumLevel": false,
+      "neededXp": 18,
+      "cumulativeXp": 18,
+      "referenceHoursToNextLevel": 0.25538015999999997,
+      "referenceCumulativeHours": 0.29149879999999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 4,
+      "maximumLevel": false,
+      "neededXp": 34,
+      "cumulativeXp": 36,
+      "referenceHoursToNextLevel": 0.31141828799999993,
+      "referenceCumulativeHours": 0.5468789599999999,
+      "rulesVersion": 1
+    },
+    {
+      "level": 5,
+      "maximumLevel": false,
+      "neededXp": 42,
+      "cumulativeXp": 70,
+      "referenceHoursToNextLevel": 0.35853480959999995,
+      "referenceCumulativeHours": 0.8582972479999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 6,
+      "maximumLevel": false,
+      "neededXp": 50,
+      "cumulativeXp": 112,
+      "referenceHoursToNextLevel": 0.398995632,
+      "referenceCumulativeHours": 1.2168320575999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 7,
+      "maximumLevel": false,
+      "neededXp": 59,
+      "cumulativeXp": 162,
+      "referenceHoursToNextLevel": 0.43456180582399995,
+      "referenceCumulativeHours": 1.6158276895999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 8,
+      "maximumLevel": false,
+      "neededXp": 90,
+      "cumulativeXp": 221,
+      "referenceHoursToNextLevel": 0.46660518305279997,
+      "referenceCumulativeHours": 2.0503894954239996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 9,
+      "maximumLevel": false,
+      "neededXp": 103,
+      "cumulativeXp": 311,
+      "referenceHoursToNextLevel": 0.49619713572864,
+      "referenceCumulativeHours": 2.5169946784767996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 10,
+      "maximumLevel": false,
+      "neededXp": 116,
+      "cumulativeXp": 414,
+      "referenceHoursToNextLevel": 0.524176658869248,
+      "referenceCumulativeHours": 3.0131918142054395,
+      "rulesVersion": 1
+    },
+    {
+      "level": 11,
+      "maximumLevel": false,
+      "neededXp": 163,
+      "cumulativeXp": 530,
+      "referenceHoursToNextLevel": 0.55120269441024,
+      "referenceCumulativeHours": 3.5373684730746877,
+      "rulesVersion": 1
+    },
+    {
+      "level": 12,
+      "maximumLevel": false,
+      "neededXp": 183,
+      "cumulativeXp": 693,
+      "referenceHoursToNextLevel": 0.5777943750486836,
+      "referenceCumulativeHours": 4.088571167484927,
+      "rulesVersion": 1
+    },
+    {
+      "level": 13,
+      "maximumLevel": false,
+      "neededXp": 205,
+      "cumulativeXp": 876,
+      "referenceHoursToNextLevel": 0.6043620161902347,
+      "referenceCumulativeHours": 4.666365542533611,
+      "rulesVersion": 1
+    },
+    {
+      "level": 14,
+      "maximumLevel": false,
+      "neededXp": 275,
+      "cumulativeXp": 1081,
+      "referenceHoursToNextLevel": 0.6312310183011336,
+      "referenceCumulativeHours": 5.270727558723846,
+      "rulesVersion": 1
+    },
+    {
+      "level": 15,
+      "maximumLevel": false,
+      "neededXp": 308,
+      "cumulativeXp": 1356,
+      "referenceHoursToNextLevel": 0.6586603328623961,
+      "referenceCumulativeHours": 5.901958577024979,
+      "rulesVersion": 1
+    },
+    {
+      "level": 16,
+      "maximumLevel": false,
+      "neededXp": 401,
+      "cumulativeXp": 1664,
+      "referenceHoursToNextLevel": 0.6868567560209744,
+      "referenceCumulativeHours": 6.560618909887376,
+      "rulesVersion": 1
+    },
+    {
+      "level": 17,
+      "maximumLevel": false,
+      "neededXp": 511,
+      "cumulativeXp": 2065,
+      "referenceHoursToNextLevel": 0.7159860167247183,
+      "referenceCumulativeHours": 7.24747566590835,
+      "rulesVersion": 1
+    },
+    {
+      "level": 18,
+      "maximumLevel": false,
+      "neededXp": 570,
+      "cumulativeXp": 2576,
+      "referenceHoursToNextLevel": 0.7461813990045999,
+      "referenceCumulativeHours": 7.963461682633069,
+      "rulesVersion": 1
+    },
+    {
+      "level": 19,
+      "maximumLevel": false,
+      "neededXp": 715,
+      "cumulativeXp": 3146,
+      "referenceHoursToNextLevel": 0.7775504645823196,
+      "referenceCumulativeHours": 8.709643081637669,
+      "rulesVersion": 1
+    },
+    {
+      "level": 20,
+      "maximumLevel": false,
+      "neededXp": 886,
+      "cumulativeXp": 3861,
+      "referenceHoursToNextLevel": 0.810180309471791,
+      "referenceCumulativeHours": 9.487193546219988,
+      "rulesVersion": 1
+    },
+    {
+      "level": 21,
+      "maximumLevel": false,
+      "neededXp": 1087,
+      "cumulativeXp": 4747,
+      "referenceHoursToNextLevel": 0.8441416870245998,
+      "referenceCumulativeHours": 10.297373855691779,
+      "rulesVersion": 1
+    },
+    {
+      "level": 22,
+      "maximumLevel": false,
+      "neededXp": 1323,
+      "cumulativeXp": 5834,
+      "referenceHoursToNextLevel": 0.8794922525393485,
+      "referenceCumulativeHours": 11.141515542716379,
+      "rulesVersion": 1
+    },
+    {
+      "level": 23,
+      "maximumLevel": false,
+      "neededXp": 1598,
+      "cumulativeXp": 7157,
+      "referenceHoursToNextLevel": 0.9162791254567618,
+      "referenceCumulativeHours": 12.021007795255727,
+      "rulesVersion": 1
+    },
+    {
+      "level": 24,
+      "maximumLevel": false,
+      "neededXp": 1919,
+      "cumulativeXp": 8755,
+      "referenceHoursToNextLevel": 0.9545409199772743,
+      "referenceCumulativeHours": 12.93728692071249,
+      "rulesVersion": 1
+    },
+    {
+      "level": 25,
+      "maximumLevel": false,
+      "neededXp": 2293,
+      "cumulativeXp": 10674,
+      "referenceHoursToNextLevel": 0.994309360368622,
+      "referenceCumulativeHours": 13.891827840689764,
+      "rulesVersion": 1
+    },
+    {
+      "level": 26,
+      "maximumLevel": false,
+      "neededXp": 2727,
+      "cumulativeXp": 12967,
+      "referenceHoursToNextLevel": 1.0356105707621883,
+      "referenceCumulativeHours": 14.886137201058386,
+      "rulesVersion": 1
+    },
+    {
+      "level": 27,
+      "maximumLevel": false,
+      "neededXp": 3420,
+      "cumulativeXp": 15694,
+      "referenceHoursToNextLevel": 1.0784661089498622,
+      "referenceCumulativeHours": 15.921747771820574,
+      "rulesVersion": 1
+    },
+    {
+      "level": 28,
+      "maximumLevel": false,
+      "neededXp": 4023,
+      "cumulativeXp": 19114,
+      "referenceHoursToNextLevel": 1.1228937981250018,
+      "referenceCumulativeHours": 17.000213880770435,
+      "rulesVersion": 1
+    },
+    {
+      "level": 29,
+      "maximumLevel": false,
+      "neededXp": 4955,
+      "cumulativeXp": 23137,
+      "referenceHoursToNextLevel": 1.1689083985465096,
+      "referenceCumulativeHours": 18.123107678895437,
+      "rulesVersion": 1
+    },
+    {
+      "level": 30,
+      "maximumLevel": false,
+      "neededXp": 6046,
+      "cumulativeXp": 28092,
+      "referenceHoursToNextLevel": 1.2165221518939495,
+      "referenceCumulativeHours": 19.292016077441946,
+      "rulesVersion": 1
+    },
+    {
+      "level": 31,
+      "maximumLevel": false,
+      "neededXp": 7319,
+      "cumulativeXp": 34138,
+      "referenceHoursToNextLevel": 1.2657452239761802,
+      "referenceCumulativeHours": 20.508538229335898,
+      "rulesVersion": 1
+    },
+    {
+      "level": 32,
+      "maximumLevel": false,
+      "neededXp": 8802,
+      "cumulativeXp": 41457,
+      "referenceHoursToNextLevel": 1.3165860659622632,
+      "referenceCumulativeHours": 21.774283453312076,
+      "rulesVersion": 1
+    },
+    {
+      "level": 33,
+      "maximumLevel": false,
+      "neededXp": 10523,
+      "cumulativeXp": 50259,
+      "referenceHoursToNextLevel": 1.3690517100448676,
+      "referenceCumulativeHours": 23.09086951927434,
+      "rulesVersion": 1
+    },
+    {
+      "level": 34,
+      "maximumLevel": false,
+      "neededXp": 12921,
+      "cumulativeXp": 60782,
+      "referenceHoursToNextLevel": 1.4231480121359412,
+      "referenceCumulativeHours": 24.459921229319207,
+      "rulesVersion": 1
+    },
+    {
+      "level": 35,
+      "maximumLevel": false,
+      "neededXp": 15720,
+      "cumulativeXp": 73703,
+      "referenceHoursToNextLevel": 1.478879851612792,
+      "referenceCumulativeHours": 25.883069241455146,
+      "rulesVersion": 1
+    },
+    {
+      "level": 36,
+      "maximumLevel": false,
+      "neededXp": 18979,
+      "cumulativeXp": 89423,
+      "referenceHoursToNextLevel": 1.5362512961126655,
+      "referenceCumulativeHours": 27.36194909306794,
+      "rulesVersion": 1
+    },
+    {
+      "level": 37,
+      "maximumLevel": false,
+      "neededXp": 22762,
+      "cumulativeXp": 108402,
+      "referenceHoursToNextLevel": 1.5952657377874386,
+      "referenceCumulativeHours": 28.898200389180605,
+      "rulesVersion": 1
+    },
+    {
+      "level": 38,
+      "maximumLevel": false,
+      "neededXp": 27143,
+      "cumulativeXp": 131164,
+      "referenceHoursToNextLevel": 1.6559260061792846,
+      "referenceCumulativeHours": 30.493466126968045,
+      "rulesVersion": 1
+    },
+    {
+      "level": 39,
+      "maximumLevel": false,
+      "neededXp": 32890,
+      "cumulativeXp": 158307,
+      "referenceHoursToNextLevel": 1.7182344618880854,
+      "referenceCumulativeHours": 32.14939213314733,
+      "rulesVersion": 1
+    },
+    {
+      "level": 40,
+      "maximumLevel": false,
+      "neededXp": 40322,
+      "cumulativeXp": 191197,
+      "referenceHoursToNextLevel": 1.7821930744143473,
+      "referenceCumulativeHours": 33.86762659503542,
+      "rulesVersion": 1
+    },
+    {
+      "level": 41,
+      "maximumLevel": false,
+      "neededXp": 48129,
+      "cumulativeXp": 231519,
+      "referenceHoursToNextLevel": 1.8478034869331033,
+      "referenceCumulativeHours": 35.64981966944976,
+      "rulesVersion": 1
+    },
+    {
+      "level": 42,
+      "maximumLevel": false,
+      "neededXp": 58079,
+      "cumulativeXp": 279648,
+      "referenceHoursToNextLevel": 1.9150670702506005,
+      "referenceCumulativeHours": 37.497623156382865,
+      "rulesVersion": 1
+    },
+    {
+      "level": 43,
+      "maximumLevel": false,
+      "neededXp": 70642,
+      "cumulativeXp": 337727,
+      "referenceHoursToNextLevel": 1.9839849677900292,
+      "referenceCumulativeHours": 39.412690226633465,
+      "rulesVersion": 1
+    },
+    {
+      "level": 44,
+      "maximumLevel": false,
+      "neededXp": 85218,
+      "cumulativeXp": 408369,
+      "referenceHoursToNextLevel": 2.054558133124665,
+      "referenceCumulativeHours": 41.396675194423494,
+      "rulesVersion": 1
+    },
+    {
+      "level": 45,
+      "maximumLevel": false,
+      "neededXp": 102086,
+      "cumulativeXp": 493587,
+      "referenceHoursToNextLevel": 2.1267873613106487,
+      "referenceCumulativeHours": 43.45123332754816,
+      "rulesVersion": 1
+    },
+    {
+      "level": 46,
+      "maximumLevel": false,
+      "neededXp": 114875,
+      "cumulativeXp": 595673,
+      "referenceHoursToNextLevel": 2.2006733150546944,
+      "referenceCumulativeHours": 45.57802068885881,
+      "rulesVersion": 1
+    },
+    {
+      "level": 47,
+      "maximumLevel": false,
+      "neededXp": 129744,
+      "cumulativeXp": 710548,
+      "referenceHoursToNextLevel": 2.2762165465746493,
+      "referenceCumulativeHours": 47.7786940039135,
+      "rulesVersion": 1
+    },
+    {
+      "level": 48,
+      "maximumLevel": false,
+      "neededXp": 145441,
+      "cumulativeXp": 840292,
+      "referenceHoursToNextLevel": 2.3534175158651975,
+      "referenceCumulativeHours": 50.05491055048815,
+      "rulesVersion": 1
+    },
+    {
+      "level": 49,
+      "maximumLevel": false,
+      "neededXp": 163449,
+      "cumulativeXp": 985733,
+      "referenceHoursToNextLevel": 2.432276605961151,
+      "referenceCumulativeHours": 52.40832806635335,
+      "rulesVersion": 1
+    },
+    {
+      "level": 50,
+      "maximumLevel": false,
+      "neededXp": 183937,
+      "cumulativeXp": 1149182,
+      "referenceHoursToNextLevel": 2.5127941356918035,
+      "referenceCumulativeHours": 54.8406046723145,
+      "rulesVersion": 1
+    },
+    {
+      "level": 51,
+      "maximumLevel": false,
+      "neededXp": 205522,
+      "cumulativeXp": 1333119,
+      "referenceHoursToNextLevel": 2.5949703703378995,
+      "referenceCumulativeHours": 57.353398808006304,
+      "rulesVersion": 1
+    },
+    {
+      "level": 52,
+      "maximumLevel": false,
+      "neededXp": 231449,
+      "cumulativeXp": 1538641,
+      "referenceHoursToNextLevel": 2.6788055305348055,
+      "referenceCumulativeHours": 59.9483691783442,
+      "rulesVersion": 1
+    },
+    {
+      "level": 53,
+      "maximumLevel": false,
+      "neededXp": 258738,
+      "cumulativeXp": 1770090,
+      "referenceHoursToNextLevel": 2.7642997997089696,
+      "referenceCumulativeHours": 62.627174708879004,
+      "rulesVersion": 1
+    },
+    {
+      "level": 54,
+      "maximumLevel": false,
+      "neededXp": 290848,
+      "cumulativeXp": 2028828,
+      "referenceHoursToNextLevel": 2.851453330287705,
+      "referenceCumulativeHours": 65.39147450858798,
+      "rulesVersion": 1
+    },
+    {
+      "level": 55,
+      "maximumLevel": false,
+      "neededXp": 326370,
+      "cumulativeXp": 2319676,
+      "referenceHoursToNextLevel": 2.940266248883091,
+      "referenceCumulativeHours": 68.24292783887569,
+      "rulesVersion": 1
+    },
+    {
+      "level": 56,
+      "maximumLevel": false,
+      "neededXp": 365507,
+      "cumulativeXp": 2646046,
+      "referenceHoursToNextLevel": 3.0307386606180162,
+      "referenceCumulativeHours": 71.18319408775878,
+      "rulesVersion": 1
+    },
+    {
+      "level": 57,
+      "maximumLevel": false,
+      "neededXp": 410345,
+      "cumulativeXp": 3011553,
+      "referenceHoursToNextLevel": 3.1228706527350103,
+      "referenceCumulativeHours": 74.21393274837679,
+      "rulesVersion": 1
+    },
+    {
+      "level": 58,
+      "maximumLevel": false,
+      "neededXp": 459339,
+      "cumulativeXp": 3421898,
+      "referenceHoursToNextLevel": 3.216662297605576,
+      "referenceCumulativeHours": 77.33680340111181,
+      "rulesVersion": 1
+    },
+    {
+      "level": 59,
+      "maximumLevel": false,
+      "neededXp": 514702,
+      "cumulativeXp": 3881237,
+      "referenceHoursToNextLevel": 3.3121136552385866,
+      "referenceCumulativeHours": 80.55346569871739,
+      "rulesVersion": 1
+    },
+    {
+      "level": 60,
+      "maximumLevel": false,
+      "neededXp": 574795,
+      "cumulativeXp": 4395939,
+      "referenceHoursToNextLevel": 3.409224775370227,
+      "referenceCumulativeHours": 83.86557935395598,
+      "rulesVersion": 1
+    },
+    {
+      "level": 61,
+      "maximumLevel": false,
+      "neededXp": 644068,
+      "cumulativeXp": 4970734,
+      "referenceHoursToNextLevel": 3.507995699204514,
+      "referenceCumulativeHours": 87.27480412932621,
+      "rulesVersion": 1
+    },
+    {
+      "level": 62,
+      "maximumLevel": false,
+      "neededXp": 720964,
+      "cumulativeXp": 5614802,
+      "referenceHoursToNextLevel": 3.608426460862154,
+      "referenceCumulativeHours": 90.78279982853073,
+      "rulesVersion": 1
+    },
+    {
+      "level": 63,
+      "maximumLevel": false,
+      "neededXp": 805924,
+      "cumulativeXp": 6335766,
+      "referenceHoursToNextLevel": 3.7105170885860588,
+      "referenceCumulativeHours": 94.39122628939288,
+      "rulesVersion": 1
+    },
+    {
+      "level": 64,
+      "maximumLevel": false,
+      "neededXp": 899404,
+      "cumulativeXp": 7141690,
+      "referenceHoursToNextLevel": 3.8142676057439164,
+      "referenceCumulativeHours": 98.10174337797893,
+      "rulesVersion": 1
+    },
+    {
+      "level": 65,
+      "maximumLevel": false,
+      "neededXp": 1006573,
+      "cumulativeXp": 8041094,
+      "referenceHoursToNextLevel": 3.9196780316615896,
+      "referenceCumulativeHours": 101.91601098372286,
+      "rulesVersion": 1
+    },
+    {
+      "level": 66,
+      "maximumLevel": false,
+      "neededXp": 1123463,
+      "cumulativeXp": 9047667,
+      "referenceHoursToNextLevel": 4.026748382315557,
+      "referenceCumulativeHours": 105.83568901538445,
+      "rulesVersion": 1
+    },
+    {
+      "level": 67,
+      "maximumLevel": false,
+      "neededXp": 1255531,
+      "cumulativeXp": 10171130,
+      "referenceHoursToNextLevel": 4.135478670907972,
+      "referenceCumulativeHours": 109.8624373977,
+      "rulesVersion": 1
+    },
+    {
+      "level": 68,
+      "maximumLevel": false,
+      "neededXp": 1401137,
+      "cumulativeXp": 11426661,
+      "referenceHoursToNextLevel": 4.245868908343994,
+      "referenceCumulativeHours": 113.99791606860798,
+      "rulesVersion": 1
+    },
+    {
+      "level": 69,
+      "maximumLevel": false,
+      "neededXp": 1563621,
+      "cumulativeXp": 12827798,
+      "referenceHoursToNextLevel": 4.3579191036278475,
+      "referenceCumulativeHours": 118.24378497695197,
+      "rulesVersion": 1
+    },
+    {
+      "level": 70,
+      "maximumLevel": false,
+      "neededXp": 1746618,
+      "cumulativeXp": 14391419,
+      "referenceHoursToNextLevel": 4.471629264191246,
+      "referenceCumulativeHours": 122.60170408057982,
+      "rulesVersion": 1
+    },
+    {
+      "level": 71,
+      "maximumLevel": false,
+      "neededXp": 1948557,
+      "cumulativeXp": 16138037,
+      "referenceHoursToNextLevel": 4.5869993961656474,
+      "referenceCumulativeHours": 127.07333334477107,
+      "rulesVersion": 1
+    },
+    {
+      "level": 72,
+      "maximumLevel": false,
+      "neededXp": 2170439,
+      "cumulativeXp": 18086594,
+      "referenceHoursToNextLevel": 4.70402950460782,
+      "referenceCumulativeHours": 131.66033274093672,
+      "rulesVersion": 1
+    },
+    {
+      "level": 73,
+      "maximumLevel": false,
+      "neededXp": 2421970,
+      "cumulativeXp": 20257033,
+      "referenceHoursToNextLevel": 4.822719593686644,
+      "referenceCumulativeHours": 136.36436224554456,
+      "rulesVersion": 1
+    },
+    {
+      "level": 74,
+      "maximumLevel": false,
+      "neededXp": 2698916,
+      "cumulativeXp": 22679003,
+      "referenceHoursToNextLevel": 4.943069666837742,
+      "referenceCumulativeHours": 141.1870818392312,
+      "rulesVersion": 1
+    },
+    {
+      "level": 75,
+      "maximumLevel": false,
+      "neededXp": 3005618,
+      "cumulativeXp": 25377919,
+      "referenceHoursToNextLevel": 5.065079726891427,
+      "referenceCumulativeHours": 146.13015150606896,
+      "rulesVersion": 1
+    },
+    {
+      "level": 76,
+      "maximumLevel": false,
+      "neededXp": 3349857,
+      "cumulativeXp": 28383537,
+      "referenceHoursToNextLevel": 5.188749776178524,
+      "referenceCumulativeHours": 151.1952312329604,
+      "rulesVersion": 1
+    },
+    {
+      "level": 77,
+      "maximumLevel": false,
+      "neededXp": 3730484,
+      "cumulativeXp": 31733394,
+      "referenceHoursToNextLevel": 5.31407981661784,
+      "referenceCumulativeHours": 156.38398100913892,
+      "rulesVersion": 1
+    },
+    {
+      "level": 78,
+      "maximumLevel": false,
+      "neededXp": 4152625,
+      "cumulativeXp": 35463878,
+      "referenceHoursToNextLevel": 5.44106984978846,
+      "referenceCumulativeHours": 161.69806082575676,
+      "rulesVersion": 1
+    },
+    {
+      "level": 79,
+      "maximumLevel": false,
+      "neededXp": 4625095,
+      "cumulativeXp": 39616503,
+      "referenceHoursToNextLevel": 5.569719876989457,
+      "referenceCumulativeHours": 167.1391306755452,
+      "rulesVersion": 1
+    },
+    {
+      "level": 80,
+      "maximumLevel": false,
+      "neededXp": 5147127,
+      "cumulativeXp": 44241598,
+      "referenceHoursToNextLevel": 5.700029899289187,
+      "referenceCumulativeHours": 172.70885055253467,
+      "rulesVersion": 1
+    },
+    {
+      "level": 81,
+      "maximumLevel": false,
+      "neededXp": 5724691,
+      "cumulativeXp": 49388725,
+      "referenceHoursToNextLevel": 5.831999917565984,
+      "referenceCumulativeHours": 178.40888045182385,
+      "rulesVersion": 1
+    },
+    {
+      "level": 82,
+      "maximumLevel": false,
+      "neededXp": 6367713,
+      "cumulativeXp": 55113416,
+      "referenceHoursToNextLevel": 5.965629932541724,
+      "referenceCumulativeHours": 184.24088036938983,
+      "rulesVersion": 1
+    },
+    {
+      "level": 83,
+      "maximumLevel": false,
+      "neededXp": 7083168,
+      "cumulativeXp": 61481129,
+      "referenceHoursToNextLevel": 6.10091994480951,
+      "referenceCumulativeHours": 190.20651030193156,
+      "rulesVersion": 1
+    },
+    {
+      "level": 84,
+      "maximumLevel": false,
+      "neededXp": 7874687,
+      "cumulativeXp": 68564297,
+      "referenceHoursToNextLevel": 6.237869954856501,
+      "referenceCumulativeHours": 196.30743024674106,
+      "rulesVersion": 1
+    },
+    {
+      "level": 85,
+      "maximumLevel": false,
+      "neededXp": 8753632,
+      "cumulativeXp": 76438984,
+      "referenceHoursToNextLevel": 6.376479963082704,
+      "referenceCumulativeHours": 202.54530020159757,
+      "rulesVersion": 1
+    },
+    {
+      "level": 86,
+      "maximumLevel": false,
+      "neededXp": 9728204,
+      "cumulativeXp": 85192616,
+      "referenceHoursToNextLevel": 6.516749969816476,
+      "referenceCumulativeHours": 208.92178016468029,
+      "rulesVersion": 1
+    },
+    {
+      "level": 87,
+      "maximumLevel": false,
+      "neededXp": 10811033,
+      "cumulativeXp": 94920820,
+      "referenceHoursToNextLevel": 6.658679975327281,
+      "referenceCumulativeHours": 215.43853013449677,
+      "rulesVersion": 1
+    },
+    {
+      "level": 88,
+      "maximumLevel": false,
+      "neededXp": 12011448,
+      "cumulativeXp": 105731853,
+      "referenceHoursToNextLevel": 6.8022699798361845,
+      "referenceCumulativeHours": 222.09721010982406,
+      "rulesVersion": 1
+    },
+    {
+      "level": 89,
+      "maximumLevel": false,
+      "neededXp": 13339238,
+      "cumulativeXp": 117743301,
+      "referenceHoursToNextLevel": 6.947519983524499,
+      "referenceCumulativeHours": 228.89948008966024,
+      "rulesVersion": 1
+    },
+    {
+      "level": 90,
+      "maximumLevel": false,
+      "neededXp": 14813170,
+      "cumulativeXp": 131082539,
+      "referenceHoursToNextLevel": 7.0944299865408915,
+      "referenceCumulativeHours": 235.84700007318474,
+      "rulesVersion": 1
+    },
+    {
+      "level": 91,
+      "maximumLevel": false,
+      "neededXp": 16444507,
+      "cumulativeXp": 145895709,
+      "referenceHoursToNextLevel": 7.2429999890072265,
+      "referenceCumulativeHours": 242.94143005972563,
+      "rulesVersion": 1
+    },
+    {
+      "level": 92,
+      "maximumLevel": false,
+      "neededXp": 18253885,
+      "cumulativeXp": 162340216,
+      "referenceHoursToNextLevel": 7.393229991023377,
+      "referenceCumulativeHours": 250.18443004873285,
+      "rulesVersion": 1
+    },
+    {
+      "level": 93,
+      "maximumLevel": false,
+      "neededXp": 20258647,
+      "cumulativeXp": 180594101,
+      "referenceHoursToNextLevel": 7.545119992671165,
+      "referenceCumulativeHours": 257.5776600397562,
+      "rulesVersion": 1
+    },
+    {
+      "level": 94,
+      "maximumLevel": false,
+      "neededXp": 22477037,
+      "cumulativeXp": 200852748,
+      "referenceHoursToNextLevel": 7.698669994017614,
+      "referenceCumulativeHours": 265.1227800324274,
+      "rulesVersion": 1
+    },
+    {
+      "level": 95,
+      "maximumLevel": false,
+      "neededXp": 24937640,
+      "cumulativeXp": 223329785,
+      "referenceHoursToNextLevel": 7.8538799951176035,
+      "referenceCumulativeHours": 272.821450026445,
+      "rulesVersion": 1
+    },
+    {
+      "level": 96,
+      "maximumLevel": false,
+      "neededXp": 27661120,
+      "cumulativeXp": 248267425,
+      "referenceHoursToNextLevel": 8.010749996016068,
+      "referenceCumulativeHours": 280.6753300215626,
+      "rulesVersion": 1
+    },
+    {
+      "level": 97,
+      "maximumLevel": false,
+      "neededXp": 30674013,
+      "cumulativeXp": 275928545,
+      "referenceHoursToNextLevel": 8.169279996749783,
+      "referenceCumulativeHours": 288.68608001757866,
+      "rulesVersion": 1
+    },
+    {
+      "level": 98,
+      "maximumLevel": false,
+      "neededXp": 34009226,
+      "cumulativeXp": 306602558,
+      "referenceHoursToNextLevel": 8.32946999734884,
+      "referenceCumulativeHours": 296.8553600143284,
+      "rulesVersion": 1
+    },
+    {
+      "level": 99,
+      "maximumLevel": false,
+      "neededXp": 37701461,
+      "cumulativeXp": 340611784,
+      "referenceHoursToNextLevel": 8.49131999783786,
+      "referenceCumulativeHours": 305.18483001167726,
+      "rulesVersion": 1
+    },
+    {
+      "level": 100,
+      "maximumLevel": false,
+      "neededXp": 41792443,
+      "cumulativeXp": 378313245,
+      "referenceHoursToNextLevel": 8.65482999823698,
+      "referenceCumulativeHours": 313.67615000951514,
+      "rulesVersion": 1
+    },
+    {
+      "level": 101,
+      "maximumLevel": false,
+      "neededXp": 46310292,
+      "cumulativeXp": 420105688,
+      "referenceHoursToNextLevel": 8.819999998562668,
+      "referenceCumulativeHours": 322.33098000775215,
+      "rulesVersion": 1
+    },
+    {
+      "level": 102,
+      "maximumLevel": false,
+      "neededXp": 51316597,
+      "cumulativeXp": 466415980,
+      "referenceHoursToNextLevel": 8.986829998828384,
+      "referenceCumulativeHours": 331.1509800063148,
+      "rulesVersion": 1
+    },
+    {
+      "level": 103,
+      "maximumLevel": false,
+      "neededXp": 56849044,
+      "cumulativeXp": 517732577,
+      "referenceHoursToNextLevel": 9.155319999045135,
+      "referenceCumulativeHours": 340.1378100051432,
+      "rulesVersion": 1
+    },
+    {
+      "level": 104,
+      "maximumLevel": false,
+      "neededXp": 62969304,
+      "cumulativeXp": 574581621,
+      "referenceHoursToNextLevel": 9.32546999922191,
+      "referenceCumulativeHours": 349.29313000418836,
+      "rulesVersion": 1
+    },
+    {
+      "level": 105,
+      "maximumLevel": false,
+      "neededXp": 69736628,
+      "cumulativeXp": 637550925,
+      "referenceHoursToNextLevel": 9.49727999936606,
+      "referenceCumulativeHours": 358.6186000034103,
+      "rulesVersion": 1
+    },
+    {
+      "level": 106,
+      "maximumLevel": false,
+      "neededXp": 77219005,
+      "cumulativeXp": 707287553,
+      "referenceHoursToNextLevel": 9.670749999483585,
+      "referenceCumulativeHours": 368.11588000277635,
+      "rulesVersion": 1
+    },
+    {
+      "level": 107,
+      "maximumLevel": false,
+      "neededXp": 85493745,
+      "cumulativeXp": 784506558,
+      "referenceHoursToNextLevel": 9.845879999579386,
+      "referenceCumulativeHours": 377.7866300022599,
+      "rulesVersion": 1
+    },
+    {
+      "level": 108,
+      "maximumLevel": false,
+      "neededXp": 94642068,
+      "cumulativeXp": 870000303,
+      "referenceHoursToNextLevel": 10.022669999657467,
+      "referenceCumulativeHours": 387.6325100018393,
+      "rulesVersion": 1
+    },
+    {
+      "level": 109,
+      "maximumLevel": false,
+      "neededXp": 104749181,
+      "cumulativeXp": 964642371,
+      "referenceHoursToNextLevel": 10.201119999721094,
+      "referenceCumulativeHours": 397.6551800014968,
+      "rulesVersion": 1
+    },
+    {
+      "level": 110,
+      "maximumLevel": false,
+      "neededXp": 115923043,
+      "cumulativeXp": 1069391552,
+      "referenceHoursToNextLevel": 10.381229999772938,
+      "referenceCumulativeHours": 407.85630000121785,
+      "rulesVersion": 1
+    },
+    {
+      "level": 111,
+      "maximumLevel": false,
+      "neededXp": 128270734,
+      "cumulativeXp": 1185314595,
+      "referenceHoursToNextLevel": 10.562999999815167,
+      "referenceCumulativeHours": 418.2375300009908,
+      "rulesVersion": 1
+    },
+    {
+      "level": 112,
+      "maximumLevel": false,
+      "neededXp": 141904459,
+      "cumulativeXp": 1313585329,
+      "referenceHoursToNextLevel": 10.746429999849568,
+      "referenceCumulativeHours": 428.80053000080596,
+      "rulesVersion": 1
+    },
+    {
+      "level": 113,
+      "maximumLevel": false,
+      "neededXp": 156974441,
+      "cumulativeXp": 1455489788,
+      "referenceHoursToNextLevel": 10.93151999987758,
+      "referenceCumulativeHours": 439.54696000065553,
+      "rulesVersion": 1
+    },
+    {
+      "level": 114,
+      "maximumLevel": false,
+      "neededXp": 173618457,
+      "cumulativeXp": 1612464229,
+      "referenceHoursToNextLevel": 11.118269999900392,
+      "referenceCumulativeHours": 450.4784800005331,
+      "rulesVersion": 1
+    },
+    {
+      "level": 115,
+      "maximumLevel": false,
+      "neededXp": 192000994,
+      "cumulativeXp": 1786082686,
+      "referenceHoursToNextLevel": 11.306679999918963,
+      "referenceCumulativeHours": 461.59675000043353,
+      "rulesVersion": 1
+    },
+    {
+      "level": 116,
+      "maximumLevel": false,
+      "neededXp": 212301285,
+      "cumulativeXp": 1978083680,
+      "referenceHoursToNextLevel": 11.496749999934082,
+      "referenceCumulativeHours": 472.9034300003525,
+      "rulesVersion": 1
+    },
+    {
+      "level": 117,
+      "maximumLevel": false,
+      "neededXp": 234721042,
+      "cumulativeXp": 2190384965,
+      "referenceHoursToNextLevel": 11.688479999946384,
+      "referenceCumulativeHours": 484.4001800002866,
+      "rulesVersion": 1
+    },
+    {
+      "level": 118,
+      "maximumLevel": false,
+      "neededXp": 259471524,
+      "cumulativeXp": 2425106007,
+      "referenceHoursToNextLevel": 11.881869999956397,
+      "referenceCumulativeHours": 496.08866000023295,
+      "rulesVersion": 1
+    },
+    {
+      "level": 119,
+      "maximumLevel": false,
+      "neededXp": 286795450,
+      "cumulativeXp": 2684577531,
+      "referenceHoursToNextLevel": 12.076919999964545,
+      "referenceCumulativeHours": 507.97053000018934,
+      "rulesVersion": 1
+    },
+    {
+      "level": 120,
+      "maximumLevel": false,
+      "neededXp": 316954221,
+      "cumulativeXp": 2971372981,
+      "referenceHoursToNextLevel": 12.273629999971174,
+      "referenceCumulativeHours": 520.0474500001538,
+      "rulesVersion": 1
+    },
+    {
+      "level": 121,
+      "maximumLevel": false,
+      "neededXp": 350243693,
+      "cumulativeXp": 3288327202,
+      "referenceHoursToNextLevel": 12.471999999976568,
+      "referenceCumulativeHours": 532.321080000125,
+      "rulesVersion": 1
+    },
+    {
+      "level": 122,
+      "maximumLevel": false,
+      "neededXp": 386980987,
+      "cumulativeXp": 3638570895,
+      "referenceHoursToNextLevel": 12.672029999980953,
+      "referenceCumulativeHours": 544.7930800001016,
+      "rulesVersion": 1
+    },
+    {
+      "level": 123,
+      "maximumLevel": false,
+      "neededXp": 427520793,
+      "cumulativeXp": 4025551882,
+      "referenceHoursToNextLevel": 12.87371999998452,
+      "referenceCumulativeHours": 557.4651100000825,
+      "rulesVersion": 1
+    },
+    {
+      "level": 124,
+      "maximumLevel": false,
+      "neededXp": 472257460,
+      "cumulativeXp": 4453072675,
+      "referenceHoursToNextLevel": 13.077069999987419,
+      "referenceCumulativeHours": 570.338830000067,
+      "rulesVersion": 1
+    },
+    {
+      "level": 125,
+      "maximumLevel": false,
+      "neededXp": 521611189,
+      "cumulativeXp": 4925330135,
+      "referenceHoursToNextLevel": 13.28207999998978,
+      "referenceCumulativeHours": 583.4159000000544,
+      "rulesVersion": 1
+    },
+    {
+      "level": 126,
+      "maximumLevel": false,
+      "neededXp": 576053255,
+      "cumulativeXp": 5446941324,
+      "referenceHoursToNextLevel": 13.488749999991695,
+      "referenceCumulativeHours": 596.6979800000443,
+      "rulesVersion": 1
+    },
+    {
+      "level": 127,
+      "maximumLevel": false,
+      "neededXp": 636100613,
+      "cumulativeXp": 6022994579,
+      "referenceHoursToNextLevel": 13.697079999993253,
+      "referenceCumulativeHours": 610.1867300000359,
+      "rulesVersion": 1
+    },
+    {
+      "level": 128,
+      "maximumLevel": false,
+      "neededXp": 702334849,
+      "cumulativeXp": 6659095192,
+      "referenceHoursToNextLevel": 13.907069999994519,
+      "referenceCumulativeHours": 623.8838100000291,
+      "rulesVersion": 1
+    },
+    {
+      "level": 129,
+      "maximumLevel": false,
+      "neededXp": 775380336,
+      "cumulativeXp": 7361430041,
+      "referenceHoursToNextLevel": 14.11871999999555,
+      "referenceCumulativeHours": 637.7908800000237,
+      "rulesVersion": 1
+    },
+    {
+      "level": 130,
+      "maximumLevel": false,
+      "neededXp": 855931763,
+      "cumulativeXp": 8136810377,
+      "referenceHoursToNextLevel": 14.332029999996386,
+      "referenceCumulativeHours": 651.9096000000192,
+      "rulesVersion": 1
+    },
+    {
+      "level": 131,
+      "maximumLevel": false,
+      "neededXp": 944740368,
+      "cumulativeXp": 8992742140,
+      "referenceHoursToNextLevel": 14.546999999997066,
+      "referenceCumulativeHours": 666.2416300000156,
+      "rulesVersion": 1
+    },
+    {
+      "level": 132,
+      "maximumLevel": false,
+      "neededXp": 1042660700,
+      "cumulativeXp": 9937482508,
+      "referenceHoursToNextLevel": 14.763629999997615,
+      "referenceCumulativeHours": 680.7886300000126,
+      "rulesVersion": 1
+    },
+    {
+      "level": 133,
+      "maximumLevel": false,
+      "neededXp": 1150611456,
+      "cumulativeXp": 10980143208,
+      "referenceHoursToNextLevel": 14.981919999998066,
+      "referenceCumulativeHours": 695.5522600000103,
+      "rulesVersion": 1
+    },
+    {
+      "level": 134,
+      "maximumLevel": false,
+      "neededXp": 1269605456,
+      "cumulativeXp": 12130754664,
+      "referenceHoursToNextLevel": 15.20186999999843,
+      "referenceCumulativeHours": 710.5341800000083,
+      "rulesVersion": 1
+    },
+    {
+      "level": 135,
+      "maximumLevel": false,
+      "neededXp": 1400763538,
+      "cumulativeXp": 13400360120,
+      "referenceHoursToNextLevel": 15.423479999998726,
+      "referenceCumulativeHours": 725.7360500000067,
+      "rulesVersion": 1
+    },
+    {
+      "level": 136,
+      "maximumLevel": false,
+      "neededXp": 1545310582,
+      "cumulativeXp": 14801123658,
+      "referenceHoursToNextLevel": 15.646749999998965,
+      "referenceCumulativeHours": 741.1595300000054,
+      "rulesVersion": 1
+    },
+    {
+      "level": 137,
+      "maximumLevel": false,
+      "neededXp": 1704608909,
+      "cumulativeXp": 16346434240,
+      "referenceHoursToNextLevel": 15.871679999999161,
+      "referenceCumulativeHours": 756.8062800000043,
+      "rulesVersion": 1
+    },
+    {
+      "level": 138,
+      "maximumLevel": false,
+      "neededXp": 1880155589,
+      "cumulativeXp": 18051043149,
+      "referenceHoursToNextLevel": 16.098269999999317,
+      "referenceCumulativeHours": 772.6779600000035,
+      "rulesVersion": 1
+    },
+    {
+      "level": 139,
+      "maximumLevel": false,
+      "neededXp": 2073569264,
+      "cumulativeXp": 19931198738,
+      "referenceHoursToNextLevel": 16.326519999999448,
+      "referenceCumulativeHours": 788.7762300000028,
+      "rulesVersion": 1
+    },
+    {
+      "level": 140,
+      "maximumLevel": false,
+      "neededXp": 2286654905,
+      "cumulativeXp": 22004768002,
+      "referenceHoursToNextLevel": 16.55642999999955,
+      "referenceCumulativeHours": 805.1027500000023,
+      "rulesVersion": 1
+    },
+    {
+      "level": 141,
+      "maximumLevel": false,
+      "neededXp": 2521413223,
+      "cumulativeXp": 24291422907,
+      "referenceHoursToNextLevel": 16.787999999999638,
+      "referenceCumulativeHours": 821.6591800000018,
+      "rulesVersion": 1
+    },
+    {
+      "level": 142,
+      "maximumLevel": false,
+      "neededXp": 2780009411,
+      "cumulativeXp": 26812836130,
+      "referenceHoursToNextLevel": 17.021229999999704,
+      "referenceCumulativeHours": 838.4471800000015,
+      "rulesVersion": 1
+    },
+    {
+      "level": 143,
+      "maximumLevel": false,
+      "neededXp": 3064852571,
+      "cumulativeXp": 29592845541,
+      "referenceHoursToNextLevel": 17.25611999999976,
+      "referenceCumulativeHours": 855.4684100000012,
+      "rulesVersion": 1
+    },
+    {
+      "level": 144,
+      "maximumLevel": false,
+      "neededXp": 3378565771,
+      "cumulativeXp": 32657698112,
+      "referenceHoursToNextLevel": 17.492669999999805,
+      "referenceCumulativeHours": 872.724530000001,
+      "rulesVersion": 1
+    },
+    {
+      "level": 145,
+      "maximumLevel": false,
+      "neededXp": 3724059281,
+      "cumulativeXp": 36036263883,
+      "referenceHoursToNextLevel": 17.730879999999843,
+      "referenceCumulativeHours": 890.2172000000007,
+      "rulesVersion": 1
+    },
+    {
+      "level": 146,
+      "maximumLevel": false,
+      "neededXp": 4104533677,
+      "cumulativeXp": 39760323164,
+      "referenceHoursToNextLevel": 17.97074999999987,
+      "referenceCumulativeHours": 907.9480800000006,
+      "rulesVersion": 1
+    },
+    {
+      "level": 147,
+      "maximumLevel": false,
+      "neededXp": 4523471403,
+      "cumulativeXp": 43864856841,
+      "referenceHoursToNextLevel": 18.212279999999897,
+      "referenceCumulativeHours": 925.9188300000004,
+      "rulesVersion": 1
+    },
+    {
+      "level": 148,
+      "maximumLevel": false,
+      "neededXp": 4984748625,
+      "cumulativeXp": 48388328244,
+      "referenceHoursToNextLevel": 18.455469999999913,
+      "referenceCumulativeHours": 944.1311100000003,
+      "rulesVersion": 1
+    },
+    {
+      "level": 149,
+      "maximumLevel": false,
+      "neededXp": 5492598149,
+      "cumulativeXp": 53373076869,
+      "referenceHoursToNextLevel": 18.700319999999934,
+      "referenceCumulativeHours": 962.5865800000001,
+      "rulesVersion": 1
+    },
+    {
+      "level": 150,
+      "maximumLevel": false,
+      "neededXp": 6051670553,
+      "cumulativeXp": 58865675018,
+      "referenceHoursToNextLevel": 18.946829999999945,
+      "referenceCumulativeHours": 981.2869000000001,
+      "rulesVersion": 1
+    },
+    {
+      "level": 151,
+      "maximumLevel": false,
+      "neededXp": 6667110681,
+      "cumulativeXp": 64917345571,
+      "referenceHoursToNextLevel": 19.194999999999954,
+      "referenceCumulativeHours": 1000.23373,
+      "rulesVersion": 1
+    },
+    {
+      "level": 152,
+      "maximumLevel": false,
+      "neededXp": 7344533962,
+      "cumulativeXp": 71584456252,
+      "referenceHoursToNextLevel": 19.444829999999964,
+      "referenceCumulativeHours": 1019.42873,
+      "rulesVersion": 1
+    },
+    {
+      "level": 153,
+      "maximumLevel": false,
+      "neededXp": 8090129505,
+      "cumulativeXp": 78928990214,
+      "referenceHoursToNextLevel": 19.69631999999997,
+      "referenceCumulativeHours": 1038.87356,
+      "rulesVersion": 1
+    },
+    {
+      "level": 154,
+      "maximumLevel": false,
+      "neededXp": 8910710068,
+      "cumulativeXp": 87019119719,
+      "referenceHoursToNextLevel": 19.949469999999973,
+      "referenceCumulativeHours": 1058.56988,
+      "rulesVersion": 1
+    },
+    {
+      "level": 155,
+      "maximumLevel": false,
+      "neededXp": 9813740066,
+      "cumulativeXp": 95929829787,
+      "referenceHoursToNextLevel": 20.20427999999998,
+      "referenceCumulativeHours": 1078.51935,
+      "rulesVersion": 1
+    },
+    {
+      "level": 156,
+      "maximumLevel": false,
+      "neededXp": 10807449993,
+      "cumulativeXp": 105743569853,
+      "referenceHoursToNextLevel": 20.460749999999987,
+      "referenceCumulativeHours": 1098.72363,
+      "rulesVersion": 1
+    },
+    {
+      "level": 157,
+      "maximumLevel": false,
+      "neededXp": 11900858372,
+      "cumulativeXp": 116551019846,
+      "referenceHoursToNextLevel": 20.718879999999988,
+      "referenceCumulativeHours": 1119.18438,
+      "rulesVersion": 1
+    },
+    {
+      "level": 158,
+      "maximumLevel": false,
+      "neededXp": 13103894055,
+      "cumulativeXp": 128451878218,
+      "referenceHoursToNextLevel": 20.97866999999999,
+      "referenceCumulativeHours": 1139.9032599999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 159,
+      "maximumLevel": false,
+      "neededXp": 14427461959,
+      "cumulativeXp": 141555772273,
+      "referenceHoursToNextLevel": 21.24011999999999,
+      "referenceCumulativeHours": 1160.8819299999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 160,
+      "maximumLevel": false,
+      "neededXp": 15883537166,
+      "cumulativeXp": 155983234232,
+      "referenceHoursToNextLevel": 21.50322999999999,
+      "referenceCumulativeHours": 1182.1220499999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 161,
+      "maximumLevel": false,
+      "neededXp": 17485276608,
+      "cumulativeXp": 171866771398,
+      "referenceHoursToNextLevel": 21.767999999999997,
+      "referenceCumulativeHours": 1203.6252799999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 162,
+      "maximumLevel": false,
+      "neededXp": 19247136301,
+      "cumulativeXp": 189352048006,
+      "referenceHoursToNextLevel": 22.034429999999997,
+      "referenceCumulativeHours": 1225.3932799999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 163,
+      "maximumLevel": false,
+      "neededXp": 21185021012,
+      "cumulativeXp": 208599184307,
+      "referenceHoursToNextLevel": 22.302519999999998,
+      "referenceCumulativeHours": 1247.4277099999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 164,
+      "maximumLevel": false,
+      "neededXp": 23316346823,
+      "cumulativeXp": 229784205319,
+      "referenceHoursToNextLevel": 22.572269999999996,
+      "referenceCumulativeHours": 1269.7302299999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 165,
+      "maximumLevel": false,
+      "neededXp": 25660310313,
+      "cumulativeXp": 253100552142,
+      "referenceHoursToNextLevel": 22.843679999999996,
+      "referenceCumulativeHours": 1292.3024999999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 166,
+      "maximumLevel": false,
+      "neededXp": 28237937705,
+      "cumulativeXp": 278760862455,
+      "referenceHoursToNextLevel": 23.116749999999996,
+      "referenceCumulativeHours": 1315.1461799999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 167,
+      "maximumLevel": false,
+      "neededXp": 31072371869,
+      "cumulativeXp": 306998800160,
+      "referenceHoursToNextLevel": 23.391479999999998,
+      "referenceCumulativeHours": 1338.2629299999994,
+      "rulesVersion": 1
+    },
+    {
+      "level": 168,
+      "maximumLevel": false,
+      "neededXp": 34188990853,
+      "cumulativeXp": 338071172029,
+      "referenceHoursToNextLevel": 23.66787,
+      "referenceCumulativeHours": 1361.6544099999994,
+      "rulesVersion": 1
+    },
+    {
+      "level": 169,
+      "maximumLevel": false,
+      "neededXp": 37615702259,
+      "cumulativeXp": 372260162882,
+      "referenceHoursToNextLevel": 23.94592,
+      "referenceCumulativeHours": 1385.3222799999994,
+      "rulesVersion": 1
+    },
+    {
+      "level": 170,
+      "maximumLevel": false,
+      "neededXp": 41383107824,
+      "cumulativeXp": 409875865141,
+      "referenceHoursToNextLevel": 24.22563,
+      "referenceCumulativeHours": 1409.2681999999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 171,
+      "maximumLevel": false,
+      "neededXp": 45524864889,
+      "cumulativeXp": 451258972965,
+      "referenceHoursToNextLevel": 24.507,
+      "referenceCumulativeHours": 1433.4938299999994,
+      "rulesVersion": 1
+    },
+    {
+      "level": 172,
+      "maximumLevel": false,
+      "neededXp": 50077888424,
+      "cumulativeXp": 496783837854,
+      "referenceHoursToNextLevel": 24.79003,
+      "referenceCumulativeHours": 1458.0008299999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 173,
+      "maximumLevel": false,
+      "neededXp": 55082740712,
+      "cumulativeXp": 546861726278,
+      "referenceHoursToNextLevel": 25.07472,
+      "referenceCumulativeHours": 1482.7908599999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 174,
+      "maximumLevel": false,
+      "neededXp": 60583934091,
+      "cumulativeXp": 601944466990,
+      "referenceHoursToNextLevel": 25.36107,
+      "referenceCumulativeHours": 1507.8655799999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 175,
+      "maximumLevel": false,
+      "neededXp": 66630354124,
+      "cumulativeXp": 662528401081,
+      "referenceHoursToNextLevel": 25.64908,
+      "referenceCumulativeHours": 1533.2266499999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 176,
+      "maximumLevel": false,
+      "neededXp": 73275671813,
+      "cumulativeXp": 729158755205,
+      "referenceHoursToNextLevel": 25.93875,
+      "referenceCumulativeHours": 1558.8757299999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 177,
+      "maximumLevel": false,
+      "neededXp": 80578805760,
+      "cumulativeXp": 802434427018,
+      "referenceHoursToNextLevel": 26.23008,
+      "referenceCumulativeHours": 1584.8144799999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 178,
+      "maximumLevel": false,
+      "neededXp": 88604437020,
+      "cumulativeXp": 883013232778,
+      "referenceHoursToNextLevel": 26.52307,
+      "referenceCumulativeHours": 1611.0445599999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 179,
+      "maximumLevel": false,
+      "neededXp": 97423547305,
+      "cumulativeXp": 971617669798,
+      "referenceHoursToNextLevel": 26.81772,
+      "referenceCumulativeHours": 1637.5676299999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 180,
+      "maximumLevel": false,
+      "neededXp": 107114094817,
+      "cumulativeXp": 1069041217103,
+      "referenceHoursToNextLevel": 27.11403,
+      "referenceCumulativeHours": 1664.3853499999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 181,
+      "maximumLevel": false,
+      "neededXp": 117761606609,
+      "cumulativeXp": 1176155311920,
+      "referenceHoursToNextLevel": 27.412,
+      "referenceCumulativeHours": 1691.4993799999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 182,
+      "maximumLevel": false,
+      "neededXp": 129459978485,
+      "cumulativeXp": 1293916918529,
+      "referenceHoursToNextLevel": 27.71163,
+      "referenceCumulativeHours": 1718.9113799999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 183,
+      "maximumLevel": false,
+      "neededXp": 142312261457,
+      "cumulativeXp": 1423376897014,
+      "referenceHoursToNextLevel": 28.01292,
+      "referenceCumulativeHours": 1746.6230099999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 184,
+      "maximumLevel": false,
+      "neededXp": 156431533501,
+      "cumulativeXp": 1565689158471,
+      "referenceHoursToNextLevel": 28.31587,
+      "referenceCumulativeHours": 1774.6359299999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 185,
+      "maximumLevel": false,
+      "neededXp": 171941912533,
+      "cumulativeXp": 1722120691972,
+      "referenceHoursToNextLevel": 28.62048,
+      "referenceCumulativeHours": 1802.9517999999994,
+      "rulesVersion": 1
+    },
+    {
+      "level": 186,
+      "maximumLevel": false,
+      "neededXp": 188979614820,
+      "cumulativeXp": 1894062604505,
+      "referenceHoursToNextLevel": 28.92675,
+      "referenceCumulativeHours": 1831.5722799999994,
+      "rulesVersion": 1
+    },
+    {
+      "level": 187,
+      "maximumLevel": false,
+      "neededXp": 207694077103,
+      "cumulativeXp": 2083042219325,
+      "referenceHoursToNextLevel": 29.23468,
+      "referenceCumulativeHours": 1860.4990299999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 188,
+      "maximumLevel": false,
+      "neededXp": 228249304046,
+      "cumulativeXp": 2290736296428,
+      "referenceHoursToNextLevel": 29.54427,
+      "referenceCumulativeHours": 1889.7337099999995,
+      "rulesVersion": 1
+    },
+    {
+      "level": 189,
+      "maximumLevel": false,
+      "neededXp": 250825275714,
+      "cumulativeXp": 2518985600474,
+      "referenceHoursToNextLevel": 29.85552,
+      "referenceCumulativeHours": 1919.2779799999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 190,
+      "maximumLevel": false,
+      "neededXp": 275619434152,
+      "cumulativeXp": 2769810876188,
+      "referenceHoursToNextLevel": 30.16843,
+      "referenceCumulativeHours": 1949.1334999999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 191,
+      "maximumLevel": false,
+      "neededXp": 302848397716,
+      "cumulativeXp": 3045430310340,
+      "referenceHoursToNextLevel": 30.483,
+      "referenceCumulativeHours": 1979.3019299999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 192,
+      "maximumLevel": false,
+      "neededXp": 332749860646,
+      "cumulativeXp": 3348278708056,
+      "referenceHoursToNextLevel": 30.79923,
+      "referenceCumulativeHours": 2009.7849299999996,
+      "rulesVersion": 1
+    },
+    {
+      "level": 193,
+      "maximumLevel": false,
+      "neededXp": 365584593751,
+      "cumulativeXp": 3681028568702,
+      "referenceHoursToNextLevel": 31.11712,
+      "referenceCumulativeHours": 2040.5841599999997,
+      "rulesVersion": 1
+    },
+    {
+      "level": 194,
+      "maximumLevel": false,
+      "neededXp": 401638624309,
+      "cumulativeXp": 4046613162453,
+      "referenceHoursToNextLevel": 31.43667,
+      "referenceCumulativeHours": 2071.7012799999998,
+      "rulesVersion": 1
+    },
+    {
+      "level": 195,
+      "maximumLevel": false,
+      "neededXp": 441225793806,
+      "cumulativeXp": 4448251786762,
+      "referenceHoursToNextLevel": 31.75788,
+      "referenceCumulativeHours": 2103.13795,
+      "rulesVersion": 1
+    },
+    {
+      "level": 196,
+      "maximumLevel": false,
+      "neededXp": 484690330344,
+      "cumulativeXp": 4889477580568,
+      "referenceHoursToNextLevel": 32.08075,
+      "referenceCumulativeHours": 2134.89583,
+      "rulesVersion": 1
+    },
+    {
+      "level": 197,
+      "maximumLevel": false,
+      "neededXp": 532409838948,
+      "cumulativeXp": 5374167910912,
+      "referenceHoursToNextLevel": 32.405280000000005,
+      "referenceCumulativeHours": 2166.97658,
+      "rulesVersion": 1
+    },
+    {
+      "level": 198,
+      "maximumLevel": false,
+      "neededXp": 584798517338,
+      "cumulativeXp": 5906577749860,
+      "referenceHoursToNextLevel": 32.73147,
+      "referenceCumulativeHours": 2199.38186,
+      "rulesVersion": 1
+    },
+    {
+      "level": 199,
+      "maximumLevel": false,
+      "neededXp": 642310645685,
+      "cumulativeXp": 6491376267198,
+      "referenceHoursToNextLevel": 33.05932000000001,
+      "referenceCumulativeHours": 2232.11333,
+      "rulesVersion": 1
+    },
+    {
+      "level": 200,
+      "maximumLevel": true,
+      "neededXp": null,
+      "cumulativeXp": 7133686912883,
+      "referenceHoursToNextLevel": null,
+      "referenceCumulativeHours": 2265.17265,
+      "rulesVersion": 1
+    }
+  ]
+}

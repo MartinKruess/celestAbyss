@@ -1,0 +1,546 @@
+{
+  "source": "data/source/Questsystem.ods",
+  "sourceSha256": "b03ad717378b240e98d57f473d690eb3c2b8d86f8393dbe13f58767d88d7424d",
+  "rank": 6,
+  "scope": "Base rank values only; no upgrades, mastery, jewelry, stones, passives or active buffs. Armor totals use aggregate columns, not distribution columns.",
+  "armor": [
+    {
+      "name": "Butcher",
+      "rank": 6,
+      "row": 8,
+      "raw": {
+        "physicalDefense": 196,
+        "magicalDefense": 149
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 196,
+        "magicalDefense": 149
+      },
+      "partIds": [
+        "armor-butcher-r6-chest",
+        "armor-butcher-r6-pants",
+        "armor-butcher-r6-helmet",
+        "armor-butcher-r6-gloves",
+        "armor-butcher-r6-boots"
+      ]
+    },
+    {
+      "name": "Gladiator",
+      "rank": 6,
+      "row": 16,
+      "raw": {
+        "physicalDefense": 287,
+        "magicalDefense": 123
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 287,
+        "magicalDefense": 123
+      },
+      "partIds": [
+        "armor-gladiator-r6-chest",
+        "armor-gladiator-r6-pants",
+        "armor-gladiator-r6-helmet",
+        "armor-gladiator-r6-gloves",
+        "armor-gladiator-r6-boots"
+      ]
+    },
+    {
+      "name": "Tank",
+      "rank": 6,
+      "row": 24,
+      "raw": {
+        "physicalDefense": 339,
+        "magicalDefense": 288
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 339,
+        "magicalDefense": 288
+      },
+      "partIds": [
+        "armor-tank-r6-chest",
+        "armor-tank-r6-pants",
+        "armor-tank-r6-helmet",
+        "armor-tank-r6-gloves",
+        "armor-tank-r6-boots"
+      ]
+    },
+    {
+      "name": "Villain",
+      "rank": 6,
+      "row": 32,
+      "raw": {
+        "physicalDefense": 170,
+        "magicalDefense": 199
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 170,
+        "magicalDefense": 199
+      },
+      "partIds": [
+        "armor-villain-r6-chest",
+        "armor-villain-r6-pants",
+        "armor-villain-r6-helmet",
+        "armor-villain-r6-gloves",
+        "armor-villain-r6-boots"
+      ]
+    },
+    {
+      "name": "Bloodmage",
+      "rank": 6,
+      "row": 40,
+      "raw": {
+        "physicalDefense": 189,
+        "magicalDefense": 309
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 189,
+        "magicalDefense": 309
+      },
+      "partIds": [
+        "armor-bloodmage-r6-chest",
+        "armor-bloodmage-r6-pants",
+        "armor-bloodmage-r6-helmet",
+        "armor-bloodmage-r6-gloves",
+        "armor-bloodmage-r6-boots"
+      ]
+    },
+    {
+      "name": "Healer",
+      "rank": 6,
+      "row": 48,
+      "raw": {
+        "physicalDefense": 145,
+        "magicalDefense": 443
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 145,
+        "magicalDefense": 443
+      },
+      "partIds": [
+        "armor-healer-r6-chest",
+        "armor-healer-r6-pants",
+        "armor-healer-r6-helmet",
+        "armor-healer-r6-gloves",
+        "armor-healer-r6-boots"
+      ]
+    },
+    {
+      "name": "Lightmage",
+      "rank": 6,
+      "row": 56,
+      "raw": {
+        "physicalDefense": 192,
+        "magicalDefense": 354
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 192,
+        "magicalDefense": 354
+      },
+      "partIds": [
+        "armor-lightmage-r6-chest",
+        "armor-lightmage-r6-pants",
+        "armor-lightmage-r6-helmet",
+        "armor-lightmage-r6-gloves",
+        "armor-lightmage-r6-boots"
+      ]
+    },
+    {
+      "name": "Kräuterkundler",
+      "rank": 6,
+      "row": 64,
+      "raw": {
+        "physicalDefense": 229,
+        "magicalDefense": 211
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 229,
+        "magicalDefense": 211
+      },
+      "partIds": [
+        "armor-kräuterkundler-r6-chest",
+        "armor-kräuterkundler-r6-pants",
+        "armor-kräuterkundler-r6-helmet",
+        "armor-kräuterkundler-r6-gloves",
+        "armor-kräuterkundler-r6-boots"
+      ]
+    },
+    {
+      "name": "Archer",
+      "rank": 6,
+      "row": 76,
+      "raw": {
+        "physicalDefense": 202,
+        "magicalDefense": 211
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 202,
+        "magicalDefense": 211
+      },
+      "partIds": [
+        "armor-archer-r6-chest",
+        "armor-archer-r6-pants",
+        "armor-archer-r6-helmet",
+        "armor-archer-r6-gloves",
+        "armor-archer-r6-boots"
+      ]
+    },
+    {
+      "name": "Shamane",
+      "rank": 6,
+      "row": 84,
+      "raw": {
+        "physicalDefense": 250,
+        "magicalDefense": 247
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 250,
+        "magicalDefense": 247
+      },
+      "partIds": [
+        "armor-shamane-r6-chest",
+        "armor-shamane-r6-pants",
+        "armor-shamane-r6-helmet",
+        "armor-shamane-r6-gloves",
+        "armor-shamane-r6-boots"
+      ]
+    },
+    {
+      "name": "Druid",
+      "rank": 6,
+      "row": 92,
+      "raw": {
+        "physicalDefense": 243,
+        "magicalDefense": 235
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 243,
+        "magicalDefense": 235
+      },
+      "partIds": [
+        "armor-druid-r6-chest",
+        "armor-druid-r6-pants",
+        "armor-druid-r6-helmet",
+        "armor-druid-r6-gloves",
+        "armor-druid-r6-boots"
+      ]
+    },
+    {
+      "name": "Seelenjäger",
+      "rank": 6,
+      "row": 100,
+      "raw": {
+        "physicalDefense": 193,
+        "magicalDefense": 190
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 193,
+        "magicalDefense": 190
+      },
+      "partIds": [
+        "armor-seelenjäger-r6-chest",
+        "armor-seelenjäger-r6-pants",
+        "armor-seelenjäger-r6-helmet",
+        "armor-seelenjäger-r6-gloves",
+        "armor-seelenjäger-r6-boots"
+      ]
+    },
+    {
+      "name": "Adventure",
+      "rank": 6,
+      "row": 108,
+      "raw": {
+        "physicalDefense": 273,
+        "magicalDefense": 186
+      },
+      "converted": {
+        "health": 0,
+        "mana": 0,
+        "physicalDefense": 273,
+        "magicalDefense": 186
+      },
+      "partIds": [
+        "armor-adventure-r6-chest",
+        "armor-adventure-r6-pants",
+        "armor-adventure-r6-helmet",
+        "armor-adventure-r6-gloves",
+        "armor-adventure-r6-boots"
+      ]
+    }
+  ],
+  "weapons": [
+    {
+      "name": "1H Axt",
+      "rank": 6,
+      "row": 8,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 25
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 267
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "2H Axt",
+      "rank": 6,
+      "row": 16,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 40
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 515
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.15
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -30
+        }
+      ]
+    },
+    {
+      "name": "Bow",
+      "rank": 6,
+      "row": 24,
+      "raw": [
+        {
+          "label": "Dexterity",
+          "column": 3,
+          "value": 30
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 531
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -30
+        }
+      ]
+    },
+    {
+      "name": "Crossbow",
+      "rank": 6,
+      "row": 32,
+      "raw": [
+        {
+          "label": "Agility",
+          "column": 3,
+          "value": 20
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 462
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -20
+        }
+      ]
+    },
+    {
+      "name": "Dagger",
+      "rank": 6,
+      "row": 40,
+      "raw": [
+        {
+          "label": "Ambush",
+          "column": 3,
+          "value": 25
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 211
+        },
+        {
+          "label": "Krit Ch.",
+          "column": 6,
+          "value": 0.1
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -10
+        }
+      ]
+    },
+    {
+      "name": "Mace",
+      "rank": 6,
+      "row": 48,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 15
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 256
+        },
+        {
+          "label": "Intelligence",
+          "column": 5,
+          "value": 15
+        },
+        {
+          "label": "M.Ang",
+          "column": 6,
+          "value": 128
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "Shield",
+      "rank": 6,
+      "row": 56,
+      "raw": [
+        {
+          "label": "Vita",
+          "column": 3,
+          "value": 35
+        },
+        {
+          "label": "P.Deff",
+          "column": 4,
+          "value": 212
+        },
+        {
+          "label": "Block",
+          "column": 6,
+          "value": 0.15
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "Sword",
+      "rank": 6,
+      "row": 64,
+      "raw": [
+        {
+          "label": "Stärke",
+          "column": 3,
+          "value": 25
+        },
+        {
+          "label": "P.Ang",
+          "column": 4,
+          "value": 232
+        },
+        {
+          "label": "Agylity",
+          "column": 5,
+          "value": 25
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -15
+        }
+      ]
+    },
+    {
+      "name": "Wand",
+      "rank": 6,
+      "row": 72,
+      "raw": [
+        {
+          "label": "Int/Faith/Vic",
+          "column": 3,
+          "value": 40
+        },
+        {
+          "label": "M.Ang",
+          "column": 4,
+          "value": 498
+        },
+        {
+          "label": "Wisdom",
+          "column": 5,
+          "value": 8
+        },
+        {
+          "label": "ATK Speed",
+          "column": 7,
+          "value": -30
+        }
+      ]
+    }
+  ],
+  "armorDefinition": "data/balancing/armor-parts.json",
+  "assumptions": "Armor: five slots, P/M defense only, no additional attributes or HP/MP. Weapons retain their existing snapshot; current weapon definitions are in ranked-equipment.json."
+}

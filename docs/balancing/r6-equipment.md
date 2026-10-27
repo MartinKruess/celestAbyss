@@ -6,19 +6,19 @@ Rüstung aktuell: fünf Teile, nur direkte P-/M-Abwehr. Zusatzwerte sind entfern
 
 | Klasse | P-Abwehr gesamt | M-Abwehr gesamt |
 | --- | ---: | ---: |
-| Butcher / Destroyer | 309 | 149 |
-| Gladiator / Berserker | 354 | 123 |
-| Ritter / Tempelritter | 443 | 288 |
-| Schurke / Schattenkrieger | 269 | 199 |
-| Ritualist / Blutmagier | 235 | 309 |
-| Heiler / Priester | 180 | 443 |
-| Luminet / Lichtmagier | 215 | 354 |
-| Kräuterkundler / Witcher | 267 | 211 |
-| Jäger / Schütze | 254 | 211 |
-| Schamane / Hochelfe | 276 | 247 |
-| Druide / Alchemist | 291 | 235 |
-| Nachtjäger / Seelenjäger | 199 | 190 |
-| Abenteurer / Scout | 302 | 186 |
+| Butcher / Destroyer | 196 | 144 |
+| Gladiator / Berserker | 287 | 140 |
+| Ritter / Tempelritter | 339 | 291 |
+| Schurke / Schattenkrieger | 170 | 192 |
+| Ritualist / Blutmagier | 189 | 198 |
+| Heiler / Priester | 145 | 340 |
+| Luminet / Lichtmagier | 192 | 345 |
+| Kräuterkundler / Witcher | 229 | 190 |
+| Jäger / Schütze | 202 | 200 |
+| Schamane / Hochelfe | 250 | 212 |
+| Druide / Alchemist | 243 | 208 |
+| Nachtjäger / Seelenjäger | 193 | 183 |
+| Abenteurer / Scout | 273 | 172 |
 
 ## Waffen
 

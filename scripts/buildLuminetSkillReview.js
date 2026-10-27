@@ -60,7 +60,9 @@ md=md.replace('\n\n','\n\nEinteilung: `type` bezeichnet Skill, Passive, Selbstbu
 const pointSummary=(await read('data/balancing/class-skill-points.json')).classes.find(c=>c.key==='luminet');
 const aura=skills.find(s=>s.nr===165);
 if(aura)md=md.replace('## Basis und Ausrüstung',`## Skillpunkte und Freischaltung\n\n**${pointSummary.sp} Skillpunkte** für alle ${skills.length} Skills auf ihrer maximal lernbaren Stufe: ${pointSummary.activeSP} für aktive Skills einschließlich Buffs und ${pointSummary.passiveSP} für Passive. Jede gelernte Stufe kostet einen Punkt, einschließlich Stufe 1. Gemeinsame Skills zählen einmal.\n\n**Aura Unterdrückung (Nr. 165)** ist derselbe aktive Selbstbuff wie beim Kräuterkundler und wird für beide Klassen ab **Charakterlevel ${aura.learningRequirements?.minimumCharacterLevel??'noch offen'}** erlernbar. Zehn Skillstufen: je Stufe 0,5 % weniger neu erzeugte Schadens-Aggro und +1,2 Intelligenz, maximal 5 % und +12 Intelligenz. Dauer 180 Sekunden, Cooldown 60 Sekunden, feste Castzeit 0,1 Sekunden, Aktivierungskosten 50 bis 167 Mana. Charakterlevel-Voraussetzungen für weitere Skillstufen sind noch offen.\n\n## Basis und Ausrüstung`);
-await fs.writeFile('docs/balancing/classes/luminet-skills.md',md);
+const {withSkillLearningOverview} = await import('../services/skillLearningOverview.js');
+const existingLearningNotes = await fs.readFile('docs/balancing/classes/luminet-skills.md', 'utf8').catch(error => { if (error.code === 'ENOENT') return ''; throw error; });
+await fs.writeFile('docs/balancing/classes/luminet-skills.md',withSkillLearningOverview(md,{skills,classKey:'luminet',existingMarkdown:existingLearningNotes}));
 await fs.writeFile('data/balancing/luminet-skill-review.json',JSON.stringify({classKey:'luminet',total:count.total,active:count.total-count.passive,passive:count.passive,skillNumbers:skills.map(s=>s.nr),skills,source:'Current database-exported skill catalog',equipment:'Original rank values; proposed strength changes not applied'},null,2)+'\n');
 console.log(`Review updated: ${skills.length} skills, ${reviewActiveCount} active, ${reviewPassiveCount} passive.`);
 

@@ -6,6 +6,8 @@ import { UserDataModel } from '../models/userSchema.js';
 import '../models/itemSchema.js';
 import '../models/creatureSchema.js';
 import { characterRace, characterError } from './characterPolicy.js';
+import { inactivePlay } from './play.js';
+import { trackService } from './pendingWork.js';
 
 export function createCharacterService({ users = UserDataModel, characters = CharDataModel,
   inventories = InventoryModel, skills = SkillDataModel, startSession = () => mongoose.startSession(),
@@ -15,7 +17,10 @@ export function createCharacterService({ users = UserDataModel, characters = Cha
     try { return await session.withTransaction(() => work(session)); }
     finally { await session.endSession(); }
   };
-  return {
+  return trackService({
+    // Character selection needs summaries, not populated inventory or skill documents.
+    list: ({ accountID }) => characters.find({ accountID })
+      .select('_id charName class race server level').sort({ _id: 1 }).lean(),
     create: async ({ accountID, charName, class: charClass }) => {
       const race = characterRace(charClass);
       return transaction(async session => {
@@ -26,7 +31,9 @@ export function createCharacterService({ users = UserDataModel, characters = Cha
           $expr: { $lt: [{ $size: { $ifNull: ['$characters', []] } }, '$maxChars'] },
         }, { $push: { characters: characterID } }, { session, new: true });
         if (!reserved) throw characterError('CHARACTER_LIMIT_OR_ACCOUNT_UNAVAILABLE', 409);
-        const templates = await skills.find({ charClass }).session(session);
+        // Existing skill documents use the legacy label Abenteuer for Adventurer.
+        const skillClass = charClass === 'Adventurer' ? 'Abenteuer' : charClass;
+        const templates = await skills.find({ charClass: skillClass }).session(session);
         await characters.create([{ _id: characterID, accountID, charName, class: charClass,
           race, inventory: [inventoryID], skills: templates.map(skill => skill._id) }], { session });
         await inventories.create([{ _id: inventoryID, characterID, items: [] }], { session });
@@ -34,7 +41,7 @@ export function createCharacterService({ users = UserDataModel, characters = Cha
       });
     },
     remove: async ({ accountID, characterID }) => transaction(async session => {
-      const result = await characters.deleteOne({ _id: characterID, accountID }, { session });
+      const result = await characters.deleteOne({ _id: characterID, accountID, ...inactivePlay(new Date()) }, { session });
       if (!result.deletedCount) throw characterError('CHARACTER_NOT_FOUND', 404);
       await inventories.deleteMany({ characterID }, { session });
       const account = await users.updateOne({ _id: accountID }, { $pull: { characters: characterID } }, { session });
@@ -44,6 +51,6 @@ export function createCharacterService({ users = UserDataModel, characters = Cha
       .populate({ path: 'inventory', populate: { path: 'items.itemID' } })
       .populate('skills'),
     account: accountID => users.findById(accountID).select('_id username language maxChars characters').populate('characters'),
-  };
+  });
 }
 export const characterService = createCharacterService();

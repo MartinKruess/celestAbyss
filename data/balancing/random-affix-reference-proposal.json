@@ -1,0 +1,88 @@
+{
+  "status": "referenceProposalNotAppliedToRandomGenerationOrClassStats",
+  "scope": "Known random-affix bounds for the optimum-reference discussion, not statistical expected rolls",
+  "rows": [
+    {
+      "rank": 2,
+      "level": 20,
+      "randomSlotsPerItem": 1,
+      "weaponFullReferenceAttackMaximum": 7,
+      "weaponFullReferenceSkillDamageMaximum": 40,
+      "attributeMaximum": 2,
+      "armorDefenseMaximum": 10,
+      "armorHealthMaximum": 80
+    },
+    {
+      "rank": 3,
+      "level": 40,
+      "randomSlotsPerItem": 1,
+      "weaponFullReferenceAttackMaximum": 13,
+      "weaponFullReferenceSkillDamageMaximum": 60,
+      "attributeMaximum": 3,
+      "armorDefenseMaximum": 15,
+      "armorHealthMaximum": 120
+    },
+    {
+      "rank": 4,
+      "level": 60,
+      "randomSlotsPerItem": 2,
+      "weaponFullReferenceAttackMaximum": 18,
+      "weaponFullReferenceSkillDamageMaximum": 80,
+      "attributeMaximum": 4,
+      "armorDefenseMaximum": 20,
+      "armorHealthMaximum": 160
+    },
+    {
+      "rank": 5,
+      "level": 80,
+      "randomSlotsPerItem": 2,
+      "weaponFullReferenceAttackMaximum": 24,
+      "weaponFullReferenceSkillDamageMaximum": 100,
+      "attributeMaximum": 6,
+      "armorDefenseMaximum": 25,
+      "armorHealthMaximum": 240
+    },
+    {
+      "rank": 6,
+      "level": 100,
+      "randomSlotsPerItem": 3,
+      "weaponFullReferenceAttackMaximum": 30,
+      "weaponFullReferenceSkillDamageMaximum": 120,
+      "attributeMaximum": 8,
+      "armorDefenseMaximum": 30,
+      "armorHealthMaximum": 320
+    }
+  ],
+  "weaponScaling": {
+    "twoHanded": 1,
+    "oneHanded": 0.5,
+    "shield": 0.5
+  },
+  "referenceProposal": {
+    "primaryWeaponAffix": "Appropriate direct physical or magical attack at the approved rank maximum; deterministic initial reference, not a claim of maximum DPS.",
+    "skillDamage": "Separate skill-heavy comparison; can coexist with the matching direct attack once at least two random slots are available. Never add physical and magical bonuses to the same channel.",
+    "remainingWeaponSlots": "Choose an explicit eligible stat later; do not silently omit slots when claiming a full optimum.",
+    "armor": "Allocate HP/physical/magical defense through legal distinct per-item slots. With only one slot, compare separate physical/magical defense loadouts rather than giving both.",
+    "critical": "No forced critical/proc affixes in the deterministic reference. Existing class skill effects remain unchanged.",
+    "sockets": "Keep separate from random affixes; stone bonuses use their own equipment and duplicate restrictions."
+  },
+  "notes": [
+    "R6 normal Strength/Intelligence affix maximum is currently 8, not 12. Special crafted limits are not finalized.",
+    "P/M direct attack and P/M skill-damage reference maxima match in pairs. Equal numeric maxima do not guarantee identical class DPS.",
+    "Skill damage has approved maximum reference values, but its random roll distribution/range is not defined; do not manufacture an expected random average.",
+    "No baseline damage or survivability increase is applied to all classes from the single-attribute socket bound. A specific legal gem loadout must be selected."
+  ],
+  "attributeConversion": {
+    "baseStrengthToPhysicalAttack": 1.8,
+    "baseIntelligenceToMagicalAttack": 1.8,
+    "strengthClassMultipliers": {
+      "butcher": 1.1,
+      "gladiator": 1.05,
+      "shaman": 1.05
+    },
+    "intelligenceClassMultipliers": {
+      "druid": 1.05,
+      "herbalist": 1.05
+    }
+  }
+}

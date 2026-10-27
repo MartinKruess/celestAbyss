@@ -9,8 +9,9 @@ test('login rejects unknown accounts, incorrect passwords and bans; filters resp
   let res = response(); await api.login(req, res); assert.equal(res.code, 401);
   user = { _id: '123', username: 'tester', password: 'hash', email: 'private', steamID: 'private' };
   res = response(); await api.login(req, res); assert.equal(res.code, 401);
-  valid = true; user.isBanned = true;
+  valid = true; user.isBanned = true; user.banReason = 'Wiederholtes Cheating';
   res = response(); await api.login(req, res); assert.equal(res.code, 403);
+  assert.deepEqual(res.body,{error:'ACCOUNT_BANNED',reason:'Wiederholtes Cheating'});
   user.isBanned = false; res = response(); await api.login(req, res);
   assert.equal(res.body.token, 'signed-token');
   assert.equal(res.body.userData.password, undefined);

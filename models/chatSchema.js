@@ -10,10 +10,14 @@ const messageSchema = new mongoose.Schema({
   originalText: { type: String, select: false },
   expiresAt: { type: Date, required: true, default: () => new Date(Date.now() + 86400000) },
   sentAt: { type: Date, required: true },
+  // Durable outbox entry in the same document. Legacy messages have no state until retried.
+  deliveryState: { type: String, enum: ['pending', 'dispatched', 'expired'] },
+  dispatchedAt: Date,
 });
 messageSchema.index({ channel: 1, sequence: 1 }, { unique: true });
 messageSchema.index({ senderID: 1, clientMessageID: 1 }, { unique: true });
 messageSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
+messageSchema.index({ deliveryState: 1, sequence: 1 }, { partialFilterExpression: { deliveryState: 'pending' } });
 export const ChatMessageModel = mongoose.model('chatMessages', messageSchema);
 export const ChatCounterModel = mongoose.model('chatCounters', new mongoose.Schema({
   _id: { type: String }, sequence: { type: Number, default: 0 },

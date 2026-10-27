@@ -4,8 +4,18 @@ import { createServer } from 'node:http';
 import { once } from 'node:events';
 import { readRuntimeConfig } from '../config/runtime.js';
 import { startBackend } from '../runtime.js';
+import { createWorkTracker } from '../services/pendingWork.js';
 
 const env = { MONGODB_URI: 'mongodb://localhost:27017', ACCESS_TOKEN_SECRET: 'a'.repeat(64), PORT: '0', WS_PORT: '0' };
+test('shutdown keeps DB connected until an accepted disconnected-client operation finishes',async()=>{
+  const work=createWorkTracker();let finish,disconnected=false;
+  const database={connection:{readyState:1},connect:async()=>{},disconnect:async()=>{disconnected=true;}};
+  const backend=await startBackend(readRuntimeConfig(env),{database,work,logger:{log(){},error(){}}});
+  const pending=work.run(()=>new Promise(resolve=>{finish=resolve;}));await new Promise(resolve=>setImmediate(resolve));
+  const stopped=backend.stop();await new Promise(resolve=>setImmediate(resolve));
+  assert.equal(backend.isReady(),false);assert.equal(disconnected,false);
+  finish();await pending;await stopped;assert.equal(disconnected,true);
+});
 test('configuration rejects missing secrets, invalid ports and production origins', () => {
   assert.equal(readRuntimeConfig(env).dbName, 'celestabyss_dev');
   assert.throws(() => readRuntimeConfig({ ...env, ACCESS_TOKEN_SECRET: '' }));

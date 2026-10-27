@@ -1,0 +1,109 @@
+{
+  "status": "planningOnlyNotAppliedToCatalogOrDatabase",
+  "scope": "First character-level unlock only; further skill ranks remain undefined",
+  "sharedFirstUnlocks": {
+    "43": 9,
+    "44": 9,
+    "45": 9,
+    "133": 5,
+    "134": 4,
+    "135": 4,
+    "136": 5,
+    "137": 5,
+    "138": 4,
+    "144": 4,
+    "201": 2
+  },
+  "sharedNotes": "Racial starting skills retain L1. Body, Mind and Senses expansion counterparts planned for L9. Endurance Training (139) has not been rescheduled; current L2 remains visible.",
+  "classFirstAttacks": {
+    "adventurer": null,
+    "butcher": {
+      "nr": 87,
+      "level": 6
+    },
+    "druid": {
+      "nr": 36,
+      "level": 6
+    },
+    "gladiator": {
+      "nr": 61,
+      "level": 6
+    },
+    "healer": {
+      "nr": 36,
+      "level": 6
+    },
+    "herbalist": {
+      "nr": 16,
+      "level": 6
+    },
+    "hunter": {
+      "nr": 51,
+      "level": 6
+    },
+    "knight": {
+      "nr": 77,
+      "level": 6
+    },
+    "luminet": {
+      "nr": 231,
+      "level": 6
+    },
+    "ritualist": {
+      "nr": 49,
+      "level": 6
+    },
+    "shaman": null,
+    "summoner": {
+      "nr": 51,
+      "level": 6
+    },
+    "rogue": {
+      "nr": 27,
+      "level": 6
+    }
+  },
+  "movementWindows": {
+    "hunter": {
+      "skillNumbers": [
+        14,
+        25
+      ],
+      "levelRange": [
+        7,
+        8
+      ]
+    },
+    "summoner": {
+      "skillNumbers": [
+        21
+      ],
+      "levelRange": [
+        7,
+        8
+      ]
+    },
+    "adventurer": {
+      "skillNumbers": [
+        14,
+        21,
+        25
+      ],
+      "levelRange": [
+        7,
+        8
+      ]
+    }
+  },
+  "pending": {
+    "adventurerFirstAttack": {
+      "candidateNr": 248,
+      "candidateName": "Kreuzhieb",
+      "targetLevel": 6,
+      "reason": "User requested checking initial strength before selecting; skill rank 1 hits twice with 27 and 108 base damage, adding current physical attack on each hit. No nerf authorized."
+    },
+    "shamanFirstAttack": "Not yet named. Current class has neither Rotier Schlag nor Energieschlag. Beben and Felszähne are existing physical candidates, not selected.",
+    "movementExactLevels": "User specified L7 or L8; exact assignment within the window remains open.",
+    "enduranceTrainingFirstUnlock": "Not yet changed from current L2."
+  }
+}

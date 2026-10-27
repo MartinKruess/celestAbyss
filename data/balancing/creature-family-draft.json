@@ -1,0 +1,97 @@
+{
+  "status": "proposalForReview",
+  "databaseApplied": false,
+  "levelRange": {"minimum": 1, "maximum": 100},
+  "displayLevels": [1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
+  "growthMethod": "levelOneAttributesPlusPerLevelGain",
+  "conversionPolicy": "Draft uses the ordinary confirmed player conversion factors, without class modifiers. Only the matching offensive attribute contributes attack. Pet-specific conversions remain subject to review.",
+  "profileScalableStats": ["maxHealth", "maxMana", "physicalAttack", "magicalAttack", "physicalDefense", "magicalDefense"],
+  "profiles": {
+    "pet": {"label": "Pet-Grundprofil", "factor": 1},
+    "monsterExample": {"label": "Monster-Beispiel, nicht freigegeben", "factor": 2.5}
+  },
+  "families": [
+    {
+      "id": "wolf-body-1",
+      "name": "Wolf – Grundmodell 1",
+      "bodyGroup": "wolf-1",
+      "modelAsset": null,
+      "skeletonAsset": null,
+      "status": "draft",
+      "offensiveAttribute": "strength",
+      "damageType": "physical",
+      "baseAttacksPerSecond": 1,
+      "attributesLevelOne": {"strength": 5, "vitality": 4, "intelligence": 0, "wisdom": 1, "dexterity": 4, "agility": 5, "luck": 0},
+      "attributeGainPerLevel": {"strength": 1, "vitality": 0.7, "intelligence": 0, "wisdom": 0.2, "dexterity": 0.5, "agility": 0.3, "luck": 0},
+      "designIntent": "Physical melee starter template; moderate Health, low magical defense, no abilities or owner inheritance built into the family."
+    },
+    {
+      "id": "bird-body-1",
+      "name": "Vogel – Grundmodell 1",
+      "bodyGroup": "bird-1",
+      "modelAsset": null,
+      "skeletonAsset": null,
+      "status": "draft",
+      "offensiveAttribute": "strength",
+      "damageType": "physical",
+      "baseAttacksPerSecond": 1.05,
+      "attributesLevelOne": {"strength": 4, "vitality": 3, "intelligence": 0, "wisdom": 1, "dexterity": 5, "agility": 6, "luck": 0},
+      "attributeGainPerLevel": {"strength": 0.9, "vitality": 0.55, "intelligence": 0, "wisdom": 0.15, "dexterity": 0.6, "agility": 0.45, "luck": 0},
+      "designIntent": "First user-defined bird body group; more fragile than the Wolf. Flight, range, collision and abilities are not defined."
+    },
+    {
+      "id": "bird-body-2",
+      "name": "Vogel – Grundmodell 2",
+      "bodyGroup": "bird-2",
+      "modelAsset": null,
+      "skeletonAsset": null,
+      "status": "draft",
+      "offensiveAttribute": "strength",
+      "damageType": "physical",
+      "baseAttacksPerSecond": 1.15,
+      "attributesLevelOne": {"strength": 3, "vitality": 2.5, "intelligence": 0, "wisdom": 1, "dexterity": 6, "agility": 7, "luck": 0},
+      "attributeGainPerLevel": {"strength": 0.8, "vitality": 0.4, "intelligence": 0, "wisdom": 0.15, "dexterity": 0.7, "agility": 0.55, "luck": 0},
+      "designIntent": "Second user-defined bird body group; lighter hits, higher base attack frequency, less durability. Flight and abilities remain open."
+    }
+  ],
+  "variantGroups": [
+    {
+      "id": "wolves",
+      "label": "Wolfsvarianten – Körperbauzuordnung noch offen",
+      "variants": [
+        {"id": "grim-forest-wolf", "name": "Grimmiger Waldwolf", "familyId": null},
+        {"id": "frostclaw-wolf", "name": "Frostklauenwolf", "familyId": null},
+        {"id": "shadow-wolf", "name": "Schattenwolf", "familyId": null},
+        {"id": "sunfur-wolf", "name": "Sonnenfellwolf", "familyId": null},
+        {"id": "gray-wolf", "name": "Gewöhnlicher Grauwolf", "familyId": null},
+        {"id": "redmane-wolf", "name": "Rotmähnenwolf", "familyId": null},
+        {"id": "mist-wolf", "name": "Nebelwolf", "familyId": null}
+      ]
+    },
+    {
+      "id": "birds-1",
+      "label": "Erste Vogelart",
+      "variants": [
+        {"id": "silverwing-crane", "name": "Silberschwingenkranich", "familyId": "bird-body-1"},
+        {"id": "redcrest-ripper", "name": "Rotkammreißer", "familyId": "bird-body-1"},
+        {"id": "bluefeather", "name": "Blaufederkolben", "familyId": "bird-body-1"},
+        {"id": "forest-runner", "name": "Waldheinläufer", "familyId": "bird-body-1"},
+        {"id": "darkcrow-runner", "name": "Düsterkrähenläufer", "familyId": "bird-body-1"}
+      ]
+    },
+    {
+      "id": "birds-2",
+      "label": "Zweite Vogelart",
+      "variants": [
+        {"id": "sky-falcon", "name": "Himmelsfalk", "familyId": "bird-body-2"},
+        {"id": "redcrown-glider", "name": "Rotscheitelgleiter", "familyId": "bird-body-2"},
+        {"id": "forestcrown", "name": "Waldkronenschreiher", "familyId": "bird-body-2"},
+        {"id": "shadowtip", "name": "Schattenspitz", "familyId": "bird-body-2"},
+        {"id": "rockwing", "name": "Felsenflügel", "familyId": "bird-body-2", "nameStatus": "pending", "nameSuggestion": "Felsenschwinge"},
+        {"id": "moon-falcon", "name": "Mondvariante", "familyId": "bird-body-2", "nameStatus": "pending", "nameSuggestion": "Mondlauerfalke"}
+      ]
+    }
+  ],
+  "pendingBodyGroups": [{"id": "wolf-2", "status": "modelAndStatsPending"}],
+  "openRules": ["Exact model assets and skeletons", "Wolf assignments to body groups", "Variant-specific modifiers and abilities", "Rarity and taming base chances", "Experience and leveling costs", "Trust progression", "Pet skills and action costs", "Pet equipment", "Pet-specific movement and defensive combat rules"]
+}

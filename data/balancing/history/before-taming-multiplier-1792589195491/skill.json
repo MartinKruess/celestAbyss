@@ -1,0 +1,160 @@
+{
+  "_id": "6acc1c7e4826525c70d04be8",
+  "skillName_eng": "Tame",
+  "__v": 0,
+  "category": "creature",
+  "cd": 60,
+  "charClass": [
+    "Abenteuer",
+    "Butcher",
+    "Destroyer",
+    "Gladiator",
+    "Berserker",
+    "Knife",
+    "Templar",
+    "Herbalist",
+    "Witcher",
+    "Archer",
+    "Hunter",
+    "Druide",
+    "Alchemist",
+    "Summoner",
+    "Soulseeker",
+    "Bloodmage",
+    "Luminet",
+    "Lightmage",
+    "Healer",
+    "Priest",
+    "Ritualist",
+    "Shamane",
+    "High Elves",
+    "Villian",
+    "Shadowwarrior"
+  ],
+  "currentSkillLv": 0,
+  "currentUpgradeLv": 0,
+  "description_de": "Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt.",
+  "description_eng": "Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined. The definition contains three levels; normal other classes are capped at learned level 1. The Adventurer may learn level 3; a second specialist remains undefined.",
+  "dmgType": "spell",
+  "maxSkillLv": 3,
+  "maxUpgradeLv": 10,
+  "nr": 133,
+  "skillName_de": "Tamen",
+  "skillpoints": 1,
+  "castTimeScaling": {
+    "type": "linear",
+    "base": 3,
+    "perLevel": -0.5
+  },
+  "castTimeSeconds": 3,
+  "cooldownScaling": {
+    "type": "linear",
+    "base": 60,
+    "perLevel": -10
+  },
+  "mana": 100,
+  "resourceCosts": [
+    {
+      "resource": "mana",
+      "reference": "maxMana",
+      "unit": "flat",
+      "scaling": {
+        "type": "linear",
+        "base": 100,
+        "perLevel": 25
+      }
+    }
+  ],
+  "taming": {
+    "requiresMatchingItem": true,
+    "itemConsumptionStatus": "pending",
+    "creatureCounterStatus": "pending",
+    "baseSuccessChance": 0.5,
+    "successChanceScaling": {
+      "type": "linear",
+      "base": 0.5,
+      "perLevel": 0.15
+    }
+  },
+  "learningLimits": {
+    "defaultMaxLevel": 1,
+    "classOverrides": {
+      "Abenteuer": 3,
+      "Gladiator": 1,
+      "Berserker": 1
+    },
+    "status": "secondSpecialistPending"
+  },
+  "levelProgression": {
+    "version": 1,
+    "rules": [
+      {
+        "path": [
+          "castTimeScaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 3,
+            "perLevel": -0.5
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "cooldownScaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0.1,
+          "rule": {
+            "kind": "linear",
+            "base": 60,
+            "perLevel": -10
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "resourceCosts",
+          "0",
+          "scaling"
+        ],
+        "rule": {
+          "kind": "bounded",
+          "min": 0,
+          "rule": {
+            "kind": "linear",
+            "base": 100,
+            "perLevel": 25
+          }
+        },
+        "source": "storedFormula"
+      },
+      {
+        "path": [
+          "taming",
+          "successChanceScaling"
+        ],
+        "rule": {
+          "kind": "linear",
+          "base": 0.5,
+          "perLevel": 0.15
+        },
+        "source": "storedFormula"
+      }
+    ],
+    "extensionNeedsDefinition": []
+  },
+  "learningRequirements": {
+    "minimumCharacterLevel": 4,
+    "status": "defined",
+    "furtherSkillLevelsStatus": "pending"
+  },
+  "classificationVersion": 1,
+  "type": "skill"
+}

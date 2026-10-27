@@ -1,0 +1,2632 @@
+{
+  "status": "planningOnlyNotApplied",
+  "rules": "data/balancing/skill-point-budget-plan.json",
+  "classes": [
+    {
+      "classKey": "adventurer",
+      "fileKey": "adventurer",
+      "skillCount": 32,
+      "lateSkillCount": 2,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 9800,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 21,
+          "name": "Dash",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 41,
+          "name": "Erste Hilfe",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkt",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 245,
+          "name": "Breitschwert-Training",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 246,
+          "name": "Wilde Bindung",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 247,
+          "name": "Beharrlichkeit",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 248,
+          "name": "Kreuzhieb",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 249,
+          "name": "Rudelangriff",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 250,
+          "name": "Lebenstransfer",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 251,
+          "name": "Blutender Schnitt",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "butcher",
+      "fileKey": "butcher",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 3,
+          "name": "Abräumer",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 11,
+          "name": "Aufgeladener Schlag",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 12,
+          "name": "Aufladung",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 35,
+          "name": "Energieentladung",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 39,
+          "name": "Erdbrecher",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 87,
+          "name": "Rotier Schlag",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 89,
+          "name": "Schädelspalter",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 98,
+          "name": "Schockwelle der Regeneration",
+          "firstCharacterLevel": 35,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 131,
+          "name": "Zweihändiges Axttraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 172,
+          "name": "Kampfinstinkt",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 173,
+          "name": "Geist des Kriegers",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 174,
+          "name": "Blutrausch",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 175,
+          "name": "Bis in den Tot",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 176,
+          "name": "Ewiger Sieger",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 177,
+          "name": "Ungebrochen",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 227,
+          "name": "Dämonische Schockwelle",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 234,
+          "name": "Zorn des Henkers",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        }
+      ]
+    },
+    {
+      "classKey": "druid",
+      "fileKey": "druid",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 6,
+          "name": "Adrenalin",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 132,
+          "name": "Zweihändiges Streitkolbentraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 193,
+          "name": "Macht des Wassers",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 194,
+          "name": "Herr der Elemente",
+          "firstCharacterLevel": 35,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 203,
+          "name": "Kanalisierung",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 204,
+          "name": "Katalysator Rein",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 222,
+          "name": "Vergessener Zauber",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 225,
+          "name": "Macht des Geistes",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 253,
+          "name": "Gunst der Sylphen",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 261,
+          "name": "Dornige Rose",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "gladiator",
+      "fileKey": "gladiator",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 13,
+          "name": "Ausbruch der Wut",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 26,
+          "name": "Dual Axttraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 34,
+          "name": "Energieausbruch",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 52,
+          "name": "Glück des Narrens",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 61,
+          "name": "Holzspalter",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 96,
+          "name": "Schmetterschlag",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 109,
+          "name": "Sturm der Wut",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 127,
+          "name": "Wutexplosion",
+          "firstCharacterLevel": 50,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 128,
+          "name": "Wutklinge",
+          "firstCharacterLevel": 35,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 145,
+          "name": "Durchhalten",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 161,
+          "name": "Energie der Wut",
+          "firstCharacterLevel": 35,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 162,
+          "name": "Innere Kraft",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 163,
+          "name": "Volles Potential",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 230,
+          "name": "Blutiger Durchbruch",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 233,
+          "name": "Kriegerischer Ansturm",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "healer",
+      "fileKey": "healer",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 54,
+          "name": "Gefrierbrand",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 58,
+          "name": "Kuss der Aurora",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 64,
+          "name": "Heilung",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 78,
+          "name": "Göttliche Heilung",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 124,
+          "name": "Wiederherstellung",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 143,
+          "name": "Immunität",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 197,
+          "name": "Aurora-Segen",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 206,
+          "name": "Lunare Inkanation",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 207,
+          "name": "Himmlische Aufopferung",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 240,
+          "name": "Permafrost",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 242,
+          "name": "Assimilation",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "herbalist",
+      "fileKey": "herbalist",
+      "skillCount": 32,
+      "lateSkillCount": 0,
+      "unresolvedUnlockCount": 17,
+      "referenceTotalIgnoringStarterExceptions": null,
+      "skills": [
+        {
+          "nr": 4,
+          "name": "Abschöpfen",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 16,
+          "name": "Wasserfesseln",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 31,
+          "name": "Elektrisches Feld",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 32,
+          "name": "Elementarenergie",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 46,
+          "name": "Ewiges Eis",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 56,
+          "name": "Geladener Nebel",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 57,
+          "name": "Gezielter Blitz",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 69,
+          "name": "Kugelblitz",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 71,
+          "name": "Lebensessenz",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 81,
+          "name": "Naturgewalt",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 84,
+          "name": "Lähmung",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 112,
+          "name": "Tobender Sturm",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 123,
+          "name": "Wiederaufladung",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 164,
+          "name": "Natürlicher Schutz",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 166,
+          "name": "Alles im Fluss",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 167,
+          "name": "Entgiftung",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 169,
+          "name": "Innere Unruhe",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 205,
+          "name": "Katalysator Unrein",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 221,
+          "name": "Windschlitzer",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "hunter",
+      "fileKey": "hunter",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 5,
+          "name": "Adaption",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 10,
+          "name": "Auf der Jagd",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 14,
+          "name": "Ausweichrolle",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 18,
+          "name": "Bogenschießtraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 25,
+          "name": "Doppelsprung",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 37,
+          "name": "Entzugspfeil",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 53,
+          "name": "Gebundener Schuss",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 86,
+          "name": "Präzisionsschuss",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 88,
+          "name": "Salve",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 97,
+          "name": "Schockschuss",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 121,
+          "name": "Verstärkter Pfeil",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 122,
+          "name": "Voll Durchziehen",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 150,
+          "name": "Macht des Begleiters",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 152,
+          "name": "Giftpfeil",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 153,
+          "name": "Treffsicherheit",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 154,
+          "name": "Auge des Falken",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 156,
+          "name": "Waldläufer",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 157,
+          "name": "Pfeil der Vorfahren",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 226,
+          "name": "Seelenbegleiter",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "knight",
+      "fileKey": "knight",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 28,
+          "name": "Eiserner Schild",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 42,
+          "name": "Erwachen",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 45,
+          "name": "Erweiterung des Körpers",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 59,
+          "name": "Göttlicher Schutz",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 75,
+          "name": "Verstärkung des Körpers",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 82,
+          "name": "Schutz Aura",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 93,
+          "name": "Schildangriffstraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 95,
+          "name": "Schildsturm",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 102,
+          "name": "Schwerttraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 107,
+          "name": "Stählerne Rüstung",
+          "firstCharacterLevel": 35,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 114,
+          "name": "Überlebenswille",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 140,
+          "name": "Standhaft",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 141,
+          "name": "Eiserner Wille",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 158,
+          "name": "Provozieren",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 160,
+          "name": "Stolz des Kriegers",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 171,
+          "name": "Aktive Deckung",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "luminet",
+      "fileKey": "luminet",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 1,
+      "referenceTotalIgnoringStarterExceptions": null,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 8,
+          "name": "Astralkörper",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 41,
+          "name": "Erste Hilfe",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 60,
+          "name": "Hoffnungsschimmer",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 74,
+          "name": "Festigung des Glaubens",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 116,
+          "name": "Unerschöpfliche Hoffnung",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 117,
+          "name": "Urteil des Himmels",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 165,
+          "name": "Aura Unterdrückung",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 208,
+          "name": "Das ewige Wissen",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 211,
+          "name": "Aurora Wellen",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 213,
+          "name": "Strafendes Licht",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 215,
+          "name": "Heiliges Kreuz",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 216,
+          "name": "Heilige Vernichtung",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 218,
+          "name": "Licht kristallenes Gefängnis",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 228,
+          "name": "Geheiligte Barriere",
+          "firstCharacterLevel": null,
+          "plannedTotal": null
+        },
+        {
+          "nr": 231,
+          "name": "Luminus",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 260,
+          "name": "Läuterung",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "ritualist",
+      "fileKey": "ritualist",
+      "skillCount": 32,
+      "lateSkillCount": 5,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10100,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 48,
+          "name": "Feuer der Verdammten",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 49,
+          "name": "Feuerball",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 72,
+          "name": "Lebenssauger",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 83,
+          "name": "Opfergabe",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 99,
+          "name": "Schrei der Unterwelt",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 100,
+          "name": "Schwäche des Fleisches",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 103,
+          "name": "Seelenfessel",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 104,
+          "name": "Seelenqual",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 105,
+          "name": "Seelenernte",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 110,
+          "name": "Sturm des Feuers",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 120,
+          "name": "Reaper",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 178,
+          "name": "Geist des Feuers",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 180,
+          "name": "Seelenplage",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 181,
+          "name": "Arkane Aufladung",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 209,
+          "name": "Verloren in der Dunkelheit",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 214,
+          "name": "Ausbrennen",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 232,
+          "name": "Dunkler Impuls",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 235,
+          "name": "Meteoritenschauer",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 236,
+          "name": "Teufelspakt",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 237,
+          "name": "Morrak´s Meister",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 241,
+          "name": "Zahl der Opfer",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        }
+      ]
+    },
+    {
+      "classKey": "villian",
+      "fileKey": "rogue",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 17,
+          "name": "Blutklinge",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 20,
+          "name": "Brecher des Lichts",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 22,
+          "name": "Dolchtraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 27,
+          "name": "Dunkler Schlag",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 65,
+          "name": "Klingentornado",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 67,
+          "name": "Körperbeherrschung",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 70,
+          "name": "Kunai Todesstoß",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 90,
+          "name": "Schattendolch",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 91,
+          "name": "Schattenfalle",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 92,
+          "name": "Schattenschlag",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 111,
+          "name": "Sturmklinge",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 113,
+          "name": "Tödlicher Tanz",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 115,
+          "name": "Überschallklinge",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 126,
+          "name": "Wirbelnde Klinge",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 146,
+          "name": "List des Schurken",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 188,
+          "name": "Dunkler Schleier",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 189,
+          "name": "Herz des Verräters",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 238,
+          "name": "Attentäter",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 243,
+          "name": "Technische Perfektion",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        }
+      ]
+    },
+    {
+      "classKey": "shaman",
+      "fileKey": "shaman",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 1,
+          "name": "Erleuchtung",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 6,
+          "name": "Adrenalin",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 15,
+          "name": "Beben",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 33,
+          "name": "Energie Umwandler",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 38,
+          "name": "Erdbeben",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 44,
+          "name": "Erweiterung des Geistes",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 50,
+          "name": "Feuerlanze",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 62,
+          "name": "Infernal Zyklon",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 76,
+          "name": "Infernaler Kreuzschlag",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 106,
+          "name": "Sprungschlag",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 149,
+          "name": "Macht der Wildnis",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 192,
+          "name": "Macht des Felsens",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 202,
+          "name": "Verbrennen",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 223,
+          "name": "Geschwindigkeit der Dox",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 224,
+          "name": "Macht des Feuers",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 252,
+          "name": "Streitkolbentraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 254,
+          "name": "Weisheit des Salamanders",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 255,
+          "name": "Felszähne",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 256,
+          "name": "Felsensalve",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 257,
+          "name": "Feurige Leidenschaft",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 258,
+          "name": "Erdsäule",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 259,
+          "name": "Weisheit des Erdweisen",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 263,
+          "name": "Stoßgebet",
+          "firstCharacterLevel": 17,
+          "plannedTotal": 300
+        }
+      ]
+    },
+    {
+      "classKey": "summoner",
+      "fileKey": "summoner",
+      "skillCount": 32,
+      "lateSkillCount": 4,
+      "unresolvedUnlockCount": 0,
+      "referenceTotalIgnoringStarterExceptions": 10000,
+      "skills": [
+        {
+          "nr": 2,
+          "name": "Überleben",
+          "firstCharacterLevel": 1,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 7,
+          "name": "Armbrusttraining",
+          "firstCharacterLevel": 15,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 21,
+          "name": "Dash",
+          "firstCharacterLevel": 8,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 24,
+          "name": "Doppelschuss",
+          "firstCharacterLevel": 22,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 43,
+          "name": "Erweiterung der Sinne",
+          "firstCharacterLevel": 9,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 47,
+          "name": "Explosionspfeil",
+          "firstCharacterLevel": 27,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 51,
+          "name": "Feuerpfeil",
+          "firstCharacterLevel": 6,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 63,
+          "name": "Kettenschuss",
+          "firstCharacterLevel": 12,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 66,
+          "name": "Kopfschuss",
+          "firstCharacterLevel": 47,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 80,
+          "name": "Beweglichkeit",
+          "firstCharacterLevel": 37,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 119,
+          "name": "Verbessertes Nachladen",
+          "firstCharacterLevel": 23,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 133,
+          "name": "Tamen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 134,
+          "name": "Bindung",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 135,
+          "name": "Kontrolle",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 136,
+          "name": "Beschwören",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 137,
+          "name": "Zurückrufen",
+          "firstCharacterLevel": 5,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 138,
+          "name": "Zucht",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 139,
+          "name": "Ausdauertraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 142,
+          "name": "Ausweichtraining",
+          "firstCharacterLevel": 10,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 144,
+          "name": "Rüstungstraining",
+          "firstCharacterLevel": 4,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 147,
+          "name": "Erweckung der Leidenschaft",
+          "firstCharacterLevel": 30,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 148,
+          "name": "Scharfer Instinkt",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 183,
+          "name": "Gute Reflexe",
+          "firstCharacterLevel": 33,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 184,
+          "name": "Hinterhältiger Pfeil",
+          "firstCharacterLevel": 21,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 185,
+          "name": "Seelenschuss",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 186,
+          "name": "Seelensammler",
+          "firstCharacterLevel": 42,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 187,
+          "name": "Hartes Training",
+          "firstCharacterLevel": 20,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 190,
+          "name": "Keine Gnade",
+          "firstCharacterLevel": 60,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 191,
+          "name": "Flinke Füße",
+          "firstCharacterLevel": 25,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 201,
+          "name": "Waffentraining",
+          "firstCharacterLevel": 2,
+          "plannedTotal": 300
+        },
+        {
+          "nr": 229,
+          "name": "Spektralketten",
+          "firstCharacterLevel": 65,
+          "plannedTotal": 400
+        },
+        {
+          "nr": 262,
+          "name": "Durchdringender Schuss",
+          "firstCharacterLevel": 55,
+          "plannedTotal": 400
+        }
+      ]
+    }
+  ]
+}

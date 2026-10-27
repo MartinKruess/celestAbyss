@@ -30,7 +30,12 @@ if(passiveOnly){
  await fs.writeFile(remainingPassives?'docs/balancing/remaining-passive-skills.md':'docs/balancing/passive-skills.md',md);
  console.log(`Generated passive Markdown catalog with ${skills.length} skills.`);
 }else{
-await fs.writeFile('docs/balancing/all-skills.md',md);
+const allSkillsPath='docs/balancing/all-skills.md';
+if(await fs.readFile(allSkillsPath,'utf8').catch(error=>{if(error.code==='ENOENT')return null;throw error;}) !== md){
+  const temporaryPath=allSkillsPath+'.tmp';
+  await fs.writeFile(temporaryPath,md);
+  await fs.rename(temporaryPath,allSkillsPath);
+}
 const path='docs/skill-catalog.md';
 let intro=await fs.readFile(path,'utf8');
 intro=intro.replace(/der \d+ aktuellen Skilldefinitionen/,`der ${skills.length} aktuellen Skilldefinitionen`).replace(/die \d+ Einträge ohne eindeutige Namenszuordnung/,`die ${manifest.unresolvedSourceEntries} Einträge ohne eindeutige Namenszuordnung`);

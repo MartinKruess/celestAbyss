@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "status": "approvedCalculationRule",
+  "scope": "Direct base weapon attack and armor/shield defense only; no random affixes, gems, attributes, speed or skill bonuses multiplied.",
+  "calculation": "Base value at +0 multiplied by 1 + upgradeLevel * basisPointsPerUpgrade / 10000; no compounding.",
+  "rounding": "Half up to two decimal places for each individual direct item stat; whole numbers for display only.",
+  "ranks": {
+    "1": { "maximumUpgrade": 0, "basisPointsPerUpgrade": null, "access": "Not upgradeable" },
+    "2": { "maximumUpgrade": 1, "basisPointsPerUpgrade": null, "access": "Smith tutorial only; percentage and exact quest level pending" },
+    "3": { "maximumUpgrade": 10, "basisPointsPerUpgrade": 550, "access": "Independent smithing from character level 40" },
+    "4": { "maximumUpgrade": 10, "basisPointsPerUpgrade": 530 },
+    "5": { "maximumUpgrade": 10, "basisPointsPerUpgrade": 510 },
+    "6": { "maximumUpgrade": 10, "basisPointsPerUpgrade": 490 }
+  },
+  "optimalProgression": {
+    "firstCharacterLevel": 40,
+    "firstEquipmentRank": 3,
+    "levelsPerRank": 20,
+    "levelsFromRankUnlockToPlus10": 19,
+    "maximumEquipmentRank": 6,
+    "maximumUpgrade": 10,
+    "rounding": "At integer character levels, floor((level - rankStartLevel) * 10 / 19), capped at +10. New rank resets to +0.",
+    "scope": "Optimal progression reference for balance calculations; does not grant upgrades to characters. Earlier tutorial progression remains separate."
+  },
+  "pending": ["Upgrade success probabilities, materials, prices and breakage rules", "R2 tutorial stat percentage", "Lower-progression comparison alongside the optimal reference"]
+}

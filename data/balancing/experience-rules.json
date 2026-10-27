@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "maximumLevel": 200,
+  "reference": "overworldWithoutBoosters",
+  "timeCurve": {
+    "baseHours": 0.52,
+    "quadraticHours": 0.00083,
+    "starterDecay": 0.8,
+    "formula": "(baseHours + quadraticHours * (level - 1)^2) * (1 - starterDecay^level)"
+  },
+  "rewardReference": {
+    "status": "defined",
+    "scope": "balancingReferenceNotYetLiveMonsterPayout",
+    "baseXp": 2,
+    "levelFactor": 1.0874528964263317,
+    "anchor": {"level": 45, "xp": 80},
+    "roundMonsterXp": true,
+    "killsPerHour": {"base": 30, "levelFactor": 1.0704561054235713, "cap": 600},
+    "killRateMeaning": "Effective overworld rate including starter orientation and ordinary pauses; 30/h at L1, 600/h from L45. Planning assumption, not a combat speed measurement.",
+    "boostMultiplier": 1
+  },
+  "petExperience": {
+    "status": "defined",
+    "thresholdPolicy": "sameAsPlayer",
+    "existingBreedSkillNumber": 138,
+    "requiresLearnedBreed": true,
+    "gainMultiplierByLearnedBreedLevel": {"0": 0, "1": 1.1, "2": 1.2, "3": 1.3},
+    "learningLimitsSource": "Existing skill 138; normal classes cap 1, Adventurer cap 3. Second specialist and later learning unlocks remain pending.",
+    "fractionalXpPolicy": "retainHundredthsDoNotRoundEachAwardToWholeXp"
+  },
+  "rounding": "integerXpHalfUpPerLevel",
+  "maximumLevelNeedsXp": null,
+  "skillPointPolicy": "unchangedNotDefinedByThisCurve"
+}

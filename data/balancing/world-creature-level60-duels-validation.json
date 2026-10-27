@@ -1,0 +1,16 @@
+{
+  "directNewAndCoreTests": 37,
+  "knownBroaderBaselineFailures": 4,
+  "baselineReproducedUsingUnmodifiedHeadSimulator": true,
+  "broaderSummary": [
+    "ℹ tests 85",
+    "ℹ pass 81",
+    "ℹ fail 4"
+  ],
+  "knownFailureNames": [
+    "✖ only approved eight group buffs change; self buffs, passives, costs, timing and levels stay identical",
+    "✖ Water and Fire convert their old attack curves exactly at all ten levels without changing mana, timing or other definitions",
+    "✖ mixed INT passives lose only the special attribute; pure sources convert to INT",
+    "✖ Reaper grants live INT conversion and the full-reserve comparison does not count it twice"
+  ]
+}

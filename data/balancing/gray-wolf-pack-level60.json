@@ -1,0 +1,2432 @@
+{
+  "status": "stationaryPackProbeNotUnreal",
+  "group": {
+    "key": "gray-wolf-pack",
+    "name": "Grauwolfrudel",
+    "alwaysTogether": true,
+    "engageTogether": true,
+    "sameLevel": true,
+    "members": [
+      {
+        "variantKey": "world-gray-wolf-pack-leader",
+        "count": 1,
+        "leader": true
+      },
+      {
+        "variantKey": "world-gray-wolf",
+        "count": 2,
+        "leader": false
+      }
+    ],
+    "notes": [
+      "User rule: gray wolf pack leader is encountered only with two normal gray wolves. No monster skills yet. Actual spawner and aggro-link runtime implementation remain pending."
+    ]
+  },
+  "level": 60,
+  "enemies": [
+    {
+      "id": "world-gray-wolf-pack-leader-1",
+      "name": "Rudelführer – Gewöhnlicher Grauwolf",
+      "leader": true,
+      "stats": {
+        "maxHealth": 5737,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 293.36879836140184,
+        "magicalAttack": 0,
+        "physicalDefense": 97.78959945380066,
+        "magicalDefense": 68.45271961766045,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "attackInterval": 1.098901098901099
+    },
+    {
+      "id": "world-gray-wolf-1",
+      "name": "Gewöhnlicher Grauwolf",
+      "leader": false,
+      "stats": {
+        "maxHealth": 5215,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 266.6989076012744,
+        "magicalAttack": 0,
+        "physicalDefense": 88.89963586709149,
+        "magicalDefense": 62.22974510696404,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "attackInterval": 1.098901098901099
+    },
+    {
+      "id": "world-gray-wolf-2",
+      "name": "Gewöhnlicher Grauwolf",
+      "leader": false,
+      "stats": {
+        "maxHealth": 5215,
+        "maxMana": 151,
+        "maxStamina": 1,
+        "physicalAttack": 266.6989076012744,
+        "magicalAttack": 0,
+        "physicalDefense": 88.89963586709149,
+        "magicalDefense": 62.22974510696404,
+        "strength": 0,
+        "vitality": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "dexterity": 0,
+        "agility": 0,
+        "luck": 0,
+        "attackSpeed": 0.7,
+        "movementSpeed": 0.95,
+        "accuracy": 0,
+        "dodge": 0,
+        "critChanceRating": 0,
+        "criticalDamageBonus": 0,
+        "block": 0,
+        "penetration": 0,
+        "healthRegen": 0.1,
+        "manaRegen": 0,
+        "physicalSkillDamageBonus": 0,
+        "magicalSkillDamageBonus": 0
+      },
+      "attackInterval": 1.098901098901099
+    }
+  ],
+  "assumptions": [
+    "Level 60, R4 +0, current passives and learned skill caps, no optional self/group buffs, random affixes, upgrades or gems. Fresh resources for each fight.",
+    "One gray wolf pack leader plus two normal gray wolves, all level 60, simultaneous aggro. Each has separate HP, defenses and physical attacks. Dead wolves stop attacking. No monster skills.",
+    "Two focus orders: companions first or leader first. Single-target overkill never spills to another enemy. All wolves remain in range; automatic retargeting happens on each damage impact, including lingering effects. This simplification does not model fixed DOT ownership or projectile flight.",
+    "Explicit damaging area definitions hit all living eligible wolves up to stored target caps. A supportive field alone does not make its initial damage an AoE. Knight field 40 hits the pack; Healer 101 remains single-target. Druid 9 is limited to one enemy by the solo group-size rule.",
+    "All wolves attack the player; Druid Nature Spirit contributes damage but cannot tank. No movement, random crit/dodge/block, control durations or armor debuffs. These are the same simplified combat omissions as the earlier solo probes.",
+    "Attack frequency provisional: 1.3 × attackSpeed = 0.91 attacks/s per living wolf. First hit after a full interval; synchronized enemy hits precede player impacts on equal frames.",
+    "No HP regeneration in combat; mana regeneration continues. Healer may use self-heal 108 and group heal 78 below 60% HP with real costs, casts and cooldowns. No potions."
+  ],
+  "inputHashes": {
+    "data/skills.json": "dd889c86da9879f7526259d3a089746c908e768b253a652522f85887a91e81fe",
+    "data/balancing/class-comparison-level60.json": "72fb6e05ec7deecae4cb0461d17b662c98ea3f53cb3a4814ea4861a40e4f9450",
+    "data/balancing/ranked-equipment.json": "d0cd2b78ae6331ad531b1b0676937655bfa59b1573059d1aae655cb973b173df",
+    "data/balancing/attribute-model.json": "163a30637a8c2fdc52d49b140a871c4e2a3293d08193fdc47887884606e7eb5f",
+    "data/balancing/all-class-damage-rotations.json": "b274d7e7a30f6da989ce647a6bbde846b03085d4c3891ee453543202add5acd3",
+    "data/balancing/all-class-timed-damage.json": "a67d5463f8ddc2314240b27ee99e0a7ee8839613d2fb1ea124fa6542b4fd9aef",
+    "data/creatures/base-creature.json": "63265714bb3e6bc012ed6bf8586265929a3255d9d285e2fb33416559a863d809",
+    "data/creatures/world-reference-level1.json": "f7da6b52bb6315482bb59387df67cefc1425183690484a16c16f3389cab012e2",
+    "data/creatures/world-variant-templates.json": "b52f49505c028c8f8a362d3c72123586c37639400f38cd62537a1ed346d1f5a4",
+    "services/enemyPack.js": "13755570fcfb2264101bad0bd2ddfe6f860ccd11e5aab8043cac6e5d841ddcfa",
+    "services/timedDamageSimulation.js": "2b4b4fbb489cf7a272c59aceafe97a192c915bc9b2db257cc15889ed2af3f45d",
+    "scripts/simulateGrayWolfPack.js": "85539a3623d0f45b79ab78d2d1ac3ab49f696ad2f2790a58936e45038b6fba0c"
+  },
+  "results": [
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "focus": "addsFirst",
+      "outcome": "win",
+      "seconds": 25.29,
+      "minimumHealthPercent": 56.92800476690078,
+      "finalHealth": 2404.6389213538887,
+      "maxHealth": 4224,
+      "finalMana": 2104.7999999999993,
+      "manaSpent": 2257,
+      "manaRegenerated": 1108.8000000000002,
+      "healing": 0,
+      "incomingDamage": 1819.3610786461152,
+      "enemyHits": 28,
+      "totalDamage": 16166.999999999995,
+      "enemyDeaths": [
+        {
+          "time": 0.7,
+          "id": "world-gray-wolf-1"
+        },
+        {
+          "time": 6,
+          "id": "world-gray-wolf-2"
+        },
+        {
+          "time": 25.29,
+          "id": "world-gray-wolf-pack-leader-1"
+        }
+      ],
+      "remainingEnemies": [
+        {
+          "id": "world-gray-wolf-pack-leader-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-2",
+          "health": 0
+        }
+      ],
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "kind": "auto",
+          "applications": 21,
+          "hits": 21,
+          "damage": 4544.6976618115605,
+          "manaSpent": 0,
+          "healing": 0,
+          "firstUse": 2.7,
+          "lastUse": 25.29,
+          "useTimes": [
+            2.7,
+            3.8,
+            4.9,
+            6,
+            7.1,
+            8.2,
+            9.3,
+            10.4,
+            11.5,
+            12.6,
+            13.69,
+            14.79,
+            15.89,
+            16.99,
+            18.09,
+            19.19,
+            20.89,
+            21.99,
+            23.09,
+            24.19,
+            25.29
+          ]
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 3571.9223884842977,
+          "manaSpent": 317,
+          "healing": 0,
+          "firstUse": 0.3,
+          "lastUse": 0.3,
+          "useTimes": [
+            0.3
+          ]
+        },
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 2716.5888443331814,
+          "manaSpent": 756,
+          "healing": 0,
+          "firstUse": 0,
+          "lastUse": 0,
+          "useTimes": [
+            0
+          ]
+        },
+        {
+          "nr": 95,
+          "name": "Schildsturm",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 1482.386090578061,
+          "manaSpent": 372,
+          "healing": 0,
+          "firstUse": 0.1,
+          "lastUse": 0.1,
+          "useTimes": [
+            0.1
+          ]
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "kind": "skill",
+          "applications": 2,
+          "hits": 2,
+          "damage": 1266.740757624033,
+          "manaSpent": 238,
+          "healing": 0,
+          "firstUse": 1.5,
+          "lastUse": 19.69,
+          "useTimes": [
+            1.5,
+            19.69
+          ]
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 1087.0101916249432,
+          "manaSpent": 262,
+          "healing": 0,
+          "firstUse": 0.8,
+          "lastUse": 0.8,
+          "useTimes": [
+            0.8
+          ]
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 840.8327451069641,
+          "manaSpent": 180,
+          "healing": 0,
+          "firstUse": 1,
+          "lastUse": 1,
+          "useTimes": [
+            1
+          ]
+        },
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 656.8213204369596,
+          "manaSpent": 132,
+          "healing": 0,
+          "firstUse": 1.3,
+          "lastUse": 1.3,
+          "useTimes": [
+            1.3
+          ]
+        }
+      ],
+      "damageHits": [
+        {
+          "time": 0,
+          "nr": 23,
+          "target": "world-gray-wolf-1",
+          "raw": 3277.42,
+          "amount": 2716.5888443331814
+        },
+        {
+          "time": 0.2,
+          "nr": 95,
+          "target": "world-gray-wolf-1",
+          "raw": 1788.42,
+          "amount": 1482.386090578061
+        },
+        {
+          "time": 0.7,
+          "nr": 40,
+          "target": "world-gray-wolf-1",
+          "raw": 1548.42,
+          "amount": 1016.0250650887576
+        },
+        {
+          "time": 0.7,
+          "nr": 40,
+          "target": "world-gray-wolf-2",
+          "raw": 1548.42,
+          "amount": 1283.4548206645427
+        },
+        {
+          "time": 0.7,
+          "nr": 40,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1548.42,
+          "amount": 1272.442502730997
+        },
+        {
+          "time": 0.9,
+          "nr": 94,
+          "target": "world-gray-wolf-2",
+          "raw": 1311.42,
+          "amount": 1087.0101916249432
+        },
+        {
+          "time": 1.2,
+          "nr": 77,
+          "target": "world-gray-wolf-2",
+          "raw": 1014.4200000000001,
+          "amount": 840.8327451069641
+        },
+        {
+          "time": 1.4,
+          "nr": 19,
+          "target": "world-gray-wolf-2",
+          "raw": 792.4200000000001,
+          "amount": 656.8213204369596
+        },
+        {
+          "time": 1.6,
+          "nr": 55,
+          "target": "world-gray-wolf-2",
+          "raw": 767.4200000000001,
+          "amount": 636.0993131543014
+        },
+        {
+          "time": 2.7,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 3.8,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 4.9,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 6,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 10.99113427400971
+        },
+        {
+          "time": 7.1,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 8.2,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 9.3,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 10.4,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 11.5,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 12.6,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 13.69,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 14.79,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 15.89,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 16.99,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 18.09,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 19.19,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 19.79,
+          "nr": 55,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 767.4200000000001,
+          "amount": 630.6414444697315
+        },
+        {
+          "time": 20.89,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 21.99,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 23.09,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 24.19,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 231.26204073736915
+        },
+        {
+          "time": 25.29,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 281.42,
+          "amount": 133.72340100136398
+        }
+      ],
+      "warnings": [
+        "Donnernde Lanze: keine feste Castzeit gespeichert; Ansturm-/Animationsdauer im vereinbarten Test ignoriert (0 s)."
+      ]
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "focus": "leaderFirst",
+      "outcome": "win",
+      "seconds": 27.49,
+      "minimumHealthPercent": 51.668388187281366,
+      "finalHealth": 2182.472717030765,
+      "maxHealth": 4224,
+      "finalMana": 2243.399999999999,
+      "manaSpent": 2257,
+      "manaRegenerated": 1247.4,
+      "healing": 0,
+      "incomingDamage": 2041.5272829692358,
+      "enemyHits": 34,
+      "totalDamage": 16166.999999999993,
+      "enemyDeaths": [
+        {
+          "time": 0.9,
+          "id": "world-gray-wolf-pack-leader-1"
+        },
+        {
+          "time": 10.4,
+          "id": "world-gray-wolf-1"
+        },
+        {
+          "time": 27.49,
+          "id": "world-gray-wolf-2"
+        }
+      ],
+      "remainingEnemies": [
+        {
+          "id": "world-gray-wolf-pack-leader-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-2",
+          "health": 0
+        }
+      ],
+      "skills": [
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "kind": "auto",
+          "applications": 23,
+          "hits": 23,
+          "damage": 5093.237666818386,
+          "manaSpent": 0,
+          "healing": 0,
+          "firstUse": 2.7,
+          "lastUse": 27.49,
+          "useTimes": [
+            2.7,
+            3.8,
+            4.9,
+            6,
+            7.1,
+            8.2,
+            9.3,
+            10.4,
+            11.5,
+            12.6,
+            13.69,
+            14.79,
+            15.89,
+            16.99,
+            18.09,
+            19.19,
+            20.89,
+            21.99,
+            23.09,
+            24.19,
+            25.29,
+            26.39,
+            27.49
+          ]
+        },
+        {
+          "nr": 40,
+          "name": "Erlösendes Feld",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 3839.352144060082,
+          "manaSpent": 317,
+          "healing": 0,
+          "firstUse": 0.3,
+          "lastUse": 0.3,
+          "useTimes": [
+            0.3
+          ]
+        },
+        {
+          "nr": 23,
+          "name": "Donnernde Lanze",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 2693.2799287665,
+          "manaSpent": 756,
+          "healing": 0,
+          "firstUse": 0,
+          "lastUse": 0,
+          "useTimes": [
+            0
+          ]
+        },
+        {
+          "nr": 95,
+          "name": "Schildsturm",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 1469.6668996358671,
+          "manaSpent": 372,
+          "healing": 0,
+          "firstUse": 0.1,
+          "lastUse": 0.1,
+          "useTimes": [
+            0.1
+          ]
+        },
+        {
+          "nr": 55,
+          "name": "Brecher des Geistes",
+          "kind": "skill",
+          "applications": 2,
+          "hits": 2,
+          "damage": 1272.1986263086028,
+          "manaSpent": 238,
+          "healing": 0,
+          "firstUse": 1.5,
+          "lastUse": 19.69,
+          "useTimes": [
+            1.5,
+            19.69
+          ]
+        },
+        {
+          "nr": 77,
+          "name": "Mächtiger Hieb",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 840.8327451069641,
+          "manaSpent": 180,
+          "healing": 0,
+          "firstUse": 1,
+          "lastUse": 1,
+          "useTimes": [
+            1
+          ]
+        },
+        {
+          "nr": 19,
+          "name": "Brecher der Deckung",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 656.8213204369596,
+          "manaSpent": 132,
+          "healing": 0,
+          "firstUse": 1.3,
+          "lastUse": 1.3,
+          "useTimes": [
+            1.3
+          ]
+        },
+        {
+          "nr": 94,
+          "name": "Schildstoß",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 301.61066886663616,
+          "manaSpent": 262,
+          "healing": 0,
+          "firstUse": 0.8,
+          "lastUse": 0.8,
+          "useTimes": [
+            0.8
+          ]
+        }
+      ],
+      "damageHits": [
+        {
+          "time": 0,
+          "nr": 23,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 3277.42,
+          "amount": 2693.2799287665
+        },
+        {
+          "time": 0.2,
+          "nr": 95,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1788.42,
+          "amount": 1469.6668996358671
+        },
+        {
+          "time": 0.7,
+          "nr": 40,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1548.42,
+          "amount": 1272.442502730997
+        },
+        {
+          "time": 0.7,
+          "nr": 40,
+          "target": "world-gray-wolf-1",
+          "raw": 1548.42,
+          "amount": 1283.4548206645427
+        },
+        {
+          "time": 0.7,
+          "nr": 40,
+          "target": "world-gray-wolf-2",
+          "raw": 1548.42,
+          "amount": 1283.4548206645427
+        },
+        {
+          "time": 0.9,
+          "nr": 94,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1311.42,
+          "amount": 301.61066886663616
+        },
+        {
+          "time": 1.2,
+          "nr": 77,
+          "target": "world-gray-wolf-1",
+          "raw": 1014.4200000000001,
+          "amount": 840.8327451069641
+        },
+        {
+          "time": 1.4,
+          "nr": 19,
+          "target": "world-gray-wolf-1",
+          "raw": 792.4200000000001,
+          "amount": 656.8213204369596
+        },
+        {
+          "time": 1.6,
+          "nr": 55,
+          "target": "world-gray-wolf-1",
+          "raw": 767.4200000000001,
+          "amount": 636.0993131543014
+        },
+        {
+          "time": 2.7,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 3.8,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 4.9,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 6,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 7.1,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 8.2,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 9.3,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 10.4,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 281.42,
+          "amount": 164.94735958124693
+        },
+        {
+          "time": 11.5,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 12.6,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 13.69,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 14.79,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 15.89,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 16.99,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 18.09,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 19.19,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 19.79,
+          "nr": 55,
+          "target": "world-gray-wolf-2",
+          "raw": 767.4200000000001,
+          "amount": 636.0993131543014
+        },
+        {
+          "time": 20.89,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 21.99,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 23.09,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 24.19,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 25.29,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 26.39,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 233.2634915794265
+        },
+        {
+          "time": 27.49,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 281.42,
+          "amount": 29.75698406918491
+        }
+      ],
+      "warnings": [
+        "Donnernde Lanze: keine feste Castzeit gespeichert; Ansturm-/Animationsdauer im vereinbarten Test ignoriert (0 s)."
+      ]
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "focus": "addsFirst",
+      "outcome": "win",
+      "seconds": 12.3,
+      "minimumHealthPercent": 54.9201422902878,
+      "finalHealth": 1636.716273424131,
+      "maxHealth": 2523,
+      "finalMana": 2133,
+      "manaSpent": 2421,
+      "manaRegenerated": 772,
+      "healing": 1694.1891219551444,
+      "incomingDamage": 2580.472848531013,
+      "enemyHits": 20,
+      "totalDamage": 16167,
+      "enemyDeaths": [
+        {
+          "time": 3.3,
+          "id": "world-gray-wolf-1"
+        },
+        {
+          "time": 7.6,
+          "id": "world-gray-wolf-2"
+        },
+        {
+          "time": 12.3,
+          "id": "world-gray-wolf-pack-leader-1"
+        }
+      ],
+      "remainingEnemies": [
+        {
+          "id": "world-gray-wolf-pack-leader-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-2",
+          "health": 0
+        }
+      ],
+      "skills": [
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 5,
+          "damage": 5809.795363962222,
+          "manaSpent": 542,
+          "healing": 0,
+          "firstUse": 0,
+          "lastUse": 0,
+          "useTimes": [
+            0
+          ]
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 4622.6825745334545,
+          "manaSpent": 354,
+          "healing": 0,
+          "firstUse": 0.5,
+          "lastUse": 0.5,
+          "useTimes": [
+            0.5
+          ]
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "kind": "skill",
+          "applications": 4,
+          "hits": 4,
+          "damage": 1715.4603857532998,
+          "manaSpent": 104,
+          "healing": 0,
+          "firstUse": 3.8,
+          "lastUse": 10.85,
+          "useTimes": [
+            3.8,
+            6.15,
+            8.5,
+            10.85
+          ]
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 1188.9423395539372,
+          "manaSpent": 257,
+          "healing": 0,
+          "firstUse": 1,
+          "lastUse": 1,
+          "useTimes": [
+            1
+          ]
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 892.2832012517069,
+          "manaSpent": 155,
+          "healing": 0,
+          "firstUse": 2.4,
+          "lastUse": 2.4,
+          "useTimes": [
+            2.4
+          ]
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 5,
+          "damage": 878.1883170232137,
+          "manaSpent": 158,
+          "healing": 0,
+          "firstUse": 1.8,
+          "lastUse": 1.8,
+          "useTimes": [
+            1.8
+          ]
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "kind": "auto",
+          "applications": 4,
+          "hits": 4,
+          "damage": 818.4262142808374,
+          "manaSpent": 0,
+          "healing": 0,
+          "firstUse": 5.25,
+          "lastUse": 12.3,
+          "useTimes": [
+            5.25,
+            7.6,
+            9.95,
+            12.3
+          ]
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 241.22160364132915,
+          "manaSpent": 97,
+          "healing": 0,
+          "firstUse": 3.1,
+          "lastUse": 3.1,
+          "useTimes": [
+            3.1
+          ]
+        },
+        {
+          "nr": 78,
+          "name": "Göttliche Heilung",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 0,
+          "damage": 0,
+          "manaSpent": 544,
+          "healing": 1294.1891219551444,
+          "firstUse": 3.5,
+          "lastUse": 3.5,
+          "useTimes": [
+            3.5
+          ]
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 0,
+          "damage": 0,
+          "manaSpent": 210,
+          "healing": 400,
+          "firstUse": 3.4,
+          "lastUse": 3.4,
+          "useTimes": [
+            3.4
+          ]
+        }
+      ],
+      "damageHits": [
+        {
+          "time": 1.7,
+          "nr": 101,
+          "target": "world-gray-wolf-1",
+          "raw": 1398.4,
+          "amount": 1188.9423395539372
+        },
+        {
+          "time": 1.9,
+          "nr": 239,
+          "target": "world-gray-wolf-1",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 1.9,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 1.9,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 579.2736000341375
+        },
+        {
+          "time": 2.3,
+          "nr": 30,
+          "target": "world-gray-wolf-1",
+          "raw": 856.9000000000001,
+          "amount": 728.5502651342741
+        },
+        {
+          "time": 2.9,
+          "nr": 217,
+          "target": "world-gray-wolf-1",
+          "raw": 1815.9,
+          "amount": 1543.9076046882112
+        },
+        {
+          "time": 2.9,
+          "nr": 217,
+          "target": "world-gray-wolf-2",
+          "raw": 1815.9,
+          "amount": 1543.9076046882112
+        },
+        {
+          "time": 2.9,
+          "nr": 217,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1815.9,
+          "amount": 1534.8673651570323
+        },
+        {
+          "time": 3,
+          "nr": 29,
+          "target": "world-gray-wolf-1",
+          "raw": 1049.478,
+          "amount": 892.2832012517069
+        },
+        {
+          "time": 3.3,
+          "nr": 30,
+          "target": "world-gray-wolf-1",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 3.3,
+          "nr": 68,
+          "target": "world-gray-wolf-1",
+          "raw": 796.5180000000001,
+          "amount": 241.22160364132915
+        },
+        {
+          "time": 3.4,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 3.4,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 579.2736000341375
+        },
+        {
+          "time": 3.95,
+          "nr": 36,
+          "target": "world-gray-wolf-2",
+          "raw": 505.90000000000003,
+          "amount": 430.12437756030954
+        },
+        {
+          "time": 4.3,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 4.9,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 4.9,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 579.2736000341375
+        },
+        {
+          "time": 5.25,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 400.90000000000003,
+          "amount": 340.8516761492945
+        },
+        {
+          "time": 5.3,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 6.3,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 6.3,
+          "nr": 36,
+          "target": "world-gray-wolf-2",
+          "raw": 505.90000000000003,
+          "amount": 430.12437756030954
+        },
+        {
+          "time": 6.4,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 6.4,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 579.2736000341375
+        },
+        {
+          "time": 7.6,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 400.90000000000003,
+          "amount": 27.02153409194341
+        },
+        {
+          "time": 7.9,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 579.2736000341375
+        },
+        {
+          "time": 8.65,
+          "nr": 36,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 505.90000000000003,
+          "amount": 427.60581531634045
+        },
+        {
+          "time": 9.95,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 400.90000000000003,
+          "amount": 338.85584376422395
+        },
+        {
+          "time": 11,
+          "nr": 36,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 505.90000000000003,
+          "amount": 427.60581531634045
+        },
+        {
+          "time": 12.3,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 400.90000000000003,
+          "amount": 111.6971602753755
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "focus": "leaderFirst",
+      "outcome": "win",
+      "seconds": 9.95,
+      "minimumHealthPercent": 54.9201422902878,
+      "finalHealth": 1866.9189602029815,
+      "maxHealth": 2523,
+      "finalMana": 1966,
+      "manaSpent": 2395,
+      "manaRegenerated": 579,
+      "healing": 1581.9593928151871,
+      "incomingDamage": 2238.0404326122057,
+      "enemyHits": 18,
+      "totalDamage": 16167.000000000002,
+      "enemyDeaths": [
+        {
+          "time": 3.4,
+          "id": "world-gray-wolf-pack-leader-1"
+        },
+        {
+          "time": 7.6,
+          "id": "world-gray-wolf-1"
+        },
+        {
+          "time": 9.95,
+          "id": "world-gray-wolf-2"
+        }
+      ],
+      "remainingEnemies": [
+        {
+          "id": "world-gray-wolf-pack-leader-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-2",
+          "health": 0
+        }
+      ],
+      "skills": [
+        {
+          "nr": 239,
+          "name": "Frostschauer",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 5,
+          "damage": 5942.540917523897,
+          "manaSpent": 542,
+          "healing": 0,
+          "firstUse": 0,
+          "lastUse": 0,
+          "useTimes": [
+            0
+          ]
+        },
+        {
+          "nr": 217,
+          "name": "Göttliche Nova",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 4622.6825745334545,
+          "manaSpent": 354,
+          "healing": 0,
+          "firstUse": 0.5,
+          "lastUse": 0.5,
+          "useTimes": [
+            0.5
+          ]
+        },
+        {
+          "nr": 36,
+          "name": "Energieschlag",
+          "kind": "skill",
+          "applications": 3,
+          "hits": 3,
+          "damage": 1290.3731326809286,
+          "manaSpent": 78,
+          "healing": 0,
+          "firstUse": 3.8,
+          "lastUse": 8.5,
+          "useTimes": [
+            3.8,
+            6.15,
+            8.5
+          ]
+        },
+        {
+          "nr": 101,
+          "name": "Schwerter des Lichtes",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 1181.980573509331,
+          "manaSpent": 257,
+          "healing": 0,
+          "firstUse": 1,
+          "lastUse": 1,
+          "useTimes": [
+            1
+          ]
+        },
+        {
+          "nr": 29,
+          "name": "Eislanze",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 887.0585013768775,
+          "manaSpent": 155,
+          "healing": 0,
+          "firstUse": 2.4,
+          "lastUse": 2.4,
+          "useTimes": [
+            2.4
+          ]
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 5,
+          "damage": 873.7032948338646,
+          "manaSpent": 158,
+          "healing": 0,
+          "firstUse": 1.8,
+          "lastUse": 1.8,
+          "useTimes": [
+            1.8
+          ]
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "kind": "auto",
+          "applications": 3,
+          "hits": 3,
+          "damage": 695.4138642011833,
+          "manaSpent": 0,
+          "healing": 0,
+          "firstUse": 5.25,
+          "lastUse": 9.95,
+          "useTimes": [
+            5.25,
+            7.6,
+            9.95
+          ]
+        },
+        {
+          "nr": 68,
+          "name": "Kristallisierte Wasserspähre",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 673.2471413404643,
+          "manaSpent": 97,
+          "healing": 0,
+          "firstUse": 3.1,
+          "lastUse": 3.1,
+          "useTimes": [
+            3.1
+          ]
+        },
+        {
+          "nr": 78,
+          "name": "Göttliche Heilung",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 0,
+          "damage": 0,
+          "manaSpent": 544,
+          "healing": 1281.9593928151871,
+          "firstUse": 3.5,
+          "lastUse": 3.5,
+          "useTimes": [
+            3.5
+          ]
+        },
+        {
+          "nr": 108,
+          "name": "Strahlendes Aurafeld",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 0,
+          "damage": 0,
+          "manaSpent": 210,
+          "healing": 300,
+          "firstUse": 3.4,
+          "lastUse": 3.4,
+          "useTimes": [
+            3.4
+          ]
+        }
+      ],
+      "damageHits": [
+        {
+          "time": 1.7,
+          "nr": 101,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1398.4,
+          "amount": 1181.980573509331
+        },
+        {
+          "time": 1.9,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 579.2736000341375
+        },
+        {
+          "time": 1.9,
+          "nr": 239,
+          "target": "world-gray-wolf-1",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 1.9,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 2.3,
+          "nr": 30,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 856.9000000000001,
+          "amount": 724.2842916477015
+        },
+        {
+          "time": 2.9,
+          "nr": 217,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1815.9,
+          "amount": 1534.8673651570323
+        },
+        {
+          "time": 2.9,
+          "nr": 217,
+          "target": "world-gray-wolf-1",
+          "raw": 1815.9,
+          "amount": 1543.9076046882112
+        },
+        {
+          "time": 2.9,
+          "nr": 217,
+          "target": "world-gray-wolf-2",
+          "raw": 1815.9,
+          "amount": 1543.9076046882112
+        },
+        {
+          "time": 3,
+          "nr": 29,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1049.478,
+          "amount": 887.0585013768775
+        },
+        {
+          "time": 3.3,
+          "nr": 30,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 44,
+          "amount": 37.190464269458346
+        },
+        {
+          "time": 3.3,
+          "nr": 68,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 796.5180000000001,
+          "amount": 673.2471413404643
+        },
+        {
+          "time": 3.4,
+          "nr": 239,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 685.3380000000001,
+          "amount": 119.09806266499811
+        },
+        {
+          "time": 3.4,
+          "nr": 239,
+          "target": "world-gray-wolf-1",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 3.4,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 3.95,
+          "nr": 36,
+          "target": "world-gray-wolf-1",
+          "raw": 505.90000000000003,
+          "amount": 430.12437756030954
+        },
+        {
+          "time": 4.3,
+          "nr": 30,
+          "target": "world-gray-wolf-1",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 4.9,
+          "nr": 239,
+          "target": "world-gray-wolf-1",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 4.9,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 5.25,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 400.90000000000003,
+          "amount": 340.8516761492945
+        },
+        {
+          "time": 5.3,
+          "nr": 30,
+          "target": "world-gray-wolf-1",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 6.3,
+          "nr": 30,
+          "target": "world-gray-wolf-1",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 6.3,
+          "nr": 36,
+          "target": "world-gray-wolf-1",
+          "raw": 505.90000000000003,
+          "amount": 430.12437756030954
+        },
+        {
+          "time": 6.4,
+          "nr": 239,
+          "target": "world-gray-wolf-1",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 6.4,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 7.6,
+          "nr": "auto",
+          "target": "world-gray-wolf-1",
+          "raw": 400.90000000000003,
+          "amount": 27.02153409194341
+        },
+        {
+          "time": 7.9,
+          "nr": 239,
+          "target": "world-gray-wolf-2",
+          "raw": 685.3380000000001,
+          "amount": 582.6854727583069
+        },
+        {
+          "time": 8.65,
+          "nr": 36,
+          "target": "world-gray-wolf-2",
+          "raw": 505.90000000000003,
+          "amount": 430.12437756030954
+        },
+        {
+          "time": 9.95,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 400.90000000000003,
+          "amount": 327.5406539599454
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "focus": "addsFirst",
+      "outcome": "win",
+      "seconds": 6.2,
+      "minimumHealthPercent": 71.1292119618667,
+      "finalHealth": 2030.0151363342636,
+      "maxHealth": 2703,
+      "finalMana": 111.05000000000004,
+      "manaSpent": 4302.15,
+      "manaRegenerated": 277.20000000000005,
+      "healing": 214.78507401001363,
+      "incomingDamage": 887.7699376757503,
+      "enemyHits": 9,
+      "totalDamage": 16167.000000000002,
+      "enemyDeaths": [
+        {
+          "time": 1.1,
+          "id": "world-gray-wolf-1"
+        },
+        {
+          "time": 3.6,
+          "id": "world-gray-wolf-2"
+        },
+        {
+          "time": 6.2,
+          "id": "world-gray-wolf-pack-leader-1"
+        }
+      ],
+      "remainingEnemies": [
+        {
+          "id": "world-gray-wolf-pack-leader-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-2",
+          "health": 0
+        }
+      ],
+      "skills": [
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 2,
+          "damage": 8330.589827719617,
+          "manaSpent": 3142,
+          "healing": 0,
+          "firstUse": 0.5,
+          "lastUse": 0.5,
+          "useTimes": [
+            0.5
+          ]
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 2,
+          "damage": 2612.547580695267,
+          "manaSpent": 464.54999999999995,
+          "healing": 0,
+          "firstUse": 1.9,
+          "lastUse": 1.9,
+          "useTimes": [
+            1.9
+          ]
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 2,
+          "damage": 2147.850740100136,
+          "manaSpent": 239,
+          "healing": 214.78507401001363,
+          "firstUse": 1.2,
+          "lastUse": 1.2,
+          "useTimes": [
+            1.2
+          ]
+        },
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "kind": "summon",
+          "applications": 1,
+          "hits": 6,
+          "damage": 786.9619417387347,
+          "manaSpent": 132,
+          "healing": 0,
+          "firstUse": 0,
+          "lastUse": 0,
+          "useTimes": [
+            0
+          ]
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 4,
+          "damage": 765.8637746927627,
+          "manaSpent": 158,
+          "healing": 0,
+          "firstUse": 2.3,
+          "lastUse": 2.3,
+          "useTimes": [
+            2.3
+          ]
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 747.771760309513,
+          "manaSpent": 130.15,
+          "healing": 0,
+          "firstUse": 4.2,
+          "lastUse": 4.2,
+          "useTimes": [
+            4.2
+          ]
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 588.8729660047792,
+          "manaSpent": 0.4500000000000455,
+          "healing": 0,
+          "firstUse": 2.9,
+          "lastUse": 2.9,
+          "useTimes": [
+            2.9
+          ]
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "kind": "auto",
+          "applications": 1,
+          "hits": 1,
+          "damage": 186.54140873918985,
+          "manaSpent": 0,
+          "healing": 0,
+          "firstUse": 5.3,
+          "lastUse": 5.3,
+          "useTimes": [
+            5.3
+          ]
+        },
+        {
+          "nr": 220,
+          "name": "Bannmagie",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 0,
+          "damage": 0,
+          "manaSpent": 36,
+          "healing": 0,
+          "firstUse": 6,
+          "lastUse": 6,
+          "useTimes": [
+            6
+          ]
+        }
+      ],
+      "damageHits": [
+        {
+          "time": 1.1,
+          "nr": 212,
+          "target": "world-gray-wolf-1",
+          "raw": 7522.56,
+          "amount": 5215
+        },
+        {
+          "time": 1.31,
+          "nr": 244,
+          "target": "world-gray-wolf-2",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 2.2,
+          "nr": 118,
+          "target": "world-gray-wolf-2",
+          "raw": 1267.3500000000001,
+          "amount": 1050.4814371870734
+        },
+        {
+          "time": 2.2,
+          "nr": 118,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1267.3500000000001,
+          "amount": 1041.4680809057807
+        },
+        {
+          "time": 2.22,
+          "nr": 244,
+          "target": "world-gray-wolf-2",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 2.8,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 769.56,
+          "amount": 654.2923818843877
+        },
+        {
+          "time": 3.13,
+          "nr": 244,
+          "target": "world-gray-wolf-2",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 3.6,
+          "nr": 212,
+          "target": "world-gray-wolf-2",
+          "raw": 6018.048000000001,
+          "amount": 3115.589827719618
+        },
+        {
+          "time": 3.8,
+          "nr": 9,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1270.56,
+          "amount": 1073.925370050068
+        },
+        {
+          "time": 3.8,
+          "nr": 30,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 44,
+          "amount": 37.190464269458346
+        },
+        {
+          "time": 4.04,
+          "nr": 244,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 154.72,
+          "amount": 130.77519617660445
+        },
+        {
+          "time": 4.1,
+          "nr": 219,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 696.6949999999999,
+          "amount": 588.8729660047792
+        },
+        {
+          "time": 4.3,
+          "nr": 125,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 884.688,
+          "amount": 747.771760309513
+        },
+        {
+          "time": 4.8,
+          "nr": 30,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 44,
+          "amount": 37.190464269458346
+        },
+        {
+          "time": 4.95,
+          "nr": 244,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 154.72,
+          "amount": 130.77519617660445
+        },
+        {
+          "time": 5.3,
+          "nr": "auto",
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 227.00000000000006,
+          "amount": 186.54140873918985
+        },
+        {
+          "time": 5.8,
+          "nr": 9,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 1270.56,
+          "amount": 1073.925370050068
+        },
+        {
+          "time": 5.8,
+          "nr": 30,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 44,
+          "amount": 37.190464269458346
+        },
+        {
+          "time": 5.86,
+          "nr": 244,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 154.72,
+          "amount": 130.77519617660445
+        },
+        {
+          "time": 6.2,
+          "nr": 118,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 2387.238,
+          "amount": 520.5980626024124
+        }
+      ],
+      "warnings": [
+        "Ätherregen: Anwender als primäres Heilziel angenommen; keine Gruppe simuliert."
+      ]
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "focus": "leaderFirst",
+      "outcome": "win",
+      "seconds": 5.86,
+      "minimumHealthPercent": 72.53551310315602,
+      "finalHealth": 2068.6599891828587,
+      "maxHealth": 2703,
+      "finalMana": 8.450000000000017,
+      "manaSpent": 4266.15,
+      "manaRegenerated": 138.60000000000002,
+      "healing": 216.05014000910333,
+      "incomingDamage": 850.390150826245,
+      "enemyHits": 9,
+      "totalDamage": 16167.000000000002,
+      "enemyDeaths": [
+        {
+          "time": 1.1,
+          "id": "world-gray-wolf-pack-leader-1"
+        },
+        {
+          "time": 3.6,
+          "id": "world-gray-wolf-1"
+        },
+        {
+          "time": 5.86,
+          "id": "world-gray-wolf-2"
+        }
+      ],
+      "remainingEnemies": [
+        {
+          "id": "world-gray-wolf-pack-leader-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-1",
+          "health": 0
+        },
+        {
+          "id": "world-gray-wolf-2",
+          "health": 0
+        }
+      ],
+      "skills": [
+        {
+          "nr": 212,
+          "name": "Himmelsbrecher",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 2,
+          "damage": 8852.589827719617,
+          "manaSpent": 3142,
+          "healing": 0,
+          "firstUse": 0.5,
+          "lastUse": 0.5,
+          "useTimes": [
+            0.5
+          ]
+        },
+        {
+          "nr": 9,
+          "name": "Ätherregen",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 2,
+          "damage": 2160.5014000910332,
+          "manaSpent": 239,
+          "healing": 216.05014000910333,
+          "firstUse": 1.2,
+          "lastUse": 1.2,
+          "useTimes": [
+            1.2
+          ]
+        },
+        {
+          "nr": 118,
+          "name": "Vakuumimpuls",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 2100.962874374147,
+          "manaSpent": 464.54999999999995,
+          "healing": 0,
+          "firstUse": 1.9,
+          "lastUse": 1.9,
+          "useTimes": [
+            1.9
+          ]
+        },
+        {
+          "nr": 30,
+          "name": "Eisranken",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 4,
+          "damage": 766.5209208010924,
+          "manaSpent": 158,
+          "healing": 0,
+          "firstUse": 2.3,
+          "lastUse": 2.3,
+          "useTimes": [
+            2.3
+          ]
+        },
+        {
+          "nr": 244,
+          "name": "Naturgeist",
+          "kind": "summon",
+          "applications": 1,
+          "hits": 6,
+          "damage": 753.751699692763,
+          "manaSpent": 132,
+          "healing": 0,
+          "firstUse": 0,
+          "lastUse": 0,
+          "useTimes": [
+            0
+          ]
+        },
+        {
+          "nr": 125,
+          "name": "Windfesseln",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 752.1760730086481,
+          "manaSpent": 130.15,
+          "healing": 0,
+          "firstUse": 4.2,
+          "lastUse": 4.2,
+          "useTimes": [
+            4.2
+          ]
+        },
+        {
+          "nr": 219,
+          "name": "Manaexplosion",
+          "kind": "skill",
+          "applications": 1,
+          "hits": 1,
+          "damage": 592.3413781861628,
+          "manaSpent": 0.4500000000000455,
+          "healing": 0,
+          "firstUse": 2.9,
+          "lastUse": 2.9,
+          "useTimes": [
+            2.9
+          ]
+        },
+        {
+          "nr": "auto",
+          "name": "Auto-Attack",
+          "kind": "auto",
+          "applications": 1,
+          "hits": 1,
+          "damage": 188.15582612653623,
+          "manaSpent": 0,
+          "healing": 0,
+          "firstUse": 5.3,
+          "lastUse": 5.3,
+          "useTimes": [
+            5.3
+          ]
+        }
+      ],
+      "damageHits": [
+        {
+          "time": 1.1,
+          "nr": 212,
+          "target": "world-gray-wolf-pack-leader-1",
+          "raw": 7522.56,
+          "amount": 5737
+        },
+        {
+          "time": 1.31,
+          "nr": 244,
+          "target": "world-gray-wolf-1",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 2.2,
+          "nr": 118,
+          "target": "world-gray-wolf-1",
+          "raw": 1267.3500000000001,
+          "amount": 1050.4814371870734
+        },
+        {
+          "time": 2.2,
+          "nr": 118,
+          "target": "world-gray-wolf-2",
+          "raw": 1267.3500000000001,
+          "amount": 1050.4814371870734
+        },
+        {
+          "time": 2.22,
+          "nr": 244,
+          "target": "world-gray-wolf-1",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 2.8,
+          "nr": 30,
+          "target": "world-gray-wolf-1",
+          "raw": 769.56,
+          "amount": 654.2923818843877
+        },
+        {
+          "time": 3.13,
+          "nr": 244,
+          "target": "world-gray-wolf-1",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 3.6,
+          "nr": 212,
+          "target": "world-gray-wolf-1",
+          "raw": 6018.048000000001,
+          "amount": 3115.589827719618
+        },
+        {
+          "time": 3.8,
+          "nr": 9,
+          "target": "world-gray-wolf-2",
+          "raw": 1270.56,
+          "amount": 1080.2507000455166
+        },
+        {
+          "time": 3.8,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 4.04,
+          "nr": 244,
+          "target": "world-gray-wolf-2",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 4.1,
+          "nr": 219,
+          "target": "world-gray-wolf-2",
+          "raw": 696.6949999999999,
+          "amount": 592.3413781861628
+        },
+        {
+          "time": 4.3,
+          "nr": 125,
+          "target": "world-gray-wolf-2",
+          "raw": 884.688,
+          "amount": 752.1760730086481
+        },
+        {
+          "time": 4.8,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 4.95,
+          "nr": 244,
+          "target": "world-gray-wolf-2",
+          "raw": 154.72,
+          "amount": 131.54545106964042
+        },
+        {
+          "time": 5.3,
+          "nr": "auto",
+          "target": "world-gray-wolf-2",
+          "raw": 227.00000000000006,
+          "amount": 188.15582612653623
+        },
+        {
+          "time": 5.8,
+          "nr": 9,
+          "target": "world-gray-wolf-2",
+          "raw": 1270.56,
+          "amount": 1080.2507000455166
+        },
+        {
+          "time": 5.8,
+          "nr": 30,
+          "target": "world-gray-wolf-2",
+          "raw": 44,
+          "amount": 37.409512972234864
+        },
+        {
+          "time": 5.86,
+          "nr": 244,
+          "target": "world-gray-wolf-2",
+          "raw": 154.72,
+          "amount": 96.02444434456098
+        }
+      ],
+      "warnings": [
+        "Ätherregen: Anwender als primäres Heilziel angenommen; keine Gruppe simuliert."
+      ]
+    }
+  ]
+}

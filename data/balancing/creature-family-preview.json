@@ -1,0 +1,1815 @@
+{
+  "status": "proposalForReview",
+  "generatedAt": "2026-10-21T15:44:01.990Z",
+  "databaseApplied": false,
+  "inputHashes": {
+    "data/balancing/creature-family-draft.json": "dc6e8ac5185e5fde25d3daeb0e9207d1342f90f782010953c81979e71e4796b3",
+    "data/balancing/attribute-model.json": "163a30637a8c2fdc52d49b140a871c4e2a3293d08193fdc47887884606e7eb5f",
+    "data/skills.json": "dd889c86da9879f7526259d3a089746c908e768b253a652522f85887a91e81fe",
+    "data/balancing/class-comparison-level60.json": "04940e2c070e8a341b4b29a8fe3a8b135cd7caf9283658e4d70398806b3c8f58",
+    "data/balancing/all-class-timed-damage.json": "a67d5463f8ddc2314240b27ee99e0a7ee8839613d2fb1ea124fa6542b4fd9aef",
+    "services/creatureFamilyDraft.js": "2fc12677ad850b0a351508b54f7d0d7f9dff3c075df40c50b5c3fa32cd39dc92",
+    "services/attackSpeed.js": "9f8ff6396a55e810f2715819390eaa91cdfe1dc89789e02af45769e36cc55352"
+  },
+  "playerBaselineGeneratedAt": "2026-10-21T12:51:44.898Z",
+  "families": [
+    {
+      "id": "wolf-body-1",
+      "name": "Wolf – Grundmodell 1",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "strength": 5,
+            "vitality": 4,
+            "intelligence": 0,
+            "wisdom": 1,
+            "dexterity": 4,
+            "agility": 5,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 120,
+            "maxMana": 30,
+            "physicalAttack": 9,
+            "magicalAttack": 0,
+            "physicalDefense": 4.8,
+            "magicalDefense": 1.2,
+            "attackSpeed": 1.003,
+            "movementSpeed": 1,
+            "accuracy": 6.4,
+            "dodge": 7.5,
+            "critChanceRating": 0,
+            "penetration": 7.5,
+            "healthRegen": 16,
+            "manaRegen": 0.9
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9970134462218425,
+            "attacks": 601,
+            "damagePerHit": 9,
+            "totalDamage": 5409,
+            "damagePerSecond": 9.015,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 10,
+          "attributes": {
+            "strength": 14,
+            "vitality": 10.3,
+            "intelligence": 0,
+            "wisdom": 2.8,
+            "dexterity": 8.5,
+            "agility": 7.699999999999999,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 309,
+            "maxMana": 84,
+            "physicalAttack": 25.2,
+            "magicalAttack": 0,
+            "physicalDefense": 12.360000000000001,
+            "magicalDefense": 3.36,
+            "attackSpeed": 1.00462,
+            "movementSpeed": 1,
+            "accuracy": 13.600000000000001,
+            "dodge": 11.549999999999999,
+            "critChanceRating": 0,
+            "penetration": 21,
+            "healthRegen": 41.2,
+            "manaRegen": 2.52
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9954118206227548,
+            "attacks": 602,
+            "damagePerHit": 25.2,
+            "totalDamage": 15170.4,
+            "damagePerSecond": 25.284,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 20,
+          "attributes": {
+            "strength": 24,
+            "vitality": 17.299999999999997,
+            "intelligence": 0,
+            "wisdom": 4.800000000000001,
+            "dexterity": 13.5,
+            "agility": 10.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 519,
+            "maxMana": 144,
+            "physicalAttack": 43.2,
+            "magicalAttack": 0,
+            "physicalDefense": 20.759999999999994,
+            "magicalDefense": 5.760000000000001,
+            "attackSpeed": 1.00642,
+            "movementSpeed": 1,
+            "accuracy": 21.6,
+            "dodge": 16.049999999999997,
+            "critChanceRating": 0,
+            "penetration": 36,
+            "healthRegen": 69.19999999999999,
+            "manaRegen": 4.320000000000001
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9936413000125582,
+            "attacks": 603,
+            "damagePerHit": 43.2,
+            "totalDamage": 26049.600000000002,
+            "damagePerSecond": 43.416000000000004,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 30,
+          "attributes": {
+            "strength": 34,
+            "vitality": 24.299999999999997,
+            "intelligence": 0,
+            "wisdom": 6.800000000000001,
+            "dexterity": 18.5,
+            "agility": 13.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 729,
+            "maxMana": 204,
+            "physicalAttack": 61.2,
+            "magicalAttack": 0,
+            "physicalDefense": 29.159999999999997,
+            "magicalDefense": 8.16,
+            "attackSpeed": 1.00822,
+            "movementSpeed": 1,
+            "accuracy": 29.6,
+            "dodge": 20.549999999999997,
+            "critChanceRating": 0,
+            "penetration": 51,
+            "healthRegen": 97.19999999999999,
+            "manaRegen": 6.120000000000001
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9918802541914302,
+            "attacks": 604,
+            "damagePerHit": 61.2,
+            "totalDamage": 36964.8,
+            "damagePerSecond": 61.608000000000004,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 40,
+          "attributes": {
+            "strength": 44,
+            "vitality": 31.299999999999997,
+            "intelligence": 0,
+            "wisdom": 8.8,
+            "dexterity": 23.5,
+            "agility": 16.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 939,
+            "maxMana": 264,
+            "physicalAttack": 79.2,
+            "magicalAttack": 0,
+            "physicalDefense": 37.559999999999995,
+            "magicalDefense": 10.56,
+            "attackSpeed": 1.01002,
+            "movementSpeed": 1,
+            "accuracy": 37.6,
+            "dodge": 25.049999999999997,
+            "critChanceRating": 0,
+            "penetration": 66,
+            "healthRegen": 125.19999999999999,
+            "manaRegen": 7.920000000000001
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9901286159229967,
+            "attacks": 605,
+            "damagePerHit": 79.2,
+            "totalDamage": 47916,
+            "damagePerSecond": 79.86,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "strength": 54,
+            "vitality": 38.3,
+            "intelligence": 0,
+            "wisdom": 10.8,
+            "dexterity": 28.5,
+            "agility": 19.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1149,
+            "maxMana": 324,
+            "physicalAttack": 97.2,
+            "magicalAttack": 0,
+            "physicalDefense": 45.959999999999994,
+            "magicalDefense": 12.96,
+            "attackSpeed": 1.01182,
+            "movementSpeed": 1,
+            "accuracy": 45.6,
+            "dodge": 29.549999999999997,
+            "critChanceRating": 0,
+            "penetration": 81,
+            "healthRegen": 153.2,
+            "manaRegen": 9.72
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9883863186261899,
+            "attacks": 607,
+            "damagePerHit": 97.2,
+            "totalDamage": 59000.4,
+            "damagePerSecond": 98.334,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 60,
+          "attributes": {
+            "strength": 64,
+            "vitality": 45.3,
+            "intelligence": 0,
+            "wisdom": 12.8,
+            "dexterity": 33.5,
+            "agility": 22.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1359,
+            "maxMana": 384,
+            "physicalAttack": 115.2,
+            "magicalAttack": 0,
+            "physicalDefense": 54.35999999999999,
+            "magicalDefense": 15.36,
+            "attackSpeed": 1.01362,
+            "movementSpeed": 1,
+            "accuracy": 53.6,
+            "dodge": 34.05,
+            "critChanceRating": 0,
+            "penetration": 96,
+            "healthRegen": 181.2,
+            "manaRegen": 11.520000000000001
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9866532963673521,
+            "attacks": 608,
+            "damagePerHit": 115.2,
+            "totalDamage": 70041.6,
+            "damagePerSecond": 116.736,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "strength": 74,
+            "vitality": 52.3,
+            "intelligence": 0,
+            "wisdom": 14.8,
+            "dexterity": 38.5,
+            "agility": 25.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1569,
+            "maxMana": 444,
+            "physicalAttack": 133.20000000000002,
+            "magicalAttack": 0,
+            "physicalDefense": 62.75999999999999,
+            "magicalDefense": 17.76,
+            "attackSpeed": 1.01542,
+            "movementSpeed": 1,
+            "accuracy": 61.6,
+            "dodge": 38.55,
+            "critChanceRating": 0,
+            "penetration": 111,
+            "healthRegen": 209.2,
+            "manaRegen": 13.32
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9849294838524572,
+            "attacks": 609,
+            "damagePerHit": 133.20000000000002,
+            "totalDamage": 81118.80000000002,
+            "damagePerSecond": 135.19800000000004,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "strength": 84,
+            "vitality": 59.3,
+            "intelligence": 0,
+            "wisdom": 16.8,
+            "dexterity": 43.5,
+            "agility": 28.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1779,
+            "maxMana": 504,
+            "physicalAttack": 151.20000000000002,
+            "magicalAttack": 0,
+            "physicalDefense": 71.16,
+            "magicalDefense": 20.16,
+            "attackSpeed": 1.01722,
+            "movementSpeed": 1,
+            "accuracy": 69.60000000000001,
+            "dodge": 43.05,
+            "critChanceRating": 0,
+            "penetration": 126,
+            "healthRegen": 237.2,
+            "manaRegen": 15.120000000000001
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9832148164194416,
+            "attacks": 610,
+            "damagePerHit": 151.20000000000002,
+            "totalDamage": 92232.00000000001,
+            "damagePerSecond": 153.72000000000003,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "strength": 94,
+            "vitality": 66.3,
+            "intelligence": 0,
+            "wisdom": 18.8,
+            "dexterity": 48.5,
+            "agility": 31.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1989,
+            "maxMana": 564,
+            "physicalAttack": 169.20000000000002,
+            "magicalAttack": 0,
+            "physicalDefense": 79.55999999999999,
+            "magicalDefense": 22.56,
+            "attackSpeed": 1.01902,
+            "movementSpeed": 1,
+            "accuracy": 77.60000000000001,
+            "dodge": 47.55,
+            "critChanceRating": 0,
+            "penetration": 141,
+            "healthRegen": 265.2,
+            "manaRegen": 16.92
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9815092300306469,
+            "attacks": 611,
+            "damagePerHit": 169.20000000000002,
+            "totalDamage": 103381.20000000001,
+            "damagePerSecond": 172.30200000000002,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 100,
+          "attributes": {
+            "strength": 104,
+            "vitality": 73.3,
+            "intelligence": 0,
+            "wisdom": 20.8,
+            "dexterity": 53.5,
+            "agility": 34.7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 2199,
+            "maxMana": 624,
+            "physicalAttack": 187.20000000000002,
+            "magicalAttack": 0,
+            "physicalDefense": 87.96,
+            "magicalDefense": 24.96,
+            "attackSpeed": 1.02082,
+            "movementSpeed": 1,
+            "accuracy": 85.60000000000001,
+            "dodge": 52.050000000000004,
+            "critChanceRating": 0,
+            "penetration": 156,
+            "healthRegen": 293.2,
+            "manaRegen": 18.720000000000002
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9798126612653696,
+            "attacks": 612,
+            "damagePerHit": 187.20000000000002,
+            "totalDamage": 114566.40000000001,
+            "damagePerSecond": 190.94400000000002,
+            "targetDeathAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "bird-body-1",
+      "name": "Vogel – Grundmodell 1",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "strength": 4,
+            "vitality": 3,
+            "intelligence": 0,
+            "wisdom": 1,
+            "dexterity": 5,
+            "agility": 6,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 90,
+            "maxMana": 30,
+            "physicalAttack": 7.2,
+            "magicalAttack": 0,
+            "physicalDefense": 3.5999999999999996,
+            "magicalDefense": 1.2,
+            "attackSpeed": 1.0036,
+            "movementSpeed": 1,
+            "accuracy": 8,
+            "dodge": 9,
+            "critChanceRating": 0,
+            "penetration": 6,
+            "healthRegen": 12,
+            "manaRegen": 0.9
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9489708068072744,
+            "attacks": 632,
+            "damagePerHit": 7.2,
+            "totalDamage": 4550.400000000001,
+            "damagePerSecond": 7.5840000000000005,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 10,
+          "attributes": {
+            "strength": 12.1,
+            "vitality": 7.95,
+            "intelligence": 0,
+            "wisdom": 2.3499999999999996,
+            "dexterity": 10.399999999999999,
+            "agility": 10.05,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 239,
+            "maxMana": 70,
+            "physicalAttack": 21.78,
+            "magicalAttack": 0,
+            "physicalDefense": 9.54,
+            "magicalDefense": 2.8199999999999994,
+            "attackSpeed": 1.00603,
+            "movementSpeed": 1,
+            "accuracy": 16.639999999999997,
+            "dodge": 15.075000000000001,
+            "critChanceRating": 0,
+            "penetration": 18.15,
+            "healthRegen": 31.8,
+            "manaRegen": 2.1149999999999998
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.946689625184486,
+            "attacks": 633,
+            "damagePerHit": 21.78,
+            "totalDamage": 13786.740000000002,
+            "damagePerSecond": 22.9779,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 20,
+          "attributes": {
+            "strength": 21.1,
+            "vitality": 13.450000000000001,
+            "intelligence": 0,
+            "wisdom": 3.85,
+            "dexterity": 16.4,
+            "agility": 14.55,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 404,
+            "maxMana": 116,
+            "physicalAttack": 37.980000000000004,
+            "magicalAttack": 0,
+            "physicalDefense": 16.14,
+            "magicalDefense": 4.62,
+            "attackSpeed": 1.00873,
+            "movementSpeed": 1,
+            "accuracy": 26.24,
+            "dodge": 21.825000000000003,
+            "critChanceRating": 0,
+            "penetration": 31.650000000000002,
+            "healthRegen": 53.800000000000004,
+            "manaRegen": 3.4650000000000003
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9441742899599734,
+            "attacks": 635,
+            "damagePerHit": 37.980000000000004,
+            "totalDamage": 24117.300000000003,
+            "damagePerSecond": 40.1955,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 30,
+          "attributes": {
+            "strength": 30.1,
+            "vitality": 18.950000000000003,
+            "intelligence": 0,
+            "wisdom": 5.35,
+            "dexterity": 22.4,
+            "agility": 19.05,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 569,
+            "maxMana": 161,
+            "physicalAttack": 54.18000000000001,
+            "magicalAttack": 0,
+            "physicalDefense": 22.740000000000002,
+            "magicalDefense": 6.419999999999999,
+            "attackSpeed": 1.01143,
+            "movementSpeed": 1,
+            "accuracy": 35.839999999999996,
+            "dodge": 28.575000000000003,
+            "critChanceRating": 0,
+            "penetration": 45.150000000000006,
+            "healthRegen": 75.80000000000001,
+            "manaRegen": 4.8149999999999995
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.941679073356671,
+            "attacks": 637,
+            "damagePerHit": 54.18000000000001,
+            "totalDamage": 34512.66,
+            "damagePerSecond": 57.521100000000004,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 40,
+          "attributes": {
+            "strength": 39.1,
+            "vitality": 24.450000000000003,
+            "intelligence": 0,
+            "wisdom": 6.85,
+            "dexterity": 28.4,
+            "agility": 23.55,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 734,
+            "maxMana": 206,
+            "physicalAttack": 70.38000000000001,
+            "magicalAttack": 0,
+            "physicalDefense": 29.340000000000003,
+            "magicalDefense": 8.219999999999999,
+            "attackSpeed": 1.01413,
+            "movementSpeed": 1,
+            "accuracy": 45.44,
+            "dodge": 35.325,
+            "critChanceRating": 0,
+            "penetration": 58.650000000000006,
+            "healthRegen": 97.80000000000001,
+            "manaRegen": 6.165
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.93920376247305,
+            "attacks": 638,
+            "damagePerHit": 70.38000000000001,
+            "totalDamage": 44902.44000000001,
+            "damagePerSecond": 74.83740000000002,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "strength": 48.1,
+            "vitality": 29.950000000000003,
+            "intelligence": 0,
+            "wisdom": 8.35,
+            "dexterity": 34.4,
+            "agility": 28.05,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 899,
+            "maxMana": 251,
+            "physicalAttack": 86.58,
+            "magicalAttack": 0,
+            "physicalDefense": 35.940000000000005,
+            "magicalDefense": 10.02,
+            "attackSpeed": 1.01683,
+            "movementSpeed": 1,
+            "accuracy": 55.04,
+            "dodge": 42.075,
+            "critChanceRating": 0,
+            "penetration": 72.15,
+            "healthRegen": 119.80000000000001,
+            "manaRegen": 7.515
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9367481474997104,
+            "attacks": 640,
+            "damagePerHit": 86.58,
+            "totalDamage": 55411.2,
+            "damagePerSecond": 92.35199999999999,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 60,
+          "attributes": {
+            "strength": 57.1,
+            "vitality": 35.45,
+            "intelligence": 0,
+            "wisdom": 9.85,
+            "dexterity": 40.4,
+            "agility": 32.55,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1064,
+            "maxMana": 296,
+            "physicalAttack": 102.78,
+            "magicalAttack": 0,
+            "physicalDefense": 42.54,
+            "magicalDefense": 11.819999999999999,
+            "attackSpeed": 1.01953,
+            "movementSpeed": 1,
+            "accuracy": 64.64,
+            "dodge": 48.824999999999996,
+            "critChanceRating": 0,
+            "penetration": 85.65,
+            "healthRegen": 141.8,
+            "manaRegen": 8.865
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9343120216639473,
+            "attacks": 642,
+            "damagePerHit": 102.78,
+            "totalDamage": 65984.76,
+            "damagePerSecond": 109.9746,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "strength": 66.1,
+            "vitality": 40.95,
+            "intelligence": 0,
+            "wisdom": 11.35,
+            "dexterity": 46.4,
+            "agility": 37.05,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1229,
+            "maxMana": 341,
+            "physicalAttack": 118.97999999999999,
+            "magicalAttack": 0,
+            "physicalDefense": 49.14,
+            "magicalDefense": 13.62,
+            "attackSpeed": 1.02223,
+            "movementSpeed": 1,
+            "accuracy": 74.24,
+            "dodge": 55.574999999999996,
+            "critChanceRating": 0,
+            "penetration": 99.14999999999999,
+            "healthRegen": 163.8,
+            "manaRegen": 10.215
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9318951811755095,
+            "attacks": 643,
+            "damagePerHit": 118.97999999999999,
+            "totalDamage": 76504.14,
+            "damagePerSecond": 127.5069,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "strength": 75.10000000000001,
+            "vitality": 46.45,
+            "intelligence": 0,
+            "wisdom": 12.85,
+            "dexterity": 52.4,
+            "agility": 41.550000000000004,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1394,
+            "maxMana": 386,
+            "physicalAttack": 135.18,
+            "magicalAttack": 0,
+            "physicalDefense": 55.74,
+            "magicalDefense": 15.419999999999998,
+            "attackSpeed": 1.02493,
+            "movementSpeed": 1,
+            "accuracy": 83.84,
+            "dodge": 62.325,
+            "critChanceRating": 0,
+            "penetration": 112.65,
+            "healthRegen": 185.8,
+            "manaRegen": 11.565
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.929497425173518,
+            "attacks": 645,
+            "damagePerHit": 135.18,
+            "totalDamage": 87191.1,
+            "damagePerSecond": 145.3185,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "strength": 84.10000000000001,
+            "vitality": 51.95,
+            "intelligence": 0,
+            "wisdom": 14.35,
+            "dexterity": 58.4,
+            "agility": 46.050000000000004,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1559,
+            "maxMana": 431,
+            "physicalAttack": 151.38000000000002,
+            "magicalAttack": 0,
+            "physicalDefense": 62.34,
+            "magicalDefense": 17.22,
+            "attackSpeed": 1.02763,
+            "movementSpeed": 1,
+            "accuracy": 93.44,
+            "dodge": 69.075,
+            "critChanceRating": 0,
+            "penetration": 126.15,
+            "healthRegen": 207.8,
+            "manaRegen": 12.915
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9271185556745182,
+            "attacks": 647,
+            "damagePerHit": 151.38000000000002,
+            "totalDamage": 97942.86000000002,
+            "damagePerSecond": 163.23810000000003,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 100,
+          "attributes": {
+            "strength": 93.10000000000001,
+            "vitality": 57.45,
+            "intelligence": 0,
+            "wisdom": 15.85,
+            "dexterity": 64.4,
+            "agility": 50.550000000000004,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1724,
+            "maxMana": 476,
+            "physicalAttack": 167.58,
+            "magicalAttack": 0,
+            "physicalDefense": 68.94,
+            "magicalDefense": 19.02,
+            "attackSpeed": 1.03033,
+            "movementSpeed": 1,
+            "accuracy": 103.04000000000002,
+            "dodge": 75.825,
+            "critChanceRating": 0,
+            "penetration": 139.65,
+            "healthRegen": 229.8,
+            "manaRegen": 14.265
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.9247583775216369,
+            "attacks": 648,
+            "damagePerHit": 167.58,
+            "totalDamage": 108591.84000000001,
+            "damagePerSecond": 180.98640000000003,
+            "targetDeathAt": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "bird-body-2",
+      "name": "Vogel – Grundmodell 2",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "strength": 3,
+            "vitality": 2.5,
+            "intelligence": 0,
+            "wisdom": 1,
+            "dexterity": 6,
+            "agility": 7,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 75,
+            "maxMana": 30,
+            "physicalAttack": 5.4,
+            "magicalAttack": 0,
+            "physicalDefense": 3,
+            "magicalDefense": 1.2,
+            "attackSpeed": 1.0042,
+            "movementSpeed": 1,
+            "accuracy": 9.600000000000001,
+            "dodge": 10.5,
+            "critChanceRating": 0,
+            "penetration": 4.5,
+            "healthRegen": 10,
+            "manaRegen": 0.9
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8659359240650814,
+            "attacks": 692,
+            "damagePerHit": 5.4,
+            "totalDamage": 3736.8,
+            "damagePerSecond": 6.228000000000001,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 10,
+          "attributes": {
+            "strength": 10.2,
+            "vitality": 6.1,
+            "intelligence": 0,
+            "wisdom": 2.3499999999999996,
+            "dexterity": 12.3,
+            "agility": 11.95,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 183,
+            "maxMana": 70,
+            "physicalAttack": 18.36,
+            "magicalAttack": 0,
+            "physicalDefense": 7.319999999999999,
+            "magicalDefense": 2.8199999999999994,
+            "attackSpeed": 1.00717,
+            "movementSpeed": 1,
+            "accuracy": 19.680000000000003,
+            "dodge": 17.924999999999997,
+            "critChanceRating": 0,
+            "penetration": 15.299999999999999,
+            "healthRegen": 24.4,
+            "manaRegen": 2.1149999999999998
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8633968550816605,
+            "attacks": 694,
+            "damagePerHit": 18.36,
+            "totalDamage": 12741.84,
+            "damagePerSecond": 21.2364,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 20,
+          "attributes": {
+            "strength": 18.200000000000003,
+            "vitality": 10.100000000000001,
+            "intelligence": 0,
+            "wisdom": 3.85,
+            "dexterity": 19.299999999999997,
+            "agility": 17.450000000000003,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 303,
+            "maxMana": 116,
+            "physicalAttack": 32.760000000000005,
+            "magicalAttack": 0,
+            "physicalDefense": 12.120000000000001,
+            "magicalDefense": 4.62,
+            "attackSpeed": 1.01047,
+            "movementSpeed": 1,
+            "accuracy": 30.879999999999995,
+            "dodge": 26.175000000000004,
+            "critChanceRating": 0,
+            "penetration": 27.300000000000004,
+            "healthRegen": 40.400000000000006,
+            "manaRegen": 3.4650000000000003
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8606018856254282,
+            "attacks": 697,
+            "damagePerHit": 32.760000000000005,
+            "totalDamage": 22833.720000000005,
+            "damagePerSecond": 38.05620000000001,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 30,
+          "attributes": {
+            "strength": 26.200000000000003,
+            "vitality": 14.100000000000001,
+            "intelligence": 0,
+            "wisdom": 5.35,
+            "dexterity": 26.299999999999997,
+            "agility": 22.950000000000003,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 423,
+            "maxMana": 161,
+            "physicalAttack": 47.160000000000004,
+            "magicalAttack": 0,
+            "physicalDefense": 16.92,
+            "magicalDefense": 6.419999999999999,
+            "attackSpeed": 1.01377,
+            "movementSpeed": 1,
+            "accuracy": 42.08,
+            "dodge": 34.425000000000004,
+            "critChanceRating": 0,
+            "penetration": 39.300000000000004,
+            "healthRegen": 56.400000000000006,
+            "manaRegen": 4.8149999999999995
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.857834169095125,
+            "attacks": 699,
+            "damagePerHit": 47.160000000000004,
+            "totalDamage": 32964.840000000004,
+            "damagePerSecond": 54.94140000000001,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 40,
+          "attributes": {
+            "strength": 34.2,
+            "vitality": 18.1,
+            "intelligence": 0,
+            "wisdom": 6.85,
+            "dexterity": 33.3,
+            "agility": 28.450000000000003,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 543,
+            "maxMana": 206,
+            "physicalAttack": 61.56000000000001,
+            "magicalAttack": 0,
+            "physicalDefense": 21.720000000000002,
+            "magicalDefense": 8.219999999999999,
+            "attackSpeed": 1.01707,
+            "movementSpeed": 1,
+            "accuracy": 53.28,
+            "dodge": 42.675000000000004,
+            "critChanceRating": 0,
+            "penetration": 51.300000000000004,
+            "healthRegen": 72.4,
+            "manaRegen": 6.165
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8550933544761884,
+            "attacks": 701,
+            "damagePerHit": 61.56000000000001,
+            "totalDamage": 43153.560000000005,
+            "damagePerSecond": 71.9226,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "strength": 42.2,
+            "vitality": 22.1,
+            "intelligence": 0,
+            "wisdom": 8.35,
+            "dexterity": 40.3,
+            "agility": 33.95,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 663,
+            "maxMana": 251,
+            "physicalAttack": 75.96000000000001,
+            "magicalAttack": 0,
+            "physicalDefense": 26.52,
+            "magicalDefense": 10.02,
+            "attackSpeed": 1.02037,
+            "movementSpeed": 1,
+            "accuracy": 64.48,
+            "dodge": 50.925000000000004,
+            "critChanceRating": 0,
+            "penetration": 63.300000000000004,
+            "healthRegen": 88.4,
+            "manaRegen": 7.515
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8523790969563613,
+            "attacks": 703,
+            "damagePerHit": 75.96000000000001,
+            "totalDamage": 53399.880000000005,
+            "damagePerSecond": 88.99980000000001,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 60,
+          "attributes": {
+            "strength": 50.2,
+            "vitality": 26.1,
+            "intelligence": 0,
+            "wisdom": 9.85,
+            "dexterity": 47.3,
+            "agility": 39.45,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 783,
+            "maxMana": 296,
+            "physicalAttack": 90.36000000000001,
+            "magicalAttack": 0,
+            "physicalDefense": 31.32,
+            "magicalDefense": 11.819999999999999,
+            "attackSpeed": 1.02367,
+            "movementSpeed": 1,
+            "accuracy": 75.67999999999999,
+            "dodge": 59.175000000000004,
+            "critChanceRating": 0,
+            "penetration": 75.30000000000001,
+            "healthRegen": 104.4,
+            "manaRegen": 8.865
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8496910577905462,
+            "attacks": 706,
+            "damagePerHit": 90.36000000000001,
+            "totalDamage": 63794.16000000001,
+            "damagePerSecond": 106.32360000000001,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "strength": 58.2,
+            "vitality": 30.1,
+            "intelligence": 0,
+            "wisdom": 11.35,
+            "dexterity": 54.3,
+            "agility": 44.95,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 903,
+            "maxMana": 341,
+            "physicalAttack": 104.76,
+            "magicalAttack": 0,
+            "physicalDefense": 36.12,
+            "magicalDefense": 13.62,
+            "attackSpeed": 1.02697,
+            "movementSpeed": 1,
+            "accuracy": 86.88,
+            "dodge": 67.42500000000001,
+            "critChanceRating": 0,
+            "penetration": 87.30000000000001,
+            "healthRegen": 120.4,
+            "manaRegen": 10.215
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8470289041691819,
+            "attacks": 708,
+            "damagePerHit": 104.76,
+            "totalDamage": 74170.08,
+            "damagePerSecond": 123.6168,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "strength": 66.2,
+            "vitality": 34.1,
+            "intelligence": 0,
+            "wisdom": 12.85,
+            "dexterity": 61.3,
+            "agility": 50.45,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1023,
+            "maxMana": 386,
+            "physicalAttack": 119.16000000000001,
+            "magicalAttack": 0,
+            "physicalDefense": 40.92,
+            "magicalDefense": 15.419999999999998,
+            "attackSpeed": 1.03027,
+            "movementSpeed": 1,
+            "accuracy": 98.08,
+            "dodge": 75.67500000000001,
+            "critChanceRating": 0,
+            "penetration": 99.30000000000001,
+            "healthRegen": 136.4,
+            "manaRegen": 11.565
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8443923090900427,
+            "attacks": 710,
+            "damagePerHit": 119.16000000000001,
+            "totalDamage": 84603.6,
+            "damagePerSecond": 141.006,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "strength": 74.2,
+            "vitality": 38.1,
+            "intelligence": 0,
+            "wisdom": 14.35,
+            "dexterity": 68.3,
+            "agility": 55.95,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1143,
+            "maxMana": 431,
+            "physicalAttack": 133.56,
+            "magicalAttack": 0,
+            "physicalDefense": 45.72,
+            "magicalDefense": 17.22,
+            "attackSpeed": 1.03357,
+            "movementSpeed": 1,
+            "accuracy": 109.28,
+            "dodge": 83.92500000000001,
+            "critChanceRating": 0,
+            "penetration": 111.30000000000001,
+            "healthRegen": 152.4,
+            "manaRegen": 12.915
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.8417809512333553,
+            "attacks": 712,
+            "damagePerHit": 133.56,
+            "totalDamage": 95094.72,
+            "damagePerSecond": 158.4912,
+            "targetDeathAt": null
+          }
+        },
+        {
+          "level": 100,
+          "attributes": {
+            "strength": 82.2,
+            "vitality": 42.1,
+            "intelligence": 0,
+            "wisdom": 15.85,
+            "dexterity": 75.3,
+            "agility": 61.45,
+            "luck": 0
+          },
+          "stats": {
+            "maxHealth": 1263,
+            "maxMana": 476,
+            "physicalAttack": 147.96,
+            "magicalAttack": 0,
+            "physicalDefense": 50.52,
+            "magicalDefense": 19.02,
+            "attackSpeed": 1.03687,
+            "movementSpeed": 1,
+            "accuracy": 120.48,
+            "dodge": 92.17500000000001,
+            "critChanceRating": 0,
+            "penetration": 123.30000000000001,
+            "healthRegen": 168.4,
+            "manaRegen": 14.265
+          },
+          "autoProbe": {
+            "duration": 600,
+            "targetHealth": 10000000,
+            "interval": 0.839194514840134,
+            "attacks": 714,
+            "damagePerHit": 147.96,
+            "totalDamage": 105643.44,
+            "damagePerSecond": 176.07240000000002,
+            "targetDeathAt": null
+          }
+        }
+      ]
+    }
+  ],
+  "factorSensitivity": [
+    {
+      "factor": 1,
+      "stats": {
+        "maxHealth": 1359,
+        "maxMana": 384,
+        "physicalAttack": 115.2,
+        "magicalAttack": 0,
+        "physicalDefense": 54.35999999999999,
+        "magicalDefense": 15.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 96,
+        "healthRegen": 181.2,
+        "manaRegen": 11.520000000000001
+      },
+      "autoProbe": {
+        "duration": 600,
+        "targetHealth": 10000000,
+        "interval": 0.9866532963673521,
+        "attacks": 608,
+        "damagePerHit": 115.2,
+        "totalDamage": 70041.6,
+        "damagePerSecond": 116.736,
+        "targetDeathAt": null
+      }
+    },
+    {
+      "factor": 1.15,
+      "stats": {
+        "maxHealth": 1563,
+        "maxMana": 442,
+        "physicalAttack": 132.48,
+        "magicalAttack": 0,
+        "physicalDefense": 62.51399999999999,
+        "magicalDefense": 17.663999999999998,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 96,
+        "healthRegen": 181.2,
+        "manaRegen": 11.520000000000001
+      },
+      "autoProbe": {
+        "duration": 600,
+        "targetHealth": 10000000,
+        "interval": 0.9866532963673521,
+        "attacks": 608,
+        "damagePerHit": 132.48,
+        "totalDamage": 80547.84,
+        "damagePerSecond": 134.2464,
+        "targetDeathAt": null
+      }
+    },
+    {
+      "factor": 1.3,
+      "stats": {
+        "maxHealth": 1767,
+        "maxMana": 499,
+        "physicalAttack": 149.76000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 70.66799999999999,
+        "magicalDefense": 19.968,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 96,
+        "healthRegen": 181.2,
+        "manaRegen": 11.520000000000001
+      },
+      "autoProbe": {
+        "duration": 600,
+        "targetHealth": 10000000,
+        "interval": 0.9866532963673521,
+        "attacks": 608,
+        "damagePerHit": 149.76000000000002,
+        "totalDamage": 91054.08000000002,
+        "damagePerSecond": 151.75680000000003,
+        "targetDeathAt": null
+      }
+    }
+  ],
+  "wolfClassAddition": [
+    {
+      "key": "adventurer",
+      "name": "Abenteurer",
+      "playerDamage": 439897.40000000474,
+      "petCount": 2,
+      "bondAttributeBonuses": {
+        "strength": 20,
+        "vitality": 20,
+        "intelligence": 20,
+        "wisdom": 20
+      },
+      "wildTrustAssumption": 1,
+      "wildAddition": {
+        "physicalAttack": 94.44000000000001,
+        "physicalDefense": 46.38,
+        "magicalDefense": 37.38
+      },
+      "petStats": {
+        "maxHealth": 1959,
+        "maxMana": 984,
+        "physicalAttack": 245.64000000000004,
+        "magicalAttack": 0,
+        "physicalDefense": 124.74000000000001,
+        "magicalDefense": 76.74,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 126,
+        "healthRegen": 261.2,
+        "manaRegen": 29.52
+      },
+      "damagePerPet": 149349.12000000002,
+      "additionalPetDamage": 298698.24000000005,
+      "combinedDamage": 738595.6400000048
+    },
+    {
+      "key": "butcher",
+      "name": "Butcher",
+      "playerDamage": 517153.2400000031,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 598138.8400000031
+    },
+    {
+      "key": "druid",
+      "name": "Druide",
+      "playerDamage": 540132.495000001,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 621118.095000001
+    },
+    {
+      "key": "gladiator",
+      "name": "Gladiator",
+      "playerDamage": 583178.9999999956,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 664164.5999999956
+    },
+    {
+      "key": "healer",
+      "name": "Heiler",
+      "playerDamage": 503346.52599999594,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 584332.125999996
+    },
+    {
+      "key": "herbalist",
+      "name": "Kräuterkundler",
+      "playerDamage": 488721.31440000224,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 569706.9144000022
+    },
+    {
+      "key": "hunter",
+      "name": "Jäger",
+      "playerDamage": 595015.0800000087,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 676000.6800000087
+    },
+    {
+      "key": "knight",
+      "name": "Ritter",
+      "playerDamage": 372948.8999999995,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 453934.49999999953
+    },
+    {
+      "key": "luminet",
+      "name": "Luminet",
+      "playerDamage": 579932.0980000014,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 660917.6980000014
+    },
+    {
+      "key": "ritualist",
+      "name": "Ritualist",
+      "playerDamage": 613628.0735000018,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 694613.6735000018
+    },
+    {
+      "key": "shaman",
+      "name": "Schamane",
+      "playerDamage": 424889.4211999999,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 505875.02119999996
+    },
+    {
+      "key": "summoner",
+      "name": "Seelenjäger",
+      "playerDamage": 485925.1100000057,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 566910.7100000057
+    },
+    {
+      "key": "villian",
+      "name": "Schurke",
+      "playerDamage": 432885.2000000001,
+      "petCount": 1,
+      "bondAttributeBonuses": {
+        "strength": 10,
+        "vitality": 10,
+        "intelligence": 10,
+        "wisdom": 10
+      },
+      "wildTrustAssumption": null,
+      "wildAddition": {},
+      "petStats": {
+        "maxHealth": 1659,
+        "maxMana": 684,
+        "physicalAttack": 133.20000000000002,
+        "magicalAttack": 0,
+        "physicalDefense": 66.36,
+        "magicalDefense": 27.36,
+        "attackSpeed": 1.01362,
+        "movementSpeed": 1,
+        "accuracy": 53.6,
+        "dodge": 34.05,
+        "critChanceRating": 0,
+        "penetration": 111,
+        "healthRegen": 221.2,
+        "manaRegen": 20.52
+      },
+      "damagePerPet": 80985.6,
+      "additionalPetDamage": 80985.6,
+      "combinedDamage": 513870.80000000016
+    }
+  ],
+  "probeScope": "600 seconds against the existing 10,000,000-HP dummy, no armor or incoming attacks. First basic hit after one full attack interval. No skills, crits, misses, dodges, pathing, healing, mana costs, trust progression or pet death. This is an auto-attack calculation, not a completed pet simulation. Player traces are reused unchanged; no player rerun.",
+  "additionScope": "Ordinary maximum Bond per class; Adventurer two identical example wolves, maximum Bond and Wild Bond at 100% trust with permanent owner stats. No optional own/group buffs, Blood Scent, Pack Attack, pet skills, equipment or action costs."
+}

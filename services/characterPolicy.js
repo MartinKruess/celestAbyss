@@ -1,7 +1,7 @@
 export const classRaces = Object.freeze({
   Druide: 'Aurora', Healer: 'Aurora', Luminet: 'Aurora', Shamane: 'Aurora',
   Butcher: 'Umbra', Ritualist: 'Umbra', Summoner: 'Umbra', Villian: 'Umbra',
-  Gladiator: 'Human', Herbalist: 'Human', Knife: 'Human', Hunter: 'Human',
+  Adventurer: 'Human', Gladiator: 'Human', Herbalist: 'Human', Knight: 'Human', Hunter: 'Human',
 });
 export function characterRace(charClass) {
   if (!Object.hasOwn(classRaces, charClass)) {

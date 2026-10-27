@@ -1,6 +1,51 @@
 # Heiler / Priester: Werte und Skillprüfung
 
-**32 Skills, 280 Skillpunkte.** Lunare Inkanation hat vier lernbare Stufen. Wiederbelebungsleben des Ziels: 80/160/320/640 HP. Mana-Kosten des Heilers: 120/180/240/300. Vorhandenes Ziel-Mana bleibt erhalten. Cooldown je Stufe: 100/90/80/70 Sekunden. Castzeit bleibt eine Sekunde. Die drei zusätzlichen Lernstufen bringen den Heiler auf 280 Punkte.
+<!-- skill-learning-overview:start -->
+## Skills nach Lernlevel
+
+Die erste Spalte zeigt das aktuell gespeicherte Lernlevel dieser Klasse. Sortiert nach Lernlevel; noch offene Vorschläge stehen am vorgesehenen Platz. „Offen“ bedeutet: noch kein verbindliches Lernlevel gespeichert. Bereits übernommene Vorschläge werden nicht doppelt angezeigt. Weitere Skillstufen verteilen wir getrennt; „Skillstufen“ bezeichnet die lernbare Ausbaustufe, nicht das Charakterlevel.
+
+Die SP-Spalte zeigt die Kosten der ersten Skillstufe. Die vollständigen Kosten stehen in der Tabelle „Skillpunktkosten je Stufe“. Regulär kostet der vollständige Ausbau 300 SP, ab erstem Lernlevel 55 insgesamt 400 SP; Taming-Skills behalten günstige Sonderkosten. Das alte Feld `skillpoints` und frühere Pauschalsummen sind historisch.
+
+| Ab Charakterlevel | Skill | Noch offene Planung | Weitere Skillstufen ab Charakterlevel | Nr | Lernbare Skillstufen | SP erste Stufe |
+| ---: | --- | ---: | --- | ---: | ---: | ---: |
+| 1 | Erleuchtung | — | — | 1 | 20 | 1 |
+| 2 | Ausdauertraining | — | — | 139 | 20 | 1 |
+| 2 | Waffentraining | — | — | 201 | 20 | 1 |
+| 4 | Bindung | — | — | 134 | 1 | 6 |
+| 4 | Kontrolle | — | — | 135 | 1 | 4 |
+| 4 | Rüstungstraining | — | — | 144 | 10 | 1 |
+| 4 | Zucht | — | — | 138 | 1 | 5 |
+| 5 | Beschwören | — | — | 136 | 1 | 1 |
+| 5 | Tamen | — | — | 133 | 1 | 10 |
+| 5 | Zurückrufen | — | — | 137 | 1 | 1 |
+| 6 | Energieschlag | — | — | 36 | 5 | 12 |
+| 9 | Erweiterung des Geistes | — | — | 44 | 10 | 12 |
+| 10 | Eisranken | — | — | 30 | 10 | 10 |
+| 12 | Eislanze | — | — | 29 | 10 | 10 |
+| 12 | Kristallisierte Wasserspähre | — | — | 68 | 10 | 10 |
+| 15 | Immunität | — | — | 143 | 10 | 10 |
+| 17 | Heilung | — | — | 64 | 20 | 5 |
+| 20 | Aurora-Segen | — | — | 197 | 10 | 10 |
+| 20 | Hoffnungsschimmer | — | — | 60 | 10 | 10 |
+| 21 | Wiederherstellung | — | — | 124 | 20 | 5 |
+| 22 | Lunare Inkanation | — | — | 206 | 4 | 45 |
+| 23 | Strahlendes Aurafeld | — | — | 108 | 10 | 10 |
+| 25 | Göttliche Nova | — | — | 217 | 10 | 10 |
+| 27 | Permafrost | — | — | 240 | 3 | 80 |
+| 30 | Gefrierbrand | — | — | 54 | 10 | 10 |
+| 37 | Frostschauer | — | — | 239 | 10 | 10 |
+| 42 | Assimilation | — | — | 242 | 5 | 30 |
+| 47 | Himmlische Aufopferung | — | — | 207 | 1 | 300 |
+| 55 | Göttliche Heilung | — | — | 78 | 10 | 13 |
+| 60 | Das ewige Wissen | — | — | 208 | 10 | 13 |
+| 60 | Kuss der Aurora | — | — | 58 | 6 | 27 |
+| 65 | Schwerter des Lichtes | — | — | 101 | 10 | 13 |
+
+[Alte Lernlevel als Vorlage](../legacy-skill-learning-levels.md) · [Alle Klassen](../skill-learning-index.md)
+<!-- skill-learning-overview:end -->
+
+**32 Skills. Gesamte SP-Kosten noch offen.** Lunare Inkanation hat vier lernbare Stufen. Wiederbelebungsleben des Ziels: 80/160/320/640 HP. Mana-Kosten des Heilers: 120/180/240/300. Vorhandenes Ziel-Mana bleibt erhalten. Cooldown je Stufe: 100/90/80/70 Sekunden. Castzeit bleibt eine Sekunde. Die drei zusätzlichen Lernstufen bringen den Heiler auf 280 Punkte.
 
 Einteilung: `type` bezeichnet Skill, Passive, Selbstbuff oder Buff; `damageType` bezeichnet physisch, magisch oder gemischt. Bewegung ist ein selbstgerichteter Buff. `dmgType` wird nur noch als Altformat für bestehende Werkzeuge mitgeführt.
 
@@ -48,37 +93,37 @@ Die vorhandene Wand-Tabelle dient als Vergleich für die Magiewaffe. Int/Faith/V
 | Nr | Skill | Art | Max. Definition / Lerngrenze | Startwerte / Wirkung | Vorhandene Skalierung und Maximalwerte | Kosten | Cooldown s | Cast Time s | Dauer s | Stand / offen |
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Erleuchtung | Passive | 20 | Mana-Regeneration +1<br>Wisdom +0,5<br>Intelligenz +0,5 | Intelligenz: 0,5 bis 10<br>Wisdom: 0,5 bis 10<br>Mana-Regeneration: 1 bis 20 | Keine | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
-| 29 | Eislanze | Skill / magisch | 10 | M-Angriff +187 | M-Angriff: 187 bis 628 | Mana-Kosten: 47 bis 155 | 50 bis 41 | 0.6 | 5 | Gemeinsame Definition |
-| 30 | Eisranken | Skill / magisch | 10 | M-Angriff +123<br>control, Ziel enemy<br>periodicDamage, Ziel enemy, 8 | M-Angriff: 123 bis 456<br>periodicDamage/: 8 bis 44 | Mana-Kosten: 33 bis 158 | 22 | 0.5 | root: 1 bis 4 s<br>periodicDamage: 1 bis 4 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 36 | Energieschlag | Skill / magisch | 20 / Heiler 5 | M-Angriff +25 | M-Angriff: 25 bis 105 | Mana-Kosten: 6 bis 26 | 2,6 bis 2,2 | 0.15 | 0 (einmalig) | Gemeinsame Definition |
-| 44 | Erweiterung des Geistes | Passive | 10 | Wisdom +1<br>Intelligenz +1<br>Dexterity +1 | Intelligenz: 1 bis 10<br>Wisdom: 1 bis 10<br>Dexterity: 1 bis 10 | Keine | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
-| 54 | Gefrierbrand | Passive | 10 | Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen ab Stufe 5 insgesamt 1 Prozent und ab Stufe 10 insgesamt 2 Prozent mehr Schaden. Auf den übrigen Stufen steigt die Chance, dass ein eigener treffender Eisangriff das Ziel für 2 Sekunden einfriert: Stufe 1/2/3/4/5/6/7/8/9/10 jeweils 1,25/2,5/3,75/5/5/6,25/7,5/8,75/10/10 Prozent. Löst dieses Einfrieren aus, erleidet das Ziel bei Sekunde 1 und 2 zusätzlich Gefrierbrand-Schaden. Grundschaden je Tick steigt gleichmäßig von 11 auf 131 über zehn Stufen, ohne Charakter- oder Waffen-M-Angriff je Tick. Auf Stufe 10 zwei Ticks zu je 131, insgesamt 262 Grundschaden. Der DoT ist an das durch diesen Skill ausgelöste Einfrieren gebunden und endet mit ihm. Keine Aktivierungskosten, Castzeit oder Cooldown festgelegt. Erneute Anwendung, Bossresistenzen, Einfrieren durch andere Skills und die Wechselwirkung des Eisbonus mit dem eigenen DoT werden später geprüft.<br>damageBonus, Ziel self, 0<br>control, Ziel enemy<br>periodicDamage, Ziel enemy, 11 | damageBonus/: 0 bis 2 %<br>control/: 0,013 bis 0,1<br>periodicDamage/: 11 bis 131 | Keine | Entfällt | Entfällt | damageBonus: 0 s<br>freeze: 2 s<br>periodicDamage: 2 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 58 | Kuss der Aurora | Skill | 6 | HP +550<br>heal, Ziel allyOrCompanion, 550<br>heal, Ziel allyOrCompanion, 0 | HP: 550 bis 2.700<br>heal/: 550 bis 2.700<br>heal/: 0 bis 5 % | Mana-Kosten: 283 bis 1.208 | 80 bis 70 | 0.6 | heal: 0 s<br>heal: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 60 | Hoffnungsschimmer | Passive | 10 | Mana-Regeneration +8<br>Wisdom +0,4<br>Intelligenz +0,6 | Mana-Regeneration: 8 bis 40<br>Intelligenz: 0,6 bis 6<br>Wisdom: 0,4 bis 4 | Keine | Entfällt | Entfällt | Permanent | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 64 | Heilung | Skill | 20 | HP +20<br>heal, Ziel allyOrCompanion, 20 | HP: 20 bis 1.540<br>heal/: 20 bis 1.540 | Mana-Kosten: 7 bis 539 | 19 | 0.1 | heal: 0 s | Gemeinsame Definition |
-| 68 | Kristallisierte Wasserspähre | Skill / magisch | 10 | M-Angriff +137<br>Animation 1 s (vorläufig) | M-Angriff: 137 bis 380 | Mana-Kosten: 34 bis 97 | 30 bis 26 | 0.2 | Wirkung einmalig; Animation 1 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 78 | Göttliche Heilung | Skill | 10 | HP +162<br>heal, Ziel alliesInArea, 162<br>heal, Ziel alliesInArea, 81<br>Animation 2 s (vorläufig) | HP: 162 bis 1.035<br>heal/: 162 bis 1.035<br>heal/: 81 bis 517,5 | Mana-Kosten: 85 bis 544 | 64 bis 58 | 0.2 | heal: 0 s<br>heal: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 101 | Schwerter des Lichtes | Skill / magisch | 10 | M-Angriff +273<br>statModifier, Ziel alliesInArea, int, 13<br>Fläche: 7,5 m Radius um Skillzentrum<br>Ein einzelnes Ziel | M-Angriff: 273 bis 1.029<br>statModifier/int: 13 bis 17,5 | Mana-Kosten: 68 bis 257 | 72 bis 63 | 0.7 | int: 10 bis 30 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 108 | Strahlendes Aurafeld | Skill | 10 | HP +10<br>heal, Ziel self, 10<br>heal, Ziel alliesInArea, 3 | HP: 10 bis 100<br>heal/: 10 bis 100<br>heal/: 3 bis 30 | Mana-Kosten: 21 bis 210 | 73 bis 46 | 0 | heal: 12 s<br>heal: 12 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 124 | Wiederherstellung | Skill | 20 | HP +11<br>heal, Ziel allyOrCompanion, 11 | HP: 11 bis 600<br>heal/: 11 bis 600 | Mana-Kosten: 12 bis 840 | 41 bis 22 | 0.2 | heal: 3 bis 4 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 133 | Tamen | Skill | 3 / Heiler 1 | Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt. | Nicht vollständig gespeichert | Mana-Kosten: 100 bis 100 | 60 bis 60 | 3 bis 3 | 0 (keine anschließende Wirkung) | Gemeinsame Definition; Levelskalierung prüfen |
+| 139 | Ausdauertraining | Passive | 20 | Vita +1<br>Wisdom +1 | Vita: 1 bis 20<br>Wisdom: 1 bis 20 | Keine | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
+| 201 | Waffentraining | Passive | 20 | P-Angriff +1<br>M-Angriff +1 | P-Angriff: 1 bis 20<br>M-Angriff: 1 bis 20 | Keine aktive Nutzung | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
 | 134 | Bindung | Passive | 3 / Heiler 1 | Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown.<br>statModifier, Ziel companion, str, 10<br>statModifier, Ziel companion, vita, 10<br>statModifier, Ziel companion, int, 10<br>statModifier, Ziel companion, wis, 10 | statModifier/str: 10 bis 10<br>statModifier/vita: 10 bis 10<br>statModifier/int: 10 bis 10<br>statModifier/wis: 10 bis 10 | Keine | Entfällt | Entfällt | str: 0 s<br>vita: 0 s<br>int: 0 s<br>wis: 0 s | Gemeinsame Definition |
 | 135 | Kontrolle | Passive | 2 / Heiler 1 | Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen. | Nicht vollständig gespeichert | Keine aktive Nutzung | Entfällt | Entfällt | Permanent | Gemeinsame Definition; Levelskalierung prüfen |
-| 136 | Beschwören | Skill | 1 | Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer. | Nicht vollständig gespeichert | Mana-Kosten: 5 bis 5 | 5 | 1 | Nicht gespeichert | Gemeinsame Definition |
-| 137 | Zurückrufen | Skill | 1 | Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer. | Nicht vollständig gespeichert | Mana-Kosten: 5 bis 5 | 5 | 0 | Nicht gespeichert | Gemeinsame Definition |
-| 138 | Zucht | Passive | 3 / Heiler 1 | Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen.<br>experienceBonus, Ziel companion, 0,1 | experienceBonus/: 10 bis 10 % | Keine | Entfällt | Entfällt | experienceBonus: 0 s | Gemeinsame Definition |
-| 139 | Ausdauertraining | Passive | 20 | Vita +1<br>Wisdom +1 | Vita: 1 bis 20<br>Wisdom: 1 bis 20 | Keine | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
-| 143 | Immunität | Passive | 10 | Wisdom +0,5<br>Intelligenz +0,5<br>M-Defense +6<br>statusResistance, Ziel self, 0,01 | M-Defense: 6 bis 42<br>Intelligenz: 0,5 bis 5<br>Wisdom: 0,5 bis 5<br>statusResistance/: 1 bis 10 % | Keine | Entfällt | Entfällt | statusResistance: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
 | 144 | Rüstungstraining | Passive | 10 | P-Defense +3<br>M-Defense +6 | P-Defense: 3 bis 30<br>M-Defense: 6 bis 60 | Keine | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
+| 138 | Zucht | Passive | 3 / Heiler 1 | Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen.<br>experienceBonus, Ziel companion, 0,1 | experienceBonus/: 10 bis 10 % | Keine | Entfällt | Entfällt | experienceBonus: 0 s | Gemeinsame Definition |
+| 136 | Beschwören | Skill | 1 | Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer. | Nicht vollständig gespeichert | Mana-Kosten: 5 bis 5 | 5 | 1 | Nicht gespeichert | Gemeinsame Definition |
+| 133 | Tamen | Skill | 3 / Heiler 1 | Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen. | Chancenfaktor ×1,0 / ×1,1 / ×1,2; normale Lerngrenze 1 | Mana-Kosten: 100 bis 100 | 60 bis 60 | 3 bis 3 | 0 (keine anschließende Wirkung) | Gemeinsame Definition; Levelskalierung prüfen |
+| 137 | Zurückrufen | Skill | 1 | Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer. | Nicht vollständig gespeichert | Mana-Kosten: 5 bis 5 | 5 | 0 | Nicht gespeichert | Gemeinsame Definition |
+| 36 | Energieschlag | Skill / magisch | 20 / Heiler 5 | M-Angriff +25 | M-Angriff: 25 bis 105 | Mana-Kosten: 6 bis 26 | 2,6 bis 2,2 | 0.15 | 0 (einmalig) | Gemeinsame Definition |
+| 44 | Erweiterung des Geistes | Passive | 10 | Wisdom +1<br>Intelligenz +1<br>Dexterity +1 | Intelligenz: 1 bis 10<br>Wisdom: 1 bis 10<br>Dexterity: 1 bis 10 | Keine | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
+| 30 | Eisranken | Skill / magisch | 10 | M-Angriff +123<br>control, Ziel enemy<br>periodicDamage, Ziel enemy, 8 | M-Angriff: 123 bis 456<br>periodicDamage/: 8 bis 44 | Mana-Kosten: 33 bis 158 | 22 | 0.5 | root: 1 bis 4 s<br>periodicDamage: 1 bis 4 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 29 | Eislanze | Skill / magisch | 10 | M-Angriff +187 | M-Angriff: 187 bis 628 | Mana-Kosten: 47 bis 155 | 50 bis 41 | 0.6 | 5 | Gemeinsame Definition |
+| 68 | Kristallisierte Wasserspähre | Skill / magisch | 10 | M-Angriff +137<br>Animation 1 s (vorläufig) | M-Angriff: 137 bis 380 | Mana-Kosten: 34 bis 97 | 30 bis 26 | 0.2 | Wirkung einmalig; Animation 1 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 143 | Immunität | Passive | 10 | Wisdom +0,5<br>Intelligenz +0,5<br>M-Defense +6<br>statusResistance, Ziel self, 0,01 | M-Defense: 6 bis 42<br>Intelligenz: 0,5 bis 5<br>Wisdom: 0,5 bis 5<br>statusResistance/: 1 bis 10 % | Keine | Entfällt | Entfällt | statusResistance: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 64 | Heilung | Skill | 20 | HP +20<br>heal, Ziel allyOrCompanion, 20 | HP: 20 bis 1.540<br>heal/: 20 bis 1.540 | Mana-Kosten: 7 bis 539 | 19 | 0.1 | heal: 0 s | Gemeinsame Definition |
 | 197 | Aurora-Segen | Buff | 10 | Mana-Regeneration +2<br>Stärke +2<br>Vita +2<br>Wisdom +2<br>Intelligenz +2 | Stärke: 2 bis 20<br>Vita: 2 bis 20<br>Intelligenz: 2 bis 20<br>Wisdom: 2 bis 20<br>Mana-Regeneration: 2 bis 20 | Mana-Kosten: 35 bis 224 | 60 | 0.3 | 1800 | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 201 | Waffentraining | Passive | 20 | P-Angriff +1<br>M-Angriff +1 | P-Angriff: 1 bis 20<br>M-Angriff: 1 bis 20 | Keine aktive Nutzung | Entfällt | Entfällt | Permanent | Gemeinsame Definition |
+| 60 | Hoffnungsschimmer | Passive | 10 | Mana-Regeneration +8<br>Wisdom +0,4<br>Intelligenz +0,6 | Mana-Regeneration: 8 bis 40<br>Intelligenz: 0,6 bis 6<br>Wisdom: 0,4 bis 4 | Keine | Entfällt | Entfällt | Permanent | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 124 | Wiederherstellung | Skill | 20 | HP +11<br>heal, Ziel allyOrCompanion, 11 | HP: 11 bis 600<br>heal/: 11 bis 600 | Mana-Kosten: 12 bis 840 | 41 bis 22 | 0.2 | heal: 3 bis 4 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
 | 206 | Lunare Inkanation | Skill | 4 | HP +80<br>Animation 1 s (vorläufig) | HP: 80 bis 640 | Mana-Kosten: 120 bis 300 | 100 bis 70 | 1 | 0 bis undefined | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 207 | Himmlische Aufopferung | Skill | 1 | Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt.<br>heal, Ziel ownGroup, 500<br>Animation 2 s (vorläufig) | Nicht vollständig gespeichert | Mana-Kosten: 0,9 bis 0,9 (Anteil)<br>health-Kosten: 0,1 bis 0,1 (Anteil) | 900 | 0 | heal: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 208 | Das ewige Wissen | Passive | 10 | Wisdom +0,6<br>Intelligenz +1,4 | Intelligenz: 1,4 bis 14<br>Wisdom: 0,6 bis 6 | Keine | Entfällt | Entfällt | Permanent | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 108 | Strahlendes Aurafeld | Skill | 10 | HP +10<br>heal, Ziel self, 10<br>heal, Ziel alliesInArea, 3 | HP: 10 bis 100<br>heal/: 10 bis 100<br>heal/: 3 bis 30 | Mana-Kosten: 21 bis 210 | 73 bis 46 | 0 | heal: 12 s<br>heal: 12 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
 | 217 | Göttliche Nova | Skill / magisch | 10 | M-Angriff +473<br>Animation 2,5 s (vorläufig)<br>Fläche: 2 m Radius um anvisiertes Ziel<br>Maximal 5 Gegner, jeweils ein Treffer | M-Angriff: 473 bis 1.415 | Mana-Kosten: 118 bis 354 | 176 bis 158 | 0.4 | 2,5 bis 2,5 | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
-| 239 | Frostschauer | Skill / magisch | 10 | M-Angriff +32<br>periodicDamage, Ziel enemiesInArea, 32<br>statModifier, Ziel enemy, movementSpeed, -0,01<br>Fläche: 5 m Radius um anvisiertes Ziel<br>Maximal 3 Gegner je Treffer/Tick<br>Schaden alle 1,5 s; Verlangsamung 1–10 % für 3 s nach Treffer | M-Angriff: 32 bis 271<br>periodicDamage/: 32 bis 271<br>statModifier/movementSpeed: -1 bis -10 % | Mana-Kosten: 26 bis 542 | 53 bis 44 | 0.4 | 4 bis 8 s Feldlaufzeit | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
 | 240 | Permafrost | Selbstbuff | 3 | Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt aktiv, bis er manuell ausgeschaltet wird oder das Mana für den nächsten Verbrauchstick nicht reicht. Bei jedem Mana-Regenerationstick kostet er auf Stufe 1/2/3 jeweils 13/21/29 Mana; zusätzlich einmalige Aktivierungskosten 50/63/76 Mana auf Stufe 1/2/3. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit fest 0,1 Sekunden. Beim Abschalten enden die Boni und der laufende Verbrauch. Umschalt-Cooldown 0 Sekunden. Mindest-Cooldown von Eiszaubern und Einfluss auf bereits laufende Cooldowns bleiben offen. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.<br>cooldownReduction, Ziel self, 2<br>procChanceBonus, Ziel self, 0,01<br>resourceDrain, Ziel self, 13 | cooldownReduction/: 2 bis 6<br>resourceDrain/: 13 bis 29 | Mana-Kosten: 50 bis 76<br>Laufender Verbrauch: 13 / 21 / 29 Mana je Mana-Regenerationstick | 0 | 0.1 | Bis ausgeschaltet oder Mana nicht reicht | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 54 | Gefrierbrand | Passive | 10 | Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen ab Stufe 5 insgesamt 1 Prozent und ab Stufe 10 insgesamt 2 Prozent mehr Schaden. Auf den übrigen Stufen steigt die Chance, dass ein eigener treffender Eisangriff das Ziel für 2 Sekunden einfriert: Stufe 1/2/3/4/5/6/7/8/9/10 jeweils 1,25/2,5/3,75/5/5/6,25/7,5/8,75/10/10 Prozent. Löst dieses Einfrieren aus, erleidet das Ziel bei Sekunde 1 und 2 zusätzlich Gefrierbrand-Schaden. Grundschaden je Tick steigt gleichmäßig von 11 auf 131 über zehn Stufen, ohne Charakter- oder Waffen-M-Angriff je Tick. Auf Stufe 10 zwei Ticks zu je 131, insgesamt 262 Grundschaden. Der DoT ist an das durch diesen Skill ausgelöste Einfrieren gebunden und endet mit ihm. Keine Aktivierungskosten, Castzeit oder Cooldown festgelegt. Erneute Anwendung, Bossresistenzen, Einfrieren durch andere Skills und die Wechselwirkung des Eisbonus mit dem eigenen DoT werden später geprüft.<br>damageBonus, Ziel self, 0<br>control, Ziel enemy<br>periodicDamage, Ziel enemy, 11 | damageBonus/: 0 bis 2 %<br>control/: 0,013 bis 0,1<br>periodicDamage/: 11 bis 131 | Keine | Entfällt | Entfällt | damageBonus: 0 s<br>freeze: 2 s<br>periodicDamage: 2 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 239 | Frostschauer | Skill / magisch | 10 | M-Angriff +32<br>periodicDamage, Ziel enemiesInArea, 32<br>statModifier, Ziel enemy, movementSpeed, -0,01<br>Fläche: 5 m Radius um anvisiertes Ziel<br>Maximal 3 Gegner je Treffer/Tick<br>Schaden alle 1,5 s; Verlangsamung 1–10 % für 3 s nach Treffer | M-Angriff: 32 bis 271<br>periodicDamage/: 32 bis 271<br>statModifier/movementSpeed: -1 bis -10 % | Mana-Kosten: 26 bis 542 | 53 bis 44 | 0.4 | 4 bis 8 s Feldlaufzeit | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
 | 242 | Assimilation | Selbstbuff | 5 | Mana-Regeneration +5 | Mana: 200 bis 300<br>Mana-Regeneration: 5 bis 25 | Mana-Kosten: 50 bis 102 | 60 | 0.1 | 600 | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 207 | Himmlische Aufopferung | Skill | 1 | Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt.<br>heal, Ziel ownGroup, 500<br>Animation 2 s (vorläufig) | Nicht vollständig gespeichert | Mana-Kosten: 0,9 bis 0,9 (Anteil)<br>health-Kosten: 0,1 bis 0,1 (Anteil) | 900 | 0 | heal: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 78 | Göttliche Heilung | Skill | 10 | HP +162<br>heal, Ziel alliesInArea, 162<br>heal, Ziel alliesInArea, 81<br>Animation 2 s (vorläufig) | HP: 162 bis 1.035<br>heal/: 162 bis 1.035<br>heal/: 81 bis 517,5 | Mana-Kosten: 85 bis 544 | 64 bis 58 | 0.2 | heal: 0 s<br>heal: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 208 | Das ewige Wissen | Passive | 10 | Wisdom +0,6<br>Intelligenz +1,4 | Intelligenz: 1,4 bis 14<br>Wisdom: 0,6 bis 6 | Keine | Entfällt | Entfällt | Permanent | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 58 | Kuss der Aurora | Skill | 6 | HP +550<br>heal, Ziel allyOrCompanion, 550<br>heal, Ziel allyOrCompanion, 0 | HP: 550 bis 2.700<br>heal/: 550 bis 2.700<br>heal/: 0 bis 5 % | Mana-Kosten: 283 bis 1.208 | 80 bis 70 | 0.6 | heal: 0 s<br>heal: 0 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
+| 101 | Schwerter des Lichtes | Skill / magisch | 10 | M-Angriff +273<br>statModifier, Ziel alliesInArea, int, 13<br>Fläche: 7,5 m Radius um Skillzentrum<br>Ein einzelnes Ziel | M-Angriff: 273 bis 1.029<br>statModifier/int: 13 bis 17,5 | Mana-Kosten: 68 bis 257 | 72 bis 63 | 0.7 | int: 10 bis 30 s | Keine zusätzliche Lernvoraussetzung festgelegt; Ausführung ggf. prüfen |
 
 ## Detaildaten
 
@@ -90,6 +135,29 @@ Permanenter passiver Aurora-Grundskill mit 20 Stufen. Je gelernter Stufe +0,5 In
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 2 |
+| skillPointCosts.rankCosts.2 | 4 |
+| skillPointCosts.rankCosts.3 | 5 |
+| skillPointCosts.rankCosts.4 | 7 |
+| skillPointCosts.rankCosts.5 | 8 |
+| skillPointCosts.rankCosts.6 | 10 |
+| skillPointCosts.rankCosts.7 | 11 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 19 |
+| skillPointCosts.rankCosts.13 | 20 |
+| skillPointCosts.rankCosts.14 | 22 |
+| skillPointCosts.rankCosts.15 | 23 |
+| skillPointCosts.rankCosts.16 | 25 |
+| skillPointCosts.rankCosts.17 | 26 |
+| skillPointCosts.rankCosts.18 | 28 |
+| skillPointCosts.rankCosts.19 | 29 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
 | skillName_eng | Enlightenment |
 | category | Aurora |
 | charClass[0] | Healer |
@@ -154,206 +222,817 @@ Permanenter passiver Aurora-Grundskill mit 20 Stufen. Je gelernter Stufe +0,5 In
 | classificationVersion | 1 |
 | type | passive |
 
-### 29: Eislanze
+### 139: Ausdauertraining
 
-Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung für 5 Sekunden um 5 Prozent verringert. Der magische Grundangriff steigt von 187 um 49 je weiterer Stufe auf 628. Die Mana-Kosten 47 auf Stufe 1, +12 je weiterer Stufe, maximal 155 auf Stufe 10. Die Castzeit beträgt 0,6 Sekunden. Der Cooldown 50 Sekunden auf Stufe 1, 41 Sekunden auf Stufe 10; bisheriger Stufenverlauf um 2 Sekunden erhöht. Die fünf Sekunden betreffen den Rüstungseffekt, keinen Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+Permanentes Ausdauertraining mit 20 Stufen für alle Klassen. Je gelerntem Skilllevel +1 Vitalität und +1 Willenskraft, auf Stufe 20 jeweils +20. Keine direkten Boni auf physische oder magische Verteidigung; die regulären Attributumrechnungen bleiben wirksam. Keine Aktivierungskosten, Castzeit oder Cooldown.
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Ice Lance |
-| category | active |
-| cd | 50 |
-| charClass[0] | Herbalist |
-| charClass[1] | Witcher |
-| charClass[2] | Druide |
-| charClass[3] | Alchemist |
-| charClass[4] | Healer |
-| charClass[5] | Priest |
-| charClass[6] | Luminet |
-| charClass[7] | Lightmage |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 2 |
+| skillPointCosts.rankCosts.2 | 4 |
+| skillPointCosts.rankCosts.3 | 5 |
+| skillPointCosts.rankCosts.4 | 7 |
+| skillPointCosts.rankCosts.5 | 8 |
+| skillPointCosts.rankCosts.6 | 10 |
+| skillPointCosts.rankCosts.7 | 11 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 19 |
+| skillPointCosts.rankCosts.13 | 20 |
+| skillPointCosts.rankCosts.14 | 22 |
+| skillPointCosts.rankCosts.15 | 23 |
+| skillPointCosts.rankCosts.16 | 25 |
+| skillPointCosts.rankCosts.17 | 26 |
+| skillPointCosts.rankCosts.18 | 28 |
+| skillPointCosts.rankCosts.19 | 29 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| skillName_eng | Endurance Training |
+| category | passive |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung für 5 Sekunden um 5 Prozent verringert. Der magische Grundangriff steigt von 187 um 49 je weiterer Stufe auf 628. Die Mana-Kosten 47 auf Stufe 1, +12 je weiterer Stufe, maximal 155 auf Stufe 10. Die Castzeit beträgt 0,6 Sekunden. Der Cooldown 50 Sekunden auf Stufe 1, 41 Sekunden auf Stufe 10; bisheriger Stufenverlauf um 2 Sekunden erhöht. Die fünf Sekunden betreffen den Rüstungseffekt, keinen Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
-| description_eng | Summons an ice lance that pierces the target once and reduces its armor by 5 percent for 5 seconds. Base magical attack increases from 187 by 49 per additional level to 628. Mana cost 47 at level 1, maximum 155 at level 10. Cast time is 0.6 seconds. Cooldown 50 seconds at level 1 and 41 seconds at level 10; previous progression increased by 2 seconds throughout. The five seconds refer to the armor effect, not damage over time. |
-| dmgType (Altformat) | spell |
-| dur | 5 |
-| matk | 187 |
+| description_de | Permanentes Ausdauertraining mit 20 Stufen für alle Klassen. Je gelerntem Skilllevel +1 Vitalität und +1 Willenskraft, auf Stufe 20 jeweils +20. Keine direkten Boni auf physische oder magische Verteidigung; die regulären Attributumrechnungen bleiben wirksam. Keine Aktivierungskosten, Castzeit oder Cooldown. |
+| description_eng | Permanent Endurance Training with 20 levels for all classes. Each learned level grants +1 Vitality and +1 Wisdom, reaching +20 each at level 20. No direct physical or magical defense bonuses; normal attribute conversions still apply. No activation costs, cast time or cooldown. |
+| dmgType (Altformat) | passive |
+| maxSkillLv | 20 |
+| maxUpgradeLv | 10 |
+| nr | 139 |
+| skillName_de | Ausdauertraining |
+| skillpoints | 1 |
+| vita | 1 |
+| wis | 1 |
+| resourceCosts | [] |
+| statScaling.vita.type | linear |
+| statScaling.vita.base | 1 |
+| statScaling.vita.perLevel | 1 |
+| statScaling.wis.type | linear |
+| statScaling.wis.base | 1 |
+| statScaling.wis.perLevel | 1 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | statScaling |
+| levelProgression.rules[0].path[1] | vita |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 1 |
+| levelProgression.rules[0].rule.perLevel | 1 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | wis |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 1 |
+| levelProgression.rules[1].rule.perLevel | 1 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| learningRequirements.minimumCharacterLevel | 2 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| classificationVersion | 1 |
+| type | passive |
+
+### 201: Waffentraining
+
+Permanentes allgemeines Waffentraining mit 20 Stufen für alle Klassen. Je gelernter Stufe +1 physischer und +1 magischer Angriff, maximal jeweils +20 auf Stufe 20. Keine Angriffsgeschwindigkeit, Aktivierungskosten, Castzeit oder Cooldown.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 2 |
+| skillPointCosts.rankCosts.2 | 4 |
+| skillPointCosts.rankCosts.3 | 5 |
+| skillPointCosts.rankCosts.4 | 7 |
+| skillPointCosts.rankCosts.5 | 8 |
+| skillPointCosts.rankCosts.6 | 10 |
+| skillPointCosts.rankCosts.7 | 11 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 19 |
+| skillPointCosts.rankCosts.13 | 20 |
+| skillPointCosts.rankCosts.14 | 22 |
+| skillPointCosts.rankCosts.15 | 23 |
+| skillPointCosts.rankCosts.16 | 25 |
+| skillPointCosts.rankCosts.17 | 26 |
+| skillPointCosts.rankCosts.18 | 28 |
+| skillPointCosts.rankCosts.19 | 29 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 2 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Weapon Training |
+| category | passive |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Permanentes allgemeines Waffentraining mit 20 Stufen für alle Klassen. Je gelernter Stufe +1 physischer und +1 magischer Angriff, maximal jeweils +20 auf Stufe 20. Keine Angriffsgeschwindigkeit, Aktivierungskosten, Castzeit oder Cooldown. |
+| description_eng | Permanent general Weapon Training with 20 levels for all classes. Each learned level grants +1 physical and +1 magical attack, reaching +20 each at level 20. No attack speed, activation costs, cast time or cooldown. |
+| dmgType (Altformat) | passive |
+| matk | 1 |
+| maxSkillLv | 20 |
+| maxUpgradeLv | 10 |
+| nr | 201 |
+| patk | 1 |
+| skillName_de | Waffentraining |
+| skillpoints | 1 |
+| statBonusUnits.patk | flat |
+| statBonusUnits.matk | flat |
+| statScaling.patk.type | linear |
+| statScaling.patk.base | 1 |
+| statScaling.patk.perLevel | 1 |
+| statScaling.matk.type | linear |
+| statScaling.matk.base | 1 |
+| statScaling.matk.perLevel | 1 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | statScaling |
+| levelProgression.rules[0].path[1] | patk |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 1 |
+| levelProgression.rules[0].rule.perLevel | 1 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | matk |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 1 |
+| levelProgression.rules[1].rule.perLevel | 1 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | passive |
+
+### 134: Bindung
+
+Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 6 |
+| skillPointCosts.rankCosts.0 | 6 |
+| skillPointCosts.classRankCosts.adventurer.0 | 6 |
+| skillPointCosts.classRankCosts.adventurer.1 | 7 |
+| skillPointCosts.classRankCosts.adventurer.2 | 8 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Bond |
+| category | creature |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown. |
+| description_eng | The bond permanently strengthens your companion. At skill level 1 it gains 10 Strength, Vitality, Intelligence and Wisdom each. Each additional level adds 5 to each attribute, reaching 20 each at level 3. The player does not receive these bonuses. Standard classes can learn level 1; the Adventurer can learn level 3. The second specialist class is still to be defined. Bond has no activation costs or cooldown. |
+| dmgType (Altformat) | passive |
+| maxSkillLv | 3 |
+| maxUpgradeLv | 10 |
+| nr | 134 |
+| skillName_de | Bindung |
+| skillpoints | 1 |
+| effects[0].key | bond_str |
+| effects[0].type | statModifier |
+| effects[0].target | companion |
+| effects[0].stat | str |
+| effects[0].value | 10 |
+| effects[0].unit | flat |
+| effects[0].durationSeconds | 0 |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 10 |
+| effects[0].valueScaling.perLevel | 5 |
+| effects[0].progressionStatus | defined |
+| effects[1].key | bond_vita |
+| effects[1].type | statModifier |
+| effects[1].target | companion |
+| effects[1].stat | vita |
+| effects[1].value | 10 |
+| effects[1].unit | flat |
+| effects[1].durationSeconds | 0 |
+| effects[1].valueScaling.type | linear |
+| effects[1].valueScaling.base | 10 |
+| effects[1].valueScaling.perLevel | 5 |
+| effects[1].progressionStatus | defined |
+| effects[2].key | bond_int |
+| effects[2].type | statModifier |
+| effects[2].target | companion |
+| effects[2].stat | int |
+| effects[2].value | 10 |
+| effects[2].unit | flat |
+| effects[2].durationSeconds | 0 |
+| effects[2].valueScaling.type | linear |
+| effects[2].valueScaling.base | 10 |
+| effects[2].valueScaling.perLevel | 5 |
+| effects[2].progressionStatus | defined |
+| effects[3].key | bond_wis |
+| effects[3].type | statModifier |
+| effects[3].target | companion |
+| effects[3].stat | wis |
+| effects[3].value | 10 |
+| effects[3].unit | flat |
+| effects[3].durationSeconds | 0 |
+| effects[3].valueScaling.type | linear |
+| effects[3].valueScaling.base | 10 |
+| effects[3].valueScaling.perLevel | 5 |
+| effects[3].progressionStatus | defined |
+| effectsVersion | 1 |
+| learningLimits.defaultMaxLevel | 1 |
+| learningLimits.classOverrides.Abenteuer | 3 |
+| learningLimits.status | secondSpecialistPending |
+| resourceCosts | [] |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | effects |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | valueScaling |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 10 |
+| levelProgression.rules[0].rule.perLevel | 5 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | effects |
+| levelProgression.rules[1].path[1] | 1 |
+| levelProgression.rules[1].path[2] | valueScaling |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 10 |
+| levelProgression.rules[1].rule.perLevel | 5 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | effects |
+| levelProgression.rules[2].path[1] | 2 |
+| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 10 |
+| levelProgression.rules[2].rule.perLevel | 5 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | effects |
+| levelProgression.rules[3].path[1] | 3 |
+| levelProgression.rules[3].path[2] | valueScaling |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 10 |
+| levelProgression.rules[3].rule.perLevel | 5 |
+| levelProgression.rules[3].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | passive |
+
+### 135: Kontrolle
+
+Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 4. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 4 |
+| skillPointCosts.rankCosts.0 | 4 |
+| skillPointCosts.classRankCosts.adventurer.0 | 4 |
+| skillPointCosts.classRankCosts.adventurer.1 | 5 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Control |
+| category | creature |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 4. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen. |
+| description_eng | Permanent passive creature skill. The learned skill level determines the number of simultaneously controlled creatures: one at level 1, two at level 2. All other classes can learn up to level 1; only the Adventurer and its advancement can learn up to level 2 and control two creatures simultaneously. First unlock at character level 5; the character-level requirement for skill rank 2 remains pending. |
+| dmgType (Altformat) | passive |
+| maxSkillLv | 2 |
+| maxUpgradeLv | 10 |
+| nr | 135 |
+| skillName_de | Kontrolle |
+| skillpoints | 1 |
+| learningLimits.defaultMaxLevel | 1 |
+| learningLimits.classOverrides.Abenteuer | 2 |
+| learningLimits.classOverrides.Adventure | 2 |
+| learningLimits.classOverrides.Adventurer | 2 |
+| learningLimits.classOverrides.Scout | 2 |
+| learningLimits.status | defined |
+| levelProgression.version | 1 |
+| levelProgression.rules | [] |
+| levelProgression.extensionNeedsDefinition[0] | companionControlSettings.maximumControlledCreaturesByLevel |
+| classificationVersion | 1 |
+| type | passive |
+| companionControlSettings.maximumControlledCreaturesByLevel[0] | 1 |
+| companionControlSettings.maximumControlledCreaturesByLevel[1] | 2 |
+
+### 144: Rüstungstraining
+
+Permanentes Rüstungstraining mit zehn Stufen für alle Klassen. Je gelernter Stufe +3 physische und +6 magische Verteidigung, maximal +30 P-Abwehr und +60 M-Abwehr. Keine Vitalitätsboni, Aktivierungskosten, Castzeit oder Cooldown.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.rankCosts.1 | 7 |
+| skillPointCosts.rankCosts.2 | 14 |
+| skillPointCosts.rankCosts.3 | 20 |
+| skillPointCosts.rankCosts.4 | 27 |
+| skillPointCosts.rankCosts.5 | 33 |
+| skillPointCosts.rankCosts.6 | 40 |
+| skillPointCosts.rankCosts.7 | 46 |
+| skillPointCosts.rankCosts.8 | 53 |
+| skillPointCosts.rankCosts.9 | 59 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Armor Training |
+| category | passive |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Permanentes Rüstungstraining mit zehn Stufen für alle Klassen. Je gelernter Stufe +3 physische und +6 magische Verteidigung, maximal +30 P-Abwehr und +60 M-Abwehr. Keine Vitalitätsboni, Aktivierungskosten, Castzeit oder Cooldown. |
+| description_eng | Permanent Armor Training with ten levels for all classes. Each learned level grants +3 physical and +6 magical defense, reaching +30 physical and +60 magical defense. No Vitality bonus, activation costs, cast time or cooldown. |
+| dmgType (Altformat) | passive |
 | maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 29 |
-| skillName_de | Eislanze |
+| nr | 144 |
+| pdef | 3 |
+| skillName_de | Rüstungstraining |
 | skillpoints | 1 |
-| castTimeSeconds | 0,6 |
+| mdef | 6 |
+| resourceCosts | [] |
+| statScaling.pdef.type | linear |
+| statScaling.pdef.base | 3 |
+| statScaling.pdef.perLevel | 3 |
+| statScaling.mdef.type | linear |
+| statScaling.mdef.base | 6 |
+| statScaling.mdef.perLevel | 6 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | statScaling |
+| levelProgression.rules[0].path[1] | pdef |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 3 |
+| levelProgression.rules[0].rule.perLevel | 3 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | mdef |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 6 |
+| levelProgression.rules[1].rule.perLevel | 6 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | passive |
+
+### 138: Zucht
+
+Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 5 |
+| skillPointCosts.rankCosts.0 | 5 |
+| skillPointCosts.classRankCosts.adventurer.0 | 5 |
+| skillPointCosts.classRankCosts.adventurer.1 | 6 |
+| skillPointCosts.classRankCosts.adventurer.2 | 7 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 4 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Breed |
+| category | creature |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen. |
+| description_eng | Allows your companion to gain experience and level up. It receives the same experience as you, plus 10 percent per learned skill level: 110 percent at level 1, 120 percent at level 2 and 130 percent at level 3. Permanently passive with no costs or cooldown. Standard classes can learn level 1, the Adventurer level 3; the second specialist class is still to be defined. |
+| dmgType (Altformat) | passive |
+| maxSkillLv | 3 |
+| maxUpgradeLv | 10 |
+| nr | 138 |
+| skillName_de | Zucht |
+| skillpoints | 1 |
+| effects[0].key | breedExperience |
+| effects[0].type | experienceBonus |
+| effects[0].target | companion |
+| effects[0].experienceSource | playerExperience |
+| effects[0].value | 0,1 |
+| effects[0].unit | fraction |
+| effects[0].durationSeconds | 0 |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 0,1 |
+| effects[0].valueScaling.perLevel | 0,1 |
+| effects[0].progressionStatus | defined |
+| effectsVersion | 1 |
+| learningLimits.defaultMaxLevel | 1 |
+| learningLimits.classOverrides.Abenteuer | 3 |
+| learningLimits.status | secondSpecialistPending |
+| resourceCosts | [] |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | effects |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | valueScaling |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 0,1 |
+| levelProgression.rules[0].rule.perLevel | 0,1 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | passive |
+
+### 136: Beschwören
+
+Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 5 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Summon |
+| category | creature |
+| cd | 5 |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualiost |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer. |
+| description_eng | Summons your companion after a 1 second cast time. Costs 5 Mana and has a 5 second cooldown. There is no subsequent effect duration. |
+| dmgType (Altformat) | spell |
+| maxSkillLv | 1 |
+| maxUpgradeLv | 10 |
+| nr | 136 |
+| skillName_de | Beschwören |
+| skillpoints | 1 |
+| castTimeSeconds | 1 |
+| mana (Aktivierungskosten, kein Bonus) | 5 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | fixed |
+| resourceCosts[0].scaling.base | 5 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | resourceCosts |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | scaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0 |
+| levelProgression.rules[0].rule.rule.kind | constant |
+| levelProgression.rules[0].rule.rule.value | 5 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | skill |
+
+### 133: Tamen
+
+Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.classRankCosts.adventurer.0 | 10 |
+| skillPointCosts.classRankCosts.adventurer.1 | 11 |
+| skillPointCosts.classRankCosts.adventurer.2 | 12 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 5 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Tame |
+| category | creature |
+| cd | 60 |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Versucht, eine Kreatur zu zähmen. Erfordert eine zur Kreaturenvariante passende Zähmungskarte. Die Grundchance wird von der jeweiligen Kreaturenvariante vorgegeben. Tamen multipliziert diese Chance auf Stufe 1 mit 1,0, auf Stufe 2 mit 1,1 und auf Stufe 3 mit 1,2; keine zusätzlichen Prozentpunkte und keine eigene feste Grunderfolgschance. Bei 1 Prozent Grundchance ergeben sich 1 / 1,1 / 1,2 Prozent Erfolgschance je Versuch. Die Formel steigt bei später autorisierten zusätzlichen effektiven Skillstufen um 0,1 je Stufe weiter. Die Definition hat weiterhin drei lernbare Stufen: normale Klassen maximal Stufe 1, Abenteurer maximal Stufe 3; eine zweite Spezialklasse ist noch nicht festgelegt. Mana 100 / 125 / 150, Castzeit 3 / 2,5 / 2 Sekunden und Cooldown 60 / 50 / 40 Sekunden. Kein Schaden und keine anschließende Effektdauer. Konkrete Kreaturen-Grundchancen, Kartenzuordnungen, Itemverbrauch, Zieldistanz und Abbruchbedingungen sind noch festzulegen. |
+| description_eng | Attempts to tame a creature. Requires a taming card matching the creature variant. The base chance belongs to the specific creature variant. Tame multiplies this chance by 1.0 at level 1, 1.1 at level 2 and 1.2 at level 3; it adds no percentage points and supplies no fixed base success chance. A 1 percent base chance becomes 1 / 1.1 / 1.2 percent per attempt. The formula continues by 0.1 per additional effective level when separately authorized. The definition still has three learnable levels: ordinary classes are capped at level 1 and the Adventurer at level 3; a second specialist remains undefined. Mana is 100 / 125 / 150, cast time 3 / 2.5 / 2 seconds and cooldown 60 / 50 / 40 seconds. No damage or subsequent effect duration. Creature base chances, card mappings, item consumption, target distance and interruption conditions remain to be defined. |
+| dmgType | spell |
+| maxSkillLv | 3 |
+| maxUpgradeLv | 10 |
+| nr | 133 |
+| skillName_de | Tamen |
+| skillpoints | 1 |
+| castTimeScaling.type | linear |
+| castTimeScaling.base | 3 |
+| castTimeScaling.perLevel | -0,5 |
+| castTimeSeconds | 3 |
 | cooldownScaling.type | linear |
-| cooldownScaling.base | 50 |
-| cooldownScaling.perLevel | -1 |
-| hasLingeringDamage | false |
-| mana (Aktivierungskosten, kein Bonus) | 47 |
+| cooldownScaling.base | 60 |
+| cooldownScaling.perLevel | -10 |
+| mana | 100 |
 | resourceCosts[0].resource | mana |
 | resourceCosts[0].reference | maxMana |
 | resourceCosts[0].unit | flat |
 | resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 47 |
-| resourceCosts[0].scaling.perLevel | 12 |
-| statScaling.matk.type | linear |
-| statScaling.matk.base | 187 |
-| statScaling.matk.perLevel | 49 |
-| manaPricing.category | normal |
-| manaPricing.factor | 0,25 |
-| manaPricing.basis | skillBaseDamagePerTarget |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
+| resourceCosts[0].scaling.base | 100 |
+| resourceCosts[0].scaling.perLevel | 25 |
+| taming.requiresMatchingItem | true |
+| taming.itemConsumptionStatus | pending |
+| taming.baseChanceSource | creatureVariant |
+| taming.chanceFormula | baseChanceTimesSkillMultiplier |
+| taming.chanceMultiplierScaling.type | linear |
+| taming.chanceMultiplierScaling.base | 1 |
+| taming.chanceMultiplierScaling.perLevel | 0,1 |
+| learningLimits.defaultMaxLevel | 1 |
+| learningLimits.classOverrides.Abenteuer | 3 |
+| learningLimits.classOverrides.Gladiator | 1 |
+| learningLimits.classOverrides.Berserker | 1 |
+| learningLimits.status | secondSpecialistPending |
 | levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | cooldownScaling |
+| levelProgression.rules[0].path[0] | castTimeScaling |
 | levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0,1 |
+| levelProgression.rules[0].rule.min | 0 |
 | levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 50 |
-| levelProgression.rules[0].rule.rule.perLevel | -1 |
+| levelProgression.rules[0].rule.rule.base | 3 |
+| levelProgression.rules[0].rule.rule.perLevel | -0,5 |
 | levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | resourceCosts |
-| levelProgression.rules[1].path[1] | 0 |
-| levelProgression.rules[1].path[2] | scaling |
+| levelProgression.rules[1].path[0] | cooldownScaling |
 | levelProgression.rules[1].rule.kind | bounded |
-| levelProgression.rules[1].rule.min | 0 |
+| levelProgression.rules[1].rule.min | 0,1 |
 | levelProgression.rules[1].rule.rule.kind | linear |
-| levelProgression.rules[1].rule.rule.base | 47 |
-| levelProgression.rules[1].rule.rule.perLevel | 12 |
+| levelProgression.rules[1].rule.rule.base | 60 |
+| levelProgression.rules[1].rule.rule.perLevel | -10 |
 | levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | statScaling |
-| levelProgression.rules[2].path[1] | matk |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 187 |
-| levelProgression.rules[2].rule.perLevel | 49 |
+| levelProgression.rules[2].path[0] | resourceCosts |
+| levelProgression.rules[2].path[1] | 0 |
+| levelProgression.rules[2].path[2] | scaling |
+| levelProgression.rules[2].rule.kind | bounded |
+| levelProgression.rules[2].rule.min | 0 |
+| levelProgression.rules[2].rule.rule.kind | linear |
+| levelProgression.rules[2].rule.rule.base | 100 |
+| levelProgression.rules[2].rule.rule.perLevel | 25 |
 | levelProgression.rules[2].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
+| levelProgression.rules[3].path[0] | taming |
+| levelProgression.rules[3].path[1] | chanceMultiplierScaling |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 1 |
+| levelProgression.rules[3].rule.perLevel | 0,1 |
+| levelProgression.rules[3].source | storedFormula |
 | classificationVersion | 1 |
-| damageType | magical |
 | type | skill |
 
-### 30: Eisranken
+### 137: Zurückrufen
 
-Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer verursacht magischen Grundschaden von 123 auf Stufe 1, plus 37 je weiterer Stufe, bis zu 456 auf Stufe 10. Die Fesselwirkung steigt gleichmäßig von 1 auf 4 Sekunden über zehn Stufen. Währenddessen verursacht ein DoT nach jeder vollen Sekunde 8 festen magischen Schaden auf Stufe 1, plus 4 je weiterer Stufe, bis zu 44 je Tick auf Stufe 10. Der DoT erhält keinen zusätzlichen M-Angriffsbeitrag pro Tick. Auf Stufe 10 ergeben sich vier Ticks mit zusammen 176 und insgesamt 632 Skill-Grundschaden einschließlich erstem Treffer, vor zusätzlichem Charakterangriff auf den ersten Treffer und gegnerischer Verteidigung. Castzeit 0,5 Sekunden, bisheriger Cooldown 22 Sekunden. Mana-Kosten 33 auf Stufe 1, Stufenwerte 33, 43, 53, 69, 80, 91, 110, 123, 135, 158, maximal 158 auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer.
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Ice Thorns |
-| category | active |
-| cd | 22 |
-| charClass[0] | Druide |
-| charClass[1] | Alchemist |
-| charClass[2] | Healer |
-| charClass[3] | Priest |
+| skillPointCosts.firstLevel | 1 |
+| skillPointCosts.rankCosts.0 | 1 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 5 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Recall |
+| category | creature |
+| cd | 5 |
+| charClass[0] | Abenteuer |
+| charClass[1] | Butcher |
+| charClass[2] | Destroyer |
+| charClass[3] | Gladiator |
+| charClass[4] | Berserker |
+| charClass[5] | Knight |
+| charClass[6] | Templar |
+| charClass[7] | Herbalist |
+| charClass[8] | Witcher |
+| charClass[9] | Archer |
+| charClass[10] | Hunter |
+| charClass[11] | Druide |
+| charClass[12] | Alchemist |
+| charClass[13] | Summoner |
+| charClass[14] | Soulseeker |
+| charClass[15] | Bloodmage |
+| charClass[16] | Luminet |
+| charClass[17] | Lightmage |
+| charClass[18] | Healer |
+| charClass[19] | Priest |
+| charClass[20] | Ritualist |
+| charClass[21] | Shamane |
+| charClass[22] | High Elves |
+| charClass[23] | Villian |
+| charClass[24] | Shadowwarrior |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer verursacht magischen Grundschaden von 123 auf Stufe 1, plus 37 je weiterer Stufe, bis zu 456 auf Stufe 10. Die Fesselwirkung steigt gleichmäßig von 1 auf 4 Sekunden über zehn Stufen. Währenddessen verursacht ein DoT nach jeder vollen Sekunde 8 festen magischen Schaden auf Stufe 1, plus 4 je weiterer Stufe, bis zu 44 je Tick auf Stufe 10. Der DoT erhält keinen zusätzlichen M-Angriffsbeitrag pro Tick. Auf Stufe 10 ergeben sich vier Ticks mit zusammen 176 und insgesamt 632 Skill-Grundschaden einschließlich erstem Treffer, vor zusätzlichem Charakterangriff auf den ersten Treffer und gegnerischer Verteidigung. Castzeit 0,5 Sekunden, bisheriger Cooldown 22 Sekunden. Mana-Kosten 33 auf Stufe 1, Stufenwerte 33, 43, 53, 69, 80, 91, 110, 123, 135, 158, maximal 158 auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
-| description_eng | Encloses the opponent in ice thorns, rooting them. Initial magical base damage starts at 123 at level 1 and increases by 37 per additional level to 456 at level 10. Root duration increases evenly from 1 to 4 seconds over ten levels. During this time a DoT ticks after each full second for 8 flat magical damage at level 1, increasing by 4 per additional level to 44 per tick at level 10. The DoT does not add caster magical attack per tick. At level 10 four ticks deal 176 damage, totaling 632 skill base damage including the initial hit, before additional character attack on the initial hit and enemy defense. Cast time is 0.5 seconds; existing cooldown is 22 seconds. Mana cost 33 at level 1, maximum 158 at level 10. |
+| description_de | Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer. |
+| description_eng | Recalls your companion instantly. Costs 5 Mana and has a 5 second cooldown. No cast time or subsequent effect duration. |
 | dmgType (Altformat) | spell |
-| dur | 1 |
-| matk | 123 |
-| maxSkillLv | 10 |
+| maxSkillLv | 1 |
 | maxUpgradeLv | 10 |
-| nr | 30 |
-| skillName_de | Eisranken |
+| nr | 137 |
+| skillName_de | Zurückrufen |
 | skillpoints | 1 |
-| castTimeSeconds | 0,5 |
-| durationScaling.type | linear |
-| durationScaling.base | 1 |
-| durationScaling.perLevel | 0,333 |
-| effects[0].key | ice-thorns-root |
-| effects[0].type | control |
-| effects[0].controlKind | root |
-| effects[0].target | enemy |
-| effects[0].actionRestrictionsStatus | defined |
-| effects[0].durationSeconds | 1 |
-| effects[0].durationScaling.type | linear |
-| effects[0].durationScaling.base | 1 |
-| effects[0].durationScaling.perLevel | 0,333 |
-| effects[1].key | ice-thorns-dot |
-| effects[1].type | periodicDamage |
-| effects[1].target | enemy |
-| effects[1].value | 8 |
-| effects[1].unit | flat |
-| effects[1].damageTypes[0] | magical |
-| effects[1].addsCasterMagicalAttack | false |
-| effects[1].valueScaling.type | linear |
-| effects[1].valueScaling.base | 8 |
-| effects[1].valueScaling.perLevel | 4 |
-| effects[1].intervalSeconds | 1 |
-| effects[1].firstTickAfterSeconds | 1 |
-| effects[1].durationSeconds | 1 |
-| effects[1].durationScaling.type | linear |
-| effects[1].durationScaling.base | 1 |
-| effects[1].durationScaling.perLevel | 0,333 |
-| hasLingeringDamage | true |
-| statScaling.matk.type | linear |
-| statScaling.matk.base | 123 |
-| statScaling.matk.perLevel | 37 |
-| mana (Aktivierungskosten, kein Bonus) | 33 |
+| castTimeSeconds | 0 |
+| mana (Aktivierungskosten, kein Bonus) | 5 |
 | resourceCosts[0].resource | mana |
 | resourceCosts[0].reference | maxMana |
 | resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | table |
-| resourceCosts[0].scaling.values[0] | 33 |
-| resourceCosts[0].scaling.values[1] | 43 |
-| resourceCosts[0].scaling.values[2] | 53 |
-| resourceCosts[0].scaling.values[3] | 69 |
-| resourceCosts[0].scaling.values[4] | 80 |
-| resourceCosts[0].scaling.values[5] | 91 |
-| resourceCosts[0].scaling.values[6] | 110 |
-| resourceCosts[0].scaling.values[7] | 123 |
-| resourceCosts[0].scaling.values[8] | 135 |
-| resourceCosts[0].scaling.values[9] | 158 |
-| resourceCosts[0].scaling.base | 33 |
-| manaPricing.category | normal |
-| manaPricing.factor | 0,25 |
-| manaPricing.basis | skillBaseDamagePerTarget |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
+| resourceCosts[0].scaling.type | fixed |
+| resourceCosts[0].scaling.base | 5 |
 | levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | durationScaling |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 1 |
-| levelProgression.rules[0].rule.perLevel | 0,333 |
+| levelProgression.rules[0].path[0] | resourceCosts |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | scaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0 |
+| levelProgression.rules[0].rule.rule.kind | constant |
+| levelProgression.rules[0].rule.rule.value | 5 |
 | levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | effects |
-| levelProgression.rules[1].path[1] | 0 |
-| levelProgression.rules[1].path[2] | durationScaling |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 1 |
-| levelProgression.rules[1].rule.perLevel | 0,333 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 1 |
-| levelProgression.rules[2].path[2] | valueScaling |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 8 |
-| levelProgression.rules[2].rule.perLevel | 4 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | effects |
-| levelProgression.rules[3].path[1] | 1 |
-| levelProgression.rules[3].path[2] | durationScaling |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 1 |
-| levelProgression.rules[3].rule.perLevel | 0,333 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.rules[4].path[0] | statScaling |
-| levelProgression.rules[4].path[1] | matk |
-| levelProgression.rules[4].rule.kind | linear |
-| levelProgression.rules[4].rule.base | 123 |
-| levelProgression.rules[4].rule.perLevel | 37 |
-| levelProgression.rules[4].source | storedFormula |
-| levelProgression.rules[5].path[0] | resourceCosts |
-| levelProgression.rules[5].path[1] | 0 |
-| levelProgression.rules[5].path[2] | scaling |
-| levelProgression.rules[5].rule.kind | outputCost |
-| levelProgression.rules[5].rule.factor | 0,25 |
-| levelProgression.rules[5].rule.basis | damage |
-| levelProgression.rules[5].rule.minimum | 0 |
-| levelProgression.rules[5].source | verifiedManaPricing |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
-| damageType | magical |
 | type | skill |
 
 ### 36: Energieschlag
@@ -362,6 +1041,50 @@ Wirft einen Ball aus purem Licht auf dein Ziel und verursacht einmalig magischen
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 30 |
+| skillPointCosts.rankCosts.0 | 30 |
+| skillPointCosts.rankCosts.1 | 45 |
+| skillPointCosts.rankCosts.2 | 60 |
+| skillPointCosts.rankCosts.3 | 75 |
+| skillPointCosts.rankCosts.4 | 90 |
+| skillPointCosts.classRankCosts.druid.0 | 12 |
+| skillPointCosts.classRankCosts.druid.1 | 36 |
+| skillPointCosts.classRankCosts.druid.2 | 60 |
+| skillPointCosts.classRankCosts.druid.3 | 84 |
+| skillPointCosts.classRankCosts.druid.4 | 108 |
+| skillPointCosts.classRankCosts.healer.0 | 12 |
+| skillPointCosts.classRankCosts.healer.1 | 36 |
+| skillPointCosts.classRankCosts.healer.2 | 60 |
+| skillPointCosts.classRankCosts.healer.3 | 84 |
+| skillPointCosts.classRankCosts.healer.4 | 108 |
+| skillPointCosts.classRankCosts.luminet.0 | 12 |
+| skillPointCosts.classRankCosts.luminet.1 | 12 |
+| skillPointCosts.classRankCosts.luminet.2 | 13 |
+| skillPointCosts.classRankCosts.luminet.3 | 13 |
+| skillPointCosts.classRankCosts.luminet.4 | 13 |
+| skillPointCosts.classRankCosts.luminet.5 | 14 |
+| skillPointCosts.classRankCosts.luminet.6 | 14 |
+| skillPointCosts.classRankCosts.luminet.7 | 14 |
+| skillPointCosts.classRankCosts.luminet.8 | 15 |
+| skillPointCosts.classRankCosts.luminet.9 | 15 |
+| skillPointCosts.classRankCosts.luminet.10 | 15 |
+| skillPointCosts.classRankCosts.luminet.11 | 15 |
+| skillPointCosts.classRankCosts.luminet.12 | 16 |
+| skillPointCosts.classRankCosts.luminet.13 | 16 |
+| skillPointCosts.classRankCosts.luminet.14 | 16 |
+| skillPointCosts.classRankCosts.luminet.15 | 17 |
+| skillPointCosts.classRankCosts.luminet.16 | 17 |
+| skillPointCosts.classRankCosts.luminet.17 | 17 |
+| skillPointCosts.classRankCosts.luminet.18 | 18 |
+| skillPointCosts.classRankCosts.luminet.19 | 18 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| learningRequirements.classOverrides.druid | 6 |
+| learningRequirements.classOverrides.healer | 6 |
+| learningRequirements.classOverrides.luminet | 6 |
+| learningRequirements.minimumCharacterLevel | 6 |
 | skillName_eng | Energy Strike |
 | category | active |
 | cd | 2,6 |
@@ -508,6 +1231,22 @@ Permanenter passiver Bonus mit zehn Stufen. Intelligenz, Willenskraft und Geschi
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 12 |
+| skillPointCosts.rankCosts.0 | 12 |
+| skillPointCosts.rankCosts.1 | 16 |
+| skillPointCosts.rankCosts.2 | 20 |
+| skillPointCosts.rankCosts.3 | 24 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 36 |
+| skillPointCosts.rankCosts.7 | 40 |
+| skillPointCosts.rankCosts.8 | 44 |
+| skillPointCosts.rankCosts.9 | 48 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 9 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Expansion of the Spirit |
 | category | passive |
 | charClass[0] | Herbalist |
@@ -604,304 +1343,421 @@ Permanenter passiver Bonus mit zehn Stufen. Intelligenz, Willenskraft und Geschi
 | levelProgression.rules[2].rule.terms[1].changes[0].value | 4,5 |
 | levelProgression.rules[2].source | verifiedExistingLevels |
 | levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 3 |
+| classificationVersion | 1 |
+| type | passive |
+
+### 30: Eisranken
+
+Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer verursacht magischen Grundschaden von 123 auf Stufe 1, plus 37 je weiterer Stufe, bis zu 456 auf Stufe 10. Die Fesselwirkung steigt gleichmäßig von 1 auf 4 Sekunden über zehn Stufen. Währenddessen verursacht ein DoT nach jeder vollen Sekunde 8 festen magischen Schaden auf Stufe 1, plus 4 je weiterer Stufe, bis zu 44 je Tick auf Stufe 10. Der DoT erhält keinen zusätzlichen M-Angriffsbeitrag pro Tick. Auf Stufe 10 ergeben sich vier Ticks mit zusammen 176 und insgesamt 632 Skill-Grundschaden einschließlich erstem Treffer, vor zusätzlichem Charakterangriff auf den ersten Treffer und gegnerischer Verteidigung. Castzeit 0,5 Sekunden, bisheriger Cooldown 22 Sekunden. Mana-Kosten 33 auf Stufe 1, Stufenwerte 33, 43, 53, 69, 80, 91, 110, 123, 135, 158, maximal 158 auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 10 |
 | learningRequirements.status | defined |
 | learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-
-### 54: Gefrierbrand
-
-Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen ab Stufe 5 insgesamt 1 Prozent und ab Stufe 10 insgesamt 2 Prozent mehr Schaden. Auf den übrigen Stufen steigt die Chance, dass ein eigener treffender Eisangriff das Ziel für 2 Sekunden einfriert: Stufe 1/2/3/4/5/6/7/8/9/10 jeweils 1,25/2,5/3,75/5/5/6,25/7,5/8,75/10/10 Prozent. Löst dieses Einfrieren aus, erleidet das Ziel bei Sekunde 1 und 2 zusätzlich Gefrierbrand-Schaden. Grundschaden je Tick steigt gleichmäßig von 11 auf 131 über zehn Stufen, ohne Charakter- oder Waffen-M-Angriff je Tick. Auf Stufe 10 zwei Ticks zu je 131, insgesamt 262 Grundschaden. Der DoT ist an das durch diesen Skill ausgelöste Einfrieren gebunden und endet mit ihm. Keine Aktivierungskosten, Castzeit oder Cooldown festgelegt. Erneute Anwendung, Bossresistenzen, Einfrieren durch andere Skills und die Wechselwirkung des Eisbonus mit dem eigenen DoT werden später geprüft.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Frostburn |
-| category | passive |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
+| skillName_eng | Ice Thorns |
+| category | active |
+| cd | 22 |
+| charClass[0] | Druide |
+| charClass[1] | Alchemist |
+| charClass[2] | Healer |
+| charClass[3] | Priest |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen ab Stufe 5 insgesamt 1 Prozent und ab Stufe 10 insgesamt 2 Prozent mehr Schaden. Auf den übrigen Stufen steigt die Chance, dass ein eigener treffender Eisangriff das Ziel für 2 Sekunden einfriert: Stufe 1/2/3/4/5/6/7/8/9/10 jeweils 1,25/2,5/3,75/5/5/6,25/7,5/8,75/10/10 Prozent. Löst dieses Einfrieren aus, erleidet das Ziel bei Sekunde 1 und 2 zusätzlich Gefrierbrand-Schaden. Grundschaden je Tick steigt gleichmäßig von 11 auf 131 über zehn Stufen, ohne Charakter- oder Waffen-M-Angriff je Tick. Auf Stufe 10 zwei Ticks zu je 131, insgesamt 262 Grundschaden. Der DoT ist an das durch diesen Skill ausgelöste Einfrieren gebunden und endet mit ihm. Keine Aktivierungskosten, Castzeit oder Cooldown festgelegt. Erneute Anwendung, Bossresistenzen, Einfrieren durch andere Skills und die Wechselwirkung des Eisbonus mit dem eigenen DoT werden später geprüft. |
-| description_eng | Permanent passive with no direct magical attack bonus. Ice spells gain a total of 1 percent increased damage at level 5 and 2 percent at level 10. Other levels increase the chance for an own successful ice attack to freeze the target for 2 seconds: levels 1–10 grant 1.25/2.5/3.75/5/5/6.25/7.5/8.75/10/10 percent. When this freeze procs, Frostburn deals additional damage at seconds 1 and 2. Base damage per tick increases linearly from 11 to 131 across ten levels, without character or weapon magical attack added per tick. Level 10 totals two ticks of 131, or 262 base damage. The DoT is linked to this passive’s freeze and ends with it. No activation costs, cast time or cooldown defined. Reapplication, boss resistances, freezes from other skills and interaction of the ice bonus with its own DoT remain pending. |
-| dmgType (Altformat) | passive |
+| description_de | Schließt den Gegner in Eisranken ein und hält ihn fest. Der erste Treffer verursacht magischen Grundschaden von 123 auf Stufe 1, plus 37 je weiterer Stufe, bis zu 456 auf Stufe 10. Die Fesselwirkung steigt gleichmäßig von 1 auf 4 Sekunden über zehn Stufen. Währenddessen verursacht ein DoT nach jeder vollen Sekunde 8 festen magischen Schaden auf Stufe 1, plus 4 je weiterer Stufe, bis zu 44 je Tick auf Stufe 10. Der DoT erhält keinen zusätzlichen M-Angriffsbeitrag pro Tick. Auf Stufe 10 ergeben sich vier Ticks mit zusammen 176 und insgesamt 632 Skill-Grundschaden einschließlich erstem Treffer, vor zusätzlichem Charakterangriff auf den ersten Treffer und gegnerischer Verteidigung. Castzeit 0,5 Sekunden, bisheriger Cooldown 22 Sekunden. Mana-Kosten 33 auf Stufe 1, Stufenwerte 33, 43, 53, 69, 80, 91, 110, 123, 135, 158, maximal 158 auf Stufe 10. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
+| description_eng | Encloses the opponent in ice thorns, rooting them. Initial magical base damage starts at 123 at level 1 and increases by 37 per additional level to 456 at level 10. Root duration increases evenly from 1 to 4 seconds over ten levels. During this time a DoT ticks after each full second for 8 flat magical damage at level 1, increasing by 4 per additional level to 44 per tick at level 10. The DoT does not add caster magical attack per tick. At level 10 four ticks deal 176 damage, totaling 632 skill base damage including the initial hit, before additional character attack on the initial hit and enemy defense. Cast time is 0.5 seconds; existing cooldown is 22 seconds. Mana cost 33 at level 1, maximum 158 at level 10. |
+| dmgType (Altformat) | spell |
+| dur | 1 |
+| matk | 123 |
 | maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 54 |
-| skillName_de | Gefrierbrand |
+| nr | 30 |
+| skillName_de | Eisranken |
 | skillpoints | 1 |
-| effects[0].key | frostburn-ice-spell-bonus |
-| effects[0].type | damageBonus |
-| effects[0].target | self |
-| effects[0].appliesTo | allSkills |
-| effects[0].damageSchool | ice |
-| effects[0].value | 0 |
-| effects[0].unit | fraction |
-| effects[0].valueScaling.type | table |
-| effects[0].valueScaling.values[0] | 0 |
-| effects[0].valueScaling.values[1] | 0 |
-| effects[0].valueScaling.values[2] | 0 |
-| effects[0].valueScaling.values[3] | 0 |
-| effects[0].valueScaling.values[4] | 0,01 |
-| effects[0].valueScaling.values[5] | 0,01 |
-| effects[0].valueScaling.values[6] | 0,01 |
-| effects[0].valueScaling.values[7] | 0,01 |
-| effects[0].valueScaling.values[8] | 0,01 |
-| effects[0].valueScaling.values[9] | 0,02 |
-| effects[0].durationSeconds | 0 |
-| effects[1].key | frostburn-freeze |
-| effects[1].type | control |
+| castTimeSeconds | 0,5 |
+| durationScaling.type | linear |
+| durationScaling.base | 1 |
+| durationScaling.perLevel | 0,333 |
+| effects[0].key | ice-thorns-root |
+| effects[0].type | control |
+| effects[0].controlKind | root |
+| effects[0].target | enemy |
+| effects[0].actionRestrictionsStatus | defined |
+| effects[0].durationSeconds | 1 |
+| effects[0].durationScaling.type | linear |
+| effects[0].durationScaling.base | 1 |
+| effects[0].durationScaling.perLevel | 0,333 |
+| effects[1].key | ice-thorns-dot |
+| effects[1].type | periodicDamage |
 | effects[1].target | enemy |
-| effects[1].controlKind | freeze |
-| effects[1].applicationTrigger | ownIceAttackHit |
-| effects[1].hitChance | 0,013 |
-| effects[1].valueScaling.type | table |
-| effects[1].valueScaling.values[0] | 0,013 |
-| effects[1].valueScaling.values[1] | 0,025 |
-| effects[1].valueScaling.values[2] | 0,038 |
-| effects[1].valueScaling.values[3] | 0,05 |
-| effects[1].valueScaling.values[4] | 0,05 |
-| effects[1].valueScaling.values[5] | 0,063 |
-| effects[1].valueScaling.values[6] | 0,075 |
-| effects[1].valueScaling.values[7] | 0,088 |
-| effects[1].valueScaling.values[8] | 0,1 |
-| effects[1].valueScaling.values[9] | 0,1 |
-| effects[1].durationSeconds | 2 |
-| effects[2].key | frostburn-periodic-damage |
-| effects[2].type | periodicDamage |
-| effects[2].target | enemy |
-| effects[2].damageTypes[0] | magical |
-| effects[2].damageSchool | ice |
-| effects[2].value | 11 |
-| effects[2].unit | flat |
-| effects[2].valueScaling.type | linear |
-| effects[2].valueScaling.base | 11 |
-| effects[2].valueScaling.perLevel | 13,333 |
-| effects[2].intervalSeconds | 1 |
-| effects[2].firstTickAfterSeconds | 1 |
-| effects[2].durationSeconds | 2 |
-| effects[2].endWith | frostburn-freeze |
-| effects[2].addsCasterMagicalAttack | false |
-| effectsVersion | 1 |
-| resourceCosts | [] |
+| effects[1].value | 8 |
+| effects[1].unit | flat |
+| effects[1].damageTypes[0] | magical |
+| effects[1].addsCasterMagicalAttack | false |
+| effects[1].valueScaling.type | linear |
+| effects[1].valueScaling.base | 8 |
+| effects[1].valueScaling.perLevel | 4 |
+| effects[1].intervalSeconds | 1 |
+| effects[1].firstTickAfterSeconds | 1 |
+| effects[1].durationSeconds | 1 |
+| effects[1].durationScaling.type | linear |
+| effects[1].durationScaling.base | 1 |
+| effects[1].durationScaling.perLevel | 0,333 |
+| hasLingeringDamage | true |
+| statScaling.matk.type | linear |
+| statScaling.matk.base | 123 |
+| statScaling.matk.perLevel | 37 |
+| mana (Aktivierungskosten, kein Bonus) | 33 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | table |
+| resourceCosts[0].scaling.values[0] | 33 |
+| resourceCosts[0].scaling.values[1] | 43 |
+| resourceCosts[0].scaling.values[2] | 53 |
+| resourceCosts[0].scaling.values[3] | 69 |
+| resourceCosts[0].scaling.values[4] | 80 |
+| resourceCosts[0].scaling.values[5] | 91 |
+| resourceCosts[0].scaling.values[6] | 110 |
+| resourceCosts[0].scaling.values[7] | 123 |
+| resourceCosts[0].scaling.values[8] | 135 |
+| resourceCosts[0].scaling.values[9] | 158 |
+| resourceCosts[0].scaling.base | 33 |
+| manaPricing.category | normal |
+| manaPricing.factor | 0,25 |
+| manaPricing.basis | skillBaseDamagePerTarget |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
 | levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | effects |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | valueScaling |
-| levelProgression.rules[0].rule.kind | thresholds |
-| levelProgression.rules[0].rule.base | 0 |
-| levelProgression.rules[0].rule.changes[0].level | 5 |
-| levelProgression.rules[0].rule.changes[0].value | 0,01 |
-| levelProgression.rules[0].rule.changes[1].level | 10 |
-| levelProgression.rules[0].rule.changes[1].value | 0,02 |
-| levelProgression.rules[0].source | verifiedExistingLevels |
+| levelProgression.rules[0].path[0] | durationScaling |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 1 |
+| levelProgression.rules[0].rule.perLevel | 0,333 |
+| levelProgression.rules[0].source | storedFormula |
 | levelProgression.rules[1].path[0] | effects |
-| levelProgression.rules[1].path[1] | 1 |
-| levelProgression.rules[1].path[2] | valueScaling |
-| levelProgression.rules[1].rule.kind | legacyTable |
-| levelProgression.rules[1].rule.values[0] | 0,013 |
-| levelProgression.rules[1].rule.values[1] | 0,025 |
-| levelProgression.rules[1].rule.values[2] | 0,038 |
-| levelProgression.rules[1].rule.values[3] | 0,05 |
-| levelProgression.rules[1].rule.values[4] | 0,05 |
-| levelProgression.rules[1].rule.values[5] | 0,063 |
-| levelProgression.rules[1].rule.values[6] | 0,075 |
-| levelProgression.rules[1].rule.values[7] | 0,088 |
-| levelProgression.rules[1].rule.values[8] | 0,1 |
-| levelProgression.rules[1].rule.values[9] | 0,1 |
-| levelProgression.rules[1].rule.beyond | requiresDefinition |
-| levelProgression.rules[1].source | verifiedExistingLevels |
+| levelProgression.rules[1].path[1] | 0 |
+| levelProgression.rules[1].path[2] | durationScaling |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 1 |
+| levelProgression.rules[1].rule.perLevel | 0,333 |
+| levelProgression.rules[1].source | storedFormula |
 | levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 2 |
+| levelProgression.rules[2].path[1] | 1 |
 | levelProgression.rules[2].path[2] | valueScaling |
 | levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 11 |
-| levelProgression.rules[2].rule.perLevel | 13,333 |
+| levelProgression.rules[2].rule.base | 8 |
+| levelProgression.rules[2].rule.perLevel | 4 |
 | levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | effects |
+| levelProgression.rules[3].path[1] | 1 |
+| levelProgression.rules[3].path[2] | durationScaling |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 1 |
+| levelProgression.rules[3].rule.perLevel | 0,333 |
+| levelProgression.rules[3].source | storedFormula |
+| levelProgression.rules[4].path[0] | statScaling |
+| levelProgression.rules[4].path[1] | matk |
+| levelProgression.rules[4].rule.kind | linear |
+| levelProgression.rules[4].rule.base | 123 |
+| levelProgression.rules[4].rule.perLevel | 37 |
+| levelProgression.rules[4].source | storedFormula |
+| levelProgression.rules[5].path[0] | resourceCosts |
+| levelProgression.rules[5].path[1] | 0 |
+| levelProgression.rules[5].path[2] | scaling |
+| levelProgression.rules[5].rule.kind | outputCost |
+| levelProgression.rules[5].rule.factor | 0,25 |
+| levelProgression.rules[5].rule.basis | damage |
+| levelProgression.rules[5].rule.minimum | 0 |
+| levelProgression.rules[5].source | verifiedManaPricing |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
-| type | passive |
+| damageType | magical |
+| type | skill |
 
-### 58: Kuss der Aurora
+### 29: Eislanze
 
-Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. Sechs Skillstufen. Grundheilung 550 HP auf Stufe 1 und +430 je weiterer Stufe: 550, 980, 1410, 1840, 2270, 2700 HP. Auf Stufe 5 zusätzlich 3 Prozent des Maximal-Lebens desselben Ziels, auf Stufe 6 stattdessen insgesamt 5 Prozent. Dieser prozentuale Anteil wird zur Grundheilung derselben Anwendung addiert, nicht als separater Cast ausgeführt. Mana 283 auf Stufe 1 und +185 je weiterer Stufe, auf Stufe 5 1023 und auf Stufe 6 1208. Cooldown 80 Sekunden und je weiterer Stufe 2 Sekunden weniger, auf Stufe 5 72 und auf Stufe 6 70 Sekunden. Castzeit 0,6 Sekunden. Einmalige Heilung nach der Castzeit, keine anschließende Wirkungsdauer oder Heilticks.
+Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung für 5 Sekunden um 5 Prozent verringert. Der magische Grundangriff steigt von 187 um 49 je weiterer Stufe auf 628. Die Mana-Kosten 47 auf Stufe 1, +12 je weiterer Stufe, maximal 155 auf Stufe 10. Die Castzeit beträgt 0,6 Sekunden. Der Cooldown 50 Sekunden auf Stufe 1, 41 Sekunden auf Stufe 10; bisheriger Stufenverlauf um 2 Sekunden erhöht. Die fünf Sekunden betreffen den Rüstungseffekt, keinen Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Aurora's Kiss |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 12 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Ice Lance |
 | category | active |
-| cd | 80 |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
+| cd | 50 |
+| charClass[0] | Herbalist |
+| charClass[1] | Witcher |
+| charClass[2] | Druide |
+| charClass[3] | Alchemist |
+| charClass[4] | Healer |
+| charClass[5] | Priest |
+| charClass[6] | Luminet |
+| charClass[7] | Lightmage |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. Sechs Skillstufen. Grundheilung 550 HP auf Stufe 1 und +430 je weiterer Stufe: 550, 980, 1410, 1840, 2270, 2700 HP. Auf Stufe 5 zusätzlich 3 Prozent des Maximal-Lebens desselben Ziels, auf Stufe 6 stattdessen insgesamt 5 Prozent. Dieser prozentuale Anteil wird zur Grundheilung derselben Anwendung addiert, nicht als separater Cast ausgeführt. Mana 283 auf Stufe 1 und +185 je weiterer Stufe, auf Stufe 5 1023 und auf Stufe 6 1208. Cooldown 80 Sekunden und je weiterer Stufe 2 Sekunden weniger, auf Stufe 5 72 und auf Stufe 6 70 Sekunden. Castzeit 0,6 Sekunden. Einmalige Heilung nach der Castzeit, keine anschließende Wirkungsdauer oder Heilticks. |
-| description_eng | Uses the power of Aurora to heal one allied target once. Six skill levels. Base healing 550 HP plus 430 per additional level: 550, 980, 1410, 1840, 2270, 2700 HP. Level 5 adds 3 percent of that same target’s maximum health; level 6 instead adds a total of 5 percent. The percentage component is added to base healing within the same activation, not cast separately. Mana 283 plus 185 per additional level: 1023 at level 5, 1208 at level 6. Cooldown 80 seconds minus 2 per additional level: 72 at level 5, 70 at level 6. Cast time 0.6 seconds. One healing application after casting, no lingering duration or healing ticks. |
+| description_de | Beschwört eine Eislanze, die das Ziel einmalig durchbohrt und seine Rüstung für 5 Sekunden um 5 Prozent verringert. Der magische Grundangriff steigt von 187 um 49 je weiterer Stufe auf 628. Die Mana-Kosten 47 auf Stufe 1, +12 je weiterer Stufe, maximal 155 auf Stufe 10. Die Castzeit beträgt 0,6 Sekunden. Der Cooldown 50 Sekunden auf Stufe 1, 41 Sekunden auf Stufe 10; bisheriger Stufenverlauf um 2 Sekunden erhöht. Die fünf Sekunden betreffen den Rüstungseffekt, keinen Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
+| description_eng | Summons an ice lance that pierces the target once and reduces its armor by 5 percent for 5 seconds. Base magical attack increases from 187 by 49 per additional level to 628. Mana cost 47 at level 1, maximum 155 at level 10. Cast time is 0.6 seconds. Cooldown 50 seconds at level 1 and 41 seconds at level 10; previous progression increased by 2 seconds throughout. The five seconds refer to the armor effect, not damage over time. |
 | dmgType (Altformat) | spell |
-| health | 550 |
-| maxSkillLv | 6 |
+| dur | 5 |
+| matk | 187 |
+| maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 58 |
-| skillName_de | Kuss der Aurora |
+| nr | 29 |
+| skillName_de | Eislanze |
 | skillpoints | 1 |
 | castTimeSeconds | 0,6 |
 | cooldownScaling.type | linear |
-| cooldownScaling.base | 80 |
-| cooldownScaling.perLevel | -2 |
-| durationScaling.type | table |
-| durationScaling.values[0] | 0 |
-| durationScaling.values[1] | 0 |
-| durationScaling.values[2] | 0 |
-| durationScaling.values[3] | 0 |
-| durationScaling.values[4] | 0 |
-| durationScaling.values[5] | 0 |
-| effects[0].key | divine-healing-single-target |
-| effects[0].type | heal |
-| effects[0].target | allyOrCompanion |
-| effects[0].value | 550 |
-| effects[0].unit | flat |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 550 |
-| effects[0].valueScaling.perLevel | 430 |
-| effects[0].durationSeconds | 0 |
-| effects[1].key | divine-healing-target-max-health |
-| effects[1].type | heal |
-| effects[1].target | allyOrCompanion |
-| effects[1].value | 0 |
-| effects[1].unit | fraction |
-| effects[1].reference | targetMaxHealth |
-| effects[1].valueScaling.type | table |
-| effects[1].valueScaling.values[0] | 0 |
-| effects[1].valueScaling.values[1] | 0 |
-| effects[1].valueScaling.values[2] | 0 |
-| effects[1].valueScaling.values[3] | 0 |
-| effects[1].valueScaling.values[4] | 0,03 |
-| effects[1].valueScaling.values[5] | 0,05 |
-| effects[1].durationSeconds | 0 |
-| effectsVersion | 1 |
+| cooldownScaling.base | 50 |
+| cooldownScaling.perLevel | -1 |
+| hasLingeringDamage | false |
+| mana (Aktivierungskosten, kein Bonus) | 47 |
 | resourceCosts[0].resource | mana |
 | resourceCosts[0].reference | maxMana |
 | resourceCosts[0].unit | flat |
 | resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 283 |
-| resourceCosts[0].scaling.perLevel | 185 |
-| statScaling.health.type | linear |
-| statScaling.health.base | 550 |
-| statScaling.health.perLevel | 430 |
+| resourceCosts[0].scaling.base | 47 |
+| resourceCosts[0].scaling.perLevel | 12 |
+| statScaling.matk.type | linear |
+| statScaling.matk.base | 187 |
+| statScaling.matk.perLevel | 49 |
+| manaPricing.category | normal |
+| manaPricing.factor | 0,25 |
+| manaPricing.basis | skillBaseDamagePerTarget |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
 | levelProgression.version | 1 |
 | levelProgression.rules[0].path[0] | cooldownScaling |
 | levelProgression.rules[0].rule.kind | bounded |
 | levelProgression.rules[0].rule.min | 0,1 |
 | levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 80 |
-| levelProgression.rules[0].rule.rule.perLevel | -2 |
+| levelProgression.rules[0].rule.rule.base | 50 |
+| levelProgression.rules[0].rule.rule.perLevel | -1 |
 | levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | durationScaling |
-| levelProgression.rules[1].rule.kind | constant |
-| levelProgression.rules[1].rule.value | 0 |
-| levelProgression.rules[1].source | verifiedExistingLevels |
-| levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 0 |
-| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[1].path[0] | resourceCosts |
+| levelProgression.rules[1].path[1] | 0 |
+| levelProgression.rules[1].path[2] | scaling |
+| levelProgression.rules[1].rule.kind | bounded |
+| levelProgression.rules[1].rule.min | 0 |
+| levelProgression.rules[1].rule.rule.kind | linear |
+| levelProgression.rules[1].rule.rule.base | 47 |
+| levelProgression.rules[1].rule.rule.perLevel | 12 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | statScaling |
+| levelProgression.rules[2].path[1] | matk |
 | levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 550 |
-| levelProgression.rules[2].rule.perLevel | 430 |
+| levelProgression.rules[2].rule.base | 187 |
+| levelProgression.rules[2].rule.perLevel | 49 |
 | levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | effects |
-| levelProgression.rules[3].path[1] | 1 |
-| levelProgression.rules[3].path[2] | valueScaling |
-| levelProgression.rules[3].rule.kind | thresholds |
-| levelProgression.rules[3].rule.base | 0 |
-| levelProgression.rules[3].rule.changes[0].level | 5 |
-| levelProgression.rules[3].rule.changes[0].value | 0,03 |
-| levelProgression.rules[3].rule.changes[1].level | 6 |
-| levelProgression.rules[3].rule.changes[1].value | 0,05 |
-| levelProgression.rules[3].source | verifiedExistingLevels |
-| levelProgression.rules[4].path[0] | resourceCosts |
-| levelProgression.rules[4].path[1] | 0 |
-| levelProgression.rules[4].path[2] | scaling |
-| levelProgression.rules[4].rule.kind | bounded |
-| levelProgression.rules[4].rule.min | 0 |
-| levelProgression.rules[4].rule.rule.kind | linear |
-| levelProgression.rules[4].rule.rule.base | 283 |
-| levelProgression.rules[4].rule.rule.perLevel | 185 |
-| levelProgression.rules[4].source | storedFormula |
-| levelProgression.rules[5].path[0] | statScaling |
-| levelProgression.rules[5].path[1] | health |
-| levelProgression.rules[5].rule.kind | linear |
-| levelProgression.rules[5].rule.base | 550 |
-| levelProgression.rules[5].rule.perLevel | 430 |
-| levelProgression.rules[5].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
+| damageType | magical |
 | type | skill |
 
-### 60: Hoffnungsschimmer
+### 68: Kristallisierte Wasserspähre
 
-Dauerhafter Attributanteil: je gelernter Stufe +0,6 Intelligenz, +0,4 Willenskraft; auf Stufe 10 insgesamt +6 Intelligenz, +4 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Direkte MP-Regeneration auf Stufen 1/3/5/7/9 jeweils zusätzlich +8, maximal +40 je Tick.
+Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmalig magischen Schaden verursacht. Der Grundschaden steigt von 137 um 27 je weiterer Stufe auf 380 auf Stufe 10. Mana-Kosten 34 auf Stufe 1, +7 je weiterer Stufe, maximal 97 auf Stufe 10. Der Cooldown 30 Sekunden auf Stufe 1 und 26 Sekunden auf Stufe 10. Castzeit 0,2 Sekunden. Die vorläufige Animation dauert 1 Sekunde; keine anhaltende Wirkungsdauer oder zusätzlicher Kontrolleffekt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Ray of Hope |
-| category | passive |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 12 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Crystallized Water Sphere |
+| category | active |
+| cd | 30 |
 | charClass[0] | Healer |
 | charClass[1] | Priest |
-| charClass[2] | Luminet |
-| charClass[3] | Lightmage |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Dauerhafter Attributanteil: je gelernter Stufe +0,6 Intelligenz, +0,4 Willenskraft; auf Stufe 10 insgesamt +6 Intelligenz, +4 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Direkte MP-Regeneration auf Stufen 1/3/5/7/9 jeweils zusätzlich +8, maximal +40 je Tick. |
-| description_eng | Permanent attribute component: +0.6 Intelligence, +0.4 Wisdom per learned level; at level 10, +6 Intelligence, +4 Wisdom total. This component always applies independently of any triggered effects. Direct Mana regeneration increases by 8 at levels 1/3/5/7/9, reaching +40 per tick. |
-| dmgType (Altformat) | passive |
-| int | 0,6 |
+| description_de | Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmalig magischen Schaden verursacht. Der Grundschaden steigt von 137 um 27 je weiterer Stufe auf 380 auf Stufe 10. Mana-Kosten 34 auf Stufe 1, +7 je weiterer Stufe, maximal 97 auf Stufe 10. Der Cooldown 30 Sekunden auf Stufe 1 und 26 Sekunden auf Stufe 10. Castzeit 0,2 Sekunden. Die vorläufige Animation dauert 1 Sekunde; keine anhaltende Wirkungsdauer oder zusätzlicher Kontrolleffekt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
+| description_eng | Hurls an ice sphere at your target, shattering on impact and dealing magical damage once. Base damage increases from 137 by 27 per additional level to 380 at level 10. Mana cost 34 at level 1, maximum 97 at level 10. Cooldown 30 seconds at level 1 and 26 seconds at level 10. Cast time is 0.2 seconds. Provisional animation lasts 1 second; no lasting effect or additional control effect. |
+| dmgType (Altformat) | spell |
+| matk | 137 |
 | maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 60 |
-| skillName_de | Hoffnungsschimmer |
+| nr | 68 |
+| skillName_de | Kristallisierte Wasserspähre |
 | skillpoints | 1 |
-| wis | 0,4 |
-| manaRegen | 8 |
-| resourceCosts | [] |
-| statScaling.manaRegen.type | table |
-| statScaling.manaRegen.values[0] | 8 |
-| statScaling.manaRegen.values[1] | 8 |
-| statScaling.manaRegen.values[2] | 16 |
-| statScaling.manaRegen.values[3] | 16 |
-| statScaling.manaRegen.values[4] | 24 |
-| statScaling.manaRegen.values[5] | 24 |
-| statScaling.manaRegen.values[6] | 32 |
-| statScaling.manaRegen.values[7] | 32 |
-| statScaling.manaRegen.values[8] | 40 |
-| statScaling.manaRegen.values[9] | 40 |
-| statScaling.int.type | linear |
-| statScaling.int.base | 0,6 |
-| statScaling.int.perLevel | 0,6 |
-| statScaling.wis.type | linear |
-| statScaling.wis.base | 0,4 |
-| statScaling.wis.perLevel | 0,4 |
+| cooldownScaling.type | linear |
+| cooldownScaling.base | 30 |
+| cooldownScaling.perLevel | -0,444 |
+| mana (Aktivierungskosten, kein Bonus) | 34 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | linear |
+| resourceCosts[0].scaling.base | 34 |
+| resourceCosts[0].scaling.perLevel | 7 |
+| statScaling.matk.type | linear |
+| statScaling.matk.base | 137 |
+| statScaling.matk.perLevel | 27 |
+| animationDurationSeconds | 1 |
+| animationTimingStatus | provisional |
+| castTimeSeconds | 0,2 |
+| hasLingeringDamage | false |
+| manaPricing.category | normal |
+| manaPricing.factor | 0,25 |
+| manaPricing.basis | skillBaseDamagePerTarget |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
 | levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | statScaling |
-| levelProgression.rules[0].path[1] | manaRegen |
-| levelProgression.rules[0].rule.kind | periodicSteps |
-| levelProgression.rules[0].rule.base | 8 |
-| levelProgression.rules[0].rule.steps[0] | 0 |
-| levelProgression.rules[0].rule.steps[1] | 8 |
-| levelProgression.rules[0].source | verifiedExistingLevels |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | int |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 0,6 |
-| levelProgression.rules[1].rule.perLevel | 0,6 |
+| levelProgression.rules[0].path[0] | cooldownScaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0,1 |
+| levelProgression.rules[0].rule.rule.kind | linear |
+| levelProgression.rules[0].rule.rule.base | 30 |
+| levelProgression.rules[0].rule.rule.perLevel | -0,444 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | resourceCosts |
+| levelProgression.rules[1].path[1] | 0 |
+| levelProgression.rules[1].path[2] | scaling |
+| levelProgression.rules[1].rule.kind | bounded |
+| levelProgression.rules[1].rule.min | 0 |
+| levelProgression.rules[1].rule.rule.kind | linear |
+| levelProgression.rules[1].rule.rule.base | 34 |
+| levelProgression.rules[1].rule.rule.perLevel | 7 |
 | levelProgression.rules[1].source | storedFormula |
 | levelProgression.rules[2].path[0] | statScaling |
-| levelProgression.rules[2].path[1] | wis |
+| levelProgression.rules[2].path[1] | matk |
 | levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 0,4 |
-| levelProgression.rules[2].rule.perLevel | 0,4 |
+| levelProgression.rules[2].rule.base | 137 |
+| levelProgression.rules[2].rule.perLevel | 27 |
 | levelProgression.rules[2].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
+| damageType | magical |
+| type | skill |
+
+### 143: Immunität
+
+Dauerhafter Attributanteil: je gelernter Stufe +0,5 Intelligenz, +0,5 Willenskraft; auf Stufe 10 insgesamt +5 Intelligenz, +5 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Je Stufe 1 % Chance, einen neu angewendeten Fluch abzuwehren, maximal 10 %. Direkte M-Abwehr: +6 auf Stufe 1, +4 je weiterer Stufe bis +42. Entfernt keine bestehenden Flüche; konkrete Flucharten noch offen.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 15 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Immunity |
+| category | passive |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Dauerhafter Attributanteil: je gelernter Stufe +0,5 Intelligenz, +0,5 Willenskraft; auf Stufe 10 insgesamt +5 Intelligenz, +5 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Je Stufe 1 % Chance, einen neu angewendeten Fluch abzuwehren, maximal 10 %. Direkte M-Abwehr: +6 auf Stufe 1, +4 je weiterer Stufe bis +42. Entfernt keine bestehenden Flüche; konkrete Flucharten noch offen. |
+| description_eng | Permanent attribute component: +0.5 Intelligence, +0.5 Wisdom per learned level; at level 10, +5 Intelligence, +5 Wisdom total. This component always applies independently of any triggered effects. Each level grants 1% chance to resist a newly applied curse, up to 10%. Direct magical defense starts at +6, adding 4 per additional level to +42. Does not remove existing curses; specific curse types remain pending. |
+| dmgType (Altformat) | passive |
+| maxSkillLv | 10 |
+| maxUpgradeLv | 10 |
+| mdef | 6 |
+| nr | 143 |
+| skillName_de | Immunität |
+| skillpoints | 1 |
+| wis | 0,5 |
+| effects[0].key | immunity-curse-resistance |
+| effects[0].type | statusResistance |
+| effects[0].target | self |
+| effects[0].resistedStatus | curse |
+| effects[0].resistanceCheck | onStatusApplication |
+| effects[0].value | 0,01 |
+| effects[0].unit | fraction |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 0,01 |
+| effects[0].valueScaling.perLevel | 0,01 |
+| effects[0].durationSeconds | 0 |
+| effectsVersion | 1 |
+| resourceCosts | [] |
+| statScaling.mdef.type | linear |
+| statScaling.mdef.base | 6 |
+| statScaling.mdef.perLevel | 4 |
+| statScaling.int.type | linear |
+| statScaling.int.base | 0,5 |
+| statScaling.int.perLevel | 0,5 |
+| statScaling.wis.type | linear |
+| statScaling.wis.base | 0,5 |
+| statScaling.wis.perLevel | 0,5 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | effects |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | valueScaling |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 0,01 |
+| levelProgression.rules[0].rule.perLevel | 0,01 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | mdef |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 6 |
+| levelProgression.rules[1].rule.perLevel | 4 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | statScaling |
+| levelProgression.rules[2].path[1] | int |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 0,5 |
+| levelProgression.rules[2].rule.perLevel | 0,5 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | statScaling |
+| levelProgression.rules[3].path[1] | wis |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 0,5 |
+| levelProgression.rules[3].rule.perLevel | 0,5 |
+| levelProgression.rules[3].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
 | type | passive |
+| int | 0,5 |
 
 ### 64: Heilung
 
@@ -909,6 +1765,32 @@ Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 2
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 5 |
+| skillPointCosts.rankCosts.0 | 5 |
+| skillPointCosts.rankCosts.1 | 6 |
+| skillPointCosts.rankCosts.2 | 7 |
+| skillPointCosts.rankCosts.3 | 8 |
+| skillPointCosts.rankCosts.4 | 9 |
+| skillPointCosts.rankCosts.5 | 10 |
+| skillPointCosts.rankCosts.6 | 11 |
+| skillPointCosts.rankCosts.7 | 12 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 18 |
+| skillPointCosts.rankCosts.13 | 19 |
+| skillPointCosts.rankCosts.14 | 20 |
+| skillPointCosts.rankCosts.15 | 21 |
+| skillPointCosts.rankCosts.16 | 22 |
+| skillPointCosts.rankCosts.17 | 23 |
+| skillPointCosts.rankCosts.18 | 24 |
+| skillPointCosts.rankCosts.19 | 25 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 17 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Healing |
 | category | active |
 | cd | 19 |
@@ -1058,423 +1940,204 @@ Heilt ein verbündetes Ziel. Der Heilwert wächst kumulativ mit Zuwächsen von 2
 | classificationVersion | 1 |
 | type | skill |
 
-### 68: Kristallisierte Wasserspähre
+### 197: Aurora-Segen
 
-Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmalig magischen Schaden verursacht. Der Grundschaden steigt von 137 um 27 je weiterer Stufe auf 380 auf Stufe 10. Mana-Kosten 34 auf Stufe 1, +7 je weiterer Stufe, maximal 97 auf Stufe 10. Der Cooldown 30 Sekunden auf Stufe 1 und 26 Sekunden auf Stufe 10. Castzeit 0,2 Sekunden. Die vorläufige Animation dauert 1 Sekunde; keine anhaltende Wirkungsdauer oder zusätzlicher Kontrolleffekt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+Aurora-Segen vereint die bisherigen Angriffs-, Mentalitäts- und Verteidigungssegen. Je Stufe +2 Stärke, Vitalität, Intelligenz und Willenskraft sowie +2 direkte MP-Regeneration je Tick. Auf Stufe 10 jeweils +20 der vier Attribute und +20 MP-Regeneration je Tick. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr. Die bisherigen separaten Segen werden nicht zusätzlich gestapelt. Dauer 30 Minuten, Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Mana-Kosten: 35 + 21 je weiterer Stufe.
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Crystallized Water Sphere |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 20 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Aurora's Blessing |
 | category | active |
-| cd | 30 |
+| cd | 60 |
 | charClass[0] | Healer |
 | charClass[1] | Priest |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Schleudert eine Eiskugel auf dein Ziel, die beim Aufprall zerspringt und einmalig magischen Schaden verursacht. Der Grundschaden steigt von 137 um 27 je weiterer Stufe auf 380 auf Stufe 10. Mana-Kosten 34 auf Stufe 1, +7 je weiterer Stufe, maximal 97 auf Stufe 10. Der Cooldown 30 Sekunden auf Stufe 1 und 26 Sekunden auf Stufe 10. Castzeit 0,2 Sekunden. Die vorläufige Animation dauert 1 Sekunde; keine anhaltende Wirkungsdauer oder zusätzlicher Kontrolleffekt. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
-| description_eng | Hurls an ice sphere at your target, shattering on impact and dealing magical damage once. Base damage increases from 137 by 27 per additional level to 380 at level 10. Mana cost 34 at level 1, maximum 97 at level 10. Cooldown 30 seconds at level 1 and 26 seconds at level 10. Cast time is 0.2 seconds. Provisional animation lasts 1 second; no lasting effect or additional control effect. |
-| dmgType (Altformat) | spell |
-| matk | 137 |
+| description_de | Aurora-Segen vereint die bisherigen Angriffs-, Mentalitäts- und Verteidigungssegen. Je Stufe +2 Stärke, Vitalität, Intelligenz und Willenskraft sowie +2 direkte MP-Regeneration je Tick. Auf Stufe 10 jeweils +20 der vier Attribute und +20 MP-Regeneration je Tick. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr. Die bisherigen separaten Segen werden nicht zusätzlich gestapelt. Dauer 30 Minuten, Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Mana-Kosten: 35 + 21 je weiterer Stufe. |
+| description_eng | Combines the former Attack, Mentality and Defense blessings. Each level grants +2 Strength, Vitality, Intelligence and Wisdom and +2 direct Mana regeneration per tick. Level 10 grants +20 of each of those four attributes and +20 Mana regeneration per tick. No direct physical/magical attack or defense bonuses. Former separate blessings do not stack in addition. Duration 30 minutes, cooldown 60 seconds, cast time 0.3 seconds. Mana cost: 35 + 21 per additional level. |
+| dmgType (Altformat) | buff |
+| dur | 1.800 |
 | maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 68 |
-| skillName_de | Kristallisierte Wasserspähre |
+| nr | 197 |
+| skillName_de | Aurora-Segen |
 | skillpoints | 1 |
-| cooldownScaling.type | linear |
-| cooldownScaling.base | 30 |
-| cooldownScaling.perLevel | -0,444 |
-| mana (Aktivierungskosten, kein Bonus) | 34 |
+| str | 2 |
+| statBonusUnits.str | flat |
+| statBonusUnits.vita | flat |
+| statBonusUnits.int | flat |
+| statBonusUnits.wis | flat |
+| statBonusUnits.manaRegen | flat |
+| statScaling.str.type | linear |
+| statScaling.str.base | 2 |
+| statScaling.str.perLevel | 2 |
+| statScaling.vita.type | linear |
+| statScaling.vita.base | 2 |
+| statScaling.vita.perLevel | 2 |
+| statScaling.int.type | linear |
+| statScaling.int.base | 2 |
+| statScaling.int.perLevel | 2 |
+| statScaling.wis.type | linear |
+| statScaling.wis.base | 2 |
+| statScaling.wis.perLevel | 2 |
+| statScaling.manaRegen.type | linear |
+| statScaling.manaRegen.base | 2 |
+| statScaling.manaRegen.perLevel | 2 |
+| int | 2 |
+| manaRegen | 2 |
+| vita | 2 |
+| wis | 2 |
+| castTimeSeconds | 0,3 |
 | resourceCosts[0].resource | mana |
 | resourceCosts[0].reference | maxMana |
 | resourceCosts[0].unit | flat |
 | resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 34 |
-| resourceCosts[0].scaling.perLevel | 7 |
-| statScaling.matk.type | linear |
-| statScaling.matk.base | 137 |
-| statScaling.matk.perLevel | 27 |
-| animationDurationSeconds | 1 |
-| animationTimingStatus | provisional |
-| castTimeSeconds | 0,2 |
-| hasLingeringDamage | false |
-| manaPricing.category | normal |
-| manaPricing.factor | 0,25 |
-| manaPricing.basis | skillBaseDamagePerTarget |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
+| resourceCosts[0].scaling.base | 35 |
+| resourceCosts[0].scaling.perLevel | 21 |
 | levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | cooldownScaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0,1 |
-| levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 30 |
-| levelProgression.rules[0].rule.rule.perLevel | -0,444 |
+| levelProgression.rules[0].path[0] | statScaling |
+| levelProgression.rules[0].path[1] | str |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 2 |
+| levelProgression.rules[0].rule.perLevel | 2 |
 | levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | resourceCosts |
-| levelProgression.rules[1].path[1] | 0 |
-| levelProgression.rules[1].path[2] | scaling |
-| levelProgression.rules[1].rule.kind | bounded |
-| levelProgression.rules[1].rule.min | 0 |
-| levelProgression.rules[1].rule.rule.kind | linear |
-| levelProgression.rules[1].rule.rule.base | 34 |
-| levelProgression.rules[1].rule.rule.perLevel | 7 |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | vita |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 2 |
+| levelProgression.rules[1].rule.perLevel | 2 |
 | levelProgression.rules[1].source | storedFormula |
 | levelProgression.rules[2].path[0] | statScaling |
-| levelProgression.rules[2].path[1] | matk |
+| levelProgression.rules[2].path[1] | int |
 | levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 137 |
-| levelProgression.rules[2].rule.perLevel | 27 |
+| levelProgression.rules[2].rule.base | 2 |
+| levelProgression.rules[2].rule.perLevel | 2 |
 | levelProgression.rules[2].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| classificationVersion | 1 |
-| damageType | magical |
-| type | skill |
-
-### 78: Göttliche Heilung
-
-Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Metern Radius um den Heiler. Nach der Castzeit erfolgt die erste Heilung mit dem vollen Skill-Heilwert; 1 Sekunde später folgt eine zweite Heilung mit 50 Prozent dieses Werts. Grundheilwert 162 HP auf Stufe 1, +97 je weiterer Stufe, auf Stufe 10 1035 HP. Je Gruppenmitglied insgesamt 243 HP auf Stufe 1 beziehungsweise 1552,5 HP auf Stufe 10 vor Begrenzung durch fehlende HP. Mana-Kosten 85 auf Stufe 1, +51 je weiterer Stufe, maximal 544 auf Stufe 10. Cooldown gleichmäßig von 64 auf 58 Sekunden über zehn Stufen. Castzeit 0,2 Sekunden. Gesamter visueller Ablauf ungefähr 2 Sekunden; genau zwei Heilungen, kein fortlaufender Heil-Tick. Ob Empfänger beim ersten Heal festgehalten oder beim zweiten erneut im Radius geprüft werden, ist noch offen. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Divine Healing |
-| category | active |
-| cd | 64 |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Metern Radius um den Heiler. Nach der Castzeit erfolgt die erste Heilung mit dem vollen Skill-Heilwert; 1 Sekunde später folgt eine zweite Heilung mit 50 Prozent dieses Werts. Grundheilwert 162 HP auf Stufe 1, +97 je weiterer Stufe, auf Stufe 10 1035 HP. Je Gruppenmitglied insgesamt 243 HP auf Stufe 1 beziehungsweise 1552,5 HP auf Stufe 10 vor Begrenzung durch fehlende HP. Mana-Kosten 85 auf Stufe 1, +51 je weiterer Stufe, maximal 544 auf Stufe 10. Cooldown gleichmäßig von 64 auf 58 Sekunden über zehn Stufen. Castzeit 0,2 Sekunden. Gesamter visueller Ablauf ungefähr 2 Sekunden; genau zwei Heilungen, kein fortlaufender Heil-Tick. Ob Empfänger beim ersten Heal festgehalten oder beim zweiten erneut im Radius geprüft werden, ist noch offen. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
-| description_eng | Heals the entire own group including the healer within a 12-meter radius of the healer. The first heal applies full skill healing after casting; 1 second later a second heal applies 50 percent of that value. Base healing 162 HP plus 97 per additional level, reaching 1035 at level 10. Total per group member 243 HP at level 1 or 1552.5 at level 10 before missing-health limits. Mana cost 85 at level 1, maximum 544 at level 10. Cooldown decreases linearly from 64 to 58 seconds across ten levels. Cast time 0.2 seconds. Approximate total visual sequence 2 seconds; exactly two heals, no ongoing healing ticks. Whether recipients are fixed at the first heal or checked again within the radius for the second remains pending. |
-| dmgType (Altformat) | spell |
-| health | 162 |
-| maxSkillLv | 10 |
-| maxUpgradeLv | 10 |
-| nr | 78 |
-| skillName_de | Göttliche Heilung |
-| skillpoints | 1 |
-| animationDurationSeconds | 2 |
-| animationTimingStatus | provisional |
-| areaSettings.center | caster |
-| areaSettings.includeCaster | true |
-| areaSettings.radiusMeters | 12 |
-| castTimeSeconds | 0,2 |
-| cooldownScaling.type | linear |
-| cooldownScaling.base | 64 |
-| cooldownScaling.perLevel | -0,667 |
-| dur | 2 |
-| effects[0].key | mass-healing-full |
-| effects[0].type | heal |
-| effects[0].target | alliesInArea |
-| effects[0].recipientGroup | ownGroup |
-| effects[0].distribution | fullAmountToEachRecipient |
-| effects[0].value | 162 |
-| effects[0].unit | flat |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 162 |
-| effects[0].valueScaling.perLevel | 97 |
-| effects[0].applicationDelaySeconds | 0 |
-| effects[0].durationSeconds | 0 |
-| effects[1].key | mass-healing-followup |
-| effects[1].type | heal |
-| effects[1].target | alliesInArea |
-| effects[1].recipientGroup | ownGroup |
-| effects[1].distribution | fullAmountToEachRecipient |
-| effects[1].value | 81 |
-| effects[1].unit | flat |
-| effects[1].valueScaling.type | linear |
-| effects[1].valueScaling.base | 81 |
-| effects[1].valueScaling.perLevel | 48,5 |
-| effects[1].applicationDelaySeconds | 1 |
-| effects[1].durationSeconds | 0 |
-| effectsVersion | 1 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 85 |
-| resourceCosts[0].scaling.perLevel | 51 |
-| statScaling.health.type | linear |
-| statScaling.health.base | 162 |
-| statScaling.health.perLevel | 97 |
-| manaPricing.category | heal |
-| manaPricing.factor | 0,35 |
-| manaPricing.basis | healingPerRecipient |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | cooldownScaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0,1 |
-| levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 64 |
-| levelProgression.rules[0].rule.rule.perLevel | -0,667 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | effects |
-| levelProgression.rules[1].path[1] | 0 |
-| levelProgression.rules[1].path[2] | valueScaling |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 162 |
-| levelProgression.rules[1].rule.perLevel | 97 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 1 |
-| levelProgression.rules[2].path[2] | valueScaling |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 81 |
-| levelProgression.rules[2].rule.perLevel | 48,5 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | resourceCosts |
-| levelProgression.rules[3].path[1] | 0 |
-| levelProgression.rules[3].path[2] | scaling |
-| levelProgression.rules[3].rule.kind | bounded |
-| levelProgression.rules[3].rule.min | 0 |
-| levelProgression.rules[3].rule.rule.kind | linear |
-| levelProgression.rules[3].rule.rule.base | 85 |
-| levelProgression.rules[3].rule.rule.perLevel | 51 |
+| levelProgression.rules[3].path[0] | statScaling |
+| levelProgression.rules[3].path[1] | wis |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 2 |
+| levelProgression.rules[3].rule.perLevel | 2 |
 | levelProgression.rules[3].source | storedFormula |
 | levelProgression.rules[4].path[0] | statScaling |
-| levelProgression.rules[4].path[1] | health |
+| levelProgression.rules[4].path[1] | manaRegen |
 | levelProgression.rules[4].rule.kind | linear |
-| levelProgression.rules[4].rule.base | 162 |
-| levelProgression.rules[4].rule.perLevel | 97 |
+| levelProgression.rules[4].rule.base | 2 |
+| levelProgression.rules[4].rule.perLevel | 2 |
 | levelProgression.rules[4].source | storedFormula |
+| levelProgression.rules[5].path[0] | resourceCosts |
+| levelProgression.rules[5].path[1] | 0 |
+| levelProgression.rules[5].path[2] | scaling |
+| levelProgression.rules[5].rule.kind | bounded |
+| levelProgression.rules[5].rule.min | 0 |
+| levelProgression.rules[5].rule.rule.kind | linear |
+| levelProgression.rules[5].rule.rule.base | 35 |
+| levelProgression.rules[5].rule.rule.perLevel | 21 |
+| levelProgression.rules[5].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
-| type | skill |
+| target | group |
+| type | buff |
+| castTimeStatus | defined |
 
-### 101: Schwerter des Lichtes
+### 60: Hoffnungsschimmer
 
-Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Intelligenz auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 68 auf Stufe 1, +21 je weiterer Stufe, maximal 257 auf Stufe 10. Cooldown 72 Sekunden auf Stufe 1 und 63 Sekunden auf Stufe 10. Castzeit 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+Dauerhafter Attributanteil: je gelernter Stufe +0,6 Intelligenz, +0,4 Willenskraft; auf Stufe 10 insgesamt +6 Intelligenz, +4 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Direkte MP-Regeneration auf Stufen 1/3/5/7/9 jeweils zusätzlich +8, maximal +40 je Tick.
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Swords of Light |
-| category | active |
-| cd | 72 |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 20 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Ray of Hope |
+| category | passive |
 | charClass[0] | Healer |
 | charClass[1] | Priest |
 | charClass[2] | Luminet |
 | charClass[3] | Lightmage |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Intelligenz auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 68 auf Stufe 1, +21 je weiterer Stufe, maximal 257 auf Stufe 10. Cooldown 72 Sekunden auf Stufe 1 und 63 Sekunden auf Stufe 10. Castzeit 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
-| description_eng | A giant sword of light impales the selected enemy, dealing magical skill base damage once, starting at 273 and increasing by 84 per additional level to 1029 at level 10. The sword and a field with a 15 metre diameter and 7.5 metre radius remain afterward. Field duration increases evenly from 10 to 30 seconds. You and your allies inside gain 13 Intelligence at level 1 plus 0.5 per additional level to 17.5 at level 10. The bonus applies only while inside the field. No recurring damage ticks are defined. Mana cost 68 at level 1, maximum 257 at level 10. Cooldown 72 seconds at level 1 and 63 seconds at level 10. Cast time is 0.7 seconds. |
-| dmgType (Altformat) | spell |
-| dur | 10 |
-| matk | 273 |
+| description_de | Dauerhafter Attributanteil: je gelernter Stufe +0,6 Intelligenz, +0,4 Willenskraft; auf Stufe 10 insgesamt +6 Intelligenz, +4 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Direkte MP-Regeneration auf Stufen 1/3/5/7/9 jeweils zusätzlich +8, maximal +40 je Tick. |
+| description_eng | Permanent attribute component: +0.6 Intelligence, +0.4 Wisdom per learned level; at level 10, +6 Intelligence, +4 Wisdom total. This component always applies independently of any triggered effects. Direct Mana regeneration increases by 8 at levels 1/3/5/7/9, reaching +40 per tick. |
+| dmgType (Altformat) | passive |
+| int | 0,6 |
 | maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 101 |
-| skillName_de | Schwerter des Lichtes |
+| nr | 60 |
+| skillName_de | Hoffnungsschimmer |
 | skillpoints | 1 |
-| attackArea.shape | circle |
-| attackArea.center | skillCenter |
-| attackArea.radiusMeters | 7,5 |
-| attackArea.geometryStatus | defined |
-| attackArea.timingStatus | defined |
-| attackExecution.targetMode | singleEnemy |
-| attackExecution.hitCount | 1 |
-| attackExecution.damageValueScope | perHit |
-| attackExecution.timingStatus | pending |
-| castTimeSeconds | 0,7 |
-| cooldownScaling.type | linear |
-| cooldownScaling.base | 72 |
-| cooldownScaling.perLevel | -1 |
-| durationScaling.type | linear |
-| durationScaling.base | 10 |
-| durationScaling.perLevel | 2,222 |
-| effects[0].key | swords-light-intelligence-field |
-| effects[0].type | statModifier |
-| effects[0].target | alliesInArea |
-| effects[0].stat | int |
-| effects[0].value | 13 |
-| effects[0].unit | flat |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 13 |
-| effects[0].valueScaling.perLevel | 0,5 |
-| effects[0].durationSeconds | 10 |
-| effects[0].durationScaling.type | linear |
-| effects[0].durationScaling.base | 10 |
-| effects[0].durationScaling.perLevel | 2,222 |
-| effects[0].onlyWhileTargetInsideArea | true |
-| mana (Aktivierungskosten, kein Bonus) | 68 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 68 |
-| resourceCosts[0].scaling.perLevel | 21 |
-| statScaling.matk.type | linear |
-| statScaling.matk.base | 273 |
-| statScaling.matk.perLevel | 84 |
-| manaPricing.category | normal |
-| manaPricing.factor | 0,25 |
-| manaPricing.basis | skillBaseDamagePerTarget |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
+| wis | 0,4 |
+| manaRegen | 8 |
+| resourceCosts | [] |
+| statScaling.manaRegen.type | table |
+| statScaling.manaRegen.values[0] | 8 |
+| statScaling.manaRegen.values[1] | 8 |
+| statScaling.manaRegen.values[2] | 16 |
+| statScaling.manaRegen.values[3] | 16 |
+| statScaling.manaRegen.values[4] | 24 |
+| statScaling.manaRegen.values[5] | 24 |
+| statScaling.manaRegen.values[6] | 32 |
+| statScaling.manaRegen.values[7] | 32 |
+| statScaling.manaRegen.values[8] | 40 |
+| statScaling.manaRegen.values[9] | 40 |
+| statScaling.int.type | linear |
+| statScaling.int.base | 0,6 |
+| statScaling.int.perLevel | 0,6 |
+| statScaling.wis.type | linear |
+| statScaling.wis.base | 0,4 |
+| statScaling.wis.perLevel | 0,4 |
 | levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | cooldownScaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0,1 |
-| levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 72 |
-| levelProgression.rules[0].rule.rule.perLevel | -1 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | durationScaling |
+| levelProgression.rules[0].path[0] | statScaling |
+| levelProgression.rules[0].path[1] | manaRegen |
+| levelProgression.rules[0].rule.kind | periodicSteps |
+| levelProgression.rules[0].rule.base | 8 |
+| levelProgression.rules[0].rule.steps[0] | 0 |
+| levelProgression.rules[0].rule.steps[1] | 8 |
+| levelProgression.rules[0].source | verifiedExistingLevels |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | int |
 | levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 10 |
-| levelProgression.rules[1].rule.perLevel | 2,222 |
+| levelProgression.rules[1].rule.base | 0,6 |
+| levelProgression.rules[1].rule.perLevel | 0,6 |
 | levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 0 |
-| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].path[0] | statScaling |
+| levelProgression.rules[2].path[1] | wis |
 | levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 13 |
-| levelProgression.rules[2].rule.perLevel | 0,5 |
+| levelProgression.rules[2].rule.base | 0,4 |
+| levelProgression.rules[2].rule.perLevel | 0,4 |
 | levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | effects |
-| levelProgression.rules[3].path[1] | 0 |
-| levelProgression.rules[3].path[2] | durationScaling |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 10 |
-| levelProgression.rules[3].rule.perLevel | 2,222 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.rules[4].path[0] | resourceCosts |
-| levelProgression.rules[4].path[1] | 0 |
-| levelProgression.rules[4].path[2] | scaling |
-| levelProgression.rules[4].rule.kind | outputCost |
-| levelProgression.rules[4].rule.factor | 0,25 |
-| levelProgression.rules[4].rule.basis | damage |
-| levelProgression.rules[4].rule.minimum | 0 |
-| levelProgression.rules[4].source | verifiedManaPricing |
-| levelProgression.rules[5].path[0] | statScaling |
-| levelProgression.rules[5].path[1] | matk |
-| levelProgression.rules[5].rule.kind | linear |
-| levelProgression.rules[5].rule.base | 273 |
-| levelProgression.rules[5].rule.perLevel | 84 |
-| levelProgression.rules[5].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
-| damageType | magical |
-| type | skill |
-
-### 108: Strahlendes Aurafeld
-
-Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld mit 4 Metern Radius. Der Heiler erhält Selbstheilung bei Sekunde 1, 3, 5, 7, 9 und 11. Verbündete im Feld erhalten jeweils 30 Prozent des Selbstheilungswerts bei Sekunde 2, 4, 6, 8, 10 und 12; der Heiler erhält diese zusätzlichen Verbündeten-Ticks nicht. Selbstheilung je Tick 10 HP je gelerntem Skilllevel, auf Stufe 10 100 HP. Verbündetenheilung je Tick 3 HP je gelerntem Skilllevel, auf Stufe 10 30 HP je Empfänger. Über die volle Laufzeit insgesamt 60 bis 600 HP für den Heiler und 18 bis 180 HP je durchgehend anwesendem Verbündeten. Mana-Kosten 21 auf Stufe 1, +21 je weiterer Stufe, maximal 210 auf Stufe 10. Cooldown 73 Sekunden auf Stufe 1 und 46 Sekunden auf Stufe 10. Castzeit 0 Sekunden. Bewegung ist erlaubt; ein eigener Angriff oder eine andere aktive Heilung bricht das gesamte Feld und alle verbleibenden Ticks ab. Die eigenen Aura-Heilticks lösen keinen Abbruch aus. Regeln für andere Aktionen, erlittenen Schaden und Unterbrechungseffekte werden später geprüft. Kein zusätzlicher Faith-Bonus. Eine Skalierung mit Waffen- oder Charakter-M-Angriff ist noch nicht festgelegt. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Radiant Aura Field |
-| category | active |
-| cd | 73 |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld mit 4 Metern Radius. Der Heiler erhält Selbstheilung bei Sekunde 1, 3, 5, 7, 9 und 11. Verbündete im Feld erhalten jeweils 30 Prozent des Selbstheilungswerts bei Sekunde 2, 4, 6, 8, 10 und 12; der Heiler erhält diese zusätzlichen Verbündeten-Ticks nicht. Selbstheilung je Tick 10 HP je gelerntem Skilllevel, auf Stufe 10 100 HP. Verbündetenheilung je Tick 3 HP je gelerntem Skilllevel, auf Stufe 10 30 HP je Empfänger. Über die volle Laufzeit insgesamt 60 bis 600 HP für den Heiler und 18 bis 180 HP je durchgehend anwesendem Verbündeten. Mana-Kosten 21 auf Stufe 1, +21 je weiterer Stufe, maximal 210 auf Stufe 10. Cooldown 73 Sekunden auf Stufe 1 und 46 Sekunden auf Stufe 10. Castzeit 0 Sekunden. Bewegung ist erlaubt; ein eigener Angriff oder eine andere aktive Heilung bricht das gesamte Feld und alle verbleibenden Ticks ab. Die eigenen Aura-Heilticks lösen keinen Abbruch aus. Regeln für andere Aktionen, erlittenen Schaden und Unterbrechungseffekte werden später geprüft. Kein zusätzlicher Faith-Bonus. Eine Skalierung mit Waffen- oder Charakter-M-Angriff ist noch nicht festgelegt. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
-| description_eng | Instantly activates a 12-second aura field with a 4-meter radius that moves with the healer. Self-healing occurs at seconds 1, 3, 5, 7, 9 and 11. Allies within the field receive 30 percent of the self-healing value at seconds 2, 4, 6, 8, 10 and 12; the caster does not receive these additional allied ticks. Self-healing per tick is 10 HP per learned skill level, reaching 100 at level 10. Allied healing per tick is 3 HP per learned skill level, reaching 30 per recipient at level 10. Full-duration totals: 60–600 HP for the healer and 18–180 per continuously present ally. Mana cost 21 at level 1, maximum 210 at level 10. Cooldown 73 seconds at level 1 and 46 seconds at level 10. Movement is allowed; an own attack or another active healing action cancels the whole field and all remaining ticks. The aura’s own healing ticks do not cancel it. Other actions, incoming damage and interruption effects remain to be reviewed. No additional Faith bonus. Weapon/character magical-attack scaling remains undefined. |
-| dmgType (Altformat) | spell |
-| dur | 12 |
-| health | 10 |
-| maxSkillLv | 10 |
-| maxUpgradeLv | 10 |
-| nr | 108 |
-| skillName_de | Strahlendes Aurafeld |
-| skillpoints | 1 |
-| areaSettings.center | caster |
-| areaSettings.movesWithCaster | true |
-| areaSettings.membership | whileInside |
-| areaSettings.includeCaster | false |
-| areaSettings.radiusMeters | 4 |
-| castTimeSeconds | 0 |
-| effects[0].key | radiant-aura-self-heal |
-| effects[0].type | heal |
-| effects[0].target | self |
-| effects[0].value | 10 |
-| effects[0].unit | flat |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 10 |
-| effects[0].valueScaling.perLevel | 10 |
-| effects[0].intervalSeconds | 2 |
-| effects[0].firstTickAfterSeconds | 1 |
-| effects[0].durationSeconds | 12 |
-| effects[1].key | radiant-aura-allied-heal |
-| effects[1].type | heal |
-| effects[1].target | alliesInArea |
-| effects[1].excludesCaster | true |
-| effects[1].onlyWhileTargetInsideArea | true |
-| effects[1].value | 3 |
-| effects[1].unit | flat |
-| effects[1].valueScaling.type | linear |
-| effects[1].valueScaling.base | 3 |
-| effects[1].valueScaling.perLevel | 3 |
-| effects[1].intervalSeconds | 2 |
-| effects[1].firstTickAfterSeconds | 2 |
-| effects[1].durationSeconds | 12 |
-| effectsVersion | 1 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 21 |
-| resourceCosts[0].scaling.perLevel | 21 |
-| statScaling.health.type | linear |
-| statScaling.health.base | 10 |
-| statScaling.health.perLevel | 10 |
-| sustainedActionSettings.allowsMovement | true |
-| sustainedActionSettings.cancelsOnOwnAttack | true |
-| sustainedActionSettings.cancelsOnOtherHealingAction | true |
-| sustainedActionSettings.ignoresOwnHealingTicksForCancellation | true |
-| sustainedActionSettings.otherActionCancellationStatus | pending |
-| sustainedActionSettings.incomingDamageCancellationStatus | pending |
-| cooldownScaling.type | linear |
-| cooldownScaling.base | 73 |
-| cooldownScaling.perLevel | -3 |
-| manaPricing.category | heal |
-| manaPricing.factor | 0,35 |
-| manaPricing.basis | healingPerRecipient |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | effects |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | valueScaling |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 10 |
-| levelProgression.rules[0].rule.perLevel | 10 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | effects |
-| levelProgression.rules[1].path[1] | 1 |
-| levelProgression.rules[1].path[2] | valueScaling |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 3 |
-| levelProgression.rules[1].rule.perLevel | 3 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | resourceCosts |
-| levelProgression.rules[2].path[1] | 0 |
-| levelProgression.rules[2].path[2] | scaling |
-| levelProgression.rules[2].rule.kind | bounded |
-| levelProgression.rules[2].rule.min | 0 |
-| levelProgression.rules[2].rule.rule.kind | linear |
-| levelProgression.rules[2].rule.rule.base | 21 |
-| levelProgression.rules[2].rule.rule.perLevel | 21 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | statScaling |
-| levelProgression.rules[3].path[1] | health |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 10 |
-| levelProgression.rules[3].rule.perLevel | 10 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.rules[4].path[0] | cooldownScaling |
-| levelProgression.rules[4].rule.kind | bounded |
-| levelProgression.rules[4].rule.min | 0,1 |
-| levelProgression.rules[4].rule.rule.kind | linear |
-| levelProgression.rules[4].rule.rule.base | 73 |
-| levelProgression.rules[4].rule.rule.perLevel | -3 |
-| levelProgression.rules[4].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| classificationVersion | 1 |
-| type | skill |
+| type | passive |
 
 ### 124: Wiederherstellung
 
@@ -1482,6 +2145,32 @@ Heilt ein einzelnes anvisiertes verbündetes Ziel über Zeit. 20 lernbare Stufen
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 5 |
+| skillPointCosts.rankCosts.0 | 5 |
+| skillPointCosts.rankCosts.1 | 6 |
+| skillPointCosts.rankCosts.2 | 7 |
+| skillPointCosts.rankCosts.3 | 8 |
+| skillPointCosts.rankCosts.4 | 9 |
+| skillPointCosts.rankCosts.5 | 10 |
+| skillPointCosts.rankCosts.6 | 11 |
+| skillPointCosts.rankCosts.7 | 12 |
+| skillPointCosts.rankCosts.8 | 13 |
+| skillPointCosts.rankCosts.9 | 14 |
+| skillPointCosts.rankCosts.10 | 16 |
+| skillPointCosts.rankCosts.11 | 17 |
+| skillPointCosts.rankCosts.12 | 18 |
+| skillPointCosts.rankCosts.13 | 19 |
+| skillPointCosts.rankCosts.14 | 20 |
+| skillPointCosts.rankCosts.15 | 21 |
+| skillPointCosts.rankCosts.16 | 22 |
+| skillPointCosts.rankCosts.17 | 23 |
+| skillPointCosts.rankCosts.18 | 24 |
+| skillPointCosts.rankCosts.19 | 25 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 21 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Recovery |
 | category | active |
 | cd | 41 |
@@ -1675,907 +2364,22 @@ Heilt ein einzelnes anvisiertes verbündetes Ziel über Zeit. 20 lernbare Stufen
 | classificationVersion | 1 |
 | type | skill |
 
-### 133: Tamen
-
-Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Tame |
-| category | creature |
-| cd | 60 |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Versucht, eine Kreatur zu zähmen. Erfordert das passende spezielle Taming-Item für diese Kreatur. Die Grunderfolgschance beginnt bei 50 Prozent und steigt je weiterer Skillstufe um 15 Prozentpunkte auf 80 Prozent. Ein Kreaturen-Gegenwert beeinflusst die endgültige Erfolgschance; die Berechnung ist noch festzulegen. Die Mana-Kosten steigen von 100 um 25 je weiterer Stufe auf 150. Die Cast Time sinkt von 3 um 0,5 Sekunden je weiterer Stufe auf 2 Sekunden, der Cooldown von 60 um 10 Sekunden je weiterer Stufe auf 40 Sekunden. Der Versuch verursacht keinen Schaden und hat keine anschließende Effektdauer. Der Itemverbrauch ist noch festzulegen. Die Definition umfasst drei Stufen; die normale Lerngrenze anderer Klassen liegt bei Stufe 1. Der Abenteurer kann Stufe 3 lernen; eine zweite Spezialklasse ist noch nicht festgelegt. |
-| description_eng | Attempts to tame a creature. Requires the specific matching taming item for that creature. Base success chance starts at 50 percent and increases by 15 percentage points per additional skill level to 80 percent. A creature counter value influences final success chance; its calculation is still to be defined. Mana cost increases from 100 by 25 per additional level to 150. Cast time decreases from 3 by 0.5 seconds per additional level to 2 seconds, and cooldown from 60 by 10 seconds per additional level to 40 seconds. The attempt causes no damage and has no subsequent effect duration. Item consumption is still to be defined. The definition contains three levels; normal other classes are capped at learned level 1. The Adventurer may learn level 3; a second specialist remains undefined. |
-| dmgType (Altformat) | spell |
-| maxSkillLv | 3 |
-| maxUpgradeLv | 10 |
-| nr | 133 |
-| skillName_de | Tamen |
-| skillpoints | 1 |
-| castTimeScaling.type | linear |
-| castTimeScaling.base | 3 |
-| castTimeScaling.perLevel | -0,5 |
-| castTimeSeconds | 3 |
-| cooldownScaling.type | linear |
-| cooldownScaling.base | 60 |
-| cooldownScaling.perLevel | -10 |
-| mana (Aktivierungskosten, kein Bonus) | 100 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 100 |
-| resourceCosts[0].scaling.perLevel | 25 |
-| taming.requiresMatchingItem | true |
-| taming.itemConsumptionStatus | pending |
-| taming.creatureCounterStatus | pending |
-| taming.baseSuccessChance | 0,5 |
-| taming.successChanceScaling.type | linear |
-| taming.successChanceScaling.base | 0,5 |
-| taming.successChanceScaling.perLevel | 0,15 |
-| learningLimits.defaultMaxLevel | 1 |
-| learningLimits.classOverrides.Abenteuer | 3 |
-| learningLimits.classOverrides.Gladiator | 1 |
-| learningLimits.classOverrides.Berserker | 1 |
-| learningLimits.status | secondSpecialistPending |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | castTimeScaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0 |
-| levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 3 |
-| levelProgression.rules[0].rule.rule.perLevel | -0,5 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | cooldownScaling |
-| levelProgression.rules[1].rule.kind | bounded |
-| levelProgression.rules[1].rule.min | 0,1 |
-| levelProgression.rules[1].rule.rule.kind | linear |
-| levelProgression.rules[1].rule.rule.base | 60 |
-| levelProgression.rules[1].rule.rule.perLevel | -10 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | resourceCosts |
-| levelProgression.rules[2].path[1] | 0 |
-| levelProgression.rules[2].path[2] | scaling |
-| levelProgression.rules[2].rule.kind | bounded |
-| levelProgression.rules[2].rule.min | 0 |
-| levelProgression.rules[2].rule.rule.kind | linear |
-| levelProgression.rules[2].rule.rule.base | 100 |
-| levelProgression.rules[2].rule.rule.perLevel | 25 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | taming |
-| levelProgression.rules[3].path[1] | successChanceScaling |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 0,5 |
-| levelProgression.rules[3].rule.perLevel | 0,15 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 4 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | skill |
-
-### 134: Bindung
-
-Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Bond |
-| category | creature |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Die Bindung stärkt dauerhaft deine Kreatur. Auf Skilllevel 1 erhält sie jeweils 10 Stärke, Vitalität, Intelligenz und Willenskraft. Je weiterer Stufe kommen jeweils 5 hinzu, bis zu jeweils 20 auf Level 3. Der Spieler erhält diese Boni nicht. Normale Klassen können Level 1 lernen, der Abenteurer Level 3. Die zweite Spezialklasse ist noch festzulegen. Bindung hat keine Aktivierungskosten und keinen Cooldown. |
-| description_eng | The bond permanently strengthens your companion. At skill level 1 it gains 10 Strength, Vitality, Intelligence and Wisdom each. Each additional level adds 5 to each attribute, reaching 20 each at level 3. The player does not receive these bonuses. Standard classes can learn level 1; the Adventurer can learn level 3. The second specialist class is still to be defined. Bond has no activation costs or cooldown. |
-| dmgType (Altformat) | passive |
-| maxSkillLv | 3 |
-| maxUpgradeLv | 10 |
-| nr | 134 |
-| skillName_de | Bindung |
-| skillpoints | 1 |
-| effects[0].key | bond_str |
-| effects[0].type | statModifier |
-| effects[0].target | companion |
-| effects[0].stat | str |
-| effects[0].value | 10 |
-| effects[0].unit | flat |
-| effects[0].durationSeconds | 0 |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 10 |
-| effects[0].valueScaling.perLevel | 5 |
-| effects[0].progressionStatus | defined |
-| effects[1].key | bond_vita |
-| effects[1].type | statModifier |
-| effects[1].target | companion |
-| effects[1].stat | vita |
-| effects[1].value | 10 |
-| effects[1].unit | flat |
-| effects[1].durationSeconds | 0 |
-| effects[1].valueScaling.type | linear |
-| effects[1].valueScaling.base | 10 |
-| effects[1].valueScaling.perLevel | 5 |
-| effects[1].progressionStatus | defined |
-| effects[2].key | bond_int |
-| effects[2].type | statModifier |
-| effects[2].target | companion |
-| effects[2].stat | int |
-| effects[2].value | 10 |
-| effects[2].unit | flat |
-| effects[2].durationSeconds | 0 |
-| effects[2].valueScaling.type | linear |
-| effects[2].valueScaling.base | 10 |
-| effects[2].valueScaling.perLevel | 5 |
-| effects[2].progressionStatus | defined |
-| effects[3].key | bond_wis |
-| effects[3].type | statModifier |
-| effects[3].target | companion |
-| effects[3].stat | wis |
-| effects[3].value | 10 |
-| effects[3].unit | flat |
-| effects[3].durationSeconds | 0 |
-| effects[3].valueScaling.type | linear |
-| effects[3].valueScaling.base | 10 |
-| effects[3].valueScaling.perLevel | 5 |
-| effects[3].progressionStatus | defined |
-| effectsVersion | 1 |
-| learningLimits.defaultMaxLevel | 1 |
-| learningLimits.classOverrides.Abenteuer | 3 |
-| learningLimits.status | secondSpecialistPending |
-| resourceCosts | [] |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | effects |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | valueScaling |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 10 |
-| levelProgression.rules[0].rule.perLevel | 5 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | effects |
-| levelProgression.rules[1].path[1] | 1 |
-| levelProgression.rules[1].path[2] | valueScaling |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 10 |
-| levelProgression.rules[1].rule.perLevel | 5 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 2 |
-| levelProgression.rules[2].path[2] | valueScaling |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 10 |
-| levelProgression.rules[2].rule.perLevel | 5 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | effects |
-| levelProgression.rules[3].path[1] | 3 |
-| levelProgression.rules[3].path[2] | valueScaling |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 10 |
-| levelProgression.rules[3].rule.perLevel | 5 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 6 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-
-### 135: Kontrolle
-
-Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Control |
-| category | creature |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Permanenter passiver Kreaturen-Skill. Die gelernte Skillstufe bestimmt die Anzahl gleichzeitig kontrollierbarer Kreaturen: eine auf Stufe 1, zwei auf Stufe 2. Alle anderen Klassen können maximal Stufe 1 lernen; nur der Abenteurer und seine Weiterentwicklung maximal Stufe 2 und damit zwei Kreaturen gleichzeitig kontrollieren. Freischaltung ab Charakterlevel 5. Die Charakterlevel-Voraussetzung für Skillstufe 2 ist noch offen. |
-| description_eng | Permanent passive creature skill. The learned skill level determines the number of simultaneously controlled creatures: one at level 1, two at level 2. All other classes can learn up to level 1; only the Adventurer and its advancement can learn up to level 2 and control two creatures simultaneously. First unlock at character level 5; the character-level requirement for skill rank 2 remains pending. |
-| dmgType (Altformat) | passive |
-| maxSkillLv | 2 |
-| maxUpgradeLv | 10 |
-| nr | 135 |
-| skillName_de | Kontrolle |
-| skillpoints | 1 |
-| learningLimits.defaultMaxLevel | 1 |
-| learningLimits.classOverrides.Abenteuer | 2 |
-| learningLimits.classOverrides.Adventure | 2 |
-| learningLimits.classOverrides.Adventurer | 2 |
-| learningLimits.classOverrides.Scout | 2 |
-| learningLimits.status | defined |
-| levelProgression.version | 1 |
-| levelProgression.rules | [] |
-| levelProgression.extensionNeedsDefinition[0] | companionControlSettings.maximumControlledCreaturesByLevel |
-| learningRequirements.minimumCharacterLevel | 5 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-| companionControlSettings.maximumControlledCreaturesByLevel[0] | 1 |
-| companionControlSettings.maximumControlledCreaturesByLevel[1] | 2 |
-
-### 136: Beschwören
-
-Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Summon |
-| category | creature |
-| cd | 5 |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualiost |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Beschwört deine Kreatur nach einer Cast Time von 1 Sekunde. Kostet 5 Mana und hat 5 Sekunden Cooldown. Es gibt keine anschließende Effektdauer. |
-| description_eng | Summons your companion after a 1 second cast time. Costs 5 Mana and has a 5 second cooldown. There is no subsequent effect duration. |
-| dmgType (Altformat) | spell |
-| maxSkillLv | 1 |
-| maxUpgradeLv | 10 |
-| nr | 136 |
-| skillName_de | Beschwören |
-| skillpoints | 1 |
-| castTimeSeconds | 1 |
-| mana (Aktivierungskosten, kein Bonus) | 5 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | fixed |
-| resourceCosts[0].scaling.base | 5 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | resourceCosts |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | scaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0 |
-| levelProgression.rules[0].rule.rule.kind | constant |
-| levelProgression.rules[0].rule.rule.value | 5 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 6 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | skill |
-
-### 137: Zurückrufen
-
-Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Recall |
-| category | creature |
-| cd | 5 |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Ruft deine Kreatur sofort zurück. Kostet 5 Mana und hat 5 Sekunden Cooldown. Keine Cast Time oder anschließende Effektdauer. |
-| description_eng | Recalls your companion instantly. Costs 5 Mana and has a 5 second cooldown. No cast time or subsequent effect duration. |
-| dmgType (Altformat) | spell |
-| maxSkillLv | 1 |
-| maxUpgradeLv | 10 |
-| nr | 137 |
-| skillName_de | Zurückrufen |
-| skillpoints | 1 |
-| castTimeSeconds | 0 |
-| mana (Aktivierungskosten, kein Bonus) | 5 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | fixed |
-| resourceCosts[0].scaling.base | 5 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | resourceCosts |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | scaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0 |
-| levelProgression.rules[0].rule.rule.kind | constant |
-| levelProgression.rules[0].rule.rule.value | 5 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 6 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | skill |
-
-### 138: Zucht
-
-Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Breed |
-| category | creature |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Ermöglicht deiner Kreatur, Erfahrung zu sammeln und aufzuleveln. Sie erhält die gleichen Erfahrungspunkte wie du, zuzüglich 10 Prozent je gelerntem Skilllevel. Das entspricht 110 Prozent auf Level 1, 120 Prozent auf Level 2 und 130 Prozent auf Level 3. Permanent passiv ohne Kosten oder Cooldown. Normale Klassen können Level 1 lernen, der Abenteurer Level 3; die zweite Spezialklasse ist noch festzulegen. |
-| description_eng | Allows your companion to gain experience and level up. It receives the same experience as you, plus 10 percent per learned skill level: 110 percent at level 1, 120 percent at level 2 and 130 percent at level 3. Permanently passive with no costs or cooldown. Standard classes can learn level 1, the Adventurer level 3; the second specialist class is still to be defined. |
-| dmgType (Altformat) | passive |
-| maxSkillLv | 3 |
-| maxUpgradeLv | 10 |
-| nr | 138 |
-| skillName_de | Zucht |
-| skillpoints | 1 |
-| effects[0].key | breedExperience |
-| effects[0].type | experienceBonus |
-| effects[0].target | companion |
-| effects[0].experienceSource | playerExperience |
-| effects[0].value | 0,1 |
-| effects[0].unit | fraction |
-| effects[0].durationSeconds | 0 |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 0,1 |
-| effects[0].valueScaling.perLevel | 0,1 |
-| effects[0].progressionStatus | defined |
-| effectsVersion | 1 |
-| learningLimits.defaultMaxLevel | 1 |
-| learningLimits.classOverrides.Abenteuer | 3 |
-| learningLimits.status | secondSpecialistPending |
-| resourceCosts | [] |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | effects |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | valueScaling |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 0,1 |
-| levelProgression.rules[0].rule.perLevel | 0,1 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 7 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-
-### 139: Ausdauertraining
-
-Permanentes Ausdauertraining mit 20 Stufen für alle Klassen. Je gelerntem Skilllevel +1 Vitalität und +1 Willenskraft, auf Stufe 20 jeweils +20. Keine direkten Boni auf physische oder magische Verteidigung; die regulären Attributumrechnungen bleiben wirksam. Keine Aktivierungskosten, Castzeit oder Cooldown.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Endurance Training |
-| category | passive |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Permanentes Ausdauertraining mit 20 Stufen für alle Klassen. Je gelerntem Skilllevel +1 Vitalität und +1 Willenskraft, auf Stufe 20 jeweils +20. Keine direkten Boni auf physische oder magische Verteidigung; die regulären Attributumrechnungen bleiben wirksam. Keine Aktivierungskosten, Castzeit oder Cooldown. |
-| description_eng | Permanent Endurance Training with 20 levels for all classes. Each learned level grants +1 Vitality and +1 Wisdom, reaching +20 each at level 20. No direct physical or magical defense bonuses; normal attribute conversions still apply. No activation costs, cast time or cooldown. |
-| dmgType (Altformat) | passive |
-| maxSkillLv | 20 |
-| maxUpgradeLv | 10 |
-| nr | 139 |
-| skillName_de | Ausdauertraining |
-| skillpoints | 1 |
-| vita | 1 |
-| wis | 1 |
-| resourceCosts | [] |
-| statScaling.vita.type | linear |
-| statScaling.vita.base | 1 |
-| statScaling.vita.perLevel | 1 |
-| statScaling.wis.type | linear |
-| statScaling.wis.base | 1 |
-| statScaling.wis.perLevel | 1 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | statScaling |
-| levelProgression.rules[0].path[1] | vita |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 1 |
-| levelProgression.rules[0].rule.perLevel | 1 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | wis |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 1 |
-| levelProgression.rules[1].rule.perLevel | 1 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 2 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-
-### 143: Immunität
-
-Dauerhafter Attributanteil: je gelernter Stufe +0,5 Intelligenz, +0,5 Willenskraft; auf Stufe 10 insgesamt +5 Intelligenz, +5 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Je Stufe 1 % Chance, einen neu angewendeten Fluch abzuwehren, maximal 10 %. Direkte M-Abwehr: +6 auf Stufe 1, +4 je weiterer Stufe bis +42. Entfernt keine bestehenden Flüche; konkrete Flucharten noch offen.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Immunity |
-| category | passive |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Dauerhafter Attributanteil: je gelernter Stufe +0,5 Intelligenz, +0,5 Willenskraft; auf Stufe 10 insgesamt +5 Intelligenz, +5 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Je Stufe 1 % Chance, einen neu angewendeten Fluch abzuwehren, maximal 10 %. Direkte M-Abwehr: +6 auf Stufe 1, +4 je weiterer Stufe bis +42. Entfernt keine bestehenden Flüche; konkrete Flucharten noch offen. |
-| description_eng | Permanent attribute component: +0.5 Intelligence, +0.5 Wisdom per learned level; at level 10, +5 Intelligence, +5 Wisdom total. This component always applies independently of any triggered effects. Each level grants 1% chance to resist a newly applied curse, up to 10%. Direct magical defense starts at +6, adding 4 per additional level to +42. Does not remove existing curses; specific curse types remain pending. |
-| dmgType (Altformat) | passive |
-| maxSkillLv | 10 |
-| maxUpgradeLv | 10 |
-| mdef | 6 |
-| nr | 143 |
-| skillName_de | Immunität |
-| skillpoints | 1 |
-| wis | 0,5 |
-| effects[0].key | immunity-curse-resistance |
-| effects[0].type | statusResistance |
-| effects[0].target | self |
-| effects[0].resistedStatus | curse |
-| effects[0].resistanceCheck | onStatusApplication |
-| effects[0].value | 0,01 |
-| effects[0].unit | fraction |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 0,01 |
-| effects[0].valueScaling.perLevel | 0,01 |
-| effects[0].durationSeconds | 0 |
-| effectsVersion | 1 |
-| resourceCosts | [] |
-| statScaling.mdef.type | linear |
-| statScaling.mdef.base | 6 |
-| statScaling.mdef.perLevel | 4 |
-| statScaling.int.type | linear |
-| statScaling.int.base | 0,5 |
-| statScaling.int.perLevel | 0,5 |
-| statScaling.wis.type | linear |
-| statScaling.wis.base | 0,5 |
-| statScaling.wis.perLevel | 0,5 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | effects |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | valueScaling |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 0,01 |
-| levelProgression.rules[0].rule.perLevel | 0,01 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | mdef |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 6 |
-| levelProgression.rules[1].rule.perLevel | 4 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | statScaling |
-| levelProgression.rules[2].path[1] | int |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 0,5 |
-| levelProgression.rules[2].rule.perLevel | 0,5 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | statScaling |
-| levelProgression.rules[3].path[1] | wis |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 0,5 |
-| levelProgression.rules[3].rule.perLevel | 0,5 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| classificationVersion | 1 |
-| type | passive |
-| int | 0,5 |
-
-### 144: Rüstungstraining
-
-Permanentes Rüstungstraining mit zehn Stufen für alle Klassen. Je gelernter Stufe +3 physische und +6 magische Verteidigung, maximal +30 P-Abwehr und +60 M-Abwehr. Keine Vitalitätsboni, Aktivierungskosten, Castzeit oder Cooldown.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Armor Training |
-| category | passive |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Permanentes Rüstungstraining mit zehn Stufen für alle Klassen. Je gelernter Stufe +3 physische und +6 magische Verteidigung, maximal +30 P-Abwehr und +60 M-Abwehr. Keine Vitalitätsboni, Aktivierungskosten, Castzeit oder Cooldown. |
-| description_eng | Permanent Armor Training with ten levels for all classes. Each learned level grants +3 physical and +6 magical defense, reaching +30 physical and +60 magical defense. No Vitality bonus, activation costs, cast time or cooldown. |
-| dmgType (Altformat) | passive |
-| maxSkillLv | 10 |
-| maxUpgradeLv | 10 |
-| nr | 144 |
-| pdef | 3 |
-| skillName_de | Rüstungstraining |
-| skillpoints | 1 |
-| mdef | 6 |
-| resourceCosts | [] |
-| statScaling.pdef.type | linear |
-| statScaling.pdef.base | 3 |
-| statScaling.pdef.perLevel | 3 |
-| statScaling.mdef.type | linear |
-| statScaling.mdef.base | 6 |
-| statScaling.mdef.perLevel | 6 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | statScaling |
-| levelProgression.rules[0].path[1] | pdef |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 3 |
-| levelProgression.rules[0].rule.perLevel | 3 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | mdef |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 6 |
-| levelProgression.rules[1].rule.perLevel | 6 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 2 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-
-### 197: Aurora-Segen
-
-Aurora-Segen vereint die bisherigen Angriffs-, Mentalitäts- und Verteidigungssegen. Je Stufe +2 Stärke, Vitalität, Intelligenz und Willenskraft sowie +2 direkte MP-Regeneration je Tick. Auf Stufe 10 jeweils +20 der vier Attribute und +20 MP-Regeneration je Tick. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr. Die bisherigen separaten Segen werden nicht zusätzlich gestapelt. Dauer 30 Minuten, Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Mana-Kosten: 35 + 21 je weiterer Stufe.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Aurora's Blessing |
-| category | active |
-| cd | 60 |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Aurora-Segen vereint die bisherigen Angriffs-, Mentalitäts- und Verteidigungssegen. Je Stufe +2 Stärke, Vitalität, Intelligenz und Willenskraft sowie +2 direkte MP-Regeneration je Tick. Auf Stufe 10 jeweils +20 der vier Attribute und +20 MP-Regeneration je Tick. Keine direkten Boni auf P-Angriff, M-Angriff, P-Abwehr oder M-Abwehr. Die bisherigen separaten Segen werden nicht zusätzlich gestapelt. Dauer 30 Minuten, Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Mana-Kosten: 35 + 21 je weiterer Stufe. |
-| description_eng | Combines the former Attack, Mentality and Defense blessings. Each level grants +2 Strength, Vitality, Intelligence and Wisdom and +2 direct Mana regeneration per tick. Level 10 grants +20 of each of those four attributes and +20 Mana regeneration per tick. No direct physical/magical attack or defense bonuses. Former separate blessings do not stack in addition. Duration 30 minutes, cooldown 60 seconds, cast time 0.3 seconds. Mana cost: 35 + 21 per additional level. |
-| dmgType (Altformat) | buff |
-| dur | 1.800 |
-| maxSkillLv | 10 |
-| maxUpgradeLv | 10 |
-| nr | 197 |
-| skillName_de | Aurora-Segen |
-| skillpoints | 1 |
-| str | 2 |
-| statBonusUnits.str | flat |
-| statBonusUnits.vita | flat |
-| statBonusUnits.int | flat |
-| statBonusUnits.wis | flat |
-| statBonusUnits.manaRegen | flat |
-| statScaling.str.type | linear |
-| statScaling.str.base | 2 |
-| statScaling.str.perLevel | 2 |
-| statScaling.vita.type | linear |
-| statScaling.vita.base | 2 |
-| statScaling.vita.perLevel | 2 |
-| statScaling.int.type | linear |
-| statScaling.int.base | 2 |
-| statScaling.int.perLevel | 2 |
-| statScaling.wis.type | linear |
-| statScaling.wis.base | 2 |
-| statScaling.wis.perLevel | 2 |
-| statScaling.manaRegen.type | linear |
-| statScaling.manaRegen.base | 2 |
-| statScaling.manaRegen.perLevel | 2 |
-| int | 2 |
-| manaRegen | 2 |
-| vita | 2 |
-| wis | 2 |
-| castTimeSeconds | 0,3 |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 35 |
-| resourceCosts[0].scaling.perLevel | 21 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | statScaling |
-| levelProgression.rules[0].path[1] | str |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 2 |
-| levelProgression.rules[0].rule.perLevel | 2 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | vita |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 2 |
-| levelProgression.rules[1].rule.perLevel | 2 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | statScaling |
-| levelProgression.rules[2].path[1] | int |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 2 |
-| levelProgression.rules[2].rule.perLevel | 2 |
-| levelProgression.rules[2].source | storedFormula |
-| levelProgression.rules[3].path[0] | statScaling |
-| levelProgression.rules[3].path[1] | wis |
-| levelProgression.rules[3].rule.kind | linear |
-| levelProgression.rules[3].rule.base | 2 |
-| levelProgression.rules[3].rule.perLevel | 2 |
-| levelProgression.rules[3].source | storedFormula |
-| levelProgression.rules[4].path[0] | statScaling |
-| levelProgression.rules[4].path[1] | manaRegen |
-| levelProgression.rules[4].rule.kind | linear |
-| levelProgression.rules[4].rule.base | 2 |
-| levelProgression.rules[4].rule.perLevel | 2 |
-| levelProgression.rules[4].source | storedFormula |
-| levelProgression.rules[5].path[0] | resourceCosts |
-| levelProgression.rules[5].path[1] | 0 |
-| levelProgression.rules[5].path[2] | scaling |
-| levelProgression.rules[5].rule.kind | bounded |
-| levelProgression.rules[5].rule.min | 0 |
-| levelProgression.rules[5].rule.rule.kind | linear |
-| levelProgression.rules[5].rule.rule.base | 35 |
-| levelProgression.rules[5].rule.rule.perLevel | 21 |
-| levelProgression.rules[5].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| classificationVersion | 1 |
-| target | group |
-| type | buff |
-| castTimeStatus | defined |
-
-### 201: Waffentraining
-
-Permanentes allgemeines Waffentraining mit 20 Stufen für alle Klassen. Je gelernter Stufe +1 physischer und +1 magischer Angriff, maximal jeweils +20 auf Stufe 20. Keine Angriffsgeschwindigkeit, Aktivierungskosten, Castzeit oder Cooldown.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | Weapon Training |
-| category | passive |
-| charClass[0] | Abenteuer |
-| charClass[1] | Butcher |
-| charClass[2] | Destroyer |
-| charClass[3] | Gladiator |
-| charClass[4] | Berserker |
-| charClass[5] | Knife |
-| charClass[6] | Templar |
-| charClass[7] | Herbalist |
-| charClass[8] | Witcher |
-| charClass[9] | Archer |
-| charClass[10] | Hunter |
-| charClass[11] | Druide |
-| charClass[12] | Alchemist |
-| charClass[13] | Summoner |
-| charClass[14] | Soulseeker |
-| charClass[15] | Bloodmage |
-| charClass[16] | Luminet |
-| charClass[17] | Lightmage |
-| charClass[18] | Healer |
-| charClass[19] | Priest |
-| charClass[20] | Ritualist |
-| charClass[21] | Shamane |
-| charClass[22] | High Elves |
-| charClass[23] | Villian |
-| charClass[24] | Shadowwarrior |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Permanentes allgemeines Waffentraining mit 20 Stufen für alle Klassen. Je gelernter Stufe +1 physischer und +1 magischer Angriff, maximal jeweils +20 auf Stufe 20. Keine Angriffsgeschwindigkeit, Aktivierungskosten, Castzeit oder Cooldown. |
-| description_eng | Permanent general Weapon Training with 20 levels for all classes. Each learned level grants +1 physical and +1 magical attack, reaching +20 each at level 20. No attack speed, activation costs, cast time or cooldown. |
-| dmgType (Altformat) | passive |
-| matk | 1 |
-| maxSkillLv | 20 |
-| maxUpgradeLv | 10 |
-| nr | 201 |
-| patk | 1 |
-| skillName_de | Waffentraining |
-| skillpoints | 1 |
-| statBonusUnits.patk | flat |
-| statBonusUnits.matk | flat |
-| statScaling.patk.type | linear |
-| statScaling.patk.base | 1 |
-| statScaling.patk.perLevel | 1 |
-| statScaling.matk.type | linear |
-| statScaling.matk.base | 1 |
-| statScaling.matk.perLevel | 1 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | statScaling |
-| levelProgression.rules[0].path[1] | patk |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 1 |
-| levelProgression.rules[0].rule.perLevel | 1 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | matk |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 1 |
-| levelProgression.rules[1].rule.perLevel | 1 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| learningRequirements.minimumCharacterLevel | 2 |
-| learningRequirements.status | defined |
-| learningRequirements.furtherSkillLevelsStatus | pending |
-| classificationVersion | 1 |
-| type | passive |
-
 ### 206: Lunare Inkanation
 
 Belebt einen verstorbenen Verbündeten wieder. Vier Skillstufen: Das Ziel wird mit 80/160/320/640 HP wiederbelebt; das Wiederbelebungsleben verdoppelt sich je weiterer Stufe. Das vorhandene Mana des Ziels bleibt erhalten; kein zusätzlicher Mana-Wiederherstellungsbonus. Aktivierungskosten für den Heiler: 120 Mana auf Stufe 1, +60 je weiterer Stufe, also 120/180/240/300 Mana. Castzeit 1 Sekunde, Animation ungefähr 1 Sekunde. Einmalige Wiederbelebung ohne anschließende Wirkungsdauer. Cooldown 100 Sekunden auf Stufe 1, −10 Sekunden je weiterer Stufe: 100/90/80/70 Sekunden.
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 45 |
+| skillPointCosts.rankCosts.0 | 45 |
+| skillPointCosts.rankCosts.1 | 65 |
+| skillPointCosts.rankCosts.2 | 85 |
+| skillPointCosts.rankCosts.3 | 105 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 22 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Lunar Incantation |
 | category | active |
 | cd | 100 |
@@ -2659,106 +2463,139 @@ Belebt einen verstorbenen Verbündeten wieder. Vier Skillstufen: Das Ziel wird m
 | cooldownScaling.base | 100 |
 | cooldownScaling.perLevel | -10 |
 
-### 207: Himmlische Aufopferung
+### 108: Strahlendes Aurafeld
 
-Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt.
+Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld mit 4 Metern Radius. Der Heiler erhält Selbstheilung bei Sekunde 1, 3, 5, 7, 9 und 11. Verbündete im Feld erhalten jeweils 30 Prozent des Selbstheilungswerts bei Sekunde 2, 4, 6, 8, 10 und 12; der Heiler erhält diese zusätzlichen Verbündeten-Ticks nicht. Selbstheilung je Tick 10 HP je gelerntem Skilllevel, auf Stufe 10 100 HP. Verbündetenheilung je Tick 3 HP je gelerntem Skilllevel, auf Stufe 10 30 HP je Empfänger. Über die volle Laufzeit insgesamt 60 bis 600 HP für den Heiler und 18 bis 180 HP je durchgehend anwesendem Verbündeten. Mana-Kosten 21 auf Stufe 1, +21 je weiterer Stufe, maximal 210 auf Stufe 10. Cooldown 73 Sekunden auf Stufe 1 und 46 Sekunden auf Stufe 10. Castzeit 0 Sekunden. Bewegung ist erlaubt; ein eigener Angriff oder eine andere aktive Heilung bricht das gesamte Feld und alle verbleibenden Ticks ab. Die eigenen Aura-Heilticks lösen keinen Abbruch aus. Regeln für andere Aktionen, erlittenen Schaden und Unterbrechungseffekte werden später geprüft. Kein zusätzlicher Faith-Bonus. Eine Skalierung mit Waffen- oder Charakter-M-Angriff ist noch nicht festgelegt. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
-| skillName_eng | Heavenly Sacrifice |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 23 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Radiant Aura Field |
 | category | active |
-| cd | 900 |
+| cd | 73 |
 | charClass[0] | Healer |
 | charClass[1] | Priest |
 | currentSkillLv | 0 |
 | currentUpgradeLv | 0 |
-| description_de | Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt. |
-| description_eng | Instant emergency group heal with one learnable level, for Healer/Priest only. Costs 90 percent of maximum Mana, which must be available and actually paid. Also sacrifices 10 percent of maximum health. Both resource costs must be affordable; the health price cannot kill the caster. Each other own group member within a 10-meter radius of the caster at the instant healing resolves receives the same full healing: 500 HP plus 1.5 HP per Mana point actually sacrificed for this activation. Healing is not divided among recipients; the caster is excluded. Example: 3000 maximum Mana costs 2700 Mana plus 10 percent of maximum health and heals each other group member for 4550 HP before missing-health limits. No guaranteed full heal or ongoing heal ticks. Cooldown 900 seconds (15 minutes), cast time zero; healing resolves instantly. Provisional approximately 2-second animation does not delay healing; whether it blocks other actions remains pending. Mana/healing rounding will be defined centrally later. |
+| description_de | Aktiviert sofort ein 12 Sekunden dauerndes, mit dem Heiler mitbewegtes Aurafeld mit 4 Metern Radius. Der Heiler erhält Selbstheilung bei Sekunde 1, 3, 5, 7, 9 und 11. Verbündete im Feld erhalten jeweils 30 Prozent des Selbstheilungswerts bei Sekunde 2, 4, 6, 8, 10 und 12; der Heiler erhält diese zusätzlichen Verbündeten-Ticks nicht. Selbstheilung je Tick 10 HP je gelerntem Skilllevel, auf Stufe 10 100 HP. Verbündetenheilung je Tick 3 HP je gelerntem Skilllevel, auf Stufe 10 30 HP je Empfänger. Über die volle Laufzeit insgesamt 60 bis 600 HP für den Heiler und 18 bis 180 HP je durchgehend anwesendem Verbündeten. Mana-Kosten 21 auf Stufe 1, +21 je weiterer Stufe, maximal 210 auf Stufe 10. Cooldown 73 Sekunden auf Stufe 1 und 46 Sekunden auf Stufe 10. Castzeit 0 Sekunden. Bewegung ist erlaubt; ein eigener Angriff oder eine andere aktive Heilung bricht das gesamte Feld und alle verbleibenden Ticks ab. Die eigenen Aura-Heilticks lösen keinen Abbruch aus. Regeln für andere Aktionen, erlittenen Schaden und Unterbrechungseffekte werden später geprüft. Kein zusätzlicher Faith-Bonus. Eine Skalierung mit Waffen- oder Charakter-M-Angriff ist noch nicht festgelegt. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
+| description_eng | Instantly activates a 12-second aura field with a 4-meter radius that moves with the healer. Self-healing occurs at seconds 1, 3, 5, 7, 9 and 11. Allies within the field receive 30 percent of the self-healing value at seconds 2, 4, 6, 8, 10 and 12; the caster does not receive these additional allied ticks. Self-healing per tick is 10 HP per learned skill level, reaching 100 at level 10. Allied healing per tick is 3 HP per learned skill level, reaching 30 per recipient at level 10. Full-duration totals: 60–600 HP for the healer and 18–180 per continuously present ally. Mana cost 21 at level 1, maximum 210 at level 10. Cooldown 73 seconds at level 1 and 46 seconds at level 10. Movement is allowed; an own attack or another active healing action cancels the whole field and all remaining ticks. The aura’s own healing ticks do not cancel it. Other actions, incoming damage and interruption effects remain to be reviewed. No additional Faith bonus. Weapon/character magical-attack scaling remains undefined. |
 | dmgType (Altformat) | spell |
-| maxSkillLv | 1 |
+| dur | 12 |
+| health | 10 |
+| maxSkillLv | 10 |
 | maxUpgradeLv | 10 |
-| nr | 207 |
-| skillName_de | Himmlische Aufopferung |
+| nr | 108 |
+| skillName_de | Strahlendes Aurafeld |
 | skillpoints | 1 |
-| animationDurationSeconds | 2 |
-| animationTimingStatus | provisional |
+| areaSettings.center | caster |
+| areaSettings.movesWithCaster | true |
+| areaSettings.membership | whileInside |
+| areaSettings.includeCaster | false |
+| areaSettings.radiusMeters | 4 |
 | castTimeSeconds | 0 |
+| effects[0].key | radiant-aura-self-heal |
+| effects[0].type | heal |
+| effects[0].target | self |
+| effects[0].value | 10 |
+| effects[0].unit | flat |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 10 |
+| effects[0].valueScaling.perLevel | 10 |
+| effects[0].intervalSeconds | 2 |
+| effects[0].firstTickAfterSeconds | 1 |
+| effects[0].durationSeconds | 12 |
+| effects[1].key | radiant-aura-allied-heal |
+| effects[1].type | heal |
+| effects[1].target | alliesInArea |
+| effects[1].excludesCaster | true |
+| effects[1].onlyWhileTargetInsideArea | true |
+| effects[1].value | 3 |
+| effects[1].unit | flat |
+| effects[1].valueScaling.type | linear |
+| effects[1].valueScaling.base | 3 |
+| effects[1].valueScaling.perLevel | 3 |
+| effects[1].intervalSeconds | 2 |
+| effects[1].firstTickAfterSeconds | 2 |
+| effects[1].durationSeconds | 12 |
+| effectsVersion | 1 |
 | resourceCosts[0].resource | mana |
 | resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | fraction |
-| resourceCosts[0].scaling.type | fixed |
-| resourceCosts[0].scaling.base | 0,9 |
-| resourceCosts[1].resource | health |
-| resourceCosts[1].reference | maxHealth |
-| resourceCosts[1].unit | fraction |
-| resourceCosts[1].scaling.type | fixed |
-| resourceCosts[1].scaling.base | 0,1 |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | linear |
+| resourceCosts[0].scaling.base | 21 |
+| resourceCosts[0].scaling.perLevel | 21 |
+| statScaling.health.type | linear |
+| statScaling.health.base | 10 |
+| statScaling.health.perLevel | 10 |
+| sustainedActionSettings.allowsMovement | true |
+| sustainedActionSettings.cancelsOnOwnAttack | true |
+| sustainedActionSettings.cancelsOnOtherHealingAction | true |
+| sustainedActionSettings.ignoresOwnHealingTicksForCancellation | true |
+| sustainedActionSettings.otherActionCancellationStatus | pending |
+| sustainedActionSettings.incomingDamageCancellationStatus | pending |
+| cooldownScaling.type | linear |
+| cooldownScaling.base | 73 |
+| cooldownScaling.perLevel | -3 |
+| manaPricing.category | heal |
+| manaPricing.factor | 0,35 |
+| manaPricing.basis | healingPerRecipient |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
 | levelProgression.version | 1 |
-| levelProgression.rules | [] |
+| levelProgression.rules[0].path[0] | effects |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | valueScaling |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 10 |
+| levelProgression.rules[0].rule.perLevel | 10 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | effects |
+| levelProgression.rules[1].path[1] | 1 |
+| levelProgression.rules[1].path[2] | valueScaling |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 3 |
+| levelProgression.rules[1].rule.perLevel | 3 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | resourceCosts |
+| levelProgression.rules[2].path[1] | 0 |
+| levelProgression.rules[2].path[2] | scaling |
+| levelProgression.rules[2].rule.kind | bounded |
+| levelProgression.rules[2].rule.min | 0 |
+| levelProgression.rules[2].rule.rule.kind | linear |
+| levelProgression.rules[2].rule.rule.base | 21 |
+| levelProgression.rules[2].rule.rule.perLevel | 21 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | statScaling |
+| levelProgression.rules[3].path[1] | health |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 10 |
+| levelProgression.rules[3].rule.perLevel | 10 |
+| levelProgression.rules[3].source | storedFormula |
+| levelProgression.rules[4].path[0] | cooldownScaling |
+| levelProgression.rules[4].rule.kind | bounded |
+| levelProgression.rules[4].rule.min | 0,1 |
+| levelProgression.rules[4].rule.rule.kind | linear |
+| levelProgression.rules[4].rule.rule.base | 73 |
+| levelProgression.rules[4].rule.rule.perLevel | -3 |
+| levelProgression.rules[4].source | storedFormula |
 | levelProgression.extensionNeedsDefinition | [] |
 | classificationVersion | 1 |
 | type | skill |
-| effects[0].key | heavenly-sacrifice-group-heal |
-| effects[0].type | heal |
-| effects[0].target | ownGroup |
-| effects[0].recipientGroup | ownGroup |
-| effects[0].excludesCaster | true |
-| effects[0].distribution | fullAmountToEachRecipient |
-| effects[0].value | 500 |
-| effects[0].unit | flat |
-| effects[0].healingFromSpentMana.multiplier | 1,5 |
-| effects[0].durationSeconds | 0 |
-| effects[0].radiusMeters | 10 |
-| effects[0].areaCenter | caster |
-| effectsVersion | 1 |
-
-### 208: Das ewige Wissen
-
-Dauerhafter Attributanteil: je gelernter Stufe +1,4 Intelligenz, +0,6 Willenskraft; auf Stufe 10 insgesamt +14 Intelligenz, +6 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Keine Aktivierungskosten, Castzeit oder Cooldown.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| skillName_eng | The Eternal Knowledge |
-| category | passive |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
-| charClass[2] | Luminet |
-| charClass[3] | Lightmage |
-| currentSkillLv | 0 |
-| currentUpgradeLv | 0 |
-| description_de | Dauerhafter Attributanteil: je gelernter Stufe +1,4 Intelligenz, +0,6 Willenskraft; auf Stufe 10 insgesamt +14 Intelligenz, +6 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Keine Aktivierungskosten, Castzeit oder Cooldown. |
-| description_eng | Permanent attribute component: +1.4 Intelligence, +0.6 Wisdom per learned level; at level 10, +14 Intelligence, +6 Wisdom total. This component always applies independently of any triggered effects. No activation cost, cast time or cooldown. |
-| dmgType (Altformat) | passive |
-| int | 1,4 |
-| maxSkillLv | 10 |
-| maxUpgradeLv | 10 |
-| nr | 208 |
-| skillName_de | Das ewige Wissen |
-| skillpoints | 1 |
-| wis | 0,6 |
-| resourceCosts | [] |
-| statScaling.int.type | linear |
-| statScaling.int.base | 1,4 |
-| statScaling.int.perLevel | 1,4 |
-| statScaling.wis.type | linear |
-| statScaling.wis.base | 0,6 |
-| statScaling.wis.perLevel | 0,6 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | statScaling |
-| levelProgression.rules[0].path[1] | int |
-| levelProgression.rules[0].rule.kind | linear |
-| levelProgression.rules[0].rule.base | 1,4 |
-| levelProgression.rules[0].rule.perLevel | 1,4 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | statScaling |
-| levelProgression.rules[1].path[1] | wis |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 0,6 |
-| levelProgression.rules[1].rule.perLevel | 0,6 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.extensionNeedsDefinition | [] |
-| classificationVersion | 1 |
-| type | passive |
 
 ### 217: Göttliche Nova
 
@@ -2766,6 +2603,22 @@ Im Zielgebiet um den anvisierten Gegner entsteht eine Lichtkugel. Nach 2 Sekunde
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 25 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | skillName_eng | Divine Nova |
 | category | active |
 | cd | 176 |
@@ -2880,12 +2733,307 @@ Im Zielgebiet um den anvisierten Gegner entsteht eine Lichtkugel. Nach 2 Sekunde
 | damageType | magical |
 | type | skill |
 
+### 240: Permafrost
+
+Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt aktiv, bis er manuell ausgeschaltet wird oder das Mana für den nächsten Verbrauchstick nicht reicht. Bei jedem Mana-Regenerationstick kostet er auf Stufe 1/2/3 jeweils 13/21/29 Mana; zusätzlich einmalige Aktivierungskosten 50/63/76 Mana auf Stufe 1/2/3. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit fest 0,1 Sekunden. Beim Abschalten enden die Boni und der laufende Verbrauch. Umschalt-Cooldown 0 Sekunden. Mindest-Cooldown von Eiszaubern und Einfluss auf bereits laufende Cooldowns bleiben offen. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 80 |
+| skillPointCosts.rankCosts.0 | 80 |
+| skillPointCosts.rankCosts.1 | 100 |
+| skillPointCosts.rankCosts.2 | 120 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 27 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| activationRequirements.targetHealthBelowFractionScaling.values | [] |
+| tetherSettings.worldAnchorKinds | [] |
+| collectedPointScaling.thresholds | [] |
+| collectedPointScaling.durationSecondsByTier | [] |
+| collectedPointScaling.baseDamageBonusFractionByTier | [] |
+| castTimeSeconds | 0,1 |
+| attackExecution.hitCountScaling.values | [] |
+| attackExecution.damageMultiplierScaling.values | [] |
+| attackExecution.armorIgnoreFractionByLevel | [] |
+| movement.distanceScaling.values | [] |
+| movement.hopDirections | [] |
+| durationScaling.values | [] |
+| cooldownScaling.values | [] |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | linear |
+| resourceCosts[0].scaling.base | 50 |
+| resourceCosts[0].scaling.perLevel | 13 |
+| effectsVersion | 1 |
+| effects[0].targetCreatureTypes | [] |
+| effects[0].damageSchool | ice |
+| effects[0].requiredActiveSkillNumbers | [] |
+| effects[0].disablesEffects | [] |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 2 |
+| effects[0].valueScaling.perLevel | 2 |
+| effects[0].valueScaling.values | [] |
+| effects[0].durationScaling.values | [] |
+| effects[0].type | cooldownReduction |
+| effects[0].target | self |
+| effects[0].allowedRaces | [] |
+| effects[0].value | 2 |
+| effects[0].unit | flat |
+| effects[0].appliesTo | allSkills |
+| effects[0].damageTypes | [] |
+| effects[0].durationSeconds | 0 |
+| effects[0].key | permafrost-ice-cooldown |
+| effects[1].targetCreatureTypes | [] |
+| effects[1].damageSchool | ice |
+| effects[1].requiredActiveSkillNumbers | [] |
+| effects[1].disablesEffects | [] |
+| effects[1].valueScaling.values | [] |
+| effects[1].durationScaling.values | [] |
+| effects[1].type | procChanceBonus |
+| effects[1].controlKind | freeze |
+| effects[1].target | self |
+| effects[1].allowedRaces | [] |
+| effects[1].value | 0,01 |
+| effects[1].unit | fraction |
+| effects[1].damageTypes | [] |
+| effects[1].durationSeconds | 0 |
+| effects[1].key | permafrost-freeze-chance |
+| effects[2].targetCreatureTypes | [] |
+| effects[2].requiredActiveSkillNumbers | [] |
+| effects[2].intervalSource | manaRegenerationTick |
+| effects[2].disablesEffects | [] |
+| effects[2].valueScaling.type | table |
+| effects[2].valueScaling.values[0] | 13 |
+| effects[2].valueScaling.values[1] | 21 |
+| effects[2].valueScaling.values[2] | 29 |
+| effects[2].durationScaling.values | [] |
+| effects[2].type | resourceDrain |
+| effects[2].target | self |
+| effects[2].allowedRaces | [] |
+| effects[2].value | 13 |
+| effects[2].unit | flat |
+| effects[2].resource | mana |
+| effects[2].damageTypes | [] |
+| effects[2].durationSeconds | 0 |
+| effects[2].key | permafrost-mana-drain |
+| activation | toggle |
+| toggleSettings.durationMode | whileEnabled |
+| toggleSettings.onInsufficientResource | deactivate |
+| burstUsage.usesPerBurstScaling.values | [] |
+| burstUsage.afterBurstCooldownScaling.values | [] |
+| burstUsage.belowTargetHealthFractionByLevel | [] |
+| burstUsage.usesBelowThresholdByLevel | [] |
+| triggerCondition.chancePerCheckScaling.values | [] |
+| triggerCondition.chancePerCheck | null |
+| triggerCondition.healthThresholds | [] |
+| allowedRaces | [] |
+| isClassCore | false |
+| nr | 240 |
+| skillName_eng | Permafrost |
+| skillName_de | Permafrost |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| currentSkillLv | 0 |
+| maxSkillLv | 3 |
+| currentUpgradeLv | 0 |
+| maxUpgradeLv | 10 |
+| category | active |
+| description_eng | Instant-toggle self buff with three levels and no fixed duration. Remains enabled until manually switched off or Mana is insufficient for the next drain tick. Costs 13/21/29 Mana per Mana regeneration tick at levels 1/2/3, plus upfront activation costs of 50/63/76 Mana at levels 1/2/3. Reduces ice spell cooldowns by 2/4/6 seconds while enabled. Adds one percentage point to ice-attack freeze chance at every level, raising maximum Frostburn chance from 10 to 11 percent. No separate freeze rolls or independent freeze duration. Fixed cast time 0.1 seconds. Benefits and drain end on deactivation. Toggle cooldown is zero seconds. Minimum ice-spell cooldown and handling of already running cooldowns remain pending. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 76 at level 3, before discounts. Ongoing Mana drain is calculated separately. |
+| description_de | Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt aktiv, bis er manuell ausgeschaltet wird oder das Mana für den nächsten Verbrauchstick nicht reicht. Bei jedem Mana-Regenerationstick kostet er auf Stufe 1/2/3 jeweils 13/21/29 Mana; zusätzlich einmalige Aktivierungskosten 50/63/76 Mana auf Stufe 1/2/3. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit fest 0,1 Sekunden. Beim Abschalten enden die Boni und der laufende Verbrauch. Umschalt-Cooldown 0 Sekunden. Mindest-Cooldown von Eiszaubern und Einfluss auf bereits laufende Cooldowns bleiben offen. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet. |
+| dmgType (Altformat) | selfbuff |
+| skillpoints | 1 |
+| cd | 0 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | resourceCosts |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | scaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0 |
+| levelProgression.rules[0].rule.rule.kind | linear |
+| levelProgression.rules[0].rule.rule.base | 50 |
+| levelProgression.rules[0].rule.rule.perLevel | 13 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | effects |
+| levelProgression.rules[1].path[1] | 0 |
+| levelProgression.rules[1].path[2] | valueScaling |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 2 |
+| levelProgression.rules[1].rule.perLevel | 2 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | effects |
+| levelProgression.rules[2].path[1] | 2 |
+| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 13 |
+| levelProgression.rules[2].rule.perLevel | 8 |
+| levelProgression.rules[2].source | verifiedExistingLevels |
+| levelProgression.extensionNeedsDefinition | [] |
+| castTimeStatus | defined |
+| timingModifiers.castTimeIsFixed | true |
+| timingModifiers.affectedByAttackSpeed | false |
+| timingModifiers.affectedByCastSpeed | false |
+| mana (Aktivierungskosten, kein Bonus) | 50 |
+| manaPricing.category | selfbuff |
+| manaPricing.basis | skillLevel |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
+| classificationVersion | 1 |
+| target | self |
+| type | selfBuff |
+
+### 54: Gefrierbrand
+
+Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen ab Stufe 5 insgesamt 1 Prozent und ab Stufe 10 insgesamt 2 Prozent mehr Schaden. Auf den übrigen Stufen steigt die Chance, dass ein eigener treffender Eisangriff das Ziel für 2 Sekunden einfriert: Stufe 1/2/3/4/5/6/7/8/9/10 jeweils 1,25/2,5/3,75/5/5/6,25/7,5/8,75/10/10 Prozent. Löst dieses Einfrieren aus, erleidet das Ziel bei Sekunde 1 und 2 zusätzlich Gefrierbrand-Schaden. Grundschaden je Tick steigt gleichmäßig von 11 auf 131 über zehn Stufen, ohne Charakter- oder Waffen-M-Angriff je Tick. Auf Stufe 10 zwei Ticks zu je 131, insgesamt 262 Grundschaden. Der DoT ist an das durch diesen Skill ausgelöste Einfrieren gebunden und endet mit ihm. Keine Aktivierungskosten, Castzeit oder Cooldown festgelegt. Erneute Anwendung, Bossresistenzen, Einfrieren durch andere Skills und die Wechselwirkung des Eisbonus mit dem eigenen DoT werden später geprüft.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 30 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Frostburn |
+| category | passive |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Permanenter passiver Skill ohne direkten M-Angriffsbonus. Eiszauber verursachen ab Stufe 5 insgesamt 1 Prozent und ab Stufe 10 insgesamt 2 Prozent mehr Schaden. Auf den übrigen Stufen steigt die Chance, dass ein eigener treffender Eisangriff das Ziel für 2 Sekunden einfriert: Stufe 1/2/3/4/5/6/7/8/9/10 jeweils 1,25/2,5/3,75/5/5/6,25/7,5/8,75/10/10 Prozent. Löst dieses Einfrieren aus, erleidet das Ziel bei Sekunde 1 und 2 zusätzlich Gefrierbrand-Schaden. Grundschaden je Tick steigt gleichmäßig von 11 auf 131 über zehn Stufen, ohne Charakter- oder Waffen-M-Angriff je Tick. Auf Stufe 10 zwei Ticks zu je 131, insgesamt 262 Grundschaden. Der DoT ist an das durch diesen Skill ausgelöste Einfrieren gebunden und endet mit ihm. Keine Aktivierungskosten, Castzeit oder Cooldown festgelegt. Erneute Anwendung, Bossresistenzen, Einfrieren durch andere Skills und die Wechselwirkung des Eisbonus mit dem eigenen DoT werden später geprüft. |
+| description_eng | Permanent passive with no direct magical attack bonus. Ice spells gain a total of 1 percent increased damage at level 5 and 2 percent at level 10. Other levels increase the chance for an own successful ice attack to freeze the target for 2 seconds: levels 1–10 grant 1.25/2.5/3.75/5/5/6.25/7.5/8.75/10/10 percent. When this freeze procs, Frostburn deals additional damage at seconds 1 and 2. Base damage per tick increases linearly from 11 to 131 across ten levels, without character or weapon magical attack added per tick. Level 10 totals two ticks of 131, or 262 base damage. The DoT is linked to this passive’s freeze and ends with it. No activation costs, cast time or cooldown defined. Reapplication, boss resistances, freezes from other skills and interaction of the ice bonus with its own DoT remain pending. |
+| dmgType (Altformat) | passive |
+| maxSkillLv | 10 |
+| maxUpgradeLv | 10 |
+| nr | 54 |
+| skillName_de | Gefrierbrand |
+| skillpoints | 1 |
+| effects[0].key | frostburn-ice-spell-bonus |
+| effects[0].type | damageBonus |
+| effects[0].target | self |
+| effects[0].appliesTo | allSkills |
+| effects[0].damageSchool | ice |
+| effects[0].value | 0 |
+| effects[0].unit | fraction |
+| effects[0].valueScaling.type | table |
+| effects[0].valueScaling.values[0] | 0 |
+| effects[0].valueScaling.values[1] | 0 |
+| effects[0].valueScaling.values[2] | 0 |
+| effects[0].valueScaling.values[3] | 0 |
+| effects[0].valueScaling.values[4] | 0,01 |
+| effects[0].valueScaling.values[5] | 0,01 |
+| effects[0].valueScaling.values[6] | 0,01 |
+| effects[0].valueScaling.values[7] | 0,01 |
+| effects[0].valueScaling.values[8] | 0,01 |
+| effects[0].valueScaling.values[9] | 0,02 |
+| effects[0].durationSeconds | 0 |
+| effects[1].key | frostburn-freeze |
+| effects[1].type | control |
+| effects[1].target | enemy |
+| effects[1].controlKind | freeze |
+| effects[1].applicationTrigger | ownIceAttackHit |
+| effects[1].hitChance | 0,013 |
+| effects[1].valueScaling.type | table |
+| effects[1].valueScaling.values[0] | 0,013 |
+| effects[1].valueScaling.values[1] | 0,025 |
+| effects[1].valueScaling.values[2] | 0,038 |
+| effects[1].valueScaling.values[3] | 0,05 |
+| effects[1].valueScaling.values[4] | 0,05 |
+| effects[1].valueScaling.values[5] | 0,063 |
+| effects[1].valueScaling.values[6] | 0,075 |
+| effects[1].valueScaling.values[7] | 0,088 |
+| effects[1].valueScaling.values[8] | 0,1 |
+| effects[1].valueScaling.values[9] | 0,1 |
+| effects[1].durationSeconds | 2 |
+| effects[2].key | frostburn-periodic-damage |
+| effects[2].type | periodicDamage |
+| effects[2].target | enemy |
+| effects[2].damageTypes[0] | magical |
+| effects[2].damageSchool | ice |
+| effects[2].value | 11 |
+| effects[2].unit | flat |
+| effects[2].valueScaling.type | linear |
+| effects[2].valueScaling.base | 11 |
+| effects[2].valueScaling.perLevel | 13,333 |
+| effects[2].intervalSeconds | 1 |
+| effects[2].firstTickAfterSeconds | 1 |
+| effects[2].durationSeconds | 2 |
+| effects[2].endWith | frostburn-freeze |
+| effects[2].addsCasterMagicalAttack | false |
+| effectsVersion | 1 |
+| resourceCosts | [] |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | effects |
+| levelProgression.rules[0].path[1] | 0 |
+| levelProgression.rules[0].path[2] | valueScaling |
+| levelProgression.rules[0].rule.kind | thresholds |
+| levelProgression.rules[0].rule.base | 0 |
+| levelProgression.rules[0].rule.changes[0].level | 5 |
+| levelProgression.rules[0].rule.changes[0].value | 0,01 |
+| levelProgression.rules[0].rule.changes[1].level | 10 |
+| levelProgression.rules[0].rule.changes[1].value | 0,02 |
+| levelProgression.rules[0].source | verifiedExistingLevels |
+| levelProgression.rules[1].path[0] | effects |
+| levelProgression.rules[1].path[1] | 1 |
+| levelProgression.rules[1].path[2] | valueScaling |
+| levelProgression.rules[1].rule.kind | legacyTable |
+| levelProgression.rules[1].rule.values[0] | 0,013 |
+| levelProgression.rules[1].rule.values[1] | 0,025 |
+| levelProgression.rules[1].rule.values[2] | 0,038 |
+| levelProgression.rules[1].rule.values[3] | 0,05 |
+| levelProgression.rules[1].rule.values[4] | 0,05 |
+| levelProgression.rules[1].rule.values[5] | 0,063 |
+| levelProgression.rules[1].rule.values[6] | 0,075 |
+| levelProgression.rules[1].rule.values[7] | 0,088 |
+| levelProgression.rules[1].rule.values[8] | 0,1 |
+| levelProgression.rules[1].rule.values[9] | 0,1 |
+| levelProgression.rules[1].rule.beyond | requiresDefinition |
+| levelProgression.rules[1].source | verifiedExistingLevels |
+| levelProgression.rules[2].path[0] | effects |
+| levelProgression.rules[2].path[1] | 2 |
+| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 11 |
+| levelProgression.rules[2].rule.perLevel | 13,333 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | passive |
+
 ### 239: Frostschauer
 
 Erzeugt eisigen Regen um das anvisierte Ziel in 5 Metern Radius. Jeder Tick trifft höchstens 3 Gegner. Kein zusätzlicher Initialtreffer; erster Tick nach 1,5 Sekunden, danach alle 1,5 Sekunden. Feldlaufzeit 4 Sekunden auf Stufe 1, gleichmäßig steigend bis 8 Sekunden auf Stufe 10. Magischer Skill-Grundschaden je Tick und getroffenem Gegner 32 auf Stufe 1, gleichmäßig steigend bis 271 auf Stufe 10. Auf Maximalstufe Ticks bei 1,5 / 3 / 4,5 / 6 / 7,5 Sekunden, insgesamt 1355 Skill-Grundschaden je durchgehend getroffenem Ziel. Jeder Tick addiert zum Skill-Grundschaden den aktuellen M-Angriff des Anwenders. Bewegungstempo des getroffenen Gegners sinkt um 1 Prozent auf Stufe 1, je weiterer Stufe um 1 Prozentpunkt bis 10 Prozent. Die Verlangsamung hält nach jedem Treffer 3 Sekunden; erneute Treffer frischen nur die Dauer auf. Mana-Kosten 26 auf Stufe 1, Stufenwerte 26, 47, 102, 134, 166, 264, 306, 349, 489, 542, maximal 542 auf Stufe 10. Castzeit 0,4 Sekunden. Cooldown 53 Sekunden auf Stufe 1 und 44 Sekunden auf Stufe 10. Auswahl der bis zu drei Ziele je Tick und Mitbewegung des Feldes bleiben offen. Keine Sammelpunkte. Aktuelle Mana-Gruppe: finisher (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 10 |
+| skillPointCosts.rankCosts.0 | 10 |
+| skillPointCosts.rankCosts.1 | 14 |
+| skillPointCosts.rankCosts.2 | 19 |
+| skillPointCosts.rankCosts.3 | 23 |
+| skillPointCosts.rankCosts.4 | 28 |
+| skillPointCosts.rankCosts.5 | 32 |
+| skillPointCosts.rankCosts.6 | 37 |
+| skillPointCosts.rankCosts.7 | 41 |
+| skillPointCosts.rankCosts.8 | 46 |
+| skillPointCosts.rankCosts.9 | 50 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 37 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | activationRequirements.targetHealthBelowFractionScaling.values | [] |
 | tetherSettings.worldAnchorKinds | [] |
 | collectedPointScaling.thresholds | [] |
@@ -3052,154 +3200,23 @@ Erzeugt eisigen Regen um das anvisierte Ziel in 5 Metern Radius. Jeder Tick trif
 | damageType | magical |
 | type | skill |
 
-### 240: Permafrost
-
-Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt aktiv, bis er manuell ausgeschaltet wird oder das Mana für den nächsten Verbrauchstick nicht reicht. Bei jedem Mana-Regenerationstick kostet er auf Stufe 1/2/3 jeweils 13/21/29 Mana; zusätzlich einmalige Aktivierungskosten 50/63/76 Mana auf Stufe 1/2/3. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit fest 0,1 Sekunden. Beim Abschalten enden die Boni und der laufende Verbrauch. Umschalt-Cooldown 0 Sekunden. Mindest-Cooldown von Eiszaubern und Einfluss auf bereits laufende Cooldowns bleiben offen. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
-
-| Feld | Gespeicherter Wert |
-| --- | --- |
-| activationRequirements.targetHealthBelowFractionScaling.values | [] |
-| tetherSettings.worldAnchorKinds | [] |
-| collectedPointScaling.thresholds | [] |
-| collectedPointScaling.durationSecondsByTier | [] |
-| collectedPointScaling.baseDamageBonusFractionByTier | [] |
-| castTimeSeconds | 0,1 |
-| attackExecution.hitCountScaling.values | [] |
-| attackExecution.damageMultiplierScaling.values | [] |
-| attackExecution.armorIgnoreFractionByLevel | [] |
-| movement.distanceScaling.values | [] |
-| movement.hopDirections | [] |
-| durationScaling.values | [] |
-| cooldownScaling.values | [] |
-| resourceCosts[0].resource | mana |
-| resourceCosts[0].reference | maxMana |
-| resourceCosts[0].unit | flat |
-| resourceCosts[0].scaling.type | linear |
-| resourceCosts[0].scaling.base | 50 |
-| resourceCosts[0].scaling.perLevel | 13 |
-| effectsVersion | 1 |
-| effects[0].targetCreatureTypes | [] |
-| effects[0].damageSchool | ice |
-| effects[0].requiredActiveSkillNumbers | [] |
-| effects[0].disablesEffects | [] |
-| effects[0].valueScaling.type | linear |
-| effects[0].valueScaling.base | 2 |
-| effects[0].valueScaling.perLevel | 2 |
-| effects[0].valueScaling.values | [] |
-| effects[0].durationScaling.values | [] |
-| effects[0].type | cooldownReduction |
-| effects[0].target | self |
-| effects[0].allowedRaces | [] |
-| effects[0].value | 2 |
-| effects[0].unit | flat |
-| effects[0].appliesTo | allSkills |
-| effects[0].damageTypes | [] |
-| effects[0].durationSeconds | 0 |
-| effects[0].key | permafrost-ice-cooldown |
-| effects[1].targetCreatureTypes | [] |
-| effects[1].damageSchool | ice |
-| effects[1].requiredActiveSkillNumbers | [] |
-| effects[1].disablesEffects | [] |
-| effects[1].valueScaling.values | [] |
-| effects[1].durationScaling.values | [] |
-| effects[1].type | procChanceBonus |
-| effects[1].controlKind | freeze |
-| effects[1].target | self |
-| effects[1].allowedRaces | [] |
-| effects[1].value | 0,01 |
-| effects[1].unit | fraction |
-| effects[1].damageTypes | [] |
-| effects[1].durationSeconds | 0 |
-| effects[1].key | permafrost-freeze-chance |
-| effects[2].targetCreatureTypes | [] |
-| effects[2].requiredActiveSkillNumbers | [] |
-| effects[2].intervalSource | manaRegenerationTick |
-| effects[2].disablesEffects | [] |
-| effects[2].valueScaling.type | table |
-| effects[2].valueScaling.values[0] | 13 |
-| effects[2].valueScaling.values[1] | 21 |
-| effects[2].valueScaling.values[2] | 29 |
-| effects[2].durationScaling.values | [] |
-| effects[2].type | resourceDrain |
-| effects[2].target | self |
-| effects[2].allowedRaces | [] |
-| effects[2].value | 13 |
-| effects[2].unit | flat |
-| effects[2].resource | mana |
-| effects[2].damageTypes | [] |
-| effects[2].durationSeconds | 0 |
-| effects[2].key | permafrost-mana-drain |
-| activation | toggle |
-| toggleSettings.durationMode | whileEnabled |
-| toggleSettings.onInsufficientResource | deactivate |
-| burstUsage.usesPerBurstScaling.values | [] |
-| burstUsage.afterBurstCooldownScaling.values | [] |
-| burstUsage.belowTargetHealthFractionByLevel | [] |
-| burstUsage.usesBelowThresholdByLevel | [] |
-| triggerCondition.chancePerCheckScaling.values | [] |
-| triggerCondition.chancePerCheck | null |
-| triggerCondition.healthThresholds | [] |
-| allowedRaces | [] |
-| isClassCore | false |
-| nr | 240 |
-| skillName_eng | Permafrost |
-| skillName_de | Permafrost |
-| charClass[0] | Healer |
-| charClass[1] | Priest |
-| currentSkillLv | 0 |
-| maxSkillLv | 3 |
-| currentUpgradeLv | 0 |
-| maxUpgradeLv | 10 |
-| category | active |
-| description_eng | Instant-toggle self buff with three levels and no fixed duration. Remains enabled until manually switched off or Mana is insufficient for the next drain tick. Costs 13/21/29 Mana per Mana regeneration tick at levels 1/2/3, plus upfront activation costs of 50/63/76 Mana at levels 1/2/3. Reduces ice spell cooldowns by 2/4/6 seconds while enabled. Adds one percentage point to ice-attack freeze chance at every level, raising maximum Frostburn chance from 10 to 11 percent. No separate freeze rolls or independent freeze duration. Fixed cast time 0.1 seconds. Benefits and drain end on deactivation. Toggle cooldown is zero seconds. Minimum ice-spell cooldown and handling of already running cooldowns remain pending. Fixed cast time of 0.1 seconds at every level, unaffected by attack or cast speed. Animation duration is separate. Activation cost: 50 Mana at level 1 plus 13 per additional level, reaching 76 at level 3, before discounts. Ongoing Mana drain is calculated separately. |
-| description_de | Sofort umschaltbarer Eigenbuff mit drei Stufen und ohne feste Laufzeit. Bleibt aktiv, bis er manuell ausgeschaltet wird oder das Mana für den nächsten Verbrauchstick nicht reicht. Bei jedem Mana-Regenerationstick kostet er auf Stufe 1/2/3 jeweils 13/21/29 Mana; zusätzlich einmalige Aktivierungskosten 50/63/76 Mana auf Stufe 1/2/3. Eiszauber haben bei aktivem Buff 2/4/6 Sekunden weniger Cooldown. Zusätzlich steigt die Einfrierchance von Eisangriffen auf allen drei Stufen um einen Prozentpunkt; Gefrierbrand erreicht damit auf Maximalstufe 11 statt 10 Prozent. Keine zusätzlichen Einfrierwürfe oder eigene Einfrierdauer. Castzeit fest 0,1 Sekunden. Beim Abschalten enden die Boni und der laufende Verbrauch. Umschalt-Cooldown 0 Sekunden. Mindest-Cooldown von Eiszaubern und Einfluss auf bereits laufende Cooldowns bleiben offen. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 76 auf Stufe 3, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet. |
-| dmgType (Altformat) | selfbuff |
-| skillpoints | 1 |
-| cd | 0 |
-| levelProgression.version | 1 |
-| levelProgression.rules[0].path[0] | resourceCosts |
-| levelProgression.rules[0].path[1] | 0 |
-| levelProgression.rules[0].path[2] | scaling |
-| levelProgression.rules[0].rule.kind | bounded |
-| levelProgression.rules[0].rule.min | 0 |
-| levelProgression.rules[0].rule.rule.kind | linear |
-| levelProgression.rules[0].rule.rule.base | 50 |
-| levelProgression.rules[0].rule.rule.perLevel | 13 |
-| levelProgression.rules[0].source | storedFormula |
-| levelProgression.rules[1].path[0] | effects |
-| levelProgression.rules[1].path[1] | 0 |
-| levelProgression.rules[1].path[2] | valueScaling |
-| levelProgression.rules[1].rule.kind | linear |
-| levelProgression.rules[1].rule.base | 2 |
-| levelProgression.rules[1].rule.perLevel | 2 |
-| levelProgression.rules[1].source | storedFormula |
-| levelProgression.rules[2].path[0] | effects |
-| levelProgression.rules[2].path[1] | 2 |
-| levelProgression.rules[2].path[2] | valueScaling |
-| levelProgression.rules[2].rule.kind | linear |
-| levelProgression.rules[2].rule.base | 13 |
-| levelProgression.rules[2].rule.perLevel | 8 |
-| levelProgression.rules[2].source | verifiedExistingLevels |
-| levelProgression.extensionNeedsDefinition | [] |
-| castTimeStatus | defined |
-| timingModifiers.castTimeIsFixed | true |
-| timingModifiers.affectedByAttackSpeed | false |
-| timingModifiers.affectedByCastSpeed | false |
-| mana (Aktivierungskosten, kein Bonus) | 50 |
-| manaPricing.category | selfbuff |
-| manaPricing.basis | skillLevel |
-| manaPricing.usesCharacterAttack | false |
-| manaPricing.version | 1 |
-| classificationVersion | 1 |
-| target | self |
-| type | selfBuff |
-
 ### 242: Assimilation
 
 Eigenbuff für 600 Sekunden (10 Minuten). Erhöht das maximale Mana auf Stufe 1 um 200 und je weiterer Stufe um 25, auf Stufe 5 insgesamt um 300. Zusätzlich +5 direkte MP-Regeneration je gelerntem Skilllevel, auf Stufe 5 +25 pro Mana-Regenerationstick. Dies ist ein Max-Mana-Bonus, keine sofortige Mana-Wiederherstellung. Kostet 50 Mana auf Stufe 1 und +13 je weiterer Stufe, auf Stufe 5 102. Cooldown 60 Sekunden, Castzeit fest 0,1 Sekunden. Erneute Anwendung erneuert die Laufzeit, ohne die Boni mit sich selbst zu stapeln. Regenerationstick-Intervall und Umgang mit aktuellem Mana bei Max-Mana-Änderungen werden zentral festgelegt. Feste Castzeit 0,1 Sekunden auf allen Stufen, unabhängig von Angriffs- oder Castgeschwindigkeit. Animationsdauer ist davon getrennt. Aktivierungskosten: 50 Mana auf Stufe 1, +13 je weiterer Stufe, maximal 102 auf Stufe 5, vor Rabatten. Laufender Mana-Verbrauch wird weiterhin getrennt berechnet.
 
 | Feld | Gespeicherter Wert |
 | --- | --- |
+| skillPointCosts.firstLevel | 30 |
+| skillPointCosts.rankCosts.0 | 30 |
+| skillPointCosts.rankCosts.1 | 45 |
+| skillPointCosts.rankCosts.2 | 60 |
+| skillPointCosts.rankCosts.3 | 75 |
+| skillPointCosts.rankCosts.4 | 90 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 42 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
 | soulGenerationSettings.maximumUniqueEnemiesScaling.values | [] |
 | soulStorageSettings.capacityScaling.values | [] |
 | activationRequirements.targetHealthBelowFractionScaling.values | [] |
@@ -3292,6 +3309,516 @@ Eigenbuff für 600 Sekunden (10 Minuten). Erhöht das maximale Mana auf Stufe 1 
 | target | self |
 | type | selfBuff |
 
+### 207: Himmlische Aufopferung
+
+Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 300 |
+| skillPointCosts.rankCosts.0 | 300 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 47 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Heavenly Sacrifice |
+| category | active |
+| cd | 900 |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Sofortige Notfallheilung mit einer lernbaren Stufe, ausschließlich für Heiler/Priester. Opfert 90 Prozent des maximalen Manas; dieses Mana muss zur Aktivierung vorhanden sein und wird tatsächlich bezahlt. Zusätzlich werden 10 Prozent des maximalen Lebens geopfert. Beide Ressourcenpreise müssen zur Aktivierung bezahlbar sein; der Lebenspreis darf den Anwender nicht töten. Jedes andere eigene Gruppenmitglied innerhalb von 10 Metern Radius um den Heiler zum Zeitpunkt der sofortigen Heilung erhält einzeln dieselbe Heilung: 500 HP plus 1,5 HP je tatsächlich für diese Anwendung geopfertem Manapunkt. Die Heilmenge wird nicht unter den Empfängern aufgeteilt; der Anwender selbst wird nicht geheilt. Beispiel: Bei 3000 Max-Mana werden 2700 Mana und zusätzlich 10 Prozent Max-Leben geopfert, jedes andere Gruppenmitglied erhält 4550 HP vor Begrenzung durch fehlendes Leben. Keine garantierte vollständige Heilung und keine fortlaufenden Heilticks. Cooldown 900 Sekunden (15 Minuten), Castzeit 0 Sekunden; die Heilung erfolgt sofort. Die vorläufige Animation von ungefähr 2 Sekunden verzögert die Wirkung nicht; ob sie weitere Aktionen blockiert, ist noch offen. Rundung von Mana-/Heilwerten wird später zentral festgelegt. |
+| description_eng | Instant emergency group heal with one learnable level, for Healer/Priest only. Costs 90 percent of maximum Mana, which must be available and actually paid. Also sacrifices 10 percent of maximum health. Both resource costs must be affordable; the health price cannot kill the caster. Each other own group member within a 10-meter radius of the caster at the instant healing resolves receives the same full healing: 500 HP plus 1.5 HP per Mana point actually sacrificed for this activation. Healing is not divided among recipients; the caster is excluded. Example: 3000 maximum Mana costs 2700 Mana plus 10 percent of maximum health and heals each other group member for 4550 HP before missing-health limits. No guaranteed full heal or ongoing heal ticks. Cooldown 900 seconds (15 minutes), cast time zero; healing resolves instantly. Provisional approximately 2-second animation does not delay healing; whether it blocks other actions remains pending. Mana/healing rounding will be defined centrally later. |
+| dmgType (Altformat) | spell |
+| maxSkillLv | 1 |
+| maxUpgradeLv | 10 |
+| nr | 207 |
+| skillName_de | Himmlische Aufopferung |
+| skillpoints | 1 |
+| animationDurationSeconds | 2 |
+| animationTimingStatus | provisional |
+| castTimeSeconds | 0 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | fraction |
+| resourceCosts[0].scaling.type | fixed |
+| resourceCosts[0].scaling.base | 0,9 |
+| resourceCosts[1].resource | health |
+| resourceCosts[1].reference | maxHealth |
+| resourceCosts[1].unit | fraction |
+| resourceCosts[1].scaling.type | fixed |
+| resourceCosts[1].scaling.base | 0,1 |
+| levelProgression.version | 1 |
+| levelProgression.rules | [] |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | skill |
+| effects[0].key | heavenly-sacrifice-group-heal |
+| effects[0].type | heal |
+| effects[0].target | ownGroup |
+| effects[0].recipientGroup | ownGroup |
+| effects[0].excludesCaster | true |
+| effects[0].distribution | fullAmountToEachRecipient |
+| effects[0].value | 500 |
+| effects[0].unit | flat |
+| effects[0].healingFromSpentMana.multiplier | 1,5 |
+| effects[0].durationSeconds | 0 |
+| effects[0].radiusMeters | 10 |
+| effects[0].areaCenter | caster |
+| effectsVersion | 1 |
+
+### 78: Göttliche Heilung
+
+Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Metern Radius um den Heiler. Nach der Castzeit erfolgt die erste Heilung mit dem vollen Skill-Heilwert; 1 Sekunde später folgt eine zweite Heilung mit 50 Prozent dieses Werts. Grundheilwert 162 HP auf Stufe 1, +97 je weiterer Stufe, auf Stufe 10 1035 HP. Je Gruppenmitglied insgesamt 243 HP auf Stufe 1 beziehungsweise 1552,5 HP auf Stufe 10 vor Begrenzung durch fehlende HP. Mana-Kosten 85 auf Stufe 1, +51 je weiterer Stufe, maximal 544 auf Stufe 10. Cooldown gleichmäßig von 64 auf 58 Sekunden über zehn Stufen. Castzeit 0,2 Sekunden. Gesamter visueller Ablauf ungefähr 2 Sekunden; genau zwei Heilungen, kein fortlaufender Heil-Tick. Ob Empfänger beim ersten Heal festgehalten oder beim zweiten erneut im Radius geprüft werden, ist noch offen. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 13 |
+| skillPointCosts.rankCosts.0 | 13 |
+| skillPointCosts.rankCosts.1 | 19 |
+| skillPointCosts.rankCosts.2 | 25 |
+| skillPointCosts.rankCosts.3 | 31 |
+| skillPointCosts.rankCosts.4 | 37 |
+| skillPointCosts.rankCosts.5 | 43 |
+| skillPointCosts.rankCosts.6 | 49 |
+| skillPointCosts.rankCosts.7 | 55 |
+| skillPointCosts.rankCosts.8 | 61 |
+| skillPointCosts.rankCosts.9 | 67 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 55 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Divine Healing |
+| category | active |
+| cd | 64 |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Heilt die gesamte eigene Gruppe einschließlich des Heilers innerhalb von 12 Metern Radius um den Heiler. Nach der Castzeit erfolgt die erste Heilung mit dem vollen Skill-Heilwert; 1 Sekunde später folgt eine zweite Heilung mit 50 Prozent dieses Werts. Grundheilwert 162 HP auf Stufe 1, +97 je weiterer Stufe, auf Stufe 10 1035 HP. Je Gruppenmitglied insgesamt 243 HP auf Stufe 1 beziehungsweise 1552,5 HP auf Stufe 10 vor Begrenzung durch fehlende HP. Mana-Kosten 85 auf Stufe 1, +51 je weiterer Stufe, maximal 544 auf Stufe 10. Cooldown gleichmäßig von 64 auf 58 Sekunden über zehn Stufen. Castzeit 0,2 Sekunden. Gesamter visueller Ablauf ungefähr 2 Sekunden; genau zwei Heilungen, kein fortlaufender Heil-Tick. Ob Empfänger beim ersten Heal festgehalten oder beim zweiten erneut im Radius geprüft werden, ist noch offen. Aktuelle Mana-Gruppe: heal (35 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
+| description_eng | Heals the entire own group including the healer within a 12-meter radius of the healer. The first heal applies full skill healing after casting; 1 second later a second heal applies 50 percent of that value. Base healing 162 HP plus 97 per additional level, reaching 1035 at level 10. Total per group member 243 HP at level 1 or 1552.5 at level 10 before missing-health limits. Mana cost 85 at level 1, maximum 544 at level 10. Cooldown decreases linearly from 64 to 58 seconds across ten levels. Cast time 0.2 seconds. Approximate total visual sequence 2 seconds; exactly two heals, no ongoing healing ticks. Whether recipients are fixed at the first heal or checked again within the radius for the second remains pending. |
+| dmgType (Altformat) | spell |
+| health | 162 |
+| maxSkillLv | 10 |
+| maxUpgradeLv | 10 |
+| nr | 78 |
+| skillName_de | Göttliche Heilung |
+| skillpoints | 1 |
+| animationDurationSeconds | 2 |
+| animationTimingStatus | provisional |
+| areaSettings.center | caster |
+| areaSettings.includeCaster | true |
+| areaSettings.radiusMeters | 12 |
+| castTimeSeconds | 0,2 |
+| cooldownScaling.type | linear |
+| cooldownScaling.base | 64 |
+| cooldownScaling.perLevel | -0,667 |
+| dur | 2 |
+| effects[0].key | mass-healing-full |
+| effects[0].type | heal |
+| effects[0].target | alliesInArea |
+| effects[0].recipientGroup | ownGroup |
+| effects[0].distribution | fullAmountToEachRecipient |
+| effects[0].value | 162 |
+| effects[0].unit | flat |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 162 |
+| effects[0].valueScaling.perLevel | 97 |
+| effects[0].applicationDelaySeconds | 0 |
+| effects[0].durationSeconds | 0 |
+| effects[1].key | mass-healing-followup |
+| effects[1].type | heal |
+| effects[1].target | alliesInArea |
+| effects[1].recipientGroup | ownGroup |
+| effects[1].distribution | fullAmountToEachRecipient |
+| effects[1].value | 81 |
+| effects[1].unit | flat |
+| effects[1].valueScaling.type | linear |
+| effects[1].valueScaling.base | 81 |
+| effects[1].valueScaling.perLevel | 48,5 |
+| effects[1].applicationDelaySeconds | 1 |
+| effects[1].durationSeconds | 0 |
+| effectsVersion | 1 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | linear |
+| resourceCosts[0].scaling.base | 85 |
+| resourceCosts[0].scaling.perLevel | 51 |
+| statScaling.health.type | linear |
+| statScaling.health.base | 162 |
+| statScaling.health.perLevel | 97 |
+| manaPricing.category | heal |
+| manaPricing.factor | 0,35 |
+| manaPricing.basis | healingPerRecipient |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | cooldownScaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0,1 |
+| levelProgression.rules[0].rule.rule.kind | linear |
+| levelProgression.rules[0].rule.rule.base | 64 |
+| levelProgression.rules[0].rule.rule.perLevel | -0,667 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | effects |
+| levelProgression.rules[1].path[1] | 0 |
+| levelProgression.rules[1].path[2] | valueScaling |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 162 |
+| levelProgression.rules[1].rule.perLevel | 97 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | effects |
+| levelProgression.rules[2].path[1] | 1 |
+| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 81 |
+| levelProgression.rules[2].rule.perLevel | 48,5 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | resourceCosts |
+| levelProgression.rules[3].path[1] | 0 |
+| levelProgression.rules[3].path[2] | scaling |
+| levelProgression.rules[3].rule.kind | bounded |
+| levelProgression.rules[3].rule.min | 0 |
+| levelProgression.rules[3].rule.rule.kind | linear |
+| levelProgression.rules[3].rule.rule.base | 85 |
+| levelProgression.rules[3].rule.rule.perLevel | 51 |
+| levelProgression.rules[3].source | storedFormula |
+| levelProgression.rules[4].path[0] | statScaling |
+| levelProgression.rules[4].path[1] | health |
+| levelProgression.rules[4].rule.kind | linear |
+| levelProgression.rules[4].rule.base | 162 |
+| levelProgression.rules[4].rule.perLevel | 97 |
+| levelProgression.rules[4].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | skill |
+
+### 208: Das ewige Wissen
+
+Dauerhafter Attributanteil: je gelernter Stufe +1,4 Intelligenz, +0,6 Willenskraft; auf Stufe 10 insgesamt +14 Intelligenz, +6 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Keine Aktivierungskosten, Castzeit oder Cooldown.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 13 |
+| skillPointCosts.rankCosts.0 | 13 |
+| skillPointCosts.rankCosts.1 | 19 |
+| skillPointCosts.rankCosts.2 | 25 |
+| skillPointCosts.rankCosts.3 | 31 |
+| skillPointCosts.rankCosts.4 | 37 |
+| skillPointCosts.rankCosts.5 | 43 |
+| skillPointCosts.rankCosts.6 | 49 |
+| skillPointCosts.rankCosts.7 | 55 |
+| skillPointCosts.rankCosts.8 | 61 |
+| skillPointCosts.rankCosts.9 | 67 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 60 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | The Eternal Knowledge |
+| category | passive |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| charClass[2] | Luminet |
+| charClass[3] | Lightmage |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Dauerhafter Attributanteil: je gelernter Stufe +1,4 Intelligenz, +0,6 Willenskraft; auf Stufe 10 insgesamt +14 Intelligenz, +6 Willenskraft. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Keine Aktivierungskosten, Castzeit oder Cooldown. |
+| description_eng | Permanent attribute component: +1.4 Intelligence, +0.6 Wisdom per learned level; at level 10, +14 Intelligence, +6 Wisdom total. This component always applies independently of any triggered effects. No activation cost, cast time or cooldown. |
+| dmgType (Altformat) | passive |
+| int | 1,4 |
+| maxSkillLv | 10 |
+| maxUpgradeLv | 10 |
+| nr | 208 |
+| skillName_de | Das ewige Wissen |
+| skillpoints | 1 |
+| wis | 0,6 |
+| resourceCosts | [] |
+| statScaling.int.type | linear |
+| statScaling.int.base | 1,4 |
+| statScaling.int.perLevel | 1,4 |
+| statScaling.wis.type | linear |
+| statScaling.wis.base | 0,6 |
+| statScaling.wis.perLevel | 0,6 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | statScaling |
+| levelProgression.rules[0].path[1] | int |
+| levelProgression.rules[0].rule.kind | linear |
+| levelProgression.rules[0].rule.base | 1,4 |
+| levelProgression.rules[0].rule.perLevel | 1,4 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | statScaling |
+| levelProgression.rules[1].path[1] | wis |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 0,6 |
+| levelProgression.rules[1].rule.perLevel | 0,6 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | passive |
+
+### 58: Kuss der Aurora
+
+Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. Sechs Skillstufen. Grundheilung 550 HP auf Stufe 1 und +430 je weiterer Stufe: 550, 980, 1410, 1840, 2270, 2700 HP. Auf Stufe 5 zusätzlich 3 Prozent des Maximal-Lebens desselben Ziels, auf Stufe 6 stattdessen insgesamt 5 Prozent. Dieser prozentuale Anteil wird zur Grundheilung derselben Anwendung addiert, nicht als separater Cast ausgeführt. Mana 283 auf Stufe 1 und +185 je weiterer Stufe, auf Stufe 5 1023 und auf Stufe 6 1208. Cooldown 80 Sekunden und je weiterer Stufe 2 Sekunden weniger, auf Stufe 5 72 und auf Stufe 6 70 Sekunden. Castzeit 0,6 Sekunden. Einmalige Heilung nach der Castzeit, keine anschließende Wirkungsdauer oder Heilticks.
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 27 |
+| skillPointCosts.rankCosts.0 | 27 |
+| skillPointCosts.rankCosts.1 | 43 |
+| skillPointCosts.rankCosts.2 | 59 |
+| skillPointCosts.rankCosts.3 | 75 |
+| skillPointCosts.rankCosts.4 | 90 |
+| skillPointCosts.rankCosts.5 | 106 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 60 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Aurora's Kiss |
+| category | active |
+| cd | 80 |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Nutzt die Macht Auroras, um ein einzelnes verbündetes Ziel einmalig zu heilen. Sechs Skillstufen. Grundheilung 550 HP auf Stufe 1 und +430 je weiterer Stufe: 550, 980, 1410, 1840, 2270, 2700 HP. Auf Stufe 5 zusätzlich 3 Prozent des Maximal-Lebens desselben Ziels, auf Stufe 6 stattdessen insgesamt 5 Prozent. Dieser prozentuale Anteil wird zur Grundheilung derselben Anwendung addiert, nicht als separater Cast ausgeführt. Mana 283 auf Stufe 1 und +185 je weiterer Stufe, auf Stufe 5 1023 und auf Stufe 6 1208. Cooldown 80 Sekunden und je weiterer Stufe 2 Sekunden weniger, auf Stufe 5 72 und auf Stufe 6 70 Sekunden. Castzeit 0,6 Sekunden. Einmalige Heilung nach der Castzeit, keine anschließende Wirkungsdauer oder Heilticks. |
+| description_eng | Uses the power of Aurora to heal one allied target once. Six skill levels. Base healing 550 HP plus 430 per additional level: 550, 980, 1410, 1840, 2270, 2700 HP. Level 5 adds 3 percent of that same target’s maximum health; level 6 instead adds a total of 5 percent. The percentage component is added to base healing within the same activation, not cast separately. Mana 283 plus 185 per additional level: 1023 at level 5, 1208 at level 6. Cooldown 80 seconds minus 2 per additional level: 72 at level 5, 70 at level 6. Cast time 0.6 seconds. One healing application after casting, no lingering duration or healing ticks. |
+| dmgType (Altformat) | spell |
+| health | 550 |
+| maxSkillLv | 6 |
+| maxUpgradeLv | 10 |
+| nr | 58 |
+| skillName_de | Kuss der Aurora |
+| skillpoints | 1 |
+| castTimeSeconds | 0,6 |
+| cooldownScaling.type | linear |
+| cooldownScaling.base | 80 |
+| cooldownScaling.perLevel | -2 |
+| durationScaling.type | table |
+| durationScaling.values[0] | 0 |
+| durationScaling.values[1] | 0 |
+| durationScaling.values[2] | 0 |
+| durationScaling.values[3] | 0 |
+| durationScaling.values[4] | 0 |
+| durationScaling.values[5] | 0 |
+| effects[0].key | divine-healing-single-target |
+| effects[0].type | heal |
+| effects[0].target | allyOrCompanion |
+| effects[0].value | 550 |
+| effects[0].unit | flat |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 550 |
+| effects[0].valueScaling.perLevel | 430 |
+| effects[0].durationSeconds | 0 |
+| effects[1].key | divine-healing-target-max-health |
+| effects[1].type | heal |
+| effects[1].target | allyOrCompanion |
+| effects[1].value | 0 |
+| effects[1].unit | fraction |
+| effects[1].reference | targetMaxHealth |
+| effects[1].valueScaling.type | table |
+| effects[1].valueScaling.values[0] | 0 |
+| effects[1].valueScaling.values[1] | 0 |
+| effects[1].valueScaling.values[2] | 0 |
+| effects[1].valueScaling.values[3] | 0 |
+| effects[1].valueScaling.values[4] | 0,03 |
+| effects[1].valueScaling.values[5] | 0,05 |
+| effects[1].durationSeconds | 0 |
+| effectsVersion | 1 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | linear |
+| resourceCosts[0].scaling.base | 283 |
+| resourceCosts[0].scaling.perLevel | 185 |
+| statScaling.health.type | linear |
+| statScaling.health.base | 550 |
+| statScaling.health.perLevel | 430 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | cooldownScaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0,1 |
+| levelProgression.rules[0].rule.rule.kind | linear |
+| levelProgression.rules[0].rule.rule.base | 80 |
+| levelProgression.rules[0].rule.rule.perLevel | -2 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | durationScaling |
+| levelProgression.rules[1].rule.kind | constant |
+| levelProgression.rules[1].rule.value | 0 |
+| levelProgression.rules[1].source | verifiedExistingLevels |
+| levelProgression.rules[2].path[0] | effects |
+| levelProgression.rules[2].path[1] | 0 |
+| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 550 |
+| levelProgression.rules[2].rule.perLevel | 430 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | effects |
+| levelProgression.rules[3].path[1] | 1 |
+| levelProgression.rules[3].path[2] | valueScaling |
+| levelProgression.rules[3].rule.kind | thresholds |
+| levelProgression.rules[3].rule.base | 0 |
+| levelProgression.rules[3].rule.changes[0].level | 5 |
+| levelProgression.rules[3].rule.changes[0].value | 0,03 |
+| levelProgression.rules[3].rule.changes[1].level | 6 |
+| levelProgression.rules[3].rule.changes[1].value | 0,05 |
+| levelProgression.rules[3].source | verifiedExistingLevels |
+| levelProgression.rules[4].path[0] | resourceCosts |
+| levelProgression.rules[4].path[1] | 0 |
+| levelProgression.rules[4].path[2] | scaling |
+| levelProgression.rules[4].rule.kind | bounded |
+| levelProgression.rules[4].rule.min | 0 |
+| levelProgression.rules[4].rule.rule.kind | linear |
+| levelProgression.rules[4].rule.rule.base | 283 |
+| levelProgression.rules[4].rule.rule.perLevel | 185 |
+| levelProgression.rules[4].source | storedFormula |
+| levelProgression.rules[5].path[0] | statScaling |
+| levelProgression.rules[5].path[1] | health |
+| levelProgression.rules[5].rule.kind | linear |
+| levelProgression.rules[5].rule.base | 550 |
+| levelProgression.rules[5].rule.perLevel | 430 |
+| levelProgression.rules[5].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| type | skill |
+
+### 101: Schwerter des Lichtes
+
+Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Intelligenz auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 68 auf Stufe 1, +21 je weiterer Stufe, maximal 257 auf Stufe 10. Cooldown 72 Sekunden auf Stufe 1 und 63 Sekunden auf Stufe 10. Castzeit 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).
+
+| Feld | Gespeicherter Wert |
+| --- | --- |
+| skillPointCosts.firstLevel | 13 |
+| skillPointCosts.rankCosts.0 | 13 |
+| skillPointCosts.rankCosts.1 | 19 |
+| skillPointCosts.rankCosts.2 | 25 |
+| skillPointCosts.rankCosts.3 | 31 |
+| skillPointCosts.rankCosts.4 | 37 |
+| skillPointCosts.rankCosts.5 | 43 |
+| skillPointCosts.rankCosts.6 | 49 |
+| skillPointCosts.rankCosts.7 | 55 |
+| skillPointCosts.rankCosts.8 | 61 |
+| skillPointCosts.rankCosts.9 | 67 |
+| skillPointCosts.furtherLevelsStatus | defined |
+| skillPointCosts.version | 2 |
+| learningRequirements.minimumCharacterLevel | 65 |
+| learningRequirements.status | defined |
+| learningRequirements.furtherSkillLevelsStatus | pending |
+| skillName_eng | Swords of Light |
+| category | active |
+| cd | 72 |
+| charClass[0] | Healer |
+| charClass[1] | Priest |
+| charClass[2] | Luminet |
+| charClass[3] | Lightmage |
+| currentSkillLv | 0 |
+| currentUpgradeLv | 0 |
+| description_de | Ein riesiges Schwert aus Licht spießt den anvisierten Gegner auf und verursacht einmalig magischen Skill-Grundschaden von 273 auf Stufe 1, plus 84 je weiterer Stufe, bis zu 1029 auf Stufe 10. Das Schwert und ein Feld mit 15 Metern Durchmesser beziehungsweise 7,5 Metern Radius bleiben danach bestehen. Die Feldlaufzeit steigt gleichmäßig von 10 auf 30 Sekunden. Du und deine Verbündeten erhalten im Feld 13 Intelligenz auf Stufe 1, plus 0,5 je weiterer Stufe, bis zu 17,5 auf Stufe 10. Der Bonus gilt nur während des Aufenthalts im Feld. Keine wiederholten Schadensticks festgelegt. Mana-Kosten 68 auf Stufe 1, +21 je weiterer Stufe, maximal 257 auf Stufe 10. Cooldown 72 Sekunden auf Stufe 1 und 63 Sekunden auf Stufe 10. Castzeit 0,7 Sekunden. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis). |
+| description_eng | A giant sword of light impales the selected enemy, dealing magical skill base damage once, starting at 273 and increasing by 84 per additional level to 1029 at level 10. The sword and a field with a 15 metre diameter and 7.5 metre radius remain afterward. Field duration increases evenly from 10 to 30 seconds. You and your allies inside gain 13 Intelligence at level 1 plus 0.5 per additional level to 17.5 at level 10. The bonus applies only while inside the field. No recurring damage ticks are defined. Mana cost 68 at level 1, maximum 257 at level 10. Cooldown 72 seconds at level 1 and 63 seconds at level 10. Cast time is 0.7 seconds. |
+| dmgType (Altformat) | spell |
+| dur | 10 |
+| matk | 273 |
+| maxSkillLv | 10 |
+| maxUpgradeLv | 10 |
+| nr | 101 |
+| skillName_de | Schwerter des Lichtes |
+| skillpoints | 1 |
+| attackArea.shape | circle |
+| attackArea.center | skillCenter |
+| attackArea.radiusMeters | 7,5 |
+| attackArea.geometryStatus | defined |
+| attackArea.timingStatus | defined |
+| attackExecution.targetMode | singleEnemy |
+| attackExecution.hitCount | 1 |
+| attackExecution.damageValueScope | perHit |
+| attackExecution.timingStatus | pending |
+| castTimeSeconds | 0,7 |
+| cooldownScaling.type | linear |
+| cooldownScaling.base | 72 |
+| cooldownScaling.perLevel | -1 |
+| durationScaling.type | linear |
+| durationScaling.base | 10 |
+| durationScaling.perLevel | 2,222 |
+| effects[0].key | swords-light-intelligence-field |
+| effects[0].type | statModifier |
+| effects[0].target | alliesInArea |
+| effects[0].stat | int |
+| effects[0].value | 13 |
+| effects[0].unit | flat |
+| effects[0].valueScaling.type | linear |
+| effects[0].valueScaling.base | 13 |
+| effects[0].valueScaling.perLevel | 0,5 |
+| effects[0].durationSeconds | 10 |
+| effects[0].durationScaling.type | linear |
+| effects[0].durationScaling.base | 10 |
+| effects[0].durationScaling.perLevel | 2,222 |
+| effects[0].onlyWhileTargetInsideArea | true |
+| mana (Aktivierungskosten, kein Bonus) | 68 |
+| resourceCosts[0].resource | mana |
+| resourceCosts[0].reference | maxMana |
+| resourceCosts[0].unit | flat |
+| resourceCosts[0].scaling.type | linear |
+| resourceCosts[0].scaling.base | 68 |
+| resourceCosts[0].scaling.perLevel | 21 |
+| statScaling.matk.type | linear |
+| statScaling.matk.base | 273 |
+| statScaling.matk.perLevel | 84 |
+| manaPricing.category | normal |
+| manaPricing.factor | 0,25 |
+| manaPricing.basis | skillBaseDamagePerTarget |
+| manaPricing.usesCharacterAttack | false |
+| manaPricing.version | 1 |
+| levelProgression.version | 1 |
+| levelProgression.rules[0].path[0] | cooldownScaling |
+| levelProgression.rules[0].rule.kind | bounded |
+| levelProgression.rules[0].rule.min | 0,1 |
+| levelProgression.rules[0].rule.rule.kind | linear |
+| levelProgression.rules[0].rule.rule.base | 72 |
+| levelProgression.rules[0].rule.rule.perLevel | -1 |
+| levelProgression.rules[0].source | storedFormula |
+| levelProgression.rules[1].path[0] | durationScaling |
+| levelProgression.rules[1].rule.kind | linear |
+| levelProgression.rules[1].rule.base | 10 |
+| levelProgression.rules[1].rule.perLevel | 2,222 |
+| levelProgression.rules[1].source | storedFormula |
+| levelProgression.rules[2].path[0] | effects |
+| levelProgression.rules[2].path[1] | 0 |
+| levelProgression.rules[2].path[2] | valueScaling |
+| levelProgression.rules[2].rule.kind | linear |
+| levelProgression.rules[2].rule.base | 13 |
+| levelProgression.rules[2].rule.perLevel | 0,5 |
+| levelProgression.rules[2].source | storedFormula |
+| levelProgression.rules[3].path[0] | effects |
+| levelProgression.rules[3].path[1] | 0 |
+| levelProgression.rules[3].path[2] | durationScaling |
+| levelProgression.rules[3].rule.kind | linear |
+| levelProgression.rules[3].rule.base | 10 |
+| levelProgression.rules[3].rule.perLevel | 2,222 |
+| levelProgression.rules[3].source | storedFormula |
+| levelProgression.rules[4].path[0] | resourceCosts |
+| levelProgression.rules[4].path[1] | 0 |
+| levelProgression.rules[4].path[2] | scaling |
+| levelProgression.rules[4].rule.kind | outputCost |
+| levelProgression.rules[4].rule.factor | 0,25 |
+| levelProgression.rules[4].rule.basis | damage |
+| levelProgression.rules[4].rule.minimum | 0 |
+| levelProgression.rules[4].source | verifiedManaPricing |
+| levelProgression.rules[5].path[0] | statScaling |
+| levelProgression.rules[5].path[1] | matk |
+| levelProgression.rules[5].rule.kind | linear |
+| levelProgression.rules[5].rule.base | 273 |
+| levelProgression.rules[5].rule.perLevel | 84 |
+| levelProgression.rules[5].source | storedFormula |
+| levelProgression.extensionNeedsDefinition | [] |
+| classificationVersion | 1 |
+| damageType | magical |
+| type | skill |
+
 ## Gemeinsame Blöcke
 
 [Kreaturenskills](../shared-creature-skills.md) und [Trainingsskills](../shared-training-skills.md) werden einmal gemeinsam geprüft. Die normale Lerngrenze für Bindung und Zucht ist bereits 1. Die zweite Kreaturen-Spezialklasse und ihre Lerngrenzen sind noch zu bestätigen.
@@ -3299,3 +3826,44 @@ Eigenbuff für 600 Sekunden (10 Minuten). Erhöht das maximale Mana auf Stufe 1 
 ## Reihenfolge
 
 Diese Klassenrunde beginnt jetzt. Bereits bestätigte gemeinsame Skills sind mit aktuellen Werten enthalten. Klassenspezifische Wirkungen, Kosten und Skalierungen werden noch geprüft.
+
+<!-- full-skill-point-costs:start -->
+## Skillpunktkosten je Stufe
+
+Aktuell vollständig gespeichert: **8227 SP** für alle 32 Skills einschließlich günstiger Taming-Sonderkosten. Weitere Charakterlevel für einzelne Ausbaustufen sind davon getrennt und noch zu verteilen. Alte Pauschalsummen in historischen Prüfabschnitten gelten nicht für diese Preise.
+
+| Nr | Skill | SP je Skillstufe | Gesamt-SP |
+| ---: | --- | --- | ---: |
+| 1 | Erleuchtung | 1 / 2 / 4 / 5 / 7 / 8 / 10 / 11 / 13 / 14 / 16 / 17 / 19 / 20 / 22 / 23 / 25 / 26 / 28 / 29 | 300 |
+| 29 | Eislanze | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 30 | Eisranken | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 36 | Energieschlag | 12 / 36 / 60 / 84 / 108 | 300 |
+| 44 | Erweiterung des Geistes | 12 / 16 / 20 / 24 / 28 / 32 / 36 / 40 / 44 / 48 | 300 |
+| 54 | Gefrierbrand | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 58 | Kuss der Aurora | 27 / 43 / 59 / 75 / 90 / 106 | 400 |
+| 60 | Hoffnungsschimmer | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 64 | Heilung | 5 / 6 / 7 / 8 / 9 / 10 / 11 / 12 / 13 / 14 / 16 / 17 / 18 / 19 / 20 / 21 / 22 / 23 / 24 / 25 | 300 |
+| 68 | Kristallisierte Wasserspähre | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 78 | Göttliche Heilung | 13 / 19 / 25 / 31 / 37 / 43 / 49 / 55 / 61 / 67 | 400 |
+| 101 | Schwerter des Lichtes | 13 / 19 / 25 / 31 / 37 / 43 / 49 / 55 / 61 / 67 | 400 |
+| 108 | Strahlendes Aurafeld | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 124 | Wiederherstellung | 5 / 6 / 7 / 8 / 9 / 10 / 11 / 12 / 13 / 14 / 16 / 17 / 18 / 19 / 20 / 21 / 22 / 23 / 24 / 25 | 300 |
+| 133 | Tamen | 10 | 10 |
+| 134 | Bindung | 6 | 6 |
+| 135 | Kontrolle | 4 | 4 |
+| 136 | Beschwören | 1 | 1 |
+| 137 | Zurückrufen | 1 | 1 |
+| 138 | Zucht | 5 | 5 |
+| 139 | Ausdauertraining | 1 / 2 / 4 / 5 / 7 / 8 / 10 / 11 / 13 / 14 / 16 / 17 / 19 / 20 / 22 / 23 / 25 / 26 / 28 / 29 | 300 |
+| 143 | Immunität | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 144 | Rüstungstraining | 1 / 7 / 14 / 20 / 27 / 33 / 40 / 46 / 53 / 59 | 300 |
+| 197 | Aurora-Segen | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 201 | Waffentraining | 1 / 2 / 4 / 5 / 7 / 8 / 10 / 11 / 13 / 14 / 16 / 17 / 19 / 20 / 22 / 23 / 25 / 26 / 28 / 29 | 300 |
+| 206 | Lunare Inkanation | 45 / 65 / 85 / 105 | 300 |
+| 207 | Himmlische Aufopferung | 300 | 300 |
+| 208 | Das ewige Wissen | 13 / 19 / 25 / 31 / 37 / 43 / 49 / 55 / 61 / 67 | 400 |
+| 217 | Göttliche Nova | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 239 | Frostschauer | 10 / 14 / 19 / 23 / 28 / 32 / 37 / 41 / 46 / 50 | 300 |
+| 240 | Permafrost | 80 / 100 / 120 | 300 |
+| 242 | Assimilation | 30 / 45 / 60 / 75 / 90 | 300 |
+<!-- full-skill-point-costs:end -->

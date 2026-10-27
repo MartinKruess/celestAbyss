@@ -1,0 +1,1340 @@
+[
+  {
+    "_id": "6acc1c7e4826525c70d04b82",
+    "skillName_eng": "Electric Field",
+    "__v": 0,
+    "category": "active",
+    "cd": 47,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt ein kreisförmiges elektrisches Feld auf dem Boden. Vorläufig werden die genannten 4 Meter als Durchmesser gerechnet, also 2 Meter Radius; Flächengröße noch bestätigen. Beim Auslösen verursacht es einmalig 137 magischen Skill-Grundschaden, plus 45 je weiterer Stufe, bis zu 542 auf Stufe 10. Solange Gegner im Feld stehen, erleiden sie alle 2 Sekunden zusätzlich 10 magischen Schaden, plus 3 je weiterer Stufe, bis zu 37 auf Stufe 10, zuzüglich des aktuellen Charakter-M-Angriffs bei jedem Tick. Gegner im Feld sind um 5 Prozent verlangsamt; beim Verlassen endet dieser Flächeneffekt. Feldlaufzeit vorläufig 4 Sekunden auf Stufe 1 bis 4, 6 Sekunden auf Stufe 5 bis 9 und 8 Sekunden auf Stufe 10. Erster Tick nach 2 Sekunden, somit 2, 3 oder 4 Ticks bei vollständigem Aufenthalt. Mana-Kosten 63 auf Stufe 1, Stufenwerte 63, 83, 104, 124, 153, 175, 196, 218, 240, 276, maximal 276 auf Stufe 10. Cooldown 47 Sekunden, minus 1 je weiterer Stufe, bis zu 38 Sekunden. Castzeit 0,3 Sekunden. Die genauen Stufenübergänge der Laufzeit sind als vorläufige Staffelung festgehalten. Aktuelle Mana-Gruppe: finisher (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates a circular electrical field on the ground. The stated 4 metres are provisionally treated as diameter, giving a 2 metre radius; area size needs confirmation. Initial magical skill base damage is 137, increasing by 45 per additional level to 542 at level 10. Enemies inside take 10 additional magical damage every 2 seconds, increasing by 3 per additional level to 37 at level 10, adding current caster magical attack to each tick. Enemies inside are slowed by 5 percent; this area effect ends when they leave. Provisional field duration is 4 seconds at levels 1 through 4, 6 seconds at levels 5 through 9 and 8 seconds at level 10. First tick is after 2 seconds, giving 2, 3 or 4 ticks with full exposure. Mana cost 63 at level 1, maximum 276 at level 10. Cooldown starts at 47 seconds and decreases by 1 per additional level to 38 seconds. Cast time is 0.3 seconds. Duration milestone levels remain provisional.",
+    "dmgType": "spell",
+    "dur": 4,
+    "matk": 137,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 31,
+    "skillName_de": "Elektrisches Feld",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 2,
+      "geometryStatus": "pending",
+      "target": "enemiesInArea",
+      "timingStatus": "pending"
+    },
+    "castTimeSeconds": 0.3,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 47,
+      "perLevel": -1
+    },
+    "durationScaling": {
+      "type": "table",
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        6,
+        6,
+        8
+      ]
+    },
+    "effects": [
+      {
+        "key": "electric-field-periodic",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "value": 10,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 10,
+          "perLevel": 3
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            8
+          ]
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 2,
+        "addsCasterMagicalAttack": true,
+        "onlyWhileTargetInsideArea": true,
+        "damageTypes": [
+          "magical"
+        ],
+        "periodicDamageKind": "areaAttack"
+      },
+      {
+        "key": "electric-field-slow",
+        "type": "statModifier",
+        "target": "enemiesInArea",
+        "stat": "movementSpeed",
+        "value": -0.05,
+        "unit": "fraction",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "table",
+          "values": [
+            4,
+            4,
+            4,
+            4,
+            6,
+            6,
+            6,
+            6,
+            6,
+            8
+          ]
+        },
+        "onlyWhileTargetInsideArea": true
+      }
+    ],
+    "mana": 63,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            63,
+            83,
+            104,
+            124,
+            153,
+            175,
+            196,
+            218,
+            240,
+            276
+          ],
+          "base": 63
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 137,
+        "perLevel": 45
+      }
+    },
+    "manaPricing": {
+      "category": "finisher",
+      "factor": 0.4,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 47,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 4,
+            "changes": [
+              {
+                "level": 5,
+                "value": 6
+              },
+              {
+                "level": 10,
+                "value": 8
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 10,
+            "perLevel": 3
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 4,
+            "changes": [
+              {
+                "level": 5,
+                "value": 6
+              },
+              {
+                "level": 10,
+                "value": 8
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "thresholds",
+            "base": 4,
+            "changes": [
+              {
+                "level": 5,
+                "value": 6
+              },
+              {
+                "level": 10,
+                "value": 8
+              }
+            ]
+          },
+          "source": "verifiedExistingLevels"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.4,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 137,
+            "perLevel": 45
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill",
+    "skillPointCosts": {
+      "firstLevel": 10,
+      "rankCosts": [
+        10,
+        14,
+        19,
+        23,
+        28,
+        32,
+        37,
+        41,
+        46,
+        50
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9c",
+    "skillName_eng": "Targeted Lightning",
+    "__v": 0,
+    "category": "active",
+    "cd": 42,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Schleudert einen gezielten Blitzschlag auf einen Gegner und verursacht einmalig magischen Grundschaden von 293 auf Stufe 1, plus 105 je weiterer Stufe, bis zu 1238 auf Stufe 10. Mana-Kosten 73 auf Stufe 1, +26 je weiterer Stufe, maximal 307 auf Stufe 10. Der Cooldown sinkt von 42 um 1 Sekunde je weiterer Stufe auf 33 Sekunden. Castzeit 0,2 Sekunden. Die Animation dauert vorläufig 1 Sekunde; keine anhaltende Wirkungsdauer oder Schaden über Zeit. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Hurls a targeted lightning strike at an enemy, dealing magical base damage once, starting at 293 at level 1 and increasing by 105 per additional level to 1238 at level 10. Mana cost 73 at level 1, maximum 307 at level 10. Cooldown decreases from 42 by 1 second per additional level to 33 seconds. Cast time is 0.2 seconds. Provisional animation duration is 1 second, with no lasting effect or damage over time.",
+    "dmgType": "spell",
+    "matk": 293,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 57,
+    "skillName_de": "Gezielter Blitz",
+    "skillpoints": 1,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 42,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 73,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 73,
+          "perLevel": 26
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 293,
+        "perLevel": 105
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 42,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 73,
+              "perLevel": 26
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 293,
+            "perLevel": 105
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill",
+    "skillPointCosts": {
+      "firstLevel": 10,
+      "rankCosts": [
+        10,
+        14,
+        19,
+        23,
+        28,
+        32,
+        37,
+        41,
+        46,
+        50
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04b9b",
+    "skillName_eng": "Charged Mist",
+    "__v": 0,
+    "category": "active",
+    "cd": 62,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erzeugt geladenen Nebel. Magischer Skill-Grundschaden 177 auf Stufe 1, plus 63 je weiterer Stufe, bis zu 1059 auf Stufe 15. Der Schaden erfolgt einmalig beim Erzeugen des Nebels, nicht wiederholt. Gegner im Nebel verlieren direkt 10 Genauigkeit auf Stufe 1, gleichmäßig steigend auf 25 Genauigkeit auf Stufe 15. Elektroangriffe gegen Ziele im Nebel verursachen 2 Prozent mehr Schaden. Beide Flächeneffekte gelten nur, solange der Gegner im Nebel steht. Die Nebeldauer startet bei 4 Sekunden und steigt um 1 Sekunde je weiterer Stufe auf 18 Sekunden. Mana-Kosten 44 auf Stufe 1, +16 je weiterer Stufe, maximal 268 auf Stufe 15. Castzeit 0,4 Sekunden. Cooldown vorläufig gleichmäßig von 62 auf 37 Sekunden. Der kreisförmige Nebel hat 8 Meter Durchmesser beziehungsweise 4 Meter Radius. Die genaue Platzierung ist noch offen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Creates charged mist. Magical skill base damage starts at 177 and increases by 63 per additional level to 1059 at level 15. Damage is applied once when the mist is created, not repeatedly. Enemies inside lose 10 direct Accuracy at level 1, increasing evenly to a reduction of 25 at level 15. Electric attacks against targets inside deal 2 percent more damage. Both area effects apply only while the target stays in the mist. Mist duration starts at 4 seconds and increases by 1 second per additional level to 18 seconds. Mana cost 44 at level 1, maximum 268 at level 15. Cast time is 0.4 seconds. Provisional cooldown decreases evenly from 62 to 37 seconds. The circular mist has an 8 metre diameter, or 4 metre radius. Exact placement remains pending.",
+    "dmgType": "spell",
+    "matk": 177,
+    "maxSkillLv": 15,
+    "maxUpgradeLv": 10,
+    "nr": 56,
+    "skillName_de": "Geladener Nebel",
+    "skillpoints": 1,
+    "castTimeSeconds": 0.4,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 62,
+      "perLevel": -1.7857142857142858
+    },
+    "dur": 4,
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 1
+    },
+    "effects": [
+      {
+        "key": "charged-mist-accuracy",
+        "type": "statModifier",
+        "target": "enemiesInArea",
+        "stat": "accuracy",
+        "value": -10,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": -10,
+          "perLevel": -1.0714285714285714
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1
+        },
+        "onlyWhileTargetInsideArea": true
+      },
+      {
+        "key": "charged-mist-electric-bonus",
+        "type": "damageTakenBonus",
+        "target": "enemiesInArea",
+        "damageSchool": "electric",
+        "value": 0.02,
+        "unit": "fraction",
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1
+        },
+        "onlyWhileTargetInsideArea": true
+      }
+    ],
+    "mana": 44,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 44,
+          "perLevel": 16
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 177,
+        "perLevel": 63
+      }
+    },
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 4,
+      "target": "enemiesInArea",
+      "geometryStatus": "defined",
+      "timingStatus": "pending"
+    },
+    "attackExecution": {
+      "damageValueScope": "perHit",
+      "timingStatus": "defined",
+      "hitCount": 1
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 62,
+              "perLevel": -1.7857142857142858
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": -10,
+            "perLevel": -1.0714285714285714
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "1",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 44,
+              "perLevel": 16
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 177,
+            "perLevel": 63
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill",
+    "skillPointCosts": {
+      "firstLevel": 6,
+      "rankCosts": [
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32,
+        34
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04ba8",
+    "skillName_eng": "Ball Lightning",
+    "__v": 0,
+    "category": "active",
+    "cd": 52,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Verursacht einmalig magischen Skill-Grundschaden von 398 auf Stufe 1, plus 143 je weiterer Stufe, bis zu 1685 auf Stufe 10. Mana-Kosten 100 auf Stufe 1, +36 je weiterer Stufe, maximal 424 auf Stufe 10. Cooldown beginnt unverändert bei 52 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 43 Sekunden. Castzeit 0,2 Sekunden, vorläufige Animation 1 Sekunde. Keine anhaltende Wirkungsdauer. Die alte Beschreibung nennt zusätzlich 15 Prozent mehr Schaden elektrischer Fähigkeiten nach einem vorherigen Wasserspruch auf dem Ziel; genaue Zuordnung und Ausgestaltung dieses alten Zusatzeffekts sind noch zu prüfen. Aktuelle Mana-Gruppe: normal (25 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "Deals magical skill base damage once, starting at 398 and increasing by 143 per additional level to 1685 at level 10. Mana cost 100 at level 1, maximum 424 at level 10. Cooldown remains 52 seconds initially and decreases by 1 per additional level to 43 seconds. Cast time is 0.2 seconds; provisional animation is 1 second. No lingering duration. The old description also mentions 15 percent additional electric skill damage after a previous water spell hit on the target; exact ownership and behavior of this legacy effect remain to be reviewed.",
+    "dmgType": "spell",
+    "matk": 398,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 69,
+    "skillName_de": "Kugelblitz",
+    "skillpoints": 1,
+    "animationDurationSeconds": 1,
+    "animationTimingStatus": "provisional",
+    "castTimeSeconds": 0.2,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 52,
+      "perLevel": -1
+    },
+    "hasLingeringDamage": false,
+    "mana": 100,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 100,
+          "perLevel": 36
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 398,
+        "perLevel": 143
+      }
+    },
+    "manaPricing": {
+      "category": "normal",
+      "factor": 0.25,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 52,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 100,
+              "perLevel": 36
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 398,
+            "perLevel": 143
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill",
+    "skillPointCosts": {
+      "firstLevel": 10,
+      "rankCosts": [
+        10,
+        14,
+        19,
+        23,
+        28,
+        32,
+        37,
+        41,
+        46,
+        50
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04baa",
+    "skillName_eng": "Life Essence",
+    "__v": 0,
+    "category": "active",
+    "cd": 55,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Erwecke die Lebensessenz eines Verbündeten oder Begleiters und heile ihn auf Skilllevel 1 um 3 % seines maximalen Lebens. Pro weiterem Skilllevel steigt die Heilung um 0,5 Prozentpunkte, bis zu 5 % auf Skilllevel 5. Der Cooldown beträgt anfangs 55 Sekunden und sinkt pro weiterem Skilllevel um 3 Sekunden, bis auf 43 Sekunden. Mana-Kosten 113 auf Stufe 1, plus 55 je weiterer Stufe, bis zu 333 auf Stufe 5. Castzeit 0,3 Sekunden. Dies ist eine Heilung, keine Wiederbelebung.",
+    "description_eng": "Awaken the life essence of an ally or companion, healing them for 3% of their maximum health at skill level 1. Each additional skill level increases the healing by 0.5 percentage points, reaching 5% at skill level 5. The cooldown starts at 55 seconds and decreases by 3 seconds per additional skill level, reaching 43 seconds. Mana cost starts at 113 at level 1 and increases by 55 per additional level to 333 at level 5. Cast time is 0.3 seconds. This is healing, not resurrection.",
+    "dmgType": "spell",
+    "maxSkillLv": 5,
+    "maxUpgradeLv": 10,
+    "nr": 71,
+    "skillName_de": "Lebensessenz",
+    "skillpoints": 1,
+    "activation": "manual",
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 55,
+      "perLevel": -3
+    },
+    "effects": [
+      {
+        "valueScaling": {
+          "type": "linear",
+          "base": 0.03,
+          "perLevel": 0.005
+        },
+        "type": "heal",
+        "target": "allyOrCompanion",
+        "value": 0.03,
+        "unit": "fraction",
+        "reference": "targetMaxHealth",
+        "damageTypes": [],
+        "durationSeconds": 0,
+        "key": "life-essence-heal"
+      }
+    ],
+    "effectsVersion": 1,
+    "castTimeSeconds": 0.3,
+    "mana": 113,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 113,
+          "perLevel": 55
+        }
+      }
+    ],
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 55,
+              "perLevel": -3
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 0.03,
+            "perLevel": 0.005
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 113,
+              "perLevel": 55
+            }
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "skill",
+    "skillPointCosts": {
+      "firstLevel": 30,
+      "rankCosts": [
+        30,
+        45,
+        60,
+        75,
+        90
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bb4",
+    "skillName_eng": "Force of Nature",
+    "__v": 0,
+    "category": "passive",
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Dauerhafter Attributanteil: je gelernter Stufe +5 Intelligenz, +5 Vitalität; auf Stufe 1 insgesamt +5 Intelligenz, +5 Vitalität. Dieser Anteil gilt ständig, unabhängig von zusätzlichen Auslöseeffekten. Eine einzige lernbare Stufe. Keine Aktivierungskosten, Castzeit oder Cooldown.",
+    "description_eng": "Permanent attribute component: +5 Intelligence, +5 Vitality per learned level; at level 1, +5 Intelligence, +5 Vitality total. This component always applies independently of any triggered effects. One learnable level. No activation cost, cast time or cooldown.",
+    "dmgType": "passive",
+    "int": 5,
+    "maxSkillLv": 1,
+    "maxUpgradeLv": 10,
+    "nr": 81,
+    "skillName_de": "Naturgewalt",
+    "skillpoints": 1,
+    "vita": 5,
+    "resourceCosts": [],
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      },
+      "vita": {
+        "type": "linear",
+        "base": 5,
+        "perLevel": 5
+      }
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "vita"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 5,
+            "perLevel": 5
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "type": "passive",
+    "skillPointCosts": {
+      "firstLevel": 300,
+      "rankCosts": [
+        300
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04bd3",
+    "skillName_eng": "Raging Storm",
+    "__v": 0,
+    "category": "active",
+    "cd": 100,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Eine Gewitterwolke bedeckt einen kreisförmigen Bereich mit 16 Metern Durchmesser beziehungsweise 8 Metern Radius. Kein Initialtreffer: Der erste volle Blitzschaden erfolgt 1 Sekunde nach Entstehung der Wolke, weitere Blitzwellen folgen alle 2 Sekunden. Pro Welle werden höchstens 5 Gegner innerhalb der Fläche getroffen, sowohl im PvE als auch im PvP. Bei jeder Welle werden die Ziele neu zufällig gewählt; sind weniger Gegner vorhanden, können entsprechend weniger getroffen werden. Die Wolke besteht auf Stufe 1 für 4 Sekunden und je weiterer Stufe 1,5 Sekunden länger, bis zu 17,5 Sekunden auf Stufe 10. Das ergibt 2 bis 9 Blitzwellen. Auf Stufe 10 trifft die letzte Welle bei Sekunde 17; die Wolke läuft danach noch 0,5 Sekunden aus. Jeder Blitz verursacht 266 magischen Skill-Grundschaden auf Stufe 1, plus 31 je weiterer Stufe, bis zu 545 auf Stufe 10, zusätzlich zum Charakter-M-Angriff. Mana-Kosten 213 auf Stufe 1, Stufenwerte 213, 356, 525, 574, 780, 1010, 1266, 1352, 1645, 1962, maximal 1962 auf Stufe 10. Castzeit 0,8 Sekunden. Cooldown beginnt bei 100 Sekunden und sinkt um 1 Sekunde je weiterer Stufe auf 91 Sekunden auf Stufe 10. Der Sturm hat keinen eigenen garantierten Stun; die passive Lähmung unterliegt ihren eigenen Regeln. Platzierung und genaue Proc-Prüfung periodischer Blitzwellen bleiben zu klären. Aktuelle Mana-Gruppe: finisher (40 % als Berechnungsgrundlage; Charakterangriff nicht in der Kostenbasis).",
+    "description_eng": "A thundercloud covers a circular area with a 16 metre diameter and 8 metre radius. No initial hit: the first full lightning damage occurs 1 second after the cloud appears, with subsequent waves every 2 seconds. Each wave hits at most 5 enemies in the area in both PvE and PvP. Targets are randomly selected again for each wave; fewer enemies allow fewer targets. Cloud duration starts at 4 seconds and increases by 1.5 per additional level to 17.5 seconds at level 10, producing 2 to 9 waves. At level 10 the final wave hits at second 17 and the cloud fades over the remaining 0.5 seconds. Each lightning hit deals 266 magical skill base damage at level 1 plus 31 per additional level to 545 at level 10, plus character magical attack. Mana cost 213 at level 1, maximum 1962 at level 10. Cast time is 0.8 seconds. Cooldown starts at 100 seconds and decreases by 1 second per additional level to 91 seconds at level 10. The storm itself does not guarantee a stun; passive Paralysis follows its own rules. Placement and exact proc checks for periodic lightning waves remain pending.",
+    "dmgType": "spell",
+    "matk": 266,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 112,
+    "skillName_de": "Tobender Sturm",
+    "skillpoints": 1,
+    "attackArea": {
+      "shape": "circle",
+      "center": "skillCenter",
+      "radiusMeters": 8,
+      "geometryStatus": "defined",
+      "target": "enemiesInArea",
+      "evaluation": "perHit",
+      "timingStatus": "defined",
+      "maxTargets": 5,
+      "targetSelection": "randomEachTick"
+    },
+    "castTimeSeconds": 0.8,
+    "cooldownScaling": {
+      "type": "linear",
+      "base": 100,
+      "perLevel": -1
+    },
+    "dur": 4,
+    "durationScaling": {
+      "type": "linear",
+      "base": 4,
+      "perLevel": 1.5
+    },
+    "effects": [
+      {
+        "key": "raging-storm-lightning",
+        "type": "periodicDamage",
+        "target": "enemiesInArea",
+        "damageSchool": "electric",
+        "value": 266,
+        "unit": "flat",
+        "valueScaling": {
+          "type": "linear",
+          "base": 266,
+          "perLevel": 31
+        },
+        "durationSeconds": 4,
+        "durationScaling": {
+          "type": "linear",
+          "base": 4,
+          "perLevel": 1.5
+        },
+        "intervalSeconds": 2,
+        "firstTickAfterSeconds": 1,
+        "addsCasterMagicalAttack": true,
+        "onlyWhileTargetInsideArea": true,
+        "damageTypes": [
+          "magical"
+        ],
+        "periodicDamageKind": "areaAttack"
+      }
+    ],
+    "mana": 213,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "table",
+          "values": [
+            213,
+            356,
+            525,
+            574,
+            780,
+            1010,
+            1266,
+            1352,
+            1645,
+            1962
+          ],
+          "base": 213
+        }
+      }
+    ],
+    "statScaling": {
+      "matk": {
+        "type": "linear",
+        "base": 266,
+        "perLevel": 31
+      }
+    },
+    "manaPricing": {
+      "category": "finisher",
+      "factor": 0.4,
+      "basis": "skillBaseDamagePerTarget",
+      "usesCharacterAttack": false,
+      "version": 1
+    },
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "cooldownScaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0.1,
+            "rule": {
+              "kind": "linear",
+              "base": 100,
+              "perLevel": -1
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 1.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "valueScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 266,
+            "perLevel": 31
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "effects",
+            "0",
+            "durationScaling"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 4,
+            "perLevel": 1.5
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "outputCost",
+            "factor": 0.4,
+            "basis": "damage",
+            "minimum": 0
+          },
+          "source": "verifiedManaPricing"
+        },
+        {
+          "path": [
+            "statScaling",
+            "matk"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 266,
+            "perLevel": 31
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "damageType": "magical",
+    "type": "skill",
+    "skillPointCosts": {
+      "firstLevel": 10,
+      "rankCosts": [
+        10,
+        14,
+        19,
+        23,
+        28,
+        32,
+        37,
+        41,
+        46,
+        50
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  },
+  {
+    "_id": "6acc1c7e4826525c70d04c09",
+    "skillName_eng": "Everything Flows",
+    "__v": 0,
+    "category": "active",
+    "cd": 60,
+    "charClass": [
+      "Herbalist",
+      "Witcher"
+    ],
+    "currentSkillLv": 0,
+    "currentUpgradeLv": 0,
+    "description_de": "Gruppenbuff: je Stufe +1 Intelligenz und +1 Willenskraft, auf Stufe 10 jeweils +10. Kein direkter M-Angriffsbonus. Dauer 30 Minuten, Cooldown 60 Sekunden, Castzeit 0,3 Sekunden. Mana-Kosten: 53 + 28 je weiterer Stufe.",
+    "description_eng": "Group buff: +1 Intelligence and +1 Wisdom per level, reaching +10 each at level 10. No direct magical attack bonus. Duration 30 minutes, cooldown 60 seconds, cast time 0.3 seconds. Mana cost: 53 + 28 per additional level.",
+    "dmgType": "buff",
+    "dur": 1800,
+    "int": 1,
+    "maxSkillLv": 10,
+    "maxUpgradeLv": 10,
+    "nr": 166,
+    "skillName_de": "Alles im Fluss",
+    "skillpoints": 1,
+    "mana": 53,
+    "resourceCosts": [
+      {
+        "resource": "mana",
+        "reference": "maxMana",
+        "unit": "flat",
+        "scaling": {
+          "type": "linear",
+          "base": 53,
+          "perLevel": 28
+        }
+      }
+    ],
+    "statBonusTargets": {
+      "int": "selfAndAllies",
+      "wis": "selfAndAllies"
+    },
+    "statScaling": {
+      "int": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      },
+      "wis": {
+        "type": "linear",
+        "base": 1,
+        "perLevel": 1
+      }
+    },
+    "castTimeSeconds": 0.3,
+    "levelProgression": {
+      "version": 1,
+      "rules": [
+        {
+          "path": [
+            "resourceCosts",
+            "0",
+            "scaling"
+          ],
+          "rule": {
+            "kind": "bounded",
+            "min": 0,
+            "rule": {
+              "kind": "linear",
+              "base": 53,
+              "perLevel": 28
+            }
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "int"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        },
+        {
+          "path": [
+            "statScaling",
+            "wis"
+          ],
+          "rule": {
+            "kind": "linear",
+            "base": 1,
+            "perLevel": 1
+          },
+          "source": "storedFormula"
+        }
+      ],
+      "extensionNeedsDefinition": []
+    },
+    "classificationVersion": 1,
+    "target": "group",
+    "type": "buff",
+    "castTimeStatus": "defined",
+    "statBonusUnits": {
+      "int": "flat",
+      "wis": "flat"
+    },
+    "wis": 1,
+    "skillPointCosts": {
+      "firstLevel": 10,
+      "rankCosts": [
+        10,
+        14,
+        19,
+        23,
+        28,
+        32,
+        37,
+        41,
+        46,
+        50
+      ],
+      "classRankCosts": {},
+      "furtherLevelsStatus": "defined",
+      "version": 2
+    }
+  }
+]

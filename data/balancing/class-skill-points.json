@@ -3,7 +3,7 @@
   "levelOneCostsPoint": true,
   "sharedSkillsCountedOnce": true,
   "unresolvedSourceSkillsExcluded": true,
-  "status": "Current stored learning caps; unreviewed classes provisional",
+  "status": "Complete current rank prices defined; legacy sp fields retained as historical",
   "classes": [
     {
       "key": "adventurer",
@@ -204,7 +204,7 @@
         },
         {
           "nr": 148,
-          "name": "Scharfer Instinkte",
+          "name": "Scharfer Instinkt",
           "definitionMaxLevel": 10,
           "learnableMaxLevel": 10,
           "sp": 10,
@@ -301,7 +301,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 896,
+      "currentTotalCost": 8083
     },
     {
       "key": "butcher",
@@ -599,7 +601,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 650,
+      "currentTotalCost": 8227
     },
     {
       "key": "druid",
@@ -897,7 +901,9 @@
           "passive": true,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 619,
+      "currentTotalCost": 8227
     },
     {
       "key": "gladiator",
@@ -1195,7 +1201,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 721,
+      "currentTotalCost": 8227
     },
     {
       "key": "knight",
@@ -1493,7 +1501,9 @@
           "passive": true,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 1110,
+      "currentTotalCost": 8227
     },
     {
       "key": "shaman",
@@ -1791,7 +1801,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 577,
+      "currentTotalCost": 8227
     },
     {
       "key": "healer",
@@ -2089,7 +2101,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 686,
+      "currentTotalCost": 8227
     },
     {
       "key": "herbalist",
@@ -2387,7 +2401,9 @@
           "passive": false,
           "source": "classOverride"
         }
-      ]
+      ],
+      "definedFirstStageCost": 647,
+      "currentTotalCost": 7827
     },
     {
       "key": "hunter",
@@ -2685,7 +2701,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 1121,
+      "currentTotalCost": 8227
     },
     {
       "key": "summoner",
@@ -2886,7 +2904,7 @@
         },
         {
           "nr": 148,
-          "name": "Scharfer Instinkte",
+          "name": "Scharfer Instinkt",
           "definitionMaxLevel": 10,
           "learnableMaxLevel": 10,
           "sp": 10,
@@ -2983,7 +3001,9 @@
           "passive": false,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 764,
+      "currentTotalCost": 8227
     },
     {
       "key": "ritualist",
@@ -3281,7 +3301,9 @@
           "passive": true,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 1134,
+      "currentTotalCost": 8327
     },
     {
       "key": "luminet",
@@ -3579,7 +3601,9 @@
           "passive": true,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 667,
+      "currentTotalCost": 8227
     },
     {
       "key": "villian",
@@ -3877,7 +3901,18 @@
           "passive": true,
           "source": "definitionMaxLevel"
         }
-      ]
+      ],
+      "definedFirstStageCost": 547,
+      "currentTotalCost": 8227
     }
+  ],
+  "currentCostRules": "data/balancing/full-skill-point-costs-decision.json",
+  "currentTotalCost": null,
+  "legacyFields": [
+    "costPerLearnedLevel",
+    "classes[].sp",
+    "classes[].activeSP",
+    "classes[].passiveSP",
+    "classes[].skills[].sp"
   ]
 }

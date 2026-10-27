@@ -1,0 +1,85 @@
+{
+  "status": "preliminaryPlayerHealthEndpointsNotFinalMonsterCurve",
+  "assumptions": [
+    "Level 1 starting weapon without armor or passives.",
+    "Level 60 full R4 equipment and full permanent passives. No active own/external buffs, affixes or soulstones in this two-point probe.",
+    "This is player HP growth only, not effective survivability or DPS and not a recommendation to apply the factor to every monster stat.",
+    "Intermediate progression and level 90 are not fitted."
+  ],
+  "rows": [
+    {
+      "key": "adventurer",
+      "hp1": 172,
+      "hp60": 3292
+    },
+    {
+      "key": "butcher",
+      "hp1": 221,
+      "hp60": 3191
+    },
+    {
+      "key": "druid",
+      "hp1": 183,
+      "hp60": 2703
+    },
+    {
+      "key": "gladiator",
+      "hp1": 212,
+      "hp60": 3803
+    },
+    {
+      "key": "healer",
+      "hp1": 153,
+      "hp60": 2523
+    },
+    {
+      "key": "herbalist",
+      "hp1": 176,
+      "hp60": 2996
+    },
+    {
+      "key": "hunter",
+      "hp1": 184,
+      "hp60": 3004
+    },
+    {
+      "key": "knight",
+      "hp1": 231,
+      "hp60": 4224
+    },
+    {
+      "key": "luminet",
+      "hp1": 171,
+      "hp60": 2841
+    },
+    {
+      "key": "ritualist",
+      "hp1": 169,
+      "hp60": 2929
+    },
+    {
+      "key": "ritualist",
+      "hp1": 169,
+      "hp60": 2929
+    },
+    {
+      "key": "shaman",
+      "hp1": 192,
+      "hp60": 2802
+    },
+    {
+      "key": "summoner",
+      "hp1": 175,
+      "hp60": 2695
+    },
+    {
+      "key": "villian",
+      "hp1": 166,
+      "hp60": 2686
+    }
+  ],
+  "medianLevel1": 175.5,
+  "medianLevel60": 2929,
+  "ratio": 16.68945868945869,
+  "equivalentPerLevelFactor": 1.0488644365067468
+}

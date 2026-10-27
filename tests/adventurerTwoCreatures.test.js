@@ -12,7 +12,7 @@ test('Control permits two Adventurer creatures and only one for every other clas
  for(const alias of ['Abenteuer','Adventure','Adventurer','Scout'])assert.equal(skill.learningLimits.classOverrides[alias],2);
  for(const key of ['butcher','gladiator','knight','luminet','druid','shaman','hunter','summoner','healer','herbalist','ritualist','villian'])assert.equal(learnableSkillLevel(skill,key),1);
  assert.throws(()=>resolveSkillAtLevel(skill,3,{classKey:'adventurer'}),/exceeds/);
- assert.equal(skill.learningRequirements.minimumCharacterLevel,5);
+ assert.equal(skill.learningRequirements.minimumCharacterLevel,4);
 });
 test('Wild Bond retains all former maximum bonuses in its only learned level',()=>{
  const skill=catalog.find(s=>s.nr===246);

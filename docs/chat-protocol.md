@@ -56,7 +56,17 @@ Eine message enthält:
 }
 ```
 
-Für Wiederholungen derselben Nachricht bleibt clientMessageID gleich, requestID darf wechseln. Wiederholung mit gleichem Text liefert die bestehende Nachricht mit duplicate true und erzeugt keine neue Live-Verteilung. Wiederholung mit verändertem Text liefert MESSAGE_ID_CONFLICT. Wiederholungen zählen zum Sendelimit. Ohne Bestätigung gilt eine Nachricht nicht als angenommen; nach einem Netzwerkfehler kann die gleiche clientMessageID erneut gesendet werden.
+Für Wiederholungen derselben Nachricht bleibt clientMessageID gleich, requestID darf wechseln. Wiederholung mit gleichem Text liefert die bestehende Nachricht mit duplicate true und erzeugt keinen weiteren Nachrichtendatensatz. Eine noch offene Zustellung wird weiter versucht; eine bereits als verteilt markierte Nachricht wird nicht erneut verteilt. Wiederholung mit verändertem Text liefert MESSAGE_ID_CONFLICT. Wiederholungen zählen zum Sendelimit. Ohne Bestätigung ist die Annahme für den Client ungewiss; nach einem Netzwerkfehler kann die gleiche clientMessageID erneut gesendet werden.
+
+## Dauerhafte Zustellaufträge
+
+Seit dem 27. Oktober 2026 werden Nachricht, Sequenzzähler, gegebenenfalls Moderationszuordnung und Zustellstatus `pending` gemeinsam in einer MongoDB-Transaktion bestätigt. Scheitert die Moderationszuordnung, werden auch Nachricht und Zähleränderung zurückgerollt. `sent` bestätigt diese dauerhafte Speicherung, nicht den Empfang durch sämtliche Spieler.
+
+Der Zustellauftrag ist ein internes Feld im Nachrichtendokument. Die Veröffentlichung arbeitet offene Nachrichten in Sequenzreihenfolge ab und markiert sie anschließend als `dispatched`. Nach einem Fehler wird jede Sekunde erneut versucht; der nächste Node-Prozess findet dieselben offenen Aufträge in MongoDB. Fehler und Wiederherstellung werden ohne Chatinhalt protokolliert. Beim regulären Shutdown wird eine bereits laufende Veröffentlichung abgewartet; weiterhin offene Aufträge bleiben dauerhaft gespeichert.
+
+Eine verlorene Bestätigung des Verteilungsstatus kann eine erneute Verarbeitung auslösen. Pro bestehender Verbindung unterdrückt der Server bereits gesendete Live-Sequenzen und Nachrichten aus dem zuletzt geladenen Subscribe-Snapshot. Die bisherige Clientregel bleibt erforderlich: `sent`, Live-Ereignis und Verlauf anhand der stabilen Nachrichten-ID zusammenführen, statt jeweils eine zusätzliche Zeile anzuhängen. Eine Unreal-Chatoberfläche ist noch nicht implementiert. Bei Verbindungsabbruch erfolgt die Wiederaufnahme über den Verlauf; `dispatched` ist keine Empfangsbestätigung jedes einzelnen Clients.
+
+Die bestehende Sichtbarkeitsgrenze bleibt bestehen: Nur die neuesten 50 Nachrichten innerhalb von 24 Stunden dürfen nachgeliefert werden. Ältere offene Aufträge werden `expired`, ohne ihre Texte erneut zu verteilen. Altnachrichten ohne Zustellstatus werden nicht pauschal erneut gesendet; ein ausdrücklicher, weiterhin zulässiger Retry derselben Nachricht kann ihren früher unbekannten Zustellstatus reparieren.
 
 Nachrichten sind Text. Browserclients müssen sie als Text darstellen und dürfen sie nicht als HTML ausführen.
 
@@ -100,3 +110,5 @@ Live-Verteilung, lokale Logout-Ereignisse und Limits gelten aktuell für eine Ba
 ## Prüfung
 
 `npm test` prüft das Protokoll, die Anmeldung und echte lokale WebSocket-Verbindungen mit einem ersetzten Datenspeicher. `npm run test:db-chat` prüft den vollständigen Ablauf gegen celestabyss_dev und entfernt seine Testaccounts, Sitzungen und Nachrichten anschließend. Der Sequenzzähler wird nicht zurückgesetzt.
+
+`npm run test:db-chat-delivery` prüft die Transaktionsfehler, offenen Zustellaufträge und Wiederholungen mit echten MongoDB-Transaktionen in eigens erzeugten Test-Collections. Es prüft außerdem frische eindeutige Account-/Charakternamen-Indizes mit gleichzeitig eingehenden Schreibvorgängen. Nur diese zufällig benannten Test-Collections werden anschließend entfernt; der reguläre Chatverlauf und sein Sequenzzähler werden nicht verändert. Am 27. Oktober 2026 bestanden dieser Datenbanktest und 37 gezielte Node-Tests für Chat, Anmeldung, Charaktere und Shutdown.

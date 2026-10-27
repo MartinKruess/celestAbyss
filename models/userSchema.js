@@ -36,6 +36,7 @@ const playerSchema = mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    banReason: { type: String, default: '', maxlength: 500 },
 });
 
 export const UserDataModel = mongoose.model('players', playerSchema);

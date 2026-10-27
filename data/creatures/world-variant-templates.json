@@ -1,0 +1,846 @@
+{
+  "generatedAt": "2026-10-22T15:00:11.405Z",
+  "status": "initialWorldMonsterDraftForUnrealTesting",
+  "referenceLevel": 63,
+  "dependencies": [
+    "base-creature",
+    "world-reference-level1"
+  ],
+  "encounterGroups": [
+    {
+      "key": "gray-wolf-pack",
+      "name": "Grauwolfrudel",
+      "alwaysTogether": true,
+      "engageTogether": true,
+      "sameLevel": true,
+      "members": [
+        {
+          "variantKey": "world-gray-wolf-pack-leader",
+          "count": 1,
+          "leader": true
+        },
+        {
+          "variantKey": "world-gray-wolf",
+          "count": 2,
+          "leader": false
+        }
+      ],
+      "notes": [
+        "User rule: gray wolf pack leader is encountered only with two normal gray wolves. No monster skills yet. Actual spawner and aggro-link runtime implementation remain pending."
+      ]
+    }
+  ],
+  "templates": [
+    {
+      "key": "world-growth-draft",
+      "name_de": "World-Monster – gemeinsame erste Wachstumskurve",
+      "kind": "profile",
+      "parentKey": "world-reference-level1",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Vorläufige gemeinsame World-Kurve für Wölfe, Vögel und Golems. Keine fertigen Pet-Werte und kein Unreal-Import.",
+      "levelGrowth": {
+        "mode": "compoundPerLevel",
+        "referenceLevel": 1,
+        "maximumPreviewLevel": 100,
+        "status": "configured",
+        "statFactors": {
+          "maxHealth": 1.065,
+          "physicalAttack": 1.04,
+          "physicalDefense": 1.04,
+          "magicalDefense": 1.04
+        }
+      },
+      "statMultipliers": {
+        "magicalAttack": 0
+      },
+      "enabledStats": {
+        "strength": false,
+        "vitality": false,
+        "intelligence": false,
+        "wisdom": false,
+        "dexterity": false,
+        "agility": false,
+        "luck": false
+      },
+      "pending": [
+        "Growth rates require Unreal gameplay testing; primary attributes disabled for these direct-stat NPC profiles",
+        "Physical-only attack profile is a starting assumption, not a final elemental skill assignment",
+        "Actual base attack frequency, movement units and attack animation timings",
+        "XP reward remains inherited neutral placeholder 1; no XP balancing or payout is implemented",
+        "Captured-pet profile and level reset rules; rarity and taming eligibility"
+      ]
+    },
+    {
+      "key": "world-wolves",
+      "name_de": "Wölfe – gemeinsame Zahlenfamilie",
+      "kind": "family",
+      "parentKey": "world-growth-draft",
+      "version": 1,
+      "status": "draft",
+      "bodyTemplateKey": null,
+      "statMultipliers": {},
+      "pending": [
+        "Body group is a logical label, not a loaded Unreal asset",
+        "Adult wolf variants; exact Unreal model assets remain open"
+      ]
+    },
+    {
+      "key": "world-birds-1",
+      "name_de": "Vogelgruppe 1",
+      "kind": "family",
+      "parentKey": "world-growth-draft",
+      "version": 1,
+      "status": "draft",
+      "bodyTemplateKey": "bird-body-1",
+      "statMultipliers": {},
+      "pending": [
+        "Body group is a logical label, not a loaded Unreal asset"
+      ]
+    },
+    {
+      "key": "world-birds-2",
+      "name_de": "Vogelgruppe 2",
+      "kind": "family",
+      "parentKey": "world-growth-draft",
+      "version": 1,
+      "status": "draft",
+      "bodyTemplateKey": "bird-body-2",
+      "statMultipliers": {},
+      "pending": [
+        "Body group is a logical label, not a loaded Unreal asset"
+      ]
+    },
+    {
+      "key": "world-golems",
+      "name_de": "Golems",
+      "kind": "family",
+      "parentKey": "world-growth-draft",
+      "version": 1,
+      "status": "draft",
+      "bodyTemplateKey": null,
+      "statMultipliers": {},
+      "pending": [
+        "Body group is a logical label, not a loaded Unreal asset"
+      ]
+    },
+    {
+      "key": "world-wolves-2",
+      "name_de": "Wolfsgruppe 2 – Nachwuchs und Rudelführer",
+      "kind": "family",
+      "parentKey": "world-growth-draft",
+      "version": 1,
+      "status": "draft",
+      "bodyTemplateKey": "wolf-body-2",
+      "statMultipliers": {},
+      "pending": [
+        "Body group is a logical label, not a loaded Unreal asset"
+      ]
+    },
+    {
+      "key": "world-grim-forest-wolf",
+      "name_de": "Grimmiger Waldwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6700 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7370104595234966,
+        "physicalAttack": 0.9595441806855515,
+        "physicalDefense": 1.8310142578299173,
+        "magicalDefense": 0.8788868437583602
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-frostclaw-wolf",
+      "name_de": "Frostklauenwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7000 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7700109278603696,
+        "physicalAttack": 0.9178248684818318,
+        "physicalDefense": 2.0507359687695077,
+        "magicalDefense": 1.2084694101677453
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-shadow-wolf",
+      "name_de": "Schattenwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6400 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7040099911866237,
+        "physicalAttack": 0.9734506180867913,
+        "physicalDefense": 1.5380519765771306,
+        "magicalDefense": 1.0436781269630528
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-sunfur-wolf",
+      "name_de": "Sonnenfellwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6800 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7480106156357876,
+        "physicalAttack": 0.890011993679352,
+        "physicalDefense": 1.7577736875167207,
+        "magicalDefense": 1.3183302656375404
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-gray-wolf",
+      "name_de": "Gewöhnlicher Grauwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6300 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.6930098350743327,
+        "physicalAttack": 0.8343862440743925,
+        "physicalDefense": 1.464811406263934,
+        "magicalDefense": 0.7690259882885653
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-redmane-wolf",
+      "name_de": "Rotmähnenwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6600 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7260103034112056,
+        "physicalAttack": 0.9456377432843116,
+        "physicalDefense": 1.684533117203524,
+        "magicalDefense": 0.8239564160234627
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-mist-wolf",
+      "name_de": "Nebelwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6500 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7150101472989147,
+        "physicalAttack": 0.8621991188768723,
+        "physicalDefense": 1.5380519765771306,
+        "magicalDefense": 1.263399837902643
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-silverwing-crane",
+      "name_de": "Silberschwingenkranich",
+      "kind": "variant",
+      "parentKey": "world-birds-1",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 8200 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.9020128012078615,
+        "physicalAttack": 0.7509476196669533,
+        "physicalDefense": 1.3183302656375406,
+        "magicalDefense": 1.4281911211073355
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-redcrest-ripper",
+      "name_de": "Rotkammreißer",
+      "kind": "variant",
+      "parentKey": "world-birds-1",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 9000 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.9900140501061895,
+        "physicalAttack": 0.9734506180867913,
+        "physicalDefense": 1.6112925468903274,
+        "magicalDefense": 0.9338172714932578
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-bluefeather",
+      "name_de": "Blaufederkolben",
+      "kind": "variant",
+      "parentKey": "world-birds-1",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7900 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8690123328709886,
+        "physicalAttack": 0.6953218700619938,
+        "physicalDefense": 1.2450896953243438,
+        "magicalDefense": 1.3732606933724378
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-forest-runner",
+      "name_de": "Waldheinläufer",
+      "kind": "variant",
+      "parentKey": "world-birds-1",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7400 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8140115523095336,
+        "physicalAttack": 0.7787604944694331,
+        "physicalDefense": 1.3915708359507373,
+        "magicalDefense": 0.8788868437583602
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-darkcrow-runner",
+      "name_de": "Düsterkrähenläufer",
+      "kind": "variant",
+      "parentKey": "world-birds-1",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 8500 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.9350132695447345,
+        "physicalAttack": 0.8621991188768723,
+        "physicalDefense": 1.464811406263934,
+        "magicalDefense": 1.3183302656375404
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-sky-falcon",
+      "name_de": "Himmelsfalk",
+      "kind": "variant",
+      "parentKey": "world-birds-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7600 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8360118645341156,
+        "physicalAttack": 0.8621991188768723,
+        "physicalDefense": 1.0986085546979505,
+        "magicalDefense": 0.9887476992281553
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-redcrown-glider",
+      "name_de": "Rotscheitelgleiter",
+      "kind": "variant",
+      "parentKey": "world-birds-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 8000 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8800124889832796,
+        "physicalAttack": 0.890011993679352,
+        "physicalDefense": 1.2450896953243438,
+        "magicalDefense": 0.9338172714932578
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-forestcrown",
+      "name_de": "Waldkronenschreiher",
+      "kind": "variant",
+      "parentKey": "world-birds-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7000 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7700109278603696,
+        "physicalAttack": 0.7231347448644736,
+        "physicalDefense": 1.0253679843847538,
+        "magicalDefense": 1.0986085546979503
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-shadowtip",
+      "name_de": "Schattenspitz",
+      "kind": "variant",
+      "parentKey": "world-birds-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7800 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8580121767586976,
+        "physicalAttack": 0.9456377432843116,
+        "physicalDefense": 1.1718491250111471,
+        "magicalDefense": 1.2084694101677453
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-rockwing",
+      "name_de": "Felsenflügel",
+      "kind": "variant",
+      "parentKey": "world-birds-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 9000 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.9900140501061895,
+        "physicalAttack": 1.001263492889271,
+        "physicalDefense": 1.8310142578299173,
+        "magicalDefense": 0.8788868437583602
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Working name; final name not chosen"
+      ]
+    },
+    {
+      "key": "world-moon-falcon",
+      "name_de": "Mondvariante",
+      "kind": "variant",
+      "parentKey": "world-birds-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 8400 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.9240131134324435,
+        "physicalAttack": 0.8065733692719128,
+        "physicalDefense": 1.1718491250111471,
+        "magicalDefense": 1.5380519765771306
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Working name; final name not chosen"
+      ]
+    },
+    {
+      "key": "world-stone-golem",
+      "name_de": "Steingolem",
+      "kind": "variant",
+      "parentKey": "world-golems",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 60 mit 9800 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 1.3021881761767693,
+        "physicalAttack": 1.0949995560635806,
+        "physicalDefense": 4.119284044239184,
+        "magicalDefense": 3.0894630331793884
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-giant-stone-golem",
+      "name_de": "Gigantischer Steingolem",
+      "kind": "variant",
+      "parentKey": "world-golems",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 60 mit 10780 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 1.4324069937944464,
+        "physicalAttack": 1.2044995116699388,
+        "physicalDefense": 4.531212448663103,
+        "magicalDefense": 3.398409336497327
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open"
+      ]
+    },
+    {
+      "key": "world-ice-golem",
+      "name_de": "Eisgolem",
+      "kind": "variant",
+      "parentKey": "world-golems",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 60 mit 9800 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 1.3021881761767693,
+        "physicalAttack": 1.0949995560635806,
+        "physicalDefense": 4.119284044239184,
+        "magicalDefense": 3.0894630331793884
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Ice-specific behavior and abilities not yet defined"
+      ]
+    },
+    {
+      "key": "world-giant-ice-golem",
+      "name_de": "Gigantischer Eisgolem",
+      "kind": "variant",
+      "parentKey": "world-golems",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 60 mit 10780 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 1.4324069937944464,
+        "physicalAttack": 1.2044995116699388,
+        "physicalDefense": 4.531212448663103,
+        "magicalDefense": 3.398409336497327
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Ice-specific behavior and abilities not yet defined"
+      ]
+    },
+    {
+      "key": "world-volcanic-golem",
+      "name_de": "Vulkangolem",
+      "kind": "variant",
+      "parentKey": "world-golems",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 60 mit 12250 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 1.6277352202209616,
+        "physicalAttack": 1.3687494450794757,
+        "physicalDefense": 5.14910505529898,
+        "magicalDefense": 3.8618287914742355
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Working name; final name not chosen",
+        "Small miniboss; distinct behavior and abilities pending",
+        "Basalt or obsidian material and final name remain open"
+      ]
+    },
+    {
+      "key": "world-grim-forest-wolf-pack-leader",
+      "name_de": "Rudelführer – Grimmiger Waldwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7370.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8107115054758464,
+        "physicalAttack": 1.0554985987541068,
+        "physicalDefense": 2.0141156836129093,
+        "magicalDefense": 0.9667755281341963
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-frostclaw-wolf-pack-leader",
+      "name_de": "Rudelführer – Frostklauenwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7700.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8470120206464067,
+        "physicalAttack": 1.009607355330015,
+        "physicalDefense": 2.2558095656464583,
+        "magicalDefense": 1.32931635118452
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-shadow-wolf-pack-leader",
+      "name_de": "Rudelführer – Schattenwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7040.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.774410990305286,
+        "physicalAttack": 1.0707956798954705,
+        "physicalDefense": 1.6918571742348438,
+        "magicalDefense": 1.1480459396593583
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-sunfur-wolf-pack-leader",
+      "name_de": "Rudelführer – Sonnenfellwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7480.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.8228116771993664,
+        "physicalAttack": 0.9790131930472873,
+        "physicalDefense": 1.9335510562683929,
+        "magicalDefense": 1.4501632922012944
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-gray-wolf-pack-leader",
+      "name_de": "Rudelführer – Gewöhnlicher Grauwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 6930.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.762310818581766,
+        "physicalAttack": 0.9178248684818318,
+        "physicalDefense": 1.6112925468903276,
+        "magicalDefense": 0.8459285871174218
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-redmane-wolf-pack-leader",
+      "name_de": "Rudelführer – Rotmähnenwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7260.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7986113337523263,
+        "physicalAttack": 1.0402015176127428,
+        "physicalDefense": 1.8529864289238767,
+        "magicalDefense": 0.9063520576258091
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-mist-wolf-pack-leader",
+      "name_de": "Rudelführer – Nebelwolf",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 7150.000000000001 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.7865111620288062,
+        "physicalAttack": 0.9484190307645596,
+        "physicalDefense": 1.6918571742348438,
+        "magicalDefense": 1.3897398216929073
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level +0, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-grim-forest-wolf-young",
+      "name_de": "Waldwolf – Jungtier",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 3350 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.3685052297617483,
+        "physicalAttack": 0.47977209034277574,
+        "physicalDefense": 0.9155071289149587,
+        "magicalDefense": 0.4394434218791801
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level -2, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-grim-forest-wolf-pup",
+      "name_de": "Waldwolf – Welpe",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 2680 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.29480418380939866,
+        "physicalAttack": 0.3838176722742206,
+        "physicalDefense": 0.732405703131967,
+        "magicalDefense": 0.3515547375033441
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level -4, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-gray-wolf-young",
+      "name_de": "Grauwolf – Jungtier",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 3150 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.34650491753716633,
+        "physicalAttack": 0.4171931220371963,
+        "physicalDefense": 0.732405703131967,
+        "magicalDefense": 0.38451299414428264
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level -2, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-gray-wolf-pup",
+      "name_de": "Grauwolf – Welpe",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 2520 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.27720393402973303,
+        "physicalAttack": 0.333754497629757,
+        "physicalDefense": 0.5859245625055736,
+        "magicalDefense": 0.3076103953154261
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level -4, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-frostclaw-wolf-young",
+      "name_de": "Frostklauenwolf – Jungtier",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 3500 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.3850054639301848,
+        "physicalAttack": 0.4589124342409159,
+        "physicalDefense": 1.0253679843847538,
+        "magicalDefense": 0.6042347050838727
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level -2, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    },
+    {
+      "key": "world-frostclaw-wolf-pup",
+      "name_de": "Frostklauenwolf – Welpe",
+      "kind": "variant",
+      "parentKey": "world-wolves-2",
+      "version": 1,
+      "status": "draft",
+      "spawnable": false,
+      "description_de": "Erster World-Monster-Entwurf, auf Level 63 mit 2800 Leben abgestimmt. Angriff und Abwehr sind vorläufige Vorschläge.",
+      "statMultipliers": {
+        "maxHealth": 0.30800437114414786,
+        "physicalAttack": 0.36712994739273275,
+        "physicalDefense": 0.820294387507803,
+        "magicalDefense": 0.48338776406709816
+      },
+      "pending": [
+        "Abilities, elemental damage, spawning areas, rarity, tame chance and drops remain open",
+        "Area placement: adult level -4, minimum level 1; stat factor applied at own level, not twice"
+      ]
+    }
+  ]
+}
